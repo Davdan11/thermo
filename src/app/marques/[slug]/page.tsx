@@ -1,0 +1,302 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { getBrandDetail } from "@/lib/data/queries/brand-detail";
+import { ProductCard } from "@/components/product/ProductCard";
+import { createMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const resolvedParams = await params;
+  const brandDetail = getBrandDetail(resolvedParams.slug);
+
+  if (!brandDetail) {
+    return createMetadata({ title: "Marque introuvable" });
+  }
+
+  const { brand } = brandDetail;
+  const name = brand.name.replace(" [DEV]", "");
+
+  return createMetadata({
+    title: `Thermopompes ${name} — Explorez les séries et modèles au Québec`,
+    description: `Découvrez la gamme complète de thermopompes ${name}. Consultez les séries, comparez les modèles et trouvez le système idéal pour votre habitation.`,
+    robots: { index: true, follow: true },
+  });
+}
+
+export default async function BrandPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const resolvedParams = await params;
+  const brandDetail = getBrandDetail(resolvedParams.slug);
+
+  if (!brandDetail) {
+    notFound();
+  }
+
+  const { brand, series, models, systemTypes, hasColdClimate } = brandDetail;
+  const brandName = brand.name.replace(" [DEV]", "");
+
+  return (
+    <main className="min-h-screen bg-[var(--color-background)]">
+      {/* =========================================
+          HERO SECTION
+          ========================================= */}
+      <section className="relative w-full bg-[#0C1821] text-white overflow-hidden flex flex-col md:flex-row min-h-[480px]">
+        
+        {/* Blended Background Image */}
+        <div 
+          className="absolute inset-0 z-0 opacity-25 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-a-propos-maison-hiver.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            maskImage: "linear-gradient(to bottom, black 0%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to right, black 20%, transparent 80%), linear-gradient(to bottom, black 0%, transparent 100%)",
+          }}
+        />
+
+        {/* Faint Brand Watermark */}
+        <div 
+          className="absolute left-1/2 bottom-[-5%] -translate-x-1/2 z-0 pointer-events-none select-none font-black text-white/5 whitespace-nowrap"
+          style={{ fontSize: "clamp(80px, 15vw, 250px)", letterSpacing: "0.02em", lineHeight: 0.75 }}
+        >
+          {brandName.toUpperCase()}
+        </div>
+
+        {/* Content Container */}
+        <div className="relative z-10 w-full p-6 sm:p-12 lg:p-20 flex flex-col justify-center max-w-7xl mx-auto">
+          
+          {/* Breadcrumb */}
+          <nav className="flex items-center text-[11px] font-medium text-white/50 mb-12 tracking-wide uppercase">
+            <Link href="/marques" className="hover:text-white transition-colors">Marques</Link>
+            <span className="mx-2">/</span>
+            <span className="text-white">{brandName}</span>
+          </nav>
+
+          {/* Logo Placeholder */}
+          <div className="mb-6 flex items-center text-3xl font-black italic tracking-tighter">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
+              <path d="M4 4h16v16H4V4zm2 2v12h12V6H6z" />
+            </svg>
+            {brandName.toUpperCase()}
+          </div>
+
+          <h1 className="text-[40px] sm:text-[56px] font-bold leading-[1.1] tracking-tight mb-4">
+            Thermopompes<br />{brandName}
+          </h1>
+          <div className="w-10 h-[3px] bg-[var(--color-accent)] mb-6"></div>
+          
+          <p className="text-white/70 text-lg max-w-md font-medium leading-relaxed">
+            Explorez les séries, les configurations et les données documentées pour le marché québécois.
+          </p>
+        </div>
+      </section>
+
+      {/* =========================================
+          CATEGORIES BAR
+          ========================================= */}
+      <section className="bg-[#10202C] text-white border-b border-black/20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 text-sm font-semibold">
+            {systemTypes.some(t => t.value === "wall-single") && (
+              <div className="flex items-center gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="2" y="8" width="20" height="8" rx="2" />
+                  <line x1="6" y1="12" x2="18" y2="12" />
+                </svg>
+                Murales
+              </div>
+            )}
+            
+            {systemTypes.some(t => t.value === "multi-zone") && (
+              <div className="flex items-center gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="2" y="4" width="8" height="6" rx="1" />
+                  <rect x="14" y="14" width="8" height="6" rx="1" />
+                  <path d="M6 10v4h12v-4" />
+                </svg>
+                Multizones
+              </div>
+            )}
+
+            {systemTypes.some(t => t.value === "central-ducted") && (
+              <div className="flex items-center gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+                Centrales
+              </div>
+            )}
+
+            {hasColdClimate && (
+              <div className="flex items-center gap-3 ml-auto border-l border-white/20 pl-8">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="12" y1="2" x2="12" y2="22"></line>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                  <line x1="4.93" y1="19.07" x2="19.07" y2="4.93"></line>
+                </svg>
+                <div className="flex flex-col">
+                  <span>Climat froid</span>
+                  <span className="text-[10px] font-normal text-white/60 uppercase tracking-widest">Selon la configuration</span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+          SÉRIES DOCUMENTÉES
+          ========================================= */}
+      <section className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-[28px] font-bold text-[#172126] mb-2">Séries documentées</h2>
+        <div className="w-12 h-[3px] bg-[#172126] mb-12"></div>
+
+        <div className="space-y-6">
+          {series.map((sSummary) => {
+            const { series: s, capacityRange } = sSummary;
+            const seriesName = s.name.replace(" [DEV]", "");
+            return (
+              <div key={s.id} className="flex flex-col md:flex-row bg-[#EFECE8] w-full border border-[#E5E5E5] overflow-hidden">
+                {/* Text Side (Left) */}
+                <div className="w-full md:w-1/3 p-8 md:p-12 flex flex-col justify-center bg-[#EFECE8]">
+                  <h3 className="text-3xl font-bold text-[#172126] mb-2">{seriesName}</h3>
+                  <p className="text-sm font-semibold text-[#172126] mb-4">Mural haut de gamme</p>
+                  <p className="text-[15px] text-[#172126]/80 leading-relaxed mb-6">
+                    {s.description || "Efficacité et confort toute l'année. Solution idéale pour le marché résidentiel."}
+                  </p>
+                  
+                  {capacityRange && (
+                    <div className="mb-8">
+                      <span className="inline-flex items-center border border-[#172126]/20 rounded-[4px] px-3 py-1.5 text-[11px] font-semibold text-[#172126] uppercase tracking-wider">
+                        {capacityRange.min.toLocaleString("fr-CA")} - {capacityRange.max.toLocaleString("fr-CA")} BTU
+                      </span>
+                    </div>
+                  )}
+
+                  <Link 
+                    href={`/thermopompes?brand=${brand.slug}`} 
+                    className="mt-auto text-sm font-bold text-[var(--color-accent)] hover:opacity-80 transition-opacity flex items-center"
+                  >
+                    Voir les modèles
+                    <svg className="ml-1.5 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+
+                {/* Images Side (Right) */}
+                <div className="w-full md:w-2/3 flex">
+                  {/* Indoor/Lifestyle image */}
+                  <div className="w-1/2 h-full min-h-[320px] bg-cover bg-center border-l border-[#E5E5E5]"
+                       style={{ backgroundImage: "url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop')" }}>
+                  </div>
+                  {/* Outdoor image */}
+                  <div className="w-1/2 h-full min-h-[320px] bg-white bg-cover bg-center flex items-center justify-center p-8 border-l border-[#E5E5E5]">
+                    {/* Placeholder for outdoor unit photo - using a transparent PNG or just a simple image */}
+                    <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop" alt="Unité extérieure" className="max-w-full max-h-full object-contain mix-blend-multiply opacity-80" />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* =========================================
+          CE QU'IL FAUT COMPARER CHEZ X
+          ========================================= */}
+      <section className="bg-[#0C1821] text-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-16">Ce qu'il faut comparer chez {brandName}</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+            {/* Feature 1 */}
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <svg className="w-8 h-8 text-white/80" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
+                </svg>
+                <h3 className="text-lg font-bold">Performance hivernale</h3>
+              </div>
+              <p className="text-sm text-white/70 leading-relaxed border-t border-white/10 pt-4">
+                La capacité à maintenir le chauffage par temps froid varie selon les modèles et la configuration. Vérifiez les données à basse température (ex: -8 °C, -15 °C).
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <svg className="w-8 h-8 text-white/80" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                </svg>
+                <h3 className="text-lg font-bold">Niveau sonore</h3>
+              </div>
+              <p className="text-sm text-white/70 leading-relaxed border-t border-white/10 pt-4">
+                Le confort acoustique dépend de l'unité intérieure et extérieure ainsi que du mode de fonctionnement. Consultez les données en dB(A) pour comparer.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <svg className="w-8 h-8 text-white/80" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <h3 className="text-lg font-bold">Garantie</h3>
+              </div>
+              <p className="text-sm text-white/70 leading-relaxed border-t border-white/10 pt-4">
+                Les garanties varient selon les pièces et la main-d'œuvre. Lisez les conditions pour comprendre ce qui est couvert et pour quelle durée.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+          MODÈLES À EXPLORER
+          ========================================= */}
+      <section className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between mb-8 border-b border-[#E5E5E5] pb-4">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#172126] mb-2">Modèles à explorer</h2>
+            <div className="w-10 h-[3px] bg-[var(--color-accent)]"></div>
+          </div>
+          <Link
+            href={`/thermopompes?brand=${brand.slug}`}
+            className="hidden sm:inline-flex items-center text-sm font-semibold text-[var(--color-accent)] border border-[var(--color-accent)] rounded-[4px] px-4 py-2 hover:bg-[var(--color-accent)] hover:text-white transition-colors bg-white"
+          >
+            Comparer les modèles <span className="ml-2">&rsaquo;</span>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {models.map((product) => (
+            <ProductCard
+              key={product.model.id}
+              product={product}
+            />
+          ))}
+        </div>
+        
+        <div className="mt-8 text-center sm:hidden">
+          <Link
+            href={`/thermopompes?brand=${brand.slug}`}
+            className="inline-flex items-center text-sm font-semibold text-[var(--color-accent)] border border-[var(--color-accent)] rounded-[4px] px-4 py-2 hover:bg-[var(--color-accent)] hover:text-white transition-colors bg-white w-full justify-center"
+          >
+            Comparer les modèles <span className="ml-2">&rsaquo;</span>
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}

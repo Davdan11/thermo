@@ -1,0 +1,389 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+import { getProductDetail } from "@/lib/data/queries/product-detail";
+import { registry } from "@/lib/data/registry";
+import {
+  ProductHeader,
+  KeySpecs,
+  GoodChoiceSection,
+  LogisVertBadge,
+  ColdClimatePerformance,
+  ComfortSection,
+  TechSpecs,
+  WarrantySection,
+  SimilarModels,
+  SourcesSection,
+} from "@/components/product";
+
+/* ==================================================================
+   /produit/[slug] — Product Detail Page
+   Assembles all product data into a complete product sheet.
+   ================================================================== */
+
+/* ── Static generation ── */
+
+export async function generateStaticParams() {
+  return registry.models
+    .filter((m) => m.status === "published")
+    .map((m) => ({ slug: m.slug }));
+}
+
+/* ── Metadata ── */
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const detail = getProductDetail(slug);
+  if (!detail) return {};
+
+  const { model, brand, series } = detail;
+  const capacity = model.nominalCapacityBtu
+    ? ` ${(model.nominalCapacityBtu / 1000).toFixed(0)}\u2009000 BTU`
+    : "";
+
+  return {
+    title: `${brand.name} ${model.name} — Fiche technique complète`,
+    description: `Consultez la fiche technique complète de la thermopompe ${brand.name} ${series.name} ${model.name}${capacity}. Spécifications, performance climat froid, subvention LogisVert et plus.`,
+    alternates: { canonical: `/produit/${slug}` },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: `${brand.name} ${model.name}`,
+      description: `Fiche technique ${brand.name} ${model.name}${capacity} — ${detail.systemTypeLabel}`,
+      url: `/produit/${slug}`,
+      siteName: "ThermopompeÀVendre.ca",
+      locale: "fr_CA",
+    },
+  };
+}
+
+/* ── Page ── */
+
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const detail = getProductDetail(slug);
+  if (!detail) notFound();
+
+  const { brand, series, model, configuration, performanceProfile } = detail;
+  const imageUrl = model.imageUrl ?? series.imageUrl ?? null;
+
+  /* Schema.org — Product */
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${brand.name} ${model.name}`,
+    brand: { "@type": "Brand", name: brand.name },
+    model: model.modelNumber,
+    category: "Thermopompe",
+    description: `Thermopompe ${detail.systemTypeLabel} ${brand.name} ${series.name} ${model.name}`,
+  };
+
+  return (
+    <main style={{ fontFamily: "var(--font-sans)", minHeight: "100vh", background: "#f8f5f0", color: "#071d2b" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+
+      {/* ═══════════════════════════════════════════════════════════
+          HERO
+          ═══════════════════════════════════════════════════════════ */}
+      <section style={{ position: "relative", backgroundColor: "#0C1821", padding: "0 0 48px", overflow: "hidden" }}>
+        
+        {/* Blended Background Image */}
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `url('/images/hero-a-propos-maison-hiver.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.25,
+          maskImage: "linear-gradient(to right, #0C1821 0%, transparent 50%, #0C1821 100%), linear-gradient(to bottom, black 0%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to right, black 20%, transparent 80%), linear-gradient(to bottom, black 0%, transparent 100%)",
+          pointerEvents: "none",
+        }} />
+
+        {/* Faint Brand Watermark */}
+        <div style={{
+          position: "absolute",
+          left: "50%",
+          bottom: "-5%",
+          transform: "translateX(-50%)",
+          fontSize: "clamp(80px, 15vw, 250px)",
+          fontWeight: 900,
+          color: "rgba(255,255,255,0.03)",
+          whiteSpace: "nowrap",
+          zIndex: 0,
+          pointerEvents: "none",
+          userSelect: "none",
+          letterSpacing: "0.02em",
+          lineHeight: 0.75,
+        }}>
+          {brand.name.toUpperCase()}
+        </div>
+
+        <div style={{ position: "relative", zIndex: 1, width: "calc(100% - 48px)", maxWidth: 1280, margin: "0 auto" }}>
+
+          {/* Breadcrumb */}
+          <nav style={{ paddingTop: 100, paddingBottom: 24 }}>
+            <ol style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: 0, padding: 0, listStyle: "none", fontSize: 12, color: "rgba(255,255,255,.45)", fontWeight: 500 }}>
+              <li><Link href="/" style={{ color: "inherit", textDecoration: "none" }}>Accueil</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/marques" style={{ color: "inherit", textDecoration: "none" }}>Marques</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href={`/marques/${brand.slug}`} style={{ color: "inherit", textDecoration: "none" }}>{brand.name}</Link></li>
+              <li aria-hidden="true">/</li>
+              <li style={{ color: "rgba(255,255,255,.85)" }}>{model.name}</li>
+            </ol>
+          </nav>
+
+          {/* Product header — single column centered or full width */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 6, maxWidth: 800 }}>
+            <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,.5)", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+              {brand.name} · {series.name}
+            </p>
+            <h1 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: "#fff", lineHeight: 1.1, letterSpacing: "-0.025em" }}>
+              {model.name}
+            </h1>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginTop: 8 }}>
+              <span style={{ fontSize: 14, color: "rgba(255,255,255,.6)" }}>{detail.systemTypeLabel}</span>
+              {model.nominalCapacityBtu && (
+                <>
+                  <span style={{ color: "rgba(255,255,255,.25)" }} aria-hidden="true">·</span>
+                  <span style={{ fontSize: 14, fontWeight: 600, color: "#fff" }}>
+                    {(model.nominalCapacityBtu / 1000).toFixed(0)}&thinsp;000 BTU/h
+                  </span>
+                </>
+              )}
+              {detail.isColdClimate && (
+                <span style={{ fontSize: 11, fontWeight: 600, padding: "3px 10px", background: "rgba(27,107,58,.25)", color: "#6ee7a0" }}>
+                  Climat froid
+                </span>
+              )}
+            </div>
+            <p style={{ margin: "6px 0 0", fontSize: 12, color: "rgba(255,255,255,.4)" }}>
+              Modèle : <span style={{ fontFamily: "monospace" }}>{model.modelNumber}</span>
+            </p>
+
+            {/* Series siblings */}
+            {detail.seriesSiblings.length > 0 && (
+              <div style={{ marginTop: 16 }}>
+                <p style={{ margin: "0 0 8px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  Autres capacités — {series.name}
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                  {detail.seriesSiblings.map((sib) => (
+                    <Link
+                      key={sib.id}
+                      href={`/produit/${sib.slug}`}
+                      style={{
+                        fontSize: 12, padding: "6px 14px",
+                        border: "1px solid rgba(255,255,255,.15)",
+                        color: "rgba(255,255,255,.7)",
+                        textDecoration: "none",
+                        transition: "border-color .2s",
+                      }}
+                    >
+                      {sib.nominalCapacityBtu
+                        ? `${(sib.nominalCapacityBtu / 1000).toFixed(0)}\u2009000 BTU`
+                        : sib.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* CTAs */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 20 }}>
+              <Link
+                href="/trouver-ma-thermopompe"
+                style={{
+                  fontSize: 14, fontWeight: 600, padding: "12px 24px",
+                  background: "#e54b17", color: "#fff",
+                  textDecoration: "none", transition: "background .2s",
+                }}
+              >
+                Vérifier si ce modèle me convient
+              </Link>
+              <Link
+                href="/soumission"
+                style={{
+                  fontSize: 14, fontWeight: 600, padding: "12px 24px",
+                  border: "1px solid rgba(255,255,255,.25)", color: "#fff",
+                  textDecoration: "none", transition: "border-color .2s",
+                }}
+              >
+                Demander une soumission
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+          BODY — Two-column layout
+          ═══════════════════════════════════════════════════════════ */}
+      <div style={{ width: "calc(100% - 48px)", maxWidth: 1280, margin: "0 auto", padding: "40px 0 60px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 320px", gap: 48 }}>
+
+          {/* ── MAIN COLUMN ── */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 40, minWidth: 0 }}>
+
+            {/* Key specs grid */}
+            <KeySpecs detail={detail} />
+
+            {/* LogisVert subsidy */}
+            <LogisVertBadge detail={detail} />
+
+            {/* Good choice */}
+            <GoodChoiceSection detail={detail} />
+
+            {/* Cold climate performance table */}
+            {performanceProfile && performanceProfile.dataPoints.length > 0 && (
+              <ColdClimatePerformance
+                profile={performanceProfile}
+                minHeatingTempC={configuration?.minHeatingTempC}
+              />
+            )}
+
+            {/* Comfort / noise */}
+            {configuration && <ComfortSection configuration={configuration} />}
+
+            {/* Full tech specs */}
+            <TechSpecs detail={detail} />
+
+            {/* Warranties */}
+            <WarrantySection warranties={detail.warranties} />
+
+            {/* Sources */}
+            <SourcesSection sources={detail.sources} />
+          </div>
+
+          {/* ── SIDEBAR ── */}
+          <aside style={{ position: "relative" }}>
+            <div style={{ position: "sticky", top: 100, display: "flex", flexDirection: "column", gap: 24 }}>
+
+              {/* Product Image in Sidebar */}
+              {imageUrl && (
+                <div style={{
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  background: "#fff",
+                  border: "1px solid #e4ddd5",
+                  padding: 24,
+                }}>
+                  <Image
+                    src={imageUrl}
+                    alt={`${brand.name} ${model.name}`}
+                    width={320}
+                    height={240}
+                    style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
+                    unoptimized
+                    priority
+                  />
+                </div>
+              )}
+
+              {/* Quick specs card */}
+              <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
+                <p style={{ margin: "0 0 16px", fontSize: 15, fontWeight: 700, color: "#071d2b" }}>Résumé rapide</p>
+                <dl style={{ margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                  <SidebarRow label="Marque" value={brand.name} />
+                  <SidebarRow label="Série" value={series.name} />
+                  <SidebarRow label="Type" value={detail.systemTypeLabel} />
+                  {model.nominalCapacityBtu && (
+                    <SidebarRow label="Capacité" value={`${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h`} />
+                  )}
+                  {configuration?.seer2 != null && (
+                    <SidebarRow label="SEER2" value={`${configuration.seer2}`} />
+                  )}
+                  {configuration?.hspf2 != null && (
+                    <SidebarRow label="HSPF2" value={`${configuration.hspf2}`} />
+                  )}
+                  {configuration?.minHeatingTempC != null && (
+                    <SidebarRow label="Temp. min" value={`${configuration.minHeatingTempC} °C`} />
+                  )}
+                  {configuration?.hasWifi && (
+                    <SidebarRow label="Wi-Fi" value="Intégré" />
+                  )}
+                  {detail.outdoorUnit?.refrigerant && (
+                    <SidebarRow label="Réfrigérant" value={detail.outdoorUnit.refrigerant} />
+                  )}
+                </dl>
+              </div>
+
+              {/* CTA card */}
+              <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
+                <p style={{ margin: "0 0 8px", fontSize: 14, fontWeight: 700, color: "#071d2b" }}>Ce modèle vous intéresse?</p>
+                <p style={{ margin: "0 0 16px", fontSize: 13, color: "#6b7b80", lineHeight: 1.55 }}>
+                  Utilisez Thermo Match pour valider si cette thermopompe correspond à votre habitation.
+                </p>
+                <Link
+                  href="/trouver-ma-thermopompe"
+                  style={{
+                    display: "block", textAlign: "center",
+                    fontSize: 14, fontWeight: 600, padding: "12px 16px",
+                    background: "#071d2b", color: "#fff",
+                    textDecoration: "none",
+                  }}
+                >
+                  Utiliser Thermo Match
+                </Link>
+              </div>
+
+              {/* Links */}
+              <div>
+                <p style={{ margin: "0 0 12px", fontSize: 11, fontWeight: 600, color: "#a0aab0", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                  Sur ce site
+                </p>
+                <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
+                  <SidebarLink href="/subventions" label="Vérifier les subventions" />
+                  <SidebarLink href={`/marques/${brand.slug}`} label={`Tous les modèles ${brand.name}`} />
+                  <SidebarLink href="/thermopompes" label="Catalogue complet" />
+                  <SidebarLink href="/comparer" label="Comparer des modèles" />
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        {/* Similar models — full width below */}
+        <div style={{ marginTop: 48 }}>
+          <SimilarModels models={detail.similarModels} />
+        </div>
+      </div>
+    </main>
+  );
+}
+
+/* ── Sidebar helpers ── */
+
+function SidebarRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+      <dt style={{ fontSize: 13, color: "#6b7b80", flexShrink: 0 }}>{label}</dt>
+      <dd style={{ margin: 0, fontSize: 13, fontWeight: 600, color: "#071d2b", textAlign: "right" }}>{value}</dd>
+    </div>
+  );
+}
+
+function SidebarLink({ href, label }: { href: string; label: string }) {
+  return (
+    <li>
+      <Link
+        href={href}
+        style={{ fontSize: 13, color: "#6b7b80", textDecoration: "none" }}
+      >
+        <span style={{ color: "#d4cec5", marginRight: 8 }}>›</span>
+        {label}
+      </Link>
+    </li>
+  );
+}

@@ -1,0 +1,437 @@
+[
+  {
+    "id": "thermopompe-murale",
+    "slug": "thermopompe-murale",
+    "cluster": "thermopompes",
+    "primaryKeyword": "thermopompe murale",
+    "pageType": "Guide d'achat",
+    "intent": "Transactionnel",
+    "seoTitle": "Thermopompe Murale (Mini-Split) au Québec | Guide Complet",
+    "metaDescription": "Tout ce qu'il faut savoir sur la thermopompe murale au Québec : avantages, installation, entretien, subventions et comment choisir le bon modèle pour votre maison.",
+    "h1": "Thermopompe Murale : Guide Complet pour le Québec",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/thermopompe-murale/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Sans conduits, silencieuse, chauffante jusqu'à -30 °C. Découvrez pourquoi c'est le système le plus installé au Québec."
+      },
+      "intro": "La thermopompe murale — aussi appelée mini-split ou unité murale — fonctionne sans conduits de ventilation, s'installe en une demi-journée et offre des performances sérieuses même par grands froids. Ce guide explique ce qu'elle fait réellement, pour qui elle convient, et ce à quoi vous attendre lors de l'installation.",
+      "benefits": [
+        { "title": "Chauffage et climatisation dans un seul appareil", "desc": "La murale remplace votre climatiseur d'été et devient une source de chauffage principale ou d'appoint l'hiver, selon le modèle choisi et la configuration de votre maison." },
+        { "title": "Performance au froid — pas tous les modèles sont égaux", "desc": "Les séries de type Hyper Heat ou H2i+ maintiennent une capacité de chauffage significative jusqu'à -25 °C. Un modèle d'entrée de gamme, lui, peut perdre 50 % de sa capacité dès -15 °C. La sélection du modèle selon votre zone climatique est critique." },
+        { "title": "Consommation bien en dessous des plinthes électriques", "desc": "Le COP (coefficient de performance) d'une thermopompe moderne tourne entre 2,5 et 4,0 selon les conditions extérieures. Comparé à une plinthe qui transforme 1 kWh en 1 kWh de chaleur, l'écart est substantiel sur une saison complète." },
+        { "title": "Installation peu invasive", "desc": "Un seul trou de 7 à 8 cm dans le mur pour la ligne frigorifique. Pas de travaux dans les plafonds, pas de modifications aux conduits. La pose complète prend généralement entre 4 et 8 heures." }
+      ],
+      "steps": [
+        { "title": "Évaluation du besoin réel", "desc": "Un bon installateur calcule la puissance en BTU selon la superficie, l'isolation, l'orientation de la pièce et la zone climatique — pas uniquement au pied carré." },
+        { "title": "Sélection du modèle", "desc": "Le choix de la série (pas juste de la marque) détermine les performances hivernales. Assurez-vous que le modèle proposé est documenté pour votre région." },
+        { "title": "Soumission écrite et détaillée", "desc": "Comparez au moins deux soumissions. La soumission devrait préciser le modèle exact, la capacité, la garantie fabricant, et le détail de la main-d'œuvre." },
+        { "title": "Installation et mise en service", "desc": "Après la pose, l'installateur vérifie les pressions du circuit frigorifique et teste tous les modes de fonctionnement avant de partir." },
+        { "title": "Formation sur l'entretien de base", "desc": "Les filtres intérieurs doivent être nettoyés toutes les 3 à 4 semaines. L'installateur devrait vous montrer comment faire et vous expliquer ce que vous ne devez pas toucher vous-même." }
+      ],
+      "forWho": [
+        "Maison ou logement sans conduits de ventilation existants",
+        "Propriétaire voulant traiter une zone ou une aire ouverte précise",
+        "Projet de réduction de la consommation des plinthes électriques",
+        "Maison à aire ouverte où une seule unité bien positionnée peut couvrir l'essentiel"
+      ],
+      "notForWho": [
+        "Maison avec plusieurs pièces fermées sur deux étages — une seule murale ne suffit pas",
+        "Propriétaire voulant une distribution uniforme par conduits dans toutes les pièces"
+      ],
+      "grants": [
+        {
+          "name": "Chauffez Vert — Hydro-Québec",
+          "conditions": "Programme destiné au remplacement d'un système de chauffage au mazout, au gaz naturel ou au propane par une thermopompe admissible. Un appareil certifié ENERGY STAR est requis. Les conditions et montants sont mis à jour périodiquement.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
+        },
+        {
+          "name": "LogisVert — Transition énergétique Québec",
+          "conditions": "Programme d'aide à la rénovation écoénergétique résidentielle incluant les thermopompes haute efficacité. Conditions d'admissibilité liées au revenu du ménage et au type de travaux. Une évaluation énergétique préalable peut être requise.",
+          "source": "https://transitionenergetique.gouv.qc.ca"
+        }
+      ],
+      "faq": [
+        { "q": "Une thermopompe murale peut-elle chauffer toute ma maison ?", "a": "Cela dépend de la configuration. Pour une maison à aire ouverte ou un bungalow bien isolé, une unité correctement dimensionnée peut couvrir 60 à 80 % des besoins. Pour une maison à plusieurs pièces fermées, un système multizone ou central est généralement plus adapté." },
+        { "q": "Quel entretien dois-je prévoir ?", "a": "L'entretien de base est accessible : nettoyage des filtres intérieurs toutes les 3 à 4 semaines, dégagement du compresseur extérieur en hiver. Une vérification professionnelle annuelle est recommandée pour inspecter le circuit frigorifique et les connexions électriques." },
+        { "q": "Quel est le niveau de bruit d'une thermopompe murale ?", "a": "L'unité intérieure émet généralement entre 19 et 35 décibels selon le mode et la vitesse de ventilation. À titre de comparaison, un réfrigérateur tourne autour de 40 dB. C'est nettement en dessous d'un climatiseur de fenêtre ou d'une thermopompe centrale." },
+        { "q": "Faut-il un permis pour installer un compresseur extérieur ?", "a": "Dans la plupart des municipalités québécoises, oui. Un permis de construction ou de rénovation mineure est habituellement requis. Si vous êtes en copropriété ou en zone patrimoniale, des règlements supplémentaires peuvent s'appliquer. Un installateur sérieux devrait clarifier ce point dès l'évaluation." },
+        { "q": "La garantie est-elle valide si j'installe moi-même ?", "a": "Non. Tous les grands fabricants conditionnent leur garantie à une installation effectuée par un technicien certifié. La manipulation du circuit frigorifique est également encadrée par la réglementation québécoise sur les gaz frigorigènes." },
+        { "q": "Quelle est la durée de vie réaliste d'une thermopompe murale ?", "a": "En moyenne, entre 12 et 18 ans pour un appareil de qualité, bien installé et correctement entretenu. La durée dépend beaucoup du soin apporté à l'entretien préventif et de la qualité de l'installation initiale." }
+      ],
+      "relatedLinks": [
+        { "label": "Thermopompe centrale — confort dans toute la maison", "href": "/thermopompes/thermopompe-centrale" },
+        { "label": "Thermopompe multizone — plusieurs pièces à traiter", "href": "/thermopompes/thermopompe-multizone" },
+        { "label": "Subventions disponibles au Québec", "href": "/subventions" },
+        { "label": "Comparer les marques", "href": "/marques" }
+      ]
+    }
+  },
+  {
+    "id": "thermopompe-centrale",
+    "slug": "thermopompe-centrale",
+    "cluster": "thermopompes",
+    "primaryKeyword": "thermopompe centrale",
+    "pageType": "Guide d'achat",
+    "intent": "Transactionnel",
+    "seoTitle": "Thermopompe Centrale avec Conduits au Québec | Guide 2026",
+    "metaDescription": "La thermopompe centrale s'intègre à votre système de conduits existant pour chauffer et climatiser toute la maison. Ce guide explique quand c'est la bonne solution et ce que l'installation implique.",
+    "h1": "Thermopompe Centrale : Confort Uniforme dans Toute la Maison",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/thermopompe-centrale/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Remplacez votre fournaise et climatisez toute la maison via les conduits existants. La solution pour les maisons déjà équipées à air pulsé."
+      },
+      "intro": "La thermopompe centrale — parfois appelée thermopompe gainable — s'intègre au réseau de conduits de votre maison. Elle remplace ou complète votre fournaise existante et distribue l'air conditionné ou chauffé dans toutes les pièces via les bouches d'aération habituelles. C'est une option particulièrement pertinente pour les propriétaires qui chauffent encore au gaz ou au mazout et cherchent à réduire leur empreinte carbone et leur facture énergétique.",
+      "benefits": [
+        { "title": "Température uniforme dans chaque pièce", "desc": "Contrairement aux plinthes ou à une murale murale unique, la centrale traite l'ensemble de la maison. Les pièces du fond sont aussi bien chauffées que celles proches de la salle mécanique." },
+        { "title": "Aucune unité murale visible", "desc": "Seules les bouches d'aération habituelles restent en place. L'équipement principal est dans votre salle mécanique et le compresseur à l'extérieur." },
+        { "title": "Meilleure qualité de l'air", "desc": "Tout l'air de la maison passe par le filtre central, ce qui réduit la poussière, les allergènes et peut améliorer significativement la qualité de l'air pour les personnes sensibles." },
+        { "title": "Transition énergétique accélérée", "desc": "Si vous chauffez au mazout ou au propane, un passage à une thermopompe centrale électrique peut réduire considérablement vos émissions de GES et simplifier votre système en éliminant la citerne." }
+      ],
+      "forWho": [
+        "Maison déjà équipée d'un système à air pulsé avec conduits en bon état",
+        "Propriétaire qui chauffe au gaz naturel, au mazout ou au propane et veut s'en défaire",
+        "Maison de taille moyenne ou grande avec plusieurs pièces à traiter"
+      ],
+      "notForWho": [
+        "Maison sans conduits existants — l'ajout de conduits est un projet majeur à part entière",
+        "Propriétaire cherchant uniquement à traiter une pièce ou une zone"
+      ],
+      "grants": [
+        {
+          "name": "Chauffez Vert — Hydro-Québec",
+          "conditions": "Remplacement d'un système au mazout, gaz naturel ou propane par une thermopompe centrale certifiée ENERGY STAR. Conditions et montants vérifiés directement sur le site d'Hydro-Québec.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
+        }
+      ],
+      "faq": [
+        { "q": "Dois-je conserver ma fournaise si j'installe une thermopompe centrale ?", "a": "Pas nécessairement, mais dans certaines régions très froides du Québec, les installateurs recommandent de garder une source de chauffage d'appoint pour les quelques jours extrêmes sous -25 °C. Certains modèles modernes peuvent fonctionner seuls dans la majorité des situations québécoises — à discuter avec l'installateur selon votre zone." },
+        { "q": "Mes conduits existants sont-ils adaptés ?", "a": "Dans la plupart des cas, oui. L'installateur vérifie le diamètre, l'état et l'étanchéité des conduits lors de l'évaluation. Des modifications mineures (scellage, ajout de retour d'air) sont parfois nécessaires mais restent généralement dans la portée des travaux inclus." },
+        { "q": "La thermopompe centrale nécessite-t-elle un panneau de 200 ampères ?", "a": "Pas toujours. La plupart des systèmes résidentiels fonctionnent sur un circuit 240V de 40 à 60 ampères. Si votre panneau est à 100 ampères et déjà bien sollicité, une mise à niveau peut être requise — à évaluer par un électricien." },
+        { "q": "Peut-on combiner une thermopompe centrale avec un échangeur d'air (VRC) ?", "a": "Oui, et c'est souvent recommandé dans les maisons récentes bien étanches. L'échangeur de chaleur améliore la qualité de l'air intérieur et peut récupérer une partie de l'énergie contenue dans l'air extrait." }
+      ],
+      "relatedLinks": [
+        { "label": "Thermopompe murale — la solution sans conduits", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Comparer les marques de thermopompes", "href": "/marques" },
+        { "label": "Subventions pour remplacement de fournaise", "href": "/subventions" }
+      ]
+    }
+  },
+  {
+    "id": "thermopompe-multizone",
+    "slug": "thermopompe-multizone",
+    "cluster": "thermopompes",
+    "primaryKeyword": "thermopompe multizone",
+    "pageType": "Guide d'achat",
+    "intent": "Transactionnel",
+    "seoTitle": "Thermopompe Multizone au Québec | Guide Complet 2026",
+    "metaDescription": "La thermopompe multizone connecte 2 à 5 unités intérieures à un seul compresseur, sans conduits. Ce guide explique comment ça fonctionne, pour qui c'est adapté et ce que l'installation implique.",
+    "h1": "Thermopompe Multizone : Contrôler Chaque Pièce Sans Conduits",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/thermopompe-multizone/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Un compresseur extérieur, plusieurs unités intérieures indépendantes. La solution pour les maisons à étages qui n'ont pas de conduits."
+      },
+      "intro": "Un système multizone — aussi appelé multi-split — connecte de 2 à 5 unités intérieures à un seul compresseur extérieur. Chaque unité intérieure est contrôlée indépendamment : vous pouvez chauffer le salon à 21 °C pendant que la chambre reste à 18 °C. C'est l'alternative aux conduits pour les maisons à plusieurs niveaux ou à configuration complexe.",
+      "benefits": [
+        { "title": "Contrôle indépendant par zone", "desc": "Chaque unité intérieure dispose de son propre thermostat, généralement accessible via télécommande ou application mobile selon les modèles. Les zones inoccupées peuvent être éteintes ou en mode économie." },
+        { "title": "Un seul compresseur pour plusieurs zones", "desc": "Évitez d'avoir plusieurs unités extérieures sur votre terrain ou votre balcon. Un compresseur multizone bien dimensionné suffit à alimenter l'ensemble des zones, ce qui simplifie l'installation électrique et l'entretien." },
+        { "title": "Flexibilité des types d'unités intérieures", "desc": "Selon le fabricant, vous pouvez mélanger des unités murales, des cassettes de plafond ou des unités à gaine courte — adaptées à chaque pièce selon ses contraintes architecturales." }
+      ],
+      "forWho": [
+        "Maison de deux étages ou plus sans conduits existants",
+        "Propriétaire voulant traiter indépendamment 3 zones ou plus",
+        "Agrandissement, sous-sol aménagé ou ajout de zones à traiter"
+      ],
+      "notForWho": [
+        "Maison avec conduits en bon état — une thermopompe centrale sera plus efficace et uniforme",
+        "Propriétaire voulant traiter une seule pièce — une murale standard est plus simple et moins coûteuse"
+      ],
+      "grants": [
+        {
+          "name": "Chauffez Vert — Hydro-Québec",
+          "conditions": "Si le système multizone remplace un chauffage principal au mazout, gaz ou propane, il peut être admissible. Vérifiez les critères spécifiques aux systèmes multi-split sur le site officiel.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
+        }
+      ],
+      "faq": [
+        { "q": "Toutes les zones doivent-elles fonctionner en même temps ?", "a": "Non. Le compresseur extérieur s'adapte automatiquement à la demande totale grâce à la technologie Inverter. Vous pouvez n'activer qu'une ou deux zones si les autres pièces sont inoccupées." },
+        { "q": "Peut-on mélanger différents types d'unités intérieures ?", "a": "Oui, chez la plupart des fabricants. Une unité murale au salon, une cassette dans un couloir et une unité à gaine courte dans un sous-sol peuvent être connectées au même compresseur, selon les combinaisons compatibles documentées par le fabricant." },
+        { "q": "Un multizone consomme-t-il plus qu'une murale simple ?", "a": "Le compresseur gère plusieurs zones et son efficacité varie selon la charge totale demandée. En pratique, l'économie réalisée en n'activant que les zones occupées compense souvent la légère différence d'efficacité par rapport à des monozones dédiés." }
+      ],
+      "relatedLinks": [
+        { "label": "Thermopompe murale — une seule zone", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Comparer les marques", "href": "/comparatifs" },
+        { "label": "Subventions disponibles", "href": "/subventions" }
+      ]
+    }
+  },
+  {
+    "id": "thermopompe-a-vendre",
+    "slug": "thermopompe-a-vendre",
+    "cluster": "thermopompes",
+    "primaryKeyword": "thermopompe à vendre",
+    "pageType": "Guide d'achat",
+    "intent": "Transactionnel",
+    "seoTitle": "Thermopompe à Vendre au Québec | Comment Choisir",
+    "metaDescription": "Guide pour magasiner une thermopompe au Québec : types de systèmes, critères de sélection, subventions disponibles et points à vérifier avant d'acheter.",
+    "h1": "Thermopompe à Vendre : Comment Faire le Bon Choix",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/thermopompe-a-vendre/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Il y a des dizaines de modèles sur le marché. Ce guide vous aide à poser les bonnes questions avant d'acheter."
+      },
+      "intro": "Magasiner une thermopompe au Québec sans repères, c'est facile de se retrouver avec un appareil inadapté à son climat, à sa maison ou à son budget. Les critères importants ne sont pas toujours ceux mis en avant dans les publicités. Ce guide présente les éléments objectifs à évaluer.",
+      "benefits": [
+        { "title": "Le seuil de fonctionnement au froid, d'abord", "desc": "Au Québec, la priorité n'est pas le SEER (efficacité estivale) — c'est le comportement de l'appareil à -20 °C et en dessous. Cherchez les données du fabricant sur la capacité à basse température, pas uniquement la puissance nominale." },
+        { "title": "L'adéquation avec la configuration de votre maison", "desc": "Une murale pour une maison ouverte, un multizone pour plusieurs pièces sans conduits, une centrale si vous avez déjà de l'air pulsé. Le type de système doit correspondre à votre réalité." },
+        { "title": "La qualité de l'installation, pas juste l'équipement", "desc": "Un bon appareil mal installé donnera de mauvais résultats. Le choix de l'installateur, sa certification RBQ et son expérience avec la marque choisie comptent autant que le modèle lui-même." },
+        { "title": "Les subventions disponibles au moment de l'achat", "desc": "Les programmes d'aide changent régulièrement. Certains exigent un modèle ENERGY STAR, d'autres ciblent le remplacement de systèmes au mazout ou au gaz. Vérifiez avant de signer." }
+      ],
+      "grants": [
+        {
+          "name": "Chauffez Vert — Hydro-Québec",
+          "conditions": "Pour les résidences chauffées au mazout, au gaz naturel ou au propane qui passent à une thermopompe certifiée ENERGY STAR. Conditions à vérifier sur le site officiel.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
+        },
+        {
+          "name": "LogisVert — Transition énergétique Québec",
+          "conditions": "Programme d'aide à la rénovation écoénergétique incluant les thermopompes haute efficacité. Peut être cumulable selon les conditions.",
+          "source": "https://transitionenergetique.gouv.qc.ca"
+        }
+      ],
+      "faq": [
+        { "q": "Quelle est la différence entre une thermopompe murale et centrale ?", "a": "Une murale fonctionne sans conduits et traite une zone. Une centrale utilise les conduits existants pour traiter toute la maison. Le type de système doit être choisi selon la configuration de votre maison, pas selon le prix seul." },
+        { "q": "Comment identifier un modèle adapté au climat québécois ?", "a": "Cherchez dans la fiche technique du fabricant les données de capacité à -15 °C, -20 °C et idéalement -25 °C. Un modèle standard perd 40 à 60 % de sa capacité à -20 °C. Un modèle 'climat froid' maintient 75 à 100 % de sa capacité à cette température." },
+        { "q": "Les subventions sont-elles cumulables ?", "a": "Dans certains cas oui — Chauffez Vert et LogisVert peuvent être cumulables sous certaines conditions. La situation de chaque ménage étant différente, il est recommandé de vérifier directement auprès des organismes concernés ou avec un conseiller en énergie." }
+      ],
+      "relatedLinks": [
+        { "label": "Guide thermopompe murale", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Guide thermopompe centrale", "href": "/thermopompes/thermopompe-centrale" },
+        { "label": "Subventions disponibles au Québec", "href": "/subventions" },
+        { "label": "Comparer les marques", "href": "/marques" }
+      ]
+    }
+  },
+  {
+    "id": "installation-thermopompe",
+    "slug": "installation-thermopompe",
+    "cluster": "thermopompes",
+    "primaryKeyword": "installation thermopompe Québec",
+    "pageType": "Guide d'achat",
+    "intent": "Transactionnel",
+    "seoTitle": "Installation de Thermopompe au Québec | Ce Qu'il Faut Savoir",
+    "metaDescription": "Ce guide explique ce qu'inclut une installation de thermopompe, comment choisir un installateur certifié RBQ, et les points à vérifier avant de signer un contrat.",
+    "h1": "Installation de Thermopompe : Ce Qu'il Faut Vérifier Avant de Signer",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/installation-thermopompe/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Une mauvaise installation coûte cher — garantie annulée, fuites de réfrigérant, performances réduites. Voici comment choisir le bon installateur et savoir ce que vous payez."
+      },
+      "intro": "L'installation d'une thermopompe n'est pas un travail de bricolage. Elle implique la manipulation de réfrigérant (encadrée par la réglementation québécoise), des travaux électriques sur 240V et un positionnement qui influence directement les performances de l'appareil pour les 10 à 15 ans à venir. Ce guide explique ce à quoi ressemble une installation bien faite.",
+      "steps": [
+        { "title": "Visite d'évaluation", "desc": "L'installateur évalue la superficie à traiter, l'état du câblage, l'emplacement optimal de l'unité intérieure et les contraintes d'installation du compresseur extérieur (exposition, distance, drainage de condensat)." },
+        { "title": "Soumission écrite", "desc": "La soumission devrait préciser : marque et modèle exact, capacité en BTU, numéro de série ou référence du modèle proposé, garantie fabricant, main-d'œuvre incluse, et délai d'installation." },
+        { "title": "Vérification de la licence RBQ", "desc": "La licence RBQ de l'entrepreneur est publique et vérifiable en ligne. Elle doit couvrir les travaux mécaniques et électriques prévus. C'est une démarche de 2 minutes qui peut vous éviter beaucoup de problèmes." },
+        { "title": "Déroulement de l'installation", "desc": "Pose de l'unité intérieure, installation du compresseur extérieur (avec fixation adéquate), passage et isolation de la ligne frigorifique, raccordement électrique, charge du réfrigérant et tests de fonctionnement dans tous les modes." },
+        { "title": "Documentation remise à la fin", "desc": "Un installateur sérieux vous remet les documents de garantie du fabricant, la fiche d'installation signée et les instructions d'utilisation. Ces documents sont nécessaires pour toute réclamation ultérieure." }
+      ],
+      "faq": [
+        { "q": "Comment vérifier la licence RBQ d'un entrepreneur ?", "a": "Sur le site de la Régie du bâtiment du Québec (rbq.gouv.qc.ca), dans la section 'Vérification d'un entrepreneur'. Vous cherchez par nom d'entreprise ou numéro de licence. La licence doit être active et couvrir les sous-catégories pertinentes." },
+        { "q": "Puis-je acheter l'équipement moi-même et faire installer uniquement ?", "a": "Techniquement oui, mais c'est rarement avantageux. L'installateur ne garantira généralement pas son travail sur un équipement qu'il n'a pas fourni. En cas de problème, la responsabilité entre l'équipement et l'installation devient difficile à établir." },
+        { "q": "Y a-t-il un délai d'attente en haute saison ?", "a": "En printemps et en été, les délais peuvent être significatifs chez les bons installateurs. Planifier son installation à l'automne ou en hiver permet généralement d'obtenir un rendez-vous plus rapidement et de bénéficier de l'installation pour la saison de chauffage." },
+        { "q": "Que doit inclure le contrat d'installation ?", "a": "Au minimum : description de l'équipement (marque, modèle, BTU), description des travaux inclus, précision sur les exclusions éventuelles (mise à niveau électrique, dalle, etc.), garantie sur la main-d'œuvre et conditions de paiement." }
+      ],
+      "relatedLinks": [
+        { "label": "Thermopompe murale — quel modèle choisir ?", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Thermo Match — analyse de vos besoins", "href": "/trouver-ma-thermopompe" }
+      ]
+    }
+  },
+  {
+    "id": "remplacement-thermopompe",
+    "slug": "remplacement-thermopompe",
+    "cluster": "thermopompes",
+    "primaryKeyword": "remplacement thermopompe",
+    "pageType": "Guide d'achat",
+    "intent": "Transactionnel",
+    "seoTitle": "Remplacement de Thermopompe au Québec | Réparer ou Remplacer ?",
+    "metaDescription": "Votre thermopompe tombe souvent en panne ou perd en efficacité ? Ce guide vous aide à décider entre réparation et remplacement, et explique ce que l'opération implique.",
+    "h1": "Remplacement de Thermopompe : Réparer ou Remplacer ?",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/remplacement-thermopompe/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Pannes répétées, seuil de froid limité, gaz R22 hors production — plusieurs raisons peuvent justifier un remplacement plutôt qu'une réparation."
+      },
+      "intro": "Une thermopompe dure en moyenne 12 à 18 ans si elle est bien entretenue. Mais l'âge n'est pas le seul critère : le gaz réfrigérant utilisé, la fréquence des pannes, et l'évolution de vos besoins entrent aussi en ligne de compte. Ce guide présente les éléments concrets pour prendre une décision éclairée.",
+      "benefits": [
+        { "title": "Le coût de réparation versus le coût de remplacement", "desc": "La règle souvent citée dans l'industrie : si le coût de réparation dépasse 50 % de la valeur d'un appareil équivalent neuf, le remplacement est généralement plus économique à moyen terme — surtout si l'appareil a déjà plus de 10 ans." },
+        { "title": "Le gaz réfrigérant de l'ancien appareil", "desc": "Les appareils fabriqués avant 2010 utilisent souvent du R22, dont la production est arrêtée depuis 2020. Les recharges sont encore possibles à partir de stocks recyclés, mais à un coût croissant. Un appareil nécessitant fréquemment des recharges de R22 est un candidat sérieux au remplacement." },
+        { "title": "La performance hivernale actuelle", "desc": "Si votre thermopompe s'arrête souvent et que le chauffage d'appoint prend le relais dès -10 °C ou -15 °C, c'est souvent le signe que l'équipement n'est plus adapté aux hivers québécois actuels ou que son compresseur est en fin de vie." }
+      ],
+      "faq": [
+        { "q": "Mon appareil utilise encore du R22 — est-ce une raison de le remplacer ?", "a": "Pas nécessairement immédiatement, mais c'est un facteur à intégrer dans le calcul. Les recharges de R22 sont encore disponibles mais coûtent significativement plus cher qu'avant l'arrêt de la production. Si votre appareil perd du gaz régulièrement, c'est le bon moment pour évaluer le remplacement." },
+        { "q": "Peut-on conserver le même filage électrique lors du remplacement ?", "a": "Dans la majorité des cas oui, surtout si vous remplacez par un appareil de capacité similaire. L'installateur vérifiera le calibre et l'état du câblage existant. Si les normes électriques ont évolué depuis l'installation originale, une mise à niveau peut être requise." },
+        { "q": "Qu'arrive-t-il à l'ancien appareil ?", "a": "L'installateur est responsable de la récupération du réfrigérant selon les normes environnementales en vigueur. L'appareil lui-même peut être récupéré par l'entrepreneur ou déposé dans un écocentre. Certains appareils ont une valeur de récupération sur les pièces." }
+      ],
+      "relatedLinks": [
+        { "label": "Thermopompe murale — nouveaux modèles performants", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Thermopompe climat froid — haute performance", "href": "/thermopompes/thermopompe-climat-froid" },
+        { "label": "Subventions pour remplacement", "href": "/subventions" }
+      ]
+    }
+  },
+  {
+    "id": "thermopompe-climat-froid",
+    "slug": "thermopompe-climat-froid",
+    "cluster": "thermopompes",
+    "primaryKeyword": "thermopompe climat froid",
+    "pageType": "Guide d'achat",
+    "intent": "Commercial",
+    "seoTitle": "Thermopompe Climat Froid au Québec | Guide des Technologies",
+    "metaDescription": "Les thermopompes ne sont pas toutes équivalentes par -20 °C. Ce guide explique les technologies conçues pour les hivers québécois et comment les identifier.",
+    "h1": "Thermopompe Climat Froid : Ce Qui Change Vraiment à -20 °C",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/thermopompe-climat-froid/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Un modèle standard perd 50 à 70 % de sa capacité à -20 °C. Les modèles conçus pour le climat froid maintiennent 75 à 100 % de leur capacité à cette température."
+      },
+      "intro": "Toutes les thermopompes fonctionnent en extrayant la chaleur contenue dans l'air extérieur pour la transférer à l'intérieur. Plus il fait froid dehors, moins il y a de chaleur à extraire, et plus le travail est difficile pour le compresseur. La différence entre un modèle standard et un modèle dit « climat froid » tient principalement à la conception du compresseur et à sa capacité à maintenir des performances acceptables à très basse pression d'évaporation.",
+      "benefits": [
+        { "title": "Compresseur à injection de vapeur", "desc": "La technologie principale derrière les modèles performants par grand froid. L'injection de vapeur dans le compresseur améliore le cycle thermodynamique à basse température, permettant de maintenir une pression d'aspiration suffisante et donc une capacité de chauffage significative." },
+        { "title": "Données fabricant à vérifier systématiquement", "desc": "Les appellations marketing varient selon les marques : Hyper Heat (Mitsubishi), H2i+ (Mitsubishi aussi), Hyper Heat (Daikin Aurora), Extreme Heat (Fujitsu), etc. Ce qui compte, ce sont les données de capacité à -15 °C, -20 °C et -25 °C dans la fiche technique officielle, pas le nom de la série." },
+        { "title": "Dégivrage amélioré", "desc": "Les modèles conçus pour le froid gèrent également mieux les cycles de dégivrage — ces moments où le compresseur inverse le cycle pour réchauffer le serpentin extérieur gelé. Un dégivrage mal géré se traduit par des périodes de soufflage d'air froid inconfortables." }
+      ],
+      "faq": [
+        { "q": "Comment distinguer un vrai modèle climat froid d'un modèle ordinaire ?", "a": "La seule façon fiable : consulter la fiche technique du fabricant et chercher les données de capacité à -20 °C et -25 °C. Un modèle standard n'aura pas ces données, ou elles montreront une chute de capacité de 50 % ou plus. Un modèle climat froid maintiendra 70 à 100 % de sa capacité nominale." },
+        { "q": "Un modèle climat froid est-il nécessaire à Montréal ?", "a": "Montréal est en zone climatique 6A. Les épisodes à -20 °C et en dessous sont réguliers en janvier et février. Pour un usage comme chauffage principal (et non d'appoint), un modèle capable de maintenir sa performance à ces températures est fortement recommandé." },
+        { "q": "Est-ce que je peux quand même avoir un chauffage d'appoint ?", "a": "Oui, et c'est souvent judicieux dans les régions les plus froides (zones 6B, 7). La thermopompe couvre l'essentiel de la saison de chauffage, et le chauffage d'appoint (plinthes, fournaise) prend le relais lors des quelques journées les plus froides, ce qui reste plus économique que de dimensionner excessivement la thermopompe." }
+      ],
+      "relatedLinks": [
+        { "label": "Comparer les marques (Mitsubishi, Daikin, Fujitsu)", "href": "/comparatifs" },
+        { "label": "Thermopompe haute efficacité", "href": "/thermopompes/thermopompe-haute-efficacite" },
+        { "label": "Utiliser Thermo Match", "href": "/trouver-ma-thermopompe" }
+      ]
+    }
+  },
+  {
+    "id": "thermopompe-haute-efficacite",
+    "slug": "thermopompe-haute-efficacite",
+    "cluster": "thermopompes",
+    "primaryKeyword": "thermopompe haute efficacité",
+    "pageType": "Guide d'achat",
+    "intent": "Commercial",
+    "seoTitle": "Thermopompe Haute Efficacité au Québec | SEER2, HSPF2 et ENERGY STAR",
+    "metaDescription": "Ce guide explique ce que signifient SEER2, HSPF2 et la certification ENERGY STAR pour une thermopompe, et pourquoi ces critères sont particulièrement importants au Québec.",
+    "h1": "Thermopompe Haute Efficacité : Comprendre SEER2, HSPF2 et ENERGY STAR",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/thermopompe-haute-efficacite/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Les cotes d'efficacité permettent de comparer des appareils de façon objective. Voici comment les lire correctement et pourquoi certaines sont plus utiles au Québec que d'autres."
+      },
+      "intro": "L'efficacité d'une thermopompe est mesurée par deux indicateurs principaux : le SEER2 pour la climatisation et le HSPF2 pour le chauffage. Ces normes ont été mises à jour en 2023 et remplacent les anciens SEER et HSPF, qui sous-estimaient la consommation réelle dans des conditions proches de celles des maisons québécoises. Comprendre ces cotes permet de comparer des appareils objectivement plutôt que de se fier uniquement au prix ou à la marque.",
+      "benefits": [
+        { "title": "HSPF2 — la cote la plus pertinente au Québec", "desc": "Le HSPF2 mesure l'efficacité en chauffage sur une saison entière. Au Québec, le chauffage représente une part beaucoup plus importante de la consommation que la climatisation. Une différence de 2 points en HSPF2 peut représenter plusieurs centaines de dollars par année sur la facture Hydro." },
+        { "title": "SEER2 — important pour les régions chaudes en été", "desc": "Le SEER2 mesure l'efficacité en climatisation. Pour le Québec, il reste secondaire par rapport au HSPF2, mais une cote SEER2 élevée est généralement corrélée à une conception de compresseur plus avancée, ce qui bénéficie aussi à la performance en chauffage." },
+        { "title": "ENERGY STAR — que garantit réellement cette certification", "desc": "La certification ENERGY STAR garantit que l'appareil dépasse les seuils minimaux de performance définis par les programmes américains et canadiens. Elle ne garantit pas la performance par grand froid — c'est un critère séparé, lié à la conception du compresseur." },
+        { "title": "Le réfrigérant R32 — changement en cours", "desc": "L'industrie transite du R410A vers le R32 (et d'autres gaz A2L). Le R32 a un potentiel de réchauffement planétaire environ 3 fois inférieur au R410A. Les appareils au R32 nécessitent des installations et techniciens formés à ce réfrigérant légèrement inflammable." }
+      ],
+      "faq": [
+        { "q": "Peut-on comparer un SEER2 de 18 avec un ancien SEER de 18 ?", "a": "Non. Les conditions de test du SEER2 sont plus sévères (pression statique plus réaliste). Un SEER2 de 16 équivaut approximativement à un SEER (ancien) de 19. Comparez toujours SEER2 avec SEER2 et HSPF2 avec HSPF2." },
+        { "q": "Un HSPF2 élevé est-il suffisant pour garantir de bonnes performances par -20 °C ?", "a": "Non. Le HSPF2 est calculé dans des conditions standards qui ne reflètent pas les températures extrêmes québécoises. Un appareil avec un excellent HSPF2 peut quand même perdre l'essentiel de sa capacité à -20 °C si le compresseur n'est pas conçu pour le froid extrême." },
+        { "q": "Que signifie la cote COP ?", "a": "Le COP (coefficient de performance) est une mesure ponctuelle de l'efficacité à une température donnée. Un COP de 3 signifie que l'appareil produit 3 kWh de chaleur pour 1 kWh d'électricité consommé. Contrairement au HSPF2, le COP ne représente pas une saison entière — il peut être mentionné à différentes températures." }
+      ],
+      "relatedLinks": [
+        { "label": "Thermopompe climat froid — technologie avancée", "href": "/thermopompes/thermopompe-climat-froid" },
+        { "label": "Comparer les marques ENERGY STAR", "href": "/marques" },
+        { "label": "Subventions pour appareils haute efficacité", "href": "/subventions" }
+      ]
+    }
+  },
+  {
+    "id": "soumission-thermopompe",
+    "slug": "soumission-thermopompe",
+    "cluster": "thermopompes",
+    "primaryKeyword": "soumission thermopompe",
+    "pageType": "Guide",
+    "intent": "Transactionnel",
+    "seoTitle": "Soumission Thermopompe au Québec | Comment Comparer et Quoi Vérifier",
+    "metaDescription": "Ce guide vous explique comment lire une soumission de thermopompe, quoi comparer entre plusieurs offres, et les pièges à éviter avant de signer.",
+    "h1": "Soumission Thermopompe : Comment Comparer Sans se Tromper",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/soumission-thermopompe/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Une soumission qui paraît moins chère n'est pas toujours avantageuse. Voici comment lire entre les lignes et comparer des offres de façon équitable."
+      },
+      "intro": "Obtenir plusieurs soumissions pour l'installation d'une thermopompe est une bonne pratique. Encore faut-il savoir les comparer. Une différence de prix peut refléter une différence de qualité d'équipement, d'étendue des travaux ou de garanties offertes. Ce guide présente les éléments à vérifier dans chaque soumission.",
+      "steps": [
+        { "title": "Vérifier que le modèle exact est spécifié", "desc": "La soumission doit mentionner la marque, la série et le modèle exact (ex: Mitsubishi MSZ-FS12NA), pas seulement la marque ou la capacité. C'est la seule façon de comparer des offres équivalentes." },
+        { "title": "Distinguer fourniture, installation et travaux connexes", "desc": "Certaines soumissions incluent la fourniture de l'équipement, d'autres non. Les travaux électriques, la dalle de béton ou les modifications de conduits peuvent être inclus ou exclus. Lisez les exclusions attentivement." },
+        { "title": "Vérifier la garantie sur la main-d'œuvre", "desc": "La garantie fabricant couvre l'équipement, pas l'installation. Une garantie séparée sur la main-d'œuvre de 1 à 2 ans est standard dans l'industrie pour les bons installateurs." },
+        { "title": "Demander la confirmation de la licence RBQ", "desc": "Le numéro de licence RBQ devrait figurer sur la soumission ou être fourni sur demande. Vérifiez qu'elle est valide et qu'elle couvre les travaux prévus." }
+      ],
+      "faq": [
+        { "q": "Comment comparer deux soumissions qui incluent des modèles différents ?", "a": "Comparez les capacités en BTU à basse température (pas uniquement nominales), les cotes HSPF2, et la durée de la garantie compresseur. Un modèle moins cher avec une garantie de 5 ans peut être moins avantageux qu'un modèle plus cher avec une garantie compresseur de 12 ans." },
+        { "q": "Un acompte élevé est-il normal ?", "a": "Un acompte de 25 à 40 % à la commande est courant dans l'industrie, notamment pour couvrir le coût de l'équipement. Un acompte de 80 à 100 % avant les travaux est inhabituel et mérite d'être questionné." },
+        { "q": "Dois-je avoir une soumission écrite avant l'installation ?", "a": "Oui, c'est fortement recommandé. Un contrat écrit détaillé vous protège en cas de litige sur les travaux inclus, le modèle installé ou le total facturé." }
+      ],
+      "relatedLinks": [
+        { "label": "Comment choisir un installateur certifié RBQ", "href": "/thermopompes/installation-thermopompe" },
+        { "label": "Thermo Match — analyser vos besoins d'abord", "href": "/trouver-ma-thermopompe" },
+        { "label": "Subventions disponibles", "href": "/subventions" }
+      ]
+    }
+  },
+  {
+    "id": "comparateur-thermopompe",
+    "slug": "comparateur-thermopompe",
+    "cluster": "thermopompes",
+    "primaryKeyword": "comparateur thermopompe Québec",
+    "pageType": "Outil",
+    "intent": "Commercial",
+    "seoTitle": "Comparateur de Thermopompes au Québec | Thermo Match",
+    "metaDescription": "Thermo Match analyse votre maison, votre région et vos besoins pour vous orienter vers le type de système le plus adapté. Outil gratuit et sans engagement.",
+    "h1": "Comparateur de Thermopompes : Trouver le Bon Système pour Votre Maison",
+    "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
+    "canonicalUrl": "https://thermopompeavendre.ca/thermopompes/comparateur-thermopompe/",
+    "schemaTypes": ["BreadcrumbList"],
+    "contentBlocks": {
+      "hero": {
+        "subtitle": "Thermo Match pose les bonnes questions — configuration de la maison, région climatique, besoins — et vous oriente vers les solutions les plus pertinentes."
+      },
+      "intro": "Comparer des thermopompes sans méthode, c'est souvent se retrouver à comparer des prix et des marques sans comprendre si les appareils sont réellement équivalents. Thermo Match aborde le problème différemment : plutôt que de lister des centaines de modèles, il commence par qualifier votre situation pour vous orienter vers le type de système adapté avant de vous connecter avec des installateurs locaux.",
+      "benefits": [
+        { "title": "La zone climatique influence fortement le choix", "desc": "Un ménage à Montréal (zone 6A) n'a pas les mêmes exigences qu'un ménage à Saguenay (zone 7). L'outil prend en compte votre région pour s'assurer que les recommandations tiennent compte des températures réelles auxquelles l'équipement devra fonctionner." },
+        { "title": "La configuration de la maison d'abord", "desc": "Superficie, nombre de pièces à traiter, présence de conduits existants, type de chauffage actuel — ces facteurs déterminent le type de système avant même de parler de marque ou de modèle." },
+        { "title": "Aucune marque favorisée", "desc": "L'outil recommande des catégories et des critères de performance, pas des modèles spécifiques. La sélection finale du modèle se fait avec l'installateur, qui connaît les disponibilités et les particularités locales." }
+      ],
+      "faq": [
+        { "q": "Thermo Match recommande-t-il des modèles précis ?", "a": "Non. Il identifie le type de système adapté (murale, multizone, centrale) et les critères de performance essentiels (capacité BTU, HSPF2 minimal, seuil de froid recommandé). Les modèles spécifiques sont sélectionnés avec l'installateur, qui a accès aux disponibilités réelles." },
+        { "q": "Faut-il s'identifier pour utiliser l'outil ?", "a": "Non pour la partie analyse. Si vous souhaitez ensuite obtenir des soumissions basées sur vos résultats, une identification est requise pour que les installateurs puissent vous contacter." }
+      ],
+      "relatedLinks": [
+        { "label": "Comparer les marques en détail", "href": "/marques" },
+        { "label": "Guide : thermopompe murale ou centrale ?", "href": "/thermopompes/thermopompe-a-vendre" },
+        { "label": "Subventions disponibles", "href": "/subventions" }
+      ]
+    }
+  }
+]

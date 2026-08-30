@@ -1,0 +1,641 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  color-scheme: light;
+  --background: oklch(0.97 0.005 80);       /* #F7F5F0 beige */
+  --foreground: oklch(0.18 0.02 220);       /* #172126 dark */
+  --card: oklch(1 0 0);                     /* #FFFFFF */
+  --card-foreground: oklch(0.18 0.02 220);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 220);
+  --primary: oklch(0.62 0.145 48);          /* #C66E42 orange accent */
+  --primary-foreground: oklch(0.99 0 0);    /* white text on orange */
+  --secondary: oklch(0.97 0.005 80);        /* beige surface */
+  --secondary-foreground: oklch(0.18 0.02 220);
+  --muted: oklch(0.97 0.005 80);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0.005 80);
+  --accent-foreground: oklch(0.18 0.02 220);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.90 0.008 70);           /* #DEDCD5 */
+  --input: oklch(0.90 0.008 70);
+  --ring: oklch(0.62 0.145 48);             /* orange ring on focus */
+  --chart-1: oklch(0.62 0.145 48);          /* orange */
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.18 0.02 220);
+  --sidebar-primary: oklch(0.62 0.145 48);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.97 0.005 80);
+  --sidebar-accent-foreground: oklch(0.18 0.02 220);
+  --sidebar-border: oklch(0.90 0.008 70);
+  --sidebar-ring: oklch(0.62 0.145 48);
+}
+
+/* ==============================================================
+   ThermopompesÀVendre.ca — Design System
+
+   Palette volontairement limitée. Typographie soignée.
+   Chaque token a une raison d'exister.
+   ============================================================== */
+
+/* ==============================================================
+   1. THEME TOKENS
+   Registered with Tailwind CSS v4 for utility class generation.
+   ============================================================== */
+
+@theme inline {
+  /* ---- Font ---- */
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--font-outfit), "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Colors: Neutral ---- */
+  --color-background: #F7F5F0;
+  --color-surface: #FFFFFF;
+  --color-foreground: #172126;
+  --color-muted: #6B7280;
+  --color-muted-fg: #9CA3AF;
+  --color-border: #DEDCD5;
+  --color-border-hover: #CFCBC2;
+  --color-input-border: #C4C1B8;
+
+  /* ---- Colors: Dark surfaces ---- */
+  --color-surface-dark: #102F3B;
+  --color-surface-dark-muted: #174052;
+  --color-surface-dark-fg: #F7F5F0;
+  --color-surface-dark-muted-fg: #94A3B8;
+
+  /* ---- Colors: Brand ---- */
+  --color-brand: #174B60;
+  --color-brand-hover: #113848;
+  --color-brand-active: #0B2733;
+  --color-brand-light: #E8ECEF;
+  --color-brand-fg: #FFFFFF;
+
+  /* ---- Colors: Accent ---- */
+  --color-accent: #C66E42;
+  --color-accent-hover: #A95C35;
+  --color-accent-fg: #FFFFFF;
+
+  /* ---- Colors: Semantic ---- */
+  --color-success: #16A34A;
+  --color-success-light: #F0FDF4;
+  --color-warning: #CA8A04;
+  --color-warning-light: #FEFCE8;
+  --color-error: #DC2626;
+  --color-error-light: #FEF2F2;
+
+  /* ---- Shadows (very subtle) ---- */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.03);
+  --shadow-md: 0 4px 8px -2px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.03);
+  --shadow-lg: 0 12px 24px -4px rgb(0 0 0 / 0.06), 0 4px 8px -4px rgb(0 0 0 / 0.03);
+
+  /* ---- Border Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ---- Easing ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---- Animations ---- */
+  --animate-fade-in: fade-in 0.3s var(--ease-out) forwards;
+  --animate-fade-up: fade-up 0.4s var(--ease-out) forwards;
+  --animate-scale-in: scale-in 0.2s var(--ease-out) forwards;
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* ==============================================================
+   2. TYPOGRAPHY SCALE
+   Fluid sizing with clamp() for smooth responsive behavior.
+   ============================================================== */
+
+:root {
+  /* ---- Scale tokens (premium desktop) ---- */
+  --container-wide: 1520px;
+  --container-main: 1440px;
+  --container-content: 1080px;
+  --container-reading: 840px;
+  --page-gutter: 48px;
+  --control-height: 54px;
+  --button-height-sm: 44px;
+  --button-height: 52px;
+  --button-height-lg: 56px;
+  --radius-card: 16px;
+  --radius-control: 10px;
+
+  /* ---- Typography (scaled up) ---- */
+  --text-display-xl: clamp(3rem, 5vw + 1rem, 4.75rem);
+  --text-display-lg: clamp(2.75rem, 4.5vw + 0.5rem, 4rem);
+  --text-h1: clamp(2.25rem, 3.5vw + 0.5rem, 3.5rem);
+  --text-h2: clamp(1.75rem, 2.5vw + 0.5rem, 2.5rem);
+  --text-h3: clamp(1.375rem, 1.75vw + 0.25rem, 1.75rem);
+  --text-h4: 1.25rem;
+  --text-body-lg: 1.1875rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.8125rem;
+
+  --leading-display: 1.06;
+  --leading-heading: 1.18;
+  --leading-body: 1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.02em;
+  --tracking-body: 0;
+  --tracking-wide: 0.05em;
+}
+
+/* ==============================================================
+   3. BASE STYLES
+   ============================================================== */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Headings ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: inherit;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-h4); }
+
+p {
+  line-height: var(--leading-body);
+}
+
+/* ---- Links ---- */
+a {
+  text-decoration: none;
+  transition: color 150ms var(--ease-in-out);
+}
+
+/* ---- Selection ---- */
+::selection {
+  background-color: var(--color-brand);
+  color: var(--color-brand-fg);
+}
+
+/* ---- Focus (global default) ---- */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* ---- Scrollbar (subtle, Webkit only) ---- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-muted);
+}
+
+/* ==============================================================
+   4. FORM BASE RESETS
+   Custom checkbox/radio appearance via CSS.
+   ============================================================== */
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.375rem;
+  height: 1.375rem;
+  border: 2px solid var(--color-input-border);
+  background-color: var(--color-surface);
+  transition: all 150ms var(--ease-in-out);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+input[type="checkbox"] {
+  border-radius: var(--radius-sm);
+}
+
+input[type="radio"] {
+  border-radius: var(--radius-full);
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+  border-color: var(--color-brand);
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+input[type="checkbox"]:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input[type="radio"]:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==============================================================
+   5. KEYFRAMES
+   Sober, purposeful animations only.
+   ============================================================== */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-in-from-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+.animate-in.slide-in-from-right {
+  animation: slide-in-from-right 0.2s ease-out;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ==============================================================
+   6. REDUCED MOTION
+   ============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==============================================================
+   7. PRINT
+   ============================================================== */
+
+@media print {
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  header, footer, .print\:hidden {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Improve table readability */
+  table {
+    font-size: 9pt;
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    padding: 4px 6px;
+    border-bottom: 0.5pt solid #d0d0d0;
+  }
+
+  /* Keep product headers compact */
+  img, [data-image-placeholder] {
+    max-height: 80px;
+    object-fit: contain;
+  }
+
+  /* Ensure links show URL */
+  a[href]::after {
+    content: none; /* Avoid cluttering table cells */
+  }
+}
+
+/* ==============================================================
+   8. À PROPOS PAGE — RESPONSIVE
+   ============================================================== */
+
+/* ---- "Toutes les marques" dark section ---- */
+@media (max-width: 900px) {
+  .about-marques-section {
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .about-marques-text {
+    width: 100% !important;
+    padding: 48px 28px 32px !important;
+  }
+
+  .about-marques-text h2 {
+    font-size: clamp(28px, 8vw, 40px) !important;
+  }
+
+  .about-marques-text p {
+    font-size: 15px !important;
+    max-width: 100% !important;
+  }
+
+  .about-marques-visual {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 16px 32px !important;
+  }
+
+  .about-marques-visual img {
+    width: 100% !important;
+    max-width: 600px !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* ---- Orange CTA banner ---- */
+@media (max-width: 700px) {
+  .about-cta-banner {
+    min-height: 580px !important;
+    align-items: flex-start !important;
+  }
+
+  .about-cta-content {
+    width: auto !important;
+    margin: 48px 28px 0 !important;
+  }
+
+  .about-cta-content h2 {
+    font-size: clamp(34px, 10vw, 44px) !important;
+  }
+
+  .about-cta-content a {
+    width: auto !important;
+    min-width: 260px !important;
+  }
+
+  .about-cta-heatpump {
+    right: -110px !important;
+    bottom: -20px !important;
+    width: 720px !important;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .about-cta-heatpump {
+    width: clamp(500px, 55vw, 720px) !important;
+    right: -50px !important;
+    bottom: -30px !important;
+  }
+}
+
+/* ---- Experience section responsive ---- */
+@media (max-width: 850px) {
+  .experience-inner {
+    grid-template-columns: 1fr !important;
+    width: min(100% - 48px, 600px) !important;
+    padding: 48px 0 !important;
+    min-height: auto !important;
+    gap: 40px !important;
+  }
+
+  .experience-inner h2 {
+    font-size: clamp(32px, 9vw, 44px) !important;
+  }
+
+  .experience-steps {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+/* ---- Hero responsive ---- */
+@media (max-width: 700px) {
+  .about-hero {
+    height: 680px !important;
+  }
+
+  .about-hero-image {
+    object-position: 61% center !important;
+  }
+
+  .about-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 22, 31, 0.82) 0%,
+      rgba(2, 22, 31, 0.58) 55%,
+      rgba(2, 22, 31, 0.18) 100%
+    ) !important;
+  }
+
+  .about-hero-content {
+    width: auto !important;
+    margin-inline: 28px !important;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(40px, 11vw, 52px) !important;
+  }
+
+  .about-hero-content h1 span {
+    white-space: normal !important;
+  }
+}
+
+/* ==============================================================
+   9. SUBVENTIONS PAGE — RESPONSIVE
+   ============================================================== */
+
+@media (max-width: 850px) {
+  .subventions-main-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .subventions-main-card > div:first-child {
+    border-right: none !important;
+    border-bottom: 1px solid #e2d9cc;
+  }
+
+  .subventions-result-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 16px 18px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .subventions-verify-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .subventions-verify-grid > div {
+    border-left: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid #e3dace;
+    padding-bottom: 18px !important;
+  }
+
+  .subventions-verify-grid > div:last-child {
+    border-bottom: none;
+    padding-bottom: 0 !important;
+  }
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

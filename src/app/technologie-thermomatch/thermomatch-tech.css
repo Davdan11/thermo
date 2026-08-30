@@ -1,0 +1,448 @@
+/* ==============================================================
+   ThermoMatch Technology Page — Dedicated Styles
+   ============================================================== */
+
+:root {
+  --tm-navy: #061d2a;
+  --tm-navy-soft: #0c2b3a;
+  --tm-cream: #f6f2eb;
+  --tm-paper: #fffdf9;
+  --tm-orange: #e54b17;
+  --tm-ink: #10212b;
+  --tm-muted: #667680;
+  --tm-line: #dcd4ca;
+  --tm-container: 1440px;
+  --tm-radius-card: 14px;
+  --tm-section-space: clamp(72px, 8vw, 128px);
+}
+
+/* ---- Trust bar ---- */
+.tm-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.tm-trust-item {
+  display: flex;
+}
+
+@media (max-width: 1023px) {
+  .tm-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tm-trust-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .tm-trust-item:nth-child(2) {
+    border-right: none;
+  }
+  .tm-trust-item:nth-child(3),
+  .tm-trust-item:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .tm-trust-bar {
+    grid-template-columns: 1fr;
+  }
+  .tm-trust-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 24px;
+  }
+  .tm-trust-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ---- Analysis diagram ---- */
+.tm-diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: center;
+  position: relative;
+}
+
+.tm-diagram-left,
+.tm-diagram-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Center hub: light background + concentric rings */
+.tm-diagram-center {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #f8f5ef;
+  border: 1px solid #dcd4ca;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  position: relative;
+  z-index: 2;
+  margin: 0 32px;
+}
+
+/* Outer ring */
+.tm-diagram-center::before {
+  content: '';
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px solid #dcd4ca;
+  pointer-events: none;
+}
+
+/* Outermost ring */
+.tm-diagram-center::after {
+  content: '';
+  position: absolute;
+  inset: -34px;
+  border-radius: 50%;
+  border: 1px solid #e5ddd3;
+  pointer-events: none;
+}
+
+.tm-diagram-card {
+  background: var(--tm-paper);
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius-card);
+  padding: 22px 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Connector dots on the cards (small orange dot facing center) */
+.tm-diagram-left .tm-diagram-card::after,
+.tm-diagram-right .tm-diagram-card::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tm-orange);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tm-diagram-left .tm-diagram-card::after { right: -3px; }
+.tm-diagram-right .tm-diagram-card::before { left: -3px; }
+
+/* Connecting lines using CSS from the center hub to the cards */
+.tm-diagram-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--tm-orange);
+  background: var(--tm-cream);
+  z-index: 10;
+}
+
+/* Position the 6 dots on the outermost ring of the center hub */
+.tm-diagram-dot.top-left { top: 15%; left: -8px; }
+.tm-diagram-dot.middle-left { top: 50%; left: -16px; transform: translateY(-50%); }
+.tm-diagram-dot.bottom-left { bottom: 15%; left: -8px; }
+
+.tm-diagram-dot.top-right { top: 15%; right: -8px; }
+.tm-diagram-dot.middle-right { top: 50%; right: -16px; transform: translateY(-50%); }
+.tm-diagram-dot.bottom-right { bottom: 15%; right: -8px; }
+
+/* Draw the dotted lines from the center hub outward */
+.tm-diagram-dot::after {
+  content: '';
+  position: absolute;
+  border-top: 1px dashed #dcd4ca;
+  width: 45px; /* Adjust length to span the gap */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Adjust angle and origin for diagonal lines */
+.tm-diagram-dot.top-left::after { right: 4px; transform-origin: right center; transform: translateY(-50%) rotate(25deg); width: 55px; }
+.tm-diagram-dot.middle-left::after { right: 4px; }
+.tm-diagram-dot.bottom-left::after { right: 4px; transform-origin: right center; transform: translateY(-50%) rotate(-25deg); width: 55px; }
+
+.tm-diagram-dot.top-right::after { left: 4px; transform-origin: left center; transform: translateY(-50%) rotate(-25deg); width: 55px; }
+.tm-diagram-dot.middle-right::after { left: 4px; }
+.tm-diagram-dot.bottom-right::after { left: 4px; transform-origin: left center; transform: translateY(-50%) rotate(25deg); width: 55px; }
+
+@media (max-width: 1024px) {
+  .tm-diagram-dot::after { display: none; }
+}
+
+@media (max-width: 767px) {
+  .tm-diagram-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tm-diagram-center {
+    margin: 12px auto;
+    width: 160px;
+    height: 160px;
+  }
+  .tm-diagram-center::before { inset: -14px; }
+  .tm-diagram-center::after { inset: -26px; }
+  .tm-diagram-left,
+  .tm-diagram-right {
+    gap: 12px;
+  }
+  .tm-diagram-left .tm-diagram-card::after,
+  .tm-diagram-right .tm-diagram-card::before {
+    display: none;
+  }
+  .tm-connector-lines {
+    display: none;
+  }
+}
+
+/* ---- Comparison table ---- */
+.tm-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--tm-radius-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tm-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+.tm-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+}
+
+.tm-table td {
+  padding: 16px 20px;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tm-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tm-table thead th:first-child {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Steps timeline ---- */
+.tm-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+/* The continuous dashed line behind the mockups */
+.tm-steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 310px; /* Adjust this to align with the middle of the mockup cards */
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  border-top: 1px dashed var(--tm-line);
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .tm-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .tm-steps-grid::before {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .tm-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ---- Performance chart ---- */
+.tm-chart-wrap {
+  background: var(--tm-paper);
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius-card);
+  padding: 32px;
+}
+
+/* ---- Accordion ---- */
+.tm-accordion-item {
+  border-bottom: 1px solid var(--tm-line);
+}
+
+.tm-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.tm-accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: clamp(16px, 1.2vw, 18px);
+  font-weight: 600;
+  color: var(--tm-ink);
+  transition: color 0.15s;
+}
+
+.tm-accordion-trigger:hover {
+  color: var(--tm-orange);
+}
+
+.tm-accordion-trigger:focus-visible {
+  outline: 2px solid var(--tm-orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.tm-accordion-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+  color: var(--tm-muted);
+}
+
+.tm-accordion-trigger[aria-expanded="true"] .tm-accordion-icon {
+  transform: rotate(45deg);
+}
+
+.tm-accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+.tm-accordion-content[data-open="true"] {
+  max-height: 400px;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tm-accordion-content,
+  .tm-accordion-icon {
+    transition: none;
+  }
+}
+
+/* ---- CTA final ---- */
+.tm-cta-final {
+  position: relative;
+  overflow: hidden;
+}
+
+.tm-cta-monogram {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(200px, 20vw, 400px);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+/* ---- Match-to-project steps ---- */
+.tm-project-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.tm-project-step {
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+}
+
+.tm-project-step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.tm-project-steps-line {
+  position: absolute;
+  top: 28px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: var(--tm-line);
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .tm-project-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .tm-project-steps-line {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-project-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Decision columns ---- */
+.tm-decision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 767px) {
+  .tm-decision-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
