@@ -1,0 +1,13 @@
+{
+  "selectionYear": 2026,
+  "heatedAreaFt2": 1600,
+  "climateZone": "7A",
+  "designHeatLoadBtuH": 42000,
+  "homeType": "detached",
+  "constructionPeriod": "1981_2000",
+  "insulation": "standard",
+  "distribution": "ducts",
+  "requestedZones": 1,
+  "goal": "balanced",
+  "backupHeatAvailable": true
+}

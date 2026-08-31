@@ -78,7 +78,7 @@ export function CompareSelection({ products }: CompareSelectionProps) {
                   
                   <div className="relative z-10 max-w-xl">
                     <span className="text-[var(--color-accent)] font-semibold text-xs tracking-widest uppercase mb-2 block">
-                      ThermoMatch
+                      <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[14px] object-contain mb-3" />
                     </span>
                     <h3 className="text-white text-2xl sm:text-3xl font-bold mb-3">
                       Vous ne savez pas quoi choisir?

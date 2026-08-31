@@ -117,7 +117,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
                   <Link 
                     key={brand.id} 
                     href={`/marques/${brand.slug}`} 
-                    className="group bg-[#F7F5F0] flex flex-col items-center justify-center relative p-8 h-48 sm:h-56 transition-colors duration-300 hover:bg-[#fff]"
+                    className="group bg-white flex flex-col items-center justify-center relative p-8 h-48 sm:h-56 transition-colors duration-300 hover:bg-[#fafafa]"
                   >
                     {/* Logo or Text */}
                     <div className="flex-1 flex items-center justify-center w-full relative mb-6">
@@ -212,7 +212,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
                   href="/trouver-ma-thermopompe"
                   className="inline-flex items-center justify-center gap-3 bg-[#e54b17] hover:bg-[#d44315] transition-colors duration-300 text-white font-semibold px-6 py-3.5 rounded-sm"
                 >
-                  Commencer ThermoMatch <span>→</span>
+                  Commencer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" /> <span>→</span>
                 </Link>
               </div>
             </div>

@@ -66,7 +66,7 @@ export interface AvailableFilters {
  * Compute available filter options from published models.
  */
 export function getAvailableFilters(): AvailableFilters {
-  const published = registry.models.filter((m) => m.status === "published");
+  const published = registry.models.filter((m) => m.status === "published" && m.isActive2026);
 
   // Types
   const typeMap = new Map<SystemType, number>();
@@ -130,7 +130,7 @@ export function getAvailableFilters(): AvailableFilters {
 export function getCatalogueModels(
   params: CatalogueParams = {},
 ): CatalogueProduct[] {
-  let models = registry.models.filter((m) => m.status === "published");
+  let models = registry.models.filter((m) => m.status === "published" && m.isActive2026);
 
   // ---- Search ----
   if (params.search) {

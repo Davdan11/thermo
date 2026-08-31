@@ -20,6 +20,8 @@ export interface ThermoMatchFilters {
   zones?: number | null;
   /** Minimum capacity needed (BTU/h) */
   minCapacityBtu?: number | null;
+  /** Maximum capacity needed (BTU/h) */
+  maxCapacityBtu?: number | null;
   /** Must be cold-climate rated? */
   coldClimate?: boolean;
   /** Minimum operating temperature needed (°C) */
@@ -39,6 +41,7 @@ export interface ThermoMatchCandidate {
   configuration: SystemConfiguration;
   performanceProfile: PerformanceProfile | null;
   brandName: string;
+  warrantyPartsYears?: number | null;
 }
 
 /**
@@ -78,6 +81,13 @@ export function getThermoMatchCandidates(
       model.nominalCapacityBtu < filters.minCapacityBtu
     )
       continue;
+      
+    if (
+      filters.maxCapacityBtu != null &&
+      model.nominalCapacityBtu != null &&
+      model.nominalCapacityBtu > filters.maxCapacityBtu
+    )
+      continue;
 
     // Get configurations for this model
     const configs = registry.configurations.filter(
@@ -101,12 +111,15 @@ export function getThermoMatchCandidates(
         ) ?? null;
 
       const brand = registry.brandById.get(model.brandId);
+      const warranties = registry.warranties.filter((w) => w.modelId === model.id);
+      const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears ?? null;
 
       candidates.push({
         model,
         configuration: config,
         performanceProfile: perf,
         brandName: brand?.name ?? model.brandId,
+        warrantyPartsYears: partsWarranty,
       });
     }
   }

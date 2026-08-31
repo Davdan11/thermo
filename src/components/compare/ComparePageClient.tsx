@@ -537,7 +537,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             border: "1px solid rgba(255,255,255,.3)",
             textDecoration: "none", borderRadius: 6,
           }}>
-            Commencer ThermoMatch
+            Commencer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" />
           </Link>
         </div>
         <p style={{ margin: "16px 0 0", fontSize: 12, color: "rgba(255,255,255,.4)", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>

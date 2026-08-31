@@ -157,7 +157,7 @@ export function Header() {
               <button
                 onClick={toggleMenu}
                 className="lg:hidden"
-                style={{ background: "none", border: "none", color: "#fff", cursor: "pointer", padding: 8 }}
+                style={{ background: "none", border: "none", color: "#0b1b24", cursor: "pointer", padding: 8 }}
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
                 aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}

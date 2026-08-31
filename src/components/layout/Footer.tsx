@@ -137,9 +137,9 @@ const year = new Date().getFullYear();
 export function Footer() {
   return (
     <footer style={{ backgroundColor: "#0b1b24", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-      {/* ── Main grid ── */}
-      <div style={{ maxWidth: 1360, margin: "0 auto", padding: "56px 40px 40px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "280px 1fr 1fr 1fr 220px", gap: 48, alignItems: "start" }}>
+      {/* Main grid */}
+      <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 pt-10 pb-8 sm:pt-14 sm:pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[280px_1fr_1fr_1fr_200px] gap-8 lg:gap-12 items-start">
 
           {/* ── COL 1: Brand + description + social + phone ── */}
           <div>
@@ -227,8 +227,8 @@ export function Footer() {
             </div>
           ))}
 
-          {/* ── COL 5: Partout au Québec ── */}
-          <div>
+          {/* COL 5: Quebec map — hidden on small screens */}
+          <div className="hidden lg:block">
             <p style={{ color: "#fff", fontSize: 13, fontWeight: 700, margin: "0 0 14px" }}>
               Partout au Québec
             </p>
@@ -241,9 +241,9 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ── Bottom bar ── */}
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", padding: "18px 40px", maxWidth: 1360, margin: "0 auto" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+      {/* Bottom bar */}
+      <div className="border-t border-white/[0.07] max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 py-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <p style={{ color: "rgba(255,255,255,0.3)", fontSize: 12, margin: 0 }}>
             © {year} ThermopompesÀVendre.ca Tous droits réservés.
           </p>

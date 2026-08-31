@@ -16,7 +16,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           HERO — full-width dark background with winter house photo
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ position: "relative", backgroundColor: "#0b1b24", minHeight: 600, display: "flex", flexDirection: "column" }}>
+      <section style={{ position: "relative", backgroundColor: "#0b1b24", display: "flex", flexDirection: "column" }} className="min-h-[480px] md:min-h-[600px]">
         {/* Background photo — right side, fading to dark on left */}
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
           <Image
@@ -26,19 +26,20 @@ export default function HomePage() {
             priority
             style={{ objectFit: "cover", objectPosition: "60% center" }}
           />
-          {/* Dark overlay gradient */}
+          {/* Dark overlay gradient — stronger on mobile */}
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(11,27,36,1) 0%, rgba(11,27,36,0.92) 35%, rgba(11,27,36,0.55) 62%, rgba(11,27,36,0.15) 100%)" }} />
+          <div className="absolute inset-0 bg-[rgba(11,27,36,0.55)] md:hidden" />
         </div>
 
         {/* Content */}
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 1360, margin: "0 auto", width: "100%", padding: "0 40px", display: "flex", flexDirection: "column", justifyContent: "center", flex: 1 }}>
-          <div style={{ paddingTop: 96, paddingBottom: 80 }}>
-            <h1 style={{ color: "#fff", fontSize: "clamp(36px, 4.5vw, 62px)", fontWeight: 800, lineHeight: 1.06, letterSpacing: "-0.025em", margin: "0 0 28px 0", maxWidth: 560 }}>
+        <div className="relative z-10 w-full flex-1 flex flex-col justify-center max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="pt-20 pb-10 md:pt-24 md:pb-20">
+            <h1 style={{ color: "#fff", fontSize: "clamp(30px, 4.5vw, 62px)", fontWeight: 800, lineHeight: 1.06, letterSpacing: "-0.025em", margin: "0 0 20px 0", maxWidth: 560 }}>
               La bonne<br />thermopompe.<br />
               Pour votre maison.<br />
               Pour le Québec.
             </h1>
-            <p style={{ color: "rgba(255,255,255,0.62)", fontSize: 17, lineHeight: 1.6, maxWidth: 520, marginBottom: 44 }}>
+            <p className="text-sm sm:text-base hidden sm:block" style={{ color: "rgba(255,255,255,0.62)", lineHeight: 1.6, maxWidth: 520, marginBottom: 36 }}>
               Comparez les modèles selon votre région, votre maison et votre budget. Des données vérifiées, pas de la publicité.
             </p>
 
@@ -51,9 +52,9 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           MAGASINEZ — 3 type cards (Murales / Multizones / Centrales)
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#fff", padding: "64px 0 56px" }}>
-        <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "48px 80px", alignItems: "start" }}>
+      <section style={{ backgroundColor: "#fff", padding: "48px 0 40px" }} className="sm:py-16">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 lg:gap-20 items-start">
             {/* Left label */}
             <div style={{ maxWidth: 200 }}>
               <p style={{ color: "#172126", fontSize: "clamp(20px,2vw,26px)", fontWeight: 700, lineHeight: 1.25, margin: 0 }}>
@@ -61,7 +62,7 @@ export default function HomePage() {
               </p>
             </div>
             {/* Right 3 cards */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
               {[
                 { label: "Murales", href: "/thermopompes?type=murale", src: "/images/categorie-murale-daikin-hd.png" },
                 { label: "Multizones", href: "/thermopompes?type=multizone", src: "/images/categorie-multizone-mitsubishi-electric-hd.png" },
@@ -93,9 +94,9 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           TOUTES LES GRANDES MARQUES — brand logos grid
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#fff", padding: "56px 0", borderTop: "1px solid #f0ede8" }}>
-        <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "220px 1fr", gap: 80, alignItems: "center" }}>
+      <section style={{ backgroundColor: "#fff", borderTop: "1px solid #f0ede8" }} className="py-12 sm:py-14">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 lg:gap-20 items-center">
             {/* Left */}
             <div>
               <p style={{ color: "#172126", fontSize: "clamp(18px,1.8vw,24px)", fontWeight: 700, lineHeight: 1.3, margin: "0 0 14px" }}>
@@ -106,7 +107,7 @@ export default function HomePage() {
 
             {/* Right: logos 2 rows × 4 cols + cta */}
             <div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px 40px", marginBottom: 32 }}>
+              <div className="grid grid-cols-4 gap-y-5 gap-x-6 sm:gap-x-10 mb-6 sm:mb-8">
                 {[
                   { src: "/images/marques/logo-daikin-bleu-nuit.png", alt: "Daikin", href: "/marques/daikin" },
                   { src: "/images/marques/logo-mitsubishi-electric-bleu-nuit.png", alt: "Mitsubishi Electric", href: "/marques/mitsubishi-electric" },
@@ -140,10 +141,10 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           THERMOMATCH — app section with steps + mockup screenshots
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#f7f5f0", padding: "72px 0" }}>
-        <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
-          {/* Left: mockup screenshots */}
-          <div style={{ position: "relative", display: "flex", gap: 16 }}>
+      <section style={{ backgroundColor: "#f7f5f0" }} className="py-12 sm:py-16 lg:py-[72px]">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+          {/* Left: mockup screenshots — hidden on mobile, visible md+ */}
+          <div style={{ position: "relative", display: "flex", gap: 16 }} className="hidden md:flex">
             {/* Primary mockup card */}
             <div style={{ flex: 1, backgroundColor: "#fff", border: "1px solid #e5e5e5", borderRadius: 8, overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.08)" }}>
               <div style={{ backgroundColor: "#0b1b24", padding: "8px 12px", display: "flex", alignItems: "center", gap: 8 }}>
@@ -216,8 +217,8 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           LES AIDES FINANCIÈRES — dark section with unit photo + grant info
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#0b1b24", padding: "72px 0" }}>
-        <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+      <section style={{ backgroundColor: "#0b1b24" }} className="py-12 sm:py-16 lg:py-[72px]">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left: text */}
           <div>
             <p style={{ color: "#e54b17", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>LES AIDES FINANCIÈRES</p>
@@ -248,8 +249,8 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Right: photo + grant card overlay */}
-          <div style={{ position: "relative" }}>
+          {/* Right: photo + grant card overlay — hidden on mobile */}
+          <div style={{ position: "relative" }} className="hidden lg:block">
             <div style={{ position: "relative", height: 380, borderRadius: 6, overflow: "hidden" }}>
               <Image src="/images/thermomatch/thermomatch-cold-climate-photo.png" alt="Thermopompe extérieure en hiver" fill style={{ objectFit: "cover" }} />
             </div>
@@ -275,20 +276,20 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           COMPRENDRE AVANT DE CHOISIR — 3 editorial guide cards
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#fff", padding: "72px 0" }}>
-        <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 36 }}>
+      <section style={{ backgroundColor: "#fff" }} className="py-12 sm:py-16 lg:py-[72px]">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
             <div>
               <p style={{ color: "#e54b17", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 10 }}>NOS GUIDES</p>
               <h2 style={{ color: "#172126", fontSize: "clamp(22px,2.2vw,30px)", fontWeight: 700, margin: 0 }}>Comprendre avant de choisir.</h2>
             </div>
-            <Link href="/guides" className="transition-colors duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17]" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600, fontSize: 14, padding: "10px 18px", borderRadius: 4, textDecoration: "none" }}>
+            <Link href="/guides" className="transition-colors duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17] self-start sm:self-auto flex-shrink-0" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600, fontSize: 14, padding: "10px 18px", borderRadius: 4, textDecoration: "none" }}>
               Voir les guides
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
             </Link>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { title: "Quelle thermopompe choisir pour mon type de maison ?", cat: "Les bases", img: "/images/thermomatch/thermomatch-hero-winter-home.png", href: "/guides" },
               { title: "Murale, multizone : laquelle est vraiment rentable ?", cat: "Les fiches", img: "/images/thermomatch/thermomatch-recommendation-home.png", href: "/guides" },
@@ -312,8 +313,8 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           DE LA COMPARAISON À L'INSTALLATION — 4 étapes + outdoor photo
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#f7f5f0", padding: "72px 0" }}>
-        <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+      <section style={{ backgroundColor: "#f7f5f0" }} className="py-12 sm:py-16 lg:py-[72px]">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left: text + 4 steps */}
           <div>
             <p style={{ color: "#e54b17", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>COMMENT ÇA MARCHE</p>
@@ -321,7 +322,7 @@ export default function HomePage() {
               De la comparaison<br />à l&apos;installation.
             </h2>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "28px 32px" }}>
+            <div className="grid grid-cols-2 gap-6 sm:gap-8">
               {[
                 { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e54b17" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>, label: "Comparez", desc: "En un seul endroit, sans publicité" },
                 { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e54b17" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>, label: "Comparez", desc: "Les données techniques vérifiées" },
@@ -337,8 +338,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: outdoor unit photo */}
-          <div style={{ position: "relative", height: 420, borderRadius: 6, overflow: "hidden" }}>
+          {/* Right: outdoor unit photo — hidden on mobile */}
+          <div style={{ position: "relative", height: 420, borderRadius: 6, overflow: "hidden" }} className="hidden lg:block">
             <Image src="/images/thermopompe-exterieure-neige.png" alt="Thermopompe extérieure dans la neige" fill style={{ objectFit: "cover" }} />
           </div>
         </div>
@@ -347,8 +348,8 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           CTA BANNER — orange
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#e54b17", padding: "64px 0", overflow: "hidden" }}>
-        <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr auto auto", alignItems: "center", gap: 40 }}>
+      <section style={{ backgroundColor: "#e54b17", overflow: "hidden" }} className="py-10 sm:py-16">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] items-center gap-6 sm:gap-10">
           <div>
             <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, fontWeight: 600, marginBottom: 8 }}>Prêt à trouver la bonne thermopompe ?</p>
             <h2 style={{ color: "#fff", fontSize: "clamp(24px,2.5vw,36px)", fontWeight: 800, lineHeight: 1.1, margin: 0, letterSpacing: "-0.02em" }}>
@@ -361,8 +362,8 @@ export default function HomePage() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
           </Link>
 
-          {/* Unit photo */}
-          <div style={{ width: 160, position: "relative", height: 120 }}>
+          {/* Unit photo — hidden on mobile */}
+          <div style={{ width: 160, position: "relative", height: 120 }} className="hidden sm:block">
             <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="Thermopompe" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} />
           </div>
         </div>

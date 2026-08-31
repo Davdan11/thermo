@@ -1,0 +1,17 @@
+{
+  "allowedBrands": [
+    "TOSOT",
+    "DIRECT AIR",
+    "Senville",
+    "Zephyr",
+    "Goodman",
+    "Daikin",
+    "Midea",
+    "MOOVAIR"
+  ],
+  "allowedCommercialKeys": [],
+  "excludedBrands": [],
+  "excludedCommercialKeys": [],
+  "maxResults": 3,
+  "maxPerBrand": 1
+}

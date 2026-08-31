@@ -63,7 +63,7 @@ export function InsufficientData({
           href="/trouver-ma-thermopompe"
           className={buttonVariants({ variant: "default", size: "sm" })}
         >
-          Utiliser ThermoMatch
+          Utiliser <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" />
         </Link>
       </div>
     </div>

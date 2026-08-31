@@ -157,6 +157,7 @@ function run() {
     const indoorUnitsStrings: string[] = [];
     const configurationsStrings: string[] = [];
     const performanceProfilesStrings: string[] = [];
+    const warrantiesStrings: string[] = [];
 
     const seenOutdoor = new Set<string>();
     const seenIndoor = new Set<string>();
@@ -235,7 +236,7 @@ function run() {
       cop5FMin: ${minCop5F === Infinity ? "null" : minCop5F},
       cop5FMax: ${maxCop5F === -Infinity ? "null" : maxCop5F},
       systemType: "${typeEnum}",
-      categories: [${isActive2026 ? '"cold-climate"' : '""'}].filter(Boolean) as any,
+      categories: [${isActive2026 ? '"cold-climate"' : '"conventional"'}],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -271,6 +272,10 @@ function run() {
           seenIndoor.add(iuId);
         }
 
+        const isExtreme = safeOutdoor.includes("HZ") || seriesName.toLowerCase().includes("zuba") || seriesName.toLowerCase().includes("hyper") || seriesName.toLowerCase().includes("aurora") || seriesName.toLowerCase().includes("maxima") || seriesName.toLowerCase().includes("extreme") || seriesName.toLowerCase().includes("moovair");
+        const isCold = rp.specs.heatingCapacity5F || rp.certifications?.neep;
+        const minTemp = isExtreme ? -30 : (isCold ? -25 : -20);
+
         const configId = `${rangeSlug}-cfg-${cIdx}`;
         configurationsStrings.push(`    {
       id: "${configId}",
@@ -282,6 +287,7 @@ function run() {
       coolingCapacityMaxBtu: ${rp.specs.coolingCapacityBTU || "null"},
       seer2: ${rp.specs.seer2 || "null"},
       hspf2: ${rp.specs.hspf2 || "null"},
+      minHeatingTempC: ${minTemp},
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     }`);
@@ -299,6 +305,32 @@ function run() {
       ]
     }`);
         }
+        if (rp.warranty) {
+          if (rp.warranty.parts) {
+            warrantiesStrings.push(`    {
+      modelId: "${rangeSlug}",
+      type: "parts",
+      durationYears: ${rp.warranty.parts},
+      requiresRegistration: false,
+    }`);
+          }
+          if (rp.warranty.compressor) {
+            warrantiesStrings.push(`    {
+      modelId: "${rangeSlug}",
+      type: "compressor",
+      durationYears: ${rp.warranty.compressor},
+      requiresRegistration: false,
+    }`);
+          }
+          if (rp.warranty.labor) {
+            warrantiesStrings.push(`    {
+      modelId: "${rangeSlug}",
+      type: "labor",
+      durationYears: ${rp.warranty.labor},
+      requiresRegistration: false,
+    }`);
+          }
+        }
       }
     }
 
@@ -309,7 +341,7 @@ function run() {
     tsCode += `  configurations: [\n${configurationsStrings.join(",\n")}\n  ],\n`;
     tsCode += `  performanceProfiles: [\n${performanceProfilesStrings.join(",\n")}\n  ],\n`;
     tsCode += `  certifications: [],\n`;
-    tsCode += `  warranties: [],\n`;
+    tsCode += `  warranties: [\n${warrantiesStrings.join(",\n")}\n  ],\n`;
     tsCode += `  priceObservations: [],\n`;
     tsCode += `  sources: [],\n`;
     tsCode += `  editorial: [],\n`;

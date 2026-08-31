@@ -142,9 +142,9 @@ export function ThermoMatchTechClient() {
         <div className="relative z-10 w-full h-full max-w-[1280px] mx-auto px-6 lg:px-[80px] flex items-center justify-between">
           {/* Left content */}
           <div className="w-full" style={{ maxWidth: 500 }}>
-            <p style={{ color: 'var(--tm-orange)', fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase" }} className="font-bold mb-4">
-              Technologie ThermoMatch
-            </p>
+              <div style={{ color: 'var(--tm-orange)', fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase" }} className="font-bold mb-4 flex items-center">
+                Technologie <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[14px] ml-2 object-contain" />
+              </div>
             <h1
               className="font-display"
               style={{ color: '#ffffff', fontSize: 58, fontWeight: 700, lineHeight: 1.03, marginBottom: 24, letterSpacing: "-0.02em" }}
@@ -969,7 +969,7 @@ export function ThermoMatchTechClient() {
                 href="/trouver-ma-thermopompe"
                 className={buttonVariants({ variant: "default", size: "lg", className: "bg-[var(--tm-navy)] hover:bg-[var(--tm-navy-soft)] border-none text-white" })}
               >
-                Commencer ThermoMatch
+                Commencer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" />
               </Link>
             </div>
 

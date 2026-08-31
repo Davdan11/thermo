@@ -9,6 +9,8 @@ import Link from "next/link";
    ──────────────────────────────────────────────────────────────────────── */
 
 import { loadProjectDraft, getProjectSummary } from "@/lib/project/project-draft";
+import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
+
 
 const ORANGE = "#e54b17";
 const NAVY = "#0b1b24";
@@ -58,6 +60,16 @@ export default function SoumissionPage() {
   const [editVal, setEditVal] = useState("");
 
   const [contact, setContact] = useState({ prenom: "", telephone: "", courriel: "", methode: "telephone" });
+  // Données brutes du draft pour enrichir GHL
+  const [draftRaw, setDraftRaw] = useState<{
+    postalCode?: string;
+    municipality?: string;
+    province?: string;
+    zoneClimatique?: string;
+    designTempC?: string;
+    modeleSelectionne?: string;
+    budget?: string;
+  }>({});
   const [consent1, setConsent1] = useState(false);
   const [consent2, setConsent2] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -87,6 +99,22 @@ export default function SoumissionPage() {
 
       const sum = getProjectSummary(draft).map(i => `${i.label}: ${i.value}`).join(" | ");
       setDraftNotes(sum);
+
+      // Sauvegarder les données brutes pour GHL
+      // Résoudre la zone climatique depuis le code postal
+      const pc = draft.location?.postalCode ?? "";
+      const resolved = pc ? (() => { try { return resolvePostalCode(pc); } catch { return null; } })() : null;
+      setDraftRaw({
+        postalCode: pc,
+        municipality: draft.location?.city ?? pc,
+        province: draft.location?.province ?? "QC",
+        zoneClimatique: resolved?.climateZone ?? "",
+        designTempC: draft.location?.designTempC ? String(draft.location.designTempC) : "",
+        modeleSelectionne: draft.desiredSystem?.selectedBrandName
+          ? `${draft.desiredSystem.selectedBrandName} — ${draft.desiredSystem.selectedModelId ?? ""}`
+          : "",
+        budget: draft.preferences?.budget ?? "",
+      });
     }
   }, []);
 
@@ -109,16 +137,29 @@ export default function SoumissionPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          // Identité
           firstName: contact.prenom,
           lastName: "",
           email: contact.courriel,
           phone: contact.telephone,
-          postalCode: "",
+
+          // Localisation
+          postalCode: draftRaw.postalCode ?? "",
+          municipality: draftRaw.municipality ?? project.ville,
+          province: draftRaw.province ?? "QC",
+          zoneClimatique: draftRaw.zoneClimatique ?? "",
+          designTempC: draftRaw.designTempC ?? "",
+
+          // Projet
           typeThermopompe: project.typeThermopompe,
           superficie: project.superficie,
           chauffageActuel: project.typeBatiment,
           urgence: project.echeancier,
-          notes: `Ville: ${project.ville} | Emplacement: ${project.emplacement} | Modèle: ${project.modele} | Contact préféré: ${contact.methode}`,
+          modeleSelectionne: draftRaw.modeleSelectionne || project.modele,
+          budgetEstime: draftRaw.budget ?? "",
+
+          // Notes complètes
+          notes: `Emplacement: ${project.emplacement} | Contact préféré: ${contact.methode}${draftNotes ? " | " + draftNotes : ""}`,
           source: "soumission-page",
         }),
       });

@@ -103,15 +103,16 @@ export default async function ThermopompesPage({
               CATALOGUE QUÉBÉCOIS
             </span>
             <h1 
-              className="text-[#FFFFFF] font-bold tracking-tight mb-5"
+              className="text-white font-bold tracking-tight mb-5"
               style={{
+                color: "#FFFFFF",
                 fontSize: "clamp(3rem, 5vw, 4.5rem)",
                 lineHeight: "1.1",
               }}
             >
               Explorez les<br />thermopompes.
             </h1>
-            <p className="text-[#FFFFFF]/70 text-lg md:text-xl max-w-md font-medium">
+            <p className="text-white/70 text-lg md:text-xl max-w-md font-medium">
               Comparez les marques, les capacités et les performances selon vos besoins.
             </p>
           </div>

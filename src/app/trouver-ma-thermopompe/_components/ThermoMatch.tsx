@@ -2,10 +2,13 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { STEPS, formatPostalCode } from "./steps";
 import type { Step } from "./steps";
+import { usePostalResolve } from "@/hooks/usePostalResolve";
+
 import {
   saveProjectDraft,
   clearProjectDraft,
@@ -99,6 +102,76 @@ function readSavedState(): SavedState {
 }
 
 /* ----------------------------------------------------------
+   PostalTextInput — input code postal avec résolution live
+   ---------------------------------------------------------- */
+
+interface PostalTextInputProps {
+  stepId: string;
+  value: string;
+  placeholder: string;
+  error: string | null;
+  inputRef: React.RefObject<HTMLInputElement>;
+  onChange: (raw: string) => void;
+  onEnter: () => void;
+}
+
+function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange, onEnter }: PostalTextInputProps) {
+  const { data, loading } = usePostalResolve(value);
+  const isPostal = stepId === "postalCode";
+
+  return (
+    <div className="mt-6">
+      <input
+        ref={inputRef}
+        type="text"
+        value={value}
+        placeholder={placeholder}
+        onChange={(e) => onChange(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter") onEnter(); }}
+        autoComplete={isPostal ? "postal-code" : "off"}
+        className="w-full max-w-sm h-14 px-5 text-xl font-medium bg-white/5 border border-white/20 rounded-[6px] text-white placeholder:text-white/30 focus:outline-none focus:border-[#C66E42] transition-colors"
+      />
+
+      {/* Confirmation ville / zone climatique */}
+      {isPostal && (
+        <div className="mt-3 max-w-sm min-h-[44px]">
+          {loading && (
+            <div className="flex items-center gap-2 text-white/40 text-sm">
+              <svg className="animate-spin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+              </svg>
+              Identification de la municipalité...
+            </div>
+          )}
+          {!loading && data && (
+            <div className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-lg px-4 py-3 animate-in fade-in slide-in-from-bottom-2 duration-300">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C66E42" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 mt-0.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <div>
+                <p className="text-white font-semibold text-sm leading-tight">
+                  {data.municipality}
+                  <span className="text-white/50 font-normal">, {data.province}</span>
+                </p>
+                <p className="text-white/50 text-xs mt-0.5">
+                  Zone climatique {data.climateZone} — {data.designTempC}°C de conception
+                  {data.hdd18 ? ` — ${data.hdd18.toLocaleString("fr-CA")} DJC` : ""}
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {error && (
+        <p className="mt-3 text-sm text-red-400" role="alert">{error}</p>
+      )}
+    </div>
+  );
+}
+
+/* ----------------------------------------------------------
    Main component
    ---------------------------------------------------------- */
 
@@ -119,6 +192,7 @@ export function ThermoMatch() {
 
   // API state
   const [candidates, setCandidates] = useState<any[] | null>(null);
+  const [summaryContext, setSummaryContext] = useState<any>(null);
   const [isLoadingResults, setIsLoadingResults] = useState(false);
   const [hasFetched, setHasFetched] = useState(false);
 
@@ -244,19 +318,14 @@ export function ThermoMatch() {
   }
 
   function handleRequestQuote(selectedCandidate?: any) {
-    // Save final state to ProjectDraft before navigating
     const draft = thermoMatchAnswersToProjectDraft(answers, true);
-    
-    // If user selected a specific recommendation
-    if (selectedCandidate) {
+    if (selectedCandidate?.product) {
       draft.desiredSystem = {
-        systemType: selectedCandidate.model.systemType,
-        selectedModelId: selectedCandidate.model.id,
-        selectedBrandName: selectedCandidate.brandName,
+        systemType: selectedCandidate.product.systemType,
+        selectedModelId: selectedCandidate.product.id,
+        selectedBrandName: selectedCandidate.product.brand,
       };
-      // Pass the brand/model name in notes or a specific field if we had one
     }
-    
     saveProjectDraft(draft);
     router.push("/soumission?source=thermomatch");
   }
@@ -272,8 +341,40 @@ export function ThermoMatch() {
       })
       .then(res => res.json())
       .then(data => {
-        if (data.success) setCandidates(data.results);
-        else setCandidates([]);
+        if (data.success) {
+          setCandidates(data.results);
+          setSummaryContext(data.summaryContext ?? null);
+
+          // Envoyer l'événement GHL — quiz complété (fire-and-forget)
+          const topResult = data.results?.[0];
+          fetch("/api/ghl/event", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              event: "thermomatch_completed",
+              source: "thermomatch",
+              quizAnswers: {
+                postalCode: answers.postalCode ?? "",
+                propertyType: answers.propertyType ?? "",
+                area: answers.area ?? "",
+                floors: answers.floors ?? "",
+                currentSystem: answers.currentSystem ?? "",
+                heatPumpType: answers.heatPumpType ?? "",
+                priority: answers.priority ?? "",
+                budget: answers.budget ?? "",
+                financing: answers.financing ?? "",
+              },
+              topRecommendation: topResult ? {
+                brand: topResult.product?.brand,
+                model: topResult.product?.series ?? topResult.product?.outdoorModel,
+                systemType: topResult.product?.systemType,
+              } : null,
+              resultsCount: data.results?.length ?? 0,
+            }),
+          }).catch(() => {}); // Silencieux
+        } else {
+          setCandidates([]);
+        }
         setHasFetched(true);
         setIsLoadingResults(false);
       })
@@ -285,6 +386,7 @@ export function ThermoMatch() {
       });
     }
   }, [isComplete, hasFetched, answers, isLoadingResults]);
+
 
   /* ---- Keyboard: Escape → back ---- */
   useEffect(() => {
@@ -323,11 +425,13 @@ export function ThermoMatch() {
           <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
             <ThermoMatchResults 
               results={candidates} 
+              summaryContext={summaryContext}
               onSelectResult={(candidate) => handleRequestQuote(candidate)} 
               onRetry={() => {
                 setIsComplete(false);
                 setHasFetched(false);
                 setCandidates(null);
+                setSummaryContext(null);
                 setCurrentStep(TOTAL_STEPS - 1);
               }}
             />
@@ -477,25 +581,15 @@ export function ThermoMatch() {
 
             {/* ---- Text input ---- */}
             {step.type === "text" && (
-              <div className="mt-6">
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={(currentValue as string) ?? ""}
-                  placeholder={step.placeholder ?? ""}
-                  onChange={(e) => handleTextChange(step.id, e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") handleContinue();
-                  }}
-                  autoComplete="postal-code"
-                  className="w-full max-w-sm h-14 px-5 text-xl font-medium bg-white/5 border border-white/20 rounded-[6px] text-white placeholder:text-white/30 focus:outline-none focus:border-[#C66E42] transition-colors"
-                />
-                {error && (
-                  <p className="mt-3 text-sm text-red-400" role="alert">
-                    {error}
-                  </p>
-                )}
-              </div>
+              <PostalTextInput
+                stepId={step.id}
+                value={(currentValue as string) ?? ""}
+                placeholder={step.placeholder ?? ""}
+                error={error}
+                inputRef={inputRef}
+                onChange={(raw) => handleTextChange(step.id, raw)}
+                onEnter={handleContinue}
+              />
             )}
 
             {/* ---- Radio: with property images ---- */}
@@ -820,11 +914,15 @@ function ThermoMatchHeader({
         <span className="text-xs font-black uppercase tracking-[0.2em]">À VENDRE</span>
       </Link>
 
-      {/* Center: THERMOMATCH + step label */}
+      {/* Center: Logo + step label */}
       <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4">
-        <span className="text-[#C66E42] text-sm font-bold uppercase tracking-wider">
-          THERMOMATCH
-        </span>
+        <Image 
+          src="/images/logo-thermomatch-tm.png" 
+          alt="ThermoMatch" 
+          width={120} 
+          height={24} 
+          className="object-contain"
+        />
         <div className="w-px h-4 bg-white/20" />
         <span className="text-white/50 text-sm">
           Étape {Math.min(currentStep + 1, totalSteps)} sur {totalSteps}

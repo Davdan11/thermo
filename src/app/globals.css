@@ -634,8 +634,10 @@ input[type="radio"]:disabled {
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   html {
     @apply font-sans;
+    overflow-x: hidden;
   }
 }

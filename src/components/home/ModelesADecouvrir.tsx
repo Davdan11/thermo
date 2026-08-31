@@ -84,9 +84,9 @@ export function ModelesADecouvrir() {
   }, []);
 
   return (
-    <section ref={ref} style={{ backgroundColor: "#f7f5f0", padding: "80px 0" }}>
-      <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 40px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "300px 1fr", gap: 64, alignItems: "start" }}>
+    <section ref={ref} style={{ backgroundColor: "#f7f5f0" }} className="py-12 sm:py-16 lg:py-20">
+      <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 lg:gap-16 items-start">
 
           {/* ── LEFT ── */}
           <div>
@@ -100,12 +100,26 @@ export function ModelesADecouvrir() {
             <div style={{ width: 36, height: 3, backgroundColor: "#e54b17" }} />
           </div>
 
-          {/* ── RIGHT: 3 cards ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
+          {/* RIGHT: 3 cards — horizontal scroll on mobile, 3-col grid on lg */}
+          <div
+            className="lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible"
+            style={{
+              display: "flex",
+              gap: 16,
+              overflowX: "auto",
+              scrollSnapType: "x mandatory",
+              paddingBottom: 8,
+              WebkitOverflowScrolling: "touch",
+            }}
+          >
             {PRODUCTS.map((p, cardIdx) => (
               <div
                 key={p.modelName}
+                className="lg:flex-none"
                 style={{
+                  scrollSnapAlign: "start",
+                  flexShrink: 0,
+                  width: "min(80vw, 280px)",
                   backgroundColor: "#fff",
                   borderRadius: 12,
                   border: "1px solid #e8e4de",

@@ -220,7 +220,7 @@ export function QuoteWizard() {
             </div>
             <div>
               <p className="font-semibold text-foreground text-[15px]">
-                Votre projet ThermoMatch a été récupéré
+                Votre projet <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[14px] mx-1 object-contain dark:brightness-0 dark:invert" /> a été récupéré
               </p>
               <p className="text-sm text-muted mt-1">
                 Vos 9 réponses ont été conservées. Il ne reste que quelques renseignements pour préparer votre proposition.
@@ -655,7 +655,7 @@ export function QuoteWizard() {
               <p className="text-[13px] text-muted mt-0.5">Répondez à quelques questions pour obtenir des recommandations personnalisées.</p>
             </div>
             <a href="/trouver-ma-thermopompe" className="shrink-0 ml-4 text-sm font-semibold text-brand hover:underline">
-              Lancer ThermoMatch →
+              Lancer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[12px] ml-1 object-contain" /> →
             </a>
           </div>
 

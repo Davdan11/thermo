@@ -1,115 +1,253 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import { NextResponse } from "next/server";
-import { getThermoMatchCandidates, type ThermoMatchFilters } from "@/lib/data/queries/thermomatch";
-import type { SystemType } from "@/lib/data/types/enums";
+import { loadThermoCatalog, runThermoMatch, validateMatchInput } from "@/lib/thermomatch-engine/src/index";
+import type { MatchPolicy, MatchInput, MatchGoal } from "@/lib/thermomatch-engine/src/types";
 import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
+
+// Brand reputation context — what we say to clients about each brand
+const BRAND_CONTEXT: Record<string, { reputation: string; keyStrength: string }> = {
+  "mitsubishi electric": {
+    reputation: "le leader mondial des thermopompes grand froid",
+    keyStrength: "technologie Hyper-Heating, performance garantie jusqu'à -30°C",
+  },
+  "daikin": {
+    reputation: "fabricant japonais de référence, #1 mondial en volume",
+    keyStrength: "fiabilité industrielle, série AURORA certifiée grand froid",
+  },
+  "fujitsu": {
+    reputation: "spécialiste reconnu du froid extrême",
+    keyStrength: "série AIRSTAGE H avec les meilleurs HSPF2 du marché (jusqu'à 14)",
+  },
+  "lg": {
+    reputation: "innovateur coréen, leader en efficacité énergétique",
+    keyStrength: "compresseur DUAL Inverter, certification grand froid ENERGY STAR",
+  },
+  "samsung": {
+    reputation: "fabricant de confiance, technologie WindFree™",
+    keyStrength: "diffusion sans courant d'air froid, compresseur Digital Inverter",
+  },
+  "bosch": {
+    reputation: "ingénierie allemande, qualité premium",
+    keyStrength: "série IDS, fiabilité à long terme, excellent COP",
+  },
+  "napoleon": {
+    reputation: "marque canadienne fondée en Ontario",
+    keyStrength: "conçue pour le climat canadien, service après-vente solide au Québec",
+  },
+  "lennox": {
+    reputation: "référence nord-américaine depuis 1895",
+    keyStrength: "large gamme centrale et murale, certification ENERGY STAR avancée",
+  },
+  "trane": {
+    reputation: "fiabilité éprouvée, standard de l'industrie commerciale",
+    keyStrength: "robustesse reconnue, longue durée de vie",
+  },
+  "rheem": {
+    reputation: "fabricant nord-américain établi",
+    keyStrength: "bon rapport qualité/prix sur les systèmes centraux",
+  },
+};
+
+/**
+ * Build clear, client-facing French explanations of WHY this model was chosen.
+ * Focused on what the CLIENT needs to understand — not BTU jargon.
+ */
+function buildClientReasons(
+  product: any,
+  input: MatchInput,
+  targetBtu: number,
+  requestedZones: number,
+  heatedAreaFt2: number,
+): string[] {
+  const reasons: string[] = [];
+  const brandLower = product.brand.toLowerCase();
+  const ctx = BRAND_CONTEXT[brandLower];
+  const btuAtMin = product.heatingCapacity5FBtuH?.min ?? 0;
+  const hspf = product.hspf2?.min ?? null;
+  const isMultiZone = requestedZones > 1;
+
+  // Reason 1 — Brand credibility in plain French
+  if (ctx) {
+    reasons.push(`${product.brand} est ${ctx.reputation} — ${ctx.keyStrength}.`);
+  }
+
+  // Reason 2 — Capacity match, explained for the client
+  if (isMultiZone) {
+    reasons.push(
+      `Pour ${requestedZones} zones, on vise environ ${Math.round(targetBtu / requestedZones / 1000)} 000 BTU par unité — cette configuration couvre la charge totale estimée de ${Math.round(targetBtu / 1000)} 000 BTU pour votre maison de ${heatedAreaFt2} pi².`,
+    );
+  } else {
+    reasons.push(
+      `Pour votre espace de ${heatedAreaFt2} pi², la charge estimée est d'environ ${Math.round(targetBtu / 1000)} 000 BTU. Ce modèle fournit ${Math.round(btuAtMin / 1000)} 000 BTU à -15°C — le bon calibre pour maintenir votre confort sans surchauffer.`,
+    );
+  }
+
+  // Reason 3 — Cold climate performance (the real differentiator in Quebec)
+  if (product.coldClimate) {
+    if (brandLower === "mitsubishi electric" || brandLower === "fujitsu") {
+      reasons.push(
+        `Certifiée ENERGY STAR Climat Froid : cette thermopompe chauffe efficacement même à -25°C à -30°C, sans jamais s'arrêter — cruciale pour un hiver québécois.`,
+      );
+    } else {
+      reasons.push(
+        `Certifiée ENERGY STAR Climat Froid : performance garantie sous les grands froids québécois. Elle continue de chauffer même lorsque la température plonge sous les -20°C.`,
+      );
+    }
+  }
+
+  // Reason 4 — Efficiency in real money
+  if (hspf && hspf >= 9) {
+    const savingsPct = Math.round((hspf / 3.41 - 1) * 30);
+    reasons.push(
+      `Efficacité HSPF2 de ${hspf} — environ ${savingsPct}% d'économies en chauffage par rapport aux plinthes électriques. Sur une saison de chauffe au Québec, ça représente des centaines de dollars.`,
+    );
+  } else if (hspf) {
+    reasons.push(`Efficacité HSPF2 de ${hspf} — certifiée ENERGY STAR, plus économique que les systèmes conventionnels.`);
+  }
+
+  // Reason 5 — Variable compressor = real comfort
+  if (product.compressorStaging?.some((s: string) => /variable|inverter/i.test(s))) {
+    reasons.push(
+      `Compresseur à vitesse variable (Inverter) : la température reste parfaitement stable, sans les cycles ON/OFF qui créent des courants d'air froid. Votre confort est constant, été comme hiver.`,
+    );
+  }
+
+  return reasons;
+}
 
 export async function POST(req: Request) {
   try {
     const { answers } = await req.json();
 
-    // 1. Convert answers to ThermoMatchFilters
-    const filters: ThermoMatchFilters = {};
+    // ── Area ──────────────────────────────────────────────────────────────
+    let heatedAreaFt2 = 1250;
+    if (answers.area === "<1000") heatedAreaFt2 = 800;
+    else if (answers.area === "1000-1500") heatedAreaFt2 = 1250;
+    else if (answers.area === "1500-2000") heatedAreaFt2 = 1750;
+    else if (answers.area === "2000-2500") heatedAreaFt2 = 2250;
+    else if (answers.area === "2500+") heatedAreaFt2 = 3000;
 
-    if (answers.heatPumpType) {
-      if (answers.heatPumpType === "murale") filters.systemType = "wall-single";
-      else if (answers.heatPumpType === "centrale") filters.systemType = "central-ducted";
-      else if (answers.heatPumpType === "multizone") filters.systemType = "multi-zone";
+    // ── Home type ─────────────────────────────────────────────────────────
+    let homeType: MatchInput["homeType"] = "detached";
+    if (answers.propertyType === "condo") homeType = "condo";
+    else if (answers.propertyType === "duplex") homeType = "duplex";
+    else if (answers.propertyType === "triplex") homeType = "triplex";
+    else if (answers.propertyType === "autre") homeType = "other";
+
+    // ── Distribution ──────────────────────────────────────────────────────
+    let distribution: MatchInput["distribution"] = "no_ducts";
+    if (
+      answers.currentSystem === "fournaise-gaz" ||
+      answers.currentSystem === "fournaise-mazout" ||
+      answers.heatPumpType === "centrale"
+    ) {
+      distribution = "ducts";
     }
 
-    if (answers.area) {
-      // Very rough conversion of area to BTU
-      // <1000 = ~9k-12k, 1000-1500 = ~12k-18k, 1500-2000 = ~18k-24k, etc.
-      if (answers.area === "<1000") filters.minCapacityBtu = 9000;
-      else if (answers.area === "1000-1500") filters.minCapacityBtu = 12000;
-      else if (answers.area === "1500-2000") filters.minCapacityBtu = 18000;
-      else if (answers.area === "2000-2500") filters.minCapacityBtu = 24000;
-      else if (answers.area === "2500+") filters.minCapacityBtu = 30000;
+    // ── Zone logic — intelligent architecture, not just a number ──────────
+    // KEY RULE: Never propose a single wall unit for a multi-floor home.
+    // 2+ floors without ducts = multi-zone (one head per floor).
+    const floors = parseInt(answers.floors) || 1;
+    let requestedZones = 1;
+
+    if (answers.heatPumpType === "centrale") {
+      requestedZones = 1; // Central = 1 outdoor unit distributes everywhere
+    } else if (answers.heatPumpType === "multizone") {
+      requestedZones = Math.max(2, floors);
+    } else {
+      // "murale" or default — apply the architecture rule
+      if (floors === 1) {
+        requestedZones = 1;
+      } else {
+        // 2 or 3 floors: one indoor unit per floor is the correct design
+        requestedZones = Math.min(floors, 4);
+      }
     }
 
-    // Capture priorities for scoring
-    const priorities = answers.priority || [];
+    // ── Goal ──────────────────────────────────────────────────────────────
+    let goal: MatchGoal = "balanced";
+    const priorities: string[] = answers.priority ?? [];
+    if (priorities.includes("grand-froid")) goal = "electrification";
+    else if (priorities.includes("economies")) goal = "savings";
+    else if (priorities.includes("confort")) goal = "comfort";
 
-    // 2. Fetch candidates
-    const candidates = getThermoMatchCandidates(filters);
+    // ── Climate zone — derived from postal code ───────────────────────────
+    let climateZone: MatchInput["climateZone"] = "7A"; // Default: Quebec City, Laurentides, most of Quebec
+    const pc = (answers.postalCode ?? "").toUpperCase().trim();
+    if (pc.startsWith("H") || pc.startsWith("J4") || pc.startsWith("J3") || pc.startsWith("J7") || pc.startsWith("J8")) {
+      climateZone = "6"; // Greater Montreal area (milder winters)
+    } else if (pc.startsWith("G") || pc.startsWith("J1") || pc.startsWith("J2") || pc.startsWith("K")) {
+      climateZone = "7A"; // Quebec City / Eastern Townships
+    }
 
-    // 3. Score and Sort Candidates
-    // A simple scoring algorithm based on user priorities.
-    const scored = candidates.map(c => {
-      let score = 0;
-      const btu = c.model.nominalCapacityBtu || 12000;
-      const seer = c.configuration?.seer2 ?? 15;
-      const hspf = c.configuration?.hspf2 ?? 8;
-      
-      // Calculate LogisVert to boost score for "economies" or "prix"
-      const { dollars } = calculateLogisVertSimple(btu, c.model.categories.includes("cold-climate"));
+    // ── Backup heat ───────────────────────────────────────────────────────
+    const backupHeatAvailable =
+      answers.currentSystem === "fournaise-gaz" ||
+      answers.currentSystem === "fournaise-mazout" ||
+      answers.currentSystem === "bienergie";
 
-      if (priorities.includes("economies")) {
-        score += seer * 2; // high seer gives higher score
-        score += hspf * 2;
-        if (dollars > 0) score += 50; // extra points if eligible for subsidy
-      }
+    const inputData: MatchInput = {
+      selectionYear: 2026,
+      heatedAreaFt2,
+      climateZone,
+      homeType,
+      constructionPeriod: "1981_2000",
+      insulation: "standard",
+      distribution,
+      requestedZones,
+      goal,
+      backupHeatAvailable,
+    };
 
-      if (priorities.includes("grand-froid")) {
-        score += hspf * 3;
-        if (c.model.categories.includes("cold-climate")) score += 100;
-        if (c.configuration.minHeatingTempC && c.configuration.minHeatingTempC <= -25) {
-          score += 50;
-        }
-      }
+    const input = validateMatchInput(inputData);
+    const catalogPath = path.join(process.cwd(), "src", "lib", "thermomatch-engine", "data", "catalog-2026.json");
+    const policyPath = path.join(process.cwd(), "src", "lib", "thermomatch-engine", "config", "match-policy-2026.json");
 
-      if (priorities.includes("qualite")) {
-        // Boost premium brands arbitrarily for demonstration
-        const brand = c.brandName.toLowerCase();
-        if (brand.includes("daikin") || brand.includes("mitsubishi") || brand.includes("fujitsu")) {
-          score += 100;
-        }
-        score += seer; // higher end models usually have better seer
-      }
+    const catalog = await loadThermoCatalog(catalogPath);
+    const policy = JSON.parse(await fs.readFile(policyPath, "utf8")) as MatchPolicy;
+    policy.maxResults = 3;
+    policy.maxPerBrand = 1;
 
-      if (priorities.includes("prix")) {
-        // Boost non-premium brands, or high subsidy
-        const brand = c.brandName.toLowerCase();
-        if (!brand.includes("daikin") && !brand.includes("mitsubishi")) {
-          score += 50;
-        }
-        if (dollars > 0) score += 50; // subsidy lowers net price
-      }
-      
-      if (priorities.includes("silence")) {
-        const db = c.configuration?.noiseIndoorMinDbA ?? 40;
-        // lower dB is better
-        score += Math.max(0, 100 - db * 2);
-      }
+    const output = runThermoMatch(input, catalog, policy);
+    const targetBtu = output.targetHeatPumpCapacityBtuH;
 
-      // Add a small random factor to avoid identical scores always ordering the same way
-      score += Math.random() * 5;
+    // Enrich each result with client-facing context
+    const resultsWithContext = output.results.map((rec) => {
+      const isColdClimate = rec.product.coldClimate;
+      const btu = rec.suggestedCapacityBtuH;
+      const { dollars } = calculateLogisVertSimple(btu, isColdClimate);
+      const clientReasons = buildClientReasons(rec.product, input, targetBtu, requestedZones, heatedAreaFt2);
 
       return {
-        ...c,
-        score,
-        subsidyEstimate: dollars
+        ...rec,
+        subsidyEstimate: dollars,
+        clientReasons,
+        architectureNote:
+          requestedZones > 1
+            ? `Configuration ${requestedZones} zones recommandée pour ${floors} étage${floors > 1 ? "s" : ""} — une unité murale par niveau pour un confort optimal partout dans la maison.`
+            : null,
       };
     });
 
-    // Sort descending by score
-    scored.sort((a, b) => b.score - a.score);
-
-    // Grouping by Good, Better, Best (or simply top 3)
-    // We'll take the top 3 unique models (avoiding 3 configs of the same exact model)
-    const top3 = [];
-    const seenModels = new Set();
-    
-    for (const item of scored) {
-      if (!seenModels.has(item.model.id)) {
-        seenModels.add(item.model.id);
-        top3.push(item);
-      }
-      if (top3.length === 3) break;
-    }
-
-    return NextResponse.json({ success: true, results: top3 });
+    return NextResponse.json({
+      success: true,
+      results: resultsWithContext,
+      summaryContext: {
+        estimatedLoadBtu: output.estimatedDesignLoadBtuH,
+        targetBtu,
+        floors,
+        requestedZones,
+        climateZone,
+        isMultiZone: requestedZones > 1,
+        heatedAreaFt2,
+      },
+      diagnostics: output.diagnostics,
+      warnings: output.warnings,
+    });
   } catch (error) {
     console.error("ThermoMatch API Error:", error);
-    return NextResponse.json({ success: false, error: "Internal Server Error" }, { status: 500 });
+    const message = error instanceof Error ? error.message : "Internal Server Error";
+    return NextResponse.json({ success: false, error: message }, { status: 500 });
   }
 }

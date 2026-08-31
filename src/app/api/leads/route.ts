@@ -1,84 +1,48 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { captureFullLead, type GHLContactInput } from "@/lib/ghl/client";
 
 /* ─────────────────────────────────────────────────────────────────────────
    POST /api/leads
-   Reçoit les données du formulaire de soumission et les envoie vers:
-   1. Le webhook Go High Level (si GHL_WEBHOOK_URL est défini)
-   2. L'API GHL REST (si GHL_API_KEY + GHL_LOCATION_ID sont définis)
-   ──────────────────────────────────────────────────────────────────────── */
+   Reçoit les données du formulaire de soumission.
+   Crée un contact + opportunité dans Go High Level.
+
+   Payload attendu (depuis /soumission/page.tsx) :
+   {
+     firstName, lastName, email, phone, postalCode,
+     typeThermopompe, superficie, chauffageActuel, urgence,
+     notes, source,
+     // Optionnels enrichis par le code postal résolu :
+     municipality, province, zoneClimatique, designTempC,
+     modeleSelectionne, budgetEstime,
+   }
+───────────────────────────────────────────────────────────────────────────*/
 
 export interface LeadPayload {
   // Identité
   firstName: string;
-  lastName: string;
+  lastName?: string;
   email: string;
   phone: string;
-  postalCode: string;
+  postalCode?: string;
 
   // Projet
-  typeThermopompe: string;   // murale | centrale | multizone | autre
-  superficie: string;        // ex: "1000-1500 pi²"
-  chauffageActuel: string;   // ex: "Électrique", "Mazout", etc.
-  urgence: string;           // "immediate" | "3mois" | "6mois" | "information"
+  typeThermopompe?: string;
+  superficie?: string;
+  chauffageActuel?: string;
+  urgence?: string;
+  modeleSelectionne?: string;
+  budgetEstime?: string;
+
+  // Localisation résolue (depuis usePostalResolve)
+  municipality?: string;
+  province?: string;
+  zoneClimatique?: string;
+  designTempC?: string;
 
   // Extras
   notes?: string;
-  source?: string;           // page d'origine
-}
-
-async function sendToGHLWebhook(lead: LeadPayload) {
-  const webhookUrl = process.env.GHL_WEBHOOK_URL;
-  if (!webhookUrl) return { ok: false, reason: "GHL_WEBHOOK_URL not set" };
-
-  const res = await fetch(webhookUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      ...lead,
-      // Tags GHL
-      tags: ["lead-site-web", "thermopompe", lead.typeThermopompe].filter(Boolean),
-      source: lead.source ?? "thermopompesavendre.ca",
-    }),
-  });
-
-  return { ok: res.ok, status: res.status };
-}
-
-async function sendToGHLAPI(lead: LeadPayload) {
-  const apiKey = process.env.GHL_API_KEY;
-  const locationId = process.env.GHL_LOCATION_ID;
-  if (!apiKey || !locationId) return { ok: false, reason: "GHL_API_KEY or GHL_LOCATION_ID not set" };
-
-  const body = {
-    firstName: lead.firstName,
-    lastName: lead.lastName,
-    email: lead.email,
-    phone: lead.phone,
-    postalCode: lead.postalCode,
-    locationId,
-    source: "thermopompesavendre.ca",
-    tags: ["lead-site-web", "thermopompe", lead.typeThermopompe].filter(Boolean),
-    customField: [
-      { key: "type_thermopompe", field_value: lead.typeThermopompe },
-      { key: "superficie", field_value: lead.superficie },
-      { key: "chauffage_actuel", field_value: lead.chauffageActuel },
-      { key: "urgence", field_value: lead.urgence },
-      { key: "notes", field_value: lead.notes ?? "" },
-    ],
-  };
-
-  const res = await fetch("https://rest.gohighlevel.com/v1/contacts/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify(body),
-  });
-
-  const data = await res.json().catch(() => ({}));
-  return { ok: res.ok, status: res.status, data };
+  source?: string;
 }
 
 export async function POST(req: NextRequest) {
@@ -86,22 +50,71 @@ export async function POST(req: NextRequest) {
     const lead: LeadPayload = await req.json();
 
     // Validation minimale
-    if (!lead.firstName || !lead.email || !lead.phone) {
-      return NextResponse.json({ error: "Champs requis manquants." }, { status: 400 });
+    if (!lead.firstName || (!lead.email && !lead.phone)) {
+      return NextResponse.json(
+        { error: "Prénom et (email ou téléphone) requis." },
+        { status: 400 }
+      );
     }
 
-    // Envoyer aux deux si disponibles
-    const [webhookResult, apiResult] = await Promise.allSettled([
-      sendToGHLWebhook(lead),
-      sendToGHLAPI(lead),
-    ]);
+    // Construire le résumé des notes pour GHL
+    const noteLines: string[] = [
+      `Source: ${lead.source ?? "soumission"}`,
+      lead.municipality ? `Ville: ${lead.municipality}${lead.province ? `, ${lead.province}` : ""}` : "",
+      lead.zoneClimatique ? `Zone climatique: ${lead.zoneClimatique}` : "",
+      lead.designTempC ? `Température de conception: ${lead.designTempC}°C` : "",
+      lead.typeThermopompe ? `Type: ${lead.typeThermopompe}` : "",
+      lead.superficie ? `Superficie: ${lead.superficie}` : "",
+      lead.chauffageActuel ? `Chauffage actuel: ${lead.chauffageActuel}` : "",
+      lead.urgence ? `Urgence: ${lead.urgence}` : "",
+      lead.modeleSelectionne ? `Modèle sélectionné: ${lead.modeleSelectionne}` : "",
+      lead.budgetEstime ? `Budget: ${lead.budgetEstime}` : "",
+      lead.notes ? `Notes: ${lead.notes}` : "",
+    ].filter(Boolean);
 
-    console.log("[leads] webhook:", webhookResult);
-    console.log("[leads] api:", apiResult);
+    // Construire le payload GHL enrichi
+    const ghlInput: GHLContactInput = {
+      firstName: lead.firstName,
+      lastName: lead.lastName ?? "",
+      email: lead.email,
+      phone: lead.phone,
+      postalCode: lead.postalCode,
+      city: lead.municipality,
+      province: lead.province,
+      customFields: {
+        zone_climatique: lead.zoneClimatique,
+        temp_conception: lead.designTempC ? `${lead.designTempC}°C` : undefined,
+        type_thermopompe: lead.typeThermopompe,
+        superficie: lead.superficie,
+        chauffage_actuel: lead.chauffageActuel,
+        urgence: lead.urgence,
+        modele_selectionne: lead.modeleSelectionne,
+        budget_estime: lead.budgetEstime,
+        source_page: lead.source ?? "soumission",
+        municipalite: lead.municipality,
+        notes_projet: noteLines.join("\n"),
+      },
+      pipelineStage: "submitted",
+    };
 
-    return NextResponse.json({ success: true, message: "Lead envoyé avec succès." });
+    const result = await captureFullLead(
+      ghlInput,
+      `Demande soumission — ${lead.firstName} — ${lead.municipality ?? lead.postalCode ?? "QC"}`
+    );
+
+    if (!result.ok) {
+      console.error("[/api/leads] GHL error:", result.error);
+      // On ne bloque pas l'utilisateur — la soumission est quand même acceptée
+    }
+
+    console.log("[/api/leads] GHL result:", result);
+
+    return NextResponse.json({
+      success: true,
+      message: "Demande reçue. Notre équipe vous contacte dans les 24h.",
+    });
   } catch (err) {
-    console.error("[leads] error:", err);
+    console.error("[/api/leads] error:", err);
     return NextResponse.json({ error: "Erreur serveur." }, { status: 500 });
   }
 }
