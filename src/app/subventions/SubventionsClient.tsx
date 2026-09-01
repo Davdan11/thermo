@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
-import { registry } from "@/lib/data/registry";
-import { calculateLogisVert, type LogisVertResult } from "@/lib/subsidies/logisvert-calculator";
+import type { LogisVertResult } from "@/lib/subsidies/logisvert-calculator";
+import officialData from "@/lib/subsidies/logisvert-official-amounts.json";
 
 /* ── Postal helpers ── */
 const POSTAL_RE = /^[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d$/;
@@ -36,21 +36,32 @@ function detectCity(p: string) {
   return POSTAL_MAP[p.replace(/\s/g, "").toUpperCase().slice(0, 3)] || "";
 }
 
-/* ── Products from registry ── */
+/* ── Products from OFFICIAL government AHRI database ── */
+const _data = officialData as Record<string, {
+  b: string; s: string; m: string; a: number; h: number; h5: number;
+  c: number; cc: boolean; t: string; p: number; e: number;
+}>;
+
 function getProducts() {
-  return registry.models.map((m) => {
-    const brand = registry.brandById.get(m.brandId);
-    const series = registry.series.find((s) => s.id === m.seriesId);
-    return {
-      id: m.id,
-      brand: brand?.name ?? "",
-      series: series?.name ?? "",
-      model: m.name ?? "",
-      slug: m.slug,
-      btu: m.nominalCapacityBtu ?? 0,
-      searchable: `${brand?.name ?? ""} ${series?.name ?? ""} ${m.name ?? ""} ${m.slug}`.toLowerCase(),
-    };
-  });
+  return Object.entries(_data)
+    .map(([key, e]) => ({
+      id: key,
+      brand: e.b,
+      series: e.s || "",
+      model: e.m,
+      slug: key,
+      btu: e.h, // Real heating capacity at -8°C (17°F) from AHRI
+      coolingBtu: e.c,
+      heatingBtu5F: e.h5,
+      isColdClimate: e.cc,
+      logisVertDollars: e.a, // Real LogisVert amount from official data
+      systemType: e.t as "C" | "M",
+      hspf2: e.p,
+      seer2: e.e || 0,
+      searchable: `${e.b} ${e.s || ""} ${e.m} ${key}`.toLowerCase(),
+    }))
+    .filter((p) => p.logisVertDollars > 0)
+    .sort((a, b) => a.brand.localeCompare(b.brand) || b.btu - a.btu);
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -96,29 +107,32 @@ export function SubventionsClient() {
   }, []);
 
   const doCheck = useCallback(() => {
-    if (!canCheck) return;
+    if (!canCheck || !selected) return;
     setLoading(true);
-    
-    if (selected) {
-      const model = registry.modelById.get(selected.id);
-      if (model) {
-        // Obtenir la première configuration disponible pour le calcul, sinon mock
-        const config = registry.configurations.find((c) => c.modelId === model.id) || {
-          id: "mock", slug: "mock", modelId: model.id,
-          coolingCapacityBtu: model.nominalCapacityBtu || 12000,
-          heatingCapacityMaxBtu: model.nominalCapacityBtu || 12000,
-          heatingCapacity8CBtu: model.nominalCapacityBtu || 12000,
-          status: "published", createdAt: "", updatedAt: ""
-        };
-        const certs = registry.certifications.filter((c) => c.configurationId === config.id);
-        const res = calculateLogisVert({
-          model,
-          configuration: config as any,
-          certifications: certs,
-        });
-        setLogisVertResult(res);
-      }
-    }
+
+    // Use REAL official LogisVert amount from AHRI-certified government data
+    const dollars = selected.logisVertDollars;
+    const rate = selected.isColdClimate ? 120 : 50;
+
+    setLogisVertResult({
+      estimatedAmountCents: dollars * 100,
+      estimatedAmountDollars: dollars,
+      ratePerKBtu: rate,
+      isColdClimate: selected.isColdClimate,
+      capacityBtuUsed: selected.btu,
+      isEstimate: false,
+      disclaimer: "Montant calculé selon la capacité de chauffage certifiée AHRI à -8 °C et les barèmes officiels du programme LogisVert d'Hydro-Québec.",
+      sourceUrl: "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
+      asSubsidyEstimate: {
+        programId: "logisvert-hq",
+        programName: "LogisVert — Hydro-Québec",
+        estimatedAmountCents: dollars * 100,
+        currency: "CAD",
+        disclaimer: "Montant basé sur les données certifiées AHRI.",
+        rulesVerifiedAt: "2026-08-28",
+        sourceUrl: "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
+      },
+    });
 
     setTimeout(() => { setLoading(false); setChecked(true); }, 900);
   }, [canCheck, selected]);
@@ -201,8 +215,8 @@ export function SubventionsClient() {
                             borderBottom: `1px solid #eee` }}
                           onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#f5f3ee"; }}
                           onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>
-                          <strong>{p.brand}</strong> {p.series} — {p.btu.toLocaleString()} BTU
-                          <br /><span style={{ fontSize: 12, color: MUT }}>{p.slug}</span>
+                          <strong>{p.brand}</strong>{p.series ? ` ${p.series}` : ""} — <span style={{ fontWeight: 400 }}>{p.model}</span>
+                          <br /><span style={{ fontSize: 12, color: MUT }}>{p.btu.toLocaleString()} BTU à -8°C · LogisVert: <strong style={{ color: "#16a34a" }}>{p.logisVertDollars.toLocaleString()} $</strong> · {p.isColdClimate ? "❄️ Climat froid" : "Standard"} · {p.systemType === "C" ? "Central" : "Mini/Multi"}</span>
                         </button>
                       ))}
                     </div>
@@ -223,9 +237,9 @@ export function SubventionsClient() {
                       style={{ width: 72, height: 48, objectFit: "contain" }} />
                     <div style={{ minWidth: 0 }}>
                       <div style={{ color: INK, fontSize: 15, fontWeight: 650 }}>
-                        {selected.brand} {selected.series} — {selected.btu.toLocaleString()} BTU
+                        {selected.brand}{selected.series ? ` ${selected.series}` : ""} — {selected.model}
                       </div>
-                      <div style={{ marginTop: 4, color: MUT, fontSize: 13 }}>{selected.slug}</div>
+                      <div style={{ marginTop: 4, color: MUT, fontSize: 13 }}>{selected.btu.toLocaleString()} BTU à -8°C · {selected.isColdClimate ? "❄️ Climat froid" : "Standard"} · {selected.systemType === "C" ? "Central" : "Mini/Multi"}</div>
                     </div>
                     <button type="button" onClick={() => { setSelected(null); setChecked(false); }}
                       style={{ minWidth: 72, height: 36, color: ORG, background: "transparent",

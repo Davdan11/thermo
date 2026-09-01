@@ -1,12 +1,14 @@
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
+import { lookupLogisVertFuzzy } from "@/lib/subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
-import { ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import styles from "./LogisVertBadge.module.css";
 import { CountingNumber } from "@/components/ui/counting-number";
 
 /* ------------------------------------------------------------------
-   LogisVertBadge — premium estimated subsidy display
+   LogisVertBadge — official certified subsidy display
+   Uses REAL AHRI-certified data from the government database.
+   Falls back to formula calculation if no official match found.
    ------------------------------------------------------------------ */
 
 interface LogisVertBadgeProps {
@@ -14,11 +16,47 @@ interface LogisVertBadgeProps {
 }
 
 export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
-  const { model, isColdClimate } = detail;
-  const btu = model.nominalCapacityBtu;
-  if (!btu) return null;
+  const { model, brand, isColdClimate, configuration } = detail;
 
-  const { dollars, rate } = calculateLogisVertSimple(btu, isColdClimate);
+  // --- Try to find official LogisVert amount from government data ---
+  // Try outdoor unit model numbers from the configuration
+  let officialEntry = configuration
+    ? lookupLogisVertFuzzy(configuration.outdoorUnitId, brand.name)
+    : null;
+
+  // If not found, try the model number directly
+  if (!officialEntry) {
+    officialEntry = lookupLogisVertFuzzy(model.modelNumber, brand.name);
+  }
+
+  let dollars: number;
+  let rate: number;
+  let btu: number;
+  let isOfficial: boolean;
+
+  if (officialEntry) {
+    // Use REAL certified data
+    dollars = officialEntry.logisVertDollars;
+    rate = officialEntry.coldClimate ? 120 : 50;
+    btu = officialEntry.heatingBtu17F;
+    isOfficial = true;
+  } else {
+    // Fallback: calculate from model capacity data
+    const fallbackBtu =
+      model.nominalCapacityBtu ??
+      model.heatingCapacity5FMaxBtu ??
+      model.coolingCapacityMaxBtu ??
+      0;
+
+    if (fallbackBtu <= 0) return null;
+
+    const result = calculateLogisVertSimple(fallbackBtu, isColdClimate);
+    dollars = result.dollars;
+    rate = result.rate;
+    btu = fallbackBtu;
+    isOfficial = false;
+  }
+
   if (dollars <= 0) return null;
 
   return (
@@ -46,7 +84,10 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
             </h3>
           </div>
           <p className={styles.subtitle}>
-            Montant de la subvention certifiée pour une capacité de <strong>{btu.toLocaleString("fr-CA")} BTU/h</strong>.
+            {isOfficial
+              ? <>Montant basé sur la capacité certifiée AHRI de <strong>{btu.toLocaleString("fr-CA")} BTU/h à -8 °C</strong>.</>
+              : <>Montant estimé pour une capacité de <strong>{btu.toLocaleString("fr-CA")} BTU/h</strong>.</>
+            }
           </p>
         </div>
 
@@ -59,7 +100,7 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
 
       {/* Formula breakdown */}
       <div className={styles.formulaBox}>
-        <span>Capacité : <span className={styles.formulaHighlight}>{btu.toLocaleString("fr-CA")} BTU/h</span></span>
+        <span>Capacité : <span className={styles.formulaHighlight}>{btu.toLocaleString("fr-CA")} BTU/h{isOfficial ? " à -8 °C" : ""}</span></span>
         <span>×</span>
         <span>Taux : <span className={styles.formulaHighlight}>{rate} $ / 1 000 BTU/h</span></span>
         <span>=</span>
@@ -69,7 +110,10 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
 
       {/* Disclaimer */}
       <p className={styles.disclaimer}>
-        Montant exact calculé selon les barèmes officiels d'Hydro-Québec.{" "}
+        {isOfficial
+          ? "Montant calculé selon la capacité de chauffage certifiée AHRI à -8 °C et les barèmes officiels d'Hydro-Québec."
+          : "Montant estimatif basé sur la capacité du modèle. Consultez le portail LogisVert pour le montant exact."
+        }{" "}
         <a
           href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/"
           target="_blank"

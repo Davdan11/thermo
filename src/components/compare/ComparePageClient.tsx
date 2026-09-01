@@ -138,48 +138,132 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     setTimeout(() => setCopied(false), 2000);
   }, []);
 
-  /* ---- Build comparison rows ---- */
-  const rows = [
+  /* ---- Build comparison rows with REAL values ---- */
+
+  type RowValue = { rating: string; detail: string; color: string };
+
+  function buildColdRow(p: CompareProduct): RowValue {
+    const minTemp = p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC;
+    const cc = p.detail.isColdClimate;
+    if (cc && minTemp != null && minTemp <= -30) return { rating: "Excellente", detail: `${minTemp} °C · Certifié climat froid`, color: "#15803d" };
+    if (cc && minTemp != null && minTemp <= -25) return { rating: "Très bonne", detail: `${minTemp} °C · Certifié climat froid`, color: "#16a34a" };
+    if (cc && minTemp != null) return { rating: "Bonne", detail: `${minTemp} °C · Certifié climat froid`, color: "#65a30d" };
+    if (cc) return { rating: "Bonne", detail: "Certifié climat froid", color: "#65a30d" };
+    if (minTemp != null) return { rating: "Standard", detail: `${minTemp} °C`, color: "#d97706" };
+    return { rating: "Standard", detail: "Non certifié climat froid", color: "#9ca3af" };
+  }
+
+  function buildEfficiencyRow(p: CompareProduct): RowValue {
+    const seer = p.detail.configuration?.seer2 ?? p.detail.model.seer2Max ?? p.detail.model.seer2Min;
+    const hspf = p.detail.configuration?.hspf2 ?? p.detail.model.hspf2Max ?? p.detail.model.hspf2Min;
+    const parts: string[] = [];
+    if (seer) parts.push(`SEER2 ${seer}`);
+    if (hspf) parts.push(`HSPF2 ${hspf}`);
+    const detail = parts.length > 0 ? parts.join(" · ") : "Données non disponibles";
+    const s = seer ?? 0;
+    if (s >= 22) return { rating: "Excellente", detail, color: "#15803d" };
+    if (s >= 18) return { rating: "Très bonne", detail, color: "#16a34a" };
+    if (s >= 15) return { rating: "Bonne", detail, color: "#65a30d" };
+    if (s > 0) return { rating: "Standard", detail, color: "#d97706" };
+    return { rating: "—", detail, color: "#9ca3af" };
+  }
+
+  function buildNoiseRow(p: CompareProduct): RowValue {
+    const dbA = p.detail.configuration?.noiseIndoorMinDbA ?? p.detail.configuration?.noiseOutdoorDbA;
+    if (dbA != null && dbA <= 19) return { rating: "Très silencieuse", detail: `${dbA} dB(A)`, color: "#15803d" };
+    if (dbA != null && dbA <= 24) return { rating: "Silencieuse", detail: `${dbA} dB(A)`, color: "#16a34a" };
+    if (dbA != null) return { rating: "Standard", detail: `${dbA} dB(A)`, color: "#d97706" };
+    return { rating: "—", detail: "Non disponible", color: "#9ca3af" };
+  }
+
+  function buildFeaturesRow(p: CompareProduct): RowValue {
+    const cfg = p.detail.configuration;
+    const features: string[] = [];
+    if (cfg?.hasWifi) features.push("Wi-Fi");
+    if (cfg?.hasSmartControl) features.push("Contrôle intelligent");
+    if (cfg?.hasDehumidification) features.push("Déshumidification");
+    if (cfg?.modes && cfg.modes.length >= 4) features.push(`${cfg.modes.length} modes`);
+    if (cfg?.filtration) features.push("Filtration");
+    const detail = features.length > 0 ? features.join(", ") : "Non documenté";
+    if (features.length >= 4) return { rating: "Complète", detail, color: "#15803d" };
+    if (features.length >= 2) return { rating: "Avancée", detail, color: "#16a34a" };
+    if (features.length >= 1) return { rating: "Standard", detail, color: "#d97706" };
+    return { rating: "—", detail, color: "#9ca3af" };
+  }
+
+  function buildWarrantyRow(p: CompareProduct): RowValue {
+    const compressor = p.detail.warranties.find((w) => w.type === "compressor");
+    const parts = p.detail.warranties.find((w) => w.type === "parts");
+    const labor = p.detail.warranties.find((w) => w.type === "labor");
+    const details: string[] = [];
+    if (compressor) details.push(`Compresseur ${compressor.durationYears} ans`);
+    if (parts) details.push(`Pièces ${parts.durationYears} ans`);
+    if (labor) details.push(`Main-d'œuvre ${labor.durationYears} an${labor.durationYears > 1 ? "s" : ""}`);
+    const detail = details.length > 0 ? details.join(" · ") : "Non documenté";
+    const years = compressor?.durationYears ?? parts?.durationYears ?? 0;
+    if (years >= 12) return { rating: "Exceptionnelle", detail, color: "#15803d" };
+    if (years >= 10) return { rating: "Étendue", detail, color: "#16a34a" };
+    if (years >= 5) return { rating: "Standard", detail, color: "#d97706" };
+    if (years > 0) return { rating: "Limitée", detail, color: "#d97706" };
+    return { rating: "—", detail, color: "#9ca3af" };
+  }
+
+  function buildCapacityRow(p: CompareProduct): RowValue {
+    const cool = p.detail.model.coolingCapacityMaxBtu;
+    const heat5F = p.detail.model.heatingCapacity5FMaxBtu;
+    const parts: string[] = [];
+    if (cool) parts.push(`Refroidissement ${cool.toLocaleString("fr-CA")} BTU`);
+    if (heat5F) parts.push(`Chauffage -15°C : ${heat5F.toLocaleString("fr-CA")} BTU`);
+    const detail = parts.length > 0 ? parts.join(" · ") : "Non disponible";
+    const btu = heat5F ?? cool ?? 0;
+    if (btu >= 36000) return { rating: "Grande capacité", detail, color: "#15803d" };
+    if (btu >= 18000) return { rating: "Moyenne", detail, color: "#16a34a" };
+    if (btu > 0) return { rating: "Petite", detail, color: "#d97706" };
+    return { rating: "—", detail, color: "#9ca3af" };
+  }
+
+  const rows: { id: string; label: string; icon: React.ReactNode; values: RowValue[] }[] = [
+    {
+      id: "capacity",
+      label: "Capacité",
+      icon: ICONS.cold,
+      values: products.map(buildCapacityRow),
+    },
     {
       id: "cold",
       label: "Performance par grand froid",
       icon: ICONS.cold,
-      values: products.map((p) => rateColdPerformance(p.detail.configuration?.minHeatingTempC)),
-      verified: products.map((p) => isVerified(p)),
+      values: products.map(buildColdRow),
     },
     {
       id: "efficiency",
-      label: "Efficacite",
+      label: "Efficacité",
       icon: ICONS.efficiency,
-      values: products.map((p) => rateEfficiency(p.detail.configuration?.seer2, p.detail.configuration?.hspf2)),
-      verified: products.map((p) => isVerified(p)),
+      values: products.map(buildEfficiencyRow),
     },
     {
       id: "noise",
       label: "Niveau sonore",
       icon: ICONS.noise,
-      values: products.map((p) => rateNoise(p.detail.configuration?.noiseIndoorMinDbA)),
-      verified: products.map((p) => isVerified(p)),
+      values: products.map(buildNoiseRow),
     },
     {
       id: "features",
       label: "Fonctions",
       icon: ICONS.features,
-      values: products.map((p) => rateFeatures(p)),
-      verified: products.map((p) => isVerified(p)),
+      values: products.map(buildFeaturesRow),
     },
     {
       id: "warranty",
       label: "Garantie",
       icon: ICONS.warranty,
-      values: products.map((p) => rateWarranty(p)),
-      verified: products.map((p) => isVerified(p)),
+      values: products.map(buildWarrantyRow),
     },
   ];
 
   /* Filter for differences only */
   const filteredRows = differencesOnly
-    ? rows.filter((r) => new Set(r.values).size > 1)
+    ? rows.filter((r) => new Set(r.values.map(v => v.rating)).size > 1)
     : rows;
 
   /* ---- Synthesis data ---- */
@@ -346,11 +430,16 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             </p>
 
             {/* Capacity */}
-            {p.detail.model.nominalCapacityBtu && (
-              <p style={{ margin: "2px 0 0", fontSize: 13, fontWeight: 600, color: "var(--color-foreground)" }}>
-                {p.detail.model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU
-              </p>
-            )}
+            {(() => {
+              const btu = p.detail.model.nominalCapacityBtu
+                ?? p.detail.model.heatingCapacity5FMaxBtu
+                ?? p.detail.model.coolingCapacityMaxBtu;
+              return btu ? (
+                <p style={{ margin: "2px 0 0", fontSize: 13, fontWeight: 600, color: "var(--color-foreground)" }}>
+                  {btu.toLocaleString("fr-CA")} BTU
+                </p>
+              ) : null;
+            })()}
 
             {/* Links */}
             <Link href={`/produit/${p.detail.model.slug}`} style={{
@@ -374,7 +463,121 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
           </div>
         ))}
 
-        {/* ---- Comparison rows ---- */}
+        {/* ---- Technical Specs Rows ---- */}
+        {/* Section: Capacité */}
+        <div style={{ padding: "14px 16px", borderTop: "2px solid var(--color-border)", background: "rgba(0,0,0,.02)", fontSize: 12, fontWeight: 700, color: "var(--color-accent)", textTransform: "uppercase", letterSpacing: "0.05em", gridColumn: `span ${products.length + 1}` }}>
+          Capacité
+        </div>
+        {[
+          { label: "Refroidissement", getter: (p: CompareProduct) => {
+            const min = p.detail.model.coolingCapacityMinBtu;
+            const max = p.detail.model.coolingCapacityMaxBtu;
+            if (!min && !max) return "—";
+            if (min && max && min !== max) return `${min.toLocaleString("fr-CA")} – ${max.toLocaleString("fr-CA")} BTU`;
+            return `${(max ?? min ?? 0).toLocaleString("fr-CA")} BTU`;
+          }},
+          { label: "Chauffage (5°F / -15°C)", getter: (p: CompareProduct) => {
+            const min = p.detail.model.heatingCapacity5FMinBtu;
+            const max = p.detail.model.heatingCapacity5FMaxBtu;
+            if (!min && !max) return "—";
+            if (min && max && min !== max) return `${min.toLocaleString("fr-CA")} – ${max.toLocaleString("fr-CA")} BTU`;
+            return `${(max ?? min ?? 0).toLocaleString("fr-CA")} BTU`;
+          }},
+          { label: "Type de système", getter: (p: CompareProduct) => {
+            const types: Record<string, string> = { "central-ducted": "Central gainé", "mini-split": "Murale", "multi-zone": "Multizone" };
+            return types[p.detail.model.systemType] ?? p.detail.model.systemType;
+          }},
+        ].map((spec) => (
+          <React.Fragment key={spec.label}>
+            <div style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", fontSize: 13, fontWeight: 500, color: "var(--color-foreground)", display: "flex", alignItems: "center" }}>
+              {spec.label}
+            </div>
+            {products.map((p, i) => (
+              <div key={`${spec.label}-${i}`} style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", borderLeft: "1px solid var(--color-border)", fontSize: 14, fontWeight: 600, color: "var(--color-foreground)" }}>
+                {spec.getter(p)}
+              </div>
+            ))}
+          </React.Fragment>
+        ))}
+
+        {/* Section: Efficacité */}
+        <div style={{ padding: "14px 16px", borderTop: "2px solid var(--color-border)", background: "rgba(0,0,0,.02)", fontSize: 12, fontWeight: 700, color: "var(--color-accent)", textTransform: "uppercase", letterSpacing: "0.05em", gridColumn: `span ${products.length + 1}` }}>
+          Efficacité énergétique
+        </div>
+        {[
+          { label: "SEER2", getter: (p: CompareProduct) => {
+            const min = p.detail.model.seer2Min;
+            const max = p.detail.model.seer2Max;
+            const cfg = p.detail.configuration?.seer2;
+            if (cfg) return String(cfg);
+            if (!min && !max) return "—";
+            if (min && max && min !== max) return `${min} – ${max}`;
+            return String(max ?? min ?? "—");
+          }},
+          { label: "HSPF2", getter: (p: CompareProduct) => {
+            const min = p.detail.model.hspf2Min;
+            const max = p.detail.model.hspf2Max;
+            const cfg = p.detail.configuration?.hspf2;
+            if (cfg) return String(cfg);
+            if (!min && !max) return "—";
+            if (min && max && min !== max) return `${min} – ${max}`;
+            return String(max ?? min ?? "—");
+          }},
+          { label: "COP à -15°C", getter: (p: CompareProduct) => {
+            const min = p.detail.model.cop5FMin;
+            const max = p.detail.model.cop5FMax;
+            const cfg = p.detail.configuration?.cop;
+            if (cfg) return String(cfg);
+            if (!min && !max) return "—";
+            if (min && max && min !== max) return `${min} – ${max}`;
+            return String(max ?? min ?? "—");
+          }},
+        ].map((spec) => (
+          <React.Fragment key={spec.label}>
+            <div style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", fontSize: 13, fontWeight: 500, color: "var(--color-foreground)", display: "flex", alignItems: "center" }}>
+              {spec.label}
+            </div>
+            {products.map((p, i) => (
+              <div key={`${spec.label}-${i}`} style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", borderLeft: "1px solid var(--color-border)", fontSize: 14, fontWeight: 600, color: "var(--color-foreground)" }}>
+                {spec.getter(p)}
+              </div>
+            ))}
+          </React.Fragment>
+        ))}
+
+        {/* Section: Climat froid */}
+        <div style={{ padding: "14px 16px", borderTop: "2px solid var(--color-border)", background: "rgba(0,0,0,.02)", fontSize: 12, fontWeight: 700, color: "var(--color-accent)", textTransform: "uppercase", letterSpacing: "0.05em", gridColumn: `span ${products.length + 1}` }}>
+          Performance climat froid
+        </div>
+        {[
+          { label: "Certifié climat froid", getter: (p: CompareProduct) => p.detail.isColdClimate ? "✅ Oui" : "❌ Non" },
+          { label: "Temp. min. opération", getter: (p: CompareProduct) => {
+            const t = p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC;
+            return t != null ? `${t} °C` : "—";
+          }},
+          { label: "Réfrigérant", getter: (p: CompareProduct) => {
+            const r = p.detail.outdoorUnit?.refrigerant;
+            return r ?? "—";
+          }},
+        ].map((spec) => (
+          <React.Fragment key={spec.label}>
+            <div style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", fontSize: 13, fontWeight: 500, color: "var(--color-foreground)", display: "flex", alignItems: "center" }}>
+              {spec.label}
+            </div>
+            {products.map((p, i) => (
+              <div key={`${spec.label}-${i}`} style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", borderLeft: "1px solid var(--color-border)", fontSize: 14, fontWeight: 600, color: "var(--color-foreground)" }}>
+                {spec.getter(p)}
+              </div>
+            ))}
+          </React.Fragment>
+        ))}
+
+        {/* Section: Évaluation qualitative */}
+        <div style={{ padding: "14px 16px", borderTop: "2px solid var(--color-border)", background: "rgba(0,0,0,.02)", fontSize: 12, fontWeight: 700, color: "var(--color-accent)", textTransform: "uppercase", letterSpacing: "0.05em", gridColumn: `span ${products.length + 1}` }}>
+          Évaluation comparative
+        </div>
+
+        {/* ---- Qualitative Comparison rows ---- */}
         {filteredRows.map((row) => (
           <>
             {/* Row label */}
@@ -395,16 +598,21 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                 padding: "14px 16px",
                 borderTop: "1px solid var(--color-border)",
                 borderLeft: "1px solid var(--color-border)",
-                display: "flex", flexDirection: "column", gap: 4,
+                display: "flex", flexDirection: "column", gap: 6,
               }}>
                 <span style={{
-                  fontSize: 14,
-                  fontWeight: val === "Excellente" || val === "Tres silencieuse" || val === "Complete" || val === "Etendue" ? 700 : 500,
-                  color: "var(--color-foreground)",
+                  display: "inline-flex", alignItems: "center", gap: 6,
+                  fontSize: 14, fontWeight: 600, color: val.color,
                 }}>
-                  {val}
+                  <span style={{
+                    width: 8, height: 8, borderRadius: "50%",
+                    background: val.color, flexShrink: 0,
+                  }} />
+                  {val.rating}
                 </span>
-                <VerificationBadge verified={row.verified[i]} />
+                <span style={{ fontSize: 12, color: "var(--color-muted)", lineHeight: 1.4 }}>
+                  {val.detail}
+                </span>
               </div>
             ))}
           </>

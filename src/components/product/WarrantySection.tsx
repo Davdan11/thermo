@@ -24,13 +24,21 @@ interface WarrantySectionProps {
 export function WarrantySection({ warranties }: WarrantySectionProps) {
   if (warranties.length === 0) return null;
 
+  // Deduplicate warranties — same type + duration + modelId = same warranty
+  const seen = new Set<string>();
+  const uniqueWarranties = warranties.filter((w) => {
+    const key = `${w.type}-${w.durationYears}-${(w as any).modelId ?? ""}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
   return (
     <section id="garantie" aria-labelledby="garantie-title">
       <h2 id="garantie-title" className="text-xl font-bold text-foreground mb-4">
         Garanties
       </h2>
       <div className="space-y-3">
-        {warranties.map((w) => (
+        {uniqueWarranties.map((w) => (
           <div key={w.id} className="p-4 rounded-lg bg-surface border border-border">
             <div className="flex items-baseline justify-between gap-3">
               <p className="text-sm font-semibold text-foreground">

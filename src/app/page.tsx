@@ -94,42 +94,42 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           TOUTES LES GRANDES MARQUES — brand logos grid
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#fff", borderTop: "1px solid #f0ede8" }} className="py-12 sm:py-14">
+      <section style={{ backgroundColor: "#fff", borderTop: "1px solid #f0ede8" }} className="py-16 sm:py-20">
         <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 lg:gap-24 items-center">
             {/* Left */}
             <div>
-              <p style={{ color: "#172126", fontSize: "clamp(18px,1.8vw,24px)", fontWeight: 700, lineHeight: 1.3, margin: "0 0 14px" }}>
+              <p style={{ color: "#172126", fontSize: "clamp(22px,2.2vw,30px)", fontWeight: 700, lineHeight: 1.3, margin: "0 0 18px" }}>
                 Toutes les grandes<br />marques.<br />Un seul endroit<br />pour les comparer.
               </p>
-              <div style={{ width: 32, height: 2, backgroundColor: "#e54b17" }} />
+              <div style={{ width: 40, height: 3, backgroundColor: "#e54b17" }} />
             </div>
 
             {/* Right: logos 2 rows × 4 cols + cta */}
             <div>
-              <div className="grid grid-cols-4 gap-y-5 gap-x-6 sm:gap-x-10 mb-6 sm:mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-8 sm:gap-x-12 mb-10">
                 {[
-                  { src: "/images/marques/logo-daikin-bleu-nuit.png", alt: "Daikin", href: "/marques/daikin" },
-                  { src: "/images/marques/logo-mitsubishi-electric-bleu-nuit.png", alt: "Mitsubishi Electric", href: "/marques/mitsubishi-electric" },
-                  { src: "/images/marques/logo-fujitsu-bleu-nuit.png", alt: "Fujitsu", href: "/marques/fujitsu" },
-                  { src: "/images/marques/logo-gree-bleu-nuit.png", alt: "Gree", href: "/marques/gree" },
-                  { src: "/images/marques/logo-midea-bleu-nuit.png", alt: "Midea", href: "/marques/midea" },
-                  { src: "/images/marques/logo-lg-bleu-nuit.png", alt: "LG", href: "/marques/lg" },
-                  { src: "/images/marques/logo-samsung-bleu-nuit.png", alt: "Samsung", href: "/marques/samsung" },
-                  { src: "/images/marques/logo-moovair-bleu-nuit.png", alt: "Moovair", href: "/marques/moovair" },
+                  { src: "/images/marques/logo-daikin-bleu-nuit-cropped.png", alt: "Daikin", href: "/marques/daikin" },
+                  { src: "/images/marques/logo-mitsubishi-electric-bleu-nuit-cropped.png", alt: "Mitsubishi Electric", href: "/marques/mitsubishi-electric" },
+                  { src: "/images/marques/logo-fujitsu-bleu-nuit-cropped.png", alt: "Fujitsu", href: "/marques/fujitsu" },
+                  { src: "/images/marques/logo-gree-bleu-nuit-cropped.png", alt: "Gree", href: "/marques/gree" },
+                  { src: "/images/marques/logo-midea-bleu-nuit-cropped.png", alt: "Midea", href: "/marques/midea" },
+                  { src: "/images/marques/logo-lg-light-cropped.png", alt: "LG", href: "/marques/lg" },
+                  { src: "/images/marques/logo-samsung-bleu-nuit-cropped.png", alt: "Samsung", href: "/marques/samsung" },
+                  { src: "/images/marques/logo-moovair-light-cropped.png", alt: "Moovair", href: "/marques/moovair" },
                 ].map((brand) => (
-                  <Link key={brand.alt} href={brand.href} className="transition-all duration-300 hover:scale-105 hover:opacity-80" style={{ textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", height: 52 }}>
+                  <Link key={brand.alt} href={brand.href} className="transition-all duration-300 hover:scale-105 hover:opacity-80" style={{ textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", height: 80 }}>
                     <Image
                       src={brand.src}
                       alt={brand.alt}
-                      width={140}
-                      height={48}
-                      style={{ objectFit: "contain", maxHeight: 48, width: "auto" }}
+                      width={220}
+                      height={70}
+                      style={{ objectFit: "contain", maxHeight: 70, maxWidth: "100%", width: "auto" }}
                     />
                   </Link>
                 ))}
               </div>
-              <Link href="/marques" className="transition-colors duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17]" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600, fontSize: 14, padding: "10px 20px", borderRadius: 4, textDecoration: "none" }}>
+              <Link href="/marques" className="transition-colors duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17]" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600, fontSize: 15, padding: "12px 24px", borderRadius: 4, textDecoration: "none" }}>
                 Voir toutes les marques
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
               </Link>

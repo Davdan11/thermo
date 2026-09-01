@@ -76,7 +76,12 @@ export function getComparisonData(slugs: string[]): ComparisonData {
   // Build enriched products with image + subsidy
   const products: CompareProduct[] = details.map((d) => {
     const imageUrl = d.model.imageUrl ?? d.series.imageUrl ?? null;
-    const nominalBtu = d.model.nominalCapacityBtu ?? 0;
+    // Derive BTU from available fields
+    const nominalBtu =
+      d.model.nominalCapacityBtu ??
+      d.model.heatingCapacity5FMaxBtu ??
+      d.model.coolingCapacityMaxBtu ??
+      0;
     const logis = calculateLogisVertSimple(nominalBtu, d.isColdClimate);
     return {
       detail: d,
