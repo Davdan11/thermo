@@ -26,19 +26,47 @@ export const supremecentralDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "supreme-central-standard-wall-single",
-      slug: "supreme-central-standard-wall-single",
-      name: "Standard",
+      id: "supreme-central-standard-wall-single-36000",
+      slug: "supreme-central-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
       seriesId: "supreme-central-standard",
       brandId: "supreme-central",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-central-standard-wall-single-30000",
+      slug: "supreme-central-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "supreme-central-standard",
+      brandId: "supreme-central",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 18000,
-      heatingCapacity5FMaxBtu: 21000,
+      heatingCapacity5FMaxBtu: 19000,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -71,9 +99,9 @@ export const supremecentralDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "supreme-central-standard-wall-single-cfg-1",
-      slug: "supreme-central-standard-wall-single-cfg-1",
-      modelId: "supreme-central-standard-wall-single",
+      id: "supreme-central-standard-wall-single-36000-cfg-1",
+      slug: "supreme-central-standard-wall-single-36000-cfg-1",
+      modelId: "supreme-central-standard-wall-single-36000",
       outdoorUnitId: "supreme-central-suprm36cc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33600,
@@ -85,9 +113,9 @@ export const supremecentralDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "supreme-central-standard-wall-single-cfg-2",
-      slug: "supreme-central-standard-wall-single-cfg-2",
-      modelId: "supreme-central-standard-wall-single",
+      id: "supreme-central-standard-wall-single-30000-cfg-1",
+      slug: "supreme-central-standard-wall-single-30000-cfg-1",
+      modelId: "supreme-central-standard-wall-single-30000",
       outdoorUnitId: "supreme-central-suprm30cc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -99,9 +127,9 @@ export const supremecentralDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "supreme-central-standard-wall-single-cfg-3",
-      slug: "supreme-central-standard-wall-single-cfg-3",
-      modelId: "supreme-central-standard-wall-single",
+      id: "supreme-central-standard-wall-single-30000-cfg-2",
+      slug: "supreme-central-standard-wall-single-30000-cfg-2",
+      modelId: "supreme-central-standard-wall-single-30000",
       outdoorUnitId: "supreme-central-suprm30cc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -113,9 +141,9 @@ export const supremecentralDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "supreme-central-standard-wall-single-cfg-4",
-      slug: "supreme-central-standard-wall-single-cfg-4",
-      modelId: "supreme-central-standard-wall-single",
+      id: "supreme-central-standard-wall-single-30000-cfg-3",
+      slug: "supreme-central-standard-wall-single-30000-cfg-3",
+      modelId: "supreme-central-standard-wall-single-30000",
       outdoorUnitId: "supreme-central-suprm30cc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -129,7 +157,7 @@ export const supremecentralDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "supreme-central-standard-wall-single-cfg-1",
+      configurationId: "supreme-central-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -140,7 +168,7 @@ export const supremecentralDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "supreme-central-standard-wall-single-cfg-2",
+      configurationId: "supreme-central-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -151,7 +179,7 @@ export const supremecentralDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "supreme-central-standard-wall-single-cfg-3",
+      configurationId: "supreme-central-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -162,7 +190,7 @@ export const supremecentralDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "supreme-central-standard-wall-single-cfg-4",
+      configurationId: "supreme-central-standard-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,

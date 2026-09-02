@@ -70,18 +70,154 @@ export const emiDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "emi-standard-wall-single",
-      slug: "emi-standard-wall-single",
-      name: "Standard",
+      id: "emi-standard-wall-single-9000",
+      slug: "emi-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "emi-standard",
       brandId: "emi",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 6900,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-18000",
+      slug: "emi-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "emi-standard",
+      brandId: "emi",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-12000",
+      slug: "emi-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "emi-standard",
+      brandId: "emi",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7100,
+      heatingCapacity5FMaxBtu: 8300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-36000",
+      slug: "emi-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "emi-standard",
+      brandId: "emi",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23200,
+      heatingCapacity5FMaxBtu: 24600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-30000",
+      slug: "emi-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "emi-standard",
+      brandId: "emi",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-48000",
+      slug: "emi-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "emi-standard",
+      brandId: "emi",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 29600,
       heatingCapacity5FMaxBtu: 29600,
       seer2Min: null,
       seer2Max: null,
@@ -96,24 +232,133 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single",
-      slug: "emi-mh-series-wall-single",
-      name: "MH series",
+      id: "emi-mh-series-wall-single-6000",
+      slug: "emi-mh-series-wall-single-6000",
+      name: "MH series 6 000 BTU",
       seriesId: "emi-mh-series",
       brandId: "emi",
-      modelNumber: "MH series",
-      normalizedModelNumber: "mh-series",
+      modelNumber: "MH series 6k",
+      normalizedModelNumber: "mh-series-6000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 6000,
       heatingCapacity5FMinBtu: 8500,
-      heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 19,
-      seer2Max: 28.1,
-      hspf2Min: 9,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 26.5,
+      seer2Max: 26.5,
+      hspf2Min: 13.6,
       hspf2Max: 13.6,
-      cop5FMin: 1.7,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-9000",
+      slug: "emi-mh-series-wall-single-9000",
+      name: "MH series 9 000 BTU",
+      seriesId: "emi-mh-series",
+      brandId: "emi",
+      modelNumber: "MH series 9k",
+      normalizedModelNumber: "mh-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 9500,
+      seer2Min: 20.5,
+      seer2Max: 28.1,
+      hspf2Min: 10.3,
+      hspf2Max: 11.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-12000",
+      slug: "emi-mh-series-wall-single-12000",
+      name: "MH series 12 000 BTU",
+      seriesId: "emi-mh-series",
+      brandId: "emi",
+      modelNumber: "MH series 12k",
+      normalizedModelNumber: "mh-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9900,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 22.3,
+      seer2Max: 25.5,
+      hspf2Min: 10.2,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 1.89,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-18000",
+      slug: "emi-mh-series-wall-single-18000",
+      name: "MH series 18 000 BTU",
+      seriesId: "emi-mh-series",
+      brandId: "emi",
+      modelNumber: "MH series 18k",
+      normalizedModelNumber: "mh-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 19,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-24000",
+      slug: "emi-mh-series-wall-single-24000",
+      name: "MH series 24 000 BTU",
+      seriesId: "emi-mh-series",
+      brandId: "emi",
+      modelNumber: "MH series 24k",
+      normalizedModelNumber: "mh-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 20.5,
+      seer2Max: 21.5,
+      hspf2Min: 11.4,
+      hspf2Max: 11.5,
+      cop5FMin: 2,
       cop5FMax: 2.21,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -122,24 +367,187 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-eco-series-wall-single",
-      slug: "emi-eco-series-wall-single",
-      name: "ECO Series",
-      seriesId: "emi-eco-series",
+      id: "emi-mh-series-wall-single-15000",
+      slug: "emi-mh-series-wall-single-15000",
+      name: "MH series 15 000 BTU",
+      seriesId: "emi-mh-series",
       brandId: "emi",
-      modelNumber: "ECO Series",
-      normalizedModelNumber: "eco-series",
+      modelNumber: "MH series 15k",
+      normalizedModelNumber: "mh-series-15000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 30000,
-      heatingCapacity5FMinBtu: 6600,
-      heatingCapacity5FMaxBtu: 19000,
-      seer2Min: 18.5,
-      seer2Max: 21.6,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 15600,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-30000",
+      slug: "emi-mh-series-wall-single-30000",
+      name: "MH series 30 000 BTU",
+      seriesId: "emi-mh-series",
+      brandId: "emi",
+      modelNumber: "MH series 30k",
+      normalizedModelNumber: "mh-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 26600,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-36000",
+      slug: "emi-mh-series-wall-single-36000",
+      name: "MH series 36 000 BTU",
+      seriesId: "emi-mh-series",
+      brandId: "emi",
+      modelNumber: "MH series 36k",
+      normalizedModelNumber: "mh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 19,
+      seer2Max: 22.2,
+      hspf2Min: 10,
+      hspf2Max: 10.3,
+      cop5FMin: 1.7,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-48000",
+      slug: "emi-mh-series-wall-single-48000",
+      name: "MH series 48 000 BTU",
+      seriesId: "emi-mh-series",
+      brandId: "emi",
+      modelNumber: "MH series 48k",
+      normalizedModelNumber: "mh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 20.9,
+      seer2Max: 21.8,
       hspf2Min: 9,
+      hspf2Max: 9.8,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-eco-series-wall-single-9000",
+      slug: "emi-eco-series-wall-single-9000",
+      name: "ECO Series 9 000 BTU",
+      seriesId: "emi-eco-series",
+      brandId: "emi",
+      modelNumber: "ECO Series 9k",
+      normalizedModelNumber: "eco-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 21.6,
+      seer2Max: 21.6,
+      hspf2Min: 9.4,
       hspf2Max: 9.4,
-      cop5FMin: 1.88,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-eco-series-wall-single-18000",
+      slug: "emi-eco-series-wall-single-18000",
+      name: "ECO Series 18 000 BTU",
+      seriesId: "emi-eco-series",
+      brandId: "emi",
+      modelNumber: "ECO Series 18k",
+      normalizedModelNumber: "eco-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11200,
+      heatingCapacity5FMaxBtu: 11700,
+      seer2Min: 20.2,
+      seer2Max: 20.2,
+      hspf2Min: 9.1,
+      hspf2Max: 9.1,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-eco-series-wall-single-24000",
+      slug: "emi-eco-series-wall-single-24000",
+      name: "ECO Series 24 000 BTU",
+      seriesId: "emi-eco-series",
+      brandId: "emi",
+      modelNumber: "ECO Series 24k",
+      normalizedModelNumber: "eco-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17100,
+      heatingCapacity5FMaxBtu: 17200,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.11,
       cop5FMax: 2.11,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -148,24 +556,52 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single",
-      slug: "emi-emx-series-wall-single",
-      name: "EMX Series",
-      seriesId: "emi-emx-series",
+      id: "emi-eco-series-wall-single-30000",
+      slug: "emi-eco-series-wall-single-30000",
+      name: "ECO Series 30 000 BTU",
+      seriesId: "emi-eco-series",
       brandId: "emi",
-      modelNumber: "EMX Series",
-      normalizedModelNumber: "emx-series",
+      modelNumber: "ECO Series 30k",
+      normalizedModelNumber: "eco-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 19000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.88,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-6000",
+      slug: "emi-emx-series-wall-single-6000",
+      name: "EMX Series 6 000 BTU",
+      seriesId: "emi-emx-series",
+      brandId: "emi",
+      modelNumber: "EMX Series 6k",
+      normalizedModelNumber: "emx-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 47000,
+      coolingCapacityMaxBtu: 6000,
       heatingCapacity5FMinBtu: 7900,
-      heatingCapacity5FMaxBtu: 44500,
-      seer2Min: 19,
-      seer2Max: 27.4,
-      hspf2Min: 9.5,
+      heatingCapacity5FMaxBtu: 7900,
+      seer2Min: 25.5,
+      seer2Max: 25.5,
+      hspf2Min: 14.8,
       hspf2Max: 14.8,
-      cop5FMin: 1.8,
+      cop5FMin: 2.39,
       cop5FMax: 2.39,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -174,25 +610,350 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mhah-series-central-ducted",
-      slug: "emi-mhah-series-central-ducted",
-      name: "MHAH Series",
-      seriesId: "emi-mhah-series",
+      id: "emi-emx-series-wall-single-9000",
+      slug: "emi-emx-series-wall-single-9000",
+      name: "EMX Series 9 000 BTU",
+      seriesId: "emi-emx-series",
       brandId: "emi",
-      modelNumber: "MHAH Series",
-      normalizedModelNumber: "mhah-series",
+      modelNumber: "EMX Series 9k",
+      normalizedModelNumber: "emx-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 27.4,
+      seer2Max: 27.4,
+      hspf2Min: 12.5,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-12000",
+      slug: "emi-emx-series-wall-single-12000",
+      name: "EMX Series 12 000 BTU",
+      seriesId: "emi-emx-series",
+      brandId: "emi",
+      modelNumber: "EMX Series 12k",
+      normalizedModelNumber: "emx-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 25.4,
+      seer2Max: 25.4,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-18000",
+      slug: "emi-emx-series-wall-single-18000",
+      name: "EMX Series 18 000 BTU",
+      seriesId: "emi-emx-series",
+      brandId: "emi",
+      modelNumber: "EMX Series 18k",
+      normalizedModelNumber: "emx-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 16600,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 20,
+      seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 1.92,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-24000",
+      slug: "emi-emx-series-wall-single-24000",
+      name: "EMX Series 24 000 BTU",
+      seriesId: "emi-emx-series",
+      brandId: "emi",
+      modelNumber: "EMX Series 24k",
+      normalizedModelNumber: "emx-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 21,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 13.5,
+      cop5FMin: 2,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-30000",
+      slug: "emi-emx-series-wall-single-30000",
+      name: "EMX Series 30 000 BTU",
+      seriesId: "emi-emx-series",
+      brandId: "emi",
+      modelNumber: "EMX Series 30k",
+      normalizedModelNumber: "emx-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-36000",
+      slug: "emi-emx-series-wall-single-36000",
+      name: "EMX Series 36 000 BTU",
+      seriesId: "emi-emx-series",
+      brandId: "emi",
+      modelNumber: "EMX Series 36k",
+      normalizedModelNumber: "emx-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.4,
+      seer2Max: 23,
+      hspf2Min: 10.4,
+      hspf2Max: 10.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-48000",
+      slug: "emi-emx-series-wall-single-48000",
+      name: "EMX Series 48 000 BTU",
+      seriesId: "emi-emx-series",
+      brandId: "emi",
+      modelNumber: "EMX Series 48k",
+      normalizedModelNumber: "emx-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 44000,
+      heatingCapacity5FMaxBtu: 44500,
+      seer2Min: 20.4,
+      seer2Max: 23,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mhah-series-central-ducted-18000",
+      slug: "emi-mhah-series-central-ducted-18000",
+      name: "MHAH Series 18 000 BTU",
+      seriesId: "emi-mhah-series",
+      brandId: "emi",
+      modelNumber: "MHAH Series 18k",
+      normalizedModelNumber: "mhah-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 13500,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 2.04,
+      cop5FMax: 2.04,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mhah-series-central-ducted-24000",
+      slug: "emi-mhah-series-central-ducted-24000",
+      name: "MHAH Series 24 000 BTU",
+      seriesId: "emi-mhah-series",
+      brandId: "emi",
+      modelNumber: "MHAH Series 24k",
+      normalizedModelNumber: "mhah-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mhah-series-central-ducted-30000",
+      slug: "emi-mhah-series-central-ducted-30000",
+      name: "MHAH Series 30 000 BTU",
+      seriesId: "emi-mhah-series",
+      brandId: "emi",
+      modelNumber: "MHAH Series 30k",
+      normalizedModelNumber: "mhah-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.2,
+      seer2Max: 16.2,
+      hspf2Min: 8.9,
+      hspf2Max: 8.9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mhah-series-central-ducted-36000",
+      slug: "emi-mhah-series-central-ducted-36000",
+      name: "MHAH Series 36 000 BTU",
+      seriesId: "emi-mhah-series",
+      brandId: "emi",
+      modelNumber: "MHAH Series 36k",
+      normalizedModelNumber: "mhah-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.97,
+      cop5FMax: 1.97,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mhah-series-central-ducted-48000",
+      slug: "emi-mhah-series-central-ducted-48000",
+      name: "MHAH Series 48 000 BTU",
+      seriesId: "emi-mhah-series",
+      brandId: "emi",
+      modelNumber: "MHAH Series 48k",
+      normalizedModelNumber: "mhah-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mhah-series-central-ducted-60000",
+      slug: "emi-mhah-series-central-ducted-60000",
+      name: "MHAH Series 60 000 BTU",
+      seriesId: "emi-mhah-series",
+      brandId: "emi",
+      modelNumber: "MHAH Series 60k",
+      normalizedModelNumber: "mhah-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
       heatingCapacity5FMaxBtu: 42000,
       seer2Min: 15.3,
-      seer2Max: 18,
-      hspf2Min: 8.9,
-      hspf2Max: 10,
-      cop5FMin: 1.8,
-      cop5FMax: 2.04,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -208,38 +969,14 @@ export const emiDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "emi-sz1h18daa",
-      modelNumber: "SZ1H18DAA",
-      brandId: "emi",
-      refrigerant: null as any,
-    },
-    {
       id: "emi-dhsz109da",
       modelNumber: "DHSZ109DA",
       brandId: "emi",
       refrigerant: null as any,
     },
     {
-      id: "emi-dhsz112da",
-      modelNumber: "DHSZ112DA",
-      brandId: "emi",
-      refrigerant: null as any,
-    },
-    {
-      id: "emi-dhmz436da",
-      modelNumber: "DHMZ436DA",
-      brandId: "emi",
-      refrigerant: null as any,
-    },
-    {
-      id: "emi-dhmz327da",
-      modelNumber: "DHMZ327DA",
-      brandId: "emi",
-      refrigerant: null as any,
-    },
-    {
-      id: "emi-sz1h12aaa",
-      modelNumber: "SZ1H12AAA",
+      id: "emi-sz1h18daa",
+      modelNumber: "SZ1H18DAA",
       brandId: "emi",
       refrigerant: null as any,
     },
@@ -250,14 +987,26 @@ export const emiDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "emi-mz3h27daa",
-      modelNumber: "MZ3H27DAA",
+      id: "emi-dhsz112da",
+      modelNumber: "DHSZ112DA",
       brandId: "emi",
       refrigerant: null as any,
     },
     {
-      id: "emi-mz5h45daa",
-      modelNumber: "MZ5H45DAA",
+      id: "emi-sz1h12aaa",
+      modelNumber: "SZ1H12AAA",
+      brandId: "emi",
+      refrigerant: null as any,
+    },
+    {
+      id: "emi-ecosz112da",
+      modelNumber: "ECOSZ112DA",
+      brandId: "emi",
+      refrigerant: null as any,
+    },
+    {
+      id: "emi-dhmz436da",
+      modelNumber: "DHMZ436DA",
       brandId: "emi",
       refrigerant: null as any,
     },
@@ -274,14 +1023,26 @@ export const emiDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "emi-ecosz112da",
-      modelNumber: "ECOSZ112DA",
+      id: "emi-ecosz136da",
+      modelNumber: "ECOSZ136DA",
       brandId: "emi",
       refrigerant: null as any,
     },
     {
-      id: "emi-ecosz136da",
-      modelNumber: "ECOSZ136DA",
+      id: "emi-dhmz327da",
+      modelNumber: "DHMZ327DA",
+      brandId: "emi",
+      refrigerant: null as any,
+    },
+    {
+      id: "emi-mz3h27daa",
+      modelNumber: "MZ3H27DAA",
+      brandId: "emi",
+      refrigerant: null as any,
+    },
+    {
+      id: "emi-mz5h45daa",
+      modelNumber: "MZ5H45DAA",
       brandId: "emi",
       refrigerant: null as any,
     },
@@ -310,14 +1071,14 @@ export const emiDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "emi-mhsz124da",
-      modelNumber: "MHSZ124DA",
+      id: "emi-mhmz218da",
+      modelNumber: "MHMZ218DA",
       brandId: "emi",
       refrigerant: null as any,
     },
     {
-      id: "emi-mhmz218da",
-      modelNumber: "MHMZ218DA",
+      id: "emi-mhsz124da",
+      modelNumber: "MHSZ124DA",
       brandId: "emi",
       refrigerant: null as any,
     },
@@ -388,14 +1149,14 @@ export const emiDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "emi-emxsz124da",
-      modelNumber: "EMXSZ124DA",
+      id: "emi-emxmz218da",
+      modelNumber: "EMXMZ218DA",
       brandId: "emi",
       refrigerant: null as any,
     },
     {
-      id: "emi-emxmz218da",
-      modelNumber: "EMXMZ218DA",
+      id: "emi-emxsz124da",
+      modelNumber: "EMXSZ124DA",
       brandId: "emi",
       refrigerant: null as any,
     },
@@ -459,9 +1220,9 @@ export const emiDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "emi-standard-wall-single-cfg-1",
-      slug: "emi-standard-wall-single-cfg-1",
-      modelId: "emi-standard-wall-single",
+      id: "emi-standard-wall-single-9000-cfg-1",
+      slug: "emi-standard-wall-single-9000-cfg-1",
+      modelId: "emi-standard-wall-single-9000",
       outdoorUnitId: "emi-sz1h09daa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -473,9 +1234,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-2",
-      slug: "emi-standard-wall-single-cfg-2",
-      modelId: "emi-standard-wall-single",
+      id: "emi-standard-wall-single-9000-cfg-2",
+      slug: "emi-standard-wall-single-9000-cfg-2",
+      modelId: "emi-standard-wall-single-9000",
       outdoorUnitId: "emi-sz1h09daa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -487,37 +1248,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-3",
-      slug: "emi-standard-wall-single-cfg-3",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-sz1h18daa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-standard-wall-single-cfg-4",
-      slug: "emi-standard-wall-single-cfg-4",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-sz1h18daa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-standard-wall-single-cfg-5",
-      slug: "emi-standard-wall-single-cfg-5",
-      modelId: "emi-standard-wall-single",
+      id: "emi-standard-wall-single-9000-cfg-3",
+      slug: "emi-standard-wall-single-9000-cfg-3",
+      modelId: "emi-standard-wall-single-9000",
       outdoorUnitId: "emi-dhsz109da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -529,13 +1262,13 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-6",
-      slug: "emi-standard-wall-single-cfg-6",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-dhsz112da",
+      id: "emi-standard-wall-single-18000-cfg-1",
+      slug: "emi-standard-wall-single-18000-cfg-1",
+      modelId: "emi-standard-wall-single-18000",
+      outdoorUnitId: "emi-sz1h18daa",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -543,13 +1276,13 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-7",
-      slug: "emi-standard-wall-single-cfg-7",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-dhmz436da",
+      id: "emi-standard-wall-single-18000-cfg-2",
+      slug: "emi-standard-wall-single-18000-cfg-2",
+      modelId: "emi-standard-wall-single-18000",
+      outdoorUnitId: "emi-sz1h18daa",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -557,37 +1290,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-8",
-      slug: "emi-standard-wall-single-cfg-8",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-dhmz327da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-standard-wall-single-cfg-9",
-      slug: "emi-standard-wall-single-cfg-9",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-sz1h12aaa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-standard-wall-single-cfg-10",
-      slug: "emi-standard-wall-single-cfg-10",
-      modelId: "emi-standard-wall-single",
+      id: "emi-standard-wall-single-18000-cfg-3",
+      slug: "emi-standard-wall-single-18000-cfg-3",
+      modelId: "emi-standard-wall-single-18000",
       outdoorUnitId: "emi-mz2h18daa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -599,13 +1304,13 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-11",
-      slug: "emi-standard-wall-single-cfg-11",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-mz3h27daa",
+      id: "emi-standard-wall-single-12000-cfg-1",
+      slug: "emi-standard-wall-single-12000-cfg-1",
+      modelId: "emi-standard-wall-single-12000",
+      outdoorUnitId: "emi-dhsz112da",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -613,13 +1318,13 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-12",
-      slug: "emi-standard-wall-single-cfg-12",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-mz5h45daa",
+      id: "emi-standard-wall-single-12000-cfg-2",
+      slug: "emi-standard-wall-single-12000-cfg-2",
+      modelId: "emi-standard-wall-single-12000",
+      outdoorUnitId: "emi-sz1h12aaa",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -627,9 +1332,51 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-13",
-      slug: "emi-standard-wall-single-cfg-13",
-      modelId: "emi-standard-wall-single",
+      id: "emi-standard-wall-single-12000-cfg-3",
+      slug: "emi-standard-wall-single-12000-cfg-3",
+      modelId: "emi-standard-wall-single-12000",
+      outdoorUnitId: "emi-ecosz112da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-12000-cfg-4",
+      slug: "emi-standard-wall-single-12000-cfg-4",
+      modelId: "emi-standard-wall-single-12000",
+      outdoorUnitId: "emi-ecosz112da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-36000-cfg-1",
+      slug: "emi-standard-wall-single-36000-cfg-1",
+      modelId: "emi-standard-wall-single-36000",
+      outdoorUnitId: "emi-dhmz436da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-36000-cfg-2",
+      slug: "emi-standard-wall-single-36000-cfg-2",
+      modelId: "emi-standard-wall-single-36000",
       outdoorUnitId: "emi-mz4h36daa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -641,9 +1388,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-14",
-      slug: "emi-standard-wall-single-cfg-14",
-      modelId: "emi-standard-wall-single",
+      id: "emi-standard-wall-single-36000-cfg-3",
+      slug: "emi-standard-wall-single-36000-cfg-3",
+      modelId: "emi-standard-wall-single-36000",
       outdoorUnitId: "emi-adsz136da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -655,23 +1402,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-15",
-      slug: "emi-standard-wall-single-cfg-15",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-ecosz112da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-standard-wall-single-cfg-16",
-      slug: "emi-standard-wall-single-cfg-16",
-      modelId: "emi-standard-wall-single",
+      id: "emi-standard-wall-single-36000-cfg-4",
+      slug: "emi-standard-wall-single-36000-cfg-4",
+      modelId: "emi-standard-wall-single-36000",
       outdoorUnitId: "emi-ecosz136da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -683,13 +1416,13 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-standard-wall-single-cfg-17",
-      slug: "emi-standard-wall-single-cfg-17",
-      modelId: "emi-standard-wall-single",
-      outdoorUnitId: "emi-ecosz112da",
+      id: "emi-standard-wall-single-30000-cfg-1",
+      slug: "emi-standard-wall-single-30000-cfg-1",
+      modelId: "emi-standard-wall-single-30000",
+      outdoorUnitId: "emi-dhmz327da",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -697,9 +1430,37 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-1",
-      slug: "emi-mh-series-wall-single-cfg-1",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-standard-wall-single-30000-cfg-2",
+      slug: "emi-standard-wall-single-30000-cfg-2",
+      modelId: "emi-standard-wall-single-30000",
+      outdoorUnitId: "emi-mz3h27daa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-standard-wall-single-48000-cfg-1",
+      slug: "emi-standard-wall-single-48000-cfg-1",
+      modelId: "emi-standard-wall-single-48000",
+      outdoorUnitId: "emi-mz5h45daa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-6000-cfg-1",
+      slug: "emi-mh-series-wall-single-6000-cfg-1",
+      modelId: "emi-mh-series-wall-single-6000",
       outdoorUnitId: "emi-mhsz106da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -711,9 +1472,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-2",
-      slug: "emi-mh-series-wall-single-cfg-2",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-9000-cfg-1",
+      slug: "emi-mh-series-wall-single-9000-cfg-1",
+      modelId: "emi-mh-series-wall-single-9000",
       outdoorUnitId: "emi-mhsz109da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -725,51 +1486,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-3",
-      slug: "emi-mh-series-wall-single-cfg-3",
-      modelId: "emi-mh-series-wall-single",
-      outdoorUnitId: "emi-mhsz112da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-mh-series-wall-single-cfg-4",
-      slug: "emi-mh-series-wall-single-cfg-4",
-      modelId: "emi-mh-series-wall-single",
-      outdoorUnitId: "emi-mhsz118da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-mh-series-wall-single-cfg-5",
-      slug: "emi-mh-series-wall-single-cfg-5",
-      modelId: "emi-mh-series-wall-single",
-      outdoorUnitId: "emi-mhsz124da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-mh-series-wall-single-cfg-6",
-      slug: "emi-mh-series-wall-single-cfg-6",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-9000-cfg-2",
+      slug: "emi-mh-series-wall-single-9000-cfg-2",
+      modelId: "emi-mh-series-wall-single-9000",
       outdoorUnitId: "emi-mhsz109da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -781,9 +1500,23 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-7",
-      slug: "emi-mh-series-wall-single-cfg-7",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-12000-cfg-1",
+      slug: "emi-mh-series-wall-single-12000-cfg-1",
+      modelId: "emi-mh-series-wall-single-12000",
+      outdoorUnitId: "emi-mhsz112da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-12000-cfg-2",
+      slug: "emi-mh-series-wall-single-12000-cfg-2",
+      modelId: "emi-mh-series-wall-single-12000",
       outdoorUnitId: "emi-mhsz112da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -795,37 +1528,23 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-8",
-      slug: "emi-mh-series-wall-single-cfg-8",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-18000-cfg-1",
+      slug: "emi-mh-series-wall-single-18000-cfg-1",
+      modelId: "emi-mh-series-wall-single-18000",
       outdoorUnitId: "emi-mhsz118da",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-9",
-      slug: "emi-mh-series-wall-single-cfg-9",
-      modelId: "emi-mh-series-wall-single",
-      outdoorUnitId: "emi-mhsz124da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-mh-series-wall-single-cfg-10",
-      slug: "emi-mh-series-wall-single-cfg-10",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-18000-cfg-2",
+      slug: "emi-mh-series-wall-single-18000-cfg-2",
+      modelId: "emi-mh-series-wall-single-18000",
       outdoorUnitId: "emi-mhmz218da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -837,9 +1556,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-11",
-      slug: "emi-mh-series-wall-single-cfg-11",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-18000-cfg-3",
+      slug: "emi-mh-series-wall-single-18000-cfg-3",
+      modelId: "emi-mh-series-wall-single-18000",
       outdoorUnitId: "emi-mhmz218da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -851,9 +1570,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-12",
-      slug: "emi-mh-series-wall-single-cfg-12",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-18000-cfg-4",
+      slug: "emi-mh-series-wall-single-18000-cfg-4",
+      modelId: "emi-mh-series-wall-single-18000",
       outdoorUnitId: "emi-mhmz218da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -865,9 +1584,51 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-13",
-      slug: "emi-mh-series-wall-single-cfg-13",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-24000-cfg-1",
+      slug: "emi-mh-series-wall-single-24000-cfg-1",
+      modelId: "emi-mh-series-wall-single-24000",
+      outdoorUnitId: "emi-mhsz124da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-24000-cfg-2",
+      slug: "emi-mh-series-wall-single-24000-cfg-2",
+      modelId: "emi-mh-series-wall-single-24000",
+      outdoorUnitId: "emi-mhsz124da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-15000-cfg-1",
+      slug: "emi-mh-series-wall-single-15000-cfg-1",
+      modelId: "emi-mh-series-wall-single-15000",
+      outdoorUnitId: "emi-mhsz118da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-mh-series-wall-single-30000-cfg-1",
+      slug: "emi-mh-series-wall-single-30000-cfg-1",
+      modelId: "emi-mh-series-wall-single-30000",
       outdoorUnitId: "emi-mhmz327da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -879,9 +1640,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-14",
-      slug: "emi-mh-series-wall-single-cfg-14",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-30000-cfg-2",
+      slug: "emi-mh-series-wall-single-30000-cfg-2",
+      modelId: "emi-mh-series-wall-single-30000",
       outdoorUnitId: "emi-mhmz327da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -893,9 +1654,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-15",
-      slug: "emi-mh-series-wall-single-cfg-15",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-30000-cfg-3",
+      slug: "emi-mh-series-wall-single-30000-cfg-3",
+      modelId: "emi-mh-series-wall-single-30000",
       outdoorUnitId: "emi-mhmz327da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -907,9 +1668,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-16",
-      slug: "emi-mh-series-wall-single-cfg-16",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-36000-cfg-1",
+      slug: "emi-mh-series-wall-single-36000-cfg-1",
+      modelId: "emi-mh-series-wall-single-36000",
       outdoorUnitId: "emi-mhmz436da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -921,9 +1682,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-17",
-      slug: "emi-mh-series-wall-single-cfg-17",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-36000-cfg-2",
+      slug: "emi-mh-series-wall-single-36000-cfg-2",
+      modelId: "emi-mh-series-wall-single-36000",
       outdoorUnitId: "emi-mhmz436da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -935,9 +1696,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-18",
-      slug: "emi-mh-series-wall-single-cfg-18",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-36000-cfg-3",
+      slug: "emi-mh-series-wall-single-36000-cfg-3",
+      modelId: "emi-mh-series-wall-single-36000",
       outdoorUnitId: "emi-mhmz436da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -949,9 +1710,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-19",
-      slug: "emi-mh-series-wall-single-cfg-19",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-48000-cfg-1",
+      slug: "emi-mh-series-wall-single-48000-cfg-1",
+      modelId: "emi-mh-series-wall-single-48000",
       outdoorUnitId: "emi-mhmz548da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -963,9 +1724,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-20",
-      slug: "emi-mh-series-wall-single-cfg-20",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-48000-cfg-2",
+      slug: "emi-mh-series-wall-single-48000-cfg-2",
+      modelId: "emi-mh-series-wall-single-48000",
       outdoorUnitId: "emi-mhmz548da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -977,9 +1738,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mh-series-wall-single-cfg-21",
-      slug: "emi-mh-series-wall-single-cfg-21",
-      modelId: "emi-mh-series-wall-single",
+      id: "emi-mh-series-wall-single-48000-cfg-3",
+      slug: "emi-mh-series-wall-single-48000-cfg-3",
+      modelId: "emi-mh-series-wall-single-48000",
       outdoorUnitId: "emi-mhmz548da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47500,
@@ -991,9 +1752,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-eco-series-wall-single-cfg-1",
-      slug: "emi-eco-series-wall-single-cfg-1",
-      modelId: "emi-eco-series-wall-single",
+      id: "emi-eco-series-wall-single-9000-cfg-1",
+      slug: "emi-eco-series-wall-single-9000-cfg-1",
+      modelId: "emi-eco-series-wall-single-9000",
       outdoorUnitId: "emi-ecosz109da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1005,23 +1766,51 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-eco-series-wall-single-cfg-2",
-      slug: "emi-eco-series-wall-single-cfg-2",
-      modelId: "emi-eco-series-wall-single",
+      id: "emi-eco-series-wall-single-9000-cfg-2",
+      slug: "emi-eco-series-wall-single-9000-cfg-2",
+      modelId: "emi-eco-series-wall-single-9000",
+      outdoorUnitId: "emi-ecosz109da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-eco-series-wall-single-18000-cfg-1",
+      slug: "emi-eco-series-wall-single-18000-cfg-1",
+      modelId: "emi-eco-series-wall-single-18000",
       outdoorUnitId: "emi-ecosz118da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 20.2,
       hspf2: 9.1,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-eco-series-wall-single-cfg-3",
-      slug: "emi-eco-series-wall-single-cfg-3",
-      modelId: "emi-eco-series-wall-single",
+      id: "emi-eco-series-wall-single-18000-cfg-2",
+      slug: "emi-eco-series-wall-single-18000-cfg-2",
+      modelId: "emi-eco-series-wall-single-18000",
+      outdoorUnitId: "emi-ecosz118da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.2,
+      hspf2: 9.1,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-eco-series-wall-single-24000-cfg-1",
+      slug: "emi-eco-series-wall-single-24000-cfg-1",
+      modelId: "emi-eco-series-wall-single-24000",
       outdoorUnitId: "emi-ecosz124da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1033,65 +1822,37 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-eco-series-wall-single-cfg-4",
-      slug: "emi-eco-series-wall-single-cfg-4",
-      modelId: "emi-eco-series-wall-single",
+      id: "emi-eco-series-wall-single-24000-cfg-2",
+      slug: "emi-eco-series-wall-single-24000-cfg-2",
+      modelId: "emi-eco-series-wall-single-24000",
+      outdoorUnitId: "emi-ecosz124da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-eco-series-wall-single-30000-cfg-1",
+      slug: "emi-eco-series-wall-single-30000-cfg-1",
+      modelId: "emi-eco-series-wall-single-30000",
       outdoorUnitId: "emi-ecosz130da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       seer2: 20,
       hspf2: 9.2,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-eco-series-wall-single-cfg-5",
-      slug: "emi-eco-series-wall-single-cfg-5",
-      modelId: "emi-eco-series-wall-single",
-      outdoorUnitId: "emi-ecosz109da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-eco-series-wall-single-cfg-6",
-      slug: "emi-eco-series-wall-single-cfg-6",
-      modelId: "emi-eco-series-wall-single",
-      outdoorUnitId: "emi-ecosz118da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20.2,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-eco-series-wall-single-cfg-7",
-      slug: "emi-eco-series-wall-single-cfg-7",
-      modelId: "emi-eco-series-wall-single",
-      outdoorUnitId: "emi-ecosz124da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-emx-series-wall-single-cfg-1",
-      slug: "emi-emx-series-wall-single-cfg-1",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-6000-cfg-1",
+      slug: "emi-emx-series-wall-single-6000-cfg-1",
+      modelId: "emi-emx-series-wall-single-6000",
       outdoorUnitId: "emi-emxsz106da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -1103,9 +1864,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-2",
-      slug: "emi-emx-series-wall-single-cfg-2",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-9000-cfg-1",
+      slug: "emi-emx-series-wall-single-9000-cfg-1",
+      modelId: "emi-emx-series-wall-single-9000",
       outdoorUnitId: "emi-emxsz109da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1117,9 +1878,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-3",
-      slug: "emi-emx-series-wall-single-cfg-3",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-12000-cfg-1",
+      slug: "emi-emx-series-wall-single-12000-cfg-1",
+      modelId: "emi-emx-series-wall-single-12000",
       outdoorUnitId: "emi-emxsz112da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1131,9 +1892,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-4",
-      slug: "emi-emx-series-wall-single-cfg-4",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-18000-cfg-1",
+      slug: "emi-emx-series-wall-single-18000-cfg-1",
+      modelId: "emi-emx-series-wall-single-18000",
       outdoorUnitId: "emi-emxsz118da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1145,23 +1906,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-5",
-      slug: "emi-emx-series-wall-single-cfg-5",
-      modelId: "emi-emx-series-wall-single",
-      outdoorUnitId: "emi-emxsz124da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "emi-emx-series-wall-single-cfg-6",
-      slug: "emi-emx-series-wall-single-cfg-6",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-18000-cfg-2",
+      slug: "emi-emx-series-wall-single-18000-cfg-2",
+      modelId: "emi-emx-series-wall-single-18000",
       outdoorUnitId: "emi-emxmz218da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1173,9 +1920,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-7",
-      slug: "emi-emx-series-wall-single-cfg-7",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-18000-cfg-3",
+      slug: "emi-emx-series-wall-single-18000-cfg-3",
+      modelId: "emi-emx-series-wall-single-18000",
       outdoorUnitId: "emi-emxmz218da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1187,9 +1934,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-8",
-      slug: "emi-emx-series-wall-single-cfg-8",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-18000-cfg-4",
+      slug: "emi-emx-series-wall-single-18000-cfg-4",
+      modelId: "emi-emx-series-wall-single-18000",
       outdoorUnitId: "emi-emxmz218da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1201,9 +1948,23 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-9",
-      slug: "emi-emx-series-wall-single-cfg-9",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-24000-cfg-1",
+      slug: "emi-emx-series-wall-single-24000-cfg-1",
+      modelId: "emi-emx-series-wall-single-24000",
+      outdoorUnitId: "emi-emxsz124da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "emi-emx-series-wall-single-24000-cfg-2",
+      slug: "emi-emx-series-wall-single-24000-cfg-2",
+      modelId: "emi-emx-series-wall-single-24000",
       outdoorUnitId: "emi-emxmz327da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -1215,9 +1976,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-10",
-      slug: "emi-emx-series-wall-single-cfg-10",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-30000-cfg-1",
+      slug: "emi-emx-series-wall-single-30000-cfg-1",
+      modelId: "emi-emx-series-wall-single-30000",
       outdoorUnitId: "emi-emxmz327da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1229,9 +1990,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-11",
-      slug: "emi-emx-series-wall-single-cfg-11",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-30000-cfg-2",
+      slug: "emi-emx-series-wall-single-30000-cfg-2",
+      modelId: "emi-emx-series-wall-single-30000",
       outdoorUnitId: "emi-emxmz327da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -1243,9 +2004,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-12",
-      slug: "emi-emx-series-wall-single-cfg-12",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-36000-cfg-1",
+      slug: "emi-emx-series-wall-single-36000-cfg-1",
+      modelId: "emi-emx-series-wall-single-36000",
       outdoorUnitId: "emi-emxmz436da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1257,9 +2018,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-13",
-      slug: "emi-emx-series-wall-single-cfg-13",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-36000-cfg-2",
+      slug: "emi-emx-series-wall-single-36000-cfg-2",
+      modelId: "emi-emx-series-wall-single-36000",
       outdoorUnitId: "emi-emxmz436da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1271,9 +2032,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-14",
-      slug: "emi-emx-series-wall-single-cfg-14",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-36000-cfg-3",
+      slug: "emi-emx-series-wall-single-36000-cfg-3",
+      modelId: "emi-emx-series-wall-single-36000",
       outdoorUnitId: "emi-emxmz436da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1285,9 +2046,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-15",
-      slug: "emi-emx-series-wall-single-cfg-15",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-48000-cfg-1",
+      slug: "emi-emx-series-wall-single-48000-cfg-1",
+      modelId: "emi-emx-series-wall-single-48000",
       outdoorUnitId: "emi-emxmz548da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1299,9 +2060,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-16",
-      slug: "emi-emx-series-wall-single-cfg-16",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-48000-cfg-2",
+      slug: "emi-emx-series-wall-single-48000-cfg-2",
+      modelId: "emi-emx-series-wall-single-48000",
       outdoorUnitId: "emi-emxmz548da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1313,9 +2074,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-emx-series-wall-single-cfg-17",
-      slug: "emi-emx-series-wall-single-cfg-17",
-      modelId: "emi-emx-series-wall-single",
+      id: "emi-emx-series-wall-single-48000-cfg-3",
+      slug: "emi-emx-series-wall-single-48000-cfg-3",
+      modelId: "emi-emx-series-wall-single-48000",
       outdoorUnitId: "emi-emxmz548da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1327,9 +2088,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mhah-series-central-ducted-cfg-1",
-      slug: "emi-mhah-series-central-ducted-cfg-1",
-      modelId: "emi-mhah-series-central-ducted",
+      id: "emi-mhah-series-central-ducted-18000-cfg-1",
+      slug: "emi-mhah-series-central-ducted-18000-cfg-1",
+      modelId: "emi-mhah-series-central-ducted-18000",
       outdoorUnitId: "emi-mhsd118dacfc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1341,9 +2102,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mhah-series-central-ducted-cfg-2",
-      slug: "emi-mhah-series-central-ducted-cfg-2",
-      modelId: "emi-mhah-series-central-ducted",
+      id: "emi-mhah-series-central-ducted-24000-cfg-1",
+      slug: "emi-mhah-series-central-ducted-24000-cfg-1",
+      modelId: "emi-mhah-series-central-ducted-24000",
       outdoorUnitId: "emi-mhsd124dacfc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1355,9 +2116,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mhah-series-central-ducted-cfg-3",
-      slug: "emi-mhah-series-central-ducted-cfg-3",
-      modelId: "emi-mhah-series-central-ducted",
+      id: "emi-mhah-series-central-ducted-30000-cfg-1",
+      slug: "emi-mhah-series-central-ducted-30000-cfg-1",
+      modelId: "emi-mhah-series-central-ducted-30000",
       outdoorUnitId: "emi-mhsd130dacfc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1369,9 +2130,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mhah-series-central-ducted-cfg-4",
-      slug: "emi-mhah-series-central-ducted-cfg-4",
-      modelId: "emi-mhah-series-central-ducted",
+      id: "emi-mhah-series-central-ducted-36000-cfg-1",
+      slug: "emi-mhah-series-central-ducted-36000-cfg-1",
+      modelId: "emi-mhah-series-central-ducted-36000",
       outdoorUnitId: "emi-mhsd136dacfc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1383,9 +2144,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mhah-series-central-ducted-cfg-5",
-      slug: "emi-mhah-series-central-ducted-cfg-5",
-      modelId: "emi-mhah-series-central-ducted",
+      id: "emi-mhah-series-central-ducted-48000-cfg-1",
+      slug: "emi-mhah-series-central-ducted-48000-cfg-1",
+      modelId: "emi-mhah-series-central-ducted-48000",
       outdoorUnitId: "emi-mhsd148dacfc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1397,9 +2158,9 @@ export const emiDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "emi-mhah-series-central-ducted-cfg-6",
-      slug: "emi-mhah-series-central-ducted-cfg-6",
-      modelId: "emi-mhah-series-central-ducted",
+      id: "emi-mhah-series-central-ducted-60000-cfg-1",
+      slug: "emi-mhah-series-central-ducted-60000-cfg-1",
+      modelId: "emi-mhah-series-central-ducted-60000",
       outdoorUnitId: "emi-mhsd160dacfc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1413,7 +2174,7 @@ export const emiDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "emi-standard-wall-single-cfg-1",
+      configurationId: "emi-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1424,7 +2185,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-2",
+      configurationId: "emi-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1435,29 +2196,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-standard-wall-single-cfg-5",
+      configurationId: "emi-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1468,51 +2207,18 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-6",
+      configurationId: "emi-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
+          heatingCapacityBtu: 10400,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-standard-wall-single-cfg-10",
+      configurationId: "emi-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1523,51 +2229,40 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-11",
+      configurationId: "emi-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
+          heatingCapacityBtu: 12000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-12",
+      configurationId: "emi-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 29600,
+          heatingCapacityBtu: 7800,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-13",
+      configurationId: "emi-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
+          heatingCapacityBtu: 7100,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-standard-wall-single-cfg-15",
+      configurationId: "emi-standard-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1578,18 +2273,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-standard-wall-single-cfg-17",
+      configurationId: "emi-standard-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1600,7 +2284,84 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-1",
+      configurationId: "emi-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-mh-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1611,7 +2372,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-2",
+      configurationId: "emi-mh-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1622,40 +2383,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-mh-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-mh-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-mh-series-wall-single-cfg-6",
+      configurationId: "emi-mh-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1666,7 +2394,18 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-7",
+      configurationId: "emi-mh-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-mh-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1677,29 +2416,18 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-8",
+      configurationId: "emi-mh-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-mh-series-wall-single-cfg-10",
+      configurationId: "emi-mh-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1710,7 +2438,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-11",
+      configurationId: "emi-mh-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1721,7 +2449,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-12",
+      configurationId: "emi-mh-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1732,7 +2460,40 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-13",
+      configurationId: "emi-mh-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-mh-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-mh-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-mh-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1743,7 +2504,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-14",
+      configurationId: "emi-mh-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1754,7 +2515,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-15",
+      configurationId: "emi-mh-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1765,7 +2526,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-16",
+      configurationId: "emi-mh-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1776,7 +2537,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-17",
+      configurationId: "emi-mh-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1787,7 +2548,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-18",
+      configurationId: "emi-mh-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1798,7 +2559,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-19",
+      configurationId: "emi-mh-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1809,7 +2570,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-20",
+      configurationId: "emi-mh-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1820,7 +2581,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mh-series-wall-single-cfg-21",
+      configurationId: "emi-mh-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1831,7 +2592,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-eco-series-wall-single-cfg-1",
+      configurationId: "emi-eco-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1842,40 +2603,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-eco-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-eco-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17100,
-          cop: 2.11,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-eco-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-eco-series-wall-single-cfg-5",
+      configurationId: "emi-eco-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1886,7 +2614,18 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-eco-series-wall-single-cfg-6",
+      configurationId: "emi-eco-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-eco-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1897,7 +2636,18 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-eco-series-wall-single-cfg-7",
+      configurationId: "emi-eco-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17100,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-eco-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1908,7 +2658,18 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-1",
+      configurationId: "emi-eco-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-emx-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1919,7 +2680,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-2",
+      configurationId: "emi-emx-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1930,7 +2691,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-3",
+      configurationId: "emi-emx-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1941,7 +2702,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-4",
+      configurationId: "emi-emx-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1952,18 +2713,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "emi-emx-series-wall-single-cfg-6",
+      configurationId: "emi-emx-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1974,7 +2724,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-7",
+      configurationId: "emi-emx-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1985,7 +2735,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-8",
+      configurationId: "emi-emx-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1996,7 +2746,18 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-9",
+      configurationId: "emi-emx-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "emi-emx-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2007,7 +2768,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-10",
+      configurationId: "emi-emx-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2018,7 +2779,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-11",
+      configurationId: "emi-emx-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2029,7 +2790,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-12",
+      configurationId: "emi-emx-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2040,7 +2801,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-13",
+      configurationId: "emi-emx-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2051,7 +2812,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-14",
+      configurationId: "emi-emx-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2062,7 +2823,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-15",
+      configurationId: "emi-emx-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2073,7 +2834,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-16",
+      configurationId: "emi-emx-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2084,7 +2845,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-emx-series-wall-single-cfg-17",
+      configurationId: "emi-emx-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2095,7 +2856,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mhah-series-central-ducted-cfg-1",
+      configurationId: "emi-mhah-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2106,7 +2867,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mhah-series-central-ducted-cfg-2",
+      configurationId: "emi-mhah-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2117,7 +2878,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mhah-series-central-ducted-cfg-3",
+      configurationId: "emi-mhah-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2128,7 +2889,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mhah-series-central-ducted-cfg-4",
+      configurationId: "emi-mhah-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2139,7 +2900,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mhah-series-central-ducted-cfg-5",
+      configurationId: "emi-mhah-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2150,7 +2911,7 @@ export const emiDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "emi-mhah-series-central-ducted-cfg-6",
+      configurationId: "emi-mhah-series-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

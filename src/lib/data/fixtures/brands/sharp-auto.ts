@@ -48,18 +48,19 @@ export const sharpDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "sharp-standard-wall-single",
-      slug: "sharp-standard-wall-single",
-      name: "Standard",
+      id: "sharp-standard-wall-single-18000",
+      slug: "sharp-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
       seriesId: "sharp-standard",
       brandId: "sharp",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMinBtu: 12000,
       heatingCapacity5FMaxBtu: 22600,
       seer2Min: null,
       seer2Max: null,
@@ -74,24 +75,106 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-single-zone-series-wall-single",
-      slug: "sharp-single-zone-series-wall-single",
-      name: "Single Zone series",
-      seriesId: "sharp-single-zone-series",
+      id: "sharp-standard-wall-single-20000",
+      slug: "sharp-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "sharp-standard",
       brandId: "sharp",
-      modelNumber: "Single Zone series",
-      normalizedModelNumber: "single-zone-series",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 22000,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 14000,
       heatingCapacity5FMaxBtu: 22400,
-      seer2Min: 21,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-12000",
+      slug: "sharp-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "sharp-standard",
+      brandId: "sharp",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMaxBtu: 18900,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-15000",
+      slug: "sharp-standard-wall-single-15000",
+      name: "Standard 15 000 BTU",
+      seriesId: "sharp-standard",
+      brandId: "sharp",
+      modelNumber: "Standard 15k",
+      normalizedModelNumber: "standard-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-single-zone-series-wall-single-18000",
+      slug: "sharp-single-zone-series-wall-single-18000",
+      name: "Single Zone series 18 000 BTU",
+      seriesId: "sharp-single-zone-series",
+      brandId: "sharp",
+      modelNumber: "Single Zone series 18k",
+      normalizedModelNumber: "single-zone-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 24,
       seer2Max: 25,
-      hspf2Min: 10.5,
+      hspf2Min: 11,
       hspf2Max: 11.5,
-      cop5FMin: 2.1,
+      cop5FMin: 2.2,
       cop5FMax: 2.2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -100,15 +183,97 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-multi-zone-series-wall-single",
-      slug: "sharp-multi-zone-series-wall-single",
-      name: "Multi Zone series",
-      seriesId: "sharp-multi-zone-series",
+      id: "sharp-single-zone-series-wall-single-12000",
+      slug: "sharp-single-zone-series-wall-single-12000",
+      name: "Single Zone series 12 000 BTU",
+      seriesId: "sharp-single-zone-series",
       brandId: "sharp",
-      modelNumber: "Multi Zone series",
-      normalizedModelNumber: "multi-zone-series",
+      modelNumber: "Single Zone series 12k",
+      normalizedModelNumber: "single-zone-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12500,
+      heatingCapacity5FMinBtu: 14500,
+      heatingCapacity5FMaxBtu: 18900,
+      seer2Min: 21,
+      seer2Max: 25,
+      hspf2Min: 10.5,
+      hspf2Max: 11,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-single-zone-series-wall-single-15000",
+      slug: "sharp-single-zone-series-wall-single-15000",
+      name: "Single Zone series 15 000 BTU",
+      seriesId: "sharp-single-zone-series",
+      brandId: "sharp",
+      modelNumber: "Single Zone series 15k",
+      normalizedModelNumber: "single-zone-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      heatingCapacity5FMinBtu: 18100,
+      heatingCapacity5FMaxBtu: 18100,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-single-zone-series-wall-single-20000",
+      slug: "sharp-single-zone-series-wall-single-20000",
+      name: "Single Zone series 20 000 BTU",
+      seriesId: "sharp-single-zone-series",
+      brandId: "sharp",
+      modelNumber: "Single Zone series 20k",
+      normalizedModelNumber: "single-zone-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 22400,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-multi-zone-series-wall-single-24000",
+      slug: "sharp-multi-zone-series-wall-single-24000",
+      name: "Multi Zone series 24 000 BTU",
+      seriesId: "sharp-multi-zone-series",
+      brandId: "sharp",
+      modelNumber: "Multi Zone series 24k",
+      normalizedModelNumber: "multi-zone-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 25000,
@@ -134,8 +299,38 @@ export const sharpDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "sharp-ae-x18thu",
+      modelNumber: "AE-X18THU",
+      brandId: "sharp",
+      refrigerant: null as any,
+    },
+    {
+      id: "sharp-ae-x18zu",
+      modelNumber: "AE-X18ZU",
+      brandId: "sharp",
+      refrigerant: null as any,
+    },
+    {
+      id: "sharp-ae-x18zhu1",
+      modelNumber: "AE-X18ZHU1",
+      brandId: "sharp",
+      refrigerant: null as any,
+    },
+    {
       id: "sharp-ae-x24tu",
       modelNumber: "AE-X24TU",
+      brandId: "sharp",
+      refrigerant: null as any,
+    },
+    {
+      id: "sharp-ae-x2m20tu",
+      modelNumber: "AE-X2M20TU",
+      brandId: "sharp",
+      refrigerant: null as any,
+    },
+    {
+      id: "sharp-ae-x24zu",
+      modelNumber: "AE-X24ZU",
       brandId: "sharp",
       refrigerant: null as any,
     },
@@ -148,18 +343,6 @@ export const sharpDataset: BrandDataset = {
     {
       id: "sharp-ae-x12thu",
       modelNumber: "AE-X12THU",
-      brandId: "sharp",
-      refrigerant: null as any,
-    },
-    {
-      id: "sharp-ae-x18thu",
-      modelNumber: "AE-X18THU",
-      brandId: "sharp",
-      refrigerant: null as any,
-    },
-    {
-      id: "sharp-ae-x2m20tu",
-      modelNumber: "AE-X2M20TU",
       brandId: "sharp",
       refrigerant: null as any,
     },
@@ -182,26 +365,14 @@ export const sharpDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "sharp-ae-x18zu",
-      modelNumber: "AE-X18ZU",
-      brandId: "sharp",
-      refrigerant: null as any,
-    },
-    {
-      id: "sharp-ae-x24zu",
-      modelNumber: "AE-X24ZU",
-      brandId: "sharp",
-      refrigerant: null as any,
-    },
-    {
-      id: "sharp-ae-x18zhu1",
-      modelNumber: "AE-X18ZHU1",
-      brandId: "sharp",
-      refrigerant: null as any,
-    },
-    {
       id: "sharp-ae-x18zhu",
       modelNumber: "AE-X18ZHU",
+      brandId: "sharp",
+      refrigerant: null as any,
+    },
+    {
+      id: "sharp-ae-x18zu1",
+      modelNumber: "AE-X18ZU1",
       brandId: "sharp",
       refrigerant: null as any,
     },
@@ -218,26 +389,20 @@ export const sharpDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "sharp-ae-x12cpu",
+      modelNumber: "AE-X12CPU",
+      brandId: "sharp",
+      refrigerant: null as any,
+    },
+    {
       id: "sharp-ae-x15zu1",
       modelNumber: "AE-X15ZU1",
       brandId: "sharp",
       refrigerant: null as any,
     },
     {
-      id: "sharp-ae-x18zu1",
-      modelNumber: "AE-X18ZU1",
-      brandId: "sharp",
-      refrigerant: null as any,
-    },
-    {
       id: "sharp-ae-x24zu1",
       modelNumber: "AE-X24ZU1",
-      brandId: "sharp",
-      refrigerant: null as any,
-    },
-    {
-      id: "sharp-ae-x12cpu",
-      modelNumber: "AE-X12CPU",
       brandId: "sharp",
       refrigerant: null as any,
     },
@@ -253,9 +418,9 @@ export const sharpDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "sharp-standard-wall-single-cfg-1",
-      slug: "sharp-standard-wall-single-cfg-1",
-      modelId: "sharp-standard-wall-single",
+      id: "sharp-standard-wall-single-18000-cfg-1",
+      slug: "sharp-standard-wall-single-18000-cfg-1",
+      modelId: "sharp-standard-wall-single-18000",
       outdoorUnitId: "sharp-ae-x18tu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -267,51 +432,9 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-standard-wall-single-cfg-2",
-      slug: "sharp-standard-wall-single-cfg-2",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x24tu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-3",
-      slug: "sharp-standard-wall-single-cfg-3",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x12tu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-4",
-      slug: "sharp-standard-wall-single-cfg-4",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x12thu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-5",
-      slug: "sharp-standard-wall-single-cfg-5",
-      modelId: "sharp-standard-wall-single",
+      id: "sharp-standard-wall-single-18000-cfg-2",
+      slug: "sharp-standard-wall-single-18000-cfg-2",
+      modelId: "sharp-standard-wall-single-18000",
       outdoorUnitId: "sharp-ae-x18thu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -323,65 +446,9 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-standard-wall-single-cfg-6",
-      slug: "sharp-standard-wall-single-cfg-6",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x2m20tu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 20000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-7",
-      slug: "sharp-standard-wall-single-cfg-7",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x12zu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-8",
-      slug: "sharp-standard-wall-single-cfg-8",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x12zhu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-9",
-      slug: "sharp-standard-wall-single-cfg-9",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x15zu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 14000,
-      coolingCapacityMaxBtu: 14000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-10",
-      slug: "sharp-standard-wall-single-cfg-10",
-      modelId: "sharp-standard-wall-single",
+      id: "sharp-standard-wall-single-18000-cfg-3",
+      slug: "sharp-standard-wall-single-18000-cfg-3",
+      modelId: "sharp-standard-wall-single-18000",
       outdoorUnitId: "sharp-ae-x18zu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -393,23 +460,9 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-standard-wall-single-cfg-11",
-      slug: "sharp-standard-wall-single-cfg-11",
-      modelId: "sharp-standard-wall-single",
-      outdoorUnitId: "sharp-ae-x24zu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-standard-wall-single-cfg-12",
-      slug: "sharp-standard-wall-single-cfg-12",
-      modelId: "sharp-standard-wall-single",
+      id: "sharp-standard-wall-single-18000-cfg-4",
+      slug: "sharp-standard-wall-single-18000-cfg-4",
+      modelId: "sharp-standard-wall-single-18000",
       outdoorUnitId: "sharp-ae-x18zhu1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -421,9 +474,121 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-single-zone-series-wall-single-cfg-1",
-      slug: "sharp-single-zone-series-wall-single-cfg-1",
-      modelId: "sharp-single-zone-series-wall-single",
+      id: "sharp-standard-wall-single-20000-cfg-1",
+      slug: "sharp-standard-wall-single-20000-cfg-1",
+      modelId: "sharp-standard-wall-single-20000",
+      outdoorUnitId: "sharp-ae-x24tu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-20000-cfg-2",
+      slug: "sharp-standard-wall-single-20000-cfg-2",
+      modelId: "sharp-standard-wall-single-20000",
+      outdoorUnitId: "sharp-ae-x2m20tu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-20000-cfg-3",
+      slug: "sharp-standard-wall-single-20000-cfg-3",
+      modelId: "sharp-standard-wall-single-20000",
+      outdoorUnitId: "sharp-ae-x24zu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-12000-cfg-1",
+      slug: "sharp-standard-wall-single-12000-cfg-1",
+      modelId: "sharp-standard-wall-single-12000",
+      outdoorUnitId: "sharp-ae-x12tu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-12000-cfg-2",
+      slug: "sharp-standard-wall-single-12000-cfg-2",
+      modelId: "sharp-standard-wall-single-12000",
+      outdoorUnitId: "sharp-ae-x12thu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-12000-cfg-3",
+      slug: "sharp-standard-wall-single-12000-cfg-3",
+      modelId: "sharp-standard-wall-single-12000",
+      outdoorUnitId: "sharp-ae-x12zu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-12000-cfg-4",
+      slug: "sharp-standard-wall-single-12000-cfg-4",
+      modelId: "sharp-standard-wall-single-12000",
+      outdoorUnitId: "sharp-ae-x12zhu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-standard-wall-single-15000-cfg-1",
+      slug: "sharp-standard-wall-single-15000-cfg-1",
+      modelId: "sharp-standard-wall-single-15000",
+      outdoorUnitId: "sharp-ae-x15zu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 14000,
+      coolingCapacityMaxBtu: 14000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-single-zone-series-wall-single-18000-cfg-1",
+      slug: "sharp-single-zone-series-wall-single-18000-cfg-1",
+      modelId: "sharp-single-zone-series-wall-single-18000",
       outdoorUnitId: "sharp-ae-x18zhu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -435,9 +600,37 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-single-zone-series-wall-single-cfg-2",
-      slug: "sharp-single-zone-series-wall-single-cfg-2",
-      modelId: "sharp-single-zone-series-wall-single",
+      id: "sharp-single-zone-series-wall-single-18000-cfg-2",
+      slug: "sharp-single-zone-series-wall-single-18000-cfg-2",
+      modelId: "sharp-single-zone-series-wall-single-18000",
+      outdoorUnitId: "sharp-ae-x18zu1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-single-zone-series-wall-single-18000-cfg-3",
+      slug: "sharp-single-zone-series-wall-single-18000-cfg-3",
+      modelId: "sharp-single-zone-series-wall-single-18000",
+      outdoorUnitId: "sharp-ae-x18zu1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-single-zone-series-wall-single-12000-cfg-1",
+      slug: "sharp-single-zone-series-wall-single-12000-cfg-1",
+      modelId: "sharp-single-zone-series-wall-single-12000",
       outdoorUnitId: "sharp-ae-x12zu1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -449,9 +642,9 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-single-zone-series-wall-single-cfg-3",
-      slug: "sharp-single-zone-series-wall-single-cfg-3",
-      modelId: "sharp-single-zone-series-wall-single",
+      id: "sharp-single-zone-series-wall-single-12000-cfg-2",
+      slug: "sharp-single-zone-series-wall-single-12000-cfg-2",
+      modelId: "sharp-single-zone-series-wall-single-12000",
       outdoorUnitId: "sharp-ae-x12zhu1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -463,51 +656,9 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-single-zone-series-wall-single-cfg-4",
-      slug: "sharp-single-zone-series-wall-single-cfg-4",
-      modelId: "sharp-single-zone-series-wall-single",
-      outdoorUnitId: "sharp-ae-x15zu1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: 24,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-single-zone-series-wall-single-cfg-5",
-      slug: "sharp-single-zone-series-wall-single-cfg-5",
-      modelId: "sharp-single-zone-series-wall-single",
-      outdoorUnitId: "sharp-ae-x18zu1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-single-zone-series-wall-single-cfg-6",
-      slug: "sharp-single-zone-series-wall-single-cfg-6",
-      modelId: "sharp-single-zone-series-wall-single",
-      outdoorUnitId: "sharp-ae-x24zu1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 22,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-single-zone-series-wall-single-cfg-7",
-      slug: "sharp-single-zone-series-wall-single-cfg-7",
-      modelId: "sharp-single-zone-series-wall-single",
+      id: "sharp-single-zone-series-wall-single-12000-cfg-3",
+      slug: "sharp-single-zone-series-wall-single-12000-cfg-3",
+      modelId: "sharp-single-zone-series-wall-single-12000",
       outdoorUnitId: "sharp-ae-x12cpu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12500,
@@ -519,23 +670,9 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-single-zone-series-wall-single-cfg-8",
-      slug: "sharp-single-zone-series-wall-single-cfg-8",
-      modelId: "sharp-single-zone-series-wall-single",
-      outdoorUnitId: "sharp-ae-x18zu1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sharp-single-zone-series-wall-single-cfg-9",
-      slug: "sharp-single-zone-series-wall-single-cfg-9",
-      modelId: "sharp-single-zone-series-wall-single",
+      id: "sharp-single-zone-series-wall-single-15000-cfg-1",
+      slug: "sharp-single-zone-series-wall-single-15000-cfg-1",
+      modelId: "sharp-single-zone-series-wall-single-15000",
       outdoorUnitId: "sharp-ae-x15zu1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 15000,
@@ -547,9 +684,37 @@ export const sharpDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sharp-multi-zone-series-wall-single-cfg-1",
-      slug: "sharp-multi-zone-series-wall-single-cfg-1",
-      modelId: "sharp-multi-zone-series-wall-single",
+      id: "sharp-single-zone-series-wall-single-15000-cfg-2",
+      slug: "sharp-single-zone-series-wall-single-15000-cfg-2",
+      modelId: "sharp-single-zone-series-wall-single-15000",
+      outdoorUnitId: "sharp-ae-x15zu1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: 24,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-single-zone-series-wall-single-20000-cfg-1",
+      slug: "sharp-single-zone-series-wall-single-20000-cfg-1",
+      modelId: "sharp-single-zone-series-wall-single-20000",
+      outdoorUnitId: "sharp-ae-x24zu1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 22,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sharp-multi-zone-series-wall-single-24000-cfg-1",
+      slug: "sharp-multi-zone-series-wall-single-24000-cfg-1",
+      modelId: "sharp-multi-zone-series-wall-single-24000",
       outdoorUnitId: "sharp-ae-x3m24bu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -563,7 +728,7 @@ export const sharpDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "sharp-standard-wall-single-cfg-1",
+      configurationId: "sharp-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -574,40 +739,7 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-5",
+      configurationId: "sharp-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -618,51 +750,7 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-10",
+      configurationId: "sharp-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -673,18 +761,7 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-standard-wall-single-cfg-12",
+      configurationId: "sharp-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -695,7 +772,95 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-1",
+      configurationId: "sharp-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-standard-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-standard-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-standard-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-single-zone-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -706,7 +871,29 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-2",
+      configurationId: "sharp-single-zone-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-single-zone-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-single-zone-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -717,7 +904,7 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-3",
+      configurationId: "sharp-single-zone-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -728,40 +915,7 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18100,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-7",
+      configurationId: "sharp-single-zone-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -772,18 +926,7 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sharp-single-zone-series-wall-single-cfg-9",
+      configurationId: "sharp-single-zone-series-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -794,7 +937,29 @@ export const sharpDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sharp-multi-zone-series-wall-single-cfg-1",
+      configurationId: "sharp-single-zone-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18100,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-single-zone-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sharp-multi-zone-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

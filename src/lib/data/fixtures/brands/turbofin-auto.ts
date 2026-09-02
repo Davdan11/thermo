@@ -26,15 +26,16 @@ export const turbofinDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "turbofin-standard-wall-single",
-      slug: "turbofin-standard-wall-single",
-      name: "Standard",
+      id: "turbofin-standard-wall-single-30000",
+      slug: "turbofin-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
       seriesId: "turbofin-standard",
       brandId: "turbofin",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 24000,
@@ -77,9 +78,9 @@ export const turbofinDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "turbofin-standard-wall-single-cfg-1",
-      slug: "turbofin-standard-wall-single-cfg-1",
-      modelId: "turbofin-standard-wall-single",
+      id: "turbofin-standard-wall-single-30000-cfg-1",
+      slug: "turbofin-standard-wall-single-30000-cfg-1",
+      modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-thtu-heatpump24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27600,
@@ -91,9 +92,9 @@ export const turbofinDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "turbofin-standard-wall-single-cfg-2",
-      slug: "turbofin-standard-wall-single-cfg-2",
-      modelId: "turbofin-standard-wall-single",
+      id: "turbofin-standard-wall-single-30000-cfg-2",
+      slug: "turbofin-standard-wall-single-30000-cfg-2",
+      modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-hp36r410a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27600,
@@ -105,9 +106,9 @@ export const turbofinDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "turbofin-standard-wall-single-cfg-3",
-      slug: "turbofin-standard-wall-single-cfg-3",
-      modelId: "turbofin-standard-wall-single",
+      id: "turbofin-standard-wall-single-30000-cfg-3",
+      slug: "turbofin-standard-wall-single-30000-cfg-3",
+      modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-hp36r",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27600,
@@ -121,7 +122,7 @@ export const turbofinDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "turbofin-standard-wall-single-cfg-1",
+      configurationId: "turbofin-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -132,7 +133,7 @@ export const turbofinDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "turbofin-standard-wall-single-cfg-2",
+      configurationId: "turbofin-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -143,7 +144,7 @@ export const turbofinDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "turbofin-standard-wall-single-cfg-3",
+      configurationId: "turbofin-standard-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,

@@ -26,15 +26,16 @@ export const bryantDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "bryant-38m-series-wall-single",
-      slug: "bryant-38m-series-wall-single",
-      name: "38M series",
+      id: "bryant-38m-series-wall-single-30000",
+      slug: "bryant-38m-series-wall-single-30000",
+      name: "38M series 30 000 BTU",
       seriesId: "bryant-38m-series",
       brandId: "bryant",
-      modelNumber: "38M series",
-      normalizedModelNumber: "38m-series",
+      modelNumber: "38M series 30k",
+      normalizedModelNumber: "38m-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 19000,
@@ -71,9 +72,9 @@ export const bryantDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "bryant-38m-series-wall-single-cfg-1",
-      slug: "bryant-38m-series-wall-single-cfg-1",
-      modelId: "bryant-38m-series-wall-single",
+      id: "bryant-38m-series-wall-single-30000-cfg-1",
+      slug: "bryant-38m-series-wall-single-30000-cfg-1",
+      modelId: "bryant-38m-series-wall-single-30000",
       outdoorUnitId: "bryant-38marbq30aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -85,9 +86,9 @@ export const bryantDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "bryant-38m-series-wall-single-cfg-2",
-      slug: "bryant-38m-series-wall-single-cfg-2",
-      modelId: "bryant-38m-series-wall-single",
+      id: "bryant-38m-series-wall-single-30000-cfg-2",
+      slug: "bryant-38m-series-wall-single-30000-cfg-2",
+      modelId: "bryant-38m-series-wall-single-30000",
       outdoorUnitId: "bryant-38marbq30aa311",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -101,7 +102,7 @@ export const bryantDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "bryant-38m-series-wall-single-cfg-1",
+      configurationId: "bryant-38m-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -112,7 +113,7 @@ export const bryantDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "bryant-38m-series-wall-single-cfg-2",
+      configurationId: "bryant-38m-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

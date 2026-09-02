@@ -26,19 +26,47 @@ export const valievDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "valiev-standard-wall-single",
-      slug: "valiev-standard-wall-single",
-      name: "Standard",
+      id: "valiev-standard-wall-single-18000",
+      slug: "valiev-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
       seriesId: "valiev-standard",
       brandId: "valiev",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 10400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "valiev-standard-wall-single-12000",
+      slug: "valiev-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "valiev-standard",
+      brandId: "valiev",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7100,
-      heatingCapacity5FMaxBtu: 10400,
+      heatingCapacity5FMaxBtu: 7100,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -71,9 +99,9 @@ export const valievDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "valiev-standard-wall-single-cfg-1",
-      slug: "valiev-standard-wall-single-cfg-1",
-      modelId: "valiev-standard-wall-single",
+      id: "valiev-standard-wall-single-18000-cfg-1",
+      slug: "valiev-standard-wall-single-18000-cfg-1",
+      modelId: "valiev-standard-wall-single-18000",
       outdoorUnitId: "valiev-vwsm-18ir410ahs21",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -85,9 +113,9 @@ export const valievDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "valiev-standard-wall-single-cfg-2",
-      slug: "valiev-standard-wall-single-cfg-2",
-      modelId: "valiev-standard-wall-single",
+      id: "valiev-standard-wall-single-12000-cfg-1",
+      slug: "valiev-standard-wall-single-12000-cfg-1",
+      modelId: "valiev-standard-wall-single-12000",
       outdoorUnitId: "valiev-vwsm-12ir410ahs21l",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -101,7 +129,7 @@ export const valievDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "valiev-standard-wall-single-cfg-1",
+      configurationId: "valiev-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -112,7 +140,7 @@ export const valievDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "valiev-standard-wall-single-cfg-2",
+      configurationId: "valiev-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

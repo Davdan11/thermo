@@ -95,7 +95,7 @@ export const tosotDataset: BrandDataset = {
       name: "All MATCH",
       brandId: "tosot",
       systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -279,19 +279,20 @@ export const tosotDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "tosot-standard-wall-single",
-      slug: "tosot-standard-wall-single",
-      name: "Standard",
+      id: "tosot-standard-wall-single-9000",
+      slug: "tosot-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "tosot-standard",
       brandId: "tosot",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6100,
-      heatingCapacity5FMaxBtu: 43500,
+      heatingCapacity5FMaxBtu: 8900,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -305,24 +306,133 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-lomo-wall-single",
-      slug: "tosot-lomo-wall-single",
-      name: "Lomo",
-      seriesId: "tosot-lomo",
+      id: "tosot-standard-wall-single-12000",
+      slug: "tosot-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "tosot-standard",
       brandId: "tosot",
-      modelNumber: "Lomo",
-      normalizedModelNumber: "lomo",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7100,
+      heatingCapacity5FMaxBtu: 10400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-18000",
+      slug: "tosot-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "tosot-standard",
+      brandId: "tosot",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10900,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-20000",
+      slug: "tosot-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "tosot-standard",
+      brandId: "tosot",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 22800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000",
+      slug: "tosot-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "tosot-standard",
+      brandId: "tosot",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 29400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-lomo-wall-single-12000",
+      slug: "tosot-lomo-wall-single-12000",
+      name: "Lomo 12 000 BTU",
+      seriesId: "tosot-lomo",
+      brandId: "tosot",
+      modelNumber: "Lomo 12k",
+      normalizedModelNumber: "lomo-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 33600,
+      coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 10300,
-      heatingCapacity5FMaxBtu: 27800,
-      seer2Min: 20,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 24,
       seer2Max: 24,
       hspf2Min: 8.5,
-      hspf2Max: 10,
-      cop5FMin: 1.8,
+      hspf2Max: 8.5,
+      cop5FMin: 1.91,
       cop5FMax: 1.91,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -331,24 +441,187 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-j-series-wall-single",
-      slug: "tosot-j-series-wall-single",
-      name: "J-Series",
-      seriesId: "tosot-j-series",
+      id: "tosot-lomo-wall-single-18000",
+      slug: "tosot-lomo-wall-single-18000",
+      name: "Lomo 18 000 BTU",
+      seriesId: "tosot-lomo",
       brandId: "tosot",
-      modelNumber: "J-Series",
-      normalizedModelNumber: "j-series",
+      modelNumber: "Lomo 18k",
+      normalizedModelNumber: "lomo-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
-      heatingCapacity5FMinBtu: 17000,
-      heatingCapacity5FMaxBtu: 30000,
-      seer2Min: 16,
-      seer2Max: 20,
-      hspf2Min: 8.6,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15100,
+      heatingCapacity5FMaxBtu: 15100,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10,
       hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-lomo-wall-single-20000",
+      slug: "tosot-lomo-wall-single-20000",
+      name: "Lomo 20 000 BTU",
+      seriesId: "tosot-lomo",
+      brandId: "tosot",
+      modelNumber: "Lomo 20k",
+      normalizedModelNumber: "lomo-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000",
+      slug: "tosot-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "tosot-standard",
+      brandId: "tosot",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000",
+      slug: "tosot-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "tosot-standard",
+      brandId: "tosot",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16400,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-j-series-wall-single-18000",
+      slug: "tosot-j-series-wall-single-18000",
+      name: "J-Series 18 000 BTU",
+      seriesId: "tosot-j-series",
+      brandId: "tosot",
+      modelNumber: "J-Series 18k",
+      normalizedModelNumber: "j-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-j-series-wall-single-20000",
+      slug: "tosot-j-series-wall-single-20000",
+      name: "J-Series 20 000 BTU",
+      seriesId: "tosot-j-series",
+      brandId: "tosot",
+      modelNumber: "J-Series 20k",
+      normalizedModelNumber: "j-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 17900,
+      heatingCapacity5FMaxBtu: 17900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-j-series-wall-single-36000",
+      slug: "tosot-j-series-wall-single-36000",
+      name: "J-Series 36 000 BTU",
+      seriesId: "tosot-j-series",
+      brandId: "tosot",
+      modelNumber: "J-Series 36k",
+      normalizedModelNumber: "j-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.82,
       cop5FMax: 1.82,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -357,18 +630,73 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted",
-      name: "FLEXX High-efficiency Series",
-      seriesId: "tosot-flexx-high-efficiency-series",
+      id: "tosot-j-series-wall-single-42000",
+      slug: "tosot-j-series-wall-single-42000",
+      name: "J-Series 42 000 BTU",
+      seriesId: "tosot-j-series",
       brandId: "tosot",
-      modelNumber: "FLEXX High-efficiency Series",
-      normalizedModelNumber: "flexx-high-efficiency-series",
+      modelNumber: "J-Series 42k",
+      normalizedModelNumber: "j-series-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.82,
+      cop5FMax: 1.82,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      name: "FLEXX High-efficiency Series 24 000 BTU",
+      seriesId: "tosot-flexx-high-efficiency-series",
+      brandId: "tosot",
+      modelNumber: "FLEXX High-efficiency Series 24k",
+      normalizedModelNumber: "flexx-high-efficiency-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 14800,
+      heatingCapacity5FMaxBtu: 24400,
+      seer2Min: 17,
+      seer2Max: 18,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      name: "FLEXX High-efficiency Series 48 000 BTU",
+      seriesId: "tosot-flexx-high-efficiency-series",
+      brandId: "tosot",
+      modelNumber: "FLEXX High-efficiency Series 48k",
+      normalizedModelNumber: "flexx-high-efficiency-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 31200,
       heatingCapacity5FMaxBtu: 45000,
       seer2Min: 16,
       seer2Max: 19,
@@ -383,23 +711,51 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single",
-      slug: "tosot-charmo-wall-single",
-      name: "Charmo",
-      seriesId: "tosot-charmo",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-36000",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-36000",
+      name: "FLEXX High-efficiency Series 36 000 BTU",
+      seriesId: "tosot-flexx-high-efficiency-series",
       brandId: "tosot",
-      modelNumber: "Charmo",
-      normalizedModelNumber: "charmo",
+      modelNumber: "FLEXX High-efficiency Series 36k",
+      normalizedModelNumber: "flexx-high-efficiency-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 16,
+      seer2Max: 18,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-9000",
+      slug: "tosot-charmo-wall-single-9000",
+      name: "Charmo 9 000 BTU",
+      seriesId: "tosot-charmo",
+      brandId: "tosot",
+      modelNumber: "Charmo 9k",
+      normalizedModelNumber: "charmo-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 33600,
+      coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8000,
-      heatingCapacity5FMaxBtu: 27400,
-      seer2Min: 17.5,
-      seer2Max: 22,
-      hspf2Min: 8.5,
-      hspf2Max: 9,
+      heatingCapacity5FMaxBtu: 8200,
+      seer2Min: 19.5,
+      seer2Max: 20.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.8,
       cop5FMin: 1.77,
       cop5FMax: 1.94,
       systemType: "wall-single",
@@ -409,24 +765,106 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single",
-      slug: "tosot-pular-wall-single",
-      name: "Pular",
+      id: "tosot-pular-wall-single-9000",
+      slug: "tosot-pular-wall-single-9000",
+      name: "Pular 9 000 BTU",
       seriesId: "tosot-pular",
       brandId: "tosot",
-      modelNumber: "Pular",
-      normalizedModelNumber: "pular",
+      modelNumber: "Pular 9k",
+      normalizedModelNumber: "pular-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
+      coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8400,
-      heatingCapacity5FMaxBtu: 21800,
-      seer2Min: 21.5,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 25.5,
       seer2Max: 27,
-      hspf2Min: 8.5,
+      hspf2Min: 10,
       hspf2Max: 10.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-12000",
+      slug: "tosot-pular-wall-single-12000",
+      name: "Pular 12 000 BTU",
+      seriesId: "tosot-pular",
+      brandId: "tosot",
+      modelNumber: "Pular 12k",
+      normalizedModelNumber: "pular-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10400,
+      seer2Min: 21.5,
+      seer2Max: 24,
+      hspf2Min: 8.5,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000",
+      slug: "tosot-pular-wall-single-20000",
+      name: "Pular 20 000 BTU",
+      seriesId: "tosot-pular",
+      brandId: "tosot",
+      modelNumber: "Pular 20k",
+      normalizedModelNumber: "pular-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 21800,
+      seer2Min: 24.5,
+      seer2Max: 26,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
       cop5FMin: 1.75,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-18000",
+      slug: "tosot-pular-wall-single-18000",
+      name: "Pular 18 000 BTU",
+      seriesId: "tosot-pular",
+      brandId: "tosot",
+      modelNumber: "Pular 18k",
+      normalizedModelNumber: "pular-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 23.5,
+      seer2Max: 24.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.9,
       cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -435,19 +873,101 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-m-series-wall-single",
-      slug: "tosot-m-series-wall-single",
-      name: "M-Series",
-      seriesId: "tosot-m-series",
+      id: "tosot-standard-wall-single-42000",
+      slug: "tosot-standard-wall-single-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "tosot-standard",
       brandId: "tosot",
-      modelNumber: "M-Series",
-      normalizedModelNumber: "m-series",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 32800,
+      heatingCapacity5FMaxBtu: 32800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-48000",
+      slug: "tosot-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "tosot-standard",
+      brandId: "tosot",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 31200,
+      heatingCapacity5FMaxBtu: 43500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-12000",
+      slug: "tosot-charmo-wall-single-12000",
+      name: "Charmo 12 000 BTU",
+      seriesId: "tosot-charmo",
+      brandId: "tosot",
+      modelNumber: "Charmo 12k",
+      normalizedModelNumber: "charmo-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9700,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: 17.5,
+      seer2Max: 19,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000",
+      slug: "tosot-m-series-wall-single-18000",
+      name: "M-Series 18 000 BTU",
+      seriesId: "tosot-m-series",
+      brandId: "tosot",
+      modelNumber: "M-Series 18k",
+      normalizedModelNumber: "m-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 14000,
-      heatingCapacity5FMaxBtu: 40000,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 16,
       seer2Max: 21,
       hspf2Min: 8.1,
@@ -461,25 +981,26 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-all-match-wall-single",
-      slug: "tosot-all-match-wall-single",
-      name: "All MATCH",
-      seriesId: "tosot-all-match",
+      id: "tosot-m-series-wall-single-24000",
+      slug: "tosot-m-series-wall-single-24000",
+      name: "M-Series 24 000 BTU",
+      seriesId: "tosot-m-series",
       brandId: "tosot",
-      modelNumber: "All MATCH",
-      normalizedModelNumber: "all-match",
+      modelNumber: "M-Series 24k",
+      normalizedModelNumber: "m-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 33600,
-      heatingCapacity5FMinBtu: 7500,
-      heatingCapacity5FMaxBtu: 27200,
-      seer2Min: 18.5,
-      seer2Max: 23,
-      hspf2Min: 8.5,
-      hspf2Max: 9.5,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 16,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
       cop5FMin: 1.8,
-      cop5FMax: 2.12,
+      cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -487,24 +1008,160 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      name: "17 SEER DC inverter rooftop unit",
-      seriesId: "tosot-17-seer-dc-inverter-rooftop-unit",
+      id: "tosot-m-series-wall-single-30000",
+      slug: "tosot-m-series-wall-single-30000",
+      name: "M-Series 30 000 BTU",
+      seriesId: "tosot-m-series",
       brandId: "tosot",
-      modelNumber: "17 SEER DC inverter rooftop unit",
-      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit",
+      modelNumber: "M-Series 30k",
+      normalizedModelNumber: "m-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 26800,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: 16,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000",
+      slug: "tosot-m-series-wall-single-36000",
+      name: "M-Series 36 000 BTU",
+      seriesId: "tosot-m-series",
+      brandId: "tosot",
+      modelNumber: "M-Series 36k",
+      normalizedModelNumber: "m-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 16,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-lomo-wall-single-30000",
+      slug: "tosot-lomo-wall-single-30000",
+      name: "LOMO 30 000 BTU",
+      seriesId: "tosot-lomo",
+      brandId: "tosot",
+      modelNumber: "LOMO 30k",
+      normalizedModelNumber: "lomo-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-lomo-wall-single-36000",
+      slug: "tosot-lomo-wall-single-36000",
+      name: "LOMO 36 000 BTU",
+      seriesId: "tosot-lomo",
+      brandId: "tosot",
+      modelNumber: "LOMO 36k",
+      normalizedModelNumber: "lomo-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      heatingCapacity5FMinBtu: 27800,
+      heatingCapacity5FMaxBtu: 27800,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-18000",
+      slug: "tosot-all-match-wall-single-18000",
+      name: "All MATCH 18 000 BTU",
+      seriesId: "tosot-all-match",
+      brandId: "tosot",
+      modelNumber: "All MATCH 18k",
+      normalizedModelNumber: "all-match-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 14600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 2.12,
+      cop5FMax: 2.12,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-60000",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-60000",
+      name: "17 SEER DC inverter rooftop unit 60 000 BTU",
+      seriesId: "tosot-17-seer-dc-inverter-rooftop-unit",
+      brandId: "tosot",
+      modelNumber: "17 SEER DC inverter rooftop unit 60k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 56000,
       coolingCapacityMaxBtu: 56000,
-      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMinBtu: 37000,
       heatingCapacity5FMaxBtu: 37000,
       seer2Min: 17,
-      seer2Max: 17.8,
+      seer2Max: 17,
       hspf2Min: 8.3,
-      hspf2Max: 8.8,
-      cop5FMin: 1.75,
+      hspf2Max: 8.3,
+      cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -513,15 +1170,97 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-cosmo-wall-single",
-      slug: "tosot-cosmo-wall-single",
-      name: "COSMO",
-      seriesId: "tosot-cosmo",
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-48000",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-48000",
+      name: "17 SEER DC inverter rooftop unit 48 000 BTU",
+      seriesId: "tosot-17-seer-dc-inverter-rooftop-unit",
       brandId: "tosot",
-      modelNumber: "COSMO",
-      normalizedModelNumber: "cosmo",
+      modelNumber: "17 SEER DC inverter rooftop unit 48k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 17.8,
+      seer2Max: 17.8,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-36000",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-36000",
+      name: "17 SEER DC inverter rooftop unit 36 000 BTU",
+      seriesId: "tosot-17-seer-dc-inverter-rooftop-unit",
+      brandId: "tosot",
+      modelNumber: "17 SEER DC inverter rooftop unit 36k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34400,
+      coolingCapacityMaxBtu: 34400,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 23400,
+      seer2Min: 17.8,
+      seer2Max: 17.8,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-24000",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-24000",
+      name: "17 SEER DC inverter rooftop unit 24 000 BTU",
+      seriesId: "tosot-17-seer-dc-inverter-rooftop-unit",
+      brandId: "tosot",
+      modelNumber: "17 SEER DC inverter rooftop unit 24k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 23400,
+      seer2Min: 17.8,
+      seer2Max: 17.8,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-cosmo-wall-single-36000",
+      slug: "tosot-cosmo-wall-single-36000",
+      name: "COSMO 36 000 BTU",
+      seriesId: "tosot-cosmo",
+      brandId: "tosot",
+      modelNumber: "COSMO 36k",
+      normalizedModelNumber: "cosmo-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 33600,
       coolingCapacityMaxBtu: 33600,
       heatingCapacity5FMinBtu: 27400,
@@ -539,24 +1278,52 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-ultra-heat-series-central-ducted",
-      slug: "tosot-flexx-ultra-heat-series-central-ducted",
-      name: "FLEXX Ultra heat Series",
+      id: "tosot-flexx-ultra-heat-series-central-ducted-36000",
+      slug: "tosot-flexx-ultra-heat-series-central-ducted-36000",
+      name: "FLEXX Ultra heat Series 36 000 BTU",
       seriesId: "tosot-flexx-ultra-heat-series",
       brandId: "tosot",
-      modelNumber: "FLEXX Ultra heat Series",
-      normalizedModelNumber: "flexx-ultra-heat-series",
+      modelNumber: "FLEXX Ultra heat Series 36k",
+      normalizedModelNumber: "flexx-ultra-heat-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 34000,
       heatingCapacity5FMinBtu: 28200,
-      heatingCapacity5FMaxBtu: 45000,
+      heatingCapacity5FMaxBtu: 28200,
       seer2Min: 18,
-      seer2Max: 18.5,
+      seer2Max: 18,
       hspf2Min: 10,
-      hspf2Max: 10.5,
+      hspf2Max: 10,
       cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-ultra-heat-series-central-ducted-48000",
+      slug: "tosot-flexx-ultra-heat-series-central-ducted-48000",
+      name: "FLEXX Ultra heat Series 48 000 BTU",
+      seriesId: "tosot-flexx-ultra-heat-series",
+      brandId: "tosot",
+      modelNumber: "FLEXX Ultra heat Series 48k",
+      normalizedModelNumber: "flexx-ultra-heat-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 45000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2.1,
       cop5FMax: 2.1,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -565,24 +1332,79 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-multi-zone-wall-single",
-      slug: "tosot-multi-zone-wall-single",
-      name: "Multi-Zone",
+      id: "tosot-multi-zone-wall-single-24000",
+      slug: "tosot-multi-zone-wall-single-24000",
+      name: "Multi-Zone 24 000 BTU",
       seriesId: "tosot-multi-zone",
       brandId: "tosot",
-      modelNumber: "Multi-Zone",
-      normalizedModelNumber: "multi-zone",
+      modelNumber: "Multi-Zone 24k",
+      normalizedModelNumber: "multi-zone-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 22000,
-      heatingCapacity5FMaxBtu: 36000,
+      heatingCapacity5FMaxBtu: 23600,
       seer2Min: 18,
       seer2Max: 21,
       hspf2Min: 8.1,
       hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-30000",
+      slug: "tosot-multi-zone-wall-single-30000",
+      name: "Multi-Zone 30 000 BTU",
+      seriesId: "tosot-multi-zone",
+      brandId: "tosot",
+      modelNumber: "Multi-Zone 30k",
+      normalizedModelNumber: "multi-zone-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-36000",
+      slug: "tosot-multi-zone-wall-single-36000",
+      name: "Multi-Zone 36 000 BTU",
+      seriesId: "tosot-multi-zone",
+      brandId: "tosot",
+      modelNumber: "Multi-Zone 36k",
+      normalizedModelNumber: "multi-zone-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -591,25 +1413,26 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-clivia-wall-single",
-      slug: "tosot-clivia-wall-single",
-      name: "Clivia",
-      seriesId: "tosot-clivia",
+      id: "tosot-m-series-wall-single-42000",
+      slug: "tosot-m-series-wall-single-42000",
+      name: "M-Series 42 000 BTU",
+      seriesId: "tosot-m-series",
       brandId: "tosot",
-      modelNumber: "Clivia",
-      normalizedModelNumber: "clivia",
+      modelNumber: "M-Series 42k",
+      normalizedModelNumber: "m-series-42000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 7700,
-      heatingCapacity5FMaxBtu: 20000,
-      seer2Min: 23.5,
-      seer2Max: 27,
-      hspf2Min: 9,
-      hspf2Max: 10.5,
-      cop5FMin: 1.75,
-      cop5FMax: 1.95,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -617,23 +1440,24 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-console-wall-single",
-      slug: "tosot-console-wall-single",
-      name: "Console",
-      seriesId: "tosot-console",
+      id: "tosot-clivia-wall-single-20000",
+      slug: "tosot-clivia-wall-single-20000",
+      name: "Clivia 20 000 BTU",
+      seriesId: "tosot-clivia",
       brandId: "tosot",
-      modelNumber: "Console",
-      normalizedModelNumber: "console",
+      modelNumber: "Clivia 20k",
+      normalizedModelNumber: "clivia-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 12000,
-      heatingCapacity5FMinBtu: 6600,
-      heatingCapacity5FMaxBtu: 10300,
-      seer2Min: 23,
-      seer2Max: 23.3,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 15600,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 23.5,
+      seer2Max: 24,
       hspf2Min: 9,
-      hspf2Max: 9.5,
+      hspf2Max: 9,
       cop5FMin: 1.75,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -643,25 +1467,134 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ducted-wall-single",
-      slug: "tosot-ducted-wall-single",
-      name: "Ducted",
+      id: "tosot-clivia-wall-single-9000",
+      slug: "tosot-clivia-wall-single-9000",
+      name: "Clivia 9 000 BTU",
+      seriesId: "tosot-clivia",
+      brandId: "tosot",
+      modelNumber: "Clivia 9k",
+      normalizedModelNumber: "clivia-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 26,
+      seer2Max: 27,
+      hspf2Min: 10.4,
+      hspf2Max: 10.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000",
+      slug: "tosot-clivia-wall-single-12000",
+      name: "Clivia 12 000 BTU",
+      seriesId: "tosot-clivia",
+      brandId: "tosot",
+      modelNumber: "Clivia 12k",
+      normalizedModelNumber: "clivia-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7700,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.95,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000",
+      slug: "tosot-clivia-wall-single-18000",
+      name: "Clivia 18 000 BTU",
+      seriesId: "tosot-clivia",
+      brandId: "tosot",
+      modelNumber: "Clivia 18k",
+      normalizedModelNumber: "clivia-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10100,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-console-wall-single-9000",
+      slug: "tosot-console-wall-single-9000",
+      name: "Console 9 000 BTU",
+      seriesId: "tosot-console",
+      brandId: "tosot",
+      modelNumber: "Console 9k",
+      normalizedModelNumber: "console-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMaxBtu: 8900,
+      seer2Min: 23,
+      seer2Max: 23.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.5,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-ducted-wall-single-12000",
+      slug: "tosot-ducted-wall-single-12000",
+      name: "Ducted 12 000 BTU",
       seriesId: "tosot-ducted",
       brandId: "tosot",
-      modelNumber: "Ducted",
-      normalizedModelNumber: "ducted",
+      modelNumber: "Ducted 12k",
+      normalizedModelNumber: "ducted-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
-      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMinBtu: 10300,
       heatingCapacity5FMaxBtu: 10300,
       seer2Min: 21.5,
-      seer2Max: 22,
+      seer2Max: 21.5,
       hspf2Min: 9,
-      hspf2Max: 9.2,
+      hspf2Max: 9,
       cop5FMin: 1.9,
-      cop5FMax: 2.15,
+      cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -669,25 +1602,26 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-airy-wall-single",
-      slug: "tosot-airy-wall-single",
-      name: "Airy",
+      id: "tosot-airy-wall-single-20000",
+      slug: "tosot-airy-wall-single-20000",
+      name: "Airy 20 000 BTU",
       seriesId: "tosot-airy",
       brandId: "tosot",
-      modelNumber: "Airy",
-      normalizedModelNumber: "airy",
+      modelNumber: "Airy 20k",
+      normalizedModelNumber: "airy-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 8900,
+      heatingCapacity5FMinBtu: 15000,
       heatingCapacity5FMaxBtu: 20000,
       seer2Min: 27,
-      seer2Max: 30,
+      seer2Max: 27,
       hspf2Min: 10,
-      hspf2Max: 11.2,
+      hspf2Max: 10,
       cop5FMin: 1.8,
-      cop5FMax: 2.11,
+      cop5FMax: 1.8,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -695,24 +1629,268 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single",
-      slug: "tosot-r32-freematch-wall-single",
-      name: "R32 FreeMatch",
-      seriesId: "tosot-r32-freematch",
+      id: "tosot-airy-wall-single-18000",
+      slug: "tosot-airy-wall-single-18000",
+      name: "Airy 18 000 BTU",
+      seriesId: "tosot-airy",
       brandId: "tosot",
-      modelNumber: "R32 FreeMatch",
-      normalizedModelNumber: "r32-freematch",
+      modelNumber: "Airy 18k",
+      normalizedModelNumber: "airy-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15500,
+      heatingCapacity5FMaxBtu: 15500,
+      seer2Min: 27.5,
+      seer2Max: 27.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-18000",
+      slug: "tosot-charmo-wall-single-18000",
+      name: "Charmo 18 000 BTU",
+      seriesId: "tosot-charmo",
+      brandId: "tosot",
+      modelNumber: "Charmo 18k",
+      normalizedModelNumber: "charmo-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15300,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000",
+      slug: "tosot-charmo-wall-single-36000",
+      name: "Charmo 36 000 BTU",
+      seriesId: "tosot-charmo",
+      brandId: "tosot",
+      modelNumber: "Charmo 36k",
+      normalizedModelNumber: "charmo-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      heatingCapacity5FMinBtu: 18800,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-36000",
+      slug: "tosot-all-match-wall-single-36000",
+      name: "All MATCH 36 000 BTU",
+      seriesId: "tosot-all-match",
+      brandId: "tosot",
+      modelNumber: "All MATCH 36k",
+      normalizedModelNumber: "all-match-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 27200,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-console-wall-single-12000",
+      slug: "tosot-console-wall-single-12000",
+      name: "Console 12 000 BTU",
+      seriesId: "tosot-console",
+      brandId: "tosot",
+      modelNumber: "Console 12k",
+      normalizedModelNumber: "console-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10300,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 23.1,
+      seer2Max: 23.1,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-24000",
+      slug: "tosot-charmo-wall-single-24000",
+      name: "Charmo 24 000 BTU",
+      seriesId: "tosot-charmo",
+      brandId: "tosot",
+      modelNumber: "Charmo 24k",
+      normalizedModelNumber: "charmo-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-18000",
+      slug: "tosot-r32-freematch-wall-single-18000",
+      name: "R32 FreeMatch 18 000 BTU",
+      seriesId: "tosot-r32-freematch",
+      brandId: "tosot",
+      modelNumber: "R32 FreeMatch 18k",
+      normalizedModelNumber: "r32-freematch-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 15000,
-      heatingCapacity5FMaxBtu: 40000,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 18,
       seer2Max: 21,
       hspf2Min: 8.1,
       hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-24000",
+      slug: "tosot-r32-freematch-wall-single-24000",
+      name: "R32 FreeMatch 24 000 BTU",
+      seriesId: "tosot-r32-freematch",
+      brandId: "tosot",
+      modelNumber: "R32 FreeMatch 24k",
+      normalizedModelNumber: "r32-freematch-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-30000",
+      slug: "tosot-r32-freematch-wall-single-30000",
+      name: "R32 FreeMatch 30 000 BTU",
+      seriesId: "tosot-r32-freematch",
+      brandId: "tosot",
+      modelNumber: "R32 FreeMatch 30k",
+      normalizedModelNumber: "r32-freematch-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-36000",
+      slug: "tosot-r32-freematch-wall-single-36000",
+      name: "R32 FreeMatch 36 000 BTU",
+      seriesId: "tosot-r32-freematch",
+      brandId: "tosot",
+      modelNumber: "R32 FreeMatch 36k",
+      normalizedModelNumber: "r32-freematch-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -721,24 +1899,160 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-g-series-central-ducted",
-      slug: "tosot-g-series-central-ducted",
-      name: "G Series",
-      seriesId: "tosot-g-series",
+      id: "tosot-r32-freematch-wall-single-42000",
+      slug: "tosot-r32-freematch-wall-single-42000",
+      name: "R32 FreeMatch 42 000 BTU",
+      seriesId: "tosot-r32-freematch",
       brandId: "tosot",
-      modelNumber: "G Series",
-      normalizedModelNumber: "g-series",
+      modelNumber: "R32 FreeMatch 42k",
+      normalizedModelNumber: "r32-freematch-42000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 53500,
-      heatingCapacity5FMinBtu: 19600,
-      heatingCapacity5FMaxBtu: 43000,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
       seer2Min: 18,
-      seer2Max: 20,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-30000",
+      slug: "tosot-charmo-wall-single-30000",
+      name: "Charmo 30 000 BTU",
+      seriesId: "tosot-charmo",
+      brandId: "tosot",
+      modelNumber: "Charmo 30k",
+      normalizedModelNumber: "charmo-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 18800,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-48000",
+      slug: "tosot-r32-freematch-wall-single-48000",
+      name: "R32 FreeMatch 48 000 BTU",
+      seriesId: "tosot-r32-freematch",
+      brandId: "tosot",
+      modelNumber: "R32 FreeMatch 48k",
+      normalizedModelNumber: "r32-freematch-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-g-series-central-ducted-24000",
+      slug: "tosot-g-series-central-ducted-24000",
+      name: "G Series 24 000 BTU",
+      seriesId: "tosot-g-series",
+      brandId: "tosot",
+      modelNumber: "G Series 24k",
+      normalizedModelNumber: "g-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 23000,
+      seer2Min: 18,
+      seer2Max: 18.5,
       hspf2Min: 8.3,
-      hspf2Max: 9.5,
+      hspf2Max: 8.3,
       cop5FMin: 1.75,
+      cop5FMax: 2.14,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-g-series-central-ducted-36000",
+      slug: "tosot-g-series-central-ducted-36000",
+      name: "G Series 36 000 BTU",
+      seriesId: "tosot-g-series",
+      brandId: "tosot",
+      modelNumber: "G Series 36k",
+      normalizedModelNumber: "g-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 8.3,
+      hspf2Max: 8.3,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-g-series-central-ducted-48000",
+      slug: "tosot-g-series-central-ducted-48000",
+      name: "G Series 48 000 BTU",
+      seriesId: "tosot-g-series",
+      brandId: "tosot",
+      modelNumber: "G Series 48k",
+      normalizedModelNumber: "g-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 53500,
+      heatingCapacity5FMinBtu: 38500,
+      heatingCapacity5FMaxBtu: 43000,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.18,
       cop5FMax: 2.24,
       systemType: "central-ducted",
       categories: ["conventional", "ducted"],
@@ -747,15 +2061,70 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-360-air-discharge-cassette-unit-wall-single",
-      slug: "tosot-360-air-discharge-cassette-unit-wall-single",
-      name: "360°air discharge cassette unit",
-      seriesId: "tosot-360-air-discharge-cassette-unit",
+      id: "tosot-m-series-wall-single-48000",
+      slug: "tosot-m-series-wall-single-48000",
+      name: "M-Series 48 000 BTU",
+      seriesId: "tosot-m-series",
       brandId: "tosot",
-      modelNumber: "360°air discharge cassette unit",
-      normalizedModelNumber: "360-air-discharge-cassette-unit",
+      modelNumber: "M-Series 48k",
+      normalizedModelNumber: "m-series-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-12000",
+      slug: "tosot-all-match-wall-single-12000",
+      name: "All MATCH 12 000 BTU",
+      seriesId: "tosot-all-match",
+      brandId: "tosot",
+      modelNumber: "All MATCH 12k",
+      normalizedModelNumber: "all-match-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 7500,
+      seer2Min: 21,
+      seer2Max: 23,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-360-air-discharge-cassette-unit-wall-single-9000",
+      slug: "tosot-360-air-discharge-cassette-unit-wall-single-9000",
+      name: "360°air discharge cassette unit 9 000 BTU",
+      seriesId: "tosot-360-air-discharge-cassette-unit",
+      brandId: "tosot",
+      modelNumber: "360°air discharge cassette unit 9k",
+      normalizedModelNumber: "360-air-discharge-cassette-unit-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 6900,
@@ -773,15 +2142,16 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-one-way-air-discharge-cassette-unit-wall-single",
-      slug: "tosot-one-way-air-discharge-cassette-unit-wall-single",
-      name: "One-way air discharge cassette unit",
+      id: "tosot-one-way-air-discharge-cassette-unit-wall-single-9000",
+      slug: "tosot-one-way-air-discharge-cassette-unit-wall-single-9000",
+      name: "One-way air discharge cassette unit 9 000 BTU",
       seriesId: "tosot-one-way-air-discharge-cassette-unit",
       brandId: "tosot",
-      modelNumber: "One-way air discharge cassette unit",
-      normalizedModelNumber: "one-way-air-discharge-cassette-unit",
+      modelNumber: "One-way air discharge cassette unit 9k",
+      normalizedModelNumber: "one-way-air-discharge-cassette-unit-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 7200,
@@ -799,15 +2169,16 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-floor-ceiling-wall-single",
-      slug: "tosot-floor-ceiling-wall-single",
-      name: "Floor ceiling",
+      id: "tosot-floor-ceiling-wall-single-9000",
+      slug: "tosot-floor-ceiling-wall-single-9000",
+      name: "Floor ceiling 9 000 BTU",
       seriesId: "tosot-floor-ceiling",
       brandId: "tosot",
-      modelNumber: "Floor ceiling",
-      normalizedModelNumber: "floor-ceiling",
+      modelNumber: "Floor ceiling 9k",
+      normalizedModelNumber: "floor-ceiling-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 6700,
@@ -825,24 +2196,79 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-aoraki-wall-single",
-      slug: "tosot-aoraki-wall-single",
-      name: "AORAKI",
-      seriesId: "tosot-aoraki",
+      id: "tosot-ducted-wall-single-9000",
+      slug: "tosot-ducted-wall-single-9000",
+      name: "Ducted 9 000 BTU",
+      seriesId: "tosot-ducted",
       brandId: "tosot",
-      modelNumber: "AORAKI",
-      normalizedModelNumber: "aoraki",
+      modelNumber: "Ducted 9k",
+      normalizedModelNumber: "ducted-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMaxBtu: 6600,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 2.15,
+      cop5FMax: 2.15,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-aoraki-wall-single-9000",
+      slug: "tosot-aoraki-wall-single-9000",
+      name: "AORAKI 9 000 BTU",
+      seriesId: "tosot-aoraki",
+      brandId: "tosot",
+      modelNumber: "AORAKI 9k",
+      normalizedModelNumber: "aoraki-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8400,
-      heatingCapacity5FMaxBtu: 14700,
-      seer2Min: 24.5,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 26,
       seer2Max: 27,
-      hspf2Min: 9,
+      hspf2Min: 10.4,
       hspf2Max: 10.5,
       cop5FMin: 1.83,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-aoraki-wall-single-12000",
+      slug: "tosot-aoraki-wall-single-12000",
+      name: "AORAKI 12 000 BTU",
+      seriesId: "tosot-aoraki",
+      brandId: "tosot",
+      modelNumber: "AORAKI 12k",
+      normalizedModelNumber: "aoraki-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.95,
       cop5FMax: 1.95,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -851,20 +2277,156 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ultra-heat-flexx-central-ducted",
-      slug: "tosot-ultra-heat-flexx-central-ducted",
-      name: "Ultra Heat Flexx",
-      seriesId: "tosot-ultra-heat-flexx",
+      id: "tosot-aoraki-wall-single-18000",
+      slug: "tosot-aoraki-wall-single-18000",
+      name: "AORAKI 18 000 BTU",
+      seriesId: "tosot-aoraki",
       brandId: "tosot",
-      modelNumber: "Ultra Heat Flexx",
-      normalizedModelNumber: "ultra-heat-flexx",
+      modelNumber: "AORAKI 18k",
+      normalizedModelNumber: "aoraki-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-airy-wall-single-9000",
+      slug: "tosot-airy-wall-single-9000",
+      name: "Airy 9 000 BTU",
+      seriesId: "tosot-airy",
+      brandId: "tosot",
+      modelNumber: "Airy 9k",
+      normalizedModelNumber: "airy-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8900,
+      heatingCapacity5FMaxBtu: 8900,
+      seer2Min: 30,
+      seer2Max: 30,
+      hspf2Min: 11.2,
+      hspf2Max: 11.2,
+      cop5FMin: 2.11,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-airy-wall-single-12000",
+      slug: "tosot-airy-wall-single-12000",
+      name: "Airy 12 000 BTU",
+      seriesId: "tosot-airy",
+      brandId: "tosot",
+      modelNumber: "Airy 12k",
+      normalizedModelNumber: "airy-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10300,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 29.5,
+      seer2Max: 29.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-ultra-heat-flexx-central-ducted-24000",
+      slug: "tosot-ultra-heat-flexx-central-ducted-24000",
+      name: "Ultra Heat Flexx 24 000 BTU",
+      seriesId: "tosot-ultra-heat-flexx",
+      brandId: "tosot",
+      modelNumber: "Ultra Heat Flexx 24k",
+      normalizedModelNumber: "ultra-heat-flexx-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 20600,
-      heatingCapacity5FMaxBtu: 45000,
+      heatingCapacity5FMaxBtu: 20600,
       seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-ultra-heat-flexx-central-ducted-36000",
+      slug: "tosot-ultra-heat-flexx-central-ducted-36000",
+      name: "Ultra Heat Flexx 36 000 BTU",
+      seriesId: "tosot-ultra-heat-flexx",
+      brandId: "tosot",
+      modelNumber: "Ultra Heat Flexx 36k",
+      normalizedModelNumber: "ultra-heat-flexx-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 28200,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18.2,
+      seer2Max: 18.2,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-ultra-heat-flexx-central-ducted-48000",
+      slug: "tosot-ultra-heat-flexx-central-ducted-48000",
+      name: "Ultra Heat Flexx 48 000 BTU",
+      seriesId: "tosot-ultra-heat-flexx",
+      brandId: "tosot",
+      modelNumber: "Ultra Heat Flexx 48k",
+      normalizedModelNumber: "ultra-heat-flexx-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 39500,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 18.2,
       seer2Max: 19,
       hspf2Min: 10,
       hspf2Max: 10,
@@ -877,27 +2439,82 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-e-series-central-ducted",
-      slug: "tosot-e-series-central-ducted",
-      name: "E Series",
+      id: "tosot-e-series-central-ducted-36000",
+      slug: "tosot-e-series-central-ducted-36000",
+      name: "E Series 36 000 BTU",
       seriesId: "tosot-e-series",
       brandId: "tosot",
-      modelNumber: "E Series",
-      normalizedModelNumber: "e-series",
+      modelNumber: "E Series 36k",
+      normalizedModelNumber: "e-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 34000,
       heatingCapacity5FMinBtu: 28200,
-      heatingCapacity5FMaxBtu: 45000,
+      heatingCapacity5FMaxBtu: 28200,
       seer2Min: 18.2,
       seer2Max: 18.2,
       hspf2Min: 10,
       hspf2Max: 10,
       cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-e-series-central-ducted-48000",
+      slug: "tosot-e-series-central-ducted-48000",
+      name: "E Series 48 000 BTU",
+      seriesId: "tosot-e-series",
+      brandId: "tosot",
+      modelNumber: "E Series 48k",
+      normalizedModelNumber: "e-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 45000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 18.2,
+      seer2Max: 18.2,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.1,
       cop5FMax: 2.1,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-30000",
+      slug: "tosot-all-match-wall-single-30000",
+      name: "ALL MATCH 30 000 BTU",
+      seriesId: "tosot-all-match",
+      brandId: "tosot",
+      modelNumber: "ALL MATCH 30k",
+      normalizedModelNumber: "all-match-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 18.5,
+      seer2Max: 22.5,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -911,74 +2528,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw12hq2c2do",
-      modelNumber: "TW12HQ2C2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hq2c2do",
-      modelNumber: "TW18HQ2C2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw24hq2c2do",
-      modelNumber: "TW24HQ2C2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tmvrf-36kuh",
-      modelNumber: "TMVRF-36KUH",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw09hq3d6do",
       modelNumber: "TW09HQ3D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm18h4o",
-      modelNumber: "TM18H4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm24h4o",
-      modelNumber: "TM24H4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm30h4o",
-      modelNumber: "TM30H4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm36h4o",
-      modelNumber: "TM36H4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm42h3o",
-      modelNumber: "TM42H3O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tu18h3o",
-      modelNumber: "TU18H3O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tu24h3o",
-      modelNumber: "TU24H3O",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -989,32 +2540,32 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tu36h3o",
-      modelNumber: "TU36H3O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw09hq2a3do",
       modelNumber: "TW09HQ2A3DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
+      id: "tosot-twh09ag25a2do",
+      modelNumber: "TWH09AG25A2DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh09av29d6do",
+      modelNumber: "TWH09AV29D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hq2c2do",
+      modelNumber: "TW12HQ2C2DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tw12hq2a3do",
       modelNumber: "TW12HQ2A3DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hq2a3do",
-      modelNumber: "TW18HQ2A3DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw24hq2a3do",
-      modelNumber: "TW24HQ2A3DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1031,98 +2582,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-twh18atdxd-d3dna3ao",
-      modelNumber: "TWH18ATDXD-D3DNA3AO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh24atexf-d3dna3eo",
-      modelNumber: "TWH24ATEXF-D3DNA3EO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh09ag25a2do",
-      modelNumber: "TWH09AG25A2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh30qf25b4do",
-      modelNumber: "TWH30QF25B4DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh36qf25b4do",
-      modelNumber: "TWH36QF25B4DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tud24w2-d-d-u",
-      modelNumber: "TUD24W2/D-D(U)",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tud30w2-d-d-u",
-      modelNumber: "TUD30W2/D-D(U)",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tud36w2-d-d-u",
-      modelNumber: "TUD36W2/D-D(U)",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tud42w2-d-d-u",
-      modelNumber: "TUD42W2/D-D(U)",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tud48w2-d-d-u",
-      modelNumber: "TUD48W2/D-D(U)",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tud60w2-d-d-u",
-      modelNumber: "TUD60W2/D-D(U)",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw24hxca5do",
-      modelNumber: "TW24HXCA5DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw12hxca5ao",
       modelNumber: "TW12HXCA5AO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hxca5do",
-      modelNumber: "TW18HXCA5DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tud24w-a-d-u",
-      modelNumber: "TUD24W/A-D(U)",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-gwh24qexf-d3dnd4d-o",
-      modelNumber: "GWH24QEXF-D3DND4D/O",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1139,12 +2600,6 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw24hc32a5do",
-      modelNumber: "TW24HC32A5DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-twh12at19a6ao",
       modelNumber: "TWH12AT19A6AO",
       brandId: "tosot",
@@ -1157,44 +2612,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-twh24at19d6do",
-      modelNumber: "TWH24AT19D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh09av29d6do",
-      modelNumber: "TWH09AV29D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-twh12av29d6do",
       modelNumber: "TWH12AV29D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tacci7h4r30",
-      modelNumber: "TACCI7H4R30",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tu36w-fdu",
-      modelNumber: "TU36W-FDU",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tu60w-fdu",
-      modelNumber: "TU60W-FDU",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw24wh19d6do",
-      modelNumber: "TW24WH19D6DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1211,12 +2630,6 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw30wh19d6do",
-      modelNumber: "TW30WH19D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-ts-12agr32od21l",
       modelNumber: "TS-12AGR32OD21L",
       brandId: "tosot",
@@ -1229,20 +2642,110 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-ts-24agr32od21",
-      modelNumber: "TS-24AGR32OD21",
+      id: "tosot-tw18hq2c2do",
+      modelNumber: "TW18HQ2C2DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
-      id: "tosot-ts-30agr32od21",
-      modelNumber: "TS-30AGR32OD21",
+      id: "tosot-tm18h4o",
+      modelNumber: "TM18H4O",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
-      id: "tosot-taw20-30h1b",
-      modelNumber: "TAW20-30H1B",
+      id: "tosot-tu18h3o",
+      modelNumber: "TU18H3O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18hq2a3do",
+      modelNumber: "TW18HQ2A3DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh18atdxd-d3dna3ao",
+      modelNumber: "TWH18ATDXD-D3DNA3AO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18hxca5do",
+      modelNumber: "TW18HXCA5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24hq2c2do",
+      modelNumber: "TW24HQ2C2DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24hq2a3do",
+      modelNumber: "TW24HQ2A3DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh24atexf-d3dna3eo",
+      modelNumber: "TWH24ATEXF-D3DNA3EO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24hxca5do",
+      modelNumber: "TW24HXCA5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-gwh24qexf-d3dnd4d-o",
+      modelNumber: "GWH24QEXF-D3DND4D/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tmvrf-36kuh",
+      modelNumber: "TMVRF-36KUH",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm36h4o",
+      modelNumber: "TM36H4O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm42h3o",
+      modelNumber: "TM42H3O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tu36h3o",
+      modelNumber: "TU36H3O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh36qf25b4do",
+      modelNumber: "TWH36QF25B4DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tud36w2-d-d-u",
+      modelNumber: "TUD36W2/D-D(U)",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tu36w-fdu",
+      modelNumber: "TU36W-FDU",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1265,14 +2768,92 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw30hxq2b2do",
-      modelNumber: "TW30HXQ2B2DO",
+      id: "tosot-tm24h4o",
+      modelNumber: "TM24H4O",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw36hxq2b2do",
-      modelNumber: "TW36HXQ2B2DO",
+      id: "tosot-tu24h3o",
+      modelNumber: "TU24H3O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tud24w2-d-d-u",
+      modelNumber: "TUD24W2/D-D(U)",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tud24w-a-d-u",
+      modelNumber: "TUD24W/A-D(U)",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24hc32a5do",
+      modelNumber: "TW24HC32A5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh24at19d6do",
+      modelNumber: "TWH24AT19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24wh19d6do",
+      modelNumber: "TW24WH19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-ts-24agr32od21",
+      modelNumber: "TS-24AGR32OD21",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm30h4o",
+      modelNumber: "TM30H4O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh30qf25b4do",
+      modelNumber: "TWH30QF25B4DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tud30w2-d-d-u",
+      modelNumber: "TUD30W2/D-D(U)",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tacci7h4r30",
+      modelNumber: "TACCI7H4R30",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw30wh19d6do",
+      modelNumber: "TW30WH19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-ts-30agr32od21",
+      modelNumber: "TS-30AGR32OD21",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-taw20-30h1b",
+      modelNumber: "TAW20-30H1B",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1307,6 +2888,18 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tu24-32wedu",
+      modelNumber: "TU24-32WEDU",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tu24w-edu",
+      modelNumber: "TU24W-EDU",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tu60-24wadu",
       modelNumber: "TU60-24WADU",
       brandId: "tosot",
@@ -1319,26 +2912,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-hp-a36-o",
-      modelNumber: "HP-A36/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-hp-a60-o",
       modelNumber: "HP-A60/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tu24-32wedu",
-      modelNumber: "TU24-32WEDU",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tu36-32wedu",
-      modelNumber: "TU36-32WEDU",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1355,18 +2930,6 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tu24w-edu",
-      modelNumber: "TU24W-EDU",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tu36w-edu",
-      modelNumber: "TU36W-EDU",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tu48w-edu",
       modelNumber: "TU48W-EDU",
       brandId: "tosot",
@@ -1375,6 +2938,24 @@ export const tosotDataset: BrandDataset = {
     {
       id: "tosot-tu60w-edu",
       modelNumber: "TU60W-EDU",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-hp-a36-o",
+      modelNumber: "HP-A36/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tu36-32wedu",
+      modelNumber: "TU36-32WEDU",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tu36w-edu",
+      modelNumber: "TU36W-EDU",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1397,12 +2978,6 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw12hxca5do",
-      modelNumber: "TW12HXCA5DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw09hxca5ao",
       modelNumber: "TW09HXCA5AO",
       brandId: "tosot",
@@ -1417,24 +2992,6 @@ export const tosotDataset: BrandDataset = {
     {
       id: "tosot-tw09hc32a5do",
       modelNumber: "TW09HC32A5DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hc32a5do",
-      modelNumber: "TW18HC32A5DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw36hc32a5do",
-      modelNumber: "TW36HC32A5DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh36ate19r32a3do",
-      modelNumber: "TWH36ATE19R32A3DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1463,66 +3020,6 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw12hc32a5aoc",
-      modelNumber: "TW12HC32A5AOC",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw12hc32a5doc",
-      modelNumber: "TW12HC32A5DOC",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh18at19d6do",
-      modelNumber: "TWH18AT19D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hc32a5doc",
-      modelNumber: "TW18HC32A5DOC",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw24hc32a5doc",
-      modelNumber: "TW24HC32A5DOC",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-su-cosmo36-230-o",
-      modelNumber: "SU-COSMO36-230/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-su-cosmo30-230-o",
-      modelNumber: "SU-COSMO30-230/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tacci7h4r36",
-      modelNumber: "TACCI7H4R36",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh36at19d6do",
-      modelNumber: "TWH36AT19D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh30at19d6do",
-      modelNumber: "TWH30AT19D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw09wh19d6do",
       modelNumber: "TW09WH19D6DO",
       brandId: "tosot",
@@ -1531,18 +3028,6 @@ export const tosotDataset: BrandDataset = {
     {
       id: "tosot-tw09wh19d6ao",
       modelNumber: "TW09WH19D6AO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw36wh19d6do",
-      modelNumber: "TW36WH19D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18wh19d6do",
-      modelNumber: "TW18WH19D6DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1559,44 +3044,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-ts-18agr32od21",
-      modelNumber: "TS-18AGR32OD21",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-ts-36agr32od21",
-      modelNumber: "TS-36AGR32OD21",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-twh09ag25a2ao",
       modelNumber: "TWH09AG25A2AO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh12ag25a2ao",
-      modelNumber: "TWH12AG25A2AO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh12ag25a2do",
-      modelNumber: "TWH12AG25A2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh24ag25a2do",
-      modelNumber: "TWH24AG25A2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-twh18ag25a2do",
-      modelNumber: "TWH18AG25A2DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1607,38 +3056,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw12hxp2a1ao",
-      modelNumber: "TW12HXP2A1AO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw09hxp2a1do",
       modelNumber: "TW09HXP2A1DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw12hxp2a1do",
-      modelNumber: "TW12HXP2A1DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hxp2a1do",
-      modelNumber: "TW18HXP2A1DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw24hxp2a1do",
-      modelNumber: "TW24HXP2A1DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw12hp2aido",
-      modelNumber: "TW12HP2AIDO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1651,18 +3070,6 @@ export const tosotDataset: BrandDataset = {
     {
       id: "tosot-tw09hp32a2do",
       modelNumber: "TW09HP32A2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hp32a2do",
-      modelNumber: "TW18HP32A2DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw24hp32a2do",
-      modelNumber: "TW24HP32A2DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1685,8 +3092,50 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-twh18ag25d6do",
-      modelNumber: "TWH18AG25D6DO",
+      id: "tosot-twh12ag25a2ao",
+      modelNumber: "TWH12AG25A2AO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh12ag25a2do",
+      modelNumber: "TWH12AG25A2DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hxp2a1ao",
+      modelNumber: "TW12HXP2A1AO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hxp2a1do",
+      modelNumber: "TW12HXP2A1DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hp2aido",
+      modelNumber: "TW12HP2AIDO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh24ag25a2do",
+      modelNumber: "TWH24AG25A2DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24hxp2a1do",
+      modelNumber: "TW24HXP2A1DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24hp32a2do",
+      modelNumber: "TW24HP32A2DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1703,32 +3152,74 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-twh18ag25a2do",
+      modelNumber: "TWH18AG25A2DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18hxp2a1do",
+      modelNumber: "TW18HXP2A1DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18hp32a2do",
+      modelNumber: "TW18HP32A2DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh18ag25d6do",
+      modelNumber: "TWH18AG25D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tud42w2-d-d-u",
+      modelNumber: "TUD42W2/D-D(U)",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tud48w2-d-d-u",
+      modelNumber: "TUD48W2/D-D(U)",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tud60w2-d-d-u",
+      modelNumber: "TUD60W2/D-D(U)",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tu60w-fdu",
+      modelNumber: "TU60W-FDU",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hxca5do",
+      modelNumber: "TW12HXCA5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hc32a5aoc",
+      modelNumber: "TW12HC32A5AOC",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hc32a5doc",
+      modelNumber: "TW12HC32A5DOC",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tm18hx4o",
       modelNumber: "TM18HX4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm24hx4o",
-      modelNumber: "TM24HX4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm30hx4o",
-      modelNumber: "TM30HX4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm36hx4o",
-      modelNumber: "TM36HX4O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm42hx4o",
-      modelNumber: "TM42HX4O",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1739,50 +3230,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tm24hmo",
-      modelNumber: "TM24HMO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm30hmo",
-      modelNumber: "TM30HMO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm36hmo",
-      modelNumber: "TM36HMO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm42hmo",
-      modelNumber: "TM42HMO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tm18hpo",
       modelNumber: "TM18HPO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-mz-m36-o",
-      modelNumber: "MZ-M36/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-mz-m30-o",
-      modelNumber: "MZ-M30/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-mz-m24-o",
-      modelNumber: "MZ-M24/O",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1799,32 +3248,8 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tm42h32mo",
-      modelNumber: "TM42H32MO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-mz-cosmo18-o",
       modelNumber: "MZ-COSMO18/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-mz-cosmo24-o",
-      modelNumber: "MZ-COSMO24/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-mz-cosmo30-o",
-      modelNumber: "MZ-COSMO30/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-mz-cosmo36-o",
-      modelNumber: "MZ-COSMO36/O",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1835,8 +3260,56 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tm24hx4o",
+      modelNumber: "TM24HX4O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm24hmo",
+      modelNumber: "TM24HMO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-mz-m24-o",
+      modelNumber: "MZ-M24/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-mz-cosmo24-o",
+      modelNumber: "MZ-COSMO24/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tmsci7h4r24",
       modelNumber: "TMSCI7H4R24",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm30hx4o",
+      modelNumber: "TM30HX4O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm30hmo",
+      modelNumber: "TM30HMO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-mz-m30-o",
+      modelNumber: "MZ-M30/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-mz-cosmo30-o",
+      modelNumber: "MZ-COSMO30/O",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1847,38 +3320,56 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tm36hx4o",
+      modelNumber: "TM36HX4O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm42hx4o",
+      modelNumber: "TM42HX4O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm36hmo",
+      modelNumber: "TM36HMO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm42hmo",
+      modelNumber: "TM42HMO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-mz-m36-o",
+      modelNumber: "MZ-M36/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-mz-cosmo36-o",
+      modelNumber: "MZ-COSMO36/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tmsci7h4r36",
       modelNumber: "TMSCI7H4R36",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
-      id: "tosot-tmsci7h4r42",
-      modelNumber: "TMSCI7H4R42",
+      id: "tosot-tw30hxq2b2do",
+      modelNumber: "TW30HXQ2B2DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
-      id: "tosot-tmsci7h4r48",
-      modelNumber: "TMSCI7H4R48",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm48h32mo",
-      modelNumber: "TM48H32MO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tavci7h4r12",
-      modelNumber: "TAVCI7H4R12",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw30hc32a5do",
-      modelNumber: "TW30HC32A5DO",
+      id: "tosot-tw36hxq2b2do",
+      modelNumber: "TW36HXQ2B2DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1949,8 +3440,50 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tm42h32mo",
+      modelNumber: "TM42H32MO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tmsci7h4r42",
+      modelNumber: "TMSCI7H4R42",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tw24hcl32a5do",
       modelNumber: "TW24HCL32A5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tavci7h4r24",
+      modelNumber: "TAVCI7H4R24",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-su-aoraki24-230-o",
+      modelNumber: "SU-AORAKI24-230/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24wh25a1do",
+      modelNumber: "TW24WH25A1DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw09wh25a1ao",
+      modelNumber: "TW09WH25A1AO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw09wh25a1do",
+      modelNumber: "TW09WH25A1DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -1991,42 +3524,6 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw18hp32a2doc",
-      modelNumber: "TW18HP32A2DOC",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tavci7h4r24",
-      modelNumber: "TAVCI7H4R24",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tavci7h4r18",
-      modelNumber: "TAVCI7H4R18",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-su-aoraki24-230-o",
-      modelNumber: "SU-AORAKI24-230/O",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw09wh25a1ao",
-      modelNumber: "TW09WH25A1AO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw09wh25a1do",
-      modelNumber: "TW09WH25A1DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw12wh25a1do",
       modelNumber: "TW12WH25A1DO",
       brandId: "tosot",
@@ -2039,14 +3536,20 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw18wh25a1do",
-      modelNumber: "TW18WH25A1DO",
+      id: "tosot-tw18hp32a2doc",
+      modelNumber: "TW18HP32A2DOC",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw24wh25a1do",
-      modelNumber: "TW24WH25A1DO",
+      id: "tosot-tavci7h4r18",
+      modelNumber: "TAVCI7H4R18",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18wh25a1do",
+      modelNumber: "TW18WH25A1DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -2059,12 +3562,6 @@ export const tosotDataset: BrandDataset = {
     {
       id: "tosot-tw09hay32a1doc",
       modelNumber: "TW09HAY32A1DOC",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw12hay32a1doc",
-      modelNumber: "TW12HAY32A1DOC",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -2087,18 +3584,6 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tw18hay32a1do",
-      modelNumber: "TW18HAY32A1DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw18hay32a1doc",
-      modelNumber: "TW18HAY32A1DOC",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw24hay32a1doc",
       modelNumber: "TW24HAY32A1DOC",
       brandId: "tosot",
@@ -2111,26 +3596,26 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-twh18av29d6do",
-      modelNumber: "TWH18AV29D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw09wh29d6do",
-      modelNumber: "TW09WH29D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tw12wh29d6do",
-      modelNumber: "TW12WH29D6DO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tw24wh29d6do",
       modelNumber: "TW24WH29D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18hay32a1do",
+      modelNumber: "TW18HAY32A1DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18hay32a1doc",
+      modelNumber: "TW18HAY32A1DOC",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh18av29d6do",
+      modelNumber: "TWH18AV29D6DO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -2141,38 +3626,92 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tw18hc32a5do",
+      modelNumber: "TW18HC32A5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh18at19d6do",
+      modelNumber: "TWH18AT19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18hc32a5doc",
+      modelNumber: "TW18HC32A5DOC",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw18wh19d6do",
+      modelNumber: "TW18WH19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-ts-18agr32od21",
+      modelNumber: "TS-18AGR32OD21",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw36hc32a5do",
+      modelNumber: "TW36HC32A5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh36ate19r32a3do",
+      modelNumber: "TWH36ATE19R32A3DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-su-cosmo36-230-o",
+      modelNumber: "SU-COSMO36-230/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tacci7h4r36",
+      modelNumber: "TACCI7H4R36",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh36at19d6do",
+      modelNumber: "TWH36AT19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw36wh19d6do",
+      modelNumber: "TW36WH19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-ts-36agr32od21",
+      modelNumber: "TS-36AGR32OD21",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12hay32a1doc",
+      modelNumber: "TW12HAY32A1DOC",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw24hc32a5doc",
+      modelNumber: "TW24HC32A5DOC",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tm18d6mo",
       modelNumber: "TM18D6MO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm24d6mo",
-      modelNumber: "TM24D6MO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm30d6mo",
-      modelNumber: "TM30D6MO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm36d6mo",
-      modelNumber: "TM36D6MO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm42d6mo",
-      modelNumber: "TM42D6MO",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
-      id: "tosot-tm48d6mo",
-      modelNumber: "TM48D6MO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -2183,8 +3722,20 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tm24d6mo",
+      modelNumber: "TM24D6MO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tm24wh21mo",
       modelNumber: "TM24WH21MO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm30d6mo",
+      modelNumber: "TM30D6MO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -2195,14 +3746,44 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tm36d6mo",
+      modelNumber: "TM36D6MO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tm36wh21mo",
       modelNumber: "TM36WH21MO",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
+      id: "tosot-tm42d6mo",
+      modelNumber: "TM42D6MO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tm42wh21mo",
       modelNumber: "TM42WH21MO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-su-cosmo30-230-o",
+      modelNumber: "SU-COSMO30-230/O",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-twh30at19d6do",
+      modelNumber: "TWH30AT19D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm48d6mo",
+      modelNumber: "TM48D6MO",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -2225,20 +3806,38 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "tosot-tu60w-gdu",
-      modelNumber: "TU60W-GDU",
-      brandId: "tosot",
-      refrigerant: null as any,
-    },
-    {
       id: "tosot-tu36-32gdu",
       modelNumber: "TU36-32GDU",
       brandId: "tosot",
       refrigerant: null as any,
     },
     {
+      id: "tosot-tu60w-gdu",
+      modelNumber: "TU60W-GDU",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-tu60-32gdu",
       modelNumber: "TU60-32GDU",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tmsci7h4r48",
+      modelNumber: "TMSCI7H4R48",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tm48h32mo",
+      modelNumber: "TM48H32MO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tavci7h4r12",
+      modelNumber: "TAVCI7H4R12",
       brandId: "tosot",
       refrigerant: null as any,
     },
@@ -2273,6 +3872,18 @@ export const tosotDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tosot-tw09wh29d6do",
+      modelNumber: "TW09WH29D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw12wh29d6do",
+      modelNumber: "TW12WH29D6DO",
+      brandId: "tosot",
+      refrigerant: null as any,
+    },
+    {
       id: "tosot-hp-ua36-o",
       modelNumber: "HP-UA36/O",
       brandId: "tosot",
@@ -2283,6 +3894,12 @@ export const tosotDataset: BrandDataset = {
       modelNumber: "HP-UA60/O",
       brandId: "tosot",
       refrigerant: null as any,
+    },
+    {
+      id: "tosot-tw30hc32a5do",
+      modelNumber: "TW30HC32A5DO",
+      brandId: "tosot",
+      refrigerant: null as any,
     }
   ],
   indoorUnits: [
@@ -2290,9 +3907,9 @@ export const tosotDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "tosot-standard-wall-single-cfg-1",
-      slug: "tosot-standard-wall-single-cfg-1",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-9000-cfg-1",
+      slug: "tosot-standard-wall-single-9000-cfg-1",
+      modelId: "tosot-standard-wall-single-9000",
       outdoorUnitId: "tosot-tw09hq2c2do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2304,65 +3921,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-2",
-      slug: "tosot-standard-wall-single-cfg-2",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw12hq2c2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-3",
-      slug: "tosot-standard-wall-single-cfg-3",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw18hq2c2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-4",
-      slug: "tosot-standard-wall-single-cfg-4",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw24hq2c2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-5",
-      slug: "tosot-standard-wall-single-cfg-5",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tmvrf-36kuh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-6",
-      slug: "tosot-standard-wall-single-cfg-6",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-9000-cfg-2",
+      slug: "tosot-standard-wall-single-9000-cfg-2",
+      modelId: "tosot-standard-wall-single-9000",
       outdoorUnitId: "tosot-tw09hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2374,107 +3935,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-7",
-      slug: "tosot-standard-wall-single-cfg-7",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tm18h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-8",
-      slug: "tosot-standard-wall-single-cfg-8",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tm24h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-9",
-      slug: "tosot-standard-wall-single-cfg-9",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tm30h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-10",
-      slug: "tosot-standard-wall-single-cfg-10",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tm36h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-11",
-      slug: "tosot-standard-wall-single-cfg-11",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tm42h3o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 39000,
-      coolingCapacityMaxBtu: 39000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-12",
-      slug: "tosot-standard-wall-single-cfg-12",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tu18h3o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17100,
-      coolingCapacityMaxBtu: 17100,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-13",
-      slug: "tosot-standard-wall-single-cfg-13",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tu24h3o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23800,
-      coolingCapacityMaxBtu: 23800,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-14",
-      slug: "tosot-standard-wall-single-cfg-14",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-9000-cfg-3",
+      slug: "tosot-standard-wall-single-9000-cfg-3",
+      modelId: "tosot-standard-wall-single-9000",
       outdoorUnitId: "tosot-tw09hq2c2ao-wifi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2486,23 +3949,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-15",
-      slug: "tosot-standard-wall-single-cfg-15",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tu36h3o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-16",
-      slug: "tosot-standard-wall-single-cfg-16",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-9000-cfg-4",
+      slug: "tosot-standard-wall-single-9000-cfg-4",
+      modelId: "tosot-standard-wall-single-9000",
       outdoorUnitId: "tosot-tw09hq2a3do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2514,107 +3963,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-17",
-      slug: "tosot-standard-wall-single-cfg-17",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw12hq2a3do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-18",
-      slug: "tosot-standard-wall-single-cfg-18",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw18hq2a3do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-19",
-      slug: "tosot-standard-wall-single-cfg-19",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw24hq2a3do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-20",
-      slug: "tosot-standard-wall-single-cfg-20",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh12atcxb-d3dna3co",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-21",
-      slug: "tosot-standard-wall-single-cfg-21",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh12atcxb-a3dna3co",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-22",
-      slug: "tosot-standard-wall-single-cfg-22",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh18atdxd-d3dna3ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17600,
-      coolingCapacityMaxBtu: 17600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-23",
-      slug: "tosot-standard-wall-single-cfg-23",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh24atexf-d3dna3eo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-24",
-      slug: "tosot-standard-wall-single-cfg-24",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-9000-cfg-5",
+      slug: "tosot-standard-wall-single-9000-cfg-5",
+      modelId: "tosot-standard-wall-single-9000",
       outdoorUnitId: "tosot-twh09ag25a2do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -2626,275 +3977,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-25",
-      slug: "tosot-standard-wall-single-cfg-25",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh30qf25b4do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-26",
-      slug: "tosot-standard-wall-single-cfg-26",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh36qf25b4do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-27",
-      slug: "tosot-standard-wall-single-cfg-27",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tud24w2-d-d-u",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-28",
-      slug: "tosot-standard-wall-single-cfg-28",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tud30w2-d-d-u",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28600,
-      coolingCapacityMaxBtu: 28600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-29",
-      slug: "tosot-standard-wall-single-cfg-29",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tud36w2-d-d-u",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-30",
-      slug: "tosot-standard-wall-single-cfg-30",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tud42w2-d-d-u",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 40000,
-      coolingCapacityMaxBtu: 40000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-31",
-      slug: "tosot-standard-wall-single-cfg-31",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tud48w2-d-d-u",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-32",
-      slug: "tosot-standard-wall-single-cfg-32",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tud60w2-d-d-u",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-33",
-      slug: "tosot-standard-wall-single-cfg-33",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw24hxca5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-34",
-      slug: "tosot-standard-wall-single-cfg-34",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw12hxca5ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-35",
-      slug: "tosot-standard-wall-single-cfg-35",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw18hxca5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17600,
-      coolingCapacityMaxBtu: 17600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-36",
-      slug: "tosot-standard-wall-single-cfg-36",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tud24w-a-d-u",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-37",
-      slug: "tosot-standard-wall-single-cfg-37",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-gwh24qexf-d3dnd4d-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-38",
-      slug: "tosot-standard-wall-single-cfg-38",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw12hc32a5ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-39",
-      slug: "tosot-standard-wall-single-cfg-39",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw12hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-40",
-      slug: "tosot-standard-wall-single-cfg-40",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw24hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-41",
-      slug: "tosot-standard-wall-single-cfg-41",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh12at19a6ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-42",
-      slug: "tosot-standard-wall-single-cfg-42",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh12at19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-43",
-      slug: "tosot-standard-wall-single-cfg-43",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-twh24at19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-44",
-      slug: "tosot-standard-wall-single-cfg-44",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-9000-cfg-6",
+      slug: "tosot-standard-wall-single-9000-cfg-6",
+      modelId: "tosot-standard-wall-single-9000",
       outdoorUnitId: "tosot-twh09av29d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -2906,9 +3991,135 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-45",
-      slug: "tosot-standard-wall-single-cfg-45",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-12000-cfg-1",
+      slug: "tosot-standard-wall-single-12000-cfg-1",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hq2c2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-2",
+      slug: "tosot-standard-wall-single-12000-cfg-2",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hq2a3do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-3",
+      slug: "tosot-standard-wall-single-12000-cfg-3",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-twh12atcxb-d3dna3co",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-4",
+      slug: "tosot-standard-wall-single-12000-cfg-4",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-twh12atcxb-a3dna3co",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-5",
+      slug: "tosot-standard-wall-single-12000-cfg-5",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hxca5ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-6",
+      slug: "tosot-standard-wall-single-12000-cfg-6",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hc32a5ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-7",
+      slug: "tosot-standard-wall-single-12000-cfg-7",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-8",
+      slug: "tosot-standard-wall-single-12000-cfg-8",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-twh12at19a6ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-9",
+      slug: "tosot-standard-wall-single-12000-cfg-9",
+      modelId: "tosot-standard-wall-single-12000",
+      outdoorUnitId: "tosot-twh12at19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-12000-cfg-10",
+      slug: "tosot-standard-wall-single-12000-cfg-10",
+      modelId: "tosot-standard-wall-single-12000",
       outdoorUnitId: "tosot-twh12av29d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2920,121 +4131,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-46",
-      slug: "tosot-standard-wall-single-cfg-46",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tacci7h4r30",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-47",
-      slug: "tosot-standard-wall-single-cfg-47",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tacci7h4r30",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-48",
-      slug: "tosot-standard-wall-single-cfg-48",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tacci7h4r30",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-49",
-      slug: "tosot-standard-wall-single-cfg-49",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tu36w-fdu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-50",
-      slug: "tosot-standard-wall-single-cfg-50",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tu36w-fdu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-51",
-      slug: "tosot-standard-wall-single-cfg-51",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tu60w-fdu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-52",
-      slug: "tosot-standard-wall-single-cfg-52",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tu60w-fdu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-53",
-      slug: "tosot-standard-wall-single-cfg-53",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw24wh19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-54",
-      slug: "tosot-standard-wall-single-cfg-54",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-12000-cfg-11",
+      slug: "tosot-standard-wall-single-12000-cfg-11",
+      modelId: "tosot-standard-wall-single-12000",
       outdoorUnitId: "tosot-tw12wh19d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3046,9 +4145,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-55",
-      slug: "tosot-standard-wall-single-cfg-55",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-12000-cfg-12",
+      slug: "tosot-standard-wall-single-12000-cfg-12",
+      modelId: "tosot-standard-wall-single-12000",
       outdoorUnitId: "tosot-tw12wh19d6ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3060,23 +4159,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-56",
-      slug: "tosot-standard-wall-single-cfg-56",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-tw30wh19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-standard-wall-single-cfg-57",
-      slug: "tosot-standard-wall-single-cfg-57",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-12000-cfg-13",
+      slug: "tosot-standard-wall-single-12000-cfg-13",
+      modelId: "tosot-standard-wall-single-12000",
       outdoorUnitId: "tosot-ts-12agr32od21l",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3088,9 +4173,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-58",
-      slug: "tosot-standard-wall-single-cfg-58",
-      modelId: "tosot-standard-wall-single",
+      id: "tosot-standard-wall-single-12000-cfg-14",
+      slug: "tosot-standard-wall-single-12000-cfg-14",
+      modelId: "tosot-standard-wall-single-12000",
       outdoorUnitId: "tosot-ts-12agr32od21",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3102,13 +4187,13 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-59",
-      slug: "tosot-standard-wall-single-cfg-59",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-ts-24agr32od21",
+      id: "tosot-standard-wall-single-18000-cfg-1",
+      slug: "tosot-standard-wall-single-18000-cfg-1",
+      modelId: "tosot-standard-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hq2c2do",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -3116,13 +4201,13 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-60",
-      slug: "tosot-standard-wall-single-cfg-60",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-ts-30agr32od21",
+      id: "tosot-standard-wall-single-18000-cfg-2",
+      slug: "tosot-standard-wall-single-18000-cfg-2",
+      modelId: "tosot-standard-wall-single-18000",
+      outdoorUnitId: "tosot-tm18h4o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -3130,13 +4215,13 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-standard-wall-single-cfg-61",
-      slug: "tosot-standard-wall-single-cfg-61",
-      modelId: "tosot-standard-wall-single",
-      outdoorUnitId: "tosot-taw20-30h1b",
+      id: "tosot-standard-wall-single-18000-cfg-3",
+      slug: "tosot-standard-wall-single-18000-cfg-3",
+      modelId: "tosot-standard-wall-single-18000",
+      outdoorUnitId: "tosot-tu18h3o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
+      coolingCapacityMinBtu: 17100,
+      coolingCapacityMaxBtu: 17100,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -3144,9 +4229,219 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-lomo-wall-single-cfg-1",
-      slug: "tosot-lomo-wall-single-cfg-1",
-      modelId: "tosot-lomo-wall-single",
+      id: "tosot-standard-wall-single-18000-cfg-4",
+      slug: "tosot-standard-wall-single-18000-cfg-4",
+      modelId: "tosot-standard-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hq2a3do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-18000-cfg-5",
+      slug: "tosot-standard-wall-single-18000-cfg-5",
+      modelId: "tosot-standard-wall-single-18000",
+      outdoorUnitId: "tosot-twh18atdxd-d3dna3ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17600,
+      coolingCapacityMaxBtu: 17600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-18000-cfg-6",
+      slug: "tosot-standard-wall-single-18000-cfg-6",
+      modelId: "tosot-standard-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hxca5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17600,
+      coolingCapacityMaxBtu: 17600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-20000-cfg-1",
+      slug: "tosot-standard-wall-single-20000-cfg-1",
+      modelId: "tosot-standard-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hq2c2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-20000-cfg-2",
+      slug: "tosot-standard-wall-single-20000-cfg-2",
+      modelId: "tosot-standard-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hq2a3do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-20000-cfg-3",
+      slug: "tosot-standard-wall-single-20000-cfg-3",
+      modelId: "tosot-standard-wall-single-20000",
+      outdoorUnitId: "tosot-twh24atexf-d3dna3eo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-20000-cfg-4",
+      slug: "tosot-standard-wall-single-20000-cfg-4",
+      modelId: "tosot-standard-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hxca5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-20000-cfg-5",
+      slug: "tosot-standard-wall-single-20000-cfg-5",
+      modelId: "tosot-standard-wall-single-20000",
+      outdoorUnitId: "tosot-gwh24qexf-d3dnd4d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000-cfg-1",
+      slug: "tosot-standard-wall-single-36000-cfg-1",
+      modelId: "tosot-standard-wall-single-36000",
+      outdoorUnitId: "tosot-tmvrf-36kuh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000-cfg-2",
+      slug: "tosot-standard-wall-single-36000-cfg-2",
+      modelId: "tosot-standard-wall-single-36000",
+      outdoorUnitId: "tosot-tm36h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000-cfg-3",
+      slug: "tosot-standard-wall-single-36000-cfg-3",
+      modelId: "tosot-standard-wall-single-36000",
+      outdoorUnitId: "tosot-tm42h3o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 39000,
+      coolingCapacityMaxBtu: 39000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000-cfg-4",
+      slug: "tosot-standard-wall-single-36000-cfg-4",
+      modelId: "tosot-standard-wall-single-36000",
+      outdoorUnitId: "tosot-tu36h3o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000-cfg-5",
+      slug: "tosot-standard-wall-single-36000-cfg-5",
+      modelId: "tosot-standard-wall-single-36000",
+      outdoorUnitId: "tosot-twh36qf25b4do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000-cfg-6",
+      slug: "tosot-standard-wall-single-36000-cfg-6",
+      modelId: "tosot-standard-wall-single-36000",
+      outdoorUnitId: "tosot-tud36w2-d-d-u",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-36000-cfg-7",
+      slug: "tosot-standard-wall-single-36000-cfg-7",
+      modelId: "tosot-standard-wall-single-36000",
+      outdoorUnitId: "tosot-tu36w-fdu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-lomo-wall-single-12000-cfg-1",
+      slug: "tosot-lomo-wall-single-12000-cfg-1",
+      modelId: "tosot-lomo-wall-single-12000",
       outdoorUnitId: "tosot-tw12hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3158,9 +4453,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-lomo-wall-single-cfg-2",
-      slug: "tosot-lomo-wall-single-cfg-2",
-      modelId: "tosot-lomo-wall-single",
+      id: "tosot-lomo-wall-single-18000-cfg-1",
+      slug: "tosot-lomo-wall-single-18000-cfg-1",
+      modelId: "tosot-lomo-wall-single-18000",
       outdoorUnitId: "tosot-tw18hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3172,9 +4467,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-lomo-wall-single-cfg-3",
-      slug: "tosot-lomo-wall-single-cfg-3",
-      modelId: "tosot-lomo-wall-single",
+      id: "tosot-lomo-wall-single-20000-cfg-1",
+      slug: "tosot-lomo-wall-single-20000-cfg-1",
+      modelId: "tosot-lomo-wall-single-20000",
       outdoorUnitId: "tosot-tw24hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -3186,37 +4481,261 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-lomo-wall-single-cfg-4",
-      slug: "tosot-lomo-wall-single-cfg-4",
-      modelId: "tosot-lomo-wall-single",
-      outdoorUnitId: "tosot-tw30hxq2b2do",
+      id: "tosot-standard-wall-single-24000-cfg-1",
+      slug: "tosot-standard-wall-single-24000-cfg-1",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-tm24h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-2",
+      slug: "tosot-standard-wall-single-24000-cfg-2",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-tu24h3o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23800,
+      coolingCapacityMaxBtu: 23800,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-3",
+      slug: "tosot-standard-wall-single-24000-cfg-3",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-tud24w2-d-d-u",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-4",
+      slug: "tosot-standard-wall-single-24000-cfg-4",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-tud24w-a-d-u",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-5",
+      slug: "tosot-standard-wall-single-24000-cfg-5",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-tw24hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-6",
+      slug: "tosot-standard-wall-single-24000-cfg-6",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-twh24at19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-7",
+      slug: "tosot-standard-wall-single-24000-cfg-7",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-tu36w-fdu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-8",
+      slug: "tosot-standard-wall-single-24000-cfg-8",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-tw24wh19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-24000-cfg-9",
+      slug: "tosot-standard-wall-single-24000-cfg-9",
+      modelId: "tosot-standard-wall-single-24000",
+      outdoorUnitId: "tosot-ts-24agr32od21",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000-cfg-1",
+      slug: "tosot-standard-wall-single-30000-cfg-1",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-tm30h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000-cfg-2",
+      slug: "tosot-standard-wall-single-30000-cfg-2",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-twh30qf25b4do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-lomo-wall-single-cfg-5",
-      slug: "tosot-lomo-wall-single-cfg-5",
-      modelId: "tosot-lomo-wall-single",
-      outdoorUnitId: "tosot-tw36hxq2b2do",
+      id: "tosot-standard-wall-single-30000-cfg-3",
+      slug: "tosot-standard-wall-single-30000-cfg-3",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-tud30w2-d-d-u",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 28600,
+      coolingCapacityMaxBtu: 28600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-j-series-wall-single-cfg-1",
-      slug: "tosot-j-series-wall-single-cfg-1",
-      modelId: "tosot-j-series-wall-single",
+      id: "tosot-standard-wall-single-30000-cfg-4",
+      slug: "tosot-standard-wall-single-30000-cfg-4",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-tacci7h4r30",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000-cfg-5",
+      slug: "tosot-standard-wall-single-30000-cfg-5",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-tacci7h4r30",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000-cfg-6",
+      slug: "tosot-standard-wall-single-30000-cfg-6",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-tacci7h4r30",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000-cfg-7",
+      slug: "tosot-standard-wall-single-30000-cfg-7",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-tw30wh19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000-cfg-8",
+      slug: "tosot-standard-wall-single-30000-cfg-8",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-ts-30agr32od21",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-30000-cfg-9",
+      slug: "tosot-standard-wall-single-30000-cfg-9",
+      modelId: "tosot-standard-wall-single-30000",
+      outdoorUnitId: "tosot-taw20-30h1b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-j-series-wall-single-18000-cfg-1",
+      slug: "tosot-j-series-wall-single-18000-cfg-1",
+      modelId: "tosot-j-series-wall-single-18000",
       outdoorUnitId: "tosot-tm18h5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3228,9 +4747,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-j-series-wall-single-cfg-2",
-      slug: "tosot-j-series-wall-single-cfg-2",
-      modelId: "tosot-j-series-wall-single",
+      id: "tosot-j-series-wall-single-20000-cfg-1",
+      slug: "tosot-j-series-wall-single-20000-cfg-1",
+      modelId: "tosot-j-series-wall-single-20000",
       outdoorUnitId: "tosot-tm24h5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -3242,9 +4761,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-j-series-wall-single-cfg-3",
-      slug: "tosot-j-series-wall-single-cfg-3",
-      modelId: "tosot-j-series-wall-single",
+      id: "tosot-j-series-wall-single-36000-cfg-1",
+      slug: "tosot-j-series-wall-single-36000-cfg-1",
+      modelId: "tosot-j-series-wall-single-36000",
       outdoorUnitId: "tosot-tm36h5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3256,9 +4775,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-j-series-wall-single-cfg-4",
-      slug: "tosot-j-series-wall-single-cfg-4",
-      modelId: "tosot-j-series-wall-single",
+      id: "tosot-j-series-wall-single-42000-cfg-1",
+      slug: "tosot-j-series-wall-single-42000-cfg-1",
+      modelId: "tosot-j-series-wall-single-42000",
       outdoorUnitId: "tosot-tm42h5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -3270,9 +4789,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-1",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-1",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-1",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-1",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3284,37 +4803,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-2",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-2",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-3",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-3",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-4",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-4",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-2",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-2",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3326,37 +4817,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-5",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-5",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-6",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-6",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-7",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-7",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-3",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-3",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3368,79 +4831,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-8",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-8",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-9",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-9",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-10",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-10",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-11",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-11",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-12",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-12",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-13",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-13",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-4",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-4",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3452,9 +4845,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-14",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-14",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-5",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-5",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3466,37 +4859,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-15",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-15",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-16",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-16",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-17",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-17",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-6",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-6",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3508,9 +4873,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-18",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-18",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-7",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-7",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3522,37 +4887,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-19",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-19",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-20",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-20",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-21",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-21",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-8",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-8",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3564,9 +4901,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-22",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-22",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-9",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-9",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3578,9 +4915,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-23",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-23",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-10",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-10",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3592,79 +4929,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-24",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-24",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-25",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-25",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-26",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-26",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-27",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-27",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-28",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-28",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-29",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-29",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-11",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-11",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3676,9 +4943,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-30",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-30",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-12",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-12",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3690,9 +4957,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-31",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-31",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-13",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-13",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3704,9 +4971,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-32",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-32",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-14",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-14",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3718,51 +4985,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-33",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-33",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-48wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-34",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-34",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-hp-a36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-35",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-35",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-hp-a60-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-36",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-36",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-15",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-15",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu24-32wedu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3774,51 +4999,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-37",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-37",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-32wedu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-38",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-38",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu48-32wedu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-39",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-39",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-32wedu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 18.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-40",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-40",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-16",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-16",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu24w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3830,23 +5013,569 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-41",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-41",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36w-edu",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-17",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-17",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-18",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-18",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-19",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-19",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-20",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-20",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-21",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-21",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-22",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-22",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-23",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-23",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-24",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-24",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-25",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-25",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-26",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-26",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-27",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-27",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-28",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-28",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-29",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-29",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-30",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-30",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-31",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-31",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-32",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-32",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-33",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-33",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-34",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-34",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-35",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-35",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "tosot-tu36-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-1",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-1",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-2",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-2",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-3",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-3",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-4",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-4",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-5",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-5",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-6",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-6",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-7",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-7",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-8",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-8",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-24wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-9",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-9",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-10",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-10",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-11",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-11",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-12",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-12",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-13",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-13",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-14",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-14",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-15",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-15",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-16",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-16",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-17",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-17",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-18",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-18",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-48wadu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-19",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-19",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-hp-a60-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-20",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-20",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu48-32wedu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
       hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-42",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-42",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-21",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-21",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-32wedu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 18.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-22",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-22",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "tosot-tu48w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -3858,9 +5587,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-43",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-43",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-23",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-23",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "tosot-tu60w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -3872,107 +5601,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-44",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-44",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-45",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-45",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-46",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-46",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-47",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-47",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-48",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-48",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-49",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-49",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36w-edu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-50",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-50",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36w-edu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-51",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-51",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-24",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-24",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "tosot-tu60w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -3984,9 +5615,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-52",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-52",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-25",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-25",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "tosot-tu60w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -3998,149 +5629,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-53",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-53",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-54",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-54",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-55",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-55",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-56",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-56",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-57",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-57",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-58",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-58",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-59",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-59",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-60",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-60",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-61",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-61",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-62",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-62",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-63",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-63",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-26",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-26",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "tosot-tu60-48wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -4152,9 +5643,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-64",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-64",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-27",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-27",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "tosot-tu60-48wadu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -4166,65 +5657,93 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-65",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-65",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-1",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-1",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-36000",
       outdoorUnitId: "tosot-tu36-24wadu",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-66",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-66",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-2",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-2",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-36000",
+      outdoorUnitId: "tosot-hp-a36-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-67",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-67",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-3",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-3",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-36000",
+      outdoorUnitId: "tosot-tu36-32wedu",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-flexx-high-efficiency-series-central-ducted-cfg-68",
-      slug: "tosot-flexx-high-efficiency-series-central-ducted-cfg-68",
-      modelId: "tosot-flexx-high-efficiency-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-24wadu",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-4",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-4",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-36000",
+      outdoorUnitId: "tosot-tu36w-edu",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-1",
-      slug: "tosot-charmo-wall-single-cfg-1",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-5",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-5",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-36000",
+      outdoorUnitId: "tosot-tu36w-edu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-6",
+      slug: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-6",
+      modelId: "tosot-flexx-high-efficiency-series-central-ducted-36000",
+      outdoorUnitId: "tosot-tu36w-edu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-9000-cfg-1",
+      slug: "tosot-charmo-wall-single-9000-cfg-1",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-twh09atcxb-d3dna3ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4236,9 +5755,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-2",
-      slug: "tosot-charmo-wall-single-cfg-2",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-2",
+      slug: "tosot-charmo-wall-single-9000-cfg-2",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-twh09atcxb-a3dna3ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4250,9 +5769,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-3",
-      slug: "tosot-charmo-wall-single-cfg-3",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-3",
+      slug: "tosot-charmo-wall-single-9000-cfg-3",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09hxca5do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4264,23 +5783,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-4",
-      slug: "tosot-charmo-wall-single-cfg-4",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw12hxca5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 17.5,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-5",
-      slug: "tosot-charmo-wall-single-cfg-5",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-4",
+      slug: "tosot-charmo-wall-single-9000-cfg-4",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09hxca5ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4292,9 +5797,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-6",
-      slug: "tosot-charmo-wall-single-cfg-6",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-5",
+      slug: "tosot-charmo-wall-single-9000-cfg-5",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09hc32a5ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4306,9 +5811,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-7",
-      slug: "tosot-charmo-wall-single-cfg-7",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-6",
+      slug: "tosot-charmo-wall-single-9000-cfg-6",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09hc32a5do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4320,51 +5825,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-8",
-      slug: "tosot-charmo-wall-single-cfg-8",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw18hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-9",
-      slug: "tosot-charmo-wall-single-cfg-9",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw36hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-10",
-      slug: "tosot-charmo-wall-single-cfg-10",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-twh36ate19r32a3do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-11",
-      slug: "tosot-charmo-wall-single-cfg-11",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-7",
+      slug: "tosot-charmo-wall-single-9000-cfg-7",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-twh09at19a6ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4376,9 +5839,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-12",
-      slug: "tosot-charmo-wall-single-cfg-12",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-8",
+      slug: "tosot-charmo-wall-single-9000-cfg-8",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09hc32a5aoc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4390,9 +5853,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-13",
-      slug: "tosot-charmo-wall-single-cfg-13",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-9",
+      slug: "tosot-charmo-wall-single-9000-cfg-9",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-twh09at19d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4404,9 +5867,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-14",
-      slug: "tosot-charmo-wall-single-cfg-14",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-10",
+      slug: "tosot-charmo-wall-single-9000-cfg-10",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09hc32a5doc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4418,205 +5881,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-15",
-      slug: "tosot-charmo-wall-single-cfg-15",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw12hc32a5aoc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-16",
-      slug: "tosot-charmo-wall-single-cfg-16",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw12hc32a5doc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-17",
-      slug: "tosot-charmo-wall-single-cfg-17",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-twh18at19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-18",
-      slug: "tosot-charmo-wall-single-cfg-18",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw18hc32a5doc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-19",
-      slug: "tosot-charmo-wall-single-cfg-19",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw24hc32a5doc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-20",
-      slug: "tosot-charmo-wall-single-cfg-20",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-su-cosmo36-230-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-21",
-      slug: "tosot-charmo-wall-single-cfg-21",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-su-cosmo30-230-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-22",
-      slug: "tosot-charmo-wall-single-cfg-22",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-su-cosmo36-230-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-23",
-      slug: "tosot-charmo-wall-single-cfg-23",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-su-cosmo36-230-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-24",
-      slug: "tosot-charmo-wall-single-cfg-24",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-su-cosmo36-230-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-25",
-      slug: "tosot-charmo-wall-single-cfg-25",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tacci7h4r36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-26",
-      slug: "tosot-charmo-wall-single-cfg-26",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tacci7h4r36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-27",
-      slug: "tosot-charmo-wall-single-cfg-27",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-twh36at19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-28",
-      slug: "tosot-charmo-wall-single-cfg-28",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-twh30at19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-29",
-      slug: "tosot-charmo-wall-single-cfg-29",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-11",
+      slug: "tosot-charmo-wall-single-9000-cfg-11",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09wh19d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4628,9 +5895,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-30",
-      slug: "tosot-charmo-wall-single-cfg-30",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-12",
+      slug: "tosot-charmo-wall-single-9000-cfg-12",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-tw09wh19d6ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4642,37 +5909,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-31",
-      slug: "tosot-charmo-wall-single-cfg-31",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw36wh19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-32",
-      slug: "tosot-charmo-wall-single-cfg-32",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-tw18wh19d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-33",
-      slug: "tosot-charmo-wall-single-cfg-33",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-13",
+      slug: "tosot-charmo-wall-single-9000-cfg-13",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-ts-09agr32od21l",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4684,9 +5923,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-34",
-      slug: "tosot-charmo-wall-single-cfg-34",
-      modelId: "tosot-charmo-wall-single",
+      id: "tosot-charmo-wall-single-9000-cfg-14",
+      slug: "tosot-charmo-wall-single-9000-cfg-14",
+      modelId: "tosot-charmo-wall-single-9000",
       outdoorUnitId: "tosot-ts-09agr32od21",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4698,37 +5937,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-charmo-wall-single-cfg-35",
-      slug: "tosot-charmo-wall-single-cfg-35",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-ts-18agr32od21",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-charmo-wall-single-cfg-36",
-      slug: "tosot-charmo-wall-single-cfg-36",
-      modelId: "tosot-charmo-wall-single",
-      outdoorUnitId: "tosot-ts-36agr32od21",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-1",
-      slug: "tosot-pular-wall-single-cfg-1",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-1",
+      slug: "tosot-pular-wall-single-9000-cfg-1",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-twh09ag25a2ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4740,65 +5951,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-2",
-      slug: "tosot-pular-wall-single-cfg-2",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-twh12ag25a2ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-3",
-      slug: "tosot-pular-wall-single-cfg-3",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-twh12ag25a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-4",
-      slug: "tosot-pular-wall-single-cfg-4",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-twh24ag25a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-5",
-      slug: "tosot-pular-wall-single-cfg-5",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-twh18ag25a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-6",
-      slug: "tosot-pular-wall-single-cfg-6",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-2",
+      slug: "tosot-pular-wall-single-9000-cfg-2",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-tw09hxp2a1ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4810,23 +5965,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-7",
-      slug: "tosot-pular-wall-single-cfg-7",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw12hxp2a1ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-8",
-      slug: "tosot-pular-wall-single-cfg-8",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-3",
+      slug: "tosot-pular-wall-single-9000-cfg-3",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-tw09hxp2a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4838,51 +5979,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-9",
-      slug: "tosot-pular-wall-single-cfg-9",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw12hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-10",
-      slug: "tosot-pular-wall-single-cfg-10",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw18hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-11",
-      slug: "tosot-pular-wall-single-cfg-11",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw24hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-12",
-      slug: "tosot-pular-wall-single-cfg-12",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-4",
+      slug: "tosot-pular-wall-single-9000-cfg-4",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-tw09hxp2a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4894,9 +5993,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-13",
-      slug: "tosot-pular-wall-single-cfg-13",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-5",
+      slug: "tosot-pular-wall-single-9000-cfg-5",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-tw09hxp2a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -4908,121 +6007,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-14",
-      slug: "tosot-pular-wall-single-cfg-14",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw12hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-15",
-      slug: "tosot-pular-wall-single-cfg-15",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw12hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-16",
-      slug: "tosot-pular-wall-single-cfg-16",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw12hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-17",
-      slug: "tosot-pular-wall-single-cfg-17",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw18hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-18",
-      slug: "tosot-pular-wall-single-cfg-18",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw24hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-19",
-      slug: "tosot-pular-wall-single-cfg-19",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw24hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-20",
-      slug: "tosot-pular-wall-single-cfg-20",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw24hxp2a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-21",
-      slug: "tosot-pular-wall-single-cfg-21",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw12hp2aido",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 21.5,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-22",
-      slug: "tosot-pular-wall-single-cfg-22",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-6",
+      slug: "tosot-pular-wall-single-9000-cfg-6",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-tw09hp32a2ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -5034,9 +6021,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-23",
-      slug: "tosot-pular-wall-single-cfg-23",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-7",
+      slug: "tosot-pular-wall-single-9000-cfg-7",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-tw09hp32a2do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -5048,37 +6035,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-24",
-      slug: "tosot-pular-wall-single-cfg-24",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw18hp32a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-25",
-      slug: "tosot-pular-wall-single-cfg-25",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-tw24hp32a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 26,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-pular-wall-single-cfg-26",
-      slug: "tosot-pular-wall-single-cfg-26",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-8",
+      slug: "tosot-pular-wall-single-9000-cfg-8",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-tw09hp32a2doc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -5090,9 +6049,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-27",
-      slug: "tosot-pular-wall-single-cfg-27",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-9",
+      slug: "tosot-pular-wall-single-9000-cfg-9",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-twh09ag25a6ao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -5104,9 +6063,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-28",
-      slug: "tosot-pular-wall-single-cfg-28",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-9000-cfg-10",
+      slug: "tosot-pular-wall-single-9000-cfg-10",
+      modelId: "tosot-pular-wall-single-9000",
       outdoorUnitId: "tosot-twh09ag25d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -5118,23 +6077,205 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-29",
-      slug: "tosot-pular-wall-single-cfg-29",
-      modelId: "tosot-pular-wall-single",
-      outdoorUnitId: "tosot-twh18ag25d6do",
+      id: "tosot-pular-wall-single-12000-cfg-1",
+      slug: "tosot-pular-wall-single-12000-cfg-1",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-twh12ag25a2ao",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-30",
-      slug: "tosot-pular-wall-single-cfg-30",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-12000-cfg-2",
+      slug: "tosot-pular-wall-single-12000-cfg-2",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-twh12ag25a2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-12000-cfg-3",
+      slug: "tosot-pular-wall-single-12000-cfg-3",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hxp2a1ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-12000-cfg-4",
+      slug: "tosot-pular-wall-single-12000-cfg-4",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-12000-cfg-5",
+      slug: "tosot-pular-wall-single-12000-cfg-5",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-12000-cfg-6",
+      slug: "tosot-pular-wall-single-12000-cfg-6",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-12000-cfg-7",
+      slug: "tosot-pular-wall-single-12000-cfg-7",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-12000-cfg-8",
+      slug: "tosot-pular-wall-single-12000-cfg-8",
+      modelId: "tosot-pular-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hp2aido",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21.5,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000-cfg-1",
+      slug: "tosot-pular-wall-single-20000-cfg-1",
+      modelId: "tosot-pular-wall-single-20000",
+      outdoorUnitId: "tosot-twh24ag25a2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000-cfg-2",
+      slug: "tosot-pular-wall-single-20000-cfg-2",
+      modelId: "tosot-pular-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000-cfg-3",
+      slug: "tosot-pular-wall-single-20000-cfg-3",
+      modelId: "tosot-pular-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000-cfg-4",
+      slug: "tosot-pular-wall-single-20000-cfg-4",
+      modelId: "tosot-pular-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000-cfg-5",
+      slug: "tosot-pular-wall-single-20000-cfg-5",
+      modelId: "tosot-pular-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000-cfg-6",
+      slug: "tosot-pular-wall-single-20000-cfg-6",
+      modelId: "tosot-pular-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hp32a2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 26,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-pular-wall-single-20000-cfg-7",
+      slug: "tosot-pular-wall-single-20000-cfg-7",
+      modelId: "tosot-pular-wall-single-20000",
       outdoorUnitId: "tosot-tw24hp32a2doc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -5146,9 +6287,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-pular-wall-single-cfg-31",
-      slug: "tosot-pular-wall-single-cfg-31",
-      modelId: "tosot-pular-wall-single",
+      id: "tosot-pular-wall-single-20000-cfg-8",
+      slug: "tosot-pular-wall-single-20000-cfg-8",
+      modelId: "tosot-pular-wall-single-20000",
       outdoorUnitId: "tosot-twh24ag25d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -5160,1493 +6301,51 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-m-series-wall-single-cfg-1",
-      slug: "tosot-m-series-wall-single-cfg-1",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-2",
-      slug: "tosot-m-series-wall-single-cfg-2",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm24hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-3",
-      slug: "tosot-m-series-wall-single-cfg-3",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm30hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-4",
-      slug: "tosot-m-series-wall-single-cfg-4",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm36hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-5",
-      slug: "tosot-m-series-wall-single-cfg-5",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm42hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-6",
-      slug: "tosot-m-series-wall-single-cfg-6",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-7",
-      slug: "tosot-m-series-wall-single-cfg-7",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm24hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-8",
-      slug: "tosot-m-series-wall-single-cfg-8",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm30hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-9",
-      slug: "tosot-m-series-wall-single-cfg-9",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm36hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-10",
-      slug: "tosot-m-series-wall-single-cfg-10",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm42hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-11",
-      slug: "tosot-m-series-wall-single-cfg-11",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-12",
-      slug: "tosot-m-series-wall-single-cfg-12",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm24hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-13",
-      slug: "tosot-m-series-wall-single-cfg-13",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm30hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-14",
-      slug: "tosot-m-series-wall-single-cfg-14",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm36hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-15",
-      slug: "tosot-m-series-wall-single-cfg-15",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm42hx4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-16",
-      slug: "tosot-m-series-wall-single-cfg-16",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18hmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-17",
-      slug: "tosot-m-series-wall-single-cfg-17",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm24hmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-18",
-      slug: "tosot-m-series-wall-single-cfg-18",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm30hmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-19",
-      slug: "tosot-m-series-wall-single-cfg-19",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm36hmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-20",
-      slug: "tosot-m-series-wall-single-cfg-20",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm42hmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-21",
-      slug: "tosot-m-series-wall-single-cfg-21",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18hpo",
+      id: "tosot-pular-wall-single-18000-cfg-1",
+      slug: "tosot-pular-wall-single-18000-cfg-1",
+      modelId: "tosot-pular-wall-single-18000",
+      outdoorUnitId: "tosot-twh18ag25a2do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-22",
-      slug: "tosot-m-series-wall-single-cfg-22",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-23",
-      slug: "tosot-m-series-wall-single-cfg-23",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-24",
-      slug: "tosot-m-series-wall-single-cfg-24",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-25",
-      slug: "tosot-m-series-wall-single-cfg-25",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-26",
-      slug: "tosot-m-series-wall-single-cfg-26",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-27",
-      slug: "tosot-m-series-wall-single-cfg-27",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-28",
-      slug: "tosot-m-series-wall-single-cfg-28",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-29",
-      slug: "tosot-m-series-wall-single-cfg-29",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-30",
-      slug: "tosot-m-series-wall-single-cfg-30",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-31",
-      slug: "tosot-m-series-wall-single-cfg-31",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-32",
-      slug: "tosot-m-series-wall-single-cfg-32",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-33",
-      slug: "tosot-m-series-wall-single-cfg-33",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-m18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-34",
-      slug: "tosot-m-series-wall-single-cfg-34",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-35",
-      slug: "tosot-m-series-wall-single-cfg-35",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm42h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-36",
-      slug: "tosot-m-series-wall-single-cfg-36",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-37",
-      slug: "tosot-m-series-wall-single-cfg-37",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm18h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
+      seer2: 23.5,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-m-series-wall-single-cfg-38",
-      slug: "tosot-m-series-wall-single-cfg-38",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm42h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-39",
-      slug: "tosot-m-series-wall-single-cfg-39",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm42h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-40",
-      slug: "tosot-m-series-wall-single-cfg-40",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-41",
-      slug: "tosot-m-series-wall-single-cfg-41",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-42",
-      slug: "tosot-m-series-wall-single-cfg-42",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-43",
-      slug: "tosot-m-series-wall-single-cfg-43",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-44",
-      slug: "tosot-m-series-wall-single-cfg-44",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-45",
-      slug: "tosot-m-series-wall-single-cfg-45",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-46",
-      slug: "tosot-m-series-wall-single-cfg-46",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-47",
-      slug: "tosot-m-series-wall-single-cfg-47",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-48",
-      slug: "tosot-m-series-wall-single-cfg-48",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-49",
-      slug: "tosot-m-series-wall-single-cfg-49",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-50",
-      slug: "tosot-m-series-wall-single-cfg-50",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-51",
-      slug: "tosot-m-series-wall-single-cfg-51",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-mz-cosmo36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-52",
-      slug: "tosot-m-series-wall-single-cfg-52",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-53",
-      slug: "tosot-m-series-wall-single-cfg-53",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r24",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-54",
-      slug: "tosot-m-series-wall-single-cfg-54",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r30",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-55",
-      slug: "tosot-m-series-wall-single-cfg-55",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-56",
-      slug: "tosot-m-series-wall-single-cfg-56",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r42",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-57",
-      slug: "tosot-m-series-wall-single-cfg-57",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-58",
-      slug: "tosot-m-series-wall-single-cfg-58",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-59",
-      slug: "tosot-m-series-wall-single-cfg-59",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r24",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-60",
-      slug: "tosot-m-series-wall-single-cfg-60",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r30",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-61",
-      slug: "tosot-m-series-wall-single-cfg-61",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-62",
-      slug: "tosot-m-series-wall-single-cfg-62",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r42",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-63",
-      slug: "tosot-m-series-wall-single-cfg-63",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r24",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-64",
-      slug: "tosot-m-series-wall-single-cfg-64",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r30",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-65",
-      slug: "tosot-m-series-wall-single-cfg-65",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-66",
-      slug: "tosot-m-series-wall-single-cfg-66",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r42",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-67",
-      slug: "tosot-m-series-wall-single-cfg-67",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r48",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-68",
-      slug: "tosot-m-series-wall-single-cfg-68",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r48",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-69",
-      slug: "tosot-m-series-wall-single-cfg-69",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tmsci7h4r48",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-70",
-      slug: "tosot-m-series-wall-single-cfg-70",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm48h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-71",
-      slug: "tosot-m-series-wall-single-cfg-71",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm48h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-m-series-wall-single-cfg-72",
-      slug: "tosot-m-series-wall-single-cfg-72",
-      modelId: "tosot-m-series-wall-single",
-      outdoorUnitId: "tosot-tm48h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-1",
-      slug: "tosot-all-match-wall-single-cfg-1",
-      modelId: "tosot-all-match-wall-single",
+      id: "tosot-pular-wall-single-18000-cfg-2",
+      slug: "tosot-pular-wall-single-18000-cfg-2",
+      modelId: "tosot-pular-wall-single-18000",
       outdoorUnitId: "tosot-tw18hxp2a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-2",
-      slug: "tosot-all-match-wall-single-cfg-2",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-twh36ate19r32a3do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-3",
-      slug: "tosot-all-match-wall-single-cfg-3",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tacci7h4r36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-4",
-      slug: "tosot-all-match-wall-single-cfg-4",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r12",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 21,
+      seer2: 23.5,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-all-match-wall-single-cfg-5",
-      slug: "tosot-all-match-wall-single-cfg-5",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r12",
+      id: "tosot-pular-wall-single-18000-cfg-3",
+      slug: "tosot-pular-wall-single-18000-cfg-3",
+      modelId: "tosot-pular-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hxp2a1do",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-all-match-wall-single-cfg-6",
-      slug: "tosot-all-match-wall-single-cfg-6",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r12",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 21.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-7",
-      slug: "tosot-all-match-wall-single-cfg-7",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r12",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-8",
-      slug: "tosot-all-match-wall-single-cfg-8",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r12",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-9",
-      slug: "tosot-all-match-wall-single-cfg-9",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tw30hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 18.5,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-10",
-      slug: "tosot-all-match-wall-single-cfg-10",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tw30hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22.5,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-11",
-      slug: "tosot-all-match-wall-single-cfg-11",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tw36hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-all-match-wall-single-cfg-12",
-      slug: "tosot-all-match-wall-single-cfg-12",
-      modelId: "tosot-all-match-wall-single",
-      outdoorUnitId: "tosot-tw36hc32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 20,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-1",
-      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-1",
-      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      outdoorUnitId: "tosot-tk-h05tcnaa-tu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 56000,
-      coolingCapacityMaxBtu: 56000,
-      seer2: 17,
-      hspf2: 8.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-2",
-      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-2",
-      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      outdoorUnitId: "tosot-tk-h04tcnaa-tu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 17.8,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-3",
-      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-3",
-      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      outdoorUnitId: "tosot-tk-h03tcnaa-tu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34400,
-      coolingCapacityMaxBtu: 34400,
-      seer2: 17.8,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-4",
-      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-4",
-      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      outdoorUnitId: "tosot-tk-h02tcnaa-tu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.8,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-cosmo-wall-single-cfg-1",
-      slug: "tosot-cosmo-wall-single-cfg-1",
-      modelId: "tosot-cosmo-wall-single",
-      outdoorUnitId: "tosot-gwh36atexh-d6dna1g-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-cosmo-wall-single-cfg-2",
-      slug: "tosot-cosmo-wall-single-cfg-2",
-      modelId: "tosot-cosmo-wall-single",
-      outdoorUnitId: "tosot-taw20-36h1b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-ultra-heat-series-central-ducted-cfg-1",
-      slug: "tosot-flexx-ultra-heat-series-central-ducted-cfg-1",
-      modelId: "tosot-flexx-ultra-heat-series-central-ducted",
-      outdoorUnitId: "tosot-tu36-r32wedu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-flexx-ultra-heat-series-central-ducted-cfg-2",
-      slug: "tosot-flexx-ultra-heat-series-central-ducted-cfg-2",
-      modelId: "tosot-flexx-ultra-heat-series-central-ducted",
-      outdoorUnitId: "tosot-tu60-r32wedu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 18.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-1",
-      slug: "tosot-multi-zone-wall-single-cfg-1",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm24h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-2",
-      slug: "tosot-multi-zone-wall-single-cfg-2",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm30h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-3",
-      slug: "tosot-multi-zone-wall-single-cfg-3",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm36h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-4",
-      slug: "tosot-multi-zone-wall-single-cfg-4",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm24h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-5",
-      slug: "tosot-multi-zone-wall-single-cfg-5",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm30h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-6",
-      slug: "tosot-multi-zone-wall-single-cfg-6",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm36h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-7",
-      slug: "tosot-multi-zone-wall-single-cfg-7",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm24h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-8",
-      slug: "tosot-multi-zone-wall-single-cfg-8",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm30h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-multi-zone-wall-single-cfg-9",
-      slug: "tosot-multi-zone-wall-single-cfg-9",
-      modelId: "tosot-multi-zone-wall-single",
-      outdoorUnitId: "tosot-tm36h32mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-1",
-      slug: "tosot-clivia-wall-single-cfg-1",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw24hcl32a5do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-2",
-      slug: "tosot-clivia-wall-single-cfg-2",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw09hp32a2ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 27,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-3",
-      slug: "tosot-clivia-wall-single-cfg-3",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw09hp32a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 26,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-4",
-      slug: "tosot-clivia-wall-single-cfg-4",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12hp32a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-5",
-      slug: "tosot-clivia-wall-single-cfg-5",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12hp32a2ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-6",
-      slug: "tosot-clivia-wall-single-cfg-6",
-      modelId: "tosot-clivia-wall-single",
+      id: "tosot-pular-wall-single-18000-cfg-4",
+      slug: "tosot-pular-wall-single-18000-cfg-4",
+      modelId: "tosot-pular-wall-single-18000",
       outdoorUnitId: "tosot-tw18hp32a2do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6658,94 +6357,10 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-clivia-wall-single-cfg-7",
-      slug: "tosot-clivia-wall-single-cfg-7",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12hp32a2ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-8",
-      slug: "tosot-clivia-wall-single-cfg-8",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12hp32a2do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-9",
-      slug: "tosot-clivia-wall-single-cfg-9",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-twh12auc25r32a1a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-10",
-      slug: "tosot-clivia-wall-single-cfg-10",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12hp32a2doc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-11",
-      slug: "tosot-clivia-wall-single-cfg-11",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-twh12ag25a6ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-12",
-      slug: "tosot-clivia-wall-single-cfg-12",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-twh12ag25d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-13",
-      slug: "tosot-clivia-wall-single-cfg-13",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw18hp32a2doc",
+      id: "tosot-pular-wall-single-18000-cfg-5",
+      slug: "tosot-pular-wall-single-18000-cfg-5",
+      modelId: "tosot-pular-wall-single-18000",
+      outdoorUnitId: "tosot-twh18ag25d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
@@ -6756,9 +6371,1339 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-clivia-wall-single-cfg-14",
-      slug: "tosot-clivia-wall-single-cfg-14",
-      modelId: "tosot-clivia-wall-single",
+      id: "tosot-standard-wall-single-42000-cfg-1",
+      slug: "tosot-standard-wall-single-42000-cfg-1",
+      modelId: "tosot-standard-wall-single-42000",
+      outdoorUnitId: "tosot-tud42w2-d-d-u",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 40000,
+      coolingCapacityMaxBtu: 40000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-48000-cfg-1",
+      slug: "tosot-standard-wall-single-48000-cfg-1",
+      modelId: "tosot-standard-wall-single-48000",
+      outdoorUnitId: "tosot-tud48w2-d-d-u",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-48000-cfg-2",
+      slug: "tosot-standard-wall-single-48000-cfg-2",
+      modelId: "tosot-standard-wall-single-48000",
+      outdoorUnitId: "tosot-tud60w2-d-d-u",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-48000-cfg-3",
+      slug: "tosot-standard-wall-single-48000-cfg-3",
+      modelId: "tosot-standard-wall-single-48000",
+      outdoorUnitId: "tosot-tu60w-fdu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-standard-wall-single-48000-cfg-4",
+      slug: "tosot-standard-wall-single-48000-cfg-4",
+      modelId: "tosot-standard-wall-single-48000",
+      outdoorUnitId: "tosot-tu60w-fdu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-12000-cfg-1",
+      slug: "tosot-charmo-wall-single-12000-cfg-1",
+      modelId: "tosot-charmo-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hxca5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 17.5,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-12000-cfg-2",
+      slug: "tosot-charmo-wall-single-12000-cfg-2",
+      modelId: "tosot-charmo-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hc32a5aoc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-12000-cfg-3",
+      slug: "tosot-charmo-wall-single-12000-cfg-3",
+      modelId: "tosot-charmo-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hc32a5doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-1",
+      slug: "tosot-m-series-wall-single-18000-cfg-1",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-2",
+      slug: "tosot-m-series-wall-single-18000-cfg-2",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-3",
+      slug: "tosot-m-series-wall-single-18000-cfg-3",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-4",
+      slug: "tosot-m-series-wall-single-18000-cfg-4",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18hmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-5",
+      slug: "tosot-m-series-wall-single-18000-cfg-5",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18hpo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-6",
+      slug: "tosot-m-series-wall-single-18000-cfg-6",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-mz-m18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-7",
+      slug: "tosot-m-series-wall-single-18000-cfg-7",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-mz-m18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-8",
+      slug: "tosot-m-series-wall-single-18000-cfg-8",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-mz-m18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-9",
+      slug: "tosot-m-series-wall-single-18000-cfg-9",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-10",
+      slug: "tosot-m-series-wall-single-18000-cfg-10",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-11",
+      slug: "tosot-m-series-wall-single-18000-cfg-11",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tm18h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-12",
+      slug: "tosot-m-series-wall-single-18000-cfg-12",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-mz-cosmo18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-13",
+      slug: "tosot-m-series-wall-single-18000-cfg-13",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-mz-cosmo18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-14",
+      slug: "tosot-m-series-wall-single-18000-cfg-14",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-mz-cosmo18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-15",
+      slug: "tosot-m-series-wall-single-18000-cfg-15",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tmsci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-16",
+      slug: "tosot-m-series-wall-single-18000-cfg-16",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tmsci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-18000-cfg-17",
+      slug: "tosot-m-series-wall-single-18000-cfg-17",
+      modelId: "tosot-m-series-wall-single-18000",
+      outdoorUnitId: "tosot-tmsci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-1",
+      slug: "tosot-m-series-wall-single-24000-cfg-1",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-tm24hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-2",
+      slug: "tosot-m-series-wall-single-24000-cfg-2",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-tm24hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-3",
+      slug: "tosot-m-series-wall-single-24000-cfg-3",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-tm24hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-4",
+      slug: "tosot-m-series-wall-single-24000-cfg-4",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-tm24hmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-5",
+      slug: "tosot-m-series-wall-single-24000-cfg-5",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-mz-m24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-6",
+      slug: "tosot-m-series-wall-single-24000-cfg-6",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-mz-m24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-7",
+      slug: "tosot-m-series-wall-single-24000-cfg-7",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-mz-m24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-8",
+      slug: "tosot-m-series-wall-single-24000-cfg-8",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-mz-cosmo24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-9",
+      slug: "tosot-m-series-wall-single-24000-cfg-9",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-mz-cosmo24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-10",
+      slug: "tosot-m-series-wall-single-24000-cfg-10",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-mz-cosmo24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-11",
+      slug: "tosot-m-series-wall-single-24000-cfg-11",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-tmsci7h4r24",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-12",
+      slug: "tosot-m-series-wall-single-24000-cfg-12",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-tmsci7h4r24",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-24000-cfg-13",
+      slug: "tosot-m-series-wall-single-24000-cfg-13",
+      modelId: "tosot-m-series-wall-single-24000",
+      outdoorUnitId: "tosot-tmsci7h4r24",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-1",
+      slug: "tosot-m-series-wall-single-30000-cfg-1",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-tm30hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-2",
+      slug: "tosot-m-series-wall-single-30000-cfg-2",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-tm30hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-3",
+      slug: "tosot-m-series-wall-single-30000-cfg-3",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-tm30hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-4",
+      slug: "tosot-m-series-wall-single-30000-cfg-4",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-tm30hmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-5",
+      slug: "tosot-m-series-wall-single-30000-cfg-5",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-mz-m30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-6",
+      slug: "tosot-m-series-wall-single-30000-cfg-6",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-mz-m30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-7",
+      slug: "tosot-m-series-wall-single-30000-cfg-7",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-mz-m30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-8",
+      slug: "tosot-m-series-wall-single-30000-cfg-8",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-mz-cosmo30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-9",
+      slug: "tosot-m-series-wall-single-30000-cfg-9",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-mz-cosmo30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-10",
+      slug: "tosot-m-series-wall-single-30000-cfg-10",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-mz-cosmo30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-11",
+      slug: "tosot-m-series-wall-single-30000-cfg-11",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-tmsci7h4r30",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-12",
+      slug: "tosot-m-series-wall-single-30000-cfg-12",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-tmsci7h4r30",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-30000-cfg-13",
+      slug: "tosot-m-series-wall-single-30000-cfg-13",
+      modelId: "tosot-m-series-wall-single-30000",
+      outdoorUnitId: "tosot-tmsci7h4r30",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-1",
+      slug: "tosot-m-series-wall-single-36000-cfg-1",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm36hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-2",
+      slug: "tosot-m-series-wall-single-36000-cfg-2",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm42hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-3",
+      slug: "tosot-m-series-wall-single-36000-cfg-3",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm36hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-4",
+      slug: "tosot-m-series-wall-single-36000-cfg-4",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm42hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-5",
+      slug: "tosot-m-series-wall-single-36000-cfg-5",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm36hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-6",
+      slug: "tosot-m-series-wall-single-36000-cfg-6",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm42hx4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-7",
+      slug: "tosot-m-series-wall-single-36000-cfg-7",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm36hmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-8",
+      slug: "tosot-m-series-wall-single-36000-cfg-8",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tm42hmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-9",
+      slug: "tosot-m-series-wall-single-36000-cfg-9",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-mz-m36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-10",
+      slug: "tosot-m-series-wall-single-36000-cfg-10",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-mz-m36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-11",
+      slug: "tosot-m-series-wall-single-36000-cfg-11",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-mz-m36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-12",
+      slug: "tosot-m-series-wall-single-36000-cfg-12",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-mz-cosmo36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-13",
+      slug: "tosot-m-series-wall-single-36000-cfg-13",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-mz-cosmo36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-14",
+      slug: "tosot-m-series-wall-single-36000-cfg-14",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-mz-cosmo36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-15",
+      slug: "tosot-m-series-wall-single-36000-cfg-15",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tmsci7h4r36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-16",
+      slug: "tosot-m-series-wall-single-36000-cfg-16",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tmsci7h4r36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-36000-cfg-17",
+      slug: "tosot-m-series-wall-single-36000-cfg-17",
+      modelId: "tosot-m-series-wall-single-36000",
+      outdoorUnitId: "tosot-tmsci7h4r36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-lomo-wall-single-30000-cfg-1",
+      slug: "tosot-lomo-wall-single-30000-cfg-1",
+      modelId: "tosot-lomo-wall-single-30000",
+      outdoorUnitId: "tosot-tw30hxq2b2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-lomo-wall-single-36000-cfg-1",
+      slug: "tosot-lomo-wall-single-36000-cfg-1",
+      modelId: "tosot-lomo-wall-single-36000",
+      outdoorUnitId: "tosot-tw36hxq2b2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-18000-cfg-1",
+      slug: "tosot-all-match-wall-single-18000-cfg-1",
+      modelId: "tosot-all-match-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hxp2a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-60000-cfg-1",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-60000-cfg-1",
+      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-60000",
+      outdoorUnitId: "tosot-tk-h05tcnaa-tu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 56000,
+      coolingCapacityMaxBtu: 56000,
+      seer2: 17,
+      hspf2: 8.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-48000-cfg-1",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-48000-cfg-1",
+      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-48000",
+      outdoorUnitId: "tosot-tk-h04tcnaa-tu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 17.8,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-36000-cfg-1",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-36000-cfg-1",
+      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-36000",
+      outdoorUnitId: "tosot-tk-h03tcnaa-tu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34400,
+      coolingCapacityMaxBtu: 34400,
+      seer2: 17.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-24000-cfg-1",
+      slug: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-24000-cfg-1",
+      modelId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-24000",
+      outdoorUnitId: "tosot-tk-h02tcnaa-tu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-cosmo-wall-single-36000-cfg-1",
+      slug: "tosot-cosmo-wall-single-36000-cfg-1",
+      modelId: "tosot-cosmo-wall-single-36000",
+      outdoorUnitId: "tosot-gwh36atexh-d6dna1g-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-cosmo-wall-single-36000-cfg-2",
+      slug: "tosot-cosmo-wall-single-36000-cfg-2",
+      modelId: "tosot-cosmo-wall-single-36000",
+      outdoorUnitId: "tosot-taw20-36h1b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-ultra-heat-series-central-ducted-36000-cfg-1",
+      slug: "tosot-flexx-ultra-heat-series-central-ducted-36000-cfg-1",
+      modelId: "tosot-flexx-ultra-heat-series-central-ducted-36000",
+      outdoorUnitId: "tosot-tu36-r32wedu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-flexx-ultra-heat-series-central-ducted-48000-cfg-1",
+      slug: "tosot-flexx-ultra-heat-series-central-ducted-48000-cfg-1",
+      modelId: "tosot-flexx-ultra-heat-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60-r32wedu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 18.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-24000-cfg-1",
+      slug: "tosot-multi-zone-wall-single-24000-cfg-1",
+      modelId: "tosot-multi-zone-wall-single-24000",
+      outdoorUnitId: "tosot-tm24h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-24000-cfg-2",
+      slug: "tosot-multi-zone-wall-single-24000-cfg-2",
+      modelId: "tosot-multi-zone-wall-single-24000",
+      outdoorUnitId: "tosot-tm24h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-24000-cfg-3",
+      slug: "tosot-multi-zone-wall-single-24000-cfg-3",
+      modelId: "tosot-multi-zone-wall-single-24000",
+      outdoorUnitId: "tosot-tm24h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-30000-cfg-1",
+      slug: "tosot-multi-zone-wall-single-30000-cfg-1",
+      modelId: "tosot-multi-zone-wall-single-30000",
+      outdoorUnitId: "tosot-tm30h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-30000-cfg-2",
+      slug: "tosot-multi-zone-wall-single-30000-cfg-2",
+      modelId: "tosot-multi-zone-wall-single-30000",
+      outdoorUnitId: "tosot-tm30h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-30000-cfg-3",
+      slug: "tosot-multi-zone-wall-single-30000-cfg-3",
+      modelId: "tosot-multi-zone-wall-single-30000",
+      outdoorUnitId: "tosot-tm30h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-36000-cfg-1",
+      slug: "tosot-multi-zone-wall-single-36000-cfg-1",
+      modelId: "tosot-multi-zone-wall-single-36000",
+      outdoorUnitId: "tosot-tm36h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-36000-cfg-2",
+      slug: "tosot-multi-zone-wall-single-36000-cfg-2",
+      modelId: "tosot-multi-zone-wall-single-36000",
+      outdoorUnitId: "tosot-tm36h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-multi-zone-wall-single-36000-cfg-3",
+      slug: "tosot-multi-zone-wall-single-36000-cfg-3",
+      modelId: "tosot-multi-zone-wall-single-36000",
+      outdoorUnitId: "tosot-tm36h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-42000-cfg-1",
+      slug: "tosot-m-series-wall-single-42000-cfg-1",
+      modelId: "tosot-m-series-wall-single-42000",
+      outdoorUnitId: "tosot-tm42h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-42000-cfg-2",
+      slug: "tosot-m-series-wall-single-42000-cfg-2",
+      modelId: "tosot-m-series-wall-single-42000",
+      outdoorUnitId: "tosot-tm42h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-42000-cfg-3",
+      slug: "tosot-m-series-wall-single-42000-cfg-3",
+      modelId: "tosot-m-series-wall-single-42000",
+      outdoorUnitId: "tosot-tm42h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-42000-cfg-4",
+      slug: "tosot-m-series-wall-single-42000-cfg-4",
+      modelId: "tosot-m-series-wall-single-42000",
+      outdoorUnitId: "tosot-tmsci7h4r42",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-42000-cfg-5",
+      slug: "tosot-m-series-wall-single-42000-cfg-5",
+      modelId: "tosot-m-series-wall-single-42000",
+      outdoorUnitId: "tosot-tmsci7h4r42",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-42000-cfg-6",
+      slug: "tosot-m-series-wall-single-42000-cfg-6",
+      modelId: "tosot-m-series-wall-single-42000",
+      outdoorUnitId: "tosot-tmsci7h4r42",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-20000-cfg-1",
+      slug: "tosot-clivia-wall-single-20000-cfg-1",
+      modelId: "tosot-clivia-wall-single-20000",
+      outdoorUnitId: "tosot-tw24hcl32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-20000-cfg-2",
+      slug: "tosot-clivia-wall-single-20000-cfg-2",
+      modelId: "tosot-clivia-wall-single-20000",
       outdoorUnitId: "tosot-tavci7h4r24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -6770,9 +7715,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-clivia-wall-single-cfg-15",
-      slug: "tosot-clivia-wall-single-cfg-15",
-      modelId: "tosot-clivia-wall-single",
+      id: "tosot-clivia-wall-single-20000-cfg-3",
+      slug: "tosot-clivia-wall-single-20000-cfg-3",
+      modelId: "tosot-clivia-wall-single-20000",
       outdoorUnitId: "tosot-tavci7h4r24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -6784,9 +7729,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-clivia-wall-single-cfg-16",
-      slug: "tosot-clivia-wall-single-cfg-16",
-      modelId: "tosot-clivia-wall-single",
+      id: "tosot-clivia-wall-single-20000-cfg-4",
+      slug: "tosot-clivia-wall-single-20000-cfg-4",
+      modelId: "tosot-clivia-wall-single-20000",
       outdoorUnitId: "tosot-tavci7h4r24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -6798,121 +7743,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-clivia-wall-single-cfg-17",
-      slug: "tosot-clivia-wall-single-cfg-17",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-18",
-      slug: "tosot-clivia-wall-single-cfg-18",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-19",
-      slug: "tosot-clivia-wall-single-cfg-19",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-20",
-      slug: "tosot-clivia-wall-single-cfg-20",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-21",
-      slug: "tosot-clivia-wall-single-cfg-21",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-22",
-      slug: "tosot-clivia-wall-single-cfg-22",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-23",
-      slug: "tosot-clivia-wall-single-cfg-23",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-24",
-      slug: "tosot-clivia-wall-single-cfg-24",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12hp32a2doc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-25",
-      slug: "tosot-clivia-wall-single-cfg-25",
-      modelId: "tosot-clivia-wall-single",
+      id: "tosot-clivia-wall-single-20000-cfg-5",
+      slug: "tosot-clivia-wall-single-20000-cfg-5",
+      modelId: "tosot-clivia-wall-single-20000",
       outdoorUnitId: "tosot-su-aoraki24-230-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -6924,79 +7757,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-clivia-wall-single-cfg-26",
-      slug: "tosot-clivia-wall-single-cfg-26",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw09wh25a1ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 27,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-27",
-      slug: "tosot-clivia-wall-single-cfg-27",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw09wh25a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 26,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-28",
-      slug: "tosot-clivia-wall-single-cfg-28",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12wh25a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-29",
-      slug: "tosot-clivia-wall-single-cfg-29",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw12wh25a1ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-30",
-      slug: "tosot-clivia-wall-single-cfg-30",
-      modelId: "tosot-clivia-wall-single",
-      outdoorUnitId: "tosot-tw18wh25a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-clivia-wall-single-cfg-31",
-      slug: "tosot-clivia-wall-single-cfg-31",
-      modelId: "tosot-clivia-wall-single",
+      id: "tosot-clivia-wall-single-20000-cfg-6",
+      slug: "tosot-clivia-wall-single-20000-cfg-6",
+      modelId: "tosot-clivia-wall-single-20000",
       outdoorUnitId: "tosot-tw24wh25a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -7008,9 +7771,359 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-console-wall-single-cfg-1",
-      slug: "tosot-console-wall-single-cfg-1",
-      modelId: "tosot-console-wall-single",
+      id: "tosot-clivia-wall-single-9000-cfg-1",
+      slug: "tosot-clivia-wall-single-9000-cfg-1",
+      modelId: "tosot-clivia-wall-single-9000",
+      outdoorUnitId: "tosot-tw09hp32a2ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 27,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-9000-cfg-2",
+      slug: "tosot-clivia-wall-single-9000-cfg-2",
+      modelId: "tosot-clivia-wall-single-9000",
+      outdoorUnitId: "tosot-tw09hp32a2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 26,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-9000-cfg-3",
+      slug: "tosot-clivia-wall-single-9000-cfg-3",
+      modelId: "tosot-clivia-wall-single-9000",
+      outdoorUnitId: "tosot-tw09wh25a1ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 27,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-9000-cfg-4",
+      slug: "tosot-clivia-wall-single-9000-cfg-4",
+      modelId: "tosot-clivia-wall-single-9000",
+      outdoorUnitId: "tosot-tw09wh25a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 26,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-1",
+      slug: "tosot-clivia-wall-single-12000-cfg-1",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hp32a2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-2",
+      slug: "tosot-clivia-wall-single-12000-cfg-2",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hp32a2ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-3",
+      slug: "tosot-clivia-wall-single-12000-cfg-3",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hp32a2ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-4",
+      slug: "tosot-clivia-wall-single-12000-cfg-4",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hp32a2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-5",
+      slug: "tosot-clivia-wall-single-12000-cfg-5",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-twh12auc25r32a1a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-6",
+      slug: "tosot-clivia-wall-single-12000-cfg-6",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hp32a2doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-7",
+      slug: "tosot-clivia-wall-single-12000-cfg-7",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-twh12ag25a6ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-8",
+      slug: "tosot-clivia-wall-single-12000-cfg-8",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-twh12ag25d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-9",
+      slug: "tosot-clivia-wall-single-12000-cfg-9",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hp32a2doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-10",
+      slug: "tosot-clivia-wall-single-12000-cfg-10",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12wh25a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-12000-cfg-11",
+      slug: "tosot-clivia-wall-single-12000-cfg-11",
+      modelId: "tosot-clivia-wall-single-12000",
+      outdoorUnitId: "tosot-tw12wh25a1ao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-1",
+      slug: "tosot-clivia-wall-single-18000-cfg-1",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hp32a2do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-2",
+      slug: "tosot-clivia-wall-single-18000-cfg-2",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hp32a2doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-3",
+      slug: "tosot-clivia-wall-single-18000-cfg-3",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tavci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-4",
+      slug: "tosot-clivia-wall-single-18000-cfg-4",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tavci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-5",
+      slug: "tosot-clivia-wall-single-18000-cfg-5",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tavci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-6",
+      slug: "tosot-clivia-wall-single-18000-cfg-6",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tavci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-7",
+      slug: "tosot-clivia-wall-single-18000-cfg-7",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tavci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-8",
+      slug: "tosot-clivia-wall-single-18000-cfg-8",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tavci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-9",
+      slug: "tosot-clivia-wall-single-18000-cfg-9",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tavci7h4r18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-clivia-wall-single-18000-cfg-10",
+      slug: "tosot-clivia-wall-single-18000-cfg-10",
+      modelId: "tosot-clivia-wall-single-18000",
+      outdoorUnitId: "tosot-tw18wh25a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-console-wall-single-9000-cfg-1",
+      slug: "tosot-console-wall-single-9000-cfg-1",
+      modelId: "tosot-console-wall-single-9000",
       outdoorUnitId: "tosot-tw09hay32a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7022,9 +8135,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-console-wall-single-cfg-2",
-      slug: "tosot-console-wall-single-cfg-2",
-      modelId: "tosot-console-wall-single",
+      id: "tosot-console-wall-single-9000-cfg-2",
+      slug: "tosot-console-wall-single-9000-cfg-2",
+      modelId: "tosot-console-wall-single-9000",
       outdoorUnitId: "tosot-tw09hay32a1doc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7036,23 +8149,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-console-wall-single-cfg-3",
-      slug: "tosot-console-wall-single-cfg-3",
-      modelId: "tosot-console-wall-single",
-      outdoorUnitId: "tosot-tw12hay32a1doc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-console-wall-single-cfg-4",
-      slug: "tosot-console-wall-single-cfg-4",
-      modelId: "tosot-console-wall-single",
+      id: "tosot-console-wall-single-9000-cfg-3",
+      slug: "tosot-console-wall-single-9000-cfg-3",
+      modelId: "tosot-console-wall-single-9000",
       outdoorUnitId: "tosot-tavci7h4r09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7064,9 +8163,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ducted-wall-single-cfg-1",
-      slug: "tosot-ducted-wall-single-cfg-1",
-      modelId: "tosot-ducted-wall-single",
+      id: "tosot-ducted-wall-single-12000-cfg-1",
+      slug: "tosot-ducted-wall-single-12000-cfg-1",
+      modelId: "tosot-ducted-wall-single-12000",
       outdoorUnitId: "tosot-tw12hay32a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -7078,23 +8177,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ducted-wall-single-cfg-2",
-      slug: "tosot-ducted-wall-single-cfg-2",
-      modelId: "tosot-ducted-wall-single",
-      outdoorUnitId: "tosot-tavci7h4r09",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 22,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-airy-wall-single-cfg-1",
-      slug: "tosot-airy-wall-single-cfg-1",
-      modelId: "tosot-airy-wall-single",
+      id: "tosot-airy-wall-single-20000-cfg-1",
+      slug: "tosot-airy-wall-single-20000-cfg-1",
+      modelId: "tosot-airy-wall-single-20000",
       outdoorUnitId: "tosot-tw24hay32a1do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -7106,37 +8191,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-airy-wall-single-cfg-2",
-      slug: "tosot-airy-wall-single-cfg-2",
-      modelId: "tosot-airy-wall-single",
-      outdoorUnitId: "tosot-tw18hay32a1do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-airy-wall-single-cfg-3",
-      slug: "tosot-airy-wall-single-cfg-3",
-      modelId: "tosot-airy-wall-single",
-      outdoorUnitId: "tosot-tw18hay32a1doc",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-airy-wall-single-cfg-4",
-      slug: "tosot-airy-wall-single-cfg-4",
-      modelId: "tosot-airy-wall-single",
+      id: "tosot-airy-wall-single-20000-cfg-2",
+      slug: "tosot-airy-wall-single-20000-cfg-2",
+      modelId: "tosot-airy-wall-single-20000",
       outdoorUnitId: "tosot-tw24hay32a1doc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -7148,9 +8205,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-airy-wall-single-cfg-5",
-      slug: "tosot-airy-wall-single-cfg-5",
-      modelId: "tosot-airy-wall-single",
+      id: "tosot-airy-wall-single-20000-cfg-3",
+      slug: "tosot-airy-wall-single-20000-cfg-3",
+      modelId: "tosot-airy-wall-single-20000",
       outdoorUnitId: "tosot-twh24av29d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -7162,51 +8219,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-airy-wall-single-cfg-6",
-      slug: "tosot-airy-wall-single-cfg-6",
-      modelId: "tosot-airy-wall-single",
-      outdoorUnitId: "tosot-twh18av29d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-airy-wall-single-cfg-7",
-      slug: "tosot-airy-wall-single-cfg-7",
-      modelId: "tosot-airy-wall-single",
-      outdoorUnitId: "tosot-tw09wh29d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 30,
-      hspf2: 11.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-airy-wall-single-cfg-8",
-      slug: "tosot-airy-wall-single-cfg-8",
-      modelId: "tosot-airy-wall-single",
-      outdoorUnitId: "tosot-tw12wh29d6do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 29.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-airy-wall-single-cfg-9",
-      slug: "tosot-airy-wall-single-cfg-9",
-      modelId: "tosot-airy-wall-single",
+      id: "tosot-airy-wall-single-20000-cfg-4",
+      slug: "tosot-airy-wall-single-20000-cfg-4",
+      modelId: "tosot-airy-wall-single-20000",
       outdoorUnitId: "tosot-tw24wh29d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -7218,9 +8233,51 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-airy-wall-single-cfg-10",
-      slug: "tosot-airy-wall-single-cfg-10",
-      modelId: "tosot-airy-wall-single",
+      id: "tosot-airy-wall-single-18000-cfg-1",
+      slug: "tosot-airy-wall-single-18000-cfg-1",
+      modelId: "tosot-airy-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hay32a1do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-airy-wall-single-18000-cfg-2",
+      slug: "tosot-airy-wall-single-18000-cfg-2",
+      modelId: "tosot-airy-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hay32a1doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-airy-wall-single-18000-cfg-3",
+      slug: "tosot-airy-wall-single-18000-cfg-3",
+      modelId: "tosot-airy-wall-single-18000",
+      outdoorUnitId: "tosot-twh18av29d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-airy-wall-single-18000-cfg-4",
+      slug: "tosot-airy-wall-single-18000-cfg-4",
+      modelId: "tosot-airy-wall-single-18000",
       outdoorUnitId: "tosot-tw18wh29d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -7232,9 +8289,317 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-1",
-      slug: "tosot-r32-freematch-wall-single-cfg-1",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-charmo-wall-single-18000-cfg-1",
+      slug: "tosot-charmo-wall-single-18000-cfg-1",
+      modelId: "tosot-charmo-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-18000-cfg-2",
+      slug: "tosot-charmo-wall-single-18000-cfg-2",
+      modelId: "tosot-charmo-wall-single-18000",
+      outdoorUnitId: "tosot-twh18at19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-18000-cfg-3",
+      slug: "tosot-charmo-wall-single-18000-cfg-3",
+      modelId: "tosot-charmo-wall-single-18000",
+      outdoorUnitId: "tosot-tw18hc32a5doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-18000-cfg-4",
+      slug: "tosot-charmo-wall-single-18000-cfg-4",
+      modelId: "tosot-charmo-wall-single-18000",
+      outdoorUnitId: "tosot-tw18wh19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-18000-cfg-5",
+      slug: "tosot-charmo-wall-single-18000-cfg-5",
+      modelId: "tosot-charmo-wall-single-18000",
+      outdoorUnitId: "tosot-ts-18agr32od21",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-1",
+      slug: "tosot-charmo-wall-single-36000-cfg-1",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-tw36hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-2",
+      slug: "tosot-charmo-wall-single-36000-cfg-2",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-twh36ate19r32a3do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-3",
+      slug: "tosot-charmo-wall-single-36000-cfg-3",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-su-cosmo36-230-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-4",
+      slug: "tosot-charmo-wall-single-36000-cfg-4",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-su-cosmo36-230-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-5",
+      slug: "tosot-charmo-wall-single-36000-cfg-5",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-su-cosmo36-230-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-6",
+      slug: "tosot-charmo-wall-single-36000-cfg-6",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-su-cosmo36-230-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-7",
+      slug: "tosot-charmo-wall-single-36000-cfg-7",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-tacci7h4r36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-8",
+      slug: "tosot-charmo-wall-single-36000-cfg-8",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-tacci7h4r36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-9",
+      slug: "tosot-charmo-wall-single-36000-cfg-9",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-twh36at19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-10",
+      slug: "tosot-charmo-wall-single-36000-cfg-10",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-tw36wh19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-36000-cfg-11",
+      slug: "tosot-charmo-wall-single-36000-cfg-11",
+      modelId: "tosot-charmo-wall-single-36000",
+      outdoorUnitId: "tosot-ts-36agr32od21",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-36000-cfg-1",
+      slug: "tosot-all-match-wall-single-36000-cfg-1",
+      modelId: "tosot-all-match-wall-single-36000",
+      outdoorUnitId: "tosot-twh36ate19r32a3do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-36000-cfg-2",
+      slug: "tosot-all-match-wall-single-36000-cfg-2",
+      modelId: "tosot-all-match-wall-single-36000",
+      outdoorUnitId: "tosot-tacci7h4r36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-36000-cfg-3",
+      slug: "tosot-all-match-wall-single-36000-cfg-3",
+      modelId: "tosot-all-match-wall-single-36000",
+      outdoorUnitId: "tosot-tw36hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-36000-cfg-4",
+      slug: "tosot-all-match-wall-single-36000-cfg-4",
+      modelId: "tosot-all-match-wall-single-36000",
+      outdoorUnitId: "tosot-tw36hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 20,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-console-wall-single-12000-cfg-1",
+      slug: "tosot-console-wall-single-12000-cfg-1",
+      modelId: "tosot-console-wall-single-12000",
+      outdoorUnitId: "tosot-tw12hay32a1doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-24000-cfg-1",
+      slug: "tosot-charmo-wall-single-24000-cfg-1",
+      modelId: "tosot-charmo-wall-single-24000",
+      outdoorUnitId: "tosot-tw24hc32a5doc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-18000-cfg-1",
+      slug: "tosot-r32-freematch-wall-single-18000-cfg-1",
+      modelId: "tosot-r32-freematch-wall-single-18000",
       outdoorUnitId: "tosot-tm18d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -7246,65 +8611,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-2",
-      slug: "tosot-r32-freematch-wall-single-cfg-2",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm24d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-3",
-      slug: "tosot-r32-freematch-wall-single-cfg-3",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm30d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-4",
-      slug: "tosot-r32-freematch-wall-single-cfg-4",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm36d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-5",
-      slug: "tosot-r32-freematch-wall-single-cfg-5",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm42d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-6",
-      slug: "tosot-r32-freematch-wall-single-cfg-6",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-18000-cfg-2",
+      slug: "tosot-r32-freematch-wall-single-18000-cfg-2",
+      modelId: "tosot-r32-freematch-wall-single-18000",
       outdoorUnitId: "tosot-tm18d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -7316,9 +8625,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-7",
-      slug: "tosot-r32-freematch-wall-single-cfg-7",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-18000-cfg-3",
+      slug: "tosot-r32-freematch-wall-single-18000-cfg-3",
+      modelId: "tosot-r32-freematch-wall-single-18000",
       outdoorUnitId: "tosot-tm18d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -7330,9 +8639,65 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-8",
-      slug: "tosot-r32-freematch-wall-single-cfg-8",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-18000-cfg-4",
+      slug: "tosot-r32-freematch-wall-single-18000-cfg-4",
+      modelId: "tosot-r32-freematch-wall-single-18000",
+      outdoorUnitId: "tosot-tm18wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-18000-cfg-5",
+      slug: "tosot-r32-freematch-wall-single-18000-cfg-5",
+      modelId: "tosot-r32-freematch-wall-single-18000",
+      outdoorUnitId: "tosot-tm18wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-18000-cfg-6",
+      slug: "tosot-r32-freematch-wall-single-18000-cfg-6",
+      modelId: "tosot-r32-freematch-wall-single-18000",
+      outdoorUnitId: "tosot-tm18wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-24000-cfg-1",
+      slug: "tosot-r32-freematch-wall-single-24000-cfg-1",
+      modelId: "tosot-r32-freematch-wall-single-24000",
+      outdoorUnitId: "tosot-tm24d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-24000-cfg-2",
+      slug: "tosot-r32-freematch-wall-single-24000-cfg-2",
+      modelId: "tosot-r32-freematch-wall-single-24000",
       outdoorUnitId: "tosot-tm24d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7344,51 +8709,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-9",
-      slug: "tosot-r32-freematch-wall-single-cfg-9",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm30d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-10",
-      slug: "tosot-r32-freematch-wall-single-cfg-10",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm36d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-11",
-      slug: "tosot-r32-freematch-wall-single-cfg-11",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm42d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-12",
-      slug: "tosot-r32-freematch-wall-single-cfg-12",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-24000-cfg-3",
+      slug: "tosot-r32-freematch-wall-single-24000-cfg-3",
+      modelId: "tosot-r32-freematch-wall-single-24000",
       outdoorUnitId: "tosot-tm24d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7400,9 +8723,79 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-13",
-      slug: "tosot-r32-freematch-wall-single-cfg-13",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-24000-cfg-4",
+      slug: "tosot-r32-freematch-wall-single-24000-cfg-4",
+      modelId: "tosot-r32-freematch-wall-single-24000",
+      outdoorUnitId: "tosot-tm24wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-24000-cfg-5",
+      slug: "tosot-r32-freematch-wall-single-24000-cfg-5",
+      modelId: "tosot-r32-freematch-wall-single-24000",
+      outdoorUnitId: "tosot-tm24wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-24000-cfg-6",
+      slug: "tosot-r32-freematch-wall-single-24000-cfg-6",
+      modelId: "tosot-r32-freematch-wall-single-24000",
+      outdoorUnitId: "tosot-tm24wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-30000-cfg-1",
+      slug: "tosot-r32-freematch-wall-single-30000-cfg-1",
+      modelId: "tosot-r32-freematch-wall-single-30000",
+      outdoorUnitId: "tosot-tm30d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-30000-cfg-2",
+      slug: "tosot-r32-freematch-wall-single-30000-cfg-2",
+      modelId: "tosot-r32-freematch-wall-single-30000",
+      outdoorUnitId: "tosot-tm30d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-30000-cfg-3",
+      slug: "tosot-r32-freematch-wall-single-30000-cfg-3",
+      modelId: "tosot-r32-freematch-wall-single-30000",
       outdoorUnitId: "tosot-tm30d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -7414,9 +8807,79 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-14",
-      slug: "tosot-r32-freematch-wall-single-cfg-14",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-30000-cfg-4",
+      slug: "tosot-r32-freematch-wall-single-30000-cfg-4",
+      modelId: "tosot-r32-freematch-wall-single-30000",
+      outdoorUnitId: "tosot-tm30wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-30000-cfg-5",
+      slug: "tosot-r32-freematch-wall-single-30000-cfg-5",
+      modelId: "tosot-r32-freematch-wall-single-30000",
+      outdoorUnitId: "tosot-tm30wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-30000-cfg-6",
+      slug: "tosot-r32-freematch-wall-single-30000-cfg-6",
+      modelId: "tosot-r32-freematch-wall-single-30000",
+      outdoorUnitId: "tosot-tm30wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-36000-cfg-1",
+      slug: "tosot-r32-freematch-wall-single-36000-cfg-1",
+      modelId: "tosot-r32-freematch-wall-single-36000",
+      outdoorUnitId: "tosot-tm36d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-36000-cfg-2",
+      slug: "tosot-r32-freematch-wall-single-36000-cfg-2",
+      modelId: "tosot-r32-freematch-wall-single-36000",
+      outdoorUnitId: "tosot-tm36d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-36000-cfg-3",
+      slug: "tosot-r32-freematch-wall-single-36000-cfg-3",
+      modelId: "tosot-r32-freematch-wall-single-36000",
       outdoorUnitId: "tosot-tm36d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7428,9 +8891,79 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-15",
-      slug: "tosot-r32-freematch-wall-single-cfg-15",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-36000-cfg-4",
+      slug: "tosot-r32-freematch-wall-single-36000-cfg-4",
+      modelId: "tosot-r32-freematch-wall-single-36000",
+      outdoorUnitId: "tosot-tm36wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-36000-cfg-5",
+      slug: "tosot-r32-freematch-wall-single-36000-cfg-5",
+      modelId: "tosot-r32-freematch-wall-single-36000",
+      outdoorUnitId: "tosot-tm36wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-36000-cfg-6",
+      slug: "tosot-r32-freematch-wall-single-36000-cfg-6",
+      modelId: "tosot-r32-freematch-wall-single-36000",
+      outdoorUnitId: "tosot-tm36wh21mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-42000-cfg-1",
+      slug: "tosot-r32-freematch-wall-single-42000-cfg-1",
+      modelId: "tosot-r32-freematch-wall-single-42000",
+      outdoorUnitId: "tosot-tm42d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-42000-cfg-2",
+      slug: "tosot-r32-freematch-wall-single-42000-cfg-2",
+      modelId: "tosot-r32-freematch-wall-single-42000",
+      outdoorUnitId: "tosot-tm42d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-42000-cfg-3",
+      slug: "tosot-r32-freematch-wall-single-42000-cfg-3",
+      modelId: "tosot-r32-freematch-wall-single-42000",
       outdoorUnitId: "tosot-tm42d6mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7442,219 +8975,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-16",
-      slug: "tosot-r32-freematch-wall-single-cfg-16",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm48d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-17",
-      slug: "tosot-r32-freematch-wall-single-cfg-17",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm48d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-18",
-      slug: "tosot-r32-freematch-wall-single-cfg-18",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm48d6mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-19",
-      slug: "tosot-r32-freematch-wall-single-cfg-19",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm18wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-20",
-      slug: "tosot-r32-freematch-wall-single-cfg-20",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm18wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-21",
-      slug: "tosot-r32-freematch-wall-single-cfg-21",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm18wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-22",
-      slug: "tosot-r32-freematch-wall-single-cfg-22",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm24wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-23",
-      slug: "tosot-r32-freematch-wall-single-cfg-23",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm24wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-24",
-      slug: "tosot-r32-freematch-wall-single-cfg-24",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm24wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-25",
-      slug: "tosot-r32-freematch-wall-single-cfg-25",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm30wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-26",
-      slug: "tosot-r32-freematch-wall-single-cfg-26",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm30wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-27",
-      slug: "tosot-r32-freematch-wall-single-cfg-27",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm30wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-28",
-      slug: "tosot-r32-freematch-wall-single-cfg-28",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm36wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-29",
-      slug: "tosot-r32-freematch-wall-single-cfg-29",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm36wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-30",
-      slug: "tosot-r32-freematch-wall-single-cfg-30",
-      modelId: "tosot-r32-freematch-wall-single",
-      outdoorUnitId: "tosot-tm36wh21mo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-r32-freematch-wall-single-cfg-31",
-      slug: "tosot-r32-freematch-wall-single-cfg-31",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-42000-cfg-4",
+      slug: "tosot-r32-freematch-wall-single-42000-cfg-4",
+      modelId: "tosot-r32-freematch-wall-single-42000",
       outdoorUnitId: "tosot-tm42wh21mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7666,9 +8989,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-32",
-      slug: "tosot-r32-freematch-wall-single-cfg-32",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-42000-cfg-5",
+      slug: "tosot-r32-freematch-wall-single-42000-cfg-5",
+      modelId: "tosot-r32-freematch-wall-single-42000",
       outdoorUnitId: "tosot-tm42wh21mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7680,9 +9003,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-33",
-      slug: "tosot-r32-freematch-wall-single-cfg-33",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-42000-cfg-6",
+      slug: "tosot-r32-freematch-wall-single-42000-cfg-6",
+      modelId: "tosot-r32-freematch-wall-single-42000",
       outdoorUnitId: "tosot-tm42wh21mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7694,9 +9017,79 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-34",
-      slug: "tosot-r32-freematch-wall-single-cfg-34",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-charmo-wall-single-30000-cfg-1",
+      slug: "tosot-charmo-wall-single-30000-cfg-1",
+      modelId: "tosot-charmo-wall-single-30000",
+      outdoorUnitId: "tosot-su-cosmo30-230-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-charmo-wall-single-30000-cfg-2",
+      slug: "tosot-charmo-wall-single-30000-cfg-2",
+      modelId: "tosot-charmo-wall-single-30000",
+      outdoorUnitId: "tosot-twh30at19d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-48000-cfg-1",
+      slug: "tosot-r32-freematch-wall-single-48000-cfg-1",
+      modelId: "tosot-r32-freematch-wall-single-48000",
+      outdoorUnitId: "tosot-tm48d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-48000-cfg-2",
+      slug: "tosot-r32-freematch-wall-single-48000-cfg-2",
+      modelId: "tosot-r32-freematch-wall-single-48000",
+      outdoorUnitId: "tosot-tm48d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-48000-cfg-3",
+      slug: "tosot-r32-freematch-wall-single-48000-cfg-3",
+      modelId: "tosot-r32-freematch-wall-single-48000",
+      outdoorUnitId: "tosot-tm48d6mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-r32-freematch-wall-single-48000-cfg-4",
+      slug: "tosot-r32-freematch-wall-single-48000-cfg-4",
+      modelId: "tosot-r32-freematch-wall-single-48000",
       outdoorUnitId: "tosot-tm48wh21mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7708,9 +9101,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-35",
-      slug: "tosot-r32-freematch-wall-single-cfg-35",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-48000-cfg-5",
+      slug: "tosot-r32-freematch-wall-single-48000-cfg-5",
+      modelId: "tosot-r32-freematch-wall-single-48000",
       outdoorUnitId: "tosot-tm48wh21mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7722,9 +9115,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-r32-freematch-wall-single-cfg-36",
-      slug: "tosot-r32-freematch-wall-single-cfg-36",
-      modelId: "tosot-r32-freematch-wall-single",
+      id: "tosot-r32-freematch-wall-single-48000-cfg-6",
+      slug: "tosot-r32-freematch-wall-single-48000-cfg-6",
+      modelId: "tosot-r32-freematch-wall-single-48000",
       outdoorUnitId: "tosot-tm48wh21mo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7736,9 +9129,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-g-series-central-ducted-cfg-1",
-      slug: "tosot-g-series-central-ducted-cfg-1",
-      modelId: "tosot-g-series-central-ducted",
+      id: "tosot-g-series-central-ducted-24000-cfg-1",
+      slug: "tosot-g-series-central-ducted-24000-cfg-1",
+      modelId: "tosot-g-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu30w-gdu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7750,9 +9143,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-g-series-central-ducted-cfg-2",
-      slug: "tosot-g-series-central-ducted-cfg-2",
-      modelId: "tosot-g-series-central-ducted",
+      id: "tosot-g-series-central-ducted-24000-cfg-2",
+      slug: "tosot-g-series-central-ducted-24000-cfg-2",
+      modelId: "tosot-g-series-central-ducted-24000",
       outdoorUnitId: "tosot-tu30w-gdu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -7764,9 +9157,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-g-series-central-ducted-cfg-3",
-      slug: "tosot-g-series-central-ducted-cfg-3",
-      modelId: "tosot-g-series-central-ducted",
+      id: "tosot-g-series-central-ducted-36000-cfg-1",
+      slug: "tosot-g-series-central-ducted-36000-cfg-1",
+      modelId: "tosot-g-series-central-ducted-36000",
       outdoorUnitId: "tosot-tu36w-gdu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -7778,37 +9171,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-g-series-central-ducted-cfg-4",
-      slug: "tosot-g-series-central-ducted-cfg-4",
-      modelId: "tosot-g-series-central-ducted",
-      outdoorUnitId: "tosot-tu60w-gdu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-g-series-central-ducted-cfg-5",
-      slug: "tosot-g-series-central-ducted-cfg-5",
-      modelId: "tosot-g-series-central-ducted",
-      outdoorUnitId: "tosot-tu60w-gdu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53500,
-      coolingCapacityMaxBtu: 53500,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tosot-g-series-central-ducted-cfg-6",
-      slug: "tosot-g-series-central-ducted-cfg-6",
-      modelId: "tosot-g-series-central-ducted",
+      id: "tosot-g-series-central-ducted-36000-cfg-2",
+      slug: "tosot-g-series-central-ducted-36000-cfg-2",
+      modelId: "tosot-g-series-central-ducted-36000",
       outdoorUnitId: "tosot-tu36-32gdu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -7820,9 +9185,37 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-g-series-central-ducted-cfg-7",
-      slug: "tosot-g-series-central-ducted-cfg-7",
-      modelId: "tosot-g-series-central-ducted",
+      id: "tosot-g-series-central-ducted-48000-cfg-1",
+      slug: "tosot-g-series-central-ducted-48000-cfg-1",
+      modelId: "tosot-g-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60w-gdu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-g-series-central-ducted-48000-cfg-2",
+      slug: "tosot-g-series-central-ducted-48000-cfg-2",
+      modelId: "tosot-g-series-central-ducted-48000",
+      outdoorUnitId: "tosot-tu60w-gdu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53500,
+      coolingCapacityMaxBtu: 53500,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-g-series-central-ducted-48000-cfg-3",
+      slug: "tosot-g-series-central-ducted-48000-cfg-3",
+      modelId: "tosot-g-series-central-ducted-48000",
       outdoorUnitId: "tosot-tu60-32gdu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53500,
@@ -7834,9 +9227,163 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-360-air-discharge-cassette-unit-wall-single-cfg-1",
-      slug: "tosot-360-air-discharge-cassette-unit-wall-single-cfg-1",
-      modelId: "tosot-360-air-discharge-cassette-unit-wall-single",
+      id: "tosot-m-series-wall-single-48000-cfg-1",
+      slug: "tosot-m-series-wall-single-48000-cfg-1",
+      modelId: "tosot-m-series-wall-single-48000",
+      outdoorUnitId: "tosot-tmsci7h4r48",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-48000-cfg-2",
+      slug: "tosot-m-series-wall-single-48000-cfg-2",
+      modelId: "tosot-m-series-wall-single-48000",
+      outdoorUnitId: "tosot-tmsci7h4r48",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-48000-cfg-3",
+      slug: "tosot-m-series-wall-single-48000-cfg-3",
+      modelId: "tosot-m-series-wall-single-48000",
+      outdoorUnitId: "tosot-tmsci7h4r48",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-48000-cfg-4",
+      slug: "tosot-m-series-wall-single-48000-cfg-4",
+      modelId: "tosot-m-series-wall-single-48000",
+      outdoorUnitId: "tosot-tm48h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-48000-cfg-5",
+      slug: "tosot-m-series-wall-single-48000-cfg-5",
+      modelId: "tosot-m-series-wall-single-48000",
+      outdoorUnitId: "tosot-tm48h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-m-series-wall-single-48000-cfg-6",
+      slug: "tosot-m-series-wall-single-48000-cfg-6",
+      modelId: "tosot-m-series-wall-single-48000",
+      outdoorUnitId: "tosot-tm48h32mo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-12000-cfg-1",
+      slug: "tosot-all-match-wall-single-12000-cfg-1",
+      modelId: "tosot-all-match-wall-single-12000",
+      outdoorUnitId: "tosot-tavci7h4r12",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-12000-cfg-2",
+      slug: "tosot-all-match-wall-single-12000-cfg-2",
+      modelId: "tosot-all-match-wall-single-12000",
+      outdoorUnitId: "tosot-tavci7h4r12",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-12000-cfg-3",
+      slug: "tosot-all-match-wall-single-12000-cfg-3",
+      modelId: "tosot-all-match-wall-single-12000",
+      outdoorUnitId: "tosot-tavci7h4r12",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-12000-cfg-4",
+      slug: "tosot-all-match-wall-single-12000-cfg-4",
+      modelId: "tosot-all-match-wall-single-12000",
+      outdoorUnitId: "tosot-tavci7h4r12",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-12000-cfg-5",
+      slug: "tosot-all-match-wall-single-12000-cfg-5",
+      modelId: "tosot-all-match-wall-single-12000",
+      outdoorUnitId: "tosot-tavci7h4r12",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-360-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      slug: "tosot-360-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      modelId: "tosot-360-air-discharge-cassette-unit-wall-single-9000",
       outdoorUnitId: "tosot-tavci7h4r09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7848,9 +9395,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-one-way-air-discharge-cassette-unit-wall-single-cfg-1",
-      slug: "tosot-one-way-air-discharge-cassette-unit-wall-single-cfg-1",
-      modelId: "tosot-one-way-air-discharge-cassette-unit-wall-single",
+      id: "tosot-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      slug: "tosot-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      modelId: "tosot-one-way-air-discharge-cassette-unit-wall-single-9000",
       outdoorUnitId: "tosot-tavci7h4r09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7862,9 +9409,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-floor-ceiling-wall-single-cfg-1",
-      slug: "tosot-floor-ceiling-wall-single-cfg-1",
-      modelId: "tosot-floor-ceiling-wall-single",
+      id: "tosot-floor-ceiling-wall-single-9000-cfg-1",
+      slug: "tosot-floor-ceiling-wall-single-9000-cfg-1",
+      modelId: "tosot-floor-ceiling-wall-single-9000",
       outdoorUnitId: "tosot-tavci7h4r09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7876,9 +9423,23 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-aoraki-wall-single-cfg-1",
-      slug: "tosot-aoraki-wall-single-cfg-1",
-      modelId: "tosot-aoraki-wall-single",
+      id: "tosot-ducted-wall-single-9000-cfg-1",
+      slug: "tosot-ducted-wall-single-9000-cfg-1",
+      modelId: "tosot-ducted-wall-single-9000",
+      outdoorUnitId: "tosot-tavci7h4r09",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 22,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-aoraki-wall-single-9000-cfg-1",
+      slug: "tosot-aoraki-wall-single-9000-cfg-1",
+      modelId: "tosot-aoraki-wall-single-9000",
       outdoorUnitId: "tosot-su-aoraki9-115-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7890,9 +9451,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-aoraki-wall-single-cfg-2",
-      slug: "tosot-aoraki-wall-single-cfg-2",
-      modelId: "tosot-aoraki-wall-single",
+      id: "tosot-aoraki-wall-single-9000-cfg-2",
+      slug: "tosot-aoraki-wall-single-9000-cfg-2",
+      modelId: "tosot-aoraki-wall-single-9000",
       outdoorUnitId: "tosot-su-aoraki9-230-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -7904,9 +9465,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-aoraki-wall-single-cfg-3",
-      slug: "tosot-aoraki-wall-single-cfg-3",
-      modelId: "tosot-aoraki-wall-single",
+      id: "tosot-aoraki-wall-single-12000-cfg-1",
+      slug: "tosot-aoraki-wall-single-12000-cfg-1",
+      modelId: "tosot-aoraki-wall-single-12000",
       outdoorUnitId: "tosot-su-aoraki12-115-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -7918,9 +9479,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-aoraki-wall-single-cfg-4",
-      slug: "tosot-aoraki-wall-single-cfg-4",
-      modelId: "tosot-aoraki-wall-single",
+      id: "tosot-aoraki-wall-single-12000-cfg-2",
+      slug: "tosot-aoraki-wall-single-12000-cfg-2",
+      modelId: "tosot-aoraki-wall-single-12000",
       outdoorUnitId: "tosot-su-aoraki12-230-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -7932,9 +9493,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-aoraki-wall-single-cfg-5",
-      slug: "tosot-aoraki-wall-single-cfg-5",
-      modelId: "tosot-aoraki-wall-single",
+      id: "tosot-aoraki-wall-single-18000-cfg-1",
+      slug: "tosot-aoraki-wall-single-18000-cfg-1",
+      modelId: "tosot-aoraki-wall-single-18000",
       outdoorUnitId: "tosot-su-aoraki18-230-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -7946,9 +9507,37 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ultra-heat-flexx-central-ducted-cfg-1",
-      slug: "tosot-ultra-heat-flexx-central-ducted-cfg-1",
-      modelId: "tosot-ultra-heat-flexx-central-ducted",
+      id: "tosot-airy-wall-single-9000-cfg-1",
+      slug: "tosot-airy-wall-single-9000-cfg-1",
+      modelId: "tosot-airy-wall-single-9000",
+      outdoorUnitId: "tosot-tw09wh29d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 30,
+      hspf2: 11.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-airy-wall-single-12000-cfg-1",
+      slug: "tosot-airy-wall-single-12000-cfg-1",
+      modelId: "tosot-airy-wall-single-12000",
+      outdoorUnitId: "tosot-tw12wh29d6do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-ultra-heat-flexx-central-ducted-24000-cfg-1",
+      slug: "tosot-ultra-heat-flexx-central-ducted-24000-cfg-1",
+      modelId: "tosot-ultra-heat-flexx-central-ducted-24000",
       outdoorUnitId: "tosot-tu36w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7960,9 +9549,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ultra-heat-flexx-central-ducted-cfg-2",
-      slug: "tosot-ultra-heat-flexx-central-ducted-cfg-2",
-      modelId: "tosot-ultra-heat-flexx-central-ducted",
+      id: "tosot-ultra-heat-flexx-central-ducted-36000-cfg-1",
+      slug: "tosot-ultra-heat-flexx-central-ducted-36000-cfg-1",
+      modelId: "tosot-ultra-heat-flexx-central-ducted-36000",
       outdoorUnitId: "tosot-tu36w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -7974,9 +9563,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ultra-heat-flexx-central-ducted-cfg-3",
-      slug: "tosot-ultra-heat-flexx-central-ducted-cfg-3",
-      modelId: "tosot-ultra-heat-flexx-central-ducted",
+      id: "tosot-ultra-heat-flexx-central-ducted-48000-cfg-1",
+      slug: "tosot-ultra-heat-flexx-central-ducted-48000-cfg-1",
+      modelId: "tosot-ultra-heat-flexx-central-ducted-48000",
       outdoorUnitId: "tosot-tu60w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7988,9 +9577,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-ultra-heat-flexx-central-ducted-cfg-4",
-      slug: "tosot-ultra-heat-flexx-central-ducted-cfg-4",
-      modelId: "tosot-ultra-heat-flexx-central-ducted",
+      id: "tosot-ultra-heat-flexx-central-ducted-48000-cfg-2",
+      slug: "tosot-ultra-heat-flexx-central-ducted-48000-cfg-2",
+      modelId: "tosot-ultra-heat-flexx-central-ducted-48000",
       outdoorUnitId: "tosot-tu60w-edu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -8002,9 +9591,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-e-series-central-ducted-cfg-1",
-      slug: "tosot-e-series-central-ducted-cfg-1",
-      modelId: "tosot-e-series-central-ducted",
+      id: "tosot-e-series-central-ducted-36000-cfg-1",
+      slug: "tosot-e-series-central-ducted-36000-cfg-1",
+      modelId: "tosot-e-series-central-ducted-36000",
       outdoorUnitId: "tosot-hp-ua36-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -8016,9 +9605,9 @@ export const tosotDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tosot-e-series-central-ducted-cfg-2",
-      slug: "tosot-e-series-central-ducted-cfg-2",
-      modelId: "tosot-e-series-central-ducted",
+      id: "tosot-e-series-central-ducted-48000-cfg-1",
+      slug: "tosot-e-series-central-ducted-48000-cfg-1",
+      modelId: "tosot-e-series-central-ducted-48000",
       outdoorUnitId: "tosot-hp-ua60-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -8028,11 +9617,39 @@ export const tosotDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-30000-cfg-1",
+      slug: "tosot-all-match-wall-single-30000-cfg-1",
+      modelId: "tosot-all-match-wall-single-30000",
+      outdoorUnitId: "tosot-tw30hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.5,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tosot-all-match-wall-single-30000-cfg-2",
+      slug: "tosot-all-match-wall-single-30000-cfg-2",
+      modelId: "tosot-all-match-wall-single-30000",
+      outdoorUnitId: "tosot-tw30hc32a5do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22.5,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "tosot-standard-wall-single-cfg-1",
+      configurationId: "tosot-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8043,51 +9660,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-6",
+      configurationId: "tosot-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8098,84 +9671,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-14",
+      configurationId: "tosot-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8186,18 +9682,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-16",
+      configurationId: "tosot-standard-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8208,7 +9693,40 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-17",
+      configurationId: "tosot-standard-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8219,7 +9737,139 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-18",
+      configurationId: "tosot-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-12000-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8230,40 +9880,40 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-19",
+      configurationId: "tosot-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
+          heatingCapacityBtu: 12800,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-20",
+      configurationId: "tosot-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
+          heatingCapacityBtu: 10900,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-21",
+      configurationId: "tosot-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
+          heatingCapacityBtu: 12400,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-22",
+      configurationId: "tosot-standard-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8274,7 +9924,40 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-23",
+      configurationId: "tosot-standard-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-20000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8285,29 +9968,73 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-24",
+      configurationId: "tosot-standard-wall-single-20000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
+          heatingCapacityBtu: 19200,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-25",
+      configurationId: "tosot-standard-wall-single-20000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
+          heatingCapacityBtu: 20000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-26",
+      configurationId: "tosot-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8318,29 +10045,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-29",
+      configurationId: "tosot-standard-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8351,227 +10056,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-50",
+      configurationId: "tosot-standard-wall-single-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8582,128 +10067,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-standard-wall-single-cfg-51",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-53",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-54",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-55",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-56",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-57",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-58",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-59",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-60",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-standard-wall-single-cfg-61",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-lomo-wall-single-cfg-1",
+      configurationId: "tosot-lomo-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8714,7 +10078,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-lomo-wall-single-cfg-2",
+      configurationId: "tosot-lomo-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8725,7 +10089,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-lomo-wall-single-cfg-3",
+      configurationId: "tosot-lomo-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8736,29 +10100,205 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-lomo-wall-single-cfg-4",
+      configurationId: "tosot-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-24000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 24000,
-          cop: 1.81,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-lomo-wall-single-cfg-5",
+      configurationId: "tosot-standard-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27800,
-          cop: 1.85,
+          heatingCapacityBtu: 23800,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-j-series-wall-single-cfg-1",
+      configurationId: "tosot-standard-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-30000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-30000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-j-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8769,7 +10309,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-j-series-wall-single-cfg-2",
+      configurationId: "tosot-j-series-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8780,7 +10320,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-j-series-wall-single-cfg-3",
+      configurationId: "tosot-j-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8791,7 +10331,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-j-series-wall-single-cfg-4",
+      configurationId: "tosot-j-series-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8802,7 +10342,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-1",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8813,29 +10353,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-4",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8846,29 +10364,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-7",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8879,62 +10375,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-13",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8945,7 +10386,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-14",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8956,29 +10397,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-17",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8989,7 +10408,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-18",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9000,29 +10419,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-21",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9033,7 +10430,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-22",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9044,7 +10441,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-23",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9055,62 +10452,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-29",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9121,7 +10463,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-30",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9132,7 +10474,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-31",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9143,7 +10485,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-32",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9154,40 +10496,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-36",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-15",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9198,40 +10507,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-40",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-16",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9242,40 +10518,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-44",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-17",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9286,7 +10529,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-45",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-18",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9297,7 +10540,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-46",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-19",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9308,7 +10551,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-47",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-20",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9319,7 +10562,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-48",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-21",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9330,51 +10573,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-50",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-51",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-53",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-22",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9385,7 +10584,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-54",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-23",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9396,7 +10595,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-55",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-24",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9407,7 +10606,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-56",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-25",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9418,7 +10617,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-57",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-26",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9429,7 +10628,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-58",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-27",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9440,7 +10639,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-59",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-28",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9451,7 +10650,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-60",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-29",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9462,7 +10661,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-61",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-30",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9473,7 +10672,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-62",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-31",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9484,29 +10683,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-63",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-64",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-65",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-32",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9517,7 +10694,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-66",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-33",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9528,7 +10705,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-67",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-34",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9539,7 +10716,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-cfg-68",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-24000-cfg-35",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9550,2955 +10727,216 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-1",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8200,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 1.77,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8200,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
+          heatingCapacityBtu: 38000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-5",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 1.77,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.94,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
+          heatingCapacityBtu: 37200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-10",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
+          heatingCapacityBtu: 33000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-11",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.94,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.94,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
+          heatingCapacityBtu: 32800,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-16",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
+          heatingCapacityBtu: 44000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-17",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
+          heatingCapacityBtu: 39500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-21",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
+          heatingCapacityBtu: 44000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-22",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
+          heatingCapacityBtu: 39500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-23",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
+          heatingCapacityBtu: 39000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-24",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
+          heatingCapacityBtu: 44500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-25",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
+          heatingCapacityBtu: 35200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-26",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 18800,
+          heatingCapacityBtu: 35200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-27",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
+          heatingCapacityBtu: 31200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-28",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 18800,
+          heatingCapacityBtu: 31200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-29",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-15",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.94,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
+          heatingCapacityBtu: 35200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-charmo-wall-single-cfg-32",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-16",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.94,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-charmo-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
+          heatingCapacityBtu: 35200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-pular-wall-single-cfg-1",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-17",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10400,
+          heatingCapacityBtu: 35200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-pular-wall-single-cfg-22",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-18",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
+          heatingCapacityBtu: 31200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-pular-wall-single-cfg-26",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-19",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21800,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-pular-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
+          heatingCapacityBtu: 44000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tosot-m-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.22,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30800,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32400,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14300,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.22,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30800,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30800,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.22,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.22,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.22,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-50",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-51",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-53",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-54",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-55",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-56",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-57",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-58",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-59",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-60",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-61",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-62",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-63",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-64",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-65",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-66",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-67",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-68",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-69",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-70",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-71",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-m-series-wall-single-cfg-72",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 2.12,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-all-match-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-cosmo-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-cosmo-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-ultra-heat-series-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-flexx-ultra-heat-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-multi-zone-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10100,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12500,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12300,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-clivia-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-console-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-console-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-console-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-console-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-ducted-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-ducted-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6600,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 2.11,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-airy-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-r32-freematch-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-g-series-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-g-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2.14,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-g-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-g-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38500,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-g-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-g-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-g-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-360-air-discharge-cassette-unit-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6900,
-          cop: 1.94,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-one-way-air-discharge-cassette-unit-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7200,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-floor-ceiling-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6700,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-aoraki-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-aoraki-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-aoraki-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-aoraki-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-aoraki-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-ultra-heat-flexx-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-ultra-heat-flexx-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tosot-ultra-heat-flexx-central-ducted-cfg-3",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-20",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -12509,7 +10947,7 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-ultra-heat-flexx-central-ducted-cfg-4",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-21",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -12520,7 +10958,95 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-e-series-central-ducted-cfg-1",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-23",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-24",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-25",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-26",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-48000-cfg-27",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -12531,12 +11057,3103 @@ export const tosotDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tosot-e-series-central-ducted-cfg-2",
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-high-efficiency-series-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8200,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 1.77,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8200,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 1.77,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-9000-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-9000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21800,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-20000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-pular-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14300,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-18000-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-24000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-30000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30800,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30800,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30800,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-36000-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-lomo-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-lomo-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27800,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2.12,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-17-seer-dc-inverter-rooftop-unit-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-cosmo-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-cosmo-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-ultra-heat-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-flexx-ultra-heat-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 45000,
           cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-multi-zone-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-42000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-42000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-42000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-20000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-20000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-12000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10100,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12500,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12300,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-clivia-wall-single-18000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-console-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-console-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-console-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-ducted-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-36000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-console-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-42000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-42000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-42000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-charmo-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-r32-freematch-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-g-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-g-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2.14,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-g-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-g-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-g-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38500,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-g-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43000,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-g-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43000,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-m-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-360-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7200,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-floor-ceiling-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6700,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-ducted-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-aoraki-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-aoraki-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-aoraki-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-aoraki-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-aoraki-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-airy-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-ultra-heat-flexx-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-ultra-heat-flexx-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-ultra-heat-flexx-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-ultra-heat-flexx-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-e-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-e-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tosot-all-match-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
           confidence: "verified",
         }
       ]

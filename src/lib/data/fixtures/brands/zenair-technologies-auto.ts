@@ -26,18 +26,46 @@ export const zenairtechnologiesDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "zenair-technologies-standard-wall-single",
-      slug: "zenair-technologies-standard-wall-single",
-      name: "Standard",
+      id: "zenair-technologies-standard-wall-single-12000",
+      slug: "zenair-technologies-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "zenair-technologies-standard",
       brandId: "zenair-technologies",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 10300,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zenair-technologies-standard-wall-single-48000",
+      slug: "zenair-technologies-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "zenair-technologies-standard",
+      brandId: "zenair-technologies",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 36000,
       seer2Min: null,
       seer2Max: null,
@@ -71,9 +99,9 @@ export const zenairtechnologiesDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "zenair-technologies-standard-wall-single-cfg-1",
-      slug: "zenair-technologies-standard-wall-single-cfg-1",
-      modelId: "zenair-technologies-standard-wall-single",
+      id: "zenair-technologies-standard-wall-single-12000-cfg-1",
+      slug: "zenair-technologies-standard-wall-single-12000-cfg-1",
+      modelId: "zenair-technologies-standard-wall-single-12000",
       outdoorUnitId: "zenair-technologies-zen-wm12hp23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -85,9 +113,9 @@ export const zenairtechnologiesDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zenair-technologies-standard-wall-single-cfg-2",
-      slug: "zenair-technologies-standard-wall-single-cfg-2",
-      modelId: "zenair-technologies-standard-wall-single",
+      id: "zenair-technologies-standard-wall-single-48000-cfg-1",
+      slug: "zenair-technologies-standard-wall-single-48000-cfg-1",
+      modelId: "zenair-technologies-standard-wall-single-48000",
       outdoorUnitId: "zenair-technologies-zen-pc48hp20s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -101,7 +129,7 @@ export const zenairtechnologiesDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "zenair-technologies-standard-wall-single-cfg-1",
+      configurationId: "zenair-technologies-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -112,7 +140,7 @@ export const zenairtechnologiesDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zenair-technologies-standard-wall-single-cfg-2",
+      configurationId: "zenair-technologies-standard-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

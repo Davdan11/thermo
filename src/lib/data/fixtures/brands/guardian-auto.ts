@@ -48,24 +48,25 @@ export const guardianDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "guardian-urac-wall-single",
-      slug: "guardian-urac-wall-single",
-      name: "URAC",
+      id: "guardian-urac-wall-single-9000",
+      slug: "guardian-urac-wall-single-9000",
+      name: "URAC 9 000 BTU",
       seriesId: "guardian-urac",
       brandId: "guardian",
-      modelNumber: "URAC",
-      normalizedModelNumber: "urac",
+      modelNumber: "URAC 9k",
+      normalizedModelNumber: "urac-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 9000,
-      heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 21,
+      heatingCapacity5FMaxBtu: 9500,
+      seer2Min: 23,
       seer2Max: 25,
-      hspf2Min: 9.5,
+      hspf2Min: 10,
       hspf2Max: 11,
-      cop5FMin: 1.8,
+      cop5FMin: 1.9,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -74,24 +75,106 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single",
-      slug: "guardian-umulti-wall-single",
-      name: "UMULTI",
-      seriesId: "guardian-umulti",
+      id: "guardian-urac-wall-single-12000",
+      slug: "guardian-urac-wall-single-12000",
+      name: "URAC 12 000 BTU",
+      seriesId: "guardian-urac",
       brandId: "guardian",
-      modelNumber: "UMULTI",
-      normalizedModelNumber: "umulti",
+      modelNumber: "URAC 12k",
+      normalizedModelNumber: "urac-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
-      heatingCapacity5FMinBtu: 11500,
-      heatingCapacity5FMaxBtu: 28200,
-      seer2Min: 17.5,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9300,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 22,
       seer2Max: 23,
-      hspf2Min: 8.8,
+      hspf2Min: 9.5,
       hspf2Max: 10,
-      cop5FMin: 1.82,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-urac-wall-single-18000",
+      slug: "guardian-urac-wall-single-18000",
+      name: "URAC 18 000 BTU",
+      seriesId: "guardian-urac",
+      brandId: "guardian",
+      modelNumber: "URAC 18k",
+      normalizedModelNumber: "urac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-urac-wall-single-24000",
+      slug: "guardian-urac-wall-single-24000",
+      name: "URAC 24 000 BTU",
+      seriesId: "guardian-urac",
+      brandId: "guardian",
+      modelNumber: "URAC 24k",
+      normalizedModelNumber: "urac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-umulti-wall-single-18000",
+      slug: "guardian-umulti-wall-single-18000",
+      name: "UMULTI 18 000 BTU",
+      seriesId: "guardian-umulti",
+      brandId: "guardian",
+      modelNumber: "UMULTI 18k",
+      normalizedModelNumber: "umulti-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11500,
+      heatingCapacity5FMaxBtu: 11900,
+      seer2Min: 17.5,
+      seer2Max: 22,
+      hspf2Min: 9.4,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
       cop5FMax: 1.99,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -100,22 +183,266 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-upac-wall-single",
-      slug: "guardian-upac-wall-single",
-      name: "UPAC",
-      seriesId: "guardian-upac",
+      id: "guardian-umulti-wall-single-24000",
+      slug: "guardian-umulti-wall-single-24000",
+      name: "UMULTI 24 000 BTU",
+      seriesId: "guardian-umulti",
       brandId: "guardian",
-      modelNumber: "UPAC",
-      normalizedModelNumber: "upac",
+      modelNumber: "UMULTI 24k",
+      normalizedModelNumber: "umulti-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 17600,
+      heatingCapacity5FMaxBtu: 18200,
+      seer2Min: 18,
+      seer2Max: 23,
+      hspf2Min: 8.8,
+      hspf2Max: 10,
+      cop5FMin: 1.82,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-9000",
+      slug: "guardian-upac-wall-single-9000",
+      name: "UPAC 9 000 BTU",
+      seriesId: "guardian-upac",
+      brandId: "guardian",
+      modelNumber: "UPAC 9k",
+      normalizedModelNumber: "upac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 44000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 8700,
-      heatingCapacity5FMaxBtu: 35600,
+      heatingCapacity5FMaxBtu: 8900,
+      seer2Min: 19.5,
+      seer2Max: 22,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-12000",
+      slug: "guardian-upac-wall-single-12000",
+      name: "UPAC 12 000 BTU",
+      seriesId: "guardian-upac",
+      brandId: "guardian",
+      modelNumber: "UPAC 12k",
+      normalizedModelNumber: "upac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8700,
+      heatingCapacity5FMaxBtu: 8900,
+      seer2Min: 19.5,
+      seer2Max: 22,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-30000",
+      slug: "guardian-upac-wall-single-30000",
+      name: "UPAC 30 000 BTU",
+      seriesId: "guardian-upac",
+      brandId: "guardian",
+      modelNumber: "UPAC 30k",
+      normalizedModelNumber: "upac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 23200,
+      heatingCapacity5FMaxBtu: 25600,
       seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-42000",
+      slug: "guardian-upac-wall-single-42000",
+      name: "UPAC 42 000 BTU",
+      seriesId: "guardian-upac",
+      brandId: "guardian",
+      modelNumber: "UPAC 42k",
+      normalizedModelNumber: "upac-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 44000,
+      coolingCapacityMaxBtu: 44000,
+      heatingCapacity5FMinBtu: 28600,
+      heatingCapacity5FMaxBtu: 35600,
+      seer2Min: 19.5,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-36000",
+      slug: "guardian-upac-wall-single-36000",
+      name: "UPAC 36 000 BTU",
+      seriesId: "guardian-upac",
+      brandId: "guardian",
+      modelNumber: "UPAC 36k",
+      normalizedModelNumber: "upac-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 25600,
+      heatingCapacity5FMaxBtu: 26000,
+      seer2Min: 19.5,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-18000",
+      slug: "guardian-upac-wall-single-18000",
+      name: "UPAC 18 000 BTU",
+      seriesId: "guardian-upac",
+      brandId: "guardian",
+      modelNumber: "UPAC 18k",
+      normalizedModelNumber: "upac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13200,
+      heatingCapacity5FMaxBtu: 14100,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-umulti-wall-single-42000",
+      slug: "guardian-umulti-wall-single-42000",
+      name: "UMULTI 42 000 BTU",
+      seriesId: "guardian-umulti",
+      brandId: "guardian",
+      modelNumber: "UMULTI 42k",
+      normalizedModelNumber: "umulti-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18,
+      seer2Max: 22,
+      hspf2Min: 8.8,
+      hspf2Max: 9.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-umulti-wall-single-36000",
+      slug: "guardian-umulti-wall-single-36000",
+      name: "UMULTI 36 000 BTU",
+      seriesId: "guardian-umulti",
+      brandId: "guardian",
+      modelNumber: "UMULTI 36k",
+      normalizedModelNumber: "umulti-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 19,
       seer2Max: 22,
       hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.83,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-24000",
+      slug: "guardian-upac-wall-single-24000",
+      name: "UPAC 24 000 BTU",
+      seriesId: "guardian-upac",
+      brandId: "guardian",
+      modelNumber: "UPAC 24k",
+      normalizedModelNumber: "upac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16600,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.5,
       hspf2Max: 10.5,
       cop5FMin: 1.8,
       cop5FMax: 2,
@@ -134,8 +461,20 @@ export const guardianDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "guardian-urc09cn15stg1",
+      modelNumber: "URC09CN15STG1",
+      brandId: "guardian",
+      refrigerant: null as any,
+    },
+    {
       id: "guardian-urc12cn23stg1",
       modelNumber: "URC12CN23STG1",
+      brandId: "guardian",
+      refrigerant: null as any,
+    },
+    {
+      id: "guardian-urc12cn15stg1",
+      modelNumber: "URC12CN15STG1",
       brandId: "guardian",
       refrigerant: null as any,
     },
@@ -152,18 +491,6 @@ export const guardianDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "guardian-urc09cn15stg1",
-      modelNumber: "URC09CN15STG1",
-      brandId: "guardian",
-      refrigerant: null as any,
-    },
-    {
-      id: "guardian-urc12cn15stg1",
-      modelNumber: "URC12CN15STG1",
-      brandId: "guardian",
-      refrigerant: null as any,
-    },
-    {
       id: "guardian-umc18cn23stg1",
       modelNumber: "UMC18CN23STG1",
       brandId: "guardian",
@@ -172,18 +499,6 @@ export const guardianDataset: BrandDataset = {
     {
       id: "guardian-umc24cn23stg1",
       modelNumber: "UMC24CN23STG1",
-      brandId: "guardian",
-      refrigerant: null as any,
-    },
-    {
-      id: "guardian-umc48cn23stg1",
-      modelNumber: "UMC48CN23STG1",
-      brandId: "guardian",
-      refrigerant: null as any,
-    },
-    {
-      id: "guardian-umc36cn23stg1",
-      modelNumber: "UMC36CN23STG1",
       brandId: "guardian",
       refrigerant: null as any,
     },
@@ -218,6 +533,18 @@ export const guardianDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "guardian-umc48cn23stg1",
+      modelNumber: "UMC48CN23STG1",
+      brandId: "guardian",
+      refrigerant: null as any,
+    },
+    {
+      id: "guardian-umc36cn23stg1",
+      modelNumber: "UMC36CN23STG1",
+      brandId: "guardian",
+      refrigerant: null as any,
+    },
+    {
       id: "guardian-upc24cn23stg1",
       modelNumber: "UPC24CN23STG1",
       brandId: "guardian",
@@ -229,9 +556,9 @@ export const guardianDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "guardian-urac-wall-single-cfg-1",
-      slug: "guardian-urac-wall-single-cfg-1",
-      modelId: "guardian-urac-wall-single",
+      id: "guardian-urac-wall-single-9000-cfg-1",
+      slug: "guardian-urac-wall-single-9000-cfg-1",
+      modelId: "guardian-urac-wall-single-9000",
       outdoorUnitId: "guardian-urc09cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -243,51 +570,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-urac-wall-single-cfg-2",
-      slug: "guardian-urac-wall-single-cfg-2",
-      modelId: "guardian-urac-wall-single",
-      outdoorUnitId: "guardian-urc12cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-urac-wall-single-cfg-3",
-      slug: "guardian-urac-wall-single-cfg-3",
-      modelId: "guardian-urac-wall-single",
-      outdoorUnitId: "guardian-urc18cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-urac-wall-single-cfg-4",
-      slug: "guardian-urac-wall-single-cfg-4",
-      modelId: "guardian-urac-wall-single",
-      outdoorUnitId: "guardian-urc24cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-urac-wall-single-cfg-5",
-      slug: "guardian-urac-wall-single-cfg-5",
-      modelId: "guardian-urac-wall-single",
+      id: "guardian-urac-wall-single-9000-cfg-2",
+      slug: "guardian-urac-wall-single-9000-cfg-2",
+      modelId: "guardian-urac-wall-single-9000",
       outdoorUnitId: "guardian-urc09cn15stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -299,9 +584,23 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-urac-wall-single-cfg-6",
-      slug: "guardian-urac-wall-single-cfg-6",
-      modelId: "guardian-urac-wall-single",
+      id: "guardian-urac-wall-single-12000-cfg-1",
+      slug: "guardian-urac-wall-single-12000-cfg-1",
+      modelId: "guardian-urac-wall-single-12000",
+      outdoorUnitId: "guardian-urc12cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-urac-wall-single-12000-cfg-2",
+      slug: "guardian-urac-wall-single-12000-cfg-2",
+      modelId: "guardian-urac-wall-single-12000",
       outdoorUnitId: "guardian-urc12cn15stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -313,9 +612,37 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-1",
-      slug: "guardian-umulti-wall-single-cfg-1",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-urac-wall-single-18000-cfg-1",
+      slug: "guardian-urac-wall-single-18000-cfg-1",
+      modelId: "guardian-urac-wall-single-18000",
+      outdoorUnitId: "guardian-urc18cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-urac-wall-single-24000-cfg-1",
+      slug: "guardian-urac-wall-single-24000-cfg-1",
+      modelId: "guardian-urac-wall-single-24000",
+      outdoorUnitId: "guardian-urc24cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-umulti-wall-single-18000-cfg-1",
+      slug: "guardian-umulti-wall-single-18000-cfg-1",
+      modelId: "guardian-umulti-wall-single-18000",
       outdoorUnitId: "guardian-umc18cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -327,23 +654,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-2",
-      slug: "guardian-umulti-wall-single-cfg-2",
-      modelId: "guardian-umulti-wall-single",
-      outdoorUnitId: "guardian-umc24cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-umulti-wall-single-cfg-3",
-      slug: "guardian-umulti-wall-single-cfg-3",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-18000-cfg-2",
+      slug: "guardian-umulti-wall-single-18000-cfg-2",
+      modelId: "guardian-umulti-wall-single-18000",
       outdoorUnitId: "guardian-umc18cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -355,9 +668,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-4",
-      slug: "guardian-umulti-wall-single-cfg-4",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-18000-cfg-3",
+      slug: "guardian-umulti-wall-single-18000-cfg-3",
+      modelId: "guardian-umulti-wall-single-18000",
       outdoorUnitId: "guardian-umc18cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -369,9 +682,23 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-5",
-      slug: "guardian-umulti-wall-single-cfg-5",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-24000-cfg-1",
+      slug: "guardian-umulti-wall-single-24000-cfg-1",
+      modelId: "guardian-umulti-wall-single-24000",
+      outdoorUnitId: "guardian-umc24cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-umulti-wall-single-24000-cfg-2",
+      slug: "guardian-umulti-wall-single-24000-cfg-2",
+      modelId: "guardian-umulti-wall-single-24000",
       outdoorUnitId: "guardian-umc24cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -383,9 +710,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-6",
-      slug: "guardian-umulti-wall-single-cfg-6",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-24000-cfg-3",
+      slug: "guardian-umulti-wall-single-24000-cfg-3",
+      modelId: "guardian-umulti-wall-single-24000",
       outdoorUnitId: "guardian-umc24cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -397,9 +724,233 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-7",
-      slug: "guardian-umulti-wall-single-cfg-7",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-upac-wall-single-9000-cfg-1",
+      slug: "guardian-upac-wall-single-9000-cfg-1",
+      modelId: "guardian-upac-wall-single-9000",
+      outdoorUnitId: "guardian-upc09cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-9000-cfg-2",
+      slug: "guardian-upac-wall-single-9000-cfg-2",
+      modelId: "guardian-upac-wall-single-9000",
+      outdoorUnitId: "guardian-upc09cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-9000-cfg-3",
+      slug: "guardian-upac-wall-single-9000-cfg-3",
+      modelId: "guardian-upac-wall-single-9000",
+      outdoorUnitId: "guardian-upc09cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 19.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-12000-cfg-1",
+      slug: "guardian-upac-wall-single-12000-cfg-1",
+      modelId: "guardian-upac-wall-single-12000",
+      outdoorUnitId: "guardian-upc12cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-12000-cfg-2",
+      slug: "guardian-upac-wall-single-12000-cfg-2",
+      modelId: "guardian-upac-wall-single-12000",
+      outdoorUnitId: "guardian-upc12cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-12000-cfg-3",
+      slug: "guardian-upac-wall-single-12000-cfg-3",
+      modelId: "guardian-upac-wall-single-12000",
+      outdoorUnitId: "guardian-upc12cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-30000-cfg-1",
+      slug: "guardian-upac-wall-single-30000-cfg-1",
+      modelId: "guardian-upac-wall-single-30000",
+      outdoorUnitId: "guardian-upc36cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-30000-cfg-2",
+      slug: "guardian-upac-wall-single-30000-cfg-2",
+      modelId: "guardian-upac-wall-single-30000",
+      outdoorUnitId: "guardian-upc36cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-42000-cfg-1",
+      slug: "guardian-upac-wall-single-42000-cfg-1",
+      modelId: "guardian-upac-wall-single-42000",
+      outdoorUnitId: "guardian-upc48cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 44000,
+      coolingCapacityMaxBtu: 44000,
+      seer2: 19.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-42000-cfg-2",
+      slug: "guardian-upac-wall-single-42000-cfg-2",
+      modelId: "guardian-upac-wall-single-42000",
+      outdoorUnitId: "guardian-upc48cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 44000,
+      coolingCapacityMaxBtu: 44000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-42000-cfg-3",
+      slug: "guardian-upac-wall-single-42000-cfg-3",
+      modelId: "guardian-upac-wall-single-42000",
+      outdoorUnitId: "guardian-upc48cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 44000,
+      coolingCapacityMaxBtu: 44000,
+      seer2: 19.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-36000-cfg-1",
+      slug: "guardian-upac-wall-single-36000-cfg-1",
+      modelId: "guardian-upac-wall-single-36000",
+      outdoorUnitId: "guardian-upc36cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-36000-cfg-2",
+      slug: "guardian-upac-wall-single-36000-cfg-2",
+      modelId: "guardian-upac-wall-single-36000",
+      outdoorUnitId: "guardian-upc36cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-18000-cfg-1",
+      slug: "guardian-upac-wall-single-18000-cfg-1",
+      modelId: "guardian-upac-wall-single-18000",
+      outdoorUnitId: "guardian-upc18cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-18000-cfg-2",
+      slug: "guardian-upac-wall-single-18000-cfg-2",
+      modelId: "guardian-upac-wall-single-18000",
+      outdoorUnitId: "guardian-upc18cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-upac-wall-single-18000-cfg-3",
+      slug: "guardian-upac-wall-single-18000-cfg-3",
+      modelId: "guardian-upac-wall-single-18000",
+      outdoorUnitId: "guardian-upc18cn23stg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "guardian-umulti-wall-single-42000-cfg-1",
+      slug: "guardian-umulti-wall-single-42000-cfg-1",
+      modelId: "guardian-umulti-wall-single-42000",
       outdoorUnitId: "guardian-umc48cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -411,9 +962,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-8",
-      slug: "guardian-umulti-wall-single-cfg-8",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-42000-cfg-2",
+      slug: "guardian-umulti-wall-single-42000-cfg-2",
+      modelId: "guardian-umulti-wall-single-42000",
       outdoorUnitId: "guardian-umc48cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -425,9 +976,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-9",
-      slug: "guardian-umulti-wall-single-cfg-9",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-42000-cfg-3",
+      slug: "guardian-umulti-wall-single-42000-cfg-3",
+      modelId: "guardian-umulti-wall-single-42000",
       outdoorUnitId: "guardian-umc48cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -439,9 +990,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-10",
-      slug: "guardian-umulti-wall-single-cfg-10",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-36000-cfg-1",
+      slug: "guardian-umulti-wall-single-36000-cfg-1",
+      modelId: "guardian-umulti-wall-single-36000",
       outdoorUnitId: "guardian-umc36cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -453,9 +1004,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-11",
-      slug: "guardian-umulti-wall-single-cfg-11",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-36000-cfg-2",
+      slug: "guardian-umulti-wall-single-36000-cfg-2",
+      modelId: "guardian-umulti-wall-single-36000",
       outdoorUnitId: "guardian-umc36cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -467,9 +1018,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-umulti-wall-single-cfg-12",
-      slug: "guardian-umulti-wall-single-cfg-12",
-      modelId: "guardian-umulti-wall-single",
+      id: "guardian-umulti-wall-single-36000-cfg-3",
+      slug: "guardian-umulti-wall-single-36000-cfg-3",
+      modelId: "guardian-umulti-wall-single-36000",
       outdoorUnitId: "guardian-umc36cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -481,191 +1032,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-upac-wall-single-cfg-1",
-      slug: "guardian-upac-wall-single-cfg-1",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc09cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-2",
-      slug: "guardian-upac-wall-single-cfg-2",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc12cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-3",
-      slug: "guardian-upac-wall-single-cfg-3",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc36cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-4",
-      slug: "guardian-upac-wall-single-cfg-4",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc48cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 44000,
-      coolingCapacityMaxBtu: 44000,
-      seer2: 19.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-5",
-      slug: "guardian-upac-wall-single-cfg-5",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc36cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-6",
-      slug: "guardian-upac-wall-single-cfg-6",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc48cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 44000,
-      coolingCapacityMaxBtu: 44000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-7",
-      slug: "guardian-upac-wall-single-cfg-7",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc09cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-8",
-      slug: "guardian-upac-wall-single-cfg-8",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc12cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-9",
-      slug: "guardian-upac-wall-single-cfg-9",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc09cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 19.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-10",
-      slug: "guardian-upac-wall-single-cfg-10",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc12cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-11",
-      slug: "guardian-upac-wall-single-cfg-11",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc18cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-12",
-      slug: "guardian-upac-wall-single-cfg-12",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc36cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-13",
-      slug: "guardian-upac-wall-single-cfg-13",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc48cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 44000,
-      coolingCapacityMaxBtu: 44000,
-      seer2: 19.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-14",
-      slug: "guardian-upac-wall-single-cfg-14",
-      modelId: "guardian-upac-wall-single",
+      id: "guardian-upac-wall-single-24000-cfg-1",
+      slug: "guardian-upac-wall-single-24000-cfg-1",
+      modelId: "guardian-upac-wall-single-24000",
       outdoorUnitId: "guardian-upc24cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -677,23 +1046,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-upac-wall-single-cfg-15",
-      slug: "guardian-upac-wall-single-cfg-15",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc18cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-16",
-      slug: "guardian-upac-wall-single-cfg-16",
-      modelId: "guardian-upac-wall-single",
+      id: "guardian-upac-wall-single-24000-cfg-2",
+      slug: "guardian-upac-wall-single-24000-cfg-2",
+      modelId: "guardian-upac-wall-single-24000",
       outdoorUnitId: "guardian-upc24cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -705,23 +1060,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-upac-wall-single-cfg-17",
-      slug: "guardian-upac-wall-single-cfg-17",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc36cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-18",
-      slug: "guardian-upac-wall-single-cfg-18",
-      modelId: "guardian-upac-wall-single",
+      id: "guardian-upac-wall-single-24000-cfg-3",
+      slug: "guardian-upac-wall-single-24000-cfg-3",
+      modelId: "guardian-upac-wall-single-24000",
       outdoorUnitId: "guardian-upc24cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -733,9 +1074,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-upac-wall-single-cfg-19",
-      slug: "guardian-upac-wall-single-cfg-19",
-      modelId: "guardian-upac-wall-single",
+      id: "guardian-upac-wall-single-24000-cfg-4",
+      slug: "guardian-upac-wall-single-24000-cfg-4",
+      modelId: "guardian-upac-wall-single-24000",
       outdoorUnitId: "guardian-upc24cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -747,23 +1088,9 @@ export const guardianDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "guardian-upac-wall-single-cfg-20",
-      slug: "guardian-upac-wall-single-cfg-20",
-      modelId: "guardian-upac-wall-single",
-      outdoorUnitId: "guardian-upc18cn23stg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "guardian-upac-wall-single-cfg-21",
-      slug: "guardian-upac-wall-single-cfg-21",
-      modelId: "guardian-upac-wall-single",
+      id: "guardian-upac-wall-single-24000-cfg-5",
+      slug: "guardian-upac-wall-single-24000-cfg-5",
+      modelId: "guardian-upac-wall-single-24000",
       outdoorUnitId: "guardian-upc24cn23stg1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -777,7 +1104,7 @@ export const guardianDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "guardian-urac-wall-single-cfg-1",
+      configurationId: "guardian-urac-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -788,40 +1115,7 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-urac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-urac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-urac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-urac-wall-single-cfg-5",
+      configurationId: "guardian-urac-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -832,7 +1126,18 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-urac-wall-single-cfg-6",
+      configurationId: "guardian-urac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-urac-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -843,7 +1148,29 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-umulti-wall-single-cfg-1",
+      configurationId: "guardian-urac-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-urac-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-umulti-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -854,18 +1181,7 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-umulti-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17600,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-umulti-wall-single-cfg-3",
+      configurationId: "guardian-umulti-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -876,7 +1192,7 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-umulti-wall-single-cfg-4",
+      configurationId: "guardian-umulti-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -887,7 +1203,18 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-umulti-wall-single-cfg-5",
+      configurationId: "guardian-umulti-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17600,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-umulti-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -898,7 +1225,7 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-umulti-wall-single-cfg-6",
+      configurationId: "guardian-umulti-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -909,73 +1236,7 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-umulti-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-umulti-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-umulti-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27800,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-umulti-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-umulti-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-umulti-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21800,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-1",
+      configurationId: "guardian-upac-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -986,7 +1247,7 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-2",
+      configurationId: "guardian-upac-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -997,73 +1258,7 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-9",
+      configurationId: "guardian-upac-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1074,7 +1269,29 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-10",
+      configurationId: "guardian-upac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1085,18 +1302,18 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-11",
+      configurationId: "guardian-upac-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 13400,
-          cop: 1.8,
+          heatingCapacityBtu: 25600,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-12",
+      configurationId: "guardian-upac-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1107,7 +1324,29 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-13",
+      configurationId: "guardian-upac-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1118,40 +1357,18 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-14",
+      configurationId: "guardian-upac-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
+          heatingCapacityBtu: 25600,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19100,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-17",
+      configurationId: "guardian-upac-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1162,29 +1379,29 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-18",
+      configurationId: "guardian-upac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
+          heatingCapacityBtu: 13400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "guardian-upac-wall-single-cfg-20",
+      configurationId: "guardian-upac-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1195,7 +1412,117 @@ export const guardianDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "guardian-upac-wall-single-cfg-21",
+      configurationId: "guardian-umulti-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-umulti-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-umulti-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27800,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-umulti-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-umulti-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-umulti-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21800,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19100,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "guardian-upac-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,

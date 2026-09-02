@@ -125,24 +125,79 @@ export const panasonicDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "panasonic-exterios-e-wall-single",
-      slug: "panasonic-exterios-e-wall-single",
-      name: "Exterios E",
+      id: "panasonic-exterios-e-wall-single-9000",
+      slug: "panasonic-exterios-e-wall-single-9000",
+      name: "Exterios E 9 000 BTU",
       seriesId: "panasonic-exterios-e",
       brandId: "panasonic",
-      modelNumber: "Exterios E",
-      normalizedModelNumber: "exterios-e",
+      modelNumber: "Exterios E 9k",
+      normalizedModelNumber: "exterios-e-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 17200,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 7900,
+      heatingCapacity5FMaxBtu: 8100,
+      seer2Min: 20.5,
+      seer2Max: 23,
+      hspf2Min: 9.9,
+      hspf2Max: 10.3,
+      cop5FMin: 1.64,
+      cop5FMax: 1.82,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-exterios-e-wall-single-12000",
+      slug: "panasonic-exterios-e-wall-single-12000",
+      name: "Exterios E 12 000 BTU",
+      seriesId: "panasonic-exterios-e",
+      brandId: "panasonic",
+      modelNumber: "Exterios E 12k",
+      normalizedModelNumber: "exterios-e-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      heatingCapacity5FMinBtu: 9500,
+      heatingCapacity5FMaxBtu: 10500,
+      seer2Min: 20,
+      seer2Max: 22.5,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.58,
+      cop5FMax: 1.64,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-exterios-e-wall-single-18000",
+      slug: "panasonic-exterios-e-wall-single-18000",
+      name: "Exterios E 18 000 BTU",
+      seriesId: "panasonic-exterios-e",
+      brandId: "panasonic",
+      modelNumber: "Exterios E 18k",
+      normalizedModelNumber: "exterios-e-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 17200,
+      heatingCapacity5FMinBtu: 12000,
       heatingCapacity5FMaxBtu: 12000,
       seer2Min: 19.5,
-      seer2Max: 23,
+      seer2Max: 19.5,
       hspf2Min: 9,
-      hspf2Max: 10.3,
-      cop5FMin: 1.58,
+      hspf2Max: 9,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
@@ -151,19 +206,20 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-standard-wall-single",
-      slug: "panasonic-standard-wall-single",
-      name: "Standard",
+      id: "panasonic-standard-wall-single-9000",
+      slug: "panasonic-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "panasonic-standard",
       brandId: "panasonic",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 8000,
-      heatingCapacity5FMaxBtu: 37000,
+      heatingCapacity5FMaxBtu: 8000,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -177,25 +233,80 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-multizone-wall-single",
-      slug: "panasonic-multizone-wall-single",
-      name: "Multizone",
-      seriesId: "panasonic-multizone",
+      id: "panasonic-standard-wall-single-12000",
+      slug: "panasonic-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "panasonic-standard",
       brandId: "panasonic",
-      modelNumber: "Multizone",
-      normalizedModelNumber: "multizone",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 12500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-15000",
+      slug: "panasonic-standard-wall-single-15000",
+      name: "Standard 15 000 BTU",
+      seriesId: "panasonic-standard",
+      brandId: "panasonic",
+      modelNumber: "Standard 15k",
+      normalizedModelNumber: "standard-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 18200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-multizone-wall-single-18000",
+      slug: "panasonic-multizone-wall-single-18000",
+      name: "Multizone 18 000 BTU",
+      seriesId: "panasonic-multizone",
+      brandId: "panasonic",
+      modelNumber: "Multizone 18k",
+      normalizedModelNumber: "multizone-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 16700,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMaxBtu: 19000,
       heatingCapacity5FMinBtu: 17400,
-      heatingCapacity5FMaxBtu: 35700,
+      heatingCapacity5FMaxBtu: 24600,
       seer2Min: 19,
-      seer2Max: 24.5,
+      seer2Max: 22.5,
       hspf2Min: 9.1,
       hspf2Max: 12.5,
       cop5FMin: 1.82,
-      cop5FMax: 2.28,
+      cop5FMax: 2.15,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -203,15 +314,70 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single",
-      slug: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single",
-      name: "CS-XE9WKUAW / CU-XE9WKUA",
-      seriesId: "panasonic-cs-xe9wkuaw-cu-xe9wkua",
+      id: "panasonic-multizone-wall-single-24000",
+      slug: "panasonic-multizone-wall-single-24000",
+      name: "Multizone 24 000 BTU",
+      seriesId: "panasonic-multizone",
       brandId: "panasonic",
-      modelNumber: "CS-XE9WKUAW / CU-XE9WKUA",
-      normalizedModelNumber: "cs-xe9wkuaw-cu-xe9wkua",
+      modelNumber: "Multizone 24k",
+      normalizedModelNumber: "multizone-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 35700,
+      seer2Min: 22,
+      seer2Max: 24,
+      hspf2Min: 9.1,
+      hspf2Max: 11.4,
+      cop5FMin: 1.85,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-36000",
+      slug: "panasonic-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "panasonic-standard",
+      brandId: "panasonic",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19800,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-9000",
+      slug: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-9000",
+      name: "CS-XE9WKUAW / CU-XE9WKUA 9 000 BTU",
+      seriesId: "panasonic-cs-xe9wkuaw-cu-xe9wkua",
+      brandId: "panasonic",
+      modelNumber: "CS-XE9WKUAW / CU-XE9WKUA 9k",
+      normalizedModelNumber: "cs-xe9wkuaw-cu-xe9wkua-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 8700,
       coolingCapacityMaxBtu: 8700,
       heatingCapacity5FMinBtu: 8000,
@@ -229,15 +395,16 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single",
-      slug: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single",
-      name: "CS-XE12WKUAW / CU-XE12WKUA",
+      id: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-12000",
+      slug: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-12000",
+      name: "CS-XE12WKUAW / CU-XE12WKUA 12 000 BTU",
       seriesId: "panasonic-cs-xe12wkuaw-cu-xe12wkua",
       brandId: "panasonic",
-      modelNumber: "CS-XE12WKUAW / CU-XE12WKUA",
-      normalizedModelNumber: "cs-xe12wkuaw-cu-xe12wkua",
+      modelNumber: "CS-XE12WKUAW / CU-XE12WKUA 12k",
+      normalizedModelNumber: "cs-xe12wkuaw-cu-xe12wkua-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 11500,
       coolingCapacityMaxBtu: 11500,
       heatingCapacity5FMinBtu: 10000,
@@ -255,15 +422,16 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single",
-      slug: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single",
-      name: "CS-XE15WKUAW / CU-XE15WKUA",
+      id: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-15000",
+      slug: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-15000",
+      name: "CS-XE15WKUAW / CU-XE15WKUA 15 000 BTU",
       seriesId: "panasonic-cs-xe15wkuaw-cu-xe15wkua",
       brandId: "panasonic",
-      modelNumber: "CS-XE15WKUAW / CU-XE15WKUA",
-      normalizedModelNumber: "cs-xe15wkuaw-cu-xe15wkua",
+      modelNumber: "CS-XE15WKUAW / CU-XE15WKUA 15k",
+      normalizedModelNumber: "cs-xe15wkuaw-cu-xe15wkua-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
       coolingCapacityMinBtu: 14700,
       coolingCapacityMaxBtu: 14700,
       heatingCapacity5FMinBtu: 11000,
@@ -281,15 +449,16 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single",
-      slug: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single",
-      name: "CS-XE18WKUAW / CU-XE18WKUA",
+      id: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-18000",
+      slug: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-18000",
+      name: "CS-XE18WKUAW / CU-XE18WKUA 18 000 BTU",
       seriesId: "panasonic-cs-xe18wkuaw-cu-xe18wkua",
       brandId: "panasonic",
-      modelNumber: "CS-XE18WKUAW / CU-XE18WKUA",
-      normalizedModelNumber: "cs-xe18wkuaw-cu-xe18wkua",
+      modelNumber: "CS-XE18WKUAW / CU-XE18WKUA 18k",
+      normalizedModelNumber: "cs-xe18wkuaw-cu-xe18wkua-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17200,
       coolingCapacityMaxBtu: 17200,
       heatingCapacity5FMinBtu: 14000,
@@ -307,23 +476,78 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted",
-      slug: "panasonic-cu-series-central-ducted",
-      name: "CU series",
-      seriesId: "panasonic-cu-series",
+      id: "panasonic-standard-wall-single-24000",
+      slug: "panasonic-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "panasonic-standard",
       brandId: "panasonic",
-      modelNumber: "CU series",
-      normalizedModelNumber: "cu-series",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 12600,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.2,
-      seer2Max: 19,
-      hspf2Min: 8.1,
-      hspf2Max: 10.3,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 18500,
+      heatingCapacity5FMaxBtu: 18500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-18000",
+      slug: "panasonic-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "panasonic-standard",
+      brandId: "panasonic",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 13000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-24000",
+      slug: "panasonic-cu-series-central-ducted-24000",
+      name: "CU series 24 000 BTU",
+      seriesId: "panasonic-cu-series",
+      brandId: "panasonic",
+      modelNumber: "CU series 24k",
+      normalizedModelNumber: "cu-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 15.7,
+      seer2Max: 18.3,
+      hspf2Min: 9,
+      hspf2Max: 10,
       cop5FMin: 1.8,
       cop5FMax: 2.2,
       systemType: "central-ducted",
@@ -333,24 +557,241 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-climapure-xz-wall-single",
-      slug: "panasonic-climapure-xz-wall-single",
-      name: "Climapure XZ",
-      seriesId: "panasonic-climapure-xz",
+      id: "panasonic-standard-wall-single-48000",
+      slug: "panasonic-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "panasonic-standard",
       brandId: "panasonic",
-      modelNumber: "Climapure XZ",
-      normalizedModelNumber: "climapure-xz",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-60000",
+      slug: "panasonic-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "panasonic-standard",
+      brandId: "panasonic",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000",
+      slug: "panasonic-cu-series-central-ducted-18000",
+      name: "CU series 18 000 BTU",
+      seriesId: "panasonic-cu-series",
+      brandId: "panasonic",
+      modelNumber: "CU series 18k",
+      normalizedModelNumber: "cu-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12600,
+      heatingCapacity5FMaxBtu: 15200,
+      seer2Min: 16.1,
+      seer2Max: 19,
+      hspf2Min: 9.1,
+      hspf2Max: 9.7,
+      cop5FMin: 2,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-30000",
+      slug: "panasonic-cu-series-central-ducted-30000",
+      name: "CU series 30 000 BTU",
+      seriesId: "panasonic-cu-series",
+      brandId: "panasonic",
+      modelNumber: "CU series 30k",
+      normalizedModelNumber: "cu-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 18500,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.3,
+      seer2Max: 17.1,
+      hspf2Min: 8.3,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.96,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000",
+      slug: "panasonic-cu-series-central-ducted-36000",
+      name: "CU series 36 000 BTU",
+      seriesId: "panasonic-cu-series",
+      brandId: "panasonic",
+      modelNumber: "CU series 36k",
+      normalizedModelNumber: "cu-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 17.4,
+      hspf2Min: 8.6,
+      hspf2Max: 10.3,
+      cop5FMin: 1.85,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000",
+      slug: "panasonic-cu-series-central-ducted-48000",
+      name: "CU series 48 000 BTU",
+      seriesId: "panasonic-cu-series",
+      brandId: "panasonic",
+      modelNumber: "CU series 48k",
+      normalizedModelNumber: "cu-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 28000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 16.5,
+      hspf2Min: 8.1,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-60000",
+      slug: "panasonic-cu-series-central-ducted-60000",
+      name: "CU series 60 000 BTU",
+      seriesId: "panasonic-cu-series",
+      brandId: "panasonic",
+      modelNumber: "CU series 60k",
+      normalizedModelNumber: "cu-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-30000",
+      slug: "panasonic-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "panasonic-standard",
+      brandId: "panasonic",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-climapure-xz-wall-single-9000",
+      slug: "panasonic-climapure-xz-wall-single-9000",
+      name: "Climapure XZ 9 000 BTU",
+      seriesId: "panasonic-climapure-xz",
+      brandId: "panasonic",
+      modelNumber: "Climapure XZ 9k",
+      normalizedModelNumber: "climapure-xz-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 8700,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 8700,
       heatingCapacity5FMinBtu: 14500,
-      heatingCapacity5FMaxBtu: 25200,
-      seer2Min: 20.5,
+      heatingCapacity5FMaxBtu: 14500,
+      seer2Min: 27.5,
       seer2Max: 27.5,
-      hspf2Min: 11,
+      hspf2Min: 12,
       hspf2Max: 12,
-      cop5FMin: 2.11,
+      cop5FMin: 2.31,
       cop5FMax: 2.31,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -359,27 +800,325 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-deluxe-z-wall-single",
-      slug: "panasonic-deluxe-z-wall-single",
-      name: "Deluxe Z",
-      seriesId: "panasonic-deluxe-z",
+      id: "panasonic-climapure-xz-wall-single-12000",
+      slug: "panasonic-climapure-xz-wall-single-12000",
+      name: "Climapure XZ 12 000 BTU",
+      seriesId: "panasonic-climapure-xz",
       brandId: "panasonic",
-      modelNumber: "Deluxe Z",
-      normalizedModelNumber: "deluxe-z",
+      modelNumber: "Climapure XZ 12k",
+      normalizedModelNumber: "climapure-xz-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 8700,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      heatingCapacity5FMinBtu: 16500,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: 25,
+      seer2Max: 25,
+      hspf2Min: 11.7,
+      hspf2Max: 11.7,
+      cop5FMin: 2.11,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-climapure-xz-wall-single-15000",
+      slug: "panasonic-climapure-xz-wall-single-15000",
+      name: "Climapure XZ 15 000 BTU",
+      seriesId: "panasonic-climapure-xz",
+      brandId: "panasonic",
+      modelNumber: "Climapure XZ 15k",
+      normalizedModelNumber: "climapure-xz-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 14700,
+      coolingCapacityMaxBtu: 14700,
+      heatingCapacity5FMinBtu: 17500,
+      heatingCapacity5FMaxBtu: 17500,
+      seer2Min: 22.4,
+      seer2Max: 22.4,
+      hspf2Min: 12,
+      hspf2Max: 12,
+      cop5FMin: 2.14,
+      cop5FMax: 2.14,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-climapure-xz-wall-single-18000",
+      slug: "panasonic-climapure-xz-wall-single-18000",
+      name: "Climapure XZ 18 000 BTU",
+      seriesId: "panasonic-climapure-xz",
+      brandId: "panasonic",
+      modelNumber: "Climapure XZ 18k",
+      normalizedModelNumber: "climapure-xz-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 17200,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 11.7,
+      hspf2Max: 11.7,
+      cop5FMin: 2.22,
+      cop5FMax: 2.22,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-climapure-xz-wall-single-24000",
+      slug: "panasonic-climapure-xz-wall-single-24000",
+      name: "Climapure XZ 24 000 BTU",
+      seriesId: "panasonic-climapure-xz",
+      brandId: "panasonic",
+      modelNumber: "Climapure XZ 24k",
+      normalizedModelNumber: "climapure-xz-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 14500,
+      heatingCapacity5FMinBtu: 25200,
       heatingCapacity5FMaxBtu: 25200,
       seer2Min: 20.5,
-      seer2Max: 27.5,
+      seer2Max: 20.5,
       hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.25,
+      cop5FMax: 2.25,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-multizone-wall-single-20000",
+      slug: "panasonic-multizone-wall-single-20000",
+      name: "MultiZone 20 000 BTU",
+      seriesId: "panasonic-multizone",
+      brandId: "panasonic",
+      modelNumber: "MultiZone 20k",
+      normalizedModelNumber: "multizone-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 25600,
+      heatingCapacity5FMaxBtu: 25600,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 10.7,
+      hspf2Max: 10.7,
+      cop5FMin: 2.28,
+      cop5FMax: 2.28,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-deluxe-z-wall-single-9000",
+      slug: "panasonic-deluxe-z-wall-single-9000",
+      name: "Deluxe Z 9 000 BTU",
+      seriesId: "panasonic-deluxe-z",
+      brandId: "panasonic",
+      modelNumber: "Deluxe Z 9k",
+      normalizedModelNumber: "deluxe-z-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 8700,
+      coolingCapacityMaxBtu: 8700,
+      heatingCapacity5FMinBtu: 14500,
+      heatingCapacity5FMaxBtu: 14500,
+      seer2Min: 27.5,
+      seer2Max: 27.5,
+      hspf2Min: 12,
       hspf2Max: 12,
-      cop5FMin: 2.11,
+      cop5FMin: 2.31,
       cop5FMax: 2.31,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-deluxe-z-wall-single-12000",
+      slug: "panasonic-deluxe-z-wall-single-12000",
+      name: "Deluxe Z 12 000 BTU",
+      seriesId: "panasonic-deluxe-z",
+      brandId: "panasonic",
+      modelNumber: "Deluxe Z 12k",
+      normalizedModelNumber: "deluxe-z-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      heatingCapacity5FMinBtu: 16500,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: 25,
+      seer2Max: 25,
+      hspf2Min: 11.7,
+      hspf2Max: 11.7,
+      cop5FMin: 2.11,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-deluxe-z-wall-single-15000",
+      slug: "panasonic-deluxe-z-wall-single-15000",
+      name: "Deluxe Z 15 000 BTU",
+      seriesId: "panasonic-deluxe-z",
+      brandId: "panasonic",
+      modelNumber: "Deluxe Z 15k",
+      normalizedModelNumber: "deluxe-z-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 14700,
+      coolingCapacityMaxBtu: 14700,
+      heatingCapacity5FMinBtu: 17500,
+      heatingCapacity5FMaxBtu: 17500,
+      seer2Min: 22.4,
+      seer2Max: 22.4,
+      hspf2Min: 12,
+      hspf2Max: 12,
+      cop5FMin: 2.14,
+      cop5FMax: 2.14,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-deluxe-z-wall-single-18000",
+      slug: "panasonic-deluxe-z-wall-single-18000",
+      name: "Deluxe Z 18 000 BTU",
+      seriesId: "panasonic-deluxe-z",
+      brandId: "panasonic",
+      modelNumber: "Deluxe Z 18k",
+      normalizedModelNumber: "deluxe-z-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 17200,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 11.7,
+      hspf2Max: 11.7,
+      cop5FMin: 2.22,
+      cop5FMax: 2.22,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-deluxe-z-wall-single-24000",
+      slug: "panasonic-deluxe-z-wall-single-24000",
+      name: "Deluxe Z 24 000 BTU",
+      seriesId: "panasonic-deluxe-z",
+      brandId: "panasonic",
+      modelNumber: "Deluxe Z 24k",
+      normalizedModelNumber: "deluxe-z-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 25200,
+      heatingCapacity5FMaxBtu: 25200,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.25,
+      cop5FMax: 2.25,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-multizone-wall-single-36000",
+      slug: "panasonic-multizone-wall-single-36000",
+      name: "MultiZone 36 000 BTU",
+      seriesId: "panasonic-multizone",
+      brandId: "panasonic",
+      modelNumber: "MultiZone 36k",
+      normalizedModelNumber: "multizone-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 32000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 2.08,
+      cop5FMax: 2.08,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-42000",
+      slug: "panasonic-cu-series-central-ducted-42000",
+      name: "CU Series 42 000 BTU",
+      seriesId: "panasonic-cu-series",
+      brandId: "panasonic",
+      modelNumber: "CU Series 42k",
+      normalizedModelNumber: "cu-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 9,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -393,26 +1132,26 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-e12rkua",
-      modelNumber: "CU-E12RKUA",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-e18rkua",
-      modelNumber: "CU-E18RKUA",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
       id: "panasonic-cu-e9sd3ua",
       modelNumber: "CU-E9SD3UA",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
+      id: "panasonic-cu-e12rkua",
+      modelNumber: "CU-E12RKUA",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
       id: "panasonic-cu-e12sd3ua",
       modelNumber: "CU-E12SD3UA",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-e18rkua",
+      modelNumber: "CU-E18RKUA",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -429,62 +1168,20 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-xe15skua",
-      modelNumber: "CU-XE15SKUA",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu5e36qbu5",
-      modelNumber: "CU5E36QBU5",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
       id: "panasonic-cu-xe12skua-1",
       modelNumber: "CU-XE12SKUA-1",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
+      id: "panasonic-cu-xe15skua",
+      modelNumber: "CU-XE15SKUA",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
       id: "panasonic-cu-xe15skua-1",
       modelNumber: "CU-XE15SKUA-1",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-xe24wkua",
-      modelNumber: "CU-XE24WKUA",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-e18yahk6",
-      modelNumber: "CU-E18YAHK6",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-e36yahk6",
-      modelNumber: "CU-E36YAHK6",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-e48yahk6",
-      modelNumber: "CU-E48YAHK6",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-e60yahk6",
-      modelNumber: "CU-E60YAHK6",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-e30yahk6",
-      modelNumber: "CU-E30YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -501,20 +1198,14 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-4e24rbu-5",
-      modelNumber: "CU-4E24RBU-5",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
       id: "panasonic-cu-2z18abuc",
       modelNumber: "CU-2Z18ABUC",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-3z22abuc",
-      modelNumber: "CU-3Z22ABUC",
+      id: "panasonic-cu-4e24rbu-5",
+      modelNumber: "CU-4E24RBU-5",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -525,8 +1216,14 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-5z36bbuc",
-      modelNumber: "CU-5Z36BBUC",
+      id: "panasonic-cu5e36qbu5",
+      modelNumber: "CU5E36QBU5",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-e36yahk6",
+      modelNumber: "CU-E36YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -555,14 +1252,20 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-e24yahk6",
-      modelNumber: "CU-E24YAHK6",
+      id: "panasonic-cu-xe24wkua",
+      modelNumber: "CU-XE24WKUA",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-he18yahk6",
-      modelNumber: "CU-HE18YAHK6",
+      id: "panasonic-cu-e18yahk6",
+      modelNumber: "CU-E18YAHK6",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-e24yahk6",
+      modelNumber: "CU-E24YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -573,26 +1276,32 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-he30yahk6",
-      modelNumber: "CU-HE30YAHK6",
+      id: "panasonic-cu-m24bahu",
+      modelNumber: "CU-M24BAHU",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-he36yahk6",
-      modelNumber: "CU-HE36YAHK6",
+      id: "panasonic-cu-hm24bahu",
+      modelNumber: "CU-HM24BAHU",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-he48yahk6",
-      modelNumber: "CU-HE48YAHK6",
+      id: "panasonic-cu-e48yahk6",
+      modelNumber: "CU-E48YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-he55yahk6",
-      modelNumber: "CU-HE55YAHK6",
+      id: "panasonic-cu-e60yahk6",
+      modelNumber: "CU-E60YAHK6",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-he18yahk6",
+      modelNumber: "CU-HE18YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -603,20 +1312,50 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "panasonic-cu-hm18bahu",
+      modelNumber: "CU-HM18BAHU",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-he30yahk6",
+      modelNumber: "CU-HE30YAHK6",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
       id: "panasonic-cu-m30bahu",
       modelNumber: "CU-M30BAHU",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-m24bahu",
-      modelNumber: "CU-M24BAHU",
+      id: "panasonic-cu-hm30bahu",
+      modelNumber: "CU-HM30BAHU",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-he36yahk6",
+      modelNumber: "CU-HE36YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
     {
       id: "panasonic-cu-m36bahu",
       modelNumber: "CU-M36BAHU",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-hm36bahu",
+      modelNumber: "CU-HM36BAHU",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-he48yahk6",
+      modelNumber: "CU-HE48YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -633,30 +1372,6 @@ export const panasonicDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "panasonic-cu-hm18bahu",
-      modelNumber: "CU-HM18BAHU",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-hm24bahu",
-      modelNumber: "CU-HM24BAHU",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-hm30bahu",
-      modelNumber: "CU-HM30BAHU",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
-      id: "panasonic-cu-hm36bahu",
-      modelNumber: "CU-HM36BAHU",
-      brandId: "panasonic",
-      refrigerant: null as any,
-    },
-    {
       id: "panasonic-cu-hm48bahu",
       modelNumber: "CU-HM48BAHU",
       brandId: "panasonic",
@@ -665,6 +1380,18 @@ export const panasonicDataset: BrandDataset = {
     {
       id: "panasonic-cu-hm55bahu",
       modelNumber: "CU-HM55BAHU",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-he55yahk6",
+      modelNumber: "CU-HE55YAHK6",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-e30yahk6",
+      modelNumber: "CU-E30YAHK6",
       brandId: "panasonic",
       refrigerant: null as any,
     },
@@ -697,6 +1424,18 @@ export const panasonicDataset: BrandDataset = {
       modelNumber: "CU-XZ24AKUAC",
       brandId: "panasonic",
       refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-3z22abuc",
+      modelNumber: "CU-3Z22ABUC",
+      brandId: "panasonic",
+      refrigerant: null as any,
+    },
+    {
+      id: "panasonic-cu-5z36bbuc",
+      modelNumber: "CU-5Z36BBUC",
+      brandId: "panasonic",
+      refrigerant: null as any,
     }
   ],
   indoorUnits: [
@@ -704,9 +1443,9 @@ export const panasonicDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "panasonic-exterios-e-wall-single-cfg-1",
-      slug: "panasonic-exterios-e-wall-single-cfg-1",
-      modelId: "panasonic-exterios-e-wall-single",
+      id: "panasonic-exterios-e-wall-single-9000-cfg-1",
+      slug: "panasonic-exterios-e-wall-single-9000-cfg-1",
+      modelId: "panasonic-exterios-e-wall-single-9000",
       outdoorUnitId: "panasonic-cu-e9rkua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -718,37 +1457,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-exterios-e-wall-single-cfg-2",
-      slug: "panasonic-exterios-e-wall-single-cfg-2",
-      modelId: "panasonic-exterios-e-wall-single",
-      outdoorUnitId: "panasonic-cu-e12rkua",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: 22.5,
-      hspf2: 9,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-exterios-e-wall-single-cfg-3",
-      slug: "panasonic-exterios-e-wall-single-cfg-3",
-      modelId: "panasonic-exterios-e-wall-single",
-      outdoorUnitId: "panasonic-cu-e18rkua",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17200,
-      coolingCapacityMaxBtu: 17200,
-      seer2: 19.5,
-      hspf2: 9,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-exterios-e-wall-single-cfg-4",
-      slug: "panasonic-exterios-e-wall-single-cfg-4",
-      modelId: "panasonic-exterios-e-wall-single",
+      id: "panasonic-exterios-e-wall-single-9000-cfg-2",
+      slug: "panasonic-exterios-e-wall-single-9000-cfg-2",
+      modelId: "panasonic-exterios-e-wall-single-9000",
       outdoorUnitId: "panasonic-cu-e9sd3ua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -760,9 +1471,23 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-exterios-e-wall-single-cfg-5",
-      slug: "panasonic-exterios-e-wall-single-cfg-5",
-      modelId: "panasonic-exterios-e-wall-single",
+      id: "panasonic-exterios-e-wall-single-12000-cfg-1",
+      slug: "panasonic-exterios-e-wall-single-12000-cfg-1",
+      modelId: "panasonic-exterios-e-wall-single-12000",
+      outdoorUnitId: "panasonic-cu-e12rkua",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 22.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-exterios-e-wall-single-12000-cfg-2",
+      slug: "panasonic-exterios-e-wall-single-12000-cfg-2",
+      modelId: "panasonic-exterios-e-wall-single-12000",
       outdoorUnitId: "panasonic-cu-e12sd3ua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
@@ -774,9 +1499,23 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-standard-wall-single-cfg-1",
-      slug: "panasonic-standard-wall-single-cfg-1",
-      modelId: "panasonic-standard-wall-single",
+      id: "panasonic-exterios-e-wall-single-18000-cfg-1",
+      slug: "panasonic-exterios-e-wall-single-18000-cfg-1",
+      modelId: "panasonic-exterios-e-wall-single-18000",
+      outdoorUnitId: "panasonic-cu-e18rkua",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 17200,
+      seer2: 19.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-9000-cfg-1",
+      slug: "panasonic-standard-wall-single-9000-cfg-1",
+      modelId: "panasonic-standard-wall-single-9000",
       outdoorUnitId: "panasonic-cu-xe9skua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 8700,
@@ -788,9 +1527,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-standard-wall-single-cfg-2",
-      slug: "panasonic-standard-wall-single-cfg-2",
-      modelId: "panasonic-standard-wall-single",
+      id: "panasonic-standard-wall-single-12000-cfg-1",
+      slug: "panasonic-standard-wall-single-12000-cfg-1",
+      modelId: "panasonic-standard-wall-single-12000",
       outdoorUnitId: "panasonic-cu-xe12skua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
@@ -802,37 +1541,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-standard-wall-single-cfg-3",
-      slug: "panasonic-standard-wall-single-cfg-3",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-xe15skua",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-4",
-      slug: "panasonic-standard-wall-single-cfg-4",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu5e36qbu5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-5",
-      slug: "panasonic-standard-wall-single-cfg-5",
-      modelId: "panasonic-standard-wall-single",
+      id: "panasonic-standard-wall-single-12000-cfg-2",
+      slug: "panasonic-standard-wall-single-12000-cfg-2",
+      modelId: "panasonic-standard-wall-single-12000",
       outdoorUnitId: "panasonic-cu-xe12skua-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
@@ -844,9 +1555,23 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-standard-wall-single-cfg-6",
-      slug: "panasonic-standard-wall-single-cfg-6",
-      modelId: "panasonic-standard-wall-single",
+      id: "panasonic-standard-wall-single-15000-cfg-1",
+      slug: "panasonic-standard-wall-single-15000-cfg-1",
+      modelId: "panasonic-standard-wall-single-15000",
+      outdoorUnitId: "panasonic-cu-xe15skua",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-15000-cfg-2",
+      slug: "panasonic-standard-wall-single-15000-cfg-2",
+      modelId: "panasonic-standard-wall-single-15000",
       outdoorUnitId: "panasonic-cu-xe15skua-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 15000,
@@ -858,163 +1583,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-standard-wall-single-cfg-7",
-      slug: "panasonic-standard-wall-single-cfg-7",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-xe24wkua",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-8",
-      slug: "panasonic-standard-wall-single-cfg-8",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e18yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-9",
-      slug: "panasonic-standard-wall-single-cfg-9",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e36yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-10",
-      slug: "panasonic-standard-wall-single-cfg-10",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e48yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-11",
-      slug: "panasonic-standard-wall-single-cfg-11",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e60yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-12",
-      slug: "panasonic-standard-wall-single-cfg-12",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e18yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-13",
-      slug: "panasonic-standard-wall-single-cfg-13",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e30yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-14",
-      slug: "panasonic-standard-wall-single-cfg-14",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e36yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-15",
-      slug: "panasonic-standard-wall-single-cfg-15",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e48yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-16",
-      slug: "panasonic-standard-wall-single-cfg-16",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e60yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-standard-wall-single-cfg-17",
-      slug: "panasonic-standard-wall-single-cfg-17",
-      modelId: "panasonic-standard-wall-single",
-      outdoorUnitId: "panasonic-cu-e18yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-multizone-wall-single-cfg-1",
-      slug: "panasonic-multizone-wall-single-cfg-1",
-      modelId: "panasonic-multizone-wall-single",
+      id: "panasonic-multizone-wall-single-18000-cfg-1",
+      slug: "panasonic-multizone-wall-single-18000-cfg-1",
+      modelId: "panasonic-multizone-wall-single-18000",
       outdoorUnitId: "panasonic-cu-2e18sbu-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16700,
@@ -1026,9 +1597,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-multizone-wall-single-cfg-2",
-      slug: "panasonic-multizone-wall-single-cfg-2",
-      modelId: "panasonic-multizone-wall-single",
+      id: "panasonic-multizone-wall-single-18000-cfg-2",
+      slug: "panasonic-multizone-wall-single-18000-cfg-2",
+      modelId: "panasonic-multizone-wall-single-18000",
       outdoorUnitId: "panasonic-cu-3e19rbu-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1040,23 +1611,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-multizone-wall-single-cfg-3",
-      slug: "panasonic-multizone-wall-single-cfg-3",
-      modelId: "panasonic-multizone-wall-single",
-      outdoorUnitId: "panasonic-cu-4e24rbu-5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-multizone-wall-single-cfg-4",
-      slug: "panasonic-multizone-wall-single-cfg-4",
-      modelId: "panasonic-multizone-wall-single",
+      id: "panasonic-multizone-wall-single-18000-cfg-3",
+      slug: "panasonic-multizone-wall-single-18000-cfg-3",
+      modelId: "panasonic-multizone-wall-single-18000",
       outdoorUnitId: "panasonic-cu-2z18abuc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1068,23 +1625,23 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-multizone-wall-single-cfg-5",
-      slug: "panasonic-multizone-wall-single-cfg-5",
-      modelId: "panasonic-multizone-wall-single",
-      outdoorUnitId: "panasonic-cu-3z22abuc",
+      id: "panasonic-multizone-wall-single-24000-cfg-1",
+      slug: "panasonic-multizone-wall-single-24000-cfg-1",
+      modelId: "panasonic-multizone-wall-single-24000",
+      outdoorUnitId: "panasonic-cu-4e24rbu-5",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 10.7,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 9.1,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-multizone-wall-single-cfg-6",
-      slug: "panasonic-multizone-wall-single-cfg-6",
-      modelId: "panasonic-multizone-wall-single",
+      id: "panasonic-multizone-wall-single-24000-cfg-2",
+      slug: "panasonic-multizone-wall-single-24000-cfg-2",
+      modelId: "panasonic-multizone-wall-single-24000",
       outdoorUnitId: "panasonic-cu-4z24bbuc",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1096,23 +1653,51 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-multizone-wall-single-cfg-7",
-      slug: "panasonic-multizone-wall-single-cfg-7",
-      modelId: "panasonic-multizone-wall-single",
-      outdoorUnitId: "panasonic-cu-5z36bbuc",
+      id: "panasonic-standard-wall-single-36000-cfg-1",
+      slug: "panasonic-standard-wall-single-36000-cfg-1",
+      modelId: "panasonic-standard-wall-single-36000",
+      outdoorUnitId: "panasonic-cu5e36qbu5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
-      seer2: 22,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-cfg-1",
-      slug: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-cfg-1",
-      modelId: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single",
+      id: "panasonic-standard-wall-single-36000-cfg-2",
+      slug: "panasonic-standard-wall-single-36000-cfg-2",
+      modelId: "panasonic-standard-wall-single-36000",
+      outdoorUnitId: "panasonic-cu-e36yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-36000-cfg-3",
+      slug: "panasonic-standard-wall-single-36000-cfg-3",
+      modelId: "panasonic-standard-wall-single-36000",
+      outdoorUnitId: "panasonic-cu-e36yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-9000-cfg-1",
+      slug: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-9000-cfg-1",
+      modelId: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-9000",
       outdoorUnitId: "panasonic-cu-xe9wkua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 8700,
@@ -1124,9 +1709,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-cfg-1",
-      slug: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-cfg-1",
-      modelId: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single",
+      id: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-12000-cfg-1",
+      slug: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-12000-cfg-1",
+      modelId: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-12000",
       outdoorUnitId: "panasonic-cu-xe12wkua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
@@ -1138,9 +1723,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-cfg-1",
-      slug: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-cfg-1",
-      modelId: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single",
+      id: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-15000-cfg-1",
+      slug: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-15000-cfg-1",
+      modelId: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-15000",
       outdoorUnitId: "panasonic-cu-xe15wkua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 14700,
@@ -1152,9 +1737,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-cfg-1",
-      slug: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-cfg-1",
-      modelId: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single",
+      id: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-18000-cfg-1",
+      slug: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-18000-cfg-1",
+      modelId: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-18000",
       outdoorUnitId: "panasonic-cu-xe18wkua",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17200,
@@ -1166,9 +1751,65 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-1",
-      slug: "panasonic-cu-series-central-ducted-cfg-1",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-standard-wall-single-24000-cfg-1",
+      slug: "panasonic-standard-wall-single-24000-cfg-1",
+      modelId: "panasonic-standard-wall-single-24000",
+      outdoorUnitId: "panasonic-cu-xe24wkua",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-18000-cfg-1",
+      slug: "panasonic-standard-wall-single-18000-cfg-1",
+      modelId: "panasonic-standard-wall-single-18000",
+      outdoorUnitId: "panasonic-cu-e18yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-18000-cfg-2",
+      slug: "panasonic-standard-wall-single-18000-cfg-2",
+      modelId: "panasonic-standard-wall-single-18000",
+      outdoorUnitId: "panasonic-cu-e18yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-18000-cfg-3",
+      slug: "panasonic-standard-wall-single-18000-cfg-3",
+      modelId: "panasonic-standard-wall-single-18000",
+      outdoorUnitId: "panasonic-cu-e18yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-24000-cfg-1",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-1",
+      modelId: "panasonic-cu-series-central-ducted-24000",
       outdoorUnitId: "panasonic-cu-e24yahk6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1180,23 +1821,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-2",
-      slug: "panasonic-cu-series-central-ducted-cfg-2",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he18yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-3",
-      slug: "panasonic-cu-series-central-ducted-cfg-3",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-24000-cfg-2",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-2",
+      modelId: "panasonic-cu-series-central-ducted-24000",
       outdoorUnitId: "panasonic-cu-he24yahk6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1208,65 +1835,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-4",
-      slug: "panasonic-cu-series-central-ducted-cfg-4",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he30yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-5",
-      slug: "panasonic-cu-series-central-ducted-cfg-5",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he36yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-6",
-      slug: "panasonic-cu-series-central-ducted-cfg-6",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he48yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-7",
-      slug: "panasonic-cu-series-central-ducted-cfg-7",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he55yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-8",
-      slug: "panasonic-cu-series-central-ducted-cfg-8",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-24000-cfg-3",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-3",
+      modelId: "panasonic-cu-series-central-ducted-24000",
       outdoorUnitId: "panasonic-cu-e24yahk6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1278,23 +1849,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-9",
-      slug: "panasonic-cu-series-central-ducted-cfg-9",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he18yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-10",
-      slug: "panasonic-cu-series-central-ducted-cfg-10",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-24000-cfg-4",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-4",
+      modelId: "panasonic-cu-series-central-ducted-24000",
       outdoorUnitId: "panasonic-cu-he24yahk6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1306,149 +1863,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-11",
-      slug: "panasonic-cu-series-central-ducted-cfg-11",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he30yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-12",
-      slug: "panasonic-cu-series-central-ducted-cfg-12",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he36yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-13",
-      slug: "panasonic-cu-series-central-ducted-cfg-13",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he48yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-14",
-      slug: "panasonic-cu-series-central-ducted-cfg-14",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he18yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-15",
-      slug: "panasonic-cu-series-central-ducted-cfg-15",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he36yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-16",
-      slug: "panasonic-cu-series-central-ducted-cfg-16",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he55yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-17",
-      slug: "panasonic-cu-series-central-ducted-cfg-17",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he18yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-18",
-      slug: "panasonic-cu-series-central-ducted-cfg-18",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-he36yahk6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-19",
-      slug: "panasonic-cu-series-central-ducted-cfg-19",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m18bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.8,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-20",
-      slug: "panasonic-cu-series-central-ducted-cfg-20",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m30bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 17.1,
-      hspf2: 8.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-21",
-      slug: "panasonic-cu-series-central-ducted-cfg-21",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-24000-cfg-5",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-5",
+      modelId: "panasonic-cu-series-central-ducted-24000",
       outdoorUnitId: "panasonic-cu-m24bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1460,65 +1877,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-22",
-      slug: "panasonic-cu-series-central-ducted-cfg-22",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m36bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-23",
-      slug: "panasonic-cu-series-central-ducted-cfg-23",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m48bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-24",
-      slug: "panasonic-cu-series-central-ducted-cfg-24",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m60bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-25",
-      slug: "panasonic-cu-series-central-ducted-cfg-25",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm18bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-26",
-      slug: "panasonic-cu-series-central-ducted-cfg-26",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-24000-cfg-6",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-6",
+      modelId: "panasonic-cu-series-central-ducted-24000",
       outdoorUnitId: "panasonic-cu-hm24bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1530,9 +1891,303 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-27",
-      slug: "panasonic-cu-series-central-ducted-cfg-27",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-24000-cfg-7",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-7",
+      modelId: "panasonic-cu-series-central-ducted-24000",
+      outdoorUnitId: "panasonic-cu-hm24bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-24000-cfg-8",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-8",
+      modelId: "panasonic-cu-series-central-ducted-24000",
+      outdoorUnitId: "panasonic-cu-hm24bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-24000-cfg-9",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-9",
+      modelId: "panasonic-cu-series-central-ducted-24000",
+      outdoorUnitId: "panasonic-cu-m24bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-24000-cfg-10",
+      slug: "panasonic-cu-series-central-ducted-24000-cfg-10",
+      modelId: "panasonic-cu-series-central-ducted-24000",
+      outdoorUnitId: "panasonic-cu-m24bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-48000-cfg-1",
+      slug: "panasonic-standard-wall-single-48000-cfg-1",
+      modelId: "panasonic-standard-wall-single-48000",
+      outdoorUnitId: "panasonic-cu-e48yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-48000-cfg-2",
+      slug: "panasonic-standard-wall-single-48000-cfg-2",
+      modelId: "panasonic-standard-wall-single-48000",
+      outdoorUnitId: "panasonic-cu-e48yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-48000-cfg-3",
+      slug: "panasonic-standard-wall-single-48000-cfg-3",
+      modelId: "panasonic-standard-wall-single-48000",
+      outdoorUnitId: "panasonic-cu-e60yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-60000-cfg-1",
+      slug: "panasonic-standard-wall-single-60000-cfg-1",
+      modelId: "panasonic-standard-wall-single-60000",
+      outdoorUnitId: "panasonic-cu-e60yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-1",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-1",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-he18yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-2",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-2",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-he18yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-3",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-3",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-he18yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-4",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-4",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-he18yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-5",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-5",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-m18bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.8,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-6",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-6",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-hm18bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-7",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-7",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-hm18bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-8",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-8",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-hm18bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-9",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-9",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-m18bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.8,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-18000-cfg-10",
+      slug: "panasonic-cu-series-central-ducted-18000-cfg-10",
+      modelId: "panasonic-cu-series-central-ducted-18000",
+      outdoorUnitId: "panasonic-cu-m18bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.8,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-30000-cfg-1",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-1",
+      modelId: "panasonic-cu-series-central-ducted-30000",
+      outdoorUnitId: "panasonic-cu-he30yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-30000-cfg-2",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-2",
+      modelId: "panasonic-cu-series-central-ducted-30000",
+      outdoorUnitId: "panasonic-cu-he30yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-30000-cfg-3",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-3",
+      modelId: "panasonic-cu-series-central-ducted-30000",
+      outdoorUnitId: "panasonic-cu-m30bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.1,
+      hspf2: 8.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-30000-cfg-4",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-4",
+      modelId: "panasonic-cu-series-central-ducted-30000",
       outdoorUnitId: "panasonic-cu-hm30bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1544,107 +2199,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-28",
-      slug: "panasonic-cu-series-central-ducted-cfg-28",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm36bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-29",
-      slug: "panasonic-cu-series-central-ducted-cfg-29",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm48bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-30",
-      slug: "panasonic-cu-series-central-ducted-cfg-30",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm55bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-31",
-      slug: "panasonic-cu-series-central-ducted-cfg-31",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm18bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-32",
-      slug: "panasonic-cu-series-central-ducted-cfg-32",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm18bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-33",
-      slug: "panasonic-cu-series-central-ducted-cfg-33",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm24bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-34",
-      slug: "panasonic-cu-series-central-ducted-cfg-34",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm24bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-35",
-      slug: "panasonic-cu-series-central-ducted-cfg-35",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-30000-cfg-5",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-5",
+      modelId: "panasonic-cu-series-central-ducted-30000",
       outdoorUnitId: "panasonic-cu-hm30bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1656,9 +2213,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-36",
-      slug: "panasonic-cu-series-central-ducted-cfg-36",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-30000-cfg-6",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-6",
+      modelId: "panasonic-cu-series-central-ducted-30000",
       outdoorUnitId: "panasonic-cu-hm30bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -1670,9 +2227,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-37",
-      slug: "panasonic-cu-series-central-ducted-cfg-37",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-30000-cfg-7",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-7",
+      modelId: "panasonic-cu-series-central-ducted-30000",
       outdoorUnitId: "panasonic-cu-hm30bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -1684,9 +2241,135 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-38",
-      slug: "panasonic-cu-series-central-ducted-cfg-38",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-30000-cfg-8",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-8",
+      modelId: "panasonic-cu-series-central-ducted-30000",
+      outdoorUnitId: "panasonic-cu-m30bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.1,
+      hspf2: 8.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-30000-cfg-9",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-9",
+      modelId: "panasonic-cu-series-central-ducted-30000",
+      outdoorUnitId: "panasonic-cu-m30bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.1,
+      hspf2: 8.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-30000-cfg-10",
+      slug: "panasonic-cu-series-central-ducted-30000-cfg-10",
+      modelId: "panasonic-cu-series-central-ducted-30000",
+      outdoorUnitId: "panasonic-cu-m30bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.1,
+      hspf2: 8.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-1",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-1",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-he36yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-2",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-2",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-he36yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-3",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-3",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-he36yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-4",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-4",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-he36yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-5",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-5",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-m36bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-6",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-6",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-hm36bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-7",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-7",
+      modelId: "panasonic-cu-series-central-ducted-36000",
       outdoorUnitId: "panasonic-cu-hm36bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1698,9 +2381,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-39",
-      slug: "panasonic-cu-series-central-ducted-cfg-39",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-36000-cfg-8",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-8",
+      modelId: "panasonic-cu-series-central-ducted-36000",
       outdoorUnitId: "panasonic-cu-hm36bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1712,9 +2395,135 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-40",
-      slug: "panasonic-cu-series-central-ducted-cfg-40",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-36000-cfg-9",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-9",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-m36bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-10",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-10",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-m36bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-36000-cfg-11",
+      slug: "panasonic-cu-series-central-ducted-36000-cfg-11",
+      modelId: "panasonic-cu-series-central-ducted-36000",
+      outdoorUnitId: "panasonic-cu-m36bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000-cfg-1",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-1",
+      modelId: "panasonic-cu-series-central-ducted-48000",
+      outdoorUnitId: "panasonic-cu-he48yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000-cfg-2",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-2",
+      modelId: "panasonic-cu-series-central-ducted-48000",
+      outdoorUnitId: "panasonic-cu-he48yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000-cfg-3",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-3",
+      modelId: "panasonic-cu-series-central-ducted-48000",
+      outdoorUnitId: "panasonic-cu-m48bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000-cfg-4",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-4",
+      modelId: "panasonic-cu-series-central-ducted-48000",
+      outdoorUnitId: "panasonic-cu-m60bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000-cfg-5",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-5",
+      modelId: "panasonic-cu-series-central-ducted-48000",
+      outdoorUnitId: "panasonic-cu-hm48bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000-cfg-6",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-6",
+      modelId: "panasonic-cu-series-central-ducted-48000",
+      outdoorUnitId: "panasonic-cu-hm55bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-48000-cfg-7",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-7",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-hm55bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1726,65 +2535,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-41",
-      slug: "panasonic-cu-series-central-ducted-cfg-41",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m18bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.8,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-42",
-      slug: "panasonic-cu-series-central-ducted-cfg-42",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m18bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.8,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-43",
-      slug: "panasonic-cu-series-central-ducted-cfg-43",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m24bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-44",
-      slug: "panasonic-cu-series-central-ducted-cfg-44",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m24bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-45",
-      slug: "panasonic-cu-series-central-ducted-cfg-45",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-48000-cfg-8",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-8",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-hm55bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1796,9 +2549,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-46",
-      slug: "panasonic-cu-series-central-ducted-cfg-46",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-48000-cfg-9",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-9",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-hm48bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1810,79 +2563,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-47",
-      slug: "panasonic-cu-series-central-ducted-cfg-47",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m36bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-48",
-      slug: "panasonic-cu-series-central-ducted-cfg-48",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m36bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-49",
-      slug: "panasonic-cu-series-central-ducted-cfg-49",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m30bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 17.1,
-      hspf2: 8.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-50",
-      slug: "panasonic-cu-series-central-ducted-cfg-50",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m30bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 17.1,
-      hspf2: 8.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-51",
-      slug: "panasonic-cu-series-central-ducted-cfg-51",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-hm48bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-52",
-      slug: "panasonic-cu-series-central-ducted-cfg-52",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-48000-cfg-10",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-10",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-hm55bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -1894,9 +2577,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-53",
-      slug: "panasonic-cu-series-central-ducted-cfg-53",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-48000-cfg-11",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-11",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-hm48bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1908,51 +2591,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-54",
-      slug: "panasonic-cu-series-central-ducted-cfg-54",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m30bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 17.1,
-      hspf2: 8.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-55",
-      slug: "panasonic-cu-series-central-ducted-cfg-55",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m36bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-56",
-      slug: "panasonic-cu-series-central-ducted-cfg-56",
-      modelId: "panasonic-cu-series-central-ducted",
-      outdoorUnitId: "panasonic-cu-m48bahu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "panasonic-cu-series-central-ducted-cfg-57",
-      slug: "panasonic-cu-series-central-ducted-cfg-57",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-48000-cfg-12",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-12",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-m48bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1964,9 +2605,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-58",
-      slug: "panasonic-cu-series-central-ducted-cfg-58",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-48000-cfg-13",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-13",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-m60bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1978,9 +2619,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-cu-series-central-ducted-cfg-59",
-      slug: "panasonic-cu-series-central-ducted-cfg-59",
-      modelId: "panasonic-cu-series-central-ducted",
+      id: "panasonic-cu-series-central-ducted-48000-cfg-14",
+      slug: "panasonic-cu-series-central-ducted-48000-cfg-14",
+      modelId: "panasonic-cu-series-central-ducted-48000",
       outdoorUnitId: "panasonic-cu-m60bahu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1992,9 +2633,51 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-climapure-xz-wall-single-cfg-1",
-      slug: "panasonic-climapure-xz-wall-single-cfg-1",
-      modelId: "panasonic-climapure-xz-wall-single",
+      id: "panasonic-cu-series-central-ducted-60000-cfg-1",
+      slug: "panasonic-cu-series-central-ducted-60000-cfg-1",
+      modelId: "panasonic-cu-series-central-ducted-60000",
+      outdoorUnitId: "panasonic-cu-he55yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-60000-cfg-2",
+      slug: "panasonic-cu-series-central-ducted-60000-cfg-2",
+      modelId: "panasonic-cu-series-central-ducted-60000",
+      outdoorUnitId: "panasonic-cu-he55yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-standard-wall-single-30000-cfg-1",
+      slug: "panasonic-standard-wall-single-30000-cfg-1",
+      modelId: "panasonic-standard-wall-single-30000",
+      outdoorUnitId: "panasonic-cu-e30yahk6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-climapure-xz-wall-single-9000-cfg-1",
+      slug: "panasonic-climapure-xz-wall-single-9000-cfg-1",
+      modelId: "panasonic-climapure-xz-wall-single-9000",
       outdoorUnitId: "panasonic-cu-xz9akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 8700,
@@ -2006,9 +2689,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-climapure-xz-wall-single-cfg-2",
-      slug: "panasonic-climapure-xz-wall-single-cfg-2",
-      modelId: "panasonic-climapure-xz-wall-single",
+      id: "panasonic-climapure-xz-wall-single-12000-cfg-1",
+      slug: "panasonic-climapure-xz-wall-single-12000-cfg-1",
+      modelId: "panasonic-climapure-xz-wall-single-12000",
       outdoorUnitId: "panasonic-cu-xz12akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
@@ -2020,9 +2703,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-climapure-xz-wall-single-cfg-3",
-      slug: "panasonic-climapure-xz-wall-single-cfg-3",
-      modelId: "panasonic-climapure-xz-wall-single",
+      id: "panasonic-climapure-xz-wall-single-15000-cfg-1",
+      slug: "panasonic-climapure-xz-wall-single-15000-cfg-1",
+      modelId: "panasonic-climapure-xz-wall-single-15000",
       outdoorUnitId: "panasonic-cu-xz15akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 14700,
@@ -2034,9 +2717,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-climapure-xz-wall-single-cfg-4",
-      slug: "panasonic-climapure-xz-wall-single-cfg-4",
-      modelId: "panasonic-climapure-xz-wall-single",
+      id: "panasonic-climapure-xz-wall-single-18000-cfg-1",
+      slug: "panasonic-climapure-xz-wall-single-18000-cfg-1",
+      modelId: "panasonic-climapure-xz-wall-single-18000",
       outdoorUnitId: "panasonic-cu-xz18akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17200,
@@ -2048,9 +2731,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-climapure-xz-wall-single-cfg-5",
-      slug: "panasonic-climapure-xz-wall-single-cfg-5",
-      modelId: "panasonic-climapure-xz-wall-single",
+      id: "panasonic-climapure-xz-wall-single-24000-cfg-1",
+      slug: "panasonic-climapure-xz-wall-single-24000-cfg-1",
+      modelId: "panasonic-climapure-xz-wall-single-24000",
       outdoorUnitId: "panasonic-cu-xz24akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2062,9 +2745,23 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-deluxe-z-wall-single-cfg-1",
-      slug: "panasonic-deluxe-z-wall-single-cfg-1",
-      modelId: "panasonic-deluxe-z-wall-single",
+      id: "panasonic-multizone-wall-single-20000-cfg-1",
+      slug: "panasonic-multizone-wall-single-20000-cfg-1",
+      modelId: "panasonic-multizone-wall-single-20000",
+      outdoorUnitId: "panasonic-cu-3z22abuc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-deluxe-z-wall-single-9000-cfg-1",
+      slug: "panasonic-deluxe-z-wall-single-9000-cfg-1",
+      modelId: "panasonic-deluxe-z-wall-single-9000",
       outdoorUnitId: "panasonic-cu-xz9akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 8700,
@@ -2076,9 +2773,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-deluxe-z-wall-single-cfg-2",
-      slug: "panasonic-deluxe-z-wall-single-cfg-2",
-      modelId: "panasonic-deluxe-z-wall-single",
+      id: "panasonic-deluxe-z-wall-single-12000-cfg-1",
+      slug: "panasonic-deluxe-z-wall-single-12000-cfg-1",
+      modelId: "panasonic-deluxe-z-wall-single-12000",
       outdoorUnitId: "panasonic-cu-xz12akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
@@ -2090,9 +2787,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-deluxe-z-wall-single-cfg-3",
-      slug: "panasonic-deluxe-z-wall-single-cfg-3",
-      modelId: "panasonic-deluxe-z-wall-single",
+      id: "panasonic-deluxe-z-wall-single-15000-cfg-1",
+      slug: "panasonic-deluxe-z-wall-single-15000-cfg-1",
+      modelId: "panasonic-deluxe-z-wall-single-15000",
       outdoorUnitId: "panasonic-cu-xz15akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 14700,
@@ -2104,9 +2801,9 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-deluxe-z-wall-single-cfg-4",
-      slug: "panasonic-deluxe-z-wall-single-cfg-4",
-      modelId: "panasonic-deluxe-z-wall-single",
+      id: "panasonic-deluxe-z-wall-single-18000-cfg-1",
+      slug: "panasonic-deluxe-z-wall-single-18000-cfg-1",
+      modelId: "panasonic-deluxe-z-wall-single-18000",
       outdoorUnitId: "panasonic-cu-xz18akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17200,
@@ -2118,15 +2815,57 @@ export const panasonicDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "panasonic-deluxe-z-wall-single-cfg-5",
-      slug: "panasonic-deluxe-z-wall-single-cfg-5",
-      modelId: "panasonic-deluxe-z-wall-single",
+      id: "panasonic-deluxe-z-wall-single-24000-cfg-1",
+      slug: "panasonic-deluxe-z-wall-single-24000-cfg-1",
+      modelId: "panasonic-deluxe-z-wall-single-24000",
       outdoorUnitId: "panasonic-cu-xz24akuac",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: 20.5,
       hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-multizone-wall-single-36000-cfg-1",
+      slug: "panasonic-multizone-wall-single-36000-cfg-1",
+      modelId: "panasonic-multizone-wall-single-36000",
+      outdoorUnitId: "panasonic-cu-5z36bbuc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-42000-cfg-1",
+      slug: "panasonic-cu-series-central-ducted-42000-cfg-1",
+      modelId: "panasonic-cu-series-central-ducted-42000",
+      outdoorUnitId: "panasonic-cu-hm48bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "panasonic-cu-series-central-ducted-42000-cfg-2",
+      slug: "panasonic-cu-series-central-ducted-42000-cfg-2",
+      modelId: "panasonic-cu-series-central-ducted-42000",
+      outdoorUnitId: "panasonic-cu-m48bahu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -2134,7 +2873,7 @@ export const panasonicDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "panasonic-exterios-e-wall-single-cfg-1",
+      configurationId: "panasonic-exterios-e-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2145,29 +2884,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-exterios-e-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10500,
-          cop: 1.58,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-exterios-e-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-exterios-e-wall-single-cfg-4",
+      configurationId: "panasonic-exterios-e-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2178,7 +2895,18 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-exterios-e-wall-single-cfg-5",
+      configurationId: "panasonic-exterios-e-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10500,
+          cop: 1.58,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-exterios-e-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2189,7 +2917,18 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-standard-wall-single-cfg-1",
+      configurationId: "panasonic-exterios-e-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2200,7 +2939,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-standard-wall-single-cfg-2",
+      configurationId: "panasonic-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2211,29 +2950,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-5",
+      configurationId: "panasonic-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2244,7 +2961,18 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-standard-wall-single-cfg-6",
+      configurationId: "panasonic-standard-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-15000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2255,128 +2983,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-multizone-wall-single-cfg-1",
+      configurationId: "panasonic-multizone-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2387,7 +2994,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-multizone-wall-single-cfg-2",
+      configurationId: "panasonic-multizone-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2398,18 +3005,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-multizone-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35700,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-multizone-wall-single-cfg-4",
+      configurationId: "panasonic-multizone-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2420,18 +3016,18 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-multizone-wall-single-cfg-5",
+      configurationId: "panasonic-multizone-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2.28,
+          heatingCapacityBtu: 35700,
+          cop: 1.95,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-multizone-wall-single-cfg-6",
+      configurationId: "panasonic-multizone-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2442,18 +3038,40 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-multizone-wall-single-cfg-7",
+      configurationId: "panasonic-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 2.08,
+          heatingCapacityBtu: 28000,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-cfg-1",
+      configurationId: "panasonic-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cs-xe9wkuaw-cu-xe9wkua-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2464,7 +3082,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-cfg-1",
+      configurationId: "panasonic-cs-xe12wkuaw-cu-xe12wkua-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2475,7 +3093,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-cfg-1",
+      configurationId: "panasonic-cs-xe15wkuaw-cu-xe15wkua-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2486,7 +3104,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-cfg-1",
+      configurationId: "panasonic-cs-xe18wkuaw-cu-xe18wkua-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2497,7 +3115,51 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-1",
+      configurationId: "panasonic-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2508,18 +3170,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-3",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2530,51 +3181,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-8",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2585,18 +3192,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-10",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2607,73 +3203,128 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-11",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.85,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-12",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-13",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-14",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 2.2,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-15",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-16",
+      configurationId: "panasonic-cu-series-central-ducted-24000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 37000,
-          cop: 1.91,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-17",
+      configurationId: "panasonic-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2684,18 +3335,29 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-18",
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
+          heatingCapacityBtu: 14700,
+          cop: 2.2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-19",
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2706,62 +3368,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-25",
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2772,18 +3379,84 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-26",
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-27",
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-18000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2794,7 +3467,128 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-28",
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-30000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2805,194 +3599,73 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-29",
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
+          heatingCapacityBtu: 29200,
           cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-30",
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 1.8,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-31",
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 2.06,
+          heatingCapacityBtu: 25600,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-32",
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 2.06,
+          heatingCapacityBtu: 25600,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-35",
+      configurationId: "panasonic-cu-series-central-ducted-36000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 23400,
-          cop: 1.8,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-40",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 36000,
-          cop: 1.83,
+          cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-46",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3003,62 +3676,84 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-47",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-50",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-51",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
+          heatingCapacityBtu: 32400,
           cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-52",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3069,7 +3764,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-53",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3080,40 +3775,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-54",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-55",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-56",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-57",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3124,7 +3786,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-58",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3135,7 +3797,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-cu-series-central-ducted-cfg-59",
+      configurationId: "panasonic-cu-series-central-ducted-48000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3146,7 +3808,40 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-climapure-xz-wall-single-cfg-1",
+      configurationId: "panasonic-cu-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-climapure-xz-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3157,7 +3852,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-climapure-xz-wall-single-cfg-2",
+      configurationId: "panasonic-climapure-xz-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3168,7 +3863,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-climapure-xz-wall-single-cfg-3",
+      configurationId: "panasonic-climapure-xz-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3179,7 +3874,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-climapure-xz-wall-single-cfg-4",
+      configurationId: "panasonic-climapure-xz-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3190,7 +3885,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-climapure-xz-wall-single-cfg-5",
+      configurationId: "panasonic-climapure-xz-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3201,7 +3896,18 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-deluxe-z-wall-single-cfg-1",
+      configurationId: "panasonic-multizone-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2.28,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-deluxe-z-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3212,7 +3918,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-deluxe-z-wall-single-cfg-2",
+      configurationId: "panasonic-deluxe-z-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3223,7 +3929,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-deluxe-z-wall-single-cfg-3",
+      configurationId: "panasonic-deluxe-z-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3234,7 +3940,7 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-deluxe-z-wall-single-cfg-4",
+      configurationId: "panasonic-deluxe-z-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3245,12 +3951,45 @@ export const panasonicDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "panasonic-deluxe-z-wall-single-cfg-5",
+      configurationId: "panasonic-deluxe-z-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 25200,
           cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-multizone-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 2.08,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "panasonic-cu-series-central-ducted-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.85,
           confidence: "verified",
         }
       ]

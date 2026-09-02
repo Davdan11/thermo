@@ -158,18 +158,19 @@ export const haierDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "haier-standard-wall-single",
-      slug: "haier-standard-wall-single",
-      name: "Standard",
+      id: "haier-standard-wall-single-36000",
+      slug: "haier-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
       seriesId: "haier-standard",
       brandId: "haier",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 5000,
+      heatingCapacity5FMinBtu: 22000,
       heatingCapacity5FMaxBtu: 24000,
       seer2Min: null,
       seer2Max: null,
@@ -184,22 +185,158 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-advanced-plus-wall-single",
-      slug: "haier-advanced-plus-wall-single",
-      name: "Advanced Plus",
-      seriesId: "haier-advanced-plus",
+      id: "haier-standard-wall-single-24000",
+      slug: "haier-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "haier-standard",
       brandId: "haier",
-      modelNumber: "Advanced Plus",
-      normalizedModelNumber: "advanced-plus",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-18000",
+      slug: "haier-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "haier-standard",
+      brandId: "haier",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11400,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-20000",
+      slug: "haier-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "haier-standard",
+      brandId: "haier",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-9000",
+      slug: "haier-advanced-plus-wall-single-9000",
+      name: "Advanced Plus 9 000 BTU",
+      seriesId: "haier-advanced-plus",
+      brandId: "haier",
+      modelNumber: "Advanced Plus 9k",
+      normalizedModelNumber: "advanced-plus-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 22000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 5800,
-      heatingCapacity5FMaxBtu: 19000,
-      seer2Min: 20,
+      heatingCapacity5FMaxBtu: 6200,
+      seer2Min: 23.5,
       seer2Max: 23.5,
       hspf2Min: 9.5,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-18000",
+      slug: "haier-advanced-plus-wall-single-18000",
+      name: "Advanced Plus 18 000 BTU",
+      seriesId: "haier-advanced-plus",
+      brandId: "haier",
+      modelNumber: "Advanced Plus 18k",
+      normalizedModelNumber: "advanced-plus-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 13600,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-12000",
+      slug: "haier-advanced-plus-wall-single-12000",
+      name: "Advanced Plus 12 000 BTU",
+      seriesId: "haier-advanced-plus",
+      brandId: "haier",
+      modelNumber: "Advanced Plus 12k",
+      normalizedModelNumber: "advanced-plus-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10700,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10.2,
       hspf2Max: 10.5,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
@@ -210,24 +347,133 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single",
-      slug: "haier-arctic-wall-single",
-      name: "Arctic",
-      seriesId: "haier-arctic",
+      id: "haier-advanced-plus-wall-single-15000",
+      slug: "haier-advanced-plus-wall-single-15000",
+      name: "Advanced Plus 15 000 BTU",
+      seriesId: "haier-advanced-plus",
       brandId: "haier",
-      modelNumber: "Arctic",
-      normalizedModelNumber: "arctic",
+      modelNumber: "Advanced Plus 15k",
+      normalizedModelNumber: "advanced-plus-15000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 33400,
-      heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 23600,
-      seer2Min: 15.7,
-      seer2Max: 30,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      heatingCapacity5FMinBtu: 11600,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 9.6,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-20000",
+      slug: "haier-advanced-plus-wall-single-20000",
+      name: "Advanced Plus 20 000 BTU",
+      seriesId: "haier-advanced-plus",
+      brandId: "haier",
+      modelNumber: "Advanced Plus 20k",
+      normalizedModelNumber: "advanced-plus-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 19000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-12000",
+      slug: "haier-arctic-wall-single-12000",
+      name: "Arctic 12 000 BTU",
+      seriesId: "haier-arctic",
+      brandId: "haier",
+      modelNumber: "Arctic 12k",
+      normalizedModelNumber: "arctic-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 20.5,
+      seer2Max: 27.5,
       hspf2Min: 8.5,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-9000",
+      slug: "haier-arctic-wall-single-9000",
+      name: "Arctic 9 000 BTU",
+      seriesId: "haier-arctic",
+      brandId: "haier",
+      modelNumber: "Arctic 9k",
+      normalizedModelNumber: "arctic-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 7800,
+      seer2Min: 18,
+      seer2Max: 30,
+      hspf2Min: 9.5,
       hspf2Max: 14,
       cop5FMin: 1.75,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-18000",
+      slug: "haier-arctic-wall-single-18000",
+      name: "Arctic 18 000 BTU",
+      seriesId: "haier-arctic",
+      brandId: "haier",
+      modelNumber: "Arctic 18k",
+      normalizedModelNumber: "arctic-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13000,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: 16,
+      seer2Max: 23,
+      hspf2Min: 9.8,
+      hspf2Max: 12,
+      cop5FMin: 1.8,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -236,15 +482,70 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-3u24ms2hd-wall-single",
-      slug: "haier-3u24ms2hd-wall-single",
-      name: "3U24MS2HD**",
-      seriesId: "haier-3u24ms2hd",
+      id: "haier-standard-wall-single-9000",
+      slug: "haier-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "haier-standard",
       brandId: "haier",
-      modelNumber: "3U24MS2HD**",
-      normalizedModelNumber: "3u24ms2hd",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 5000,
+      heatingCapacity5FMaxBtu: 5000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-12000",
+      slug: "haier-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "haier-standard",
+      brandId: "haier",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 7500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-3u24ms2hd-wall-single-24000",
+      slug: "haier-3u24ms2hd-wall-single-24000",
+      name: "3U24MS2HD** 24 000 BTU",
+      seriesId: "haier-3u24ms2hd",
+      brandId: "haier",
+      modelNumber: "3U24MS2HD** 24k",
+      normalizedModelNumber: "3u24ms2hd-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 22600,
       coolingCapacityMaxBtu: 22600,
       heatingCapacity5FMinBtu: 16000,
@@ -262,15 +563,16 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-1u24tl2hf-wall-single",
-      slug: "haier-1u24tl2hf-wall-single",
-      name: "1U24TL2HF**",
+      id: "haier-1u24tl2hf-wall-single-24000",
+      slug: "haier-1u24tl2hf-wall-single-24000",
+      name: "1U24TL2HF** 24 000 BTU",
       seriesId: "haier-1u24tl2hf",
       brandId: "haier",
-      modelNumber: "1U24TL2HF**",
-      normalizedModelNumber: "1u24tl2hf",
+      modelNumber: "1U24TL2HF** 24k",
+      normalizedModelNumber: "1u24tl2hf-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 23000,
       heatingCapacity5FMinBtu: 17000,
@@ -288,15 +590,16 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-1u3036tl2hf-wall-single",
-      slug: "haier-1u3036tl2hf-wall-single",
-      name: "1U3036TL2HF**",
+      id: "haier-1u3036tl2hf-wall-single-30000",
+      slug: "haier-1u3036tl2hf-wall-single-30000",
+      name: "1U3036TL2HF** 30 000 BTU",
       seriesId: "haier-1u3036tl2hf",
       brandId: "haier",
-      modelNumber: "1U3036TL2HF**",
-      normalizedModelNumber: "1u3036tl2hf",
+      modelNumber: "1U3036TL2HF** 30k",
+      normalizedModelNumber: "1u3036tl2hf-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 20000,
@@ -314,23 +617,186 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single",
-      slug: "haier-arctic-pro-wall-single",
-      name: "Arctic PRO",
-      seriesId: "haier-arctic-pro",
+      id: "haier-arctic-wall-single-20000",
+      slug: "haier-arctic-wall-single-20000",
+      name: "Arctic 20 000 BTU",
+      seriesId: "haier-arctic",
       brandId: "haier",
-      modelNumber: "Arctic PRO",
-      normalizedModelNumber: "arctic-pro",
+      modelNumber: "Arctic 20k",
+      normalizedModelNumber: "arctic-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 21400,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 17400,
+      seer2Min: 17,
+      seer2Max: 19.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.2,
+      cop5FMin: 1.85,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-36000",
+      slug: "haier-arctic-wall-single-36000",
+      name: "Arctic 36 000 BTU",
+      seriesId: "haier-arctic",
+      brandId: "haier",
+      modelNumber: "Arctic 36k",
+      normalizedModelNumber: "arctic-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33400,
+      coolingCapacityMaxBtu: 33400,
+      heatingCapacity5FMinBtu: 23600,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-30000",
+      slug: "haier-arctic-wall-single-30000",
+      name: "Arctic 30 000 BTU",
+      seriesId: "haier-arctic",
+      brandId: "haier",
+      modelNumber: "Arctic 30k",
+      normalizedModelNumber: "arctic-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 15.7,
+      seer2Max: 15.7,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-42000",
+      slug: "haier-standard-wall-single-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "haier-standard",
+      brandId: "haier",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-24000",
+      slug: "haier-arctic-pro-wall-single-24000",
+      name: "Arctic PRO 24 000 BTU",
+      seriesId: "haier-arctic-pro",
+      brandId: "haier",
+      modelNumber: "Arctic PRO 24k",
+      normalizedModelNumber: "arctic-pro-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 47500,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 15600,
-      heatingCapacity5FMaxBtu: 37000,
-      seer2Min: 15.2,
+      heatingCapacity5FMaxBtu: 20600,
+      seer2Min: 16.5,
       seer2Max: 21,
       hspf2Min: 8.1,
       hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-30000",
+      slug: "haier-arctic-pro-wall-single-30000",
+      name: "Arctic PRO 30 000 BTU",
+      seriesId: "haier-arctic-pro",
+      brandId: "haier",
+      modelNumber: "Arctic PRO 30k",
+      normalizedModelNumber: "arctic-pro-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 32400,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 26800,
+      seer2Min: 15.2,
+      seer2Max: 20,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-42000",
+      slug: "haier-arctic-pro-wall-single-42000",
+      name: "Arctic PRO 42 000 BTU",
+      seriesId: "haier-arctic-pro",
+      brandId: "haier",
+      modelNumber: "Arctic PRO 42k",
+      normalizedModelNumber: "arctic-pro-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 31000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 18,
+      hspf2Min: 8.5,
+      hspf2Max: 10,
       cop5FMin: 1.75,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -340,19 +806,74 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-115v-wall-single",
-      slug: "haier-tempo-115v-wall-single",
-      name: "Tempo 115V",
-      seriesId: "haier-tempo-115v",
+      id: "haier-arctic-pro-wall-single-48000",
+      slug: "haier-arctic-pro-wall-single-48000",
+      name: "Arctic PRO 48 000 BTU",
+      seriesId: "haier-arctic-pro",
       brandId: "haier",
-      modelNumber: "Tempo 115V",
-      normalizedModelNumber: "tempo-115v",
+      modelNumber: "Arctic PRO 48k",
+      normalizedModelNumber: "arctic-pro-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 47500,
+      heatingCapacity5FMinBtu: 34600,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 15.2,
+      seer2Max: 17.3,
+      hspf2Min: 8.8,
+      hspf2Max: 10,
+      cop5FMin: 1.75,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-36000",
+      slug: "haier-arctic-pro-wall-single-36000",
+      name: "Arctic PRO 36 000 BTU",
+      seriesId: "haier-arctic-pro",
+      brandId: "haier",
+      modelNumber: "Arctic PRO 36k",
+      normalizedModelNumber: "arctic-pro-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 17.4,
+      seer2Max: 19,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-tempo-115v-wall-single-9000",
+      slug: "haier-tempo-115v-wall-single-9000",
+      name: "Tempo 115V 9 000 BTU",
+      seriesId: "haier-tempo-115v",
+      brandId: "haier",
+      modelNumber: "Tempo 115V 9k",
+      normalizedModelNumber: "tempo-115v-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 11500,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6400,
-      heatingCapacity5FMaxBtu: 7800,
+      heatingCapacity5FMaxBtu: 6400,
       seer2Min: 20,
       seer2Max: 20,
       hspf2Min: 9.5,
@@ -366,21 +887,76 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-single-wall-single",
-      slug: "haier-arctic-single-wall-single",
-      name: "Arctic Single",
-      seriesId: "haier-arctic-single",
+      id: "haier-tempo-115v-wall-single-12000",
+      slug: "haier-tempo-115v-wall-single-12000",
+      name: "Tempo 115V 12 000 BTU",
+      seriesId: "haier-tempo-115v",
       brandId: "haier",
-      modelNumber: "Arctic Single",
-      normalizedModelNumber: "arctic-single",
+      modelNumber: "Tempo 115V 12k",
+      normalizedModelNumber: "tempo-115v-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      heatingCapacity5FMinBtu: 7800,
+      heatingCapacity5FMaxBtu: 7800,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-9000",
+      slug: "haier-arctic-single-wall-single-9000",
+      name: "Arctic Single 9 000 BTU",
+      seriesId: "haier-arctic-single",
+      brandId: "haier",
+      modelNumber: "Arctic Single 9k",
+      normalizedModelNumber: "arctic-single-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMaxBtu: 10000,
       heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 17000,
-      seer2Min: 18,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 19.6,
       seer2Max: 27,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-12000",
+      slug: "haier-arctic-single-wall-single-12000",
+      name: "Arctic Single 12 000 BTU",
+      seriesId: "haier-arctic-single",
+      brandId: "haier",
+      modelNumber: "Arctic Single 12k",
+      normalizedModelNumber: "arctic-single-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8700,
+      heatingCapacity5FMaxBtu: 9600,
+      seer2Min: 20,
+      seer2Max: 25,
       hspf2Min: 9.5,
       hspf2Max: 11,
       cop5FMin: 1.8,
@@ -392,21 +968,157 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single",
-      slug: "haier-flexfit-single-wall-single",
-      name: "Flexfit Single",
-      seriesId: "haier-flexfit-single",
+      id: "haier-arctic-single-wall-single-18000",
+      slug: "haier-arctic-single-wall-single-18000",
+      name: "Arctic Single 18 000 BTU",
+      seriesId: "haier-arctic-single",
       brandId: "haier",
-      modelNumber: "Flexfit Single",
-      normalizedModelNumber: "flexfit-single",
+      modelNumber: "Arctic Single 18k",
+      normalizedModelNumber: "arctic-single-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 18,
+      seer2Max: 20.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-9000",
+      slug: "haier-flexfit-single-wall-single-9000",
+      name: "Flexfit Single 9 000 BTU",
+      seriesId: "haier-flexfit-single",
+      brandId: "haier",
+      modelNumber: "Flexfit Single 9k",
+      normalizedModelNumber: "flexfit-single-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 33800,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 5900,
+      heatingCapacity5FMaxBtu: 7000,
+      seer2Min: 17.8,
+      seer2Max: 23,
+      hspf2Min: 9.4,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-12000",
+      slug: "haier-flexfit-single-wall-single-12000",
+      name: "Flexfit Single 12 000 BTU",
+      seriesId: "haier-flexfit-single",
+      brandId: "haier",
+      modelNumber: "Flexfit Single 12k",
+      normalizedModelNumber: "flexfit-single-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11800,
+      coolingCapacityMaxBtu: 13500,
+      heatingCapacity5FMinBtu: 7300,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 17,
+      seer2Max: 21,
+      hspf2Min: 9.2,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-18000",
+      slug: "haier-flexfit-single-wall-single-18000",
+      name: "Flexfit Single 18 000 BTU",
+      seriesId: "haier-flexfit-single",
+      brandId: "haier",
+      modelNumber: "Flexfit Single 18k",
+      normalizedModelNumber: "flexfit-single-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 17.3,
+      seer2Max: 20,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-24000",
+      slug: "haier-flexfit-single-wall-single-24000",
+      name: "Flexfit Single 24 000 BTU",
+      seriesId: "haier-flexfit-single",
+      brandId: "haier",
+      modelNumber: "Flexfit Single 24k",
+      normalizedModelNumber: "flexfit-single-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 14400,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 18,
+      seer2Max: 19.5,
+      hspf2Min: 9.4,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-30000",
+      slug: "haier-flexfit-single-wall-single-30000",
+      name: "Flexfit Single 30 000 BTU",
+      seriesId: "haier-flexfit-single",
+      brandId: "haier",
+      modelNumber: "Flexfit Single 30k",
+      normalizedModelNumber: "flexfit-single-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 18600,
       heatingCapacity5FMaxBtu: 25000,
       seer2Min: 16,
-      seer2Max: 23,
+      seer2Max: 19,
       hspf2Min: 9,
       hspf2Max: 10,
       cop5FMin: 1.8,
@@ -418,21 +1130,22 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-multi-wall-single",
-      slug: "haier-flexfit-multi-wall-single",
-      name: "Flexfit Multi",
+      id: "haier-flexfit-multi-wall-single-18000",
+      slug: "haier-flexfit-multi-wall-single-18000",
+      name: "Flexfit Multi 18 000 BTU",
       seriesId: "haier-flexfit-multi",
       brandId: "haier",
-      modelNumber: "Flexfit Multi",
-      normalizedModelNumber: "flexfit-multi",
+      modelNumber: "Flexfit Multi 18k",
+      normalizedModelNumber: "flexfit-multi-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 15000,
-      heatingCapacity5FMaxBtu: 17000,
+      heatingCapacity5FMaxBtu: 15000,
       seer2Min: 18.8,
-      seer2Max: 24,
+      seer2Max: 22.5,
       hspf2Min: 9.5,
       hspf2Max: 10.5,
       cop5FMin: 1.8,
@@ -444,22 +1157,50 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-multi-wall-single",
-      slug: "haier-arctic-multi-wall-single",
-      name: "Arctic Multi",
+      id: "haier-flexfit-multi-wall-single-24000",
+      slug: "haier-flexfit-multi-wall-single-24000",
+      name: "Flexfit Multi 24 000 BTU",
+      seriesId: "haier-flexfit-multi",
+      brandId: "haier",
+      modelNumber: "Flexfit Multi 24k",
+      normalizedModelNumber: "flexfit-multi-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16400,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-multi-wall-single-18000",
+      slug: "haier-arctic-multi-wall-single-18000",
+      name: "Arctic Multi 18 000 BTU",
       seriesId: "haier-arctic-multi",
       brandId: "haier",
-      modelNumber: "Arctic Multi",
-      normalizedModelNumber: "arctic-multi",
+      modelNumber: "Arctic Multi 18k",
+      normalizedModelNumber: "arctic-multi-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 42000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 14000,
-      heatingCapacity5FMaxBtu: 30000,
-      seer2Min: 17.2,
-      seer2Max: 23,
-      hspf2Min: 9.5,
+      heatingCapacity5FMaxBtu: 14400,
+      seer2Min: 17.6,
+      seer2Max: 20.6,
+      hspf2Min: 10.5,
       hspf2Max: 10.5,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
@@ -470,23 +1211,240 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-230v-wall-single",
-      slug: "haier-tempo-230v-wall-single",
-      name: "Tempo 230V",
-      seriesId: "haier-tempo-230v",
+      id: "haier-arctic-multi-wall-single-24000",
+      slug: "haier-arctic-multi-wall-single-24000",
+      name: "Arctic Multi 24 000 BTU",
+      seriesId: "haier-arctic-multi",
       brandId: "haier",
-      modelNumber: "Tempo 230V",
-      normalizedModelNumber: "tempo-230v",
+      modelNumber: "Arctic Multi 24k",
+      normalizedModelNumber: "arctic-multi-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 17.2,
+      seer2Max: 23,
+      hspf2Min: 10,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-multi-wall-single-36000",
+      slug: "haier-arctic-multi-wall-single-36000",
+      name: "Arctic Multi 36 000 BTU",
+      seriesId: "haier-arctic-multi",
+      brandId: "haier",
+      modelNumber: "Arctic Multi 36k",
+      normalizedModelNumber: "arctic-multi-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23600,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 17.4,
+      seer2Max: 20.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-multi-wall-single-42000",
+      slug: "haier-arctic-multi-wall-single-42000",
+      name: "Arctic Multi 42 000 BTU",
+      seriesId: "haier-arctic-multi",
+      brandId: "haier",
+      modelNumber: "Arctic Multi 42k",
+      normalizedModelNumber: "arctic-multi-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 27600,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 17.4,
+      seer2Max: 20.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-tempo-230v-wall-single-9000",
+      slug: "haier-tempo-230v-wall-single-9000",
+      name: "Tempo 230V 9 000 BTU",
+      seriesId: "haier-tempo-230v",
+      brandId: "haier",
+      modelNumber: "Tempo 230V 9k",
+      normalizedModelNumber: "tempo-230v-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 14400,
-      seer2Min: 18,
+      heatingCapacity5FMaxBtu: 6000,
+      seer2Min: 23,
       seer2Max: 23,
       hspf2Min: 9.5,
       hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-tempo-230v-wall-single-12000",
+      slug: "haier-tempo-230v-wall-single-12000",
+      name: "Tempo 230V 12 000 BTU",
+      seriesId: "haier-tempo-230v",
+      brandId: "haier",
+      modelNumber: "Tempo 230V 12k",
+      normalizedModelNumber: "tempo-230v-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11800,
+      coolingCapacityMaxBtu: 11800,
+      heatingCapacity5FMinBtu: 7800,
+      heatingCapacity5FMaxBtu: 7800,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-tempo-230v-wall-single-18000",
+      slug: "haier-tempo-230v-wall-single-18000",
+      name: "Tempo 230V 18 000 BTU",
+      seriesId: "haier-tempo-230v",
+      brandId: "haier",
+      modelNumber: "Tempo 230V 18k",
+      normalizedModelNumber: "tempo-230v-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-tempo-230v-wall-single-24000",
+      slug: "haier-tempo-230v-wall-single-24000",
+      name: "Tempo 230V 24 000 BTU",
+      seriesId: "haier-tempo-230v",
+      brandId: "haier",
+      modelNumber: "Tempo 230V 24k",
+      normalizedModelNumber: "tempo-230v-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 14400,
+      heatingCapacity5FMaxBtu: 14400,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-15000",
+      slug: "haier-flexfit-single-wall-single-15000",
+      name: "Flexfit Single 15 000 BTU",
+      seriesId: "haier-flexfit-single",
+      brandId: "haier",
+      modelNumber: "Flexfit Single 15k",
+      normalizedModelNumber: "flexfit-single-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9.1,
+      hspf2Max: 9.1,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-36000",
+      slug: "haier-flexfit-single-wall-single-36000",
+      name: "Flexfit Single 36 000 BTU",
+      seriesId: "haier-flexfit-single",
+      brandId: "haier",
+      modelNumber: "Flexfit Single 36k",
+      normalizedModelNumber: "flexfit-single-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33800,
+      coolingCapacityMaxBtu: 33800,
+      heatingCapacity5FMinBtu: 20600,
+      heatingCapacity5FMaxBtu: 20600,
+      seer2Min: 18.8,
+      seer2Max: 18.8,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -504,56 +1462,8 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "haier-3u24ms2vhb",
-      modelNumber: "3U24MS2VHB",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-2u20eh2vha",
-      modelNumber: "2U20EH2VHA",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-3u24eh2vha",
-      modelNumber: "3U24EH2VHA",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u09te2vha",
-      modelNumber: "1U09TE2VHA*",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u12te2vha",
-      modelNumber: "1U12TE2VHA*",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
       id: "haier-4u36ms2hd",
       modelNumber: "4U36MS2HD**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u18te2hd",
-      modelNumber: "1U18TE2HD**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u24te2hd",
-      modelNumber: "1U24TE2HD**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-5u42ms2hd",
-      modelNumber: "5U42MS2HD**",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -564,32 +1474,38 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "haier-3u24ms2vhb",
+      modelNumber: "3U24MS2VHB",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u24te2hd",
+      modelNumber: "1U24TE2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-2u20eh2vha",
+      modelNumber: "2U20EH2VHA",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u18te2hd",
+      modelNumber: "1U18TE2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-3u24eh2vha",
+      modelNumber: "3U24EH2VHA",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
       id: "haier-1u09ap2vha",
       modelNumber: "1U09AP2VHA",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u18ap2vha",
-      modelNumber: "1U18AP2VHA",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u12ap2vha",
-      modelNumber: "1U12AP2VHA",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u15ap2vha",
-      modelNumber: "1U15AP2VHA",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u24ap2vha",
-      modelNumber: "1U24AP2VHA",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -600,8 +1516,32 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "haier-1u18ap2vha",
+      modelNumber: "1U18AP2VHA",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u18ap2hd",
+      modelNumber: "1U18AP2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u12ap2vha",
+      modelNumber: "1U12AP2VHA",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
       id: "haier-1u12ap2hd",
       modelNumber: "1U12AP2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u15ap2vha",
+      modelNumber: "1U15AP2VHA",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -612,8 +1552,8 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "haier-1u18ap2hd",
-      modelNumber: "1U18AP2HD**",
+      id: "haier-1u24ap2vha",
+      modelNumber: "1U24AP2VHA",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -630,8 +1570,20 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "haier-1u12eh2he",
+      modelNumber: "1U12EH2HE**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
       id: "haier-1u09eh2vhe",
       modelNumber: "1U09EH2VHE*",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u09eh2he",
+      modelNumber: "1U09EH2HE**",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -648,32 +1600,20 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "haier-3u24eh2hd",
-      modelNumber: "3U24EH2HD**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-4u36eh2hd",
-      modelNumber: "4U36EH2HD**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u09eh2he",
-      modelNumber: "1U09EH2HE**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u12eh2he",
-      modelNumber: "1U12EH2HE**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
       id: "haier-1u18eh2he",
       modelNumber: "1U18EH2HE**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u09te2vha",
+      modelNumber: "1U09TE2VHA*",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u12te2vha",
+      modelNumber: "1U12TE2VHA*",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -696,20 +1636,26 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "haier-3u24eh2hd",
+      modelNumber: "3U24EH2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-4u36eh2hd",
+      modelNumber: "4U36EH2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-5u42ms2hd",
+      modelNumber: "5U42MS2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
       id: "haier-1u24lp2hd",
       modelNumber: "1U24LP2HD**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u3036lp2hd",
-      modelNumber: "1U3036LP2HD**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1u4248lp2hd",
-      modelNumber: "1U4248LP2HD**",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -720,8 +1666,20 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "haier-1u3036lp2hd",
+      modelNumber: "1U3036LP2HD**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
       id: "haier-1q3036rt2be",
       modelNumber: "1Q3036RT2BE**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1u4248lp2hd",
+      modelNumber: "1U4248LP2HD**",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -750,18 +1708,6 @@ export const haierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "haier-1q12rt2be",
-      modelNumber: "1Q12RT2BE**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
-      id: "haier-1q18rt2be",
-      modelNumber: "1Q18RT2BE**",
-      brandId: "haier",
-      refrigerant: null as any,
-    },
-    {
       id: "haier-1q09ed2be",
       modelNumber: "1Q09ED2BE**",
       brandId: "haier",
@@ -770,6 +1716,18 @@ export const haierDataset: BrandDataset = {
     {
       id: "haier-1q12ed2be",
       modelNumber: "1Q12ED2BE**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1q12rt2be",
+      modelNumber: "1Q12RT2BE**",
+      brandId: "haier",
+      refrigerant: null as any,
+    },
+    {
+      id: "haier-1q18rt2be",
+      modelNumber: "1Q18RT2BE**",
       brandId: "haier",
       refrigerant: null as any,
     },
@@ -881,9 +1839,9 @@ export const haierDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "haier-standard-wall-single-cfg-1",
-      slug: "haier-standard-wall-single-cfg-1",
-      modelId: "haier-standard-wall-single",
+      id: "haier-standard-wall-single-36000-cfg-1",
+      slug: "haier-standard-wall-single-36000-cfg-1",
+      modelId: "haier-standard-wall-single-36000",
       outdoorUnitId: "haier-4u36ms2vhb",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -895,79 +1853,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-standard-wall-single-cfg-2",
-      slug: "haier-standard-wall-single-cfg-2",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-3u24ms2vhb",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22600,
-      coolingCapacityMaxBtu: 22600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-standard-wall-single-cfg-3",
-      slug: "haier-standard-wall-single-cfg-3",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-2u20eh2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18100,
-      coolingCapacityMaxBtu: 18100,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-standard-wall-single-cfg-4",
-      slug: "haier-standard-wall-single-cfg-4",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-3u24eh2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-standard-wall-single-cfg-5",
-      slug: "haier-standard-wall-single-cfg-5",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-1u09te2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-standard-wall-single-cfg-6",
-      slug: "haier-standard-wall-single-cfg-6",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-1u12te2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-standard-wall-single-cfg-7",
-      slug: "haier-standard-wall-single-cfg-7",
-      modelId: "haier-standard-wall-single",
+      id: "haier-standard-wall-single-36000-cfg-2",
+      slug: "haier-standard-wall-single-36000-cfg-2",
+      modelId: "haier-standard-wall-single-36000",
       outdoorUnitId: "haier-4u36ms2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -979,13 +1867,13 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-standard-wall-single-cfg-8",
-      slug: "haier-standard-wall-single-cfg-8",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-1u18te2hd",
+      id: "haier-standard-wall-single-36000-cfg-3",
+      slug: "haier-standard-wall-single-36000-cfg-3",
+      modelId: "haier-standard-wall-single-36000",
+      outdoorUnitId: "haier-4q36ff2be",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -993,9 +1881,37 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-standard-wall-single-cfg-9",
-      slug: "haier-standard-wall-single-cfg-9",
-      modelId: "haier-standard-wall-single",
+      id: "haier-standard-wall-single-36000-cfg-4",
+      slug: "haier-standard-wall-single-36000-cfg-4",
+      modelId: "haier-standard-wall-single-36000",
+      outdoorUnitId: "haier-4q36ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33400,
+      coolingCapacityMaxBtu: 33400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-24000-cfg-1",
+      slug: "haier-standard-wall-single-24000-cfg-1",
+      modelId: "haier-standard-wall-single-24000",
+      outdoorUnitId: "haier-3u24ms2vhb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22600,
+      coolingCapacityMaxBtu: 22600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-24000-cfg-2",
+      slug: "haier-standard-wall-single-24000-cfg-2",
+      modelId: "haier-standard-wall-single-24000",
       outdoorUnitId: "haier-1u24te2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1007,13 +1923,13 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-standard-wall-single-cfg-10",
-      slug: "haier-standard-wall-single-cfg-10",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-5u42ms2hd",
+      id: "haier-standard-wall-single-18000-cfg-1",
+      slug: "haier-standard-wall-single-18000-cfg-1",
+      modelId: "haier-standard-wall-single-18000",
+      outdoorUnitId: "haier-2u20eh2vha",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 41000,
-      coolingCapacityMaxBtu: 41000,
+      coolingCapacityMinBtu: 18100,
+      coolingCapacityMaxBtu: 18100,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1021,13 +1937,13 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-standard-wall-single-cfg-11",
-      slug: "haier-standard-wall-single-cfg-11",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-4q36ff2be",
+      id: "haier-standard-wall-single-18000-cfg-2",
+      slug: "haier-standard-wall-single-18000-cfg-2",
+      modelId: "haier-standard-wall-single-18000",
+      outdoorUnitId: "haier-1u18te2hd",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1035,13 +1951,13 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-standard-wall-single-cfg-12",
-      slug: "haier-standard-wall-single-cfg-12",
-      modelId: "haier-standard-wall-single",
-      outdoorUnitId: "haier-4q36ff2be",
+      id: "haier-standard-wall-single-20000-cfg-1",
+      slug: "haier-standard-wall-single-20000-cfg-1",
+      modelId: "haier-standard-wall-single-20000",
+      outdoorUnitId: "haier-3u24eh2vha",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 33400,
-      coolingCapacityMaxBtu: 33400,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1049,9 +1965,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-advanced-plus-wall-single-cfg-1",
-      slug: "haier-advanced-plus-wall-single-cfg-1",
-      modelId: "haier-advanced-plus-wall-single",
+      id: "haier-advanced-plus-wall-single-9000-cfg-1",
+      slug: "haier-advanced-plus-wall-single-9000-cfg-1",
+      modelId: "haier-advanced-plus-wall-single-9000",
       outdoorUnitId: "haier-1u09ap2vha",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1063,65 +1979,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-advanced-plus-wall-single-cfg-2",
-      slug: "haier-advanced-plus-wall-single-cfg-2",
-      modelId: "haier-advanced-plus-wall-single",
-      outdoorUnitId: "haier-1u18ap2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 21,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-advanced-plus-wall-single-cfg-3",
-      slug: "haier-advanced-plus-wall-single-cfg-3",
-      modelId: "haier-advanced-plus-wall-single",
-      outdoorUnitId: "haier-1u12ap2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-advanced-plus-wall-single-cfg-4",
-      slug: "haier-advanced-plus-wall-single-cfg-4",
-      modelId: "haier-advanced-plus-wall-single",
-      outdoorUnitId: "haier-1u15ap2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: 21.5,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-advanced-plus-wall-single-cfg-5",
-      slug: "haier-advanced-plus-wall-single-cfg-5",
-      modelId: "haier-advanced-plus-wall-single",
-      outdoorUnitId: "haier-1u24ap2vha",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-advanced-plus-wall-single-cfg-6",
-      slug: "haier-advanced-plus-wall-single-cfg-6",
-      modelId: "haier-advanced-plus-wall-single",
+      id: "haier-advanced-plus-wall-single-9000-cfg-2",
+      slug: "haier-advanced-plus-wall-single-9000-cfg-2",
+      modelId: "haier-advanced-plus-wall-single-9000",
       outdoorUnitId: "haier-1u09ap2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1133,37 +1993,23 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-advanced-plus-wall-single-cfg-7",
-      slug: "haier-advanced-plus-wall-single-cfg-7",
-      modelId: "haier-advanced-plus-wall-single",
-      outdoorUnitId: "haier-1u12ap2hd",
+      id: "haier-advanced-plus-wall-single-18000-cfg-1",
+      slug: "haier-advanced-plus-wall-single-18000-cfg-1",
+      modelId: "haier-advanced-plus-wall-single-18000",
+      outdoorUnitId: "haier-1u18ap2vha",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10.5,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 21,
+      hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-advanced-plus-wall-single-cfg-8",
-      slug: "haier-advanced-plus-wall-single-cfg-8",
-      modelId: "haier-advanced-plus-wall-single",
-      outdoorUnitId: "haier-1u15ap2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: 21.5,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-advanced-plus-wall-single-cfg-9",
-      slug: "haier-advanced-plus-wall-single-cfg-9",
-      modelId: "haier-advanced-plus-wall-single",
+      id: "haier-advanced-plus-wall-single-18000-cfg-2",
+      slug: "haier-advanced-plus-wall-single-18000-cfg-2",
+      modelId: "haier-advanced-plus-wall-single-18000",
       outdoorUnitId: "haier-1u18ap2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1175,9 +2021,79 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-advanced-plus-wall-single-cfg-10",
-      slug: "haier-advanced-plus-wall-single-cfg-10",
-      modelId: "haier-advanced-plus-wall-single",
+      id: "haier-advanced-plus-wall-single-12000-cfg-1",
+      slug: "haier-advanced-plus-wall-single-12000-cfg-1",
+      modelId: "haier-advanced-plus-wall-single-12000",
+      outdoorUnitId: "haier-1u12ap2vha",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-12000-cfg-2",
+      slug: "haier-advanced-plus-wall-single-12000-cfg-2",
+      modelId: "haier-advanced-plus-wall-single-12000",
+      outdoorUnitId: "haier-1u12ap2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-15000-cfg-1",
+      slug: "haier-advanced-plus-wall-single-15000-cfg-1",
+      modelId: "haier-advanced-plus-wall-single-15000",
+      outdoorUnitId: "haier-1u15ap2vha",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: 21.5,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-15000-cfg-2",
+      slug: "haier-advanced-plus-wall-single-15000-cfg-2",
+      modelId: "haier-advanced-plus-wall-single-15000",
+      outdoorUnitId: "haier-1u15ap2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: 21.5,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-20000-cfg-1",
+      slug: "haier-advanced-plus-wall-single-20000-cfg-1",
+      modelId: "haier-advanced-plus-wall-single-20000",
+      outdoorUnitId: "haier-1u24ap2vha",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-advanced-plus-wall-single-20000-cfg-2",
+      slug: "haier-advanced-plus-wall-single-20000-cfg-2",
+      modelId: "haier-advanced-plus-wall-single-20000",
       outdoorUnitId: "haier-1u24ap2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1189,9 +2105,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single-cfg-1",
-      slug: "haier-arctic-wall-single-cfg-1",
-      modelId: "haier-arctic-wall-single",
+      id: "haier-arctic-wall-single-12000-cfg-1",
+      slug: "haier-arctic-wall-single-12000-cfg-1",
+      modelId: "haier-arctic-wall-single-12000",
       outdoorUnitId: "haier-1u12eh2vhe",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1203,9 +2119,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single-cfg-2",
-      slug: "haier-arctic-wall-single-cfg-2",
-      modelId: "haier-arctic-wall-single",
+      id: "haier-arctic-wall-single-12000-cfg-2",
+      slug: "haier-arctic-wall-single-12000-cfg-2",
+      modelId: "haier-arctic-wall-single-12000",
       outdoorUnitId: "haier-1u12eh2vhe",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1217,9 +2133,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single-cfg-3",
-      slug: "haier-arctic-wall-single-cfg-3",
-      modelId: "haier-arctic-wall-single",
+      id: "haier-arctic-wall-single-12000-cfg-3",
+      slug: "haier-arctic-wall-single-12000-cfg-3",
+      modelId: "haier-arctic-wall-single-12000",
       outdoorUnitId: "haier-1u12eh2vhe",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1231,9 +2147,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single-cfg-4",
-      slug: "haier-arctic-wall-single-cfg-4",
-      modelId: "haier-arctic-wall-single",
+      id: "haier-arctic-wall-single-12000-cfg-4",
+      slug: "haier-arctic-wall-single-12000-cfg-4",
+      modelId: "haier-arctic-wall-single-12000",
       outdoorUnitId: "haier-1u12eh2vhe",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1245,219 +2161,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single-cfg-5",
-      slug: "haier-arctic-wall-single-cfg-5",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u09eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 30,
-      hspf2: 14,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-6",
-      slug: "haier-arctic-wall-single-cfg-6",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u18eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-7",
-      slug: "haier-arctic-wall-single-cfg-7",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u09eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 30,
-      hspf2: 14,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-8",
-      slug: "haier-arctic-wall-single-cfg-8",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u18eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-9",
-      slug: "haier-arctic-wall-single-cfg-9",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u09eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 30,
-      hspf2: 14,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-10",
-      slug: "haier-arctic-wall-single-cfg-10",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u18eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-11",
-      slug: "haier-arctic-wall-single-cfg-11",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u09eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 30,
-      hspf2: 14,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-12",
-      slug: "haier-arctic-wall-single-cfg-12",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u18eh2vhe",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-13",
-      slug: "haier-arctic-wall-single-cfg-13",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-2u20eh2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-14",
-      slug: "haier-arctic-wall-single-cfg-14",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-3u24eh2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 19.5,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-15",
-      slug: "haier-arctic-wall-single-cfg-15",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-3u24eh2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21400,
-      coolingCapacityMaxBtu: 21400,
-      seer2: 17,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-16",
-      slug: "haier-arctic-wall-single-cfg-16",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-4u36eh2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33400,
-      coolingCapacityMaxBtu: 33400,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-17",
-      slug: "haier-arctic-wall-single-cfg-17",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-2u20eh2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17200,
-      coolingCapacityMaxBtu: 17200,
-      seer2: 16,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-18",
-      slug: "haier-arctic-wall-single-cfg-18",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-4u36eh2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 15.7,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-19",
-      slug: "haier-arctic-wall-single-cfg-19",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u09eh2he",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 30,
-      hspf2: 14,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-20",
-      slug: "haier-arctic-wall-single-cfg-20",
-      modelId: "haier-arctic-wall-single",
+      id: "haier-arctic-wall-single-12000-cfg-5",
+      slug: "haier-arctic-wall-single-12000-cfg-5",
+      modelId: "haier-arctic-wall-single-12000",
       outdoorUnitId: "haier-1u12eh2he",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1469,23 +2175,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single-cfg-21",
-      slug: "haier-arctic-wall-single-cfg-21",
-      modelId: "haier-arctic-wall-single",
-      outdoorUnitId: "haier-1u18eh2he",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17800,
-      coolingCapacityMaxBtu: 17800,
-      seer2: 23,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-wall-single-cfg-22",
-      slug: "haier-arctic-wall-single-cfg-22",
-      modelId: "haier-arctic-wall-single",
+      id: "haier-arctic-wall-single-12000-cfg-6",
+      slug: "haier-arctic-wall-single-12000-cfg-6",
+      modelId: "haier-arctic-wall-single-12000",
       outdoorUnitId: "haier-1u12eh2he",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1497,9 +2189,79 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-wall-single-cfg-23",
-      slug: "haier-arctic-wall-single-cfg-23",
-      modelId: "haier-arctic-wall-single",
+      id: "haier-arctic-wall-single-9000-cfg-1",
+      slug: "haier-arctic-wall-single-9000-cfg-1",
+      modelId: "haier-arctic-wall-single-9000",
+      outdoorUnitId: "haier-1u09eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 30,
+      hspf2: 14,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-9000-cfg-2",
+      slug: "haier-arctic-wall-single-9000-cfg-2",
+      modelId: "haier-arctic-wall-single-9000",
+      outdoorUnitId: "haier-1u09eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 30,
+      hspf2: 14,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-9000-cfg-3",
+      slug: "haier-arctic-wall-single-9000-cfg-3",
+      modelId: "haier-arctic-wall-single-9000",
+      outdoorUnitId: "haier-1u09eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 30,
+      hspf2: 14,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-9000-cfg-4",
+      slug: "haier-arctic-wall-single-9000-cfg-4",
+      modelId: "haier-arctic-wall-single-9000",
+      outdoorUnitId: "haier-1u09eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 30,
+      hspf2: 14,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-9000-cfg-5",
+      slug: "haier-arctic-wall-single-9000-cfg-5",
+      modelId: "haier-arctic-wall-single-9000",
+      outdoorUnitId: "haier-1u09eh2he",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 30,
+      hspf2: 14,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-9000-cfg-6",
+      slug: "haier-arctic-wall-single-9000-cfg-6",
+      modelId: "haier-arctic-wall-single-9000",
       outdoorUnitId: "haier-1u09eh2he",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1511,9 +2273,135 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-3u24ms2hd-wall-single-cfg-1",
-      slug: "haier-3u24ms2hd-wall-single-cfg-1",
-      modelId: "haier-3u24ms2hd-wall-single",
+      id: "haier-arctic-wall-single-18000-cfg-1",
+      slug: "haier-arctic-wall-single-18000-cfg-1",
+      modelId: "haier-arctic-wall-single-18000",
+      outdoorUnitId: "haier-1u18eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-18000-cfg-2",
+      slug: "haier-arctic-wall-single-18000-cfg-2",
+      modelId: "haier-arctic-wall-single-18000",
+      outdoorUnitId: "haier-1u18eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-18000-cfg-3",
+      slug: "haier-arctic-wall-single-18000-cfg-3",
+      modelId: "haier-arctic-wall-single-18000",
+      outdoorUnitId: "haier-1u18eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-18000-cfg-4",
+      slug: "haier-arctic-wall-single-18000-cfg-4",
+      modelId: "haier-arctic-wall-single-18000",
+      outdoorUnitId: "haier-1u18eh2vhe",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-18000-cfg-5",
+      slug: "haier-arctic-wall-single-18000-cfg-5",
+      modelId: "haier-arctic-wall-single-18000",
+      outdoorUnitId: "haier-2u20eh2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-18000-cfg-6",
+      slug: "haier-arctic-wall-single-18000-cfg-6",
+      modelId: "haier-arctic-wall-single-18000",
+      outdoorUnitId: "haier-2u20eh2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 17200,
+      seer2: 16,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-18000-cfg-7",
+      slug: "haier-arctic-wall-single-18000-cfg-7",
+      modelId: "haier-arctic-wall-single-18000",
+      outdoorUnitId: "haier-1u18eh2he",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17800,
+      coolingCapacityMaxBtu: 17800,
+      seer2: 23,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-9000-cfg-1",
+      slug: "haier-standard-wall-single-9000-cfg-1",
+      modelId: "haier-standard-wall-single-9000",
+      outdoorUnitId: "haier-1u09te2vha",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-12000-cfg-1",
+      slug: "haier-standard-wall-single-12000-cfg-1",
+      modelId: "haier-standard-wall-single-12000",
+      outdoorUnitId: "haier-1u12te2vha",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-3u24ms2hd-wall-single-24000-cfg-1",
+      slug: "haier-3u24ms2hd-wall-single-24000-cfg-1",
+      modelId: "haier-3u24ms2hd-wall-single-24000",
       outdoorUnitId: "haier-3u24ms2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22600,
@@ -1525,9 +2413,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-1u24tl2hf-wall-single-cfg-1",
-      slug: "haier-1u24tl2hf-wall-single-cfg-1",
-      modelId: "haier-1u24tl2hf-wall-single",
+      id: "haier-1u24tl2hf-wall-single-24000-cfg-1",
+      slug: "haier-1u24tl2hf-wall-single-24000-cfg-1",
+      modelId: "haier-1u24tl2hf-wall-single-24000",
       outdoorUnitId: "haier-1u24tl2hf",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1539,9 +2427,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-1u3036tl2hf-wall-single-cfg-1",
-      slug: "haier-1u3036tl2hf-wall-single-cfg-1",
-      modelId: "haier-1u3036tl2hf-wall-single",
+      id: "haier-1u3036tl2hf-wall-single-30000-cfg-1",
+      slug: "haier-1u3036tl2hf-wall-single-30000-cfg-1",
+      modelId: "haier-1u3036tl2hf-wall-single-30000",
       outdoorUnitId: "haier-1u3036tl2hf",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1553,9 +2441,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-1u3036tl2hf-wall-single-cfg-2",
-      slug: "haier-1u3036tl2hf-wall-single-cfg-2",
-      modelId: "haier-1u3036tl2hf-wall-single",
+      id: "haier-1u3036tl2hf-wall-single-30000-cfg-2",
+      slug: "haier-1u3036tl2hf-wall-single-30000-cfg-2",
+      modelId: "haier-1u3036tl2hf-wall-single-30000",
       outdoorUnitId: "haier-1u3036tl2hf",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1567,9 +2455,79 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-1",
-      slug: "haier-arctic-pro-wall-single-cfg-1",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-wall-single-20000-cfg-1",
+      slug: "haier-arctic-wall-single-20000-cfg-1",
+      modelId: "haier-arctic-wall-single-20000",
+      outdoorUnitId: "haier-3u24eh2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 19.5,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-20000-cfg-2",
+      slug: "haier-arctic-wall-single-20000-cfg-2",
+      modelId: "haier-arctic-wall-single-20000",
+      outdoorUnitId: "haier-3u24eh2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21400,
+      coolingCapacityMaxBtu: 21400,
+      seer2: 17,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-36000-cfg-1",
+      slug: "haier-arctic-wall-single-36000-cfg-1",
+      modelId: "haier-arctic-wall-single-36000",
+      outdoorUnitId: "haier-4u36eh2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33400,
+      coolingCapacityMaxBtu: 33400,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-wall-single-30000-cfg-1",
+      slug: "haier-arctic-wall-single-30000-cfg-1",
+      modelId: "haier-arctic-wall-single-30000",
+      outdoorUnitId: "haier-4u36eh2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 15.7,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-standard-wall-single-42000-cfg-1",
+      slug: "haier-standard-wall-single-42000-cfg-1",
+      modelId: "haier-standard-wall-single-42000",
+      outdoorUnitId: "haier-5u42ms2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 41000,
+      coolingCapacityMaxBtu: 41000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-24000-cfg-1",
+      slug: "haier-arctic-pro-wall-single-24000-cfg-1",
+      modelId: "haier-arctic-pro-wall-single-24000",
       outdoorUnitId: "haier-1u24lp2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1581,65 +2539,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-2",
-      slug: "haier-arctic-pro-wall-single-cfg-2",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u3036lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-3",
-      slug: "haier-arctic-pro-wall-single-cfg-3",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u3036lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-4",
-      slug: "haier-arctic-pro-wall-single-cfg-4",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u4248lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 15.2,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-5",
-      slug: "haier-arctic-pro-wall-single-cfg-5",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u4248lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: 15.2,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-6",
-      slug: "haier-arctic-pro-wall-single-cfg-6",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-pro-wall-single-24000-cfg-2",
+      slug: "haier-arctic-pro-wall-single-24000-cfg-2",
+      modelId: "haier-arctic-pro-wall-single-24000",
       outdoorUnitId: "haier-1u24lp2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1651,9 +2553,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-7",
-      slug: "haier-arctic-pro-wall-single-cfg-7",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-pro-wall-single-24000-cfg-3",
+      slug: "haier-arctic-pro-wall-single-24000-cfg-3",
+      modelId: "haier-arctic-pro-wall-single-24000",
       outdoorUnitId: "haier-1u24lp2hd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1665,79 +2567,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-8",
-      slug: "haier-arctic-pro-wall-single-cfg-8",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u3036lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 18,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-9",
-      slug: "haier-arctic-pro-wall-single-cfg-9",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u3036lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-10",
-      slug: "haier-arctic-pro-wall-single-cfg-10",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u3036lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-11",
-      slug: "haier-arctic-pro-wall-single-cfg-11",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u4248lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-12",
-      slug: "haier-arctic-pro-wall-single-cfg-12",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1u3036lp2hd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32400,
-      coolingCapacityMaxBtu: 32400,
-      seer2: 18,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-13",
-      slug: "haier-arctic-pro-wall-single-cfg-13",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-pro-wall-single-24000-cfg-4",
+      slug: "haier-arctic-pro-wall-single-24000-cfg-4",
+      modelId: "haier-arctic-pro-wall-single-24000",
       outdoorUnitId: "haier-1q24rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1749,9 +2581,107 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-14",
-      slug: "haier-arctic-pro-wall-single-cfg-14",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-pro-wall-single-24000-cfg-5",
+      slug: "haier-arctic-pro-wall-single-24000-cfg-5",
+      modelId: "haier-arctic-pro-wall-single-24000",
+      outdoorUnitId: "haier-1q24rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-24000-cfg-6",
+      slug: "haier-arctic-pro-wall-single-24000-cfg-6",
+      modelId: "haier-arctic-pro-wall-single-24000",
+      outdoorUnitId: "haier-1q24rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-30000-cfg-1",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-1",
+      modelId: "haier-arctic-pro-wall-single-30000",
+      outdoorUnitId: "haier-1u3036lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-30000-cfg-2",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-2",
+      modelId: "haier-arctic-pro-wall-single-30000",
+      outdoorUnitId: "haier-1u3036lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-30000-cfg-3",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-3",
+      modelId: "haier-arctic-pro-wall-single-30000",
+      outdoorUnitId: "haier-1u3036lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-30000-cfg-4",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-4",
+      modelId: "haier-arctic-pro-wall-single-30000",
+      outdoorUnitId: "haier-1u3036lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-30000-cfg-5",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-5",
+      modelId: "haier-arctic-pro-wall-single-30000",
+      outdoorUnitId: "haier-1u3036lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 32400,
+      coolingCapacityMaxBtu: 32400,
+      seer2: 18,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-30000-cfg-6",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-6",
+      modelId: "haier-arctic-pro-wall-single-30000",
       outdoorUnitId: "haier-1q3036rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1763,65 +2693,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-15",
-      slug: "haier-arctic-pro-wall-single-cfg-15",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1q3036rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.4,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-16",
-      slug: "haier-arctic-pro-wall-single-cfg-16",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1q4248rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-17",
-      slug: "haier-arctic-pro-wall-single-cfg-17",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1q4248rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 17.3,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-18",
-      slug: "haier-arctic-pro-wall-single-cfg-18",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1q24rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-19",
-      slug: "haier-arctic-pro-wall-single-cfg-19",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-pro-wall-single-30000-cfg-7",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-7",
+      modelId: "haier-arctic-pro-wall-single-30000",
       outdoorUnitId: "haier-1q3036rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1833,37 +2707,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-20",
-      slug: "haier-arctic-pro-wall-single-cfg-20",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1q3036rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-21",
-      slug: "haier-arctic-pro-wall-single-cfg-21",
-      modelId: "haier-arctic-pro-wall-single",
-      outdoorUnitId: "haier-1q24rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-pro-wall-single-cfg-22",
-      slug: "haier-arctic-pro-wall-single-cfg-22",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-pro-wall-single-30000-cfg-8",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-8",
+      modelId: "haier-arctic-pro-wall-single-30000",
       outdoorUnitId: "haier-1q3036rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1875,9 +2721,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-pro-wall-single-cfg-23",
-      slug: "haier-arctic-pro-wall-single-cfg-23",
-      modelId: "haier-arctic-pro-wall-single",
+      id: "haier-arctic-pro-wall-single-30000-cfg-9",
+      slug: "haier-arctic-pro-wall-single-30000-cfg-9",
+      modelId: "haier-arctic-pro-wall-single-30000",
       outdoorUnitId: "haier-1q3036rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32400,
@@ -1889,9 +2735,121 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-115v-wall-single-cfg-1",
-      slug: "haier-tempo-115v-wall-single-cfg-1",
-      modelId: "haier-tempo-115v-wall-single",
+      id: "haier-arctic-pro-wall-single-42000-cfg-1",
+      slug: "haier-arctic-pro-wall-single-42000-cfg-1",
+      modelId: "haier-arctic-pro-wall-single-42000",
+      outdoorUnitId: "haier-1u4248lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 15.2,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-42000-cfg-2",
+      slug: "haier-arctic-pro-wall-single-42000-cfg-2",
+      modelId: "haier-arctic-pro-wall-single-42000",
+      outdoorUnitId: "haier-1u4248lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-42000-cfg-3",
+      slug: "haier-arctic-pro-wall-single-42000-cfg-3",
+      modelId: "haier-arctic-pro-wall-single-42000",
+      outdoorUnitId: "haier-1q4248rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-48000-cfg-1",
+      slug: "haier-arctic-pro-wall-single-48000-cfg-1",
+      modelId: "haier-arctic-pro-wall-single-48000",
+      outdoorUnitId: "haier-1u4248lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: 15.2,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-48000-cfg-2",
+      slug: "haier-arctic-pro-wall-single-48000-cfg-2",
+      modelId: "haier-arctic-pro-wall-single-48000",
+      outdoorUnitId: "haier-1q4248rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 17.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-36000-cfg-1",
+      slug: "haier-arctic-pro-wall-single-36000-cfg-1",
+      modelId: "haier-arctic-pro-wall-single-36000",
+      outdoorUnitId: "haier-1u3036lp2hd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-36000-cfg-2",
+      slug: "haier-arctic-pro-wall-single-36000-cfg-2",
+      modelId: "haier-arctic-pro-wall-single-36000",
+      outdoorUnitId: "haier-1q3036rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-pro-wall-single-36000-cfg-3",
+      slug: "haier-arctic-pro-wall-single-36000-cfg-3",
+      modelId: "haier-arctic-pro-wall-single-36000",
+      outdoorUnitId: "haier-1q3036rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-tempo-115v-wall-single-9000-cfg-1",
+      slug: "haier-tempo-115v-wall-single-9000-cfg-1",
+      modelId: "haier-tempo-115v-wall-single-9000",
       outdoorUnitId: "haier-1q09te1be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1903,23 +2861,23 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-115v-wall-single-cfg-2",
-      slug: "haier-tempo-115v-wall-single-cfg-2",
-      modelId: "haier-tempo-115v-wall-single",
+      id: "haier-tempo-115v-wall-single-12000-cfg-1",
+      slug: "haier-tempo-115v-wall-single-12000-cfg-1",
+      modelId: "haier-tempo-115v-wall-single-12000",
       outdoorUnitId: "haier-1q12te1be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
       coolingCapacityMaxBtu: 11500,
       seer2: 20,
       hspf2: 9.5,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-single-wall-single-cfg-1",
-      slug: "haier-arctic-single-wall-single-cfg-1",
-      modelId: "haier-arctic-single-wall-single",
+      id: "haier-arctic-single-wall-single-9000-cfg-1",
+      slug: "haier-arctic-single-wall-single-9000-cfg-1",
+      modelId: "haier-arctic-single-wall-single-9000",
       outdoorUnitId: "haier-1q09rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1931,37 +2889,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-single-wall-single-cfg-2",
-      slug: "haier-arctic-single-wall-single-cfg-2",
-      modelId: "haier-arctic-single-wall-single",
-      outdoorUnitId: "haier-1q12rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-single-wall-single-cfg-3",
-      slug: "haier-arctic-single-wall-single-cfg-3",
-      modelId: "haier-arctic-single-wall-single",
-      outdoorUnitId: "haier-1q18rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-single-wall-single-cfg-4",
-      slug: "haier-arctic-single-wall-single-cfg-4",
-      modelId: "haier-arctic-single-wall-single",
+      id: "haier-arctic-single-wall-single-9000-cfg-2",
+      slug: "haier-arctic-single-wall-single-9000-cfg-2",
+      modelId: "haier-arctic-single-wall-single-9000",
       outdoorUnitId: "haier-1q09ed2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1973,37 +2903,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-single-wall-single-cfg-5",
-      slug: "haier-arctic-single-wall-single-cfg-5",
-      modelId: "haier-arctic-single-wall-single",
-      outdoorUnitId: "haier-1q12ed2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-single-wall-single-cfg-6",
-      slug: "haier-arctic-single-wall-single-cfg-6",
-      modelId: "haier-arctic-single-wall-single",
-      outdoorUnitId: "haier-1q18ed2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-single-wall-single-cfg-7",
-      slug: "haier-arctic-single-wall-single-cfg-7",
-      modelId: "haier-arctic-single-wall-single",
+      id: "haier-arctic-single-wall-single-9000-cfg-3",
+      slug: "haier-arctic-single-wall-single-9000-cfg-3",
+      modelId: "haier-arctic-single-wall-single-9000",
       outdoorUnitId: "haier-1q09ed2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2015,37 +2917,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-single-wall-single-cfg-8",
-      slug: "haier-arctic-single-wall-single-cfg-8",
-      modelId: "haier-arctic-single-wall-single",
-      outdoorUnitId: "haier-1q12ed2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-single-wall-single-cfg-9",
-      slug: "haier-arctic-single-wall-single-cfg-9",
-      modelId: "haier-arctic-single-wall-single",
-      outdoorUnitId: "haier-1q18ed2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-single-wall-single-cfg-10",
-      slug: "haier-arctic-single-wall-single-cfg-10",
-      modelId: "haier-arctic-single-wall-single",
+      id: "haier-arctic-single-wall-single-9000-cfg-4",
+      slug: "haier-arctic-single-wall-single-9000-cfg-4",
+      modelId: "haier-arctic-single-wall-single-9000",
       outdoorUnitId: "haier-1q09ed2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2057,9 +2931,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-single-wall-single-cfg-11",
-      slug: "haier-arctic-single-wall-single-cfg-11",
-      modelId: "haier-arctic-single-wall-single",
+      id: "haier-arctic-single-wall-single-9000-cfg-5",
+      slug: "haier-arctic-single-wall-single-9000-cfg-5",
+      modelId: "haier-arctic-single-wall-single-9000",
       outdoorUnitId: "haier-1q12ed2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 10000,
@@ -2071,9 +2945,93 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-single-wall-single-cfg-12",
-      slug: "haier-arctic-single-wall-single-cfg-12",
-      modelId: "haier-arctic-single-wall-single",
+      id: "haier-arctic-single-wall-single-12000-cfg-1",
+      slug: "haier-arctic-single-wall-single-12000-cfg-1",
+      modelId: "haier-arctic-single-wall-single-12000",
+      outdoorUnitId: "haier-1q12rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-12000-cfg-2",
+      slug: "haier-arctic-single-wall-single-12000-cfg-2",
+      modelId: "haier-arctic-single-wall-single-12000",
+      outdoorUnitId: "haier-1q12ed2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-12000-cfg-3",
+      slug: "haier-arctic-single-wall-single-12000-cfg-3",
+      modelId: "haier-arctic-single-wall-single-12000",
+      outdoorUnitId: "haier-1q12ed2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-18000-cfg-1",
+      slug: "haier-arctic-single-wall-single-18000-cfg-1",
+      modelId: "haier-arctic-single-wall-single-18000",
+      outdoorUnitId: "haier-1q18rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-18000-cfg-2",
+      slug: "haier-arctic-single-wall-single-18000-cfg-2",
+      modelId: "haier-arctic-single-wall-single-18000",
+      outdoorUnitId: "haier-1q18ed2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-18000-cfg-3",
+      slug: "haier-arctic-single-wall-single-18000-cfg-3",
+      modelId: "haier-arctic-single-wall-single-18000",
+      outdoorUnitId: "haier-1q18ed2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-single-wall-single-18000-cfg-4",
+      slug: "haier-arctic-single-wall-single-18000-cfg-4",
+      modelId: "haier-arctic-single-wall-single-18000",
       outdoorUnitId: "haier-1q18ed2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2085,9 +3043,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-1",
-      slug: "haier-flexfit-single-wall-single-cfg-1",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-9000-cfg-1",
+      slug: "haier-flexfit-single-wall-single-9000-cfg-1",
+      modelId: "haier-flexfit-single-wall-single-9000",
       outdoorUnitId: "haier-1q09ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2099,93 +3057,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-2",
-      slug: "haier-flexfit-single-wall-single-cfg-2",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q12ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11800,
-      coolingCapacityMaxBtu: 11800,
-      seer2: 21,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-3",
-      slug: "haier-flexfit-single-wall-single-cfg-3",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q15ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 13500,
-      coolingCapacityMaxBtu: 13500,
-      seer2: 21,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-4",
-      slug: "haier-flexfit-single-wall-single-cfg-4",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q18ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-5",
-      slug: "haier-flexfit-single-wall-single-cfg-5",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q24ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-6",
-      slug: "haier-flexfit-single-wall-single-cfg-6",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q3036ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-7",
-      slug: "haier-flexfit-single-wall-single-cfg-7",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q3036ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-8",
-      slug: "haier-flexfit-single-wall-single-cfg-8",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-9000-cfg-2",
+      slug: "haier-flexfit-single-wall-single-9000-cfg-2",
+      modelId: "haier-flexfit-single-wall-single-9000",
       outdoorUnitId: "haier-1q09ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2197,65 +3071,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-9",
-      slug: "haier-flexfit-single-wall-single-cfg-9",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q12ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.8,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-10",
-      slug: "haier-flexfit-single-wall-single-cfg-10",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q18ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 18.5,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-11",
-      slug: "haier-flexfit-single-wall-single-cfg-11",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q3036ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-12",
-      slug: "haier-flexfit-single-wall-single-cfg-12",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q3036ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33800,
-      coolingCapacityMaxBtu: 33800,
-      seer2: 18.8,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-13",
-      slug: "haier-flexfit-single-wall-single-cfg-13",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-9000-cfg-3",
+      slug: "haier-flexfit-single-wall-single-9000-cfg-3",
+      modelId: "haier-flexfit-single-wall-single-9000",
       outdoorUnitId: "haier-1q09ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2267,23 +3085,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-14",
-      slug: "haier-flexfit-single-wall-single-cfg-14",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q12ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-15",
-      slug: "haier-flexfit-single-wall-single-cfg-15",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-9000-cfg-4",
+      slug: "haier-flexfit-single-wall-single-9000-cfg-4",
+      modelId: "haier-flexfit-single-wall-single-9000",
       outdoorUnitId: "haier-1q09ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2295,9 +3099,65 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-16",
-      slug: "haier-flexfit-single-wall-single-cfg-16",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-12000-cfg-1",
+      slug: "haier-flexfit-single-wall-single-12000-cfg-1",
+      modelId: "haier-flexfit-single-wall-single-12000",
+      outdoorUnitId: "haier-1q12ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11800,
+      coolingCapacityMaxBtu: 11800,
+      seer2: 21,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-12000-cfg-2",
+      slug: "haier-flexfit-single-wall-single-12000-cfg-2",
+      modelId: "haier-flexfit-single-wall-single-12000",
+      outdoorUnitId: "haier-1q15ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 13500,
+      coolingCapacityMaxBtu: 13500,
+      seer2: 21,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-12000-cfg-3",
+      slug: "haier-flexfit-single-wall-single-12000-cfg-3",
+      modelId: "haier-flexfit-single-wall-single-12000",
+      outdoorUnitId: "haier-1q12ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.8,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-12000-cfg-4",
+      slug: "haier-flexfit-single-wall-single-12000-cfg-4",
+      modelId: "haier-flexfit-single-wall-single-12000",
+      outdoorUnitId: "haier-1q12ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-12000-cfg-5",
+      slug: "haier-flexfit-single-wall-single-12000-cfg-5",
+      modelId: "haier-flexfit-single-wall-single-12000",
       outdoorUnitId: "haier-1q12ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2309,9 +3169,23 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-17",
-      slug: "haier-flexfit-single-wall-single-cfg-17",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-18000-cfg-1",
+      slug: "haier-flexfit-single-wall-single-18000-cfg-1",
+      modelId: "haier-flexfit-single-wall-single-18000",
+      outdoorUnitId: "haier-1q18ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-18000-cfg-2",
+      slug: "haier-flexfit-single-wall-single-18000-cfg-2",
+      modelId: "haier-flexfit-single-wall-single-18000",
       outdoorUnitId: "haier-1q18ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2323,9 +3197,23 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-18",
-      slug: "haier-flexfit-single-wall-single-cfg-18",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-24000-cfg-1",
+      slug: "haier-flexfit-single-wall-single-24000-cfg-1",
+      modelId: "haier-flexfit-single-wall-single-24000",
+      outdoorUnitId: "haier-1q24ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-24000-cfg-2",
+      slug: "haier-flexfit-single-wall-single-24000-cfg-2",
+      modelId: "haier-flexfit-single-wall-single-24000",
       outdoorUnitId: "haier-1q24ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2337,37 +3225,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-single-wall-single-cfg-19",
-      slug: "haier-flexfit-single-wall-single-cfg-19",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q3036ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 17,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-20",
-      slug: "haier-flexfit-single-wall-single-cfg-20",
-      modelId: "haier-flexfit-single-wall-single",
-      outdoorUnitId: "haier-1q3036ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-single-wall-single-cfg-21",
-      slug: "haier-flexfit-single-wall-single-cfg-21",
-      modelId: "haier-flexfit-single-wall-single",
+      id: "haier-flexfit-single-wall-single-24000-cfg-3",
+      slug: "haier-flexfit-single-wall-single-24000-cfg-3",
+      modelId: "haier-flexfit-single-wall-single-24000",
       outdoorUnitId: "haier-1q24ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2379,9 +3239,79 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-multi-wall-single-cfg-1",
-      slug: "haier-flexfit-multi-wall-single-cfg-1",
-      modelId: "haier-flexfit-multi-wall-single",
+      id: "haier-flexfit-single-wall-single-30000-cfg-1",
+      slug: "haier-flexfit-single-wall-single-30000-cfg-1",
+      modelId: "haier-flexfit-single-wall-single-30000",
+      outdoorUnitId: "haier-1q3036ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-30000-cfg-2",
+      slug: "haier-flexfit-single-wall-single-30000-cfg-2",
+      modelId: "haier-flexfit-single-wall-single-30000",
+      outdoorUnitId: "haier-1q3036ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-30000-cfg-3",
+      slug: "haier-flexfit-single-wall-single-30000-cfg-3",
+      modelId: "haier-flexfit-single-wall-single-30000",
+      outdoorUnitId: "haier-1q3036ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-30000-cfg-4",
+      slug: "haier-flexfit-single-wall-single-30000-cfg-4",
+      modelId: "haier-flexfit-single-wall-single-30000",
+      outdoorUnitId: "haier-1q3036ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-30000-cfg-5",
+      slug: "haier-flexfit-single-wall-single-30000-cfg-5",
+      modelId: "haier-flexfit-single-wall-single-30000",
+      outdoorUnitId: "haier-1q3036ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-multi-wall-single-18000-cfg-1",
+      slug: "haier-flexfit-multi-wall-single-18000-cfg-1",
+      modelId: "haier-flexfit-multi-wall-single-18000",
       outdoorUnitId: "haier-2q18ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2393,23 +3323,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-multi-wall-single-cfg-2",
-      slug: "haier-flexfit-multi-wall-single-cfg-2",
-      modelId: "haier-flexfit-multi-wall-single",
-      outdoorUnitId: "haier-3q24ff2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 24,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-flexfit-multi-wall-single-cfg-3",
-      slug: "haier-flexfit-multi-wall-single-cfg-3",
-      modelId: "haier-flexfit-multi-wall-single",
+      id: "haier-flexfit-multi-wall-single-18000-cfg-2",
+      slug: "haier-flexfit-multi-wall-single-18000-cfg-2",
+      modelId: "haier-flexfit-multi-wall-single-18000",
       outdoorUnitId: "haier-2q18ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2421,23 +3337,37 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-flexfit-multi-wall-single-cfg-4",
-      slug: "haier-flexfit-multi-wall-single-cfg-4",
-      modelId: "haier-flexfit-multi-wall-single",
+      id: "haier-flexfit-multi-wall-single-24000-cfg-1",
+      slug: "haier-flexfit-multi-wall-single-24000-cfg-1",
+      modelId: "haier-flexfit-multi-wall-single-24000",
       outdoorUnitId: "haier-3q24ff2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: 24,
       hspf2: 10.2,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-multi-wall-single-cfg-1",
-      slug: "haier-arctic-multi-wall-single-cfg-1",
-      modelId: "haier-arctic-multi-wall-single",
+      id: "haier-flexfit-multi-wall-single-24000-cfg-2",
+      slug: "haier-flexfit-multi-wall-single-24000-cfg-2",
+      modelId: "haier-flexfit-multi-wall-single-24000",
+      outdoorUnitId: "haier-3q24ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 24,
+      hspf2: 10.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-multi-wall-single-18000-cfg-1",
+      slug: "haier-arctic-multi-wall-single-18000-cfg-1",
+      modelId: "haier-arctic-multi-wall-single-18000",
       outdoorUnitId: "haier-2q20rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2449,51 +3379,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-multi-wall-single-cfg-2",
-      slug: "haier-arctic-multi-wall-single-cfg-2",
-      modelId: "haier-arctic-multi-wall-single",
-      outdoorUnitId: "haier-3q24rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 23,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-multi-wall-single-cfg-3",
-      slug: "haier-arctic-multi-wall-single-cfg-3",
-      modelId: "haier-arctic-multi-wall-single",
-      outdoorUnitId: "haier-4q36rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-multi-wall-single-cfg-4",
-      slug: "haier-arctic-multi-wall-single-cfg-4",
-      modelId: "haier-arctic-multi-wall-single",
-      outdoorUnitId: "haier-5q42rt2be",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 20.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "haier-arctic-multi-wall-single-cfg-5",
-      slug: "haier-arctic-multi-wall-single-cfg-5",
-      modelId: "haier-arctic-multi-wall-single",
+      id: "haier-arctic-multi-wall-single-18000-cfg-2",
+      slug: "haier-arctic-multi-wall-single-18000-cfg-2",
+      modelId: "haier-arctic-multi-wall-single-18000",
       outdoorUnitId: "haier-2q20rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2505,9 +3393,23 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-multi-wall-single-cfg-6",
-      slug: "haier-arctic-multi-wall-single-cfg-6",
-      modelId: "haier-arctic-multi-wall-single",
+      id: "haier-arctic-multi-wall-single-24000-cfg-1",
+      slug: "haier-arctic-multi-wall-single-24000-cfg-1",
+      modelId: "haier-arctic-multi-wall-single-24000",
+      outdoorUnitId: "haier-3q24rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-multi-wall-single-24000-cfg-2",
+      slug: "haier-arctic-multi-wall-single-24000-cfg-2",
+      modelId: "haier-arctic-multi-wall-single-24000",
       outdoorUnitId: "haier-3q24rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2519,9 +3421,23 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-multi-wall-single-cfg-7",
-      slug: "haier-arctic-multi-wall-single-cfg-7",
-      modelId: "haier-arctic-multi-wall-single",
+      id: "haier-arctic-multi-wall-single-36000-cfg-1",
+      slug: "haier-arctic-multi-wall-single-36000-cfg-1",
+      modelId: "haier-arctic-multi-wall-single-36000",
+      outdoorUnitId: "haier-4q36rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-multi-wall-single-36000-cfg-2",
+      slug: "haier-arctic-multi-wall-single-36000-cfg-2",
+      modelId: "haier-arctic-multi-wall-single-36000",
       outdoorUnitId: "haier-4q36rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2533,9 +3449,23 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-arctic-multi-wall-single-cfg-8",
-      slug: "haier-arctic-multi-wall-single-cfg-8",
-      modelId: "haier-arctic-multi-wall-single",
+      id: "haier-arctic-multi-wall-single-42000-cfg-1",
+      slug: "haier-arctic-multi-wall-single-42000-cfg-1",
+      modelId: "haier-arctic-multi-wall-single-42000",
+      outdoorUnitId: "haier-5q42rt2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 20.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-arctic-multi-wall-single-42000-cfg-2",
+      slug: "haier-arctic-multi-wall-single-42000-cfg-2",
+      modelId: "haier-arctic-multi-wall-single-42000",
       outdoorUnitId: "haier-5q42rt2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -2547,9 +3477,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-230v-wall-single-cfg-1",
-      slug: "haier-tempo-230v-wall-single-cfg-1",
-      modelId: "haier-tempo-230v-wall-single",
+      id: "haier-tempo-230v-wall-single-9000-cfg-1",
+      slug: "haier-tempo-230v-wall-single-9000-cfg-1",
+      modelId: "haier-tempo-230v-wall-single-9000",
       outdoorUnitId: "haier-1q09te2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2561,9 +3491,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-230v-wall-single-cfg-2",
-      slug: "haier-tempo-230v-wall-single-cfg-2",
-      modelId: "haier-tempo-230v-wall-single",
+      id: "haier-tempo-230v-wall-single-12000-cfg-1",
+      slug: "haier-tempo-230v-wall-single-12000-cfg-1",
+      modelId: "haier-tempo-230v-wall-single-12000",
       outdoorUnitId: "haier-1q12te2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11800,
@@ -2575,9 +3505,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-230v-wall-single-cfg-3",
-      slug: "haier-tempo-230v-wall-single-cfg-3",
-      modelId: "haier-tempo-230v-wall-single",
+      id: "haier-tempo-230v-wall-single-18000-cfg-1",
+      slug: "haier-tempo-230v-wall-single-18000-cfg-1",
+      modelId: "haier-tempo-230v-wall-single-18000",
       outdoorUnitId: "haier-1q18te2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2589,9 +3519,9 @@ export const haierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "haier-tempo-230v-wall-single-cfg-4",
-      slug: "haier-tempo-230v-wall-single-cfg-4",
-      modelId: "haier-tempo-230v-wall-single",
+      id: "haier-tempo-230v-wall-single-24000-cfg-1",
+      slug: "haier-tempo-230v-wall-single-24000-cfg-1",
+      modelId: "haier-tempo-230v-wall-single-24000",
       outdoorUnitId: "haier-1q24te2be",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2601,11 +3531,39 @@ export const haierDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-15000-cfg-1",
+      slug: "haier-flexfit-single-wall-single-15000-cfg-1",
+      modelId: "haier-flexfit-single-wall-single-15000",
+      outdoorUnitId: "haier-1q18ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 18.5,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "haier-flexfit-single-wall-single-36000-cfg-1",
+      slug: "haier-flexfit-single-wall-single-36000-cfg-1",
+      modelId: "haier-flexfit-single-wall-single-36000",
+      outdoorUnitId: "haier-1q3036ff2be",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33800,
+      coolingCapacityMaxBtu: 33800,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "haier-standard-wall-single-cfg-1",
+      configurationId: "haier-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2616,62 +3574,7 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 5000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-7",
+      configurationId: "haier-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2682,29 +3585,7 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-10",
+      configurationId: "haier-standard-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2715,18 +3596,7 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-standard-wall-single-cfg-12",
+      configurationId: "haier-standard-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2737,7 +3607,62 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-advanced-plus-wall-single-cfg-1",
+      configurationId: "haier-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-advanced-plus-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2748,51 +3673,7 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-advanced-plus-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-advanced-plus-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-advanced-plus-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-advanced-plus-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-advanced-plus-wall-single-cfg-6",
+      configurationId: "haier-advanced-plus-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2803,29 +3684,18 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-advanced-plus-wall-single-cfg-7",
+      configurationId: "haier-advanced-plus-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
+          heatingCapacityBtu: 14000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-advanced-plus-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-advanced-plus-wall-single-cfg-9",
+      configurationId: "haier-advanced-plus-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2836,700 +3706,18 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-advanced-plus-wall-single-cfg-10",
+      configurationId: "haier-advanced-plus-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
+          heatingCapacityBtu: 10700,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-arctic-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-3u24ms2hd-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-1u24tl2hf-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-1u3036tl2hf-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-1u3036tl2hf-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-pro-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-tempo-115v-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-tempo-115v-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-arctic-single-wall-single-cfg-11",
+      configurationId: "haier-advanced-plus-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3540,51 +3728,7 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-arctic-single-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-flexfit-single-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-flexfit-single-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-flexfit-single-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-flexfit-single-wall-single-cfg-4",
+      configurationId: "haier-advanced-plus-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3595,139 +3739,194 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-5",
+      configurationId: "haier-advanced-plus-wall-single-15000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
+          heatingCapacityBtu: 11600,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-6",
+      configurationId: "haier-advanced-plus-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 18600,
+          heatingCapacityBtu: 19000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-7",
+      configurationId: "haier-advanced-plus-wall-single-20000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
+          heatingCapacityBtu: 19000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-8",
+      configurationId: "haier-arctic-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 6200,
+          heatingCapacityBtu: 9300,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-9",
+      configurationId: "haier-arctic-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 7300,
+          heatingCapacityBtu: 9300,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-10",
+      configurationId: "haier-arctic-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
+          heatingCapacityBtu: 8500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-11",
+      configurationId: "haier-arctic-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 18600,
+          heatingCapacityBtu: 8500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-12",
+      configurationId: "haier-arctic-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 20600,
+          heatingCapacityBtu: 10800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-13",
+      configurationId: "haier-arctic-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 5900,
+          heatingCapacityBtu: 6000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-14",
+      configurationId: "haier-arctic-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
+          heatingCapacityBtu: 6500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-15",
+      configurationId: "haier-arctic-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 7000,
-          cop: 1.8,
+          cop: 1.75,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-16",
+      configurationId: "haier-arctic-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
+          heatingCapacityBtu: 13000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-17",
+      configurationId: "haier-arctic-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3738,40 +3937,73 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-18",
+      configurationId: "haier-arctic-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
+          heatingCapacityBtu: 13000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-19",
+      configurationId: "haier-arctic-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
+          heatingCapacityBtu: 14000,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-20",
+      configurationId: "haier-arctic-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.8,
+          heatingCapacityBtu: 14800,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-single-wall-single-cfg-21",
+      configurationId: "haier-arctic-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-3u24ms2hd-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3782,40 +4014,117 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-flexfit-multi-wall-single-cfg-1",
+      configurationId: "haier-1u24tl2hf-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
+          heatingCapacityBtu: 17000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-1u3036tl2hf-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-1u3036tl2hf-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-multi-wall-single-cfg-2",
+      configurationId: "haier-arctic-pro-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 16400,
+          heatingCapacityBtu: 17400,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-flexfit-multi-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "haier-flexfit-multi-wall-single-cfg-4",
+      configurationId: "haier-arctic-pro-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3826,29 +4135,128 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-1",
+      configurationId: "haier-arctic-pro-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
+          heatingCapacityBtu: 20600,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-2",
+      configurationId: "haier-arctic-pro-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
+          heatingCapacityBtu: 19000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-3",
+      configurationId: "haier-arctic-pro-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-30000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3859,73 +4267,106 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-4",
+      configurationId: "haier-arctic-pro-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
+          heatingCapacityBtu: 31600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-5",
+      configurationId: "haier-arctic-pro-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
+          heatingCapacityBtu: 34600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-pro-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-6",
+      configurationId: "haier-arctic-pro-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
+          heatingCapacityBtu: 26000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-7",
+      configurationId: "haier-arctic-pro-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
+          heatingCapacityBtu: 26200,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-arctic-multi-wall-single-cfg-8",
+      configurationId: "haier-arctic-pro-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
+          heatingCapacityBtu: 27000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-tempo-230v-wall-single-cfg-1",
+      configurationId: "haier-tempo-115v-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 6000,
+          heatingCapacityBtu: 6400,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "haier-tempo-230v-wall-single-cfg-2",
+      configurationId: "haier-tempo-115v-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3936,7 +4377,95 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-tempo-230v-wall-single-cfg-3",
+      configurationId: "haier-arctic-single-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3947,11 +4476,440 @@ export const haierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "haier-tempo-230v-wall-single-cfg-4",
+      configurationId: "haier-arctic-single-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 14400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-single-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7300,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-multi-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-multi-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-multi-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-multi-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-arctic-multi-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-tempo-230v-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-tempo-230v-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-tempo-230v-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-tempo-230v-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "haier-flexfit-single-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20600,
           cop: 1.8,
           confidence: "verified",
         }

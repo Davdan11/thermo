@@ -40,7 +40,7 @@ export const alsetriaDataset: BrandDataset = {
       name: "MOD Series",
       brandId: "alsetria",
       systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -139,7 +139,7 @@ export const alsetriaDataset: BrandDataset = {
       name: "MVC series",
       brandId: "alsetria",
       systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
+      categories: ["conventional", "ducted"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -180,25 +180,26 @@ export const alsetriaDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "alsetria-mox-series-wall-single",
-      slug: "alsetria-mox-series-wall-single",
-      name: "MOX Series",
+      id: "alsetria-mox-series-wall-single-9000",
+      slug: "alsetria-mox-series-wall-single-9000",
+      name: "MOX Series 9 000 BTU",
       seriesId: "alsetria-mox-series",
       brandId: "alsetria",
-      modelNumber: "MOX Series",
-      normalizedModelNumber: "mox-series",
+      modelNumber: "MOX Series 9k",
+      normalizedModelNumber: "mox-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 5700,
-      heatingCapacity5FMaxBtu: 15600,
-      seer2Min: 18,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 10100,
+      seer2Min: 19.2,
       seer2Max: 28.1,
-      hspf2Min: 8.7,
-      hspf2Max: 13.6,
-      cop5FMin: 1.75,
-      cop5FMax: 2.4,
+      hspf2Min: 9.1,
+      hspf2Max: 12.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2.17,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -206,19 +207,20 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single",
-      slug: "alsetria-standard-wall-single",
-      name: "Standard",
+      id: "alsetria-standard-wall-single-12000",
+      slug: "alsetria-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "alsetria-standard",
       brandId: "alsetria",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7000,
-      heatingCapacity5FMaxBtu: 37000,
+      heatingCapacity5FMaxBtu: 7800,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -232,22 +234,158 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single",
-      slug: "alsetria-mod-series-wall-single",
-      name: "MOD Series",
-      seriesId: "alsetria-mod-series",
+      id: "alsetria-mox-series-wall-single-18000",
+      slug: "alsetria-mox-series-wall-single-18000",
+      name: "MOX Series 18 000 BTU",
+      seriesId: "alsetria-mox-series",
       brandId: "alsetria",
-      modelNumber: "MOD Series",
-      normalizedModelNumber: "mod-series",
+      modelNumber: "MOX Series 18k",
+      normalizedModelNumber: "mox-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 23000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11400,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 22.7,
+      hspf2Min: 8.7,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-24000",
+      slug: "alsetria-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "alsetria-standard",
+      brandId: "alsetria",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16500,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-wall-single-30000",
+      slug: "alsetria-mod-series-wall-single-30000",
+      name: "MOD Series 30 000 BTU",
+      seriesId: "alsetria-mod-series",
+      brandId: "alsetria",
+      modelNumber: "MOD Series 30k",
+      normalizedModelNumber: "mod-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-36000",
+      slug: "alsetria-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "alsetria-standard",
+      brandId: "alsetria",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000",
+      slug: "alsetria-mox-series-wall-single-12000",
+      name: "MOX Series 12 000 BTU",
+      seriesId: "alsetria-mox-series",
+      brandId: "alsetria",
+      modelNumber: "MOX Series 12k",
+      normalizedModelNumber: "mox-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19,
+      seer2Max: 25.5,
+      hspf2Min: 9,
+      hspf2Max: 11,
+      cop5FMin: 1.8,
+      cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-wall-single-24000",
+      slug: "alsetria-mod-series-wall-single-24000",
+      name: "MOD Series 24 000 BTU",
+      seriesId: "alsetria-mod-series",
+      brandId: "alsetria",
+      modelNumber: "MOD Series 24k",
+      normalizedModelNumber: "mod-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 16200,
       heatingCapacity5FMaxBtu: 21200,
       seer2Min: 19,
       seer2Max: 22,
-      hspf2Min: 8.7,
+      hspf2Min: 9.2,
       hspf2Max: 11.5,
       cop5FMin: 1.8,
       cop5FMax: 2.3,
@@ -258,15 +396,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-msag-series-wall-single",
-      slug: "alsetria-msag-series-wall-single",
-      name: "MSAG series",
+      id: "alsetria-msag-series-wall-single-18000",
+      slug: "alsetria-msag-series-wall-single-18000",
+      name: "MSAG series 18 000 BTU",
       seriesId: "alsetria-msag-series",
       brandId: "alsetria",
-      modelNumber: "MSAG series",
-      normalizedModelNumber: "msag-series",
+      modelNumber: "MSAG series 18k",
+      normalizedModelNumber: "msag-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12700,
@@ -284,15 +423,43 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m2o-series-wall-single",
-      slug: "alsetria-m2o-series-wall-single",
-      name: "M2O Series",
-      seriesId: "alsetria-m2o-series",
+      id: "alsetria-mox-series-wall-single-6000",
+      slug: "alsetria-mox-series-wall-single-6000",
+      name: "MOX Series 6 000 BTU",
+      seriesId: "alsetria-mox-series",
       brandId: "alsetria",
-      modelNumber: "M2O Series",
-      normalizedModelNumber: "m2o-series",
+      modelNumber: "MOX Series 6k",
+      normalizedModelNumber: "mox-series-6000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6500,
+      heatingCapacity5FMinBtu: 5700,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 22,
+      seer2Max: 26.5,
+      hspf2Min: 10.8,
+      hspf2Max: 13.6,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-m2o-series-wall-single-18000",
+      slug: "alsetria-m2o-series-wall-single-18000",
+      name: "M2O Series 18 000 BTU",
+      seriesId: "alsetria-m2o-series",
+      brandId: "alsetria",
+      modelNumber: "M2O Series 18k",
+      normalizedModelNumber: "m2o-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 14300,
@@ -310,15 +477,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m3o-series-wall-single",
-      slug: "alsetria-m3o-series-wall-single",
-      name: "M3O Series",
+      id: "alsetria-m3o-series-wall-single-30000",
+      slug: "alsetria-m3o-series-wall-single-30000",
+      name: "M3O Series 30 000 BTU",
       seriesId: "alsetria-m3o-series",
       brandId: "alsetria",
-      modelNumber: "M3O Series",
-      normalizedModelNumber: "m3o-series",
+      modelNumber: "M3O Series 30k",
+      normalizedModelNumber: "m3o-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 28000,
       coolingCapacityMaxBtu: 28000,
       heatingCapacity5FMinBtu: 21000,
@@ -336,15 +504,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m40-series-wall-single",
-      slug: "alsetria-m40-series-wall-single",
-      name: "M40 Series",
+      id: "alsetria-m40-series-wall-single-36000",
+      slug: "alsetria-m40-series-wall-single-36000",
+      name: "M40 Series 36 000 BTU",
       seriesId: "alsetria-m40-series",
       brandId: "alsetria",
-      modelNumber: "M40 Series",
-      normalizedModelNumber: "m40-series",
+      modelNumber: "M40 Series 36k",
+      normalizedModelNumber: "m40-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 26800,
@@ -362,15 +531,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m5o-series-wall-single",
-      slug: "alsetria-m5o-series-wall-single",
-      name: "M5O Series",
+      id: "alsetria-m5o-series-wall-single-48000",
+      slug: "alsetria-m5o-series-wall-single-48000",
+      name: "M5O Series 48 000 BTU",
       seriesId: "alsetria-m5o-series",
       brandId: "alsetria",
-      modelNumber: "M5O Series",
-      normalizedModelNumber: "m5o-series",
+      modelNumber: "M5O Series 48k",
+      normalizedModelNumber: "m5o-series-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 34000,
@@ -388,15 +558,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-msep-seris-wall-single",
-      slug: "alsetria-msep-seris-wall-single",
-      name: "MSEP seris",
+      id: "alsetria-msep-seris-wall-single-48000",
+      slug: "alsetria-msep-seris-wall-single-48000",
+      name: "MSEP seris 48 000 BTU",
       seriesId: "alsetria-msep-seris",
       brandId: "alsetria",
-      modelNumber: "MSEP seris",
-      normalizedModelNumber: "msep-seris",
+      modelNumber: "MSEP seris 48k",
+      normalizedModelNumber: "msep-seris-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 30400,
@@ -414,15 +585,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m50-series-wall-single",
-      slug: "alsetria-m50-series-wall-single",
-      name: "M50 Series",
+      id: "alsetria-m50-series-wall-single-48000",
+      slug: "alsetria-m50-series-wall-single-48000",
+      name: "M50 Series 48 000 BTU",
       seriesId: "alsetria-m50-series",
       brandId: "alsetria",
-      modelNumber: "M50 Series",
-      normalizedModelNumber: "m50-series",
+      modelNumber: "M50 Series 48k",
+      normalizedModelNumber: "m50-series-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 35000,
@@ -440,15 +612,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mvb-series-central-ducted",
-      slug: "alsetria-mvb-series-central-ducted",
-      name: "MVB Series",
+      id: "alsetria-mvb-series-central-ducted-18000",
+      slug: "alsetria-mvb-series-central-ducted-18000",
+      name: "MVB Series 18 000 BTU",
       seriesId: "alsetria-mvb-series",
       brandId: "alsetria",
-      modelNumber: "MVB Series",
-      normalizedModelNumber: "mvb-series",
+      modelNumber: "MVB Series 18k",
+      normalizedModelNumber: "mvb-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12000,
@@ -466,24 +639,160 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-central-ducted",
-      slug: "alsetria-mox-series-central-ducted",
-      name: "MOX Series",
+      id: "alsetria-mox-series-central-ducted-24000",
+      slug: "alsetria-mox-series-central-ducted-24000",
+      name: "MOX Series 24 000 BTU",
       seriesId: "alsetria-mox-series",
       brandId: "alsetria",
-      modelNumber: "MOX Series",
-      normalizedModelNumber: "mox-series",
+      modelNumber: "MOX Series 24k",
+      normalizedModelNumber: "mox-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mvc-series-central-ducted-18000",
+      slug: "alsetria-mvc-series-central-ducted-18000",
+      name: "MVC series 18 000 BTU",
+      seriesId: "alsetria-mvc-series",
+      brandId: "alsetria",
+      modelNumber: "MVC series 18k",
+      normalizedModelNumber: "mvc-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 35000,
-      heatingCapacity5FMinBtu: 13200,
-      heatingCapacity5FMaxBtu: 31800,
-      seer2Min: 15.2,
-      seer2Max: 19.3,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 19000,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 8.2,
+      hspf2Max: 8.2,
+      cop5FMin: 1.5,
+      cop5FMax: 1.5,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mvc-series-central-ducted-30000",
+      slug: "alsetria-mvc-series-central-ducted-30000",
+      name: "MVC series 30 000 BTU",
+      seriesId: "alsetria-mvc-series",
+      brandId: "alsetria",
+      modelNumber: "MVC series 30k",
+      normalizedModelNumber: "mvc-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 20400,
+      heatingCapacity5FMaxBtu: 20400,
+      seer2Min: 17.3,
+      seer2Max: 17.3,
       hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.86,
+      cop5FMax: 1.86,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-48000",
+      slug: "alsetria-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "alsetria-standard",
+      brandId: "alsetria",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-60000",
+      slug: "alsetria-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "alsetria-standard",
+      brandId: "alsetria",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-18000",
+      slug: "alsetria-mox-series-central-ducted-18000",
+      name: "MOX Series 18 000 BTU",
+      seriesId: "alsetria-mox-series",
+      brandId: "alsetria",
+      modelNumber: "MOX Series 18k",
+      normalizedModelNumber: "mox-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13200,
+      heatingCapacity5FMaxBtu: 15800,
+      seer2Min: 17.6,
+      seer2Max: 19.3,
+      hspf2Min: 9.3,
       hspf2Max: 10.8,
-      cop5FMin: 1.8,
+      cop5FMin: 2,
       cop5FMax: 2.31,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -492,50 +801,25 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mvc-series-central-ducted",
-      slug: "alsetria-mvc-series-central-ducted",
-      name: "MVC series",
-      seriesId: "alsetria-mvc-series",
-      brandId: "alsetria",
-      modelNumber: "MVC series",
-      normalizedModelNumber: "mvc-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 19000,
-      heatingCapacity5FMaxBtu: 37000,
-      seer2Min: 15.3,
-      seer2Max: 19,
-      hspf2Min: 8.2,
-      hspf2Max: 9.4,
-      cop5FMin: 1.5,
-      cop5FMax: 1.91,
-      systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mod-series-central-ducted",
-      slug: "alsetria-mod-series-central-ducted",
-      name: "MOD Series",
+      id: "alsetria-mod-series-central-ducted-24000",
+      slug: "alsetria-mod-series-central-ducted-24000",
+      name: "MOD Series 24 000 BTU",
       seriesId: "alsetria-mod-series",
       brandId: "alsetria",
-      modelNumber: "MOD Series",
-      normalizedModelNumber: "mod-series",
+      modelNumber: "MOD Series 24k",
+      normalizedModelNumber: "mod-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 30000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 16900,
       heatingCapacity5FMaxBtu: 22400,
       seer2Min: 16.1,
       seer2Max: 18.4,
       hspf2Min: 8.1,
       hspf2Max: 10.5,
-      cop5FMin: 1.8,
+      cop5FMin: 1.9,
       cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -544,24 +828,52 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-central-ducted",
-      slug: "alsetria-moe-series-central-ducted",
-      name: "MOE Series",
-      seriesId: "alsetria-moe-series",
+      id: "alsetria-mod-series-central-ducted-30000",
+      slug: "alsetria-mod-series-central-ducted-30000",
+      name: "MOD Series 30 000 BTU",
+      seriesId: "alsetria-mod-series",
       brandId: "alsetria",
-      modelNumber: "MOE Series",
-      normalizedModelNumber: "moe-series",
+      modelNumber: "MOD Series 30k",
+      normalizedModelNumber: "mod-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.2,
+      seer2Max: 17.5,
+      hspf2Min: 8.4,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.81,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-central-ducted-36000",
+      slug: "alsetria-moe-series-central-ducted-36000",
+      name: "MOE Series 36 000 BTU",
+      seriesId: "alsetria-moe-series",
+      brandId: "alsetria",
+      modelNumber: "MOE Series 36k",
+      normalizedModelNumber: "moe-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 27400,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.2,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 15.5,
       seer2Max: 17.6,
       hspf2Min: 8.6,
       hspf2Max: 9.5,
-      cop5FMin: 1.8,
+      cop5FMin: 1.81,
       cop5FMax: 1.97,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -570,15 +882,43 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mue-series-wall-single",
-      slug: "alsetria-mue-series-wall-single",
-      name: "MUE series",
-      seriesId: "alsetria-mue-series",
+      id: "alsetria-moe-series-central-ducted-48000",
+      slug: "alsetria-moe-series-central-ducted-48000",
+      name: "MOE Series 48 000 BTU",
+      seriesId: "alsetria-moe-series",
       brandId: "alsetria",
-      modelNumber: "MUE series",
-      normalizedModelNumber: "mue-series",
+      modelNumber: "MOE Series 48k",
+      normalizedModelNumber: "moe-series-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mue-series-wall-single-48000",
+      slug: "alsetria-mue-series-wall-single-48000",
+      name: "MUE series 48 000 BTU",
+      seriesId: "alsetria-mue-series",
+      brandId: "alsetria",
+      modelNumber: "MUE series 48k",
+      normalizedModelNumber: "mue-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 30000,
@@ -596,19 +936,47 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-wall-single",
-      slug: "alsetria-moe-series-wall-single",
-      name: "MOE Series",
-      seriesId: "alsetria-moe-series",
+      id: "alsetria-mox-series-wall-single-15000",
+      slug: "alsetria-mox-series-wall-single-15000",
+      name: "MOX Series 15 000 BTU",
+      seriesId: "alsetria-mox-series",
       brandId: "alsetria",
-      modelNumber: "MOE Series",
-      normalizedModelNumber: "moe-series",
+      modelNumber: "MOX Series 15k",
+      normalizedModelNumber: "mox-series-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 22.4,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.75,
+      cop5FMax: 2.32,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-wall-single-36000",
+      slug: "alsetria-moe-series-wall-single-36000",
+      name: "MOE Series 36 000 BTU",
+      seriesId: "alsetria-moe-series",
+      brandId: "alsetria",
+      modelNumber: "MOE Series 36k",
+      normalizedModelNumber: "moe-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 33000,
-      heatingCapacity5FMaxBtu: 35000,
+      heatingCapacity5FMaxBtu: 34000,
       seer2Min: 16.5,
       seer2Max: 19.4,
       hspf2Min: 10.5,
@@ -622,15 +990,16 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mcd-series-wall-single",
-      slug: "alsetria-mcd-series-wall-single",
-      name: "MCD series",
+      id: "alsetria-mcd-series-wall-single-48000",
+      slug: "alsetria-mcd-series-wall-single-48000",
+      name: "MCD series 48 000 BTU",
       seriesId: "alsetria-mcd-series",
       brandId: "alsetria",
-      modelNumber: "MCD series",
-      normalizedModelNumber: "mcd-series",
+      modelNumber: "MCD series 48k",
+      normalizedModelNumber: "mcd-series-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 39500,
@@ -643,6 +1012,168 @@ export const alsetriaDataset: BrandDataset = {
       cop5FMax: 1.98,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-wall-single-48000",
+      slug: "alsetria-moe-series-wall-single-48000",
+      name: "MOE Series 48 000 BTU",
+      seriesId: "alsetria-moe-series",
+      brandId: "alsetria",
+      modelNumber: "MOE Series 48k",
+      normalizedModelNumber: "moe-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 35000,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 16.8,
+      seer2Max: 16.8,
+      hspf2Min: 10.7,
+      hspf2Max: 10.7,
+      cop5FMin: 1.98,
+      cop5FMax: 1.98,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-central-ducted-60000",
+      slug: "alsetria-moe-series-central-ducted-60000",
+      name: "MOE Series 60 000 BTU",
+      seriesId: "alsetria-moe-series",
+      brandId: "alsetria",
+      modelNumber: "MOE Series 60k",
+      normalizedModelNumber: "moe-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mvc-series-central-ducted-60000",
+      slug: "alsetria-mvc-series-central-ducted-60000",
+      name: "MVC SERIES 60 000 BTU",
+      seriesId: "alsetria-mvc-series",
+      brandId: "alsetria",
+      modelNumber: "MVC SERIES 60k",
+      normalizedModelNumber: "mvc-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-central-ducted-42000",
+      slug: "alsetria-moe-series-central-ducted-42000",
+      name: "MOE Series 42 000 BTU",
+      seriesId: "alsetria-moe-series",
+      brandId: "alsetria",
+      modelNumber: "MOE Series 42k",
+      normalizedModelNumber: "moe-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-central-ducted-20000",
+      slug: "alsetria-mod-series-central-ducted-20000",
+      name: "MOD Series 20 000 BTU",
+      seriesId: "alsetria-mod-series",
+      brandId: "alsetria",
+      modelNumber: "MOD Series 20k",
+      normalizedModelNumber: "mod-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      heatingCapacity5FMinBtu: 22400,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 16.3,
+      seer2Max: 16.3,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-36000",
+      slug: "alsetria-mox-series-central-ducted-36000",
+      name: "MOX Series 36 000 BTU",
+      seriesId: "alsetria-mox-series",
+      brandId: "alsetria",
+      modelNumber: "MOX Series 36k",
+      normalizedModelNumber: "mox-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 15.2,
+      seer2Max: 16.3,
+      hspf2Min: 8.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -662,56 +1193,14 @@ export const alsetriaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "alsetria-mox330-18hfn1-ms0w",
-      modelNumber: "MOX330-18HFN1-MS0W",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-mox230-12hfn1-bv0q1w",
-      modelNumber: "MOX230-12HFN1-BV0Q1W",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-mox430-18hfn1-mt2q1w",
-      modelNumber: "MOX430-18HFN1-MT2Q1W",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
       id: "alsetria-mox230-09hfn1-mw5w",
       modelNumber: "MOX230-09HFN1-MW5W",
       brandId: "alsetria",
       refrigerant: null as any,
     },
     {
-      id: "alsetria-mox230-12hfn1-mv5w",
-      modelNumber: "MOX230-12HFN1-MV5W",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
       id: "alsetria-mox330-09hfn1-my5w",
       modelNumber: "MOX330-09HFN1-MY5W",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-mox330-12hfn1-mw5w",
-      modelNumber: "MOX330-12HFN1-MW5W",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-mox430-17hfn1-mt0w",
-      modelNumber: "MOX430-17HFN1-MT0W",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-mox430-18hfn1-mu0w",
-      modelNumber: "MOX430-18HFN1-MU0W",
       brandId: "alsetria",
       refrigerant: null as any,
     },
@@ -728,8 +1217,38 @@ export const alsetriaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "alsetria-mox330-18hfn1-ms0w",
+      modelNumber: "MOX330-18HFN1-MS0W",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mox430-18hfn1-mt2q1w",
+      modelNumber: "MOX430-18HFN1-MT2Q1W",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mox430-17hfn1-mt0w",
+      modelNumber: "MOX430-17HFN1-MT0W",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mox430-18hfn1-mu0w",
+      modelNumber: "MOX430-18HFN1-MU0W",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
       id: "alsetria-mox430-24hfn1-mr0w",
       modelNumber: "MOX430-24HFN1-MR0W",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mod30u-30hfn1-m-ga",
+      modelNumber: "MOD30U-30HFN1-M(GA)",
       brandId: "alsetria",
       refrigerant: null as any,
     },
@@ -746,26 +1265,8 @@ export const alsetriaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "alsetria-moe30u-48hfn1-mr0",
-      modelNumber: "MOE30U-48HFN1-MR0",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-moe30u-60hfn1-mr0",
-      modelNumber: "MOE30U-60HFN1-MR0",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
       id: "alsetria-mod30u-36hfn1-mp0-ga",
       modelNumber: "MOD30U-36HFN1-MP0(GA)",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-moe30u-60hfn1-m-ga-x",
-      modelNumber: "MOE30U-60HFN1-M(GA)(X)",
       brandId: "alsetria",
       refrigerant: null as any,
     },
@@ -776,8 +1277,20 @@ export const alsetriaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "alsetria-mod30u-30hfn1-m-ga",
-      modelNumber: "MOD30U-30HFN1-M(GA)",
+      id: "alsetria-mox230-12hfn1-bv0q1w",
+      modelNumber: "MOX230-12HFN1-BV0Q1W",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mox230-12hfn1-mv5w",
+      modelNumber: "MOX230-12HFN1-MV5W",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mox330-12hfn1-mw5w",
+      modelNumber: "MOX330-12HFN1-MW5W",
       brandId: "alsetria",
       refrigerant: null as any,
     },
@@ -848,18 +1361,6 @@ export const alsetriaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "alsetria-mox430u-18hfn1-m",
-      modelNumber: "MOX430U-18HFN1-M",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-mox630-36hfn1-m3x",
-      modelNumber: "MOX630-36HFN1-M3X",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
       id: "alsetria-mod30u-30hfn1-mr0",
       modelNumber: "MOD30U-30HFN1-MR0",
       brandId: "alsetria",
@@ -872,8 +1373,26 @@ export const alsetriaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "alsetria-moe30u-55hfn1-m",
-      modelNumber: "MOE30U-55HFN1-M",
+      id: "alsetria-moe30u-48hfn1-mr0",
+      modelNumber: "MOE30U-48HFN1-MR0",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-moe30u-60hfn1-mr0",
+      modelNumber: "MOE30U-60HFN1-MR0",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-moe30u-60hfn1-m-ga-x",
+      modelNumber: "MOE30U-60HFN1-M(GA)(X)",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mox430u-18hfn1-m",
+      modelNumber: "MOX430U-18HFN1-M",
       brandId: "alsetria",
       refrigerant: null as any,
     },
@@ -890,12 +1409,6 @@ export const alsetriaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "alsetria-mod30-20hfn1-mw",
-      modelNumber: "MOD30-20HFN1-MW",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
       id: "alsetria-moe31u-36hfn1-m",
       modelNumber: "MOE31U-36HFN1-M",
       brandId: "alsetria",
@@ -904,12 +1417,6 @@ export const alsetriaDataset: BrandDataset = {
     {
       id: "alsetria-moe30u-48hfn1-m-x1",
       modelNumber: "MOE30U-48HFN1-M-[X1]",
-      brandId: "alsetria",
-      refrigerant: null as any,
-    },
-    {
-      id: "alsetria-moe30u-45hfn1-m",
-      modelNumber: "MOE30U-45HFN1-M",
       brandId: "alsetria",
       refrigerant: null as any,
     },
@@ -930,6 +1437,30 @@ export const alsetriaDataset: BrandDataset = {
       modelNumber: "MOE30U-48HFN1-M-[X](GA)",
       brandId: "alsetria",
       refrigerant: null as any,
+    },
+    {
+      id: "alsetria-moe30u-55hfn1-m",
+      modelNumber: "MOE30U-55HFN1-M",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-moe30u-45hfn1-m",
+      modelNumber: "MOE30U-45HFN1-M",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mod30-20hfn1-mw",
+      modelNumber: "MOD30-20HFN1-MW",
+      brandId: "alsetria",
+      refrigerant: null as any,
+    },
+    {
+      id: "alsetria-mox630-36hfn1-m3x",
+      modelNumber: "MOX630-36HFN1-M3X",
+      brandId: "alsetria",
+      refrigerant: null as any,
     }
   ],
   indoorUnits: [
@@ -937,9 +1468,9 @@ export const alsetriaDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "alsetria-mox-series-wall-single-cfg-1",
-      slug: "alsetria-mox-series-wall-single-cfg-1",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-1",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-1",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox230-09hfn1-bs5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -951,9 +1482,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-2",
-      slug: "alsetria-mox-series-wall-single-cfg-2",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-2",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-2",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox230-09hfn1-mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -965,51 +1496,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-3",
-      slug: "alsetria-mox-series-wall-single-cfg-3",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox330-18hfn1-ms0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.5,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-4",
-      slug: "alsetria-mox-series-wall-single-cfg-4",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox230-12hfn1-bv0q1w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-5",
-      slug: "alsetria-mox-series-wall-single-cfg-5",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-18hfn1-mt2q1w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.7,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-6",
-      slug: "alsetria-mox-series-wall-single-cfg-6",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-3",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-3",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox230-09hfn1-mw5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1021,37 +1510,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-7",
-      slug: "alsetria-mox-series-wall-single-cfg-7",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.6,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-8",
-      slug: "alsetria-mox-series-wall-single-cfg-8",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox230-09hfn1-mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 26.5,
-      hspf2: 13.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-9",
-      slug: "alsetria-mox-series-wall-single-cfg-9",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-4",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-4",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox330-09hfn1-my5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1063,37 +1524,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-10",
-      slug: "alsetria-mox-series-wall-single-cfg-10",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-11",
-      slug: "alsetria-mox-series-wall-single-cfg-11",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-12",
-      slug: "alsetria-mox-series-wall-single-cfg-12",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-5",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-5",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox230-09hfn1-mw5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1105,37 +1538,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-13",
-      slug: "alsetria-mox-series-wall-single-cfg-13",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: 19,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-14",
-      slug: "alsetria-mox-series-wall-single-cfg-14",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-15",
-      slug: "alsetria-mox-series-wall-single-cfg-15",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-6",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-6",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox230-09hfn1-mw5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1147,37 +1552,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-16",
-      slug: "alsetria-mox-series-wall-single-cfg-16",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.7,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-17",
-      slug: "alsetria-mox-series-wall-single-cfg-17",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-18",
-      slug: "alsetria-mox-series-wall-single-cfg-18",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-7",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-7",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox330-09hfn1-my5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1189,37 +1566,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-19",
-      slug: "alsetria-mox-series-wall-single-cfg-19",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-20",
-      slug: "alsetria-mox-series-wall-single-cfg-20",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-21",
-      slug: "alsetria-mox-series-wall-single-cfg-21",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-8",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-8",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox330-09hfn1-my5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1231,79 +1580,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-22",
-      slug: "alsetria-mox-series-wall-single-cfg-22",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-23",
-      slug: "alsetria-mox-series-wall-single-cfg-23",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-24",
-      slug: "alsetria-mox-series-wall-single-cfg-24",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-25",
-      slug: "alsetria-mox-series-wall-single-cfg-25",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 22.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-26",
-      slug: "alsetria-mox-series-wall-single-cfg-26",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox230-09hfn1-mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 22,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-27",
-      slug: "alsetria-mox-series-wall-single-cfg-27",
-      modelId: "alsetria-mox-series-wall-single",
+      id: "alsetria-mox-series-wall-single-9000-cfg-9",
+      slug: "alsetria-mox-series-wall-single-9000-cfg-9",
+      modelId: "alsetria-mox-series-wall-single-9000",
       outdoorUnitId: "alsetria-mox330-09hfn1-my5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1315,37 +1594,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-wall-single-cfg-28",
-      slug: "alsetria-mox-series-wall-single-cfg-28",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-wall-single-cfg-29",
-      slug: "alsetria-mox-series-wall-single-cfg-29",
-      modelId: "alsetria-mox-series-wall-single",
-      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16700,
-      coolingCapacityMaxBtu: 16700,
-      seer2: 19.8,
-      hspf2: 11.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-standard-wall-single-cfg-1",
-      slug: "alsetria-standard-wall-single-cfg-1",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-standard-wall-single-12000-cfg-1",
+      slug: "alsetria-standard-wall-single-12000-cfg-1",
+      modelId: "alsetria-standard-wall-single-12000",
       outdoorUnitId: "alsetria-mox230-12hfn1-bs8w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1357,9 +1608,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single-cfg-2",
-      slug: "alsetria-standard-wall-single-cfg-2",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-standard-wall-single-12000-cfg-2",
+      slug: "alsetria-standard-wall-single-12000-cfg-2",
+      modelId: "alsetria-standard-wall-single-12000",
       outdoorUnitId: "alsetria-mox230-12hfn1-ms8w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1371,9 +1622,93 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single-cfg-3",
-      slug: "alsetria-standard-wall-single-cfg-3",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-mox-series-wall-single-18000-cfg-1",
+      slug: "alsetria-mox-series-wall-single-18000-cfg-1",
+      modelId: "alsetria-mox-series-wall-single-18000",
+      outdoorUnitId: "alsetria-mox330-18hfn1-ms0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-18000-cfg-2",
+      slug: "alsetria-mox-series-wall-single-18000-cfg-2",
+      modelId: "alsetria-mox-series-wall-single-18000",
+      outdoorUnitId: "alsetria-mox430-18hfn1-mt2q1w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.7,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-18000-cfg-3",
+      slug: "alsetria-mox-series-wall-single-18000-cfg-3",
+      modelId: "alsetria-mox-series-wall-single-18000",
+      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-18000-cfg-4",
+      slug: "alsetria-mox-series-wall-single-18000-cfg-4",
+      modelId: "alsetria-mox-series-wall-single-18000",
+      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-18000-cfg-5",
+      slug: "alsetria-mox-series-wall-single-18000-cfg-5",
+      modelId: "alsetria-mox-series-wall-single-18000",
+      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-18000-cfg-6",
+      slug: "alsetria-mox-series-wall-single-18000-cfg-6",
+      modelId: "alsetria-mox-series-wall-single-18000",
+      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 16700,
+      seer2: 19.8,
+      hspf2: 11.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-24000-cfg-1",
+      slug: "alsetria-standard-wall-single-24000-cfg-1",
+      modelId: "alsetria-standard-wall-single-24000",
       outdoorUnitId: "alsetria-mox430-24hfn1-mr0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1385,9 +1720,23 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single-cfg-4",
-      slug: "alsetria-standard-wall-single-cfg-4",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-mod-series-wall-single-30000-cfg-1",
+      slug: "alsetria-mod-series-wall-single-30000-cfg-1",
+      modelId: "alsetria-mod-series-wall-single-30000",
+      outdoorUnitId: "alsetria-mod30u-30hfn1-m-ga",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 21,
+      hspf2: 8.7,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-36000-cfg-1",
+      slug: "alsetria-standard-wall-single-36000-cfg-1",
+      modelId: "alsetria-standard-wall-single-36000",
       outdoorUnitId: "alsetria-mod31-36hfn1-mp0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1399,9 +1748,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single-cfg-5",
-      slug: "alsetria-standard-wall-single-cfg-5",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-standard-wall-single-36000-cfg-2",
+      slug: "alsetria-standard-wall-single-36000-cfg-2",
+      modelId: "alsetria-standard-wall-single-36000",
       outdoorUnitId: "alsetria-mod30-36hfn1-mr0q1w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1413,37 +1762,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single-cfg-6",
-      slug: "alsetria-standard-wall-single-cfg-6",
-      modelId: "alsetria-standard-wall-single",
-      outdoorUnitId: "alsetria-moe30u-48hfn1-mr0",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-standard-wall-single-cfg-7",
-      slug: "alsetria-standard-wall-single-cfg-7",
-      modelId: "alsetria-standard-wall-single",
-      outdoorUnitId: "alsetria-moe30u-60hfn1-mr0",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-standard-wall-single-cfg-8",
-      slug: "alsetria-standard-wall-single-cfg-8",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-standard-wall-single-36000-cfg-3",
+      slug: "alsetria-standard-wall-single-36000-cfg-3",
+      modelId: "alsetria-standard-wall-single-36000",
       outdoorUnitId: "alsetria-mod30u-36hfn1-mp0-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1455,23 +1776,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single-cfg-9",
-      slug: "alsetria-standard-wall-single-cfg-9",
-      modelId: "alsetria-standard-wall-single",
-      outdoorUnitId: "alsetria-moe30u-60hfn1-m-ga-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 59000,
-      coolingCapacityMaxBtu: 59000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-standard-wall-single-cfg-10",
-      slug: "alsetria-standard-wall-single-cfg-10",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-standard-wall-single-36000-cfg-4",
+      slug: "alsetria-standard-wall-single-36000-cfg-4",
+      modelId: "alsetria-standard-wall-single-36000",
       outdoorUnitId: "alsetria-mod30u-36hfn1-mp0-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1483,9 +1790,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-standard-wall-single-cfg-11",
-      slug: "alsetria-standard-wall-single-cfg-11",
-      modelId: "alsetria-standard-wall-single",
+      id: "alsetria-standard-wall-single-36000-cfg-5",
+      slug: "alsetria-standard-wall-single-36000-cfg-5",
+      modelId: "alsetria-standard-wall-single-36000",
       outdoorUnitId: "alsetria-mod30u-36hfn1-m-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1497,23 +1804,135 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-1",
-      slug: "alsetria-mod-series-wall-single-cfg-1",
-      modelId: "alsetria-mod-series-wall-single",
-      outdoorUnitId: "alsetria-mod30u-30hfn1-m-ga",
+      id: "alsetria-mox-series-wall-single-12000-cfg-1",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-1",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox230-12hfn1-bv0q1w",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 21,
-      hspf2: 8.7,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.5,
+      hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-2",
-      slug: "alsetria-mod-series-wall-single-cfg-2",
-      modelId: "alsetria-mod-series-wall-single",
+      id: "alsetria-mox-series-wall-single-12000-cfg-2",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-2",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.6,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000-cfg-3",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-3",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000-cfg-4",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-4",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000-cfg-5",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-5",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.7,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000-cfg-6",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-6",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000-cfg-7",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-7",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000-cfg-8",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-8",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox230-12hfn1-mv5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-12000-cfg-9",
+      slug: "alsetria-mox-series-wall-single-12000-cfg-9",
+      modelId: "alsetria-mox-series-wall-single-12000",
+      outdoorUnitId: "alsetria-mox330-12hfn1-mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-wall-single-24000-cfg-1",
+      slug: "alsetria-mod-series-wall-single-24000-cfg-1",
+      modelId: "alsetria-mod-series-wall-single-24000",
       outdoorUnitId: "alsetria-mod31-23hfn1-mt2q1w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1525,9 +1944,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-3",
-      slug: "alsetria-mod-series-wall-single-cfg-3",
-      modelId: "alsetria-mod-series-wall-single",
+      id: "alsetria-mod-series-wall-single-24000-cfg-2",
+      slug: "alsetria-mod-series-wall-single-24000-cfg-2",
+      modelId: "alsetria-mod-series-wall-single-24000",
       outdoorUnitId: "alsetria-mod33-24hfn1-mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1539,9 +1958,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-4",
-      slug: "alsetria-mod-series-wall-single-cfg-4",
-      modelId: "alsetria-mod-series-wall-single",
+      id: "alsetria-mod-series-wall-single-24000-cfg-3",
+      slug: "alsetria-mod-series-wall-single-24000-cfg-3",
+      modelId: "alsetria-mod-series-wall-single-24000",
       outdoorUnitId: "alsetria-mod30-24hfn1-mu0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1553,9 +1972,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-5",
-      slug: "alsetria-mod-series-wall-single-cfg-5",
-      modelId: "alsetria-mod-series-wall-single",
+      id: "alsetria-mod-series-wall-single-24000-cfg-4",
+      slug: "alsetria-mod-series-wall-single-24000-cfg-4",
+      modelId: "alsetria-mod-series-wall-single-24000",
       outdoorUnitId: "alsetria-mod33-24hfn1-mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1567,9 +1986,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-6",
-      slug: "alsetria-mod-series-wall-single-cfg-6",
-      modelId: "alsetria-mod-series-wall-single",
+      id: "alsetria-mod-series-wall-single-24000-cfg-5",
+      slug: "alsetria-mod-series-wall-single-24000-cfg-5",
+      modelId: "alsetria-mod-series-wall-single-24000",
       outdoorUnitId: "alsetria-mod33-24hfn1-mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1581,9 +2000,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-7",
-      slug: "alsetria-mod-series-wall-single-cfg-7",
-      modelId: "alsetria-mod-series-wall-single",
+      id: "alsetria-mod-series-wall-single-24000-cfg-6",
+      slug: "alsetria-mod-series-wall-single-24000-cfg-6",
+      modelId: "alsetria-mod-series-wall-single-24000",
       outdoorUnitId: "alsetria-mod30-24hfn1-mu0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1595,9 +2014,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-wall-single-cfg-8",
-      slug: "alsetria-mod-series-wall-single-cfg-8",
-      modelId: "alsetria-mod-series-wall-single",
+      id: "alsetria-mod-series-wall-single-24000-cfg-7",
+      slug: "alsetria-mod-series-wall-single-24000-cfg-7",
+      modelId: "alsetria-mod-series-wall-single-24000",
       outdoorUnitId: "alsetria-mod30-24hfn1-mu0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1609,9 +2028,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-msag-series-wall-single-cfg-1",
-      slug: "alsetria-msag-series-wall-single-cfg-1",
-      modelId: "alsetria-msag-series-wall-single",
+      id: "alsetria-msag-series-wall-single-18000-cfg-1",
+      slug: "alsetria-msag-series-wall-single-18000-cfg-1",
+      modelId: "alsetria-msag-series-wall-single-18000",
       outdoorUnitId: "alsetria-mox430-18hfn1-mt8w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1623,9 +2042,37 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m2o-series-wall-single-cfg-1",
-      slug: "alsetria-m2o-series-wall-single-cfg-1",
-      modelId: "alsetria-m2o-series-wall-single",
+      id: "alsetria-mox-series-wall-single-6000-cfg-1",
+      slug: "alsetria-mox-series-wall-single-6000-cfg-1",
+      modelId: "alsetria-mox-series-wall-single-6000",
+      outdoorUnitId: "alsetria-mox230-09hfn1-mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 26.5,
+      hspf2: 13.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-6000-cfg-2",
+      slug: "alsetria-mox-series-wall-single-6000-cfg-2",
+      modelId: "alsetria-mox-series-wall-single-6000",
+      outdoorUnitId: "alsetria-mox230-09hfn1-mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 22,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-m2o-series-wall-single-18000-cfg-1",
+      slug: "alsetria-m2o-series-wall-single-18000-cfg-1",
+      modelId: "alsetria-m2o-series-wall-single-18000",
       outdoorUnitId: "alsetria-m2oa-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1637,9 +2084,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m2o-series-wall-single-cfg-2",
-      slug: "alsetria-m2o-series-wall-single-cfg-2",
-      modelId: "alsetria-m2o-series-wall-single",
+      id: "alsetria-m2o-series-wall-single-18000-cfg-2",
+      slug: "alsetria-m2o-series-wall-single-18000-cfg-2",
+      modelId: "alsetria-m2o-series-wall-single-18000",
       outdoorUnitId: "alsetria-m2oa-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1651,9 +2098,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m2o-series-wall-single-cfg-3",
-      slug: "alsetria-m2o-series-wall-single-cfg-3",
-      modelId: "alsetria-m2o-series-wall-single",
+      id: "alsetria-m2o-series-wall-single-18000-cfg-3",
+      slug: "alsetria-m2o-series-wall-single-18000-cfg-3",
+      modelId: "alsetria-m2o-series-wall-single-18000",
       outdoorUnitId: "alsetria-m2oa-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1665,9 +2112,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m3o-series-wall-single-cfg-1",
-      slug: "alsetria-m3o-series-wall-single-cfg-1",
-      modelId: "alsetria-m3o-series-wall-single",
+      id: "alsetria-m3o-series-wall-single-30000-cfg-1",
+      slug: "alsetria-m3o-series-wall-single-30000-cfg-1",
+      modelId: "alsetria-m3o-series-wall-single-30000",
       outdoorUnitId: "alsetria-m3oj-27hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1679,9 +2126,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m3o-series-wall-single-cfg-2",
-      slug: "alsetria-m3o-series-wall-single-cfg-2",
-      modelId: "alsetria-m3o-series-wall-single",
+      id: "alsetria-m3o-series-wall-single-30000-cfg-2",
+      slug: "alsetria-m3o-series-wall-single-30000-cfg-2",
+      modelId: "alsetria-m3o-series-wall-single-30000",
       outdoorUnitId: "alsetria-m3oj-27hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1693,9 +2140,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m3o-series-wall-single-cfg-3",
-      slug: "alsetria-m3o-series-wall-single-cfg-3",
-      modelId: "alsetria-m3o-series-wall-single",
+      id: "alsetria-m3o-series-wall-single-30000-cfg-3",
+      slug: "alsetria-m3o-series-wall-single-30000-cfg-3",
+      modelId: "alsetria-m3o-series-wall-single-30000",
       outdoorUnitId: "alsetria-m3oj-27hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1707,9 +2154,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m40-series-wall-single-cfg-1",
-      slug: "alsetria-m40-series-wall-single-cfg-1",
-      modelId: "alsetria-m40-series-wall-single",
+      id: "alsetria-m40-series-wall-single-36000-cfg-1",
+      slug: "alsetria-m40-series-wall-single-36000-cfg-1",
+      modelId: "alsetria-m40-series-wall-single-36000",
       outdoorUnitId: "alsetria-m4og-36hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1721,9 +2168,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m40-series-wall-single-cfg-2",
-      slug: "alsetria-m40-series-wall-single-cfg-2",
-      modelId: "alsetria-m40-series-wall-single",
+      id: "alsetria-m40-series-wall-single-36000-cfg-2",
+      slug: "alsetria-m40-series-wall-single-36000-cfg-2",
+      modelId: "alsetria-m40-series-wall-single-36000",
       outdoorUnitId: "alsetria-m4ox630-36hfn1-m1x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1735,9 +2182,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m40-series-wall-single-cfg-3",
-      slug: "alsetria-m40-series-wall-single-cfg-3",
-      modelId: "alsetria-m40-series-wall-single",
+      id: "alsetria-m40-series-wall-single-36000-cfg-3",
+      slug: "alsetria-m40-series-wall-single-36000-cfg-3",
+      modelId: "alsetria-m40-series-wall-single-36000",
       outdoorUnitId: "alsetria-m4ox630-36hfn1-m1x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1749,9 +2196,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m40-series-wall-single-cfg-4",
-      slug: "alsetria-m40-series-wall-single-cfg-4",
-      modelId: "alsetria-m40-series-wall-single",
+      id: "alsetria-m40-series-wall-single-36000-cfg-4",
+      slug: "alsetria-m40-series-wall-single-36000-cfg-4",
+      modelId: "alsetria-m40-series-wall-single-36000",
       outdoorUnitId: "alsetria-m4ox630-36hfn1-m1x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1763,9 +2210,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m5o-series-wall-single-cfg-1",
-      slug: "alsetria-m5o-series-wall-single-cfg-1",
-      modelId: "alsetria-m5o-series-wall-single",
+      id: "alsetria-m5o-series-wall-single-48000-cfg-1",
+      slug: "alsetria-m5o-series-wall-single-48000-cfg-1",
+      modelId: "alsetria-m5o-series-wall-single-48000",
       outdoorUnitId: "alsetria-m5og-48hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1777,9 +2224,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-msep-seris-wall-single-cfg-1",
-      slug: "alsetria-msep-seris-wall-single-cfg-1",
-      modelId: "alsetria-msep-seris-wall-single",
+      id: "alsetria-msep-seris-wall-single-48000-cfg-1",
+      slug: "alsetria-msep-seris-wall-single-48000-cfg-1",
+      modelId: "alsetria-msep-seris-wall-single-48000",
       outdoorUnitId: "alsetria-m5og-48hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1791,9 +2238,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-m50-series-wall-single-cfg-1",
-      slug: "alsetria-m50-series-wall-single-cfg-1",
-      modelId: "alsetria-m50-series-wall-single",
+      id: "alsetria-m50-series-wall-single-48000-cfg-1",
+      slug: "alsetria-m50-series-wall-single-48000-cfg-1",
+      modelId: "alsetria-m50-series-wall-single-48000",
       outdoorUnitId: "alsetria-m5og-48hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1805,9 +2252,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mvb-series-central-ducted-cfg-1",
-      slug: "alsetria-mvb-series-central-ducted-cfg-1",
-      modelId: "alsetria-mvb-series-central-ducted",
+      id: "alsetria-mvb-series-central-ducted-18000-cfg-1",
+      slug: "alsetria-mvb-series-central-ducted-18000-cfg-1",
+      modelId: "alsetria-mvb-series-central-ducted-18000",
       outdoorUnitId: "alsetria-mox330u-18hfn1-mr0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1819,9 +2266,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-central-ducted-cfg-1",
-      slug: "alsetria-mox-series-central-ducted-cfg-1",
-      modelId: "alsetria-mox-series-central-ducted",
+      id: "alsetria-mox-series-central-ducted-24000-cfg-1",
+      slug: "alsetria-mox-series-central-ducted-24000-cfg-1",
+      modelId: "alsetria-mox-series-central-ducted-24000",
       outdoorUnitId: "alsetria-mox430u-24hfn1-mr0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1833,121 +2280,23 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mox-series-central-ducted-cfg-2",
-      slug: "alsetria-mox-series-central-ducted-cfg-2",
-      modelId: "alsetria-mox-series-central-ducted",
-      outdoorUnitId: "alsetria-mox430u-18hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-central-ducted-cfg-3",
-      slug: "alsetria-mox-series-central-ducted-cfg-3",
-      modelId: "alsetria-mox-series-central-ducted",
-      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 17.8,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-central-ducted-cfg-4",
-      slug: "alsetria-mox-series-central-ducted-cfg-4",
-      modelId: "alsetria-mox-series-central-ducted",
-      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 17.6,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-central-ducted-cfg-5",
-      slug: "alsetria-mox-series-central-ducted-cfg-5",
-      modelId: "alsetria-mox-series-central-ducted",
-      outdoorUnitId: "alsetria-mox430u-18hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.3,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-central-ducted-cfg-6",
-      slug: "alsetria-mox-series-central-ducted-cfg-6",
-      modelId: "alsetria-mox-series-central-ducted",
-      outdoorUnitId: "alsetria-mox630-36hfn1-m3x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-central-ducted-cfg-7",
-      slug: "alsetria-mox-series-central-ducted-cfg-7",
-      modelId: "alsetria-mox-series-central-ducted",
-      outdoorUnitId: "alsetria-mox630-36hfn1-m3x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mox-series-central-ducted-cfg-8",
-      slug: "alsetria-mox-series-central-ducted-cfg-8",
-      modelId: "alsetria-mox-series-central-ducted",
-      outdoorUnitId: "alsetria-mox630-36hfn1-m3x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 16.3,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mvc-series-central-ducted-cfg-1",
-      slug: "alsetria-mvc-series-central-ducted-cfg-1",
-      modelId: "alsetria-mvc-series-central-ducted",
+      id: "alsetria-mvc-series-central-ducted-18000-cfg-1",
+      slug: "alsetria-mvc-series-central-ducted-18000-cfg-1",
+      modelId: "alsetria-mvc-series-central-ducted-18000",
       outdoorUnitId: "alsetria-mod30u-30hfn1-mr0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 19,
       hspf2: 8.2,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mvc-series-central-ducted-cfg-2",
-      slug: "alsetria-mvc-series-central-ducted-cfg-2",
-      modelId: "alsetria-mvc-series-central-ducted",
+      id: "alsetria-mvc-series-central-ducted-30000-cfg-1",
+      slug: "alsetria-mvc-series-central-ducted-30000-cfg-1",
+      modelId: "alsetria-mvc-series-central-ducted-30000",
       outdoorUnitId: "alsetria-mod30u-36hfn1-mr0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1959,23 +2308,107 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mvc-series-central-ducted-cfg-3",
-      slug: "alsetria-mvc-series-central-ducted-cfg-3",
-      modelId: "alsetria-mvc-series-central-ducted",
-      outdoorUnitId: "alsetria-moe30u-55hfn1-m",
+      id: "alsetria-standard-wall-single-48000-cfg-1",
+      slug: "alsetria-standard-wall-single-48000-cfg-1",
+      modelId: "alsetria-standard-wall-single-48000",
+      outdoorUnitId: "alsetria-moe30u-48hfn1-mr0",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-60000-cfg-1",
+      slug: "alsetria-standard-wall-single-60000-cfg-1",
+      modelId: "alsetria-standard-wall-single-60000",
+      outdoorUnitId: "alsetria-moe30u-60hfn1-mr0",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-standard-wall-single-60000-cfg-2",
+      slug: "alsetria-standard-wall-single-60000-cfg-2",
+      modelId: "alsetria-standard-wall-single-60000",
+      outdoorUnitId: "alsetria-moe30u-60hfn1-m-ga-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 59000,
+      coolingCapacityMaxBtu: 59000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-18000-cfg-1",
+      slug: "alsetria-mox-series-central-ducted-18000-cfg-1",
+      modelId: "alsetria-mox-series-central-ducted-18000",
+      outdoorUnitId: "alsetria-mox430u-18hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-central-ducted-cfg-1",
-      slug: "alsetria-mod-series-central-ducted-cfg-1",
-      modelId: "alsetria-mod-series-central-ducted",
+      id: "alsetria-mox-series-central-ducted-18000-cfg-2",
+      slug: "alsetria-mox-series-central-ducted-18000-cfg-2",
+      modelId: "alsetria-mox-series-central-ducted-18000",
+      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 17.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-18000-cfg-3",
+      slug: "alsetria-mox-series-central-ducted-18000-cfg-3",
+      modelId: "alsetria-mox-series-central-ducted-18000",
+      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 17.6,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-18000-cfg-4",
+      slug: "alsetria-mox-series-central-ducted-18000-cfg-4",
+      modelId: "alsetria-mox-series-central-ducted-18000",
+      outdoorUnitId: "alsetria-mox430u-18hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.3,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-central-ducted-24000-cfg-1",
+      slug: "alsetria-mod-series-central-ducted-24000-cfg-1",
+      modelId: "alsetria-mod-series-central-ducted-24000",
       outdoorUnitId: "alsetria-mod30-24hfn1-mw",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1987,23 +2420,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-central-ducted-cfg-2",
-      slug: "alsetria-mod-series-central-ducted-cfg-2",
-      modelId: "alsetria-mod-series-central-ducted",
-      outdoorUnitId: "alsetria-mod30u-30hfn1-mr0-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mod-series-central-ducted-cfg-3",
-      slug: "alsetria-mod-series-central-ducted-cfg-3",
-      modelId: "alsetria-mod-series-central-ducted",
+      id: "alsetria-mod-series-central-ducted-24000-cfg-2",
+      slug: "alsetria-mod-series-central-ducted-24000-cfg-2",
+      modelId: "alsetria-mod-series-central-ducted-24000",
       outdoorUnitId: "alsetria-mod33-24hfn1-mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2015,23 +2434,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-central-ducted-cfg-4",
-      slug: "alsetria-mod-series-central-ducted-cfg-4",
-      modelId: "alsetria-mod-series-central-ducted",
-      outdoorUnitId: "alsetria-mod30u-30hfn1-m-ga",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 17.5,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mod-series-central-ducted-cfg-5",
-      slug: "alsetria-mod-series-central-ducted-cfg-5",
-      modelId: "alsetria-mod-series-central-ducted",
+      id: "alsetria-mod-series-central-ducted-24000-cfg-3",
+      slug: "alsetria-mod-series-central-ducted-24000-cfg-3",
+      modelId: "alsetria-mod-series-central-ducted-24000",
       outdoorUnitId: "alsetria-mod30-24hfn1-mu0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2043,9 +2448,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-central-ducted-cfg-6",
-      slug: "alsetria-mod-series-central-ducted-cfg-6",
-      modelId: "alsetria-mod-series-central-ducted",
+      id: "alsetria-mod-series-central-ducted-24000-cfg-4",
+      slug: "alsetria-mod-series-central-ducted-24000-cfg-4",
+      modelId: "alsetria-mod-series-central-ducted-24000",
       outdoorUnitId: "alsetria-mod30-24hfn1-mw",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2057,37 +2462,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mod-series-central-ducted-cfg-7",
-      slug: "alsetria-mod-series-central-ducted-cfg-7",
-      modelId: "alsetria-mod-series-central-ducted",
-      outdoorUnitId: "alsetria-mod30u-30hfn1-mr0-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mod-series-central-ducted-cfg-8",
-      slug: "alsetria-mod-series-central-ducted-cfg-8",
-      modelId: "alsetria-mod-series-central-ducted",
-      outdoorUnitId: "alsetria-mod30-20hfn1-mw",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 20000,
-      seer2: 16.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-mod-series-central-ducted-cfg-9",
-      slug: "alsetria-mod-series-central-ducted-cfg-9",
-      modelId: "alsetria-mod-series-central-ducted",
+      id: "alsetria-mod-series-central-ducted-24000-cfg-5",
+      slug: "alsetria-mod-series-central-ducted-24000-cfg-5",
+      modelId: "alsetria-mod-series-central-ducted-24000",
       outdoorUnitId: "alsetria-mod30-24hfn1-mw",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2099,9 +2476,51 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-central-ducted-cfg-1",
-      slug: "alsetria-moe-series-central-ducted-cfg-1",
-      modelId: "alsetria-moe-series-central-ducted",
+      id: "alsetria-mod-series-central-ducted-30000-cfg-1",
+      slug: "alsetria-mod-series-central-ducted-30000-cfg-1",
+      modelId: "alsetria-mod-series-central-ducted-30000",
+      outdoorUnitId: "alsetria-mod30u-30hfn1-mr0-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-central-ducted-30000-cfg-2",
+      slug: "alsetria-mod-series-central-ducted-30000-cfg-2",
+      modelId: "alsetria-mod-series-central-ducted-30000",
+      outdoorUnitId: "alsetria-mod30u-30hfn1-m-ga",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.5,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-central-ducted-30000-cfg-3",
+      slug: "alsetria-mod-series-central-ducted-30000-cfg-3",
+      modelId: "alsetria-mod-series-central-ducted-30000",
+      outdoorUnitId: "alsetria-mod30u-30hfn1-mr0-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-central-ducted-36000-cfg-1",
+      slug: "alsetria-moe-series-central-ducted-36000-cfg-1",
+      modelId: "alsetria-moe-series-central-ducted-36000",
       outdoorUnitId: "alsetria-moe31u-36hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2113,37 +2532,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-central-ducted-cfg-2",
-      slug: "alsetria-moe-series-central-ducted-cfg-2",
-      modelId: "alsetria-moe-series-central-ducted",
-      outdoorUnitId: "alsetria-moe30u-48hfn1-m-x1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-moe-series-central-ducted-cfg-3",
-      slug: "alsetria-moe-series-central-ducted-cfg-3",
-      modelId: "alsetria-moe-series-central-ducted",
-      outdoorUnitId: "alsetria-moe30u-55hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-moe-series-central-ducted-cfg-4",
-      slug: "alsetria-moe-series-central-ducted-cfg-4",
-      modelId: "alsetria-moe-series-central-ducted",
+      id: "alsetria-moe-series-central-ducted-36000-cfg-2",
+      slug: "alsetria-moe-series-central-ducted-36000-cfg-2",
+      modelId: "alsetria-moe-series-central-ducted-36000",
       outdoorUnitId: "alsetria-moe31u-36hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2155,23 +2546,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-central-ducted-cfg-5",
-      slug: "alsetria-moe-series-central-ducted-cfg-5",
-      modelId: "alsetria-moe-series-central-ducted",
-      outdoorUnitId: "alsetria-moe30u-45hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "alsetria-moe-series-central-ducted-cfg-6",
-      slug: "alsetria-moe-series-central-ducted-cfg-6",
-      modelId: "alsetria-moe-series-central-ducted",
+      id: "alsetria-moe-series-central-ducted-36000-cfg-3",
+      slug: "alsetria-moe-series-central-ducted-36000-cfg-3",
+      modelId: "alsetria-moe-series-central-ducted-36000",
       outdoorUnitId: "alsetria-moe31u-36hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2183,9 +2560,23 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mue-series-wall-single-cfg-1",
-      slug: "alsetria-mue-series-wall-single-cfg-1",
-      modelId: "alsetria-mue-series-wall-single",
+      id: "alsetria-moe-series-central-ducted-48000-cfg-1",
+      slug: "alsetria-moe-series-central-ducted-48000-cfg-1",
+      modelId: "alsetria-moe-series-central-ducted-48000",
+      outdoorUnitId: "alsetria-moe30u-48hfn1-m-x1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mue-series-wall-single-48000-cfg-1",
+      slug: "alsetria-mue-series-wall-single-48000-cfg-1",
+      modelId: "alsetria-mue-series-wall-single-48000",
       outdoorUnitId: "alsetria-moe30u-48hfn1-mp0-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2197,9 +2588,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mue-series-wall-single-cfg-2",
-      slug: "alsetria-mue-series-wall-single-cfg-2",
-      modelId: "alsetria-mue-series-wall-single",
+      id: "alsetria-mue-series-wall-single-48000-cfg-2",
+      slug: "alsetria-mue-series-wall-single-48000-cfg-2",
+      modelId: "alsetria-mue-series-wall-single-48000",
       outdoorUnitId: "alsetria-moe30u-48hfn1-mp0-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2211,9 +2602,51 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-wall-single-cfg-1",
-      slug: "alsetria-moe-series-wall-single-cfg-1",
-      modelId: "alsetria-moe-series-wall-single",
+      id: "alsetria-mox-series-wall-single-15000-cfg-1",
+      slug: "alsetria-mox-series-wall-single-15000-cfg-1",
+      modelId: "alsetria-mox-series-wall-single-15000",
+      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-15000-cfg-2",
+      slug: "alsetria-mox-series-wall-single-15000-cfg-2",
+      modelId: "alsetria-mox-series-wall-single-15000",
+      outdoorUnitId: "alsetria-mox430-17hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-wall-single-15000-cfg-3",
+      slug: "alsetria-mox-series-wall-single-15000-cfg-3",
+      modelId: "alsetria-mox-series-wall-single-15000",
+      outdoorUnitId: "alsetria-mox430-18hfn1-mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 22.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-wall-single-36000-cfg-1",
+      slug: "alsetria-moe-series-wall-single-36000-cfg-1",
+      modelId: "alsetria-moe-series-wall-single-36000",
       outdoorUnitId: "alsetria-moe30u-36hfn1-m-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2225,9 +2658,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-wall-single-cfg-2",
-      slug: "alsetria-moe-series-wall-single-cfg-2",
-      modelId: "alsetria-moe-series-wall-single",
+      id: "alsetria-moe-series-wall-single-36000-cfg-2",
+      slug: "alsetria-moe-series-wall-single-36000-cfg-2",
+      modelId: "alsetria-moe-series-wall-single-36000",
       outdoorUnitId: "alsetria-moe30u-36hfn1-m-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2239,9 +2672,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-moe-series-wall-single-cfg-3",
-      slug: "alsetria-moe-series-wall-single-cfg-3",
-      modelId: "alsetria-moe-series-wall-single",
+      id: "alsetria-mcd-series-wall-single-48000-cfg-1",
+      slug: "alsetria-mcd-series-wall-single-48000-cfg-1",
+      modelId: "alsetria-mcd-series-wall-single-48000",
       outdoorUnitId: "alsetria-moe30u-48hfn1-m-x-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2253,9 +2686,9 @@ export const alsetriaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "alsetria-mcd-series-wall-single-cfg-1",
-      slug: "alsetria-mcd-series-wall-single-cfg-1",
-      modelId: "alsetria-mcd-series-wall-single",
+      id: "alsetria-moe-series-wall-single-48000-cfg-1",
+      slug: "alsetria-moe-series-wall-single-48000-cfg-1",
+      modelId: "alsetria-moe-series-wall-single-48000",
       outdoorUnitId: "alsetria-moe30u-48hfn1-m-x-ga",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2265,11 +2698,109 @@ export const alsetriaDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-central-ducted-60000-cfg-1",
+      slug: "alsetria-moe-series-central-ducted-60000-cfg-1",
+      modelId: "alsetria-moe-series-central-ducted-60000",
+      outdoorUnitId: "alsetria-moe30u-55hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mvc-series-central-ducted-60000-cfg-1",
+      slug: "alsetria-mvc-series-central-ducted-60000-cfg-1",
+      modelId: "alsetria-mvc-series-central-ducted-60000",
+      outdoorUnitId: "alsetria-moe30u-55hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-moe-series-central-ducted-42000-cfg-1",
+      slug: "alsetria-moe-series-central-ducted-42000-cfg-1",
+      modelId: "alsetria-moe-series-central-ducted-42000",
+      outdoorUnitId: "alsetria-moe30u-45hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mod-series-central-ducted-20000-cfg-1",
+      slug: "alsetria-mod-series-central-ducted-20000-cfg-1",
+      modelId: "alsetria-mod-series-central-ducted-20000",
+      outdoorUnitId: "alsetria-mod30-20hfn1-mw",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      seer2: 16.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-36000-cfg-1",
+      slug: "alsetria-mox-series-central-ducted-36000-cfg-1",
+      modelId: "alsetria-mox-series-central-ducted-36000",
+      outdoorUnitId: "alsetria-mox630-36hfn1-m3x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-36000-cfg-2",
+      slug: "alsetria-mox-series-central-ducted-36000-cfg-2",
+      modelId: "alsetria-mox-series-central-ducted-36000",
+      outdoorUnitId: "alsetria-mox630-36hfn1-m3x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "alsetria-mox-series-central-ducted-36000-cfg-3",
+      slug: "alsetria-mox-series-central-ducted-36000-cfg-3",
+      modelId: "alsetria-mox-series-central-ducted-36000",
+      outdoorUnitId: "alsetria-mox630-36hfn1-m3x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 16.3,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-1",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2280,7 +2811,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-2",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2291,40 +2822,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13800,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-6",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2335,29 +2833,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-9",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2368,29 +2844,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-12",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2401,29 +2855,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 2.26,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-15",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2434,29 +2866,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-18",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2467,29 +2877,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-21",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2500,62 +2888,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9200,
-          cop: 2.38,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13400,
-          cop: 2.32,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 5700,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-27",
+      configurationId: "alsetria-mox-series-wall-single-9000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2566,29 +2899,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.93,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-standard-wall-single-cfg-1",
+      configurationId: "alsetria-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2599,7 +2910,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-standard-wall-single-cfg-2",
+      configurationId: "alsetria-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2610,7 +2921,73 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-standard-wall-single-cfg-3",
+      configurationId: "alsetria-mox-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13800,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.93,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2621,7 +2998,18 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-standard-wall-single-cfg-4",
+      configurationId: "alsetria-mod-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2632,7 +3020,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-standard-wall-single-cfg-5",
+      configurationId: "alsetria-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2643,29 +3031,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-standard-wall-single-cfg-8",
+      configurationId: "alsetria-standard-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2676,18 +3042,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-standard-wall-single-cfg-10",
+      configurationId: "alsetria-standard-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2698,7 +3053,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-standard-wall-single-cfg-11",
+      configurationId: "alsetria-standard-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2709,18 +3064,106 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-1",
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.85,
+          heatingCapacityBtu: 7500,
+          cop: 1.96,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-2",
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 2.26,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9200,
+          cop: 2.38,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mod-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2731,7 +3174,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-3",
+      configurationId: "alsetria-mod-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2742,7 +3185,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-4",
+      configurationId: "alsetria-mod-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2753,7 +3196,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-5",
+      configurationId: "alsetria-mod-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2764,7 +3207,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-6",
+      configurationId: "alsetria-mod-series-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2775,7 +3218,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-7",
+      configurationId: "alsetria-mod-series-wall-single-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2786,7 +3229,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-wall-single-cfg-8",
+      configurationId: "alsetria-mod-series-wall-single-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2797,7 +3240,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-msag-series-wall-single-cfg-1",
+      configurationId: "alsetria-msag-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2808,7 +3251,29 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m2o-series-wall-single-cfg-1",
+      configurationId: "alsetria-mox-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-6000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-m2o-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2819,7 +3284,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m2o-series-wall-single-cfg-2",
+      configurationId: "alsetria-m2o-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2830,7 +3295,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m2o-series-wall-single-cfg-3",
+      configurationId: "alsetria-m2o-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2841,7 +3306,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m3o-series-wall-single-cfg-1",
+      configurationId: "alsetria-m3o-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2852,7 +3317,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m3o-series-wall-single-cfg-2",
+      configurationId: "alsetria-m3o-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2863,7 +3328,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m3o-series-wall-single-cfg-3",
+      configurationId: "alsetria-m3o-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2874,7 +3339,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m40-series-wall-single-cfg-1",
+      configurationId: "alsetria-m40-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2885,7 +3350,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m40-series-wall-single-cfg-2",
+      configurationId: "alsetria-m40-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2896,7 +3361,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m40-series-wall-single-cfg-3",
+      configurationId: "alsetria-m40-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2907,7 +3372,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m40-series-wall-single-cfg-4",
+      configurationId: "alsetria-m40-series-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2918,7 +3383,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m5o-series-wall-single-cfg-1",
+      configurationId: "alsetria-m5o-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2929,7 +3394,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-msep-seris-wall-single-cfg-1",
+      configurationId: "alsetria-msep-seris-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2940,7 +3405,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-m50-series-wall-single-cfg-1",
+      configurationId: "alsetria-m50-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2951,7 +3416,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mvb-series-central-ducted-cfg-1",
+      configurationId: "alsetria-mvb-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2962,7 +3427,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-1",
+      configurationId: "alsetria-mox-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2973,84 +3438,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13200,
-          cop: 2.31,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15800,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mox-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mvc-series-central-ducted-cfg-1",
+      configurationId: "alsetria-mvc-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3061,7 +3449,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mvc-series-central-ducted-cfg-2",
+      configurationId: "alsetria-mvc-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3072,18 +3460,84 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mvc-series-central-ducted-cfg-3",
+      configurationId: "alsetria-standard-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 37000,
-          cop: 1.91,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-1",
+      configurationId: "alsetria-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-standard-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13200,
+          cop: 2.31,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-central-ducted-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-central-ducted-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15800,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mod-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3094,18 +3548,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-3",
+      configurationId: "alsetria-mod-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3116,18 +3559,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-5",
+      configurationId: "alsetria-mod-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3138,7 +3570,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-6",
+      configurationId: "alsetria-mod-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3149,7 +3581,40 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-7",
+      configurationId: "alsetria-mod-series-central-ducted-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mod-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mod-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mod-series-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3160,29 +3625,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-mod-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-moe-series-central-ducted-cfg-1",
+      configurationId: "alsetria-moe-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3193,29 +3636,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-moe-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-moe-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-moe-series-central-ducted-cfg-4",
+      configurationId: "alsetria-moe-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3226,18 +3647,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-moe-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "alsetria-moe-series-central-ducted-cfg-6",
+      configurationId: "alsetria-moe-series-central-ducted-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3248,7 +3658,18 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mue-series-wall-single-cfg-1",
+      configurationId: "alsetria-moe-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mue-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3259,7 +3680,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mue-series-wall-single-cfg-2",
+      configurationId: "alsetria-mue-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3270,7 +3691,40 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-moe-series-wall-single-cfg-1",
+      configurationId: "alsetria-mox-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-wall-single-15000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 2.32,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-moe-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3281,7 +3735,7 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-moe-series-wall-single-cfg-2",
+      configurationId: "alsetria-moe-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3292,7 +3746,18 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-moe-series-wall-single-cfg-3",
+      configurationId: "alsetria-mcd-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-moe-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3303,12 +3768,78 @@ export const alsetriaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "alsetria-mcd-series-wall-single-cfg-1",
+      configurationId: "alsetria-moe-series-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.98,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mvc-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-moe-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mod-series-central-ducted-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "alsetria-mox-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.8,
           confidence: "verified",
         }
       ]

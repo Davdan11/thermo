@@ -48,24 +48,133 @@ export const customcomfortDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "custom-comfort-cco-series-wall-single",
-      slug: "custom-comfort-cco-series-wall-single",
-      name: "CCO Series",
+      id: "custom-comfort-cco-series-wall-single-6000",
+      slug: "custom-comfort-cco-series-wall-single-6000",
+      name: "CCO Series 6 000 BTU",
       seriesId: "custom-comfort-cco-series",
       brandId: "custom-comfort",
-      modelNumber: "CCO Series",
-      normalizedModelNumber: "cco-series",
+      modelNumber: "CCO Series 6k",
+      normalizedModelNumber: "cco-series-6000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 6500,
       heatingCapacity5FMinBtu: 5700,
-      heatingCapacity5FMaxBtu: 40000,
-      seer2Min: 15.8,
-      seer2Max: 28.1,
-      hspf2Min: 8.9,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 22,
+      seer2Max: 26.5,
+      hspf2Min: 10.8,
       hspf2Max: 13.6,
-      cop5FMin: 1.75,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-9000",
+      slug: "custom-comfort-cco-series-wall-single-9000",
+      name: "CCO Series 9 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 9k",
+      normalizedModelNumber: "cco-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 10100,
+      seer2Min: 20.2,
+      seer2Max: 28.1,
+      hspf2Min: 10.3,
+      hspf2Max: 12.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-12000",
+      slug: "custom-comfort-cco-series-wall-single-12000",
+      name: "CCO Series 12 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 12k",
+      normalizedModelNumber: "cco-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9500,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19.5,
+      seer2Max: 25.5,
+      hspf2Min: 10,
+      hspf2Max: 10.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.99,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-18000",
+      slug: "custom-comfort-cco-series-wall-single-18000",
+      name: "CCO Series 18 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 18k",
+      normalizedModelNumber: "cco-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 18,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.93,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-24000",
+      slug: "custom-comfort-cco-series-wall-single-24000",
+      name: "CCO Series 24 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 24k",
+      normalizedModelNumber: "cco-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 23000,
+      seer2Min: 19,
+      seer2Max: 21.8,
+      hspf2Min: 10,
+      hspf2Max: 11.5,
+      cop5FMin: 1.8,
       cop5FMax: 2.21,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -74,24 +183,160 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted",
-      slug: "custom-comfort-ccox-series-central-ducted",
-      name: "CCOX series",
-      seriesId: "custom-comfort-ccox-series",
+      id: "custom-comfort-cco-series-wall-single-30000",
+      slug: "custom-comfort-cco-series-wall-single-30000",
+      name: "CCO Series 30 000 BTU",
+      seriesId: "custom-comfort-cco-series",
       brandId: "custom-comfort",
-      modelNumber: "CCOX series",
-      normalizedModelNumber: "ccox-series",
+      modelNumber: "CCO Series 30k",
+      normalizedModelNumber: "cco-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.2,
-      seer2Max: 19,
-      hspf2Min: 8.5,
-      hspf2Max: 10.3,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 28800,
+      heatingCapacity5FMaxBtu: 28800,
+      seer2Min: 19.5,
+      seer2Max: 19.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-15000",
+      slug: "custom-comfort-cco-series-wall-single-15000",
+      name: "CCO Series 15 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 15k",
+      normalizedModelNumber: "cco-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 20.2,
+      hspf2Min: 8.9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.75,
+      cop5FMax: 1.76,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-36000",
+      slug: "custom-comfort-cco-series-wall-single-36000",
+      name: "CCO Series 36 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 36k",
+      normalizedModelNumber: "cco-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 28600,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 16.5,
+      seer2Max: 22.2,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 1.75,
+      cop5FMax: 1.98,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-48000",
+      slug: "custom-comfort-cco-series-wall-single-48000",
+      name: "CCO Series 48 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 48k",
+      normalizedModelNumber: "cco-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 35000,
+      heatingCapacity5FMaxBtu: 39500,
+      seer2Min: 16.8,
+      seer2Max: 21.8,
+      hspf2Min: 9,
+      hspf2Max: 12,
+      cop5FMin: 1.8,
+      cop5FMax: 2.02,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-60000",
+      slug: "custom-comfort-cco-series-wall-single-60000",
+      name: "CCO Series 60 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 60k",
+      normalizedModelNumber: "cco-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 15.8,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 10.2,
+      cop5FMin: 1.9,
+      cop5FMax: 1.97,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-18000",
+      slug: "custom-comfort-ccox-series-central-ducted-18000",
+      name: "CCOX series 18 000 BTU",
+      seriesId: "custom-comfort-ccox-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCOX series 18k",
+      normalizedModelNumber: "ccox-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 15400,
+      seer2Min: 16.1,
+      seer2Max: 19,
+      hspf2Min: 9.3,
+      hspf2Max: 10,
+      cop5FMin: 2,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -100,24 +345,160 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single",
-      slug: "custom-comfort-coox-series-wall-single",
-      name: "COOX Series",
-      seriesId: "custom-comfort-coox-series",
+      id: "custom-comfort-ccox-series-central-ducted-24000",
+      slug: "custom-comfort-ccox-series-central-ducted-24000",
+      name: "CCOX series 24 000 BTU",
+      seriesId: "custom-comfort-ccox-series",
       brandId: "custom-comfort",
-      modelNumber: "COOX Series",
-      normalizedModelNumber: "coox-series",
+      modelNumber: "CCOX series 24k",
+      normalizedModelNumber: "ccox-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16900,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 16.1,
+      seer2Max: 18.7,
+      hspf2Min: 9.3,
+      hspf2Max: 10,
+      cop5FMin: 1.87,
+      cop5FMax: 2.16,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-60000",
+      slug: "custom-comfort-ccox-series-central-ducted-60000",
+      name: "CCOX series 60 000 BTU",
+      seriesId: "custom-comfort-ccox-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCOX series 60k",
+      normalizedModelNumber: "ccox-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
       coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 7000,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.8,
-      seer2Max: 27.4,
-      hspf2Min: 9.5,
-      hspf2Max: 14.8,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.5,
+      hspf2Min: 9.2,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.96,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-30000",
+      slug: "custom-comfort-ccox-series-central-ducted-30000",
+      name: "CCOX series 30 000 BTU",
+      seriesId: "custom-comfort-ccox-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCOX series 30k",
+      normalizedModelNumber: "ccox-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 15.2,
+      seer2Max: 16.8,
+      hspf2Min: 8.5,
+      hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-36000",
+      slug: "custom-comfort-ccox-series-central-ducted-36000",
+      name: "CCOX series 36 000 BTU",
+      seriesId: "custom-comfort-ccox-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCOX series 36k",
+      normalizedModelNumber: "ccox-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 17.4,
+      hspf2Min: 8.6,
+      hspf2Max: 10.3,
+      cop5FMin: 1.85,
+      cop5FMax: 2.06,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-48000",
+      slug: "custom-comfort-ccox-series-central-ducted-48000",
+      name: "CCOX series 48 000 BTU",
+      seriesId: "custom-comfort-ccox-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCOX series 48k",
+      normalizedModelNumber: "ccox-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 17,
+      hspf2Min: 9,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-6000",
+      slug: "custom-comfort-coox-series-wall-single-6000",
+      name: "COOX Series 6 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 6k",
+      normalizedModelNumber: "coox-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6500,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 21.4,
+      seer2Max: 25.5,
+      hspf2Min: 12,
+      hspf2Max: 14.8,
+      cop5FMin: 2.39,
       cop5FMax: 2.4,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -126,25 +507,431 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted",
-      slug: "custom-comfort-cco-series-central-ducted",
-      name: "CCO Series",
-      seriesId: "custom-comfort-cco-series",
+      id: "custom-comfort-coox-series-wall-single-9000",
+      slug: "custom-comfort-coox-series-wall-single-9000",
+      name: "COOX Series 9 000 BTU",
+      seriesId: "custom-comfort-coox-series",
       brandId: "custom-comfort",
-      modelNumber: "CCO Series",
-      normalizedModelNumber: "cco-series",
+      modelNumber: "COOX Series 9k",
+      normalizedModelNumber: "coox-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20.5,
+      seer2Max: 27.4,
+      hspf2Min: 10.9,
+      hspf2Max: 13.8,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-12000",
+      slug: "custom-comfort-coox-series-wall-single-12000",
+      name: "COOX Series 12 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 12k",
+      normalizedModelNumber: "coox-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20,
+      seer2Max: 25.4,
+      hspf2Min: 10,
+      hspf2Max: 11.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-18000",
+      slug: "custom-comfort-coox-series-wall-single-18000",
+      name: "COOX Series 18 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 18k",
+      normalizedModelNumber: "coox-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 14400,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 18.4,
+      seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 12.2,
+      cop5FMin: 1.86,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-24000",
+      slug: "custom-comfort-coox-series-wall-single-24000",
+      name: "COOX Series 24 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 24k",
+      normalizedModelNumber: "coox-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 20400,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 19,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 13.5,
+      cop5FMin: 2,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-30000",
+      slug: "custom-comfort-coox-series-wall-single-30000",
+      name: "COOX Series 30 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 30k",
+      normalizedModelNumber: "coox-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.98,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-15000",
+      slug: "custom-comfort-coox-series-wall-single-15000",
+      name: "COOX Series 15 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 15k",
+      normalizedModelNumber: "coox-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14200,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.3,
+      hspf2Max: 12.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-20000",
+      slug: "custom-comfort-coox-series-wall-single-20000",
+      name: "COOX Series 20 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 20k",
+      normalizedModelNumber: "coox-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 20.4,
+      seer2Max: 20.4,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-36000",
+      slug: "custom-comfort-coox-series-wall-single-36000",
+      name: "COOX Series 36 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 36k",
+      normalizedModelNumber: "coox-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36600,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 17.7,
+      seer2Max: 23,
+      hspf2Min: 10.4,
+      hspf2Max: 11.1,
+      cop5FMin: 1.95,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-48000",
+      slug: "custom-comfort-coox-series-wall-single-48000",
+      name: "COOX Series 48 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 48k",
+      normalizedModelNumber: "coox-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 38500,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 16.7,
+      seer2Max: 23,
+      hspf2Min: 10.1,
+      hspf2Max: 11,
+      cop5FMin: 1.83,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-60000",
+      slug: "custom-comfort-coox-series-wall-single-60000",
+      name: "COOX Series 60 000 BTU",
+      seriesId: "custom-comfort-coox-series",
+      brandId: "custom-comfort",
+      modelNumber: "COOX Series 60k",
+      normalizedModelNumber: "coox-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 45000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-18000",
+      slug: "custom-comfort-cco-series-central-ducted-18000",
+      name: "CCO Series 18 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 18k",
+      normalizedModelNumber: "cco-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 52000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 15200,
+      heatingCapacity5FMaxBtu: 15200,
+      seer2Min: 16.1,
+      seer2Max: 16.1,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.06,
+      cop5FMax: 2.06,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-24000",
+      slug: "custom-comfort-cco-series-central-ducted-24000",
+      name: "CCO Series 24 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 24k",
+      normalizedModelNumber: "cco-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19700,
+      heatingCapacity5FMaxBtu: 19700,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-30000",
+      slug: "custom-comfort-cco-series-central-ducted-30000",
+      name: "CCO Series 30 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 30k",
+      normalizedModelNumber: "cco-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      heatingCapacity5FMinBtu: 25000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.6,
+      hspf2Max: 9.6,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-36000",
+      slug: "custom-comfort-cco-series-central-ducted-36000",
+      name: "CCO Series 36 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 36k",
+      normalizedModelNumber: "cco-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 29200,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-42000",
+      slug: "custom-comfort-cco-series-central-ducted-42000",
+      name: "CCO Series 42 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 42k",
+      normalizedModelNumber: "cco-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-48000",
+      slug: "custom-comfort-cco-series-central-ducted-48000",
+      name: "CCO Series 48 000 BTU",
+      seriesId: "custom-comfort-cco-series",
+      brandId: "custom-comfort",
+      modelNumber: "CCO Series 48k",
+      normalizedModelNumber: "cco-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 52000,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 37800,
       seer2Min: 15.2,
-      seer2Max: 16.1,
+      seer2Max: 16,
       hspf2Min: 8.1,
-      hspf2Max: 9.6,
+      hspf2Max: 8.5,
       cop5FMin: 1.8,
-      cop5FMax: 2.06,
+      cop5FMax: 1.83,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -178,8 +965,20 @@ export const customcomfortDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "custom-comfort-ccoxhamz218hp",
+      modelNumber: "CCOXHAMZ218HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
       id: "custom-comfort-ccoxhasz24hp",
       modelNumber: "CCOXHASZ24HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxhamz327hp",
+      modelNumber: "CCOXHAMZ327HP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
@@ -196,26 +995,14 @@ export const customcomfortDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "custom-comfort-ccoxhasz48chp",
-      modelNumber: "CCOXHASZ48CHP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxhasz60chp",
-      modelNumber: "CCOXHASZ60CHP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxhamz218hp",
-      modelNumber: "CCOXHAMZ218HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
       id: "custom-comfort-ccoxhamz436hp",
       modelNumber: "CCOXHAMZ436HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxhasz48chp",
+      modelNumber: "CCOXHASZ48CHP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
@@ -226,14 +1013,14 @@ export const customcomfortDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "custom-comfort-ccoxhamz555hp",
-      modelNumber: "CCOXHAMZ555HP",
+      id: "custom-comfort-ccoxhasz60chp",
+      modelNumber: "CCOXHASZ60CHP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
     {
-      id: "custom-comfort-ccoxhamz327hp",
-      modelNumber: "CCOXHAMZ327HP",
+      id: "custom-comfort-ccoxhamz555hp",
+      modelNumber: "CCOXHAMZ555HP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
@@ -244,38 +1031,20 @@ export const customcomfortDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "custom-comfort-ccoxha24v24hp",
-      modelNumber: "CCOXHA24V24HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxha24v30hp",
-      modelNumber: "CCOXHA24V30HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxha24v36hp",
-      modelNumber: "CCOXHA24V36HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxha24v48hp",
-      modelNumber: "CCOXHA24V48HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxha24v60hp",
-      modelNumber: "CCOXHA24V60HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
       id: "custom-comfort-ccoxhbsz17hp",
       modelNumber: "CCOXHBSZ17HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxhb24v18hp",
+      modelNumber: "CCOXHB24V18HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxha24v24hp",
+      modelNumber: "CCOXHA24V24HP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
@@ -286,14 +1055,56 @@ export const customcomfortDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "custom-comfort-ccoxhb24v24hp",
+      modelNumber: "CCOXHB24V24HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxha24v60hp",
+      modelNumber: "CCOXHA24V60HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxha24v30hp",
+      modelNumber: "CCOXHA24V30HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
       id: "custom-comfort-ccoxhbsz33hp",
       modelNumber: "CCOXHBSZ33HP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
     {
+      id: "custom-comfort-ccoxhb24v30hp",
+      modelNumber: "CCOXHB24V30HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxha24v36hp",
+      modelNumber: "CCOXHA24V36HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
       id: "custom-comfort-ccoxhbsz36chp",
       modelNumber: "CCOXHBSZ36CHP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxhb24v36hp",
+      modelNumber: "CCOXHB24V36HP",
+      brandId: "custom-comfort",
+      refrigerant: null as any,
+    },
+    {
+      id: "custom-comfort-ccoxha24v48hp",
+      modelNumber: "CCOXHA24V48HP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
@@ -306,30 +1117,6 @@ export const customcomfortDataset: BrandDataset = {
     {
       id: "custom-comfort-ccoxhbsz60chp",
       modelNumber: "CCOXHBSZ60CHP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxhb24v18hp",
-      modelNumber: "CCOXHB24V18HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxhb24v24hp",
-      modelNumber: "CCOXHB24V24HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxhb24v30hp",
-      modelNumber: "CCOXHB24V30HP",
-      brandId: "custom-comfort",
-      refrigerant: null as any,
-    },
-    {
-      id: "custom-comfort-ccoxhb24v36hp",
-      modelNumber: "CCOXHB24V36HP",
       brandId: "custom-comfort",
       refrigerant: null as any,
     },
@@ -399,9 +1186,9 @@ export const customcomfortDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-1",
-      slug: "custom-comfort-cco-series-wall-single-cfg-1",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-6000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-6000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-6000",
       outdoorUnitId: "custom-comfort-ccoxhasz06hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -413,359 +1200,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-2",
-      slug: "custom-comfort-cco-series-wall-single-cfg-2",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz09hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 28.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-3",
-      slug: "custom-comfort-cco-series-wall-single-cfg-3",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-4",
-      slug: "custom-comfort-cco-series-wall-single-cfg-4",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-5",
-      slug: "custom-comfort-cco-series-wall-single-cfg-5",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-6",
-      slug: "custom-comfort-cco-series-wall-single-cfg-6",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz33hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-7",
-      slug: "custom-comfort-cco-series-wall-single-cfg-7",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz09hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-8",
-      slug: "custom-comfort-cco-series-wall-single-cfg-8",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-9",
-      slug: "custom-comfort-cco-series-wall-single-cfg-9",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-10",
-      slug: "custom-comfort-cco-series-wall-single-cfg-10",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-11",
-      slug: "custom-comfort-cco-series-wall-single-cfg-11",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz36chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-12",
-      slug: "custom-comfort-cco-series-wall-single-cfg-12",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz48chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.8,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-13",
-      slug: "custom-comfort-cco-series-wall-single-cfg-13",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz09hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.2,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-14",
-      slug: "custom-comfort-cco-series-wall-single-cfg-14",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-15",
-      slug: "custom-comfort-cco-series-wall-single-cfg-15",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-16",
-      slug: "custom-comfort-cco-series-wall-single-cfg-16",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-17",
-      slug: "custom-comfort-cco-series-wall-single-cfg-17",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz36chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.5,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-18",
-      slug: "custom-comfort-cco-series-wall-single-cfg-18",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz48chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-19",
-      slug: "custom-comfort-cco-series-wall-single-cfg-19",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz60chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.8,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-20",
-      slug: "custom-comfort-cco-series-wall-single-cfg-20",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.2,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-21",
-      slug: "custom-comfort-cco-series-wall-single-cfg-21",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-22",
-      slug: "custom-comfort-cco-series-wall-single-cfg-22",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-23",
-      slug: "custom-comfort-cco-series-wall-single-cfg-23",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-24",
-      slug: "custom-comfort-cco-series-wall-single-cfg-24",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz36chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.6,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-25",
-      slug: "custom-comfort-cco-series-wall-single-cfg-25",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz48chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-26",
-      slug: "custom-comfort-cco-series-wall-single-cfg-26",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhasz60chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 17.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-27",
-      slug: "custom-comfort-cco-series-wall-single-cfg-27",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-6000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-6000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-6000",
       outdoorUnitId: "custom-comfort-ccoxhasz06hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6500,
@@ -777,9 +1214,51 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-28",
-      slug: "custom-comfort-cco-series-wall-single-cfg-28",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-9000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-9000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-9000",
+      outdoorUnitId: "custom-comfort-ccoxhasz09hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-9000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-9000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-9000",
+      outdoorUnitId: "custom-comfort-ccoxhasz09hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-9000-cfg-3",
+      slug: "custom-comfort-cco-series-wall-single-9000-cfg-3",
+      modelId: "custom-comfort-cco-series-wall-single-9000",
+      outdoorUnitId: "custom-comfort-ccoxhasz09hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.2,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-9000-cfg-4",
+      slug: "custom-comfort-cco-series-wall-single-9000-cfg-4",
+      modelId: "custom-comfort-cco-series-wall-single-9000",
       outdoorUnitId: "custom-comfort-ccoxhasz09hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -791,9 +1270,65 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-29",
-      slug: "custom-comfort-cco-series-wall-single-cfg-29",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-12000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-12000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-12000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-12000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-12000-cfg-3",
+      slug: "custom-comfort-cco-series-wall-single-12000-cfg-3",
+      modelId: "custom-comfort-cco-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-12000-cfg-4",
+      slug: "custom-comfort-cco-series-wall-single-12000-cfg-4",
+      modelId: "custom-comfort-cco-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhasz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.2,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-12000-cfg-5",
+      slug: "custom-comfort-cco-series-wall-single-12000-cfg-5",
+      modelId: "custom-comfort-cco-series-wall-single-12000",
       outdoorUnitId: "custom-comfort-ccoxhasz12hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -805,9 +1340,51 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-30",
-      slug: "custom-comfort-cco-series-wall-single-cfg-30",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-18000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-18000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-18000",
+      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-18000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-18000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-18000",
+      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-18000-cfg-3",
+      slug: "custom-comfort-cco-series-wall-single-18000-cfg-3",
+      modelId: "custom-comfort-cco-series-wall-single-18000",
+      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-18000-cfg-4",
+      slug: "custom-comfort-cco-series-wall-single-18000-cfg-4",
+      modelId: "custom-comfort-cco-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhasz17hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16700,
@@ -819,9 +1396,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-31",
-      slug: "custom-comfort-cco-series-wall-single-cfg-31",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-18000-cfg-5",
+      slug: "custom-comfort-cco-series-wall-single-18000-cfg-5",
+      modelId: "custom-comfort-cco-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhamz218hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -833,9 +1410,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-32",
-      slug: "custom-comfort-cco-series-wall-single-cfg-32",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-18000-cfg-6",
+      slug: "custom-comfort-cco-series-wall-single-18000-cfg-6",
+      modelId: "custom-comfort-cco-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhamz218hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -847,9 +1424,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-33",
-      slug: "custom-comfort-cco-series-wall-single-cfg-33",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-18000-cfg-7",
+      slug: "custom-comfort-cco-series-wall-single-18000-cfg-7",
+      modelId: "custom-comfort-cco-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhamz218hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -861,121 +1438,149 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-34",
-      slug: "custom-comfort-cco-series-wall-single-cfg-34",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz436hp",
+      id: "custom-comfort-cco-series-wall-single-24000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-24000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.2,
-      hspf2: 10.3,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-35",
-      slug: "custom-comfort-cco-series-wall-single-cfg-35",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz436hp",
+      id: "custom-comfort-cco-series-wall-single-24000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-24000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.6,
-      hspf2: 10.15,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-36",
-      slug: "custom-comfort-cco-series-wall-single-cfg-36",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz548hp",
+      id: "custom-comfort-cco-series-wall-single-24000-cfg-3",
+      slug: "custom-comfort-cco-series-wall-single-24000-cfg-3",
+      modelId: "custom-comfort-cco-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-24000-cfg-4",
+      slug: "custom-comfort-cco-series-wall-single-24000-cfg-4",
+      modelId: "custom-comfort-cco-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhasz24hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-24000-cfg-5",
+      slug: "custom-comfort-cco-series-wall-single-24000-cfg-5",
+      modelId: "custom-comfort-cco-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhamz327hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
       seer2: 21.8,
-      hspf2: 9.8,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-37",
-      slug: "custom-comfort-cco-series-wall-single-cfg-37",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz548hp",
+      id: "custom-comfort-cco-series-wall-single-24000-cfg-6",
+      slug: "custom-comfort-cco-series-wall-single-24000-cfg-6",
+      modelId: "custom-comfort-cco-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhamz327hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 19,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-38",
-      slug: "custom-comfort-cco-series-wall-single-cfg-38",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz548hp",
+      id: "custom-comfort-cco-series-wall-single-24000-cfg-7",
+      slug: "custom-comfort-cco-series-wall-single-24000-cfg-7",
+      modelId: "custom-comfort-cco-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhamz327hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.35,
-      hspf2: 9.4,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 20.4,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-39",
-      slug: "custom-comfort-cco-series-wall-single-cfg-39",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz555hp",
+      id: "custom-comfort-cco-series-wall-single-30000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-30000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-30000",
+      outdoorUnitId: "custom-comfort-ccoxhasz33hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 22,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-15000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-15000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-15000",
+      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
       hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-40",
-      slug: "custom-comfort-cco-series-wall-single-cfg-40",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz555hp",
+      id: "custom-comfort-cco-series-wall-single-15000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-15000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-15000",
+      outdoorUnitId: "custom-comfort-ccoxhasz17hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 18.8,
-      hspf2: 9.3,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20.2,
+      hspf2: 8.9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-41",
-      slug: "custom-comfort-cco-series-wall-single-cfg-41",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz555hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 20.4,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-wall-single-cfg-42",
-      slug: "custom-comfort-cco-series-wall-single-cfg-42",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-36000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-36000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-36000",
       outdoorUnitId: "custom-comfort-ccoxhasz36chp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -987,9 +1592,79 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-43",
-      slug: "custom-comfort-cco-series-wall-single-cfg-43",
-      modelId: "custom-comfort-cco-series-wall-single",
+      id: "custom-comfort-cco-series-wall-single-36000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-36000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhasz36chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.5,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-36000-cfg-3",
+      slug: "custom-comfort-cco-series-wall-single-36000-cfg-3",
+      modelId: "custom-comfort-cco-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhasz36chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.6,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-36000-cfg-4",
+      slug: "custom-comfort-cco-series-wall-single-36000-cfg-4",
+      modelId: "custom-comfort-cco-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhamz436hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-36000-cfg-5",
+      slug: "custom-comfort-cco-series-wall-single-36000-cfg-5",
+      modelId: "custom-comfort-cco-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhamz436hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.6,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-36000-cfg-6",
+      slug: "custom-comfort-cco-series-wall-single-36000-cfg-6",
+      modelId: "custom-comfort-cco-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhasz36chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-48000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-48000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-48000",
       outdoorUnitId: "custom-comfort-ccoxhasz48chp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1001,51 +1676,163 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-44",
-      slug: "custom-comfort-cco-series-wall-single-cfg-44",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz327hp",
+      id: "custom-comfort-cco-series-wall-single-48000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-48000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhasz48chp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-48000-cfg-3",
+      slug: "custom-comfort-cco-series-wall-single-48000-cfg-3",
+      modelId: "custom-comfort-cco-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhasz48chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-48000-cfg-4",
+      slug: "custom-comfort-cco-series-wall-single-48000-cfg-4",
+      modelId: "custom-comfort-cco-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhamz548hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
       seer2: 21.8,
-      hspf2: 10,
+      hspf2: 9.8,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-45",
-      slug: "custom-comfort-cco-series-wall-single-cfg-45",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz327hp",
+      id: "custom-comfort-cco-series-wall-single-48000-cfg-5",
+      slug: "custom-comfort-cco-series-wall-single-48000-cfg-5",
+      modelId: "custom-comfort-cco-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhamz548hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 19,
-      hspf2: 10,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-wall-single-cfg-46",
-      slug: "custom-comfort-cco-series-wall-single-cfg-46",
-      modelId: "custom-comfort-cco-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhamz327hp",
+      id: "custom-comfort-cco-series-wall-single-48000-cfg-6",
+      slug: "custom-comfort-cco-series-wall-single-48000-cfg-6",
+      modelId: "custom-comfort-cco-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhamz548hp",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.35,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-48000-cfg-7",
+      slug: "custom-comfort-cco-series-wall-single-48000-cfg-7",
+      modelId: "custom-comfort-cco-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhasz48chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.8,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-60000-cfg-1",
+      slug: "custom-comfort-cco-series-wall-single-60000-cfg-1",
+      modelId: "custom-comfort-cco-series-wall-single-60000",
+      outdoorUnitId: "custom-comfort-ccoxhasz60chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.8,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-60000-cfg-2",
+      slug: "custom-comfort-cco-series-wall-single-60000-cfg-2",
+      modelId: "custom-comfort-cco-series-wall-single-60000",
+      outdoorUnitId: "custom-comfort-ccoxhasz60chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 17.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-60000-cfg-3",
+      slug: "custom-comfort-cco-series-wall-single-60000-cfg-3",
+      modelId: "custom-comfort-cco-series-wall-single-60000",
+      outdoorUnitId: "custom-comfort-ccoxhamz555hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-60000-cfg-4",
+      slug: "custom-comfort-cco-series-wall-single-60000-cfg-4",
+      modelId: "custom-comfort-cco-series-wall-single-60000",
+      outdoorUnitId: "custom-comfort-ccoxhamz555hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-wall-single-60000-cfg-5",
+      slug: "custom-comfort-cco-series-wall-single-60000-cfg-5",
+      modelId: "custom-comfort-cco-series-wall-single-60000",
+      outdoorUnitId: "custom-comfort-ccoxhamz555hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
       seer2: 20.4,
-      hspf2: 10,
+      hspf2: 9.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-1",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-1",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-18000-cfg-1",
+      slug: "custom-comfort-ccox-series-central-ducted-18000-cfg-1",
+      modelId: "custom-comfort-ccox-series-central-ducted-18000",
       outdoorUnitId: "custom-comfort-ccoxhasz17hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1057,9 +1844,65 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-2",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-2",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-18000-cfg-2",
+      slug: "custom-comfort-ccox-series-central-ducted-18000-cfg-2",
+      modelId: "custom-comfort-ccox-series-central-ducted-18000",
+      outdoorUnitId: "custom-comfort-ccoxha24v18hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-18000-cfg-3",
+      slug: "custom-comfort-ccox-series-central-ducted-18000-cfg-3",
+      modelId: "custom-comfort-ccox-series-central-ducted-18000",
+      outdoorUnitId: "custom-comfort-ccoxha24v18hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-18000-cfg-4",
+      slug: "custom-comfort-ccox-series-central-ducted-18000-cfg-4",
+      modelId: "custom-comfort-ccox-series-central-ducted-18000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-18000-cfg-5",
+      slug: "custom-comfort-ccox-series-central-ducted-18000-cfg-5",
+      modelId: "custom-comfort-ccox-series-central-ducted-18000",
+      outdoorUnitId: "custom-comfort-ccoxhb24v18hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-24000-cfg-1",
+      slug: "custom-comfort-ccox-series-central-ducted-24000-cfg-1",
+      modelId: "custom-comfort-ccox-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxhasz24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1071,37 +1914,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-3",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-3",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhasz60chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-4",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-4",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v18hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-5",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-5",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-24000-cfg-2",
+      slug: "custom-comfort-ccox-series-central-ducted-24000-cfg-2",
+      modelId: "custom-comfort-ccox-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxha24v24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1113,79 +1928,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-6",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-6",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-7",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-7",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-8",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-8",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v48hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-9",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-9",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v60hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-10",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-10",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v18hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-11",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-11",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-24000-cfg-3",
+      slug: "custom-comfort-ccox-series-central-ducted-24000-cfg-3",
+      modelId: "custom-comfort-ccox-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxha24v24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1197,79 +1942,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-12",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-12",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-13",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-13",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-14",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-14",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v48hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-15",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-15",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-16",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-16",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-17",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-17",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-24000-cfg-4",
+      slug: "custom-comfort-ccox-series-central-ducted-24000-cfg-4",
+      modelId: "custom-comfort-ccox-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxha24v24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1281,9 +1956,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-18",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-18",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-24000-cfg-5",
+      slug: "custom-comfort-ccox-series-central-ducted-24000-cfg-5",
+      modelId: "custom-comfort-ccox-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxha24v24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1295,79 +1970,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-19",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-19",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-20",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-20",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-21",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-21",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v60hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-22",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-22",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxha24v60hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-23",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-23",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-24",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-24",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-24000-cfg-6",
+      slug: "custom-comfort-ccox-series-central-ducted-24000-cfg-6",
+      modelId: "custom-comfort-ccox-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1379,79 +1984,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-25",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-25",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhbsz33hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 16.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-26",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-26",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.2,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-27",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-27",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-28",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-28",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhbsz60chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-29",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-29",
-      modelId: "custom-comfort-ccox-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhb24v18hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-30",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-30",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-24000-cfg-7",
+      slug: "custom-comfort-ccox-series-central-ducted-24000-cfg-7",
+      modelId: "custom-comfort-ccox-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxhb24v24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1463,9 +1998,135 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-31",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-31",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-60000-cfg-1",
+      slug: "custom-comfort-ccox-series-central-ducted-60000-cfg-1",
+      modelId: "custom-comfort-ccox-series-central-ducted-60000",
+      outdoorUnitId: "custom-comfort-ccoxhasz60chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-60000-cfg-2",
+      slug: "custom-comfort-ccox-series-central-ducted-60000-cfg-2",
+      modelId: "custom-comfort-ccox-series-central-ducted-60000",
+      outdoorUnitId: "custom-comfort-ccoxha24v60hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-60000-cfg-3",
+      slug: "custom-comfort-ccox-series-central-ducted-60000-cfg-3",
+      modelId: "custom-comfort-ccox-series-central-ducted-60000",
+      outdoorUnitId: "custom-comfort-ccoxha24v60hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-60000-cfg-4",
+      slug: "custom-comfort-ccox-series-central-ducted-60000-cfg-4",
+      modelId: "custom-comfort-ccox-series-central-ducted-60000",
+      outdoorUnitId: "custom-comfort-ccoxha24v60hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-30000-cfg-1",
+      slug: "custom-comfort-ccox-series-central-ducted-30000-cfg-1",
+      modelId: "custom-comfort-ccox-series-central-ducted-30000",
+      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-30000-cfg-2",
+      slug: "custom-comfort-ccox-series-central-ducted-30000-cfg-2",
+      modelId: "custom-comfort-ccox-series-central-ducted-30000",
+      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-30000-cfg-3",
+      slug: "custom-comfort-ccox-series-central-ducted-30000-cfg-3",
+      modelId: "custom-comfort-ccox-series-central-ducted-30000",
+      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 15.2,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-30000-cfg-4",
+      slug: "custom-comfort-ccox-series-central-ducted-30000-cfg-4",
+      modelId: "custom-comfort-ccox-series-central-ducted-30000",
+      outdoorUnitId: "custom-comfort-ccoxha24v30hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 15.2,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-30000-cfg-5",
+      slug: "custom-comfort-ccox-series-central-ducted-30000-cfg-5",
+      modelId: "custom-comfort-ccox-series-central-ducted-30000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz33hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 16.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-30000-cfg-6",
+      slug: "custom-comfort-ccox-series-central-ducted-30000-cfg-6",
+      modelId: "custom-comfort-ccox-series-central-ducted-30000",
       outdoorUnitId: "custom-comfort-ccoxhb24v30hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1477,9 +2138,79 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-32",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-32",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-36000-cfg-1",
+      slug: "custom-comfort-ccox-series-central-ducted-36000-cfg-1",
+      modelId: "custom-comfort-ccox-series-central-ducted-36000",
+      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-36000-cfg-2",
+      slug: "custom-comfort-ccox-series-central-ducted-36000-cfg-2",
+      modelId: "custom-comfort-ccox-series-central-ducted-36000",
+      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-36000-cfg-3",
+      slug: "custom-comfort-ccox-series-central-ducted-36000-cfg-3",
+      modelId: "custom-comfort-ccox-series-central-ducted-36000",
+      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-36000-cfg-4",
+      slug: "custom-comfort-ccox-series-central-ducted-36000-cfg-4",
+      modelId: "custom-comfort-ccox-series-central-ducted-36000",
+      outdoorUnitId: "custom-comfort-ccoxha24v36hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-36000-cfg-5",
+      slug: "custom-comfort-ccox-series-central-ducted-36000-cfg-5",
+      modelId: "custom-comfort-ccox-series-central-ducted-36000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.2,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-36000-cfg-6",
+      slug: "custom-comfort-ccox-series-central-ducted-36000-cfg-6",
+      modelId: "custom-comfort-ccox-series-central-ducted-36000",
       outdoorUnitId: "custom-comfort-ccoxhb24v36hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1491,9 +2222,65 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-33",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-33",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-48000-cfg-1",
+      slug: "custom-comfort-ccox-series-central-ducted-48000-cfg-1",
+      modelId: "custom-comfort-ccox-series-central-ducted-48000",
+      outdoorUnitId: "custom-comfort-ccoxha24v48hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-48000-cfg-2",
+      slug: "custom-comfort-ccox-series-central-ducted-48000-cfg-2",
+      modelId: "custom-comfort-ccox-series-central-ducted-48000",
+      outdoorUnitId: "custom-comfort-ccoxha24v48hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-48000-cfg-3",
+      slug: "custom-comfort-ccox-series-central-ducted-48000-cfg-3",
+      modelId: "custom-comfort-ccox-series-central-ducted-48000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-48000-cfg-4",
+      slug: "custom-comfort-ccox-series-central-ducted-48000-cfg-4",
+      modelId: "custom-comfort-ccox-series-central-ducted-48000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz60chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-ccox-series-central-ducted-48000-cfg-5",
+      slug: "custom-comfort-ccox-series-central-ducted-48000-cfg-5",
+      modelId: "custom-comfort-ccox-series-central-ducted-48000",
       outdoorUnitId: "custom-comfort-ccoxhb24v48hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1505,9 +2292,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-34",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-34",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-48000-cfg-6",
+      slug: "custom-comfort-ccox-series-central-ducted-48000-cfg-6",
+      modelId: "custom-comfort-ccox-series-central-ducted-48000",
       outdoorUnitId: "custom-comfort-ccoxhb24v60hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1519,9 +2306,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-ccox-series-central-ducted-cfg-35",
-      slug: "custom-comfort-ccox-series-central-ducted-cfg-35",
-      modelId: "custom-comfort-ccox-series-central-ducted",
+      id: "custom-comfort-ccox-series-central-ducted-48000-cfg-7",
+      slug: "custom-comfort-ccox-series-central-ducted-48000-cfg-7",
+      modelId: "custom-comfort-ccox-series-central-ducted-48000",
       outdoorUnitId: "custom-comfort-ccoxhb24v48hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1533,9 +2320,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-1",
-      slug: "custom-comfort-coox-series-wall-single-cfg-1",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-6000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-6000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-6000",
       outdoorUnitId: "custom-comfort-ccoxhbsz06hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -1547,135 +2334,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-2",
-      slug: "custom-comfort-coox-series-wall-single-cfg-2",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.4,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-3",
-      slug: "custom-comfort-coox-series-wall-single-cfg-3",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.4,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-4",
-      slug: "custom-comfort-coox-series-wall-single-cfg-4",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-5",
-      slug: "custom-comfort-coox-series-wall-single-cfg-5",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-6",
-      slug: "custom-comfort-coox-series-wall-single-cfg-6",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz33hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-7",
-      slug: "custom-comfort-coox-series-wall-single-cfg-7",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.6,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-8",
-      slug: "custom-comfort-coox-series-wall-single-cfg-8",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.2,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-9",
-      slug: "custom-comfort-coox-series-wall-single-cfg-9",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-10",
-      slug: "custom-comfort-coox-series-wall-single-cfg-10",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23400,
-      coolingCapacityMaxBtu: 23400,
-      seer2: 20.7,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-11",
-      slug: "custom-comfort-coox-series-wall-single-cfg-11",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-6000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-6000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-6000",
       outdoorUnitId: "custom-comfort-ccoxhbsz06hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6500,
@@ -1687,135 +2348,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-12",
-      slug: "custom-comfort-coox-series-wall-single-cfg-12",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-13",
-      slug: "custom-comfort-coox-series-wall-single-cfg-13",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-14",
-      slug: "custom-comfort-coox-series-wall-single-cfg-14",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 18.4,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-15",
-      slug: "custom-comfort-coox-series-wall-single-cfg-15",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-16",
-      slug: "custom-comfort-coox-series-wall-single-cfg-16",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.2,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-17",
-      slug: "custom-comfort-coox-series-wall-single-cfg-17",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-18",
-      slug: "custom-comfort-coox-series-wall-single-cfg-18",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-19",
-      slug: "custom-comfort-coox-series-wall-single-cfg-19",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-20",
-      slug: "custom-comfort-coox-series-wall-single-cfg-20",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.4,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-21",
-      slug: "custom-comfort-coox-series-wall-single-cfg-21",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-6000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-6000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-6000",
       outdoorUnitId: "custom-comfort-ccoxhbsz06hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6500,
@@ -1827,9 +2362,65 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-22",
-      slug: "custom-comfort-coox-series-wall-single-cfg-22",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-9000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-9000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-9000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-9000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-9000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-9000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-9000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-9000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-9000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-9000-cfg-4",
+      slug: "custom-comfort-coox-series-wall-single-9000-cfg-4",
+      modelId: "custom-comfort-coox-series-wall-single-9000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.2,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-9000-cfg-5",
+      slug: "custom-comfort-coox-series-wall-single-9000-cfg-5",
+      modelId: "custom-comfort-coox-series-wall-single-9000",
       outdoorUnitId: "custom-comfort-ccoxhbsz09hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1841,9 +2432,65 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-23",
-      slug: "custom-comfort-coox-series-wall-single-cfg-23",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-12000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-12000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.4,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-12000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-12000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-12000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-12000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-12000-cfg-4",
+      slug: "custom-comfort-coox-series-wall-single-12000-cfg-4",
+      modelId: "custom-comfort-coox-series-wall-single-12000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-12000-cfg-5",
+      slug: "custom-comfort-coox-series-wall-single-12000-cfg-5",
+      modelId: "custom-comfort-coox-series-wall-single-12000",
       outdoorUnitId: "custom-comfort-ccoxhbsz12hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1855,9 +2502,51 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-24",
-      slug: "custom-comfort-coox-series-wall-single-cfg-24",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-18000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-18000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-18000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-18000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-18000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-18000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 18.4,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-18000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-18000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-18000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-18000-cfg-4",
+      slug: "custom-comfort-coox-series-wall-single-18000-cfg-4",
+      modelId: "custom-comfort-coox-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16700,
@@ -1869,121 +2558,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-25",
-      slug: "custom-comfort-coox-series-wall-single-cfg-25",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36600,
-      coolingCapacityMaxBtu: 36600,
-      seer2: 21.2,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-26",
-      slug: "custom-comfort-coox-series-wall-single-cfg-26",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-27",
-      slug: "custom-comfort-coox-series-wall-single-cfg-27",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.7,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-28",
-      slug: "custom-comfort-coox-series-wall-single-cfg-28",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.7,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-29",
-      slug: "custom-comfort-coox-series-wall-single-cfg-29",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz60chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.8,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-30",
-      slug: "custom-comfort-coox-series-wall-single-cfg-30",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36400,
-      coolingCapacityMaxBtu: 36400,
-      seer2: 20,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-31",
-      slug: "custom-comfort-coox-series-wall-single-cfg-31",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.5,
-      hspf2: 10.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-32",
-      slug: "custom-comfort-coox-series-wall-single-cfg-32",
-      modelId: "custom-comfort-coox-series-wall-single",
-      outdoorUnitId: "custom-comfort-ccoxhbsz60chp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 18,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-coox-series-wall-single-cfg-33",
-      slug: "custom-comfort-coox-series-wall-single-cfg-33",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-18000-cfg-5",
+      slug: "custom-comfort-coox-series-wall-single-18000-cfg-5",
+      modelId: "custom-comfort-coox-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhbmz318hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1995,9 +2572,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-34",
-      slug: "custom-comfort-coox-series-wall-single-cfg-34",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-18000-cfg-6",
+      slug: "custom-comfort-coox-series-wall-single-18000-cfg-6",
+      modelId: "custom-comfort-coox-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhbmz318hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2009,9 +2586,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-35",
-      slug: "custom-comfort-coox-series-wall-single-cfg-35",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-18000-cfg-7",
+      slug: "custom-comfort-coox-series-wall-single-18000-cfg-7",
+      modelId: "custom-comfort-coox-series-wall-single-18000",
       outdoorUnitId: "custom-comfort-ccoxhbmz318hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2023,9 +2600,51 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-36",
-      slug: "custom-comfort-coox-series-wall-single-cfg-36",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-24000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-24000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-24000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-24000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: 20.7,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-24000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-24000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-24000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-24000-cfg-4",
+      slug: "custom-comfort-coox-series-wall-single-24000-cfg-4",
+      modelId: "custom-comfort-coox-series-wall-single-24000",
       outdoorUnitId: "custom-comfort-ccoxhbmz427hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -2037,9 +2656,23 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-37",
-      slug: "custom-comfort-coox-series-wall-single-cfg-37",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-30000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-30000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-30000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz33hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-30000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-30000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-30000",
       outdoorUnitId: "custom-comfort-ccoxhbmz427hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -2051,9 +2684,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-38",
-      slug: "custom-comfort-coox-series-wall-single-cfg-38",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-30000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-30000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-30000",
       outdoorUnitId: "custom-comfort-ccoxhbmz427hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -2065,9 +2698,93 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-39",
-      slug: "custom-comfort-coox-series-wall-single-cfg-39",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-15000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-15000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-15000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-15000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-15000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-15000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz17hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-20000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-20000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-20000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz24hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.4,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-36000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-36000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36600,
+      coolingCapacityMaxBtu: 36600,
+      seer2: 21.2,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-36000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-36000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.7,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-36000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-36000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-36000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz36chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36400,
+      coolingCapacityMaxBtu: 36400,
+      seer2: 20,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-36000-cfg-4",
+      slug: "custom-comfort-coox-series-wall-single-36000-cfg-4",
+      modelId: "custom-comfort-coox-series-wall-single-36000",
       outdoorUnitId: "custom-comfort-ccoxhbmz536hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2079,9 +2796,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-40",
-      slug: "custom-comfort-coox-series-wall-single-cfg-40",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-36000-cfg-5",
+      slug: "custom-comfort-coox-series-wall-single-36000-cfg-5",
+      modelId: "custom-comfort-coox-series-wall-single-36000",
       outdoorUnitId: "custom-comfort-ccoxhbmz536hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2093,9 +2810,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-41",
-      slug: "custom-comfort-coox-series-wall-single-cfg-41",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-36000-cfg-6",
+      slug: "custom-comfort-coox-series-wall-single-36000-cfg-6",
+      modelId: "custom-comfort-coox-series-wall-single-36000",
       outdoorUnitId: "custom-comfort-ccoxhbmz536hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2107,9 +2824,65 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-42",
-      slug: "custom-comfort-coox-series-wall-single-cfg-42",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-2",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-2",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-3",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-3",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz48chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.5,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-4",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-4",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz60chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 18,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-5",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-5",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
       outdoorUnitId: "custom-comfort-ccoxhbmz648hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2121,9 +2894,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-43",
-      slug: "custom-comfort-coox-series-wall-single-cfg-43",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-6",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-6",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
       outdoorUnitId: "custom-comfort-ccoxhbmz648hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2135,9 +2908,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-44",
-      slug: "custom-comfort-coox-series-wall-single-cfg-44",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-7",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-7",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
       outdoorUnitId: "custom-comfort-ccoxhbmz648hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2149,9 +2922,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-45",
-      slug: "custom-comfort-coox-series-wall-single-cfg-45",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-8",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-8",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
       outdoorUnitId: "custom-comfort-ccoxhbmz655hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -2163,9 +2936,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-46",
-      slug: "custom-comfort-coox-series-wall-single-cfg-46",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-9",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-9",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
       outdoorUnitId: "custom-comfort-ccoxhbmz655hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -2177,9 +2950,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-coox-series-wall-single-cfg-47",
-      slug: "custom-comfort-coox-series-wall-single-cfg-47",
-      modelId: "custom-comfort-coox-series-wall-single",
+      id: "custom-comfort-coox-series-wall-single-48000-cfg-10",
+      slug: "custom-comfort-coox-series-wall-single-48000-cfg-10",
+      modelId: "custom-comfort-coox-series-wall-single-48000",
       outdoorUnitId: "custom-comfort-ccoxhbmz655hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -2191,9 +2964,23 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-1",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-1",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-coox-series-wall-single-60000-cfg-1",
+      slug: "custom-comfort-coox-series-wall-single-60000-cfg-1",
+      modelId: "custom-comfort-coox-series-wall-single-60000",
+      outdoorUnitId: "custom-comfort-ccoxhbsz60chp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.8,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-18000-cfg-1",
+      slug: "custom-comfort-cco-series-central-ducted-18000-cfg-1",
+      modelId: "custom-comfort-cco-series-central-ducted-18000",
       outdoorUnitId: "custom-comfort-ccoxhb24v18hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2205,23 +2992,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-2",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-2",
-      modelId: "custom-comfort-cco-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhb24v24hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-central-ducted-cfg-3",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-3",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-18000-cfg-2",
+      slug: "custom-comfort-cco-series-central-ducted-18000-cfg-2",
+      modelId: "custom-comfort-cco-series-central-ducted-18000",
       outdoorUnitId: "custom-comfort-ccoxhb24v18hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2233,9 +3006,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-4",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-4",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-24000-cfg-1",
+      slug: "custom-comfort-cco-series-central-ducted-24000-cfg-1",
+      modelId: "custom-comfort-cco-series-central-ducted-24000",
       outdoorUnitId: "custom-comfort-ccoxhb24v24hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2247,9 +3020,23 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-5",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-5",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-24000-cfg-2",
+      slug: "custom-comfort-cco-series-central-ducted-24000-cfg-2",
+      modelId: "custom-comfort-cco-series-central-ducted-24000",
+      outdoorUnitId: "custom-comfort-ccoxhb24v24hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-30000-cfg-1",
+      slug: "custom-comfort-cco-series-central-ducted-30000-cfg-1",
+      modelId: "custom-comfort-cco-series-central-ducted-30000",
       outdoorUnitId: "custom-comfort-ccoxhb24v30hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -2261,23 +3048,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-6",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-6",
-      modelId: "custom-comfort-cco-series-central-ducted",
-      outdoorUnitId: "custom-comfort-ccoxhb24v36hp",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "custom-comfort-cco-series-central-ducted-cfg-7",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-7",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-30000-cfg-2",
+      slug: "custom-comfort-cco-series-central-ducted-30000-cfg-2",
+      modelId: "custom-comfort-cco-series-central-ducted-30000",
       outdoorUnitId: "custom-comfort-ccoxhb24v30hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -2289,9 +3062,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-8",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-8",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-36000-cfg-1",
+      slug: "custom-comfort-cco-series-central-ducted-36000-cfg-1",
+      modelId: "custom-comfort-cco-series-central-ducted-36000",
       outdoorUnitId: "custom-comfort-ccoxhb24v36hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2303,9 +3076,23 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-9",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-9",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-36000-cfg-2",
+      slug: "custom-comfort-cco-series-central-ducted-36000-cfg-2",
+      modelId: "custom-comfort-cco-series-central-ducted-36000",
+      outdoorUnitId: "custom-comfort-ccoxhb24v36hp",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "custom-comfort-cco-series-central-ducted-42000-cfg-1",
+      slug: "custom-comfort-cco-series-central-ducted-42000-cfg-1",
+      modelId: "custom-comfort-cco-series-central-ducted-42000",
       outdoorUnitId: "custom-comfort-ccoxhb24v48hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -2317,9 +3104,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-10",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-10",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-48000-cfg-1",
+      slug: "custom-comfort-cco-series-central-ducted-48000-cfg-1",
+      modelId: "custom-comfort-cco-series-central-ducted-48000",
       outdoorUnitId: "custom-comfort-ccoxhb24v60hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -2331,9 +3118,9 @@ export const customcomfortDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "custom-comfort-cco-series-central-ducted-cfg-11",
-      slug: "custom-comfort-cco-series-central-ducted-cfg-11",
-      modelId: "custom-comfort-cco-series-central-ducted",
+      id: "custom-comfort-cco-series-central-ducted-48000-cfg-2",
+      slug: "custom-comfort-cco-series-central-ducted-48000-cfg-2",
+      modelId: "custom-comfort-cco-series-central-ducted-48000",
       outdoorUnitId: "custom-comfort-ccoxhb24v60hp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2347,7 +3134,7 @@ export const customcomfortDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-1",
+      configurationId: "custom-comfort-cco-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2358,282 +3145,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10100,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 2.02,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.99,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.76,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-27",
+      configurationId: "custom-comfort-cco-series-wall-single-6000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2644,7 +3156,40 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-28",
+      configurationId: "custom-comfort-cco-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10100,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2655,7 +3200,51 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-29",
+      configurationId: "custom-comfort-cco-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2666,7 +3255,40 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-30",
+      configurationId: "custom-comfort-cco-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2677,7 +3299,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-31",
+      configurationId: "custom-comfort-cco-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2688,7 +3310,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-32",
+      configurationId: "custom-comfort-cco-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2699,7 +3321,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-33",
+      configurationId: "custom-comfort-cco-series-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2710,7 +3332,150 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-34",
+      configurationId: "custom-comfort-cco-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.76,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2721,7 +3486,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-35",
+      configurationId: "custom-comfort-cco-series-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2732,73 +3497,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-42",
+      configurationId: "custom-comfort-cco-series-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2809,7 +3508,73 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-43",
+      configurationId: "custom-comfort-cco-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2820,40 +3585,62 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-44",
+      configurationId: "custom-comfort-cco-series-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
+          heatingCapacityBtu: 40000,
+          cop: 1.97,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-45",
+      configurationId: "custom-comfort-cco-series-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
+          heatingCapacityBtu: 40000,
+          cop: 1.97,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-wall-single-cfg-46",
+      configurationId: "custom-comfort-cco-series-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
+          heatingCapacityBtu: 34400,
+          cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-1",
+      configurationId: "custom-comfort-cco-series-wall-single-60000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-wall-single-60000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2864,29 +3651,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-4",
+      configurationId: "custom-comfort-ccox-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2897,62 +3662,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-10",
+      configurationId: "custom-comfort-ccox-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2963,139 +3673,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-23",
+      configurationId: "custom-comfort-ccox-series-central-ducted-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3106,7 +3684,73 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-24",
+      configurationId: "custom-comfort-ccox-series-central-ducted-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3117,62 +3761,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-30",
+      configurationId: "custom-comfort-ccox-series-central-ducted-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3183,7 +3772,106 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-31",
+      configurationId: "custom-comfort-ccox-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-60000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-30000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3194,480 +3882,18 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-32",
+      configurationId: "custom-comfort-ccox-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: 1.9,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-ccox-series-central-ducted-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7900,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.23,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30600,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30200,
-          cop: 2.02,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38500,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-40",
+      configurationId: "custom-comfort-ccox-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3678,7 +3904,513 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-41",
+      configurationId: "custom-comfort-ccox-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-ccox-series-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7900,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-6000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-6000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.23,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30200,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3689,7 +4421,51 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-42",
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38500,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3700,7 +4476,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-43",
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3711,7 +4487,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-44",
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3722,7 +4498,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-45",
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3733,7 +4509,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-46",
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3744,7 +4520,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-coox-series-wall-single-cfg-47",
+      configurationId: "custom-comfort-coox-series-wall-single-48000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3755,7 +4531,18 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-1",
+      configurationId: "custom-comfort-coox-series-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3766,18 +4553,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-3",
+      configurationId: "custom-comfort-cco-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3788,7 +4564,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-4",
+      configurationId: "custom-comfort-cco-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3799,7 +4575,18 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-5",
+      configurationId: "custom-comfort-cco-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3810,18 +4597,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-7",
+      configurationId: "custom-comfort-cco-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3832,7 +4608,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-8",
+      configurationId: "custom-comfort-cco-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3843,7 +4619,18 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-9",
+      configurationId: "custom-comfort-cco-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "custom-comfort-cco-series-central-ducted-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3854,7 +4641,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-10",
+      configurationId: "custom-comfort-cco-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3865,7 +4652,7 @@ export const customcomfortDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "custom-comfort-cco-series-central-ducted-cfg-11",
+      configurationId: "custom-comfort-cco-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

@@ -950,19 +950,20 @@ export const lgDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "lg-standard-wall-single",
-      slug: "lg-standard-wall-single",
-      name: "Standard",
+      id: "lg-standard-wall-single-18000",
+      slug: "lg-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
       seriesId: "lg-standard",
       brandId: "lg",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 6600,
-      heatingCapacity5FMaxBtu: 43000,
+      heatingCapacity5FMinBtu: 12500,
+      heatingCapacity5FMaxBtu: 14500,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -976,15 +977,259 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun048gss4-wall-single",
-      slug: "lg-arun048gss4-wall-single",
-      name: "ARUN048GSS4",
-      seriesId: "lg-arun048gss4",
+      id: "lg-standard-wall-single-24000",
+      slug: "lg-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "lg-standard",
       brandId: "lg",
-      modelNumber: "ARUN048GSS4",
-      normalizedModelNumber: "arun048gss4",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14800,
+      heatingCapacity5FMaxBtu: 19000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-36000",
+      slug: "lg-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-12000",
+      slug: "lg-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 8200,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-15000",
+      slug: "lg-standard-wall-single-15000",
+      name: "Standard 15 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 15k",
+      normalizedModelNumber: "standard-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 13000,
+      heatingCapacity5FMaxBtu: 13500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-20000",
+      slug: "lg-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14500,
+      heatingCapacity5FMaxBtu: 17900,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-30000",
+      slug: "lg-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19300,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-9000",
+      slug: "lg-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMaxBtu: 9200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-42000",
+      slug: "lg-standard-wall-single-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 33600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-48000",
+      slug: "lg-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "lg-standard",
+      brandId: "lg",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 33800,
+      heatingCapacity5FMaxBtu: 37200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-arun048gss4-wall-single-48000",
+      slug: "lg-arun048gss4-wall-single-48000",
+      name: "ARUN048GSS4 48 000 BTU",
+      seriesId: "lg-arun048gss4",
+      brandId: "lg",
+      modelNumber: "ARUN048GSS4 48k",
+      normalizedModelNumber: "arun048gss4-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 36000,
@@ -1002,15 +1247,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arub060gss4-wall-single",
-      slug: "lg-arub060gss4-wall-single",
-      name: "ARUB060GSS4",
-      seriesId: "lg-arub060gss4",
+      id: "lg-standard-wall-single-60000",
+      slug: "lg-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "lg-standard",
       brandId: "lg",
-      modelNumber: "ARUB060GSS4",
-      normalizedModelNumber: "arub060gss4",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 41000,
+      heatingCapacity5FMaxBtu: 43000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-arub060gss4-wall-single-60000",
+      slug: "lg-arub060gss4-wall-single-60000",
+      name: "ARUB060GSS4 60 000 BTU",
+      seriesId: "lg-arub060gss4",
+      brandId: "lg",
+      modelNumber: "ARUB060GSS4 60k",
+      normalizedModelNumber: "arub060gss4-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: 60000,
       coolingCapacityMaxBtu: 60000,
       heatingCapacity5FMinBtu: 42500,
@@ -1028,15 +1301,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun024gss4-wall-single",
-      slug: "lg-arun024gss4-wall-single",
-      name: "ARUN024GSS4",
+      id: "lg-arun024gss4-wall-single-24000",
+      slug: "lg-arun024gss4-wall-single-24000",
+      name: "ARUN024GSS4 24 000 BTU",
       seriesId: "lg-arun024gss4",
       brandId: "lg",
-      modelNumber: "ARUN024GSS4",
-      normalizedModelNumber: "arun024gss4",
+      modelNumber: "ARUN024GSS4 24k",
+      normalizedModelNumber: "arun024gss4-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 18900,
@@ -1054,22 +1328,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu180hhv-wall-single",
-      slug: "lg-lmu180hhv-wall-single",
-      name: "LMU180HHV",
+      id: "lg-lmu180hhv-wall-single-18000",
+      slug: "lg-lmu180hhv-wall-single-18000",
+      name: "LMU180HHV 18 000 BTU",
       seriesId: "lg-lmu180hhv",
       brandId: "lg",
-      modelNumber: "LMU180HHV",
-      normalizedModelNumber: "lmu180hhv",
+      modelNumber: "LMU180HHV 18k",
+      normalizedModelNumber: "lmu180hhv-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 16500,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17200,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 14700,
       heatingCapacity5FMaxBtu: 14700,
-      seer2Min: 17.5,
+      seer2Min: 19.25,
       seer2Max: 21,
-      hspf2Min: 8.6,
+      hspf2Min: 8.9,
       hspf2Max: 9.2,
       cop5FMin: 1.83,
       cop5FMax: 1.83,
@@ -1080,22 +1355,50 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu240hhv-wall-single",
-      slug: "lg-lmu240hhv-wall-single",
-      name: "LMU240HHV",
-      seriesId: "lg-lmu240hhv",
+      id: "lg-lmu180hhv-wall-single-15000",
+      slug: "lg-lmu180hhv-wall-single-15000",
+      name: "LMU180HHV 15 000 BTU",
+      seriesId: "lg-lmu180hhv",
       brandId: "lg",
-      modelNumber: "LMU240HHV",
-      normalizedModelNumber: "lmu240hhv",
+      modelNumber: "LMU180HHV 15k",
+      normalizedModelNumber: "lmu180hhv-15000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 20000,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16500,
+      coolingCapacityMaxBtu: 16500,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.83,
+      cop5FMax: 1.83,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-lmu240hhv-wall-single-24000",
+      slug: "lg-lmu240hhv-wall-single-24000",
+      name: "LMU240HHV 24 000 BTU",
+      seriesId: "lg-lmu240hhv",
+      brandId: "lg",
+      modelNumber: "LMU240HHV 24k",
+      normalizedModelNumber: "lmu240hhv-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 15200,
+      heatingCapacity5FMinBtu: 17400,
       heatingCapacity5FMaxBtu: 17400,
-      seer2Min: 17,
+      seer2Min: 21,
       seer2Max: 21,
-      hspf2Min: 9.2,
+      hspf2Min: 9.8,
       hspf2Max: 9.8,
       cop5FMin: 1.83,
       cop5FMax: 1.83,
@@ -1106,22 +1409,50 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu300hhv-wall-single",
-      slug: "lg-lmu300hhv-wall-single",
-      name: "LMU300HHV",
-      seriesId: "lg-lmu300hhv",
+      id: "lg-lmu240hhv-wall-single-20000",
+      slug: "lg-lmu240hhv-wall-single-20000",
+      name: "LMU240HHV 20 000 BTU",
+      seriesId: "lg-lmu240hhv",
       brandId: "lg",
-      modelNumber: "LMU300HHV",
-      normalizedModelNumber: "lmu300hhv",
+      modelNumber: "LMU240HHV 20k",
+      normalizedModelNumber: "lmu240hhv-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24600,
-      coolingCapacityMaxBtu: 28400,
-      heatingCapacity5FMinBtu: 17700,
-      heatingCapacity5FMaxBtu: 18900,
-      seer2Min: 17.5,
-      seer2Max: 20,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 15200,
+      heatingCapacity5FMaxBtu: 16300,
+      seer2Min: 17,
+      seer2Max: 19,
       hspf2Min: 9.2,
+      hspf2Max: 9.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.83,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-lmu300hhv-wall-single-30000",
+      slug: "lg-lmu300hhv-wall-single-30000",
+      name: "LMU300HHV 30 000 BTU",
+      seriesId: "lg-lmu300hhv",
+      brandId: "lg",
+      modelNumber: "LMU300HHV 30k",
+      normalizedModelNumber: "lmu300hhv-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 18900,
+      heatingCapacity5FMaxBtu: 18900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.8,
       hspf2Max: 9.8,
       cop5FMin: 1.85,
       cop5FMax: 1.85,
@@ -1132,15 +1463,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun060gss4-wall-single",
-      slug: "lg-arun060gss4-wall-single",
-      name: "ARUN060GSS4",
-      seriesId: "lg-arun060gss4",
+      id: "lg-lmu300hhv-wall-single-24000",
+      slug: "lg-lmu300hhv-wall-single-24000",
+      name: "LMU300HHV 24 000 BTU",
+      seriesId: "lg-lmu300hhv",
       brandId: "lg",
-      modelNumber: "ARUN060GSS4",
-      normalizedModelNumber: "arun060gss4",
+      modelNumber: "LMU300HHV 24k",
+      normalizedModelNumber: "lmu300hhv-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24600,
+      coolingCapacityMaxBtu: 26400,
+      heatingCapacity5FMinBtu: 17700,
+      heatingCapacity5FMaxBtu: 18300,
+      seer2Min: 17.5,
+      seer2Max: 18.75,
+      hspf2Min: 9.2,
+      hspf2Max: 9.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-arun060gss4-wall-single-60000",
+      slug: "lg-arun060gss4-wall-single-60000",
+      name: "ARUN060GSS4 60 000 BTU",
+      seriesId: "lg-arun060gss4",
+      brandId: "lg",
+      modelNumber: "ARUN060GSS4 60k",
+      normalizedModelNumber: "arun060gss4-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: 60000,
       coolingCapacityMaxBtu: 60000,
       heatingCapacity5FMinBtu: 42500,
@@ -1158,15 +1517,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu090hsv5-wall-single",
-      slug: "lg-lsu090hsv5-wall-single",
-      name: "LSU090HSV5",
+      id: "lg-lsu090hsv5-wall-single-9000",
+      slug: "lg-lsu090hsv5-wall-single-9000",
+      name: "LSU090HSV5 9 000 BTU",
       seriesId: "lg-lsu090hsv5",
       brandId: "lg",
-      modelNumber: "LSU090HSV5",
-      normalizedModelNumber: "lsu090hsv5",
+      modelNumber: "LSU090HSV5 9k",
+      normalizedModelNumber: "lsu090hsv5-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6600,
@@ -1184,15 +1544,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu120hsv5-wall-single",
-      slug: "lg-lsu120hsv5-wall-single",
-      name: "LSU120HSV5",
+      id: "lg-lsu120hsv5-wall-single-12000",
+      slug: "lg-lsu120hsv5-wall-single-12000",
+      name: "LSU120HSV5 12 000 BTU",
       seriesId: "lg-lsu120hsv5",
       brandId: "lg",
-      modelNumber: "LSU120HSV5",
-      normalizedModelNumber: "lsu120hsv5",
+      modelNumber: "LSU120HSV5 12k",
+      normalizedModelNumber: "lsu120hsv5-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8200,
@@ -1210,15 +1571,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau090hyv3-wall-single",
-      slug: "lg-lau090hyv3-wall-single",
-      name: "LAU090HYV3",
+      id: "lg-lau090hyv3-wall-single-9000",
+      slug: "lg-lau090hyv3-wall-single-9000",
+      name: "LAU090HYV3 9 000 BTU",
       seriesId: "lg-lau090hyv3",
       brandId: "lg",
-      modelNumber: "LAU090HYV3",
-      normalizedModelNumber: "lau090hyv3",
+      modelNumber: "LAU090HYV3 9k",
+      normalizedModelNumber: "lau090hyv3-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6700,
@@ -1236,15 +1598,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau120hyv3-wall-single",
-      slug: "lg-lau120hyv3-wall-single",
-      name: "LAU120HYV3",
+      id: "lg-lau120hyv3-wall-single-12000",
+      slug: "lg-lau120hyv3-wall-single-12000",
+      name: "LAU120HYV3 12 000 BTU",
       seriesId: "lg-lau120hyv3",
       brandId: "lg",
-      modelNumber: "LAU120HYV3",
-      normalizedModelNumber: "lau120hyv3",
+      modelNumber: "LAU120HYV3 12k",
+      normalizedModelNumber: "lau120hyv3-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8300,
@@ -1262,15 +1625,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau150hyv3-wall-single",
-      slug: "lg-lau150hyv3-wall-single",
-      name: "LAU150HYV3",
+      id: "lg-lau150hyv3-wall-single-15000",
+      slug: "lg-lau150hyv3-wall-single-15000",
+      name: "LAU150HYV3 15 000 BTU",
       seriesId: "lg-lau150hyv3",
       brandId: "lg",
-      modelNumber: "LAU150HYV3",
-      normalizedModelNumber: "lau150hyv3",
+      modelNumber: "LAU150HYV3 15k",
+      normalizedModelNumber: "lau150hyv3-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
       coolingCapacityMinBtu: 15000,
       coolingCapacityMaxBtu: 15000,
       heatingCapacity5FMinBtu: 10900,
@@ -1288,15 +1652,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau180hyv3-wall-single",
-      slug: "lg-lau180hyv3-wall-single",
-      name: "LAU180HYV3",
+      id: "lg-lau180hyv3-wall-single-18000",
+      slug: "lg-lau180hyv3-wall-single-18000",
+      name: "LAU180HYV3 18 000 BTU",
       seriesId: "lg-lau180hyv3",
       brandId: "lg",
-      modelNumber: "LAU180HYV3",
-      normalizedModelNumber: "lau180hyv3",
+      modelNumber: "LAU180HYV3 18k",
+      normalizedModelNumber: "lau180hyv3-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13100,
@@ -1314,15 +1679,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau240hyv3-wall-single",
-      slug: "lg-lau240hyv3-wall-single",
-      name: "LAU240HYV3",
+      id: "lg-lau240hyv3-wall-single-20000",
+      slug: "lg-lau240hyv3-wall-single-20000",
+      name: "LAU240HYV3 20 000 BTU",
       seriesId: "lg-lau240hyv3",
       brandId: "lg",
-      modelNumber: "LAU240HYV3",
-      normalizedModelNumber: "lau240hyv3",
+      modelNumber: "LAU240HYV3 20k",
+      normalizedModelNumber: "lau240hyv3-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
       coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
       heatingCapacity5FMinBtu: 15800,
@@ -1340,15 +1706,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu243hlv3-wall-single",
-      slug: "lg-lsu243hlv3-wall-single",
-      name: "LSU243HLV3",
+      id: "lg-lsu243hlv3-wall-single-20000",
+      slug: "lg-lsu243hlv3-wall-single-20000",
+      name: "LSU243HLV3 20 000 BTU",
       seriesId: "lg-lsu243hlv3",
       brandId: "lg",
-      modelNumber: "LSU243HLV3",
-      normalizedModelNumber: "lsu243hlv3",
+      modelNumber: "LSU243HLV3 20k",
+      normalizedModelNumber: "lsu243hlv3-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
       coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
       heatingCapacity5FMinBtu: 15800,
@@ -1366,15 +1733,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hhv-wall-single",
-      slug: "lg-luu180hhv-wall-single",
-      name: "LUU180HHV",
+      id: "lg-luu180hhv-wall-single-18000",
+      slug: "lg-luu180hhv-wall-single-18000",
+      name: "LUU180HHV 18 000 BTU",
       seriesId: "lg-luu180hhv",
       brandId: "lg",
-      modelNumber: "LUU180HHV",
-      normalizedModelNumber: "luu180hhv",
+      modelNumber: "LUU180HHV 18k",
+      normalizedModelNumber: "luu180hhv-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 11400,
@@ -1392,15 +1760,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hhv-wall-single",
-      slug: "lg-luu240hhv-wall-single",
-      name: "LUU240HHV",
+      id: "lg-luu240hhv-wall-single-24000",
+      slug: "lg-luu240hhv-wall-single-24000",
+      name: "LUU240HHV 24 000 BTU",
       seriesId: "lg-luu240hhv",
       brandId: "lg",
-      modelNumber: "LUU240HHV",
-      normalizedModelNumber: "luu240hhv",
+      modelNumber: "LUU240HHV 24k",
+      normalizedModelNumber: "luu240hhv-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 17000,
@@ -1418,15 +1787,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hhv-wall-single",
-      slug: "lg-luu420hhv-wall-single",
-      name: "LUU420HHV",
+      id: "lg-luu420hhv-wall-single-42000",
+      slug: "lg-luu420hhv-wall-single-42000",
+      name: "LUU420HHV 42 000 BTU",
       seriesId: "lg-luu420hhv",
       brandId: "lg",
-      modelNumber: "LUU420HHV",
-      normalizedModelNumber: "luu420hhv",
+      modelNumber: "LUU420HHV 42k",
+      normalizedModelNumber: "luu420hhv-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 28400,
@@ -1444,24 +1814,25 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hhv-wall-single",
-      slug: "lg-luu360hhv-wall-single",
-      name: "LUU360HHV",
+      id: "lg-luu360hhv-wall-single-36000",
+      slug: "lg-luu360hhv-wall-single-36000",
+      name: "LUU360HHV 36 000 BTU",
       seriesId: "lg-luu360hhv",
       brandId: "lg",
-      modelNumber: "LUU360HHV",
-      normalizedModelNumber: "luu360hhv",
+      modelNumber: "LUU360HHV 36k",
+      normalizedModelNumber: "luu360hhv-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 33000,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
-      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMinBtu: 25000,
       heatingCapacity5FMaxBtu: 25400,
-      seer2Min: 16.4,
+      seer2Min: 18.3,
       seer2Max: 21.5,
       hspf2Min: 9.2,
       hspf2Max: 10.55,
-      cop5FMin: 1.81,
+      cop5FMin: 1.87,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -1470,15 +1841,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hhv-wall-single",
-      slug: "lg-luu480hhv-wall-single",
-      name: "LUU480HHV",
+      id: "lg-luu480hhv-wall-single-48000",
+      slug: "lg-luu480hhv-wall-single-48000",
+      name: "LUU480HHV 48 000 BTU",
       seriesId: "lg-luu480hhv",
       brandId: "lg",
-      modelNumber: "LUU480HHV",
-      normalizedModelNumber: "luu480hhv",
+      modelNumber: "LUU480HHV 48k",
+      normalizedModelNumber: "luu480hhv-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 46000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 30800,
@@ -1496,15 +1868,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum048gss5-wall-single",
-      slug: "lg-arum048gss5-wall-single",
-      name: "ARUM048GSS5",
-      seriesId: "lg-arum048gss5",
+      id: "lg-luu360hhv-wall-single-30000",
+      slug: "lg-luu360hhv-wall-single-30000",
+      name: "LUU360HHV 30 000 BTU",
+      seriesId: "lg-luu360hhv",
       brandId: "lg",
-      modelNumber: "ARUM048GSS5",
-      normalizedModelNumber: "arum048gss5",
+      modelNumber: "LUU360HHV 30k",
+      normalizedModelNumber: "luu360hhv-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 23800,
+      seer2Min: 16.4,
+      seer2Max: 16.4,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-arum048gss5-wall-single-48000",
+      slug: "lg-arum048gss5-wall-single-48000",
+      name: "ARUM048GSS5 48 000 BTU",
+      seriesId: "lg-arum048gss5",
+      brandId: "lg",
+      modelNumber: "ARUM048GSS5 48k",
+      normalizedModelNumber: "arum048gss5-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 36400,
@@ -1522,15 +1922,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum036gss5-wall-single",
-      slug: "lg-arum036gss5-wall-single",
-      name: "ARUM036GSS5",
+      id: "lg-arum036gss5-wall-single-36000",
+      slug: "lg-arum036gss5-wall-single-36000",
+      name: "ARUM036GSS5 36 000 BTU",
       seriesId: "lg-arum036gss5",
       brandId: "lg",
-      modelNumber: "ARUM036GSS5",
-      normalizedModelNumber: "arum036gss5",
+      modelNumber: "ARUM036GSS5 36k",
+      normalizedModelNumber: "arum036gss5-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 28000,
@@ -1548,15 +1949,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu421hhv-wall-single",
-      slug: "lg-lmu421hhv-wall-single",
-      name: "LMU421HHV",
+      id: "lg-lmu421hhv-wall-single-42000",
+      slug: "lg-lmu421hhv-wall-single-42000",
+      name: "LMU421HHV 42 000 BTU",
       seriesId: "lg-lmu421hhv",
       brandId: "lg",
-      modelNumber: "LMU421HHV",
-      normalizedModelNumber: "lmu421hhv",
+      modelNumber: "LMU421HHV 42k",
+      normalizedModelNumber: "lmu421hhv-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 31600,
@@ -1574,15 +1976,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu480hhv-wall-single",
-      slug: "lg-lmu480hhv-wall-single",
-      name: "LMU480HHV",
+      id: "lg-lmu480hhv-wall-single-48000",
+      slug: "lg-lmu480hhv-wall-single-48000",
+      name: "LMU480HHV 48 000 BTU",
       seriesId: "lg-lmu480hhv",
       brandId: "lg",
-      modelNumber: "LMU480HHV",
-      normalizedModelNumber: "lmu480hhv",
+      modelNumber: "LMU480HHV 48k",
+      normalizedModelNumber: "lmu480hhv-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 35000,
@@ -1600,15 +2003,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu601hv-wall-single",
-      slug: "lg-lmu601hv-wall-single",
-      name: "LMU601HV",
+      id: "lg-lmu601hv-wall-single-60000",
+      slug: "lg-lmu601hv-wall-single-60000",
+      name: "LMU601HV 60 000 BTU",
       seriesId: "lg-lmu601hv",
       brandId: "lg",
-      modelNumber: "LMU601HV",
-      normalizedModelNumber: "lmu601hv",
+      modelNumber: "LMU601HV 60k",
+      normalizedModelNumber: "lmu601hv-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: 60000,
       coolingCapacityMaxBtu: 60000,
       heatingCapacity5FMinBtu: 42000,
@@ -1626,15 +2030,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu361hhv-wall-single",
-      slug: "lg-lmu361hhv-wall-single",
-      name: "LMU361HHV",
+      id: "lg-lmu361hhv-wall-single-36000",
+      slug: "lg-lmu361hhv-wall-single-36000",
+      name: "LMU361HHV 36 000 BTU",
       seriesId: "lg-lmu361hhv",
       brandId: "lg",
-      modelNumber: "LMU361HHV",
-      normalizedModelNumber: "lmu361hhv",
+      modelNumber: "LMU361HHV 36k",
+      normalizedModelNumber: "lmu361hhv-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 29600,
@@ -1652,15 +2057,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu181hsv5-wall-single",
-      slug: "lg-lsu181hsv5-wall-single",
-      name: "LSU181HSV5",
+      id: "lg-lsu181hsv5-wall-single-18000",
+      slug: "lg-lsu181hsv5-wall-single-18000",
+      name: "LSU181HSV5 18 000 BTU",
       seriesId: "lg-lsu181hsv5",
       brandId: "lg",
-      modelNumber: "LSU181HSV5",
-      normalizedModelNumber: "lsu181hsv5",
+      modelNumber: "LSU181HSV5 18k",
+      normalizedModelNumber: "lsu181hsv5-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13000,
@@ -1678,15 +2084,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu183hv-wall-single",
-      slug: "lg-lmu183hv-wall-single",
-      name: "LMU183HV",
+      id: "lg-lmu183hv-wall-single-18000",
+      slug: "lg-lmu183hv-wall-single-18000",
+      name: "LMU183HV 18 000 BTU",
       seriesId: "lg-lmu183hv",
       brandId: "lg",
-      modelNumber: "LMU183HV",
-      normalizedModelNumber: "lmu183hv",
+      modelNumber: "LMU183HV 18k",
+      normalizedModelNumber: "lmu183hv-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17200,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13400,
@@ -1704,24 +2111,25 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu243hv-wall-single",
-      slug: "lg-lmu243hv-wall-single",
-      name: "LMU243HV",
+      id: "lg-lmu243hv-wall-single-24000",
+      slug: "lg-lmu243hv-wall-single-24000",
+      name: "LMU243HV 24 000 BTU",
       seriesId: "lg-lmu243hv",
       brandId: "lg",
-      modelNumber: "LMU243HV",
-      normalizedModelNumber: "lmu243hv",
+      modelNumber: "LMU243HV 24k",
+      normalizedModelNumber: "lmu243hv-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 22000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMinBtu: 14700,
       heatingCapacity5FMaxBtu: 14900,
-      seer2Min: 18.5,
+      seer2Min: 20.5,
       seer2Max: 22.5,
-      hspf2Min: 9,
+      hspf2Min: 9.2,
       hspf2Max: 9.4,
-      cop5FMin: 2.1,
+      cop5FMin: 2.14,
       cop5FMax: 2.18,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
@@ -1730,15 +2138,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu303hv-wall-single",
-      slug: "lg-lmu303hv-wall-single",
-      name: "LMU303HV",
-      seriesId: "lg-lmu303hv",
+      id: "lg-lmu243hv-wall-single-20000",
+      slug: "lg-lmu243hv-wall-single-20000",
+      name: "LMU243HV 20 000 BTU",
+      seriesId: "lg-lmu243hv",
       brandId: "lg",
-      modelNumber: "LMU303HV",
-      normalizedModelNumber: "lmu303hv",
+      modelNumber: "LMU243HV 20k",
+      normalizedModelNumber: "lmu243hv-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 14600,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-lmu303hv-wall-single-30000",
+      slug: "lg-lmu303hv-wall-single-30000",
+      name: "LMU303HV 30 000 BTU",
+      seriesId: "lg-lmu303hv",
+      brandId: "lg",
+      modelNumber: "LMU303HV 30k",
+      normalizedModelNumber: "lmu303hv-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 27400,
       coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 18000,
@@ -1756,15 +2192,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu363hv-wall-single",
-      slug: "lg-lmu363hv-wall-single",
-      name: "LMU363HV",
+      id: "lg-lmu363hv-wall-single-30000",
+      slug: "lg-lmu363hv-wall-single-30000",
+      name: "LMU363HV 30 000 BTU",
       seriesId: "lg-lmu363hv",
       brandId: "lg",
-      modelNumber: "LMU363HV",
-      normalizedModelNumber: "lmu363hv",
+      modelNumber: "LMU363HV 30k",
+      normalizedModelNumber: "lmu363hv-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30800,
       coolingCapacityMaxBtu: 32800,
       heatingCapacity5FMinBtu: 20000,
@@ -1782,15 +2219,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu483hv-wall-single",
-      slug: "lg-lmu483hv-wall-single",
-      name: "LMU483HV",
+      id: "lg-lmu483hv-wall-single-48000",
+      slug: "lg-lmu483hv-wall-single-48000",
+      name: "LMU483HV 48 000 BTU",
       seriesId: "lg-lmu483hv",
       brandId: "lg",
-      modelNumber: "LMU483HV",
-      normalizedModelNumber: "lmu483hv",
+      modelNumber: "LMU483HV 48k",
+      normalizedModelNumber: "lmu483hv-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 33800,
@@ -1808,15 +2246,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu543hv-wall-single",
-      slug: "lg-lmu543hv-wall-single",
-      name: "LMU543HV",
+      id: "lg-lmu543hv-wall-single-48000",
+      slug: "lg-lmu543hv-wall-single-48000",
+      name: "LMU543HV 48 000 BTU",
       seriesId: "lg-lmu543hv",
       brandId: "lg",
-      modelNumber: "LMU543HV",
-      normalizedModelNumber: "lmu543hv",
+      modelNumber: "LMU543HV 48k",
+      normalizedModelNumber: "lmu543hv-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 50500,
       coolingCapacityMaxBtu: 50500,
       heatingCapacity5FMinBtu: 37200,
@@ -1834,15 +2273,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu090hv-wall-single",
-      slug: "lg-luu090hv-wall-single",
-      name: "LUU090HV",
+      id: "lg-luu090hv-wall-single-9000",
+      slug: "lg-luu090hv-wall-single-9000",
+      name: "LUU090HV 9 000 BTU",
       seriesId: "lg-luu090hv",
       brandId: "lg",
-      modelNumber: "LUU090HV",
-      normalizedModelNumber: "luu090hv",
+      modelNumber: "LUU090HV 9k",
+      normalizedModelNumber: "luu090hv-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6800,
@@ -1860,24 +2300,25 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu120hv-wall-single",
-      slug: "lg-luu120hv-wall-single",
-      name: "LUU120HV",
+      id: "lg-luu120hv-wall-single-12000",
+      slug: "lg-luu120hv-wall-single-12000",
+      name: "LUU120HV 12 000 BTU",
       seriesId: "lg-luu120hv",
       brandId: "lg",
-      modelNumber: "LUU120HV",
-      normalizedModelNumber: "luu120hv",
+      modelNumber: "LUU120HV 12k",
+      normalizedModelNumber: "luu120hv-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 10200,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11100,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 9100,
       heatingCapacity5FMaxBtu: 10400,
       seer2Min: 16,
-      seer2Max: 20.8,
-      hspf2Min: 10.2,
+      seer2Max: 19.4,
+      hspf2Min: 10.35,
       hspf2Max: 10.5,
-      cop5FMin: 2.09,
+      cop5FMin: 2.13,
       cop5FMax: 2.3,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -1886,15 +2327,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hv-wall-single",
-      slug: "lg-luu180hv-wall-single",
-      name: "LUU180HV",
-      seriesId: "lg-luu180hv",
+      id: "lg-luu120hv-wall-single-9000",
+      slug: "lg-luu120hv-wall-single-9000",
+      name: "LUU120HV 9 000 BTU",
+      seriesId: "lg-luu120hv",
       brandId: "lg",
-      modelNumber: "LUU180HV",
-      normalizedModelNumber: "luu180hv",
+      modelNumber: "LUU120HV 9k",
+      normalizedModelNumber: "luu120hv-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 10200,
+      coolingCapacityMaxBtu: 10200,
+      heatingCapacity5FMinBtu: 9200,
+      heatingCapacity5FMaxBtu: 9200,
+      seer2Min: 20.8,
+      seer2Max: 20.8,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2.09,
+      cop5FMax: 2.09,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-luu180hv-wall-single-18000",
+      slug: "lg-luu180hv-wall-single-18000",
+      name: "LUU180HV 18 000 BTU",
+      seriesId: "lg-luu180hv",
+      brandId: "lg",
+      modelNumber: "LUU180HV 18k",
+      normalizedModelNumber: "luu180hv-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12400,
@@ -1912,15 +2381,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hv-wall-single",
-      slug: "lg-luu240hv-wall-single",
-      name: "LUU240HV",
+      id: "lg-luu240hv-wall-single-24000",
+      slug: "lg-luu240hv-wall-single-24000",
+      name: "LUU240HV 24 000 BTU",
       seriesId: "lg-luu240hv",
       brandId: "lg",
-      modelNumber: "LUU240HV",
-      normalizedModelNumber: "luu240hv",
+      modelNumber: "LUU240HV 24k",
+      normalizedModelNumber: "luu240hv-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 17400,
@@ -1938,15 +2408,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-wall-single",
-      slug: "lg-luu360hv-wall-single",
-      name: "LUU360HV",
+      id: "lg-luu360hv-wall-single-36000",
+      slug: "lg-luu360hv-wall-single-36000",
+      name: "LUU360HV 36 000 BTU",
       seriesId: "lg-luu360hv",
       brandId: "lg",
-      modelNumber: "LUU360HV",
-      normalizedModelNumber: "luu360hv",
+      modelNumber: "LUU360HV 36k",
+      normalizedModelNumber: "luu360hv-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 33200,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 23800,
@@ -1964,15 +2435,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hv-wall-single",
-      slug: "lg-luu420hv-wall-single",
-      name: "LUU420HV",
+      id: "lg-luu420hv-wall-single-42000",
+      slug: "lg-luu420hv-wall-single-42000",
+      name: "LUU420HV 42 000 BTU",
       seriesId: "lg-luu420hv",
       brandId: "lg",
-      modelNumber: "LUU420HV",
-      normalizedModelNumber: "luu420hv",
+      modelNumber: "LUU420HV 42k",
+      normalizedModelNumber: "luu420hv-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 28000,
@@ -1990,15 +2462,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hv-wall-single",
-      slug: "lg-luu480hv-wall-single",
-      name: "LUU480HV",
+      id: "lg-luu480hv-wall-single-48000",
+      slug: "lg-luu480hv-wall-single-48000",
+      name: "LUU480HV 48 000 BTU",
       seriesId: "lg-luu480hv",
       brandId: "lg",
-      modelNumber: "LUU480HV",
-      normalizedModelNumber: "luu480hv",
+      modelNumber: "LUU480HV 48k",
+      normalizedModelNumber: "luu480hv-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 30800,
@@ -2016,15 +2489,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hv-central-ducted",
-      slug: "lg-luu240hv-central-ducted",
-      name: "LUU240HV",
+      id: "lg-luu240hv-central-ducted-24000",
+      slug: "lg-luu240hv-central-ducted-24000",
+      name: "LUU240HV 24 000 BTU",
       seriesId: "lg-luu240hv",
       brandId: "lg",
-      modelNumber: "LUU240HV",
-      normalizedModelNumber: "luu240hv",
+      modelNumber: "LUU240HV 24k",
+      normalizedModelNumber: "luu240hv-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23200,
       coolingCapacityMaxBtu: 23200,
       heatingCapacity5FMinBtu: 16500,
@@ -2042,15 +2516,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-central-ducted",
-      slug: "lg-luu360hv-central-ducted",
-      name: "LUU360HV",
+      id: "lg-luu360hv-central-ducted-36000",
+      slug: "lg-luu360hv-central-ducted-36000",
+      name: "LUU360HV 36 000 BTU",
       seriesId: "lg-luu360hv",
       brandId: "lg",
-      modelNumber: "LUU360HV",
-      normalizedModelNumber: "luu360hv",
+      modelNumber: "LUU360HV 36k",
+      normalizedModelNumber: "luu360hv-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 33200,
       coolingCapacityMaxBtu: 33200,
       heatingCapacity5FMinBtu: 20200,
@@ -2068,15 +2543,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hv-central-ducted",
-      slug: "lg-luu480hv-central-ducted",
-      name: "LUU480HV",
+      id: "lg-luu480hv-central-ducted-48000",
+      slug: "lg-luu480hv-central-ducted-48000",
+      name: "LUU480HV 48 000 BTU",
       seriesId: "lg-luu480hv",
       brandId: "lg",
-      modelNumber: "LUU480HV",
-      normalizedModelNumber: "luu480hv",
+      modelNumber: "LUU480HV 48k",
+      normalizedModelNumber: "luu480hv-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 32400,
@@ -2094,15 +2570,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hv-central-ducted",
-      slug: "lg-luu180hv-central-ducted",
-      name: "LUU180HV",
+      id: "lg-luu180hv-central-ducted-18000",
+      slug: "lg-luu180hv-central-ducted-18000",
+      name: "LUU180HV 18 000 BTU",
       seriesId: "lg-luu180hv",
       brandId: "lg",
-      modelNumber: "LUU180HV",
-      normalizedModelNumber: "luu180hv",
+      modelNumber: "LUU180HV 18k",
+      normalizedModelNumber: "luu180hv-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13300,
@@ -2120,15 +2597,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hv-central-ducted",
-      slug: "lg-luu420hv-central-ducted",
-      name: "LUU420HV",
+      id: "lg-luu420hv-central-ducted-42000",
+      slug: "lg-luu420hv-central-ducted-42000",
+      name: "LUU420HV 42 000 BTU",
       seriesId: "lg-luu420hv",
       brandId: "lg",
-      modelNumber: "LUU420HV",
-      normalizedModelNumber: "luu420hv",
+      modelNumber: "LUU420HV 42k",
+      normalizedModelNumber: "luu420hv-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 28000,
@@ -2146,15 +2624,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa181a-wall-single",
-      slug: "lg-kusxa181a-wall-single",
-      name: "KUSXA181A",
+      id: "lg-kusxa181a-wall-single-18000",
+      slug: "lg-kusxa181a-wall-single-18000",
+      name: "KUSXA181A 18 000 BTU",
       seriesId: "lg-kusxa181a",
       brandId: "lg",
-      modelNumber: "KUSXA181A",
-      normalizedModelNumber: "kusxa181a",
+      modelNumber: "KUSXA181A 18k",
+      normalizedModelNumber: "kusxa181a-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13000,
@@ -2172,15 +2651,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa241a-wall-single",
-      slug: "lg-kusxa241a-wall-single",
-      name: "KUSXA241A",
+      id: "lg-kusxa241a-wall-single-24000",
+      slug: "lg-kusxa241a-wall-single-24000",
+      name: "KUSXA241A 24 000 BTU",
       seriesId: "lg-kusxa241a",
       brandId: "lg",
-      modelNumber: "KUSXA241A",
-      normalizedModelNumber: "kusxa241a",
+      modelNumber: "KUSXA241A 24k",
+      normalizedModelNumber: "kusxa241a-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 16000,
@@ -2198,15 +2678,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb181a-wall-single",
-      slug: "lg-kusxb181a-wall-single",
-      name: "KUSXB181A",
+      id: "lg-kusxb181a-wall-single-18000",
+      slug: "lg-kusxb181a-wall-single-18000",
+      name: "KUSXB181A 18 000 BTU",
       seriesId: "lg-kusxb181a",
       brandId: "lg",
-      modelNumber: "KUSXB181A",
-      normalizedModelNumber: "kusxb181a",
+      modelNumber: "KUSXB181A 18k",
+      normalizedModelNumber: "kusxb181a-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12500,
@@ -2224,15 +2705,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb241a-wall-single",
-      slug: "lg-kusxb241a-wall-single",
-      name: "KUSXB241A",
+      id: "lg-kusxb241a-wall-single-24000",
+      slug: "lg-kusxb241a-wall-single-24000",
+      name: "KUSXB241A 24 000 BTU",
       seriesId: "lg-kusxb241a",
       brandId: "lg",
-      modelNumber: "KUSXB241A",
-      normalizedModelNumber: "kusxb241a",
+      modelNumber: "KUSXB241A 24k",
+      normalizedModelNumber: "kusxb241a-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 23200,
       heatingCapacity5FMinBtu: 17000,
@@ -2250,24 +2732,25 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb301a-wall-single",
-      slug: "lg-kusxb301a-wall-single",
-      name: "KUSXB301A",
+      id: "lg-kusxb301a-wall-single-30000",
+      slug: "lg-kusxb301a-wall-single-30000",
+      name: "KUSXB301A 30 000 BTU",
       seriesId: "lg-kusxb301a",
       brandId: "lg",
-      modelNumber: "KUSXB301A",
-      normalizedModelNumber: "kusxb301a",
+      modelNumber: "KUSXB301A 30k",
+      normalizedModelNumber: "kusxb301a-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 27000,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
       coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 20000,
       heatingCapacity5FMaxBtu: 23000,
-      seer2Min: 17,
+      seer2Min: 18.5,
       seer2Max: 21,
       hspf2Min: 9.4,
       hspf2Max: 10,
-      cop5FMin: 1.85,
+      cop5FMin: 2.02,
       cop5FMax: 2.16,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -2276,25 +2759,26 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb121a-wall-single",
-      slug: "lg-kusxb121a-wall-single",
-      name: "KUSXB121A",
+      id: "lg-kusxb121a-wall-single-9000",
+      slug: "lg-kusxb121a-wall-single-9000",
+      name: "KUSXB121A 9 000 BTU",
       seriesId: "lg-kusxb121a",
       brandId: "lg",
-      modelNumber: "KUSXB121A",
-      normalizedModelNumber: "kusxb121a",
+      modelNumber: "KUSXB121A 9k",
+      normalizedModelNumber: "kusxb121a-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 10200,
-      coolingCapacityMaxBtu: 12000,
-      heatingCapacity5FMinBtu: 8700,
-      heatingCapacity5FMaxBtu: 10200,
-      seer2Min: 16.4,
-      seer2Max: 21.5,
-      hspf2Min: 9.5,
+      coolingCapacityMaxBtu: 10200,
+      heatingCapacity5FMinBtu: 8800,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 19.7,
+      seer2Max: 19.7,
+      hspf2Min: 10.5,
       hspf2Max: 10.5,
-      cop5FMin: 1.85,
-      cop5FMax: 2.3,
+      cop5FMin: 2.24,
+      cop5FMax: 2.24,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -2302,20 +2786,21 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa361a-wall-single",
-      slug: "lg-kusxa361a-wall-single",
-      name: "KUSXA361A",
+      id: "lg-kusxa361a-wall-single-36000",
+      slug: "lg-kusxa361a-wall-single-36000",
+      name: "KUSXA361A 36 000 BTU",
       seriesId: "lg-kusxa361a",
       brandId: "lg",
-      modelNumber: "KUSXA361A",
-      normalizedModelNumber: "kusxa361a",
+      modelNumber: "KUSXA361A 36k",
+      normalizedModelNumber: "kusxa361a-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 33000,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 24800,
       heatingCapacity5FMaxBtu: 26400,
-      seer2Min: 18.2,
+      seer2Min: 19,
       seer2Max: 23.5,
       hspf2Min: 9.5,
       hspf2Max: 10.5,
@@ -2328,15 +2813,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb421a-wall-single",
-      slug: "lg-kusxb421a-wall-single",
-      name: "KUSXB421A",
+      id: "lg-kusxb421a-wall-single-42000",
+      slug: "lg-kusxb421a-wall-single-42000",
+      name: "KUSXB421A 42 000 BTU",
       seriesId: "lg-kusxb421a",
       brandId: "lg",
-      modelNumber: "KUSXB421A",
-      normalizedModelNumber: "kusxb421a",
+      modelNumber: "KUSXB421A 42k",
+      normalizedModelNumber: "kusxb421a-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 28600,
@@ -2354,15 +2840,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb091a-wall-single",
-      slug: "lg-kusxb091a-wall-single",
-      name: "KUSXB091A",
+      id: "lg-kusxb091a-wall-single-9000",
+      slug: "lg-kusxb091a-wall-single-9000",
+      name: "KUSXB091A 9 000 BTU",
       seriesId: "lg-kusxb091a",
       brandId: "lg",
-      modelNumber: "KUSXB091A",
-      normalizedModelNumber: "kusxb091a",
+      modelNumber: "KUSXB091A 9k",
+      normalizedModelNumber: "kusxb091a-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6400,
@@ -2380,15 +2867,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa301a-wall-single",
-      slug: "lg-kusxa301a-wall-single",
-      name: "KUSXA301A",
-      seriesId: "lg-kusxa301a",
+      id: "lg-kusxb121a-wall-single-12000",
+      slug: "lg-kusxb121a-wall-single-12000",
+      name: "KUSXB121A 12 000 BTU",
+      seriesId: "lg-kusxb121a",
       brandId: "lg",
-      modelNumber: "KUSXA301A",
-      normalizedModelNumber: "kusxa301a",
+      modelNumber: "KUSXB121A 12k",
+      normalizedModelNumber: "kusxb121a-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11100,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8700,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 16.4,
+      seer2Max: 21.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.85,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxa301a-wall-single-30000",
+      slug: "lg-kusxa301a-wall-single-30000",
+      name: "KUSXA301A 30 000 BTU",
+      seriesId: "lg-kusxa301a",
+      brandId: "lg",
+      modelNumber: "KUSXA301A 30k",
+      normalizedModelNumber: "kusxa301a-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 20400,
@@ -2406,15 +2921,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb481a-wall-single",
-      slug: "lg-kusxb481a-wall-single",
-      name: "KUSXB481A",
+      id: "lg-kusxb481a-wall-single-48000",
+      slug: "lg-kusxb481a-wall-single-48000",
+      name: "KUSXB481A 48 000 BTU",
       seriesId: "lg-kusxb481a",
       brandId: "lg",
-      modelNumber: "KUSXB481A",
-      normalizedModelNumber: "kusxb481a",
+      modelNumber: "KUSXB481A 48k",
+      normalizedModelNumber: "kusxb481a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 45500,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 31400,
@@ -2432,24 +2948,25 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb361a-wall-single",
-      slug: "lg-kusxb361a-wall-single",
-      name: "KUSXB361A",
+      id: "lg-kusxb361a-wall-single-36000",
+      slug: "lg-kusxb361a-wall-single-36000",
+      name: "KUSXB361A 36 000 BTU",
       seriesId: "lg-kusxb361a",
       brandId: "lg",
-      modelNumber: "KUSXB361A",
-      normalizedModelNumber: "kusxb361a",
+      modelNumber: "KUSXB361A 36k",
+      normalizedModelNumber: "kusxb361a-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 33000,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 24800,
-      heatingCapacity5FMaxBtu: 27000,
-      seer2Min: 17.5,
+      heatingCapacity5FMaxBtu: 26400,
+      seer2Min: 18.5,
       seer2Max: 22,
       hspf2Min: 9.3,
       hspf2Max: 10.3,
-      cop5FMin: 1.85,
+      cop5FMin: 1.9,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -2458,15 +2975,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa421a-wall-single",
-      slug: "lg-kusxa421a-wall-single",
-      name: "KUSXA421A",
+      id: "lg-kusxa421a-wall-single-42000",
+      slug: "lg-kusxa421a-wall-single-42000",
+      name: "KUSXA421A 42 000 BTU",
       seriesId: "lg-kusxa421a",
       brandId: "lg",
-      modelNumber: "KUSXA421A",
-      normalizedModelNumber: "kusxa421a",
+      modelNumber: "KUSXA421A 42k",
+      normalizedModelNumber: "kusxa421a-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 28600,
@@ -2484,15 +3002,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa481a-wall-single",
-      slug: "lg-kusxa481a-wall-single",
-      name: "KUSXA481A",
+      id: "lg-kusxa481a-wall-single-48000",
+      slug: "lg-kusxa481a-wall-single-48000",
+      name: "KUSXA481A 48 000 BTU",
       seriesId: "lg-kusxa481a",
       brandId: "lg",
-      modelNumber: "KUSXA481A",
-      normalizedModelNumber: "kusxa481a",
+      modelNumber: "KUSXA481A 48k",
+      normalizedModelNumber: "kusxa481a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 31800,
@@ -2510,15 +3029,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa181a-wall-single",
-      slug: "lg-kumxa181a-wall-single",
-      name: "KUMXA181A",
+      id: "lg-kumxa181a-wall-single-18000",
+      slug: "lg-kumxa181a-wall-single-18000",
+      name: "KUMXA181A 18 000 BTU",
       seriesId: "lg-kumxa181a",
       brandId: "lg",
-      modelNumber: "KUMXA181A",
-      normalizedModelNumber: "kumxa181a",
+      modelNumber: "KUMXA181A 18k",
+      normalizedModelNumber: "kumxa181a-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17200,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
@@ -2536,22 +3056,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa241a-wall-single",
-      slug: "lg-kumxa241a-wall-single",
-      name: "KUMXA241A",
+      id: "lg-kumxa241a-wall-single-24000",
+      slug: "lg-kumxa241a-wall-single-24000",
+      name: "KUMXA241A 24 000 BTU",
       seriesId: "lg-kumxa241a",
       brandId: "lg",
-      modelNumber: "KUMXA241A",
-      normalizedModelNumber: "kumxa241a",
+      modelNumber: "KUMXA241A 24k",
+      normalizedModelNumber: "kumxa241a-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 22000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMinBtu: 16400,
       heatingCapacity5FMaxBtu: 17800,
-      seer2Min: 18.5,
+      seer2Min: 19.75,
       seer2Max: 21,
-      hspf2Min: 9.5,
+      hspf2Min: 9.65,
       hspf2Max: 9.8,
       cop5FMin: 1.85,
       cop5FMax: 1.85,
@@ -2562,22 +3083,50 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa301a-wall-single",
-      slug: "lg-kumxa301a-wall-single",
-      name: "KUMXA301A",
-      seriesId: "lg-kumxa301a",
+      id: "lg-kumxa241a-wall-single-20000",
+      slug: "lg-kumxa241a-wall-single-20000",
+      name: "KUMXA241A 20 000 BTU",
+      seriesId: "lg-kumxa241a",
       brandId: "lg",
-      modelNumber: "KUMXA301A",
-      normalizedModelNumber: "kumxa301a",
+      modelNumber: "KUMXA241A 20k",
+      normalizedModelNumber: "kumxa241a-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24600,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kumxa301a-wall-single-30000",
+      slug: "lg-kumxa301a-wall-single-30000",
+      name: "KUMXA301A 30 000 BTU",
+      seriesId: "lg-kumxa301a",
+      brandId: "lg",
+      modelNumber: "KUMXA301A 30k",
+      normalizedModelNumber: "kumxa301a-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
       coolingCapacityMaxBtu: 28400,
       heatingCapacity5FMinBtu: 19900,
       heatingCapacity5FMaxBtu: 19900,
-      seer2Min: 18.5,
+      seer2Min: 20,
       seer2Max: 20,
-      hspf2Min: 9.5,
+      hspf2Min: 9.8,
       hspf2Max: 9.8,
       cop5FMin: 1.85,
       cop5FMax: 1.85,
@@ -2588,15 +3137,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb181a-wall-single",
-      slug: "lg-kumxb181a-wall-single",
-      name: "KUMXB181A",
-      seriesId: "lg-kumxb181a",
+      id: "lg-kumxa301a-wall-single-24000",
+      slug: "lg-kumxa301a-wall-single-24000",
+      name: "KUMXA301A 24 000 BTU",
+      seriesId: "lg-kumxa301a",
       brandId: "lg",
-      modelNumber: "KUMXB181A",
-      normalizedModelNumber: "kumxb181a",
+      modelNumber: "KUMXA301A 24k",
+      normalizedModelNumber: "kumxa301a-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24600,
+      coolingCapacityMaxBtu: 26400,
+      heatingCapacity5FMinBtu: 19900,
+      heatingCapacity5FMaxBtu: 19900,
+      seer2Min: 18.5,
+      seer2Max: 19.25,
+      hspf2Min: 9.5,
+      hspf2Max: 9.65,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kumxb181a-wall-single-18000",
+      slug: "lg-kumxb181a-wall-single-18000",
+      name: "KUMXB181A 18 000 BTU",
+      seriesId: "lg-kumxb181a",
+      brandId: "lg",
+      modelNumber: "KUMXB181A 18k",
+      normalizedModelNumber: "kumxb181a-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17200,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13800,
@@ -2614,24 +3191,25 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb241a-wall-single",
-      slug: "lg-kumxb241a-wall-single",
-      name: "KUMXB241A",
+      id: "lg-kumxb241a-wall-single-24000",
+      slug: "lg-kumxb241a-wall-single-24000",
+      name: "KUMXB241A 24 000 BTU",
       seriesId: "lg-kumxb241a",
       brandId: "lg",
-      modelNumber: "KUMXB241A",
-      normalizedModelNumber: "kumxb241a",
+      modelNumber: "KUMXB241A 24k",
+      normalizedModelNumber: "kumxb241a-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 22000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMinBtu: 15100,
       heatingCapacity5FMaxBtu: 15300,
-      seer2Min: 18.5,
+      seer2Min: 20.5,
       seer2Max: 22.5,
-      hspf2Min: 9,
+      hspf2Min: 9.4,
       hspf2Max: 9.8,
-      cop5FMin: 2.1,
+      cop5FMin: 2.2,
       cop5FMax: 2.3,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
@@ -2640,15 +3218,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum060gss0-wall-single",
-      slug: "lg-zrum060gss0-wall-single",
-      name: "ZRUM060GSS0",
-      seriesId: "lg-zrum060gss0",
+      id: "lg-kumxb241a-wall-single-20000",
+      slug: "lg-kumxb241a-wall-single-20000",
+      name: "KUMXB241A 20 000 BTU",
+      seriesId: "lg-kumxb241a",
       brandId: "lg",
-      modelNumber: "ZRUM060GSS0",
-      normalizedModelNumber: "zrum060gss0",
+      modelNumber: "KUMXB241A 20k",
+      normalizedModelNumber: "kumxb241a-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-zrum060gss0-wall-single-60000",
+      slug: "lg-zrum060gss0-wall-single-60000",
+      name: "ZRUM060GSS0 60 000 BTU",
+      seriesId: "lg-zrum060gss0",
+      brandId: "lg",
+      modelNumber: "ZRUM060GSS0 60k",
+      normalizedModelNumber: "zrum060gss0-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: 60000,
       coolingCapacityMaxBtu: 60000,
       heatingCapacity5FMinBtu: 37000,
@@ -2666,15 +3272,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum048gss0-wall-single",
-      slug: "lg-zrum048gss0-wall-single",
-      name: "ZRUM048GSS0",
+      id: "lg-zrum048gss0-wall-single-48000",
+      slug: "lg-zrum048gss0-wall-single-48000",
+      name: "ZRUM048GSS0 48 000 BTU",
       seriesId: "lg-zrum048gss0",
       brandId: "lg",
-      modelNumber: "ZRUM048GSS0",
-      normalizedModelNumber: "zrum048gss0",
+      modelNumber: "ZRUM048GSS0 48k",
+      normalizedModelNumber: "zrum048gss0-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 33000,
@@ -2692,15 +3299,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum036gss0-wall-single",
-      slug: "lg-zrum036gss0-wall-single",
-      name: "ZRUM036GSS0",
+      id: "lg-zrum036gss0-wall-single-36000",
+      slug: "lg-zrum036gss0-wall-single-36000",
+      name: "ZRUM036GSS0 36 000 BTU",
       seriesId: "lg-zrum036gss0",
       brandId: "lg",
-      modelNumber: "ZRUM036GSS0",
-      normalizedModelNumber: "zrum036gss0",
+      modelNumber: "ZRUM036GSS0 36k",
+      normalizedModelNumber: "zrum036gss0-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 26000,
@@ -2718,15 +3326,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrun024gss0-wall-single",
-      slug: "lg-zrun024gss0-wall-single",
-      name: "ZRUN024GSS0",
+      id: "lg-zrun024gss0-wall-single-24000",
+      slug: "lg-zrun024gss0-wall-single-24000",
+      name: "ZRUN024GSS0 24 000 BTU",
       seriesId: "lg-zrun024gss0",
       brandId: "lg",
-      modelNumber: "ZRUN024GSS0",
-      normalizedModelNumber: "zrun024gss0",
+      modelNumber: "ZRUN024GSS0 24k",
+      normalizedModelNumber: "zrun024gss0-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 17000,
@@ -2744,15 +3353,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb301a-wall-single",
-      slug: "lg-kumxb301a-wall-single",
-      name: "KUMXB301A",
+      id: "lg-kumxb301a-wall-single-30000",
+      slug: "lg-kumxb301a-wall-single-30000",
+      name: "KUMXB301A 30 000 BTU",
       seriesId: "lg-kumxb301a",
       brandId: "lg",
-      modelNumber: "KUMXB301A",
-      normalizedModelNumber: "kumxb301a",
+      modelNumber: "KUMXB301A 30k",
+      normalizedModelNumber: "kumxb301a-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 27400,
       coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 18000,
@@ -2770,15 +3380,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb361a-wall-single",
-      slug: "lg-kumxb361a-wall-single",
-      name: "KUMXB361A",
+      id: "lg-kumxb361a-wall-single-30000",
+      slug: "lg-kumxb361a-wall-single-30000",
+      name: "KUMXB361A 30 000 BTU",
       seriesId: "lg-kumxb361a",
       brandId: "lg",
-      modelNumber: "KUMXB361A",
-      normalizedModelNumber: "kumxb361a",
+      modelNumber: "KUMXB361A 30k",
+      normalizedModelNumber: "kumxb361a-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30800,
       coolingCapacityMaxBtu: 32800,
       heatingCapacity5FMinBtu: 20000,
@@ -2796,15 +3407,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb481a-wall-single",
-      slug: "lg-kumxb481a-wall-single",
-      name: "KUMXB481A",
+      id: "lg-kumxb481a-wall-single-48000",
+      slug: "lg-kumxb481a-wall-single-48000",
+      name: "KUMXB481A 48 000 BTU",
       seriesId: "lg-kumxb481a",
       brandId: "lg",
-      modelNumber: "KUMXB481A",
-      normalizedModelNumber: "kumxb481a",
+      modelNumber: "KUMXB481A 48k",
+      normalizedModelNumber: "kumxb481a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 33800,
@@ -2822,15 +3434,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb541a-wall-single",
-      slug: "lg-kumxb541a-wall-single",
-      name: "KUMXB541A",
+      id: "lg-kumxb541a-wall-single-48000",
+      slug: "lg-kumxb541a-wall-single-48000",
+      name: "KUMXB541A 48 000 BTU",
       seriesId: "lg-kumxb541a",
       brandId: "lg",
-      modelNumber: "KUMXB541A",
-      normalizedModelNumber: "kumxb541a",
+      modelNumber: "KUMXB541A 48k",
+      normalizedModelNumber: "kumxb541a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 50500,
       coolingCapacityMaxBtu: 50500,
       heatingCapacity5FMinBtu: 37200,
@@ -2848,15 +3461,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb601a-wall-single",
-      slug: "lg-kumxb601a-wall-single",
-      name: "KUMXB601A",
+      id: "lg-kumxb601a-wall-single-60000",
+      slug: "lg-kumxb601a-wall-single-60000",
+      name: "KUMXB601A 60 000 BTU",
       seriesId: "lg-kumxb601a",
       brandId: "lg",
-      modelNumber: "KUMXB601A",
-      normalizedModelNumber: "kumxb601a",
+      modelNumber: "KUMXB601A 60k",
+      normalizedModelNumber: "kumxb601a-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: 56000,
       coolingCapacityMaxBtu: 60000,
       heatingCapacity5FMinBtu: 40000,
@@ -2874,15 +3488,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa361a-wall-single",
-      slug: "lg-kumxa361a-wall-single",
-      name: "KUMXA361A",
+      id: "lg-kumxa361a-wall-single-36000",
+      slug: "lg-kumxa361a-wall-single-36000",
+      name: "KUMXA361A 36 000 BTU",
       seriesId: "lg-kumxa361a",
       brandId: "lg",
-      modelNumber: "KUMXA361A",
-      normalizedModelNumber: "kumxa361a",
+      modelNumber: "KUMXA361A 36k",
+      normalizedModelNumber: "kumxa361a-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 25000,
@@ -2900,15 +3515,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa421a-wall-single",
-      slug: "lg-kumxa421a-wall-single",
-      name: "KUMXA421A",
+      id: "lg-kumxa421a-wall-single-42000",
+      slug: "lg-kumxa421a-wall-single-42000",
+      name: "KUMXA421A 42 000 BTU",
       seriesId: "lg-kumxa421a",
       brandId: "lg",
-      modelNumber: "KUMXA421A",
-      normalizedModelNumber: "kumxa421a",
+      modelNumber: "KUMXA421A 42k",
+      normalizedModelNumber: "kumxa421a-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 31600,
@@ -2926,15 +3542,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa481a-wall-single",
-      slug: "lg-kumxa481a-wall-single",
-      name: "KUMXA481A",
+      id: "lg-kumxa481a-wall-single-48000",
+      slug: "lg-kumxa481a-wall-single-48000",
+      name: "KUMXA481A 48 000 BTU",
       seriesId: "lg-kumxa481a",
       brandId: "lg",
-      modelNumber: "KUMXA481A",
-      normalizedModelNumber: "kumxa481a",
+      modelNumber: "KUMXA481A 48k",
+      normalizedModelNumber: "kumxa481a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 34000,
@@ -2952,15 +3569,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab091a-wall-single",
-      slug: "lg-kusab091a-wall-single",
-      name: "KUSAB091A",
+      id: "lg-kusab091a-wall-single-9000",
+      slug: "lg-kusab091a-wall-single-9000",
+      name: "KUSAB091A 9 000 BTU",
       seriesId: "lg-kusab091a",
       brandId: "lg",
-      modelNumber: "KUSAB091A",
-      normalizedModelNumber: "kusab091a",
+      modelNumber: "KUSAB091A 9k",
+      normalizedModelNumber: "kusab091a-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6900,
@@ -2978,15 +3596,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab121a-wall-single",
-      slug: "lg-kusab121a-wall-single",
-      name: "KUSAB121A",
+      id: "lg-kusab121a-wall-single-12000",
+      slug: "lg-kusab121a-wall-single-12000",
+      name: "KUSAB121A 12 000 BTU",
       seriesId: "lg-kusab121a",
       brandId: "lg",
-      modelNumber: "KUSAB121A",
-      normalizedModelNumber: "kusab121a",
+      modelNumber: "KUSAB121A 12k",
+      normalizedModelNumber: "kusab121a-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8500,
@@ -3004,15 +3623,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab181a-wall-single",
-      slug: "lg-kusab181a-wall-single",
-      name: "KUSAB181A",
+      id: "lg-kusab181a-wall-single-18000",
+      slug: "lg-kusab181a-wall-single-18000",
+      name: "KUSAB181A 18 000 BTU",
       seriesId: "lg-kusab181a",
       brandId: "lg",
-      modelNumber: "KUSAB181A",
-      normalizedModelNumber: "kusab181a",
+      modelNumber: "KUSAB181A 18k",
+      normalizedModelNumber: "kusab181a-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13300,
@@ -3030,15 +3650,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa121a-wall-single",
-      slug: "lg-kusxa121a-wall-single",
-      name: "KUSXA121A",
+      id: "lg-kusxa121a-wall-single-12000",
+      slug: "lg-kusxa121a-wall-single-12000",
+      name: "KUSXA121A 12 000 BTU",
       seriesId: "lg-kusxa121a",
       brandId: "lg",
-      modelNumber: "KUSXA121A",
-      normalizedModelNumber: "kusxa121a",
+      modelNumber: "KUSXA121A 12k",
+      normalizedModelNumber: "kusxa121a-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12500,
       coolingCapacityMaxBtu: 12500,
       heatingCapacity5FMinBtu: 8600,
@@ -3056,15 +3677,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb601a-wall-single",
-      slug: "lg-kusxb601a-wall-single",
-      name: "KUSXB601A",
+      id: "lg-kusxb601a-wall-single-48000",
+      slug: "lg-kusxb601a-wall-single-48000",
+      name: "KUSXB601A 48 000 BTU",
       seriesId: "lg-kusxb601a",
       brandId: "lg",
-      modelNumber: "KUSXB601A",
-      normalizedModelNumber: "kusxb601a",
+      modelNumber: "KUSXB601A 48k",
+      normalizedModelNumber: "kusxb601a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 52500,
       coolingCapacityMaxBtu: 52500,
       heatingCapacity5FMinBtu: 35000,
@@ -3082,15 +3704,70 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa422a-wall-single",
-      slug: "lg-kusxa422a-wall-single",
-      name: "KUSXA422A",
-      seriesId: "lg-kusxa422a",
+      id: "lg-kusxa361a-wall-single-30000",
+      slug: "lg-kusxa361a-wall-single-30000",
+      name: "KUSXA361A 30 000 BTU",
+      seriesId: "lg-kusxa361a",
       brandId: "lg",
-      modelNumber: "KUSXA422A",
-      normalizedModelNumber: "kusxa422a",
+      modelNumber: "KUSXA361A 30k",
+      normalizedModelNumber: "kusxa361a-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 25400,
+      heatingCapacity5FMaxBtu: 25400,
+      seer2Min: 18.2,
+      seer2Max: 18.2,
+      hspf2Min: 9.6,
+      hspf2Max: 9.6,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxb301a-wall-single-24000",
+      slug: "lg-kusxb301a-wall-single-24000",
+      name: "KUSXB301A 24 000 BTU",
+      seriesId: "lg-kusxb301a",
+      brandId: "lg",
+      modelNumber: "KUSXB301A 24k",
+      normalizedModelNumber: "kusxb301a-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 21400,
+      heatingCapacity5FMaxBtu: 21400,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9.6,
+      hspf2Max: 9.6,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxa422a-wall-single-42000",
+      slug: "lg-kusxa422a-wall-single-42000",
+      name: "KUSXA422A 42 000 BTU",
+      seriesId: "lg-kusxa422a",
+      brandId: "lg",
+      modelNumber: "KUSXA422A 42k",
+      normalizedModelNumber: "kusxa422a-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 29800,
@@ -3108,15 +3785,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa482a-wall-single",
-      slug: "lg-kusxa482a-wall-single",
-      name: "KUSXA482A",
+      id: "lg-kusxa482a-wall-single-48000",
+      slug: "lg-kusxa482a-wall-single-48000",
+      name: "KUSXA482A 48 000 BTU",
       seriesId: "lg-kusxa482a",
       brandId: "lg",
-      modelNumber: "KUSXA482A",
-      normalizedModelNumber: "kusxa482a",
+      modelNumber: "KUSXA482A 48k",
+      normalizedModelNumber: "kusxa482a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 46000,
       coolingCapacityMaxBtu: 46000,
       heatingCapacity5FMinBtu: 30400,
@@ -3134,15 +3812,43 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusap241a-wall-single",
-      slug: "lg-kusap241a-wall-single",
-      name: "KUSAP241A",
-      seriesId: "lg-kusap241a",
+      id: "lg-kusxb361a-wall-single-30000",
+      slug: "lg-kusxb361a-wall-single-30000",
+      name: "KUSXB361A 30 000 BTU",
+      seriesId: "lg-kusxb361a",
       brandId: "lg",
-      modelNumber: "KUSAP241A",
-      normalizedModelNumber: "kusap241a",
+      modelNumber: "KUSXB361A 30k",
+      normalizedModelNumber: "kusxb361a-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusap241a-wall-single-20000",
+      slug: "lg-kusap241a-wall-single-20000",
+      name: "KUSAP241A 20 000 BTU",
+      seriesId: "lg-kusap241a",
+      brandId: "lg",
+      modelNumber: "KUSAP241A 20k",
+      normalizedModelNumber: "kusap241a-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
       coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
       heatingCapacity5FMinBtu: 15800,
@@ -3160,15 +3866,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal241a-wall-single",
-      slug: "lg-kusal241a-wall-single",
-      name: "KUSAL241A",
+      id: "lg-kusal241a-wall-single-20000",
+      slug: "lg-kusal241a-wall-single-20000",
+      name: "KUSAL241A 20 000 BTU",
       seriesId: "lg-kusal241a",
       brandId: "lg",
-      modelNumber: "KUSAL241A",
-      normalizedModelNumber: "kusal241a",
+      modelNumber: "KUSAL241A 20k",
+      normalizedModelNumber: "kusal241a-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
       coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
       heatingCapacity5FMinBtu: 15800,
@@ -3186,15 +3893,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal151a-wall-single",
-      slug: "lg-kusal151a-wall-single",
-      name: "KUSAL151A",
+      id: "lg-kusal151a-wall-single-15000",
+      slug: "lg-kusal151a-wall-single-15000",
+      name: "KUSAL151A 15 000 BTU",
       seriesId: "lg-kusal151a",
       brandId: "lg",
-      modelNumber: "KUSAL151A",
-      normalizedModelNumber: "kusal151a",
+      modelNumber: "KUSAL151A 15k",
+      normalizedModelNumber: "kusal151a-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
       coolingCapacityMinBtu: 15000,
       coolingCapacityMaxBtu: 15000,
       heatingCapacity5FMinBtu: 10900,
@@ -3212,15 +3920,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal181a-wall-single",
-      slug: "lg-kusal181a-wall-single",
-      name: "KUSAL181A",
+      id: "lg-kusal181a-wall-single-18000",
+      slug: "lg-kusal181a-wall-single-18000",
+      name: "KUSAL181A 18 000 BTU",
       seriesId: "lg-kusal181a",
       brandId: "lg",
-      modelNumber: "KUSAL181A",
-      normalizedModelNumber: "kusal181a",
+      modelNumber: "KUSAL181A 18k",
+      normalizedModelNumber: "kusal181a-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13100,
@@ -3238,15 +3947,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal091a-wall-single",
-      slug: "lg-kusal091a-wall-single",
-      name: "KUSAL091A",
+      id: "lg-kusal091a-wall-single-9000",
+      slug: "lg-kusal091a-wall-single-9000",
+      name: "KUSAL091A 9 000 BTU",
       seriesId: "lg-kusal091a",
       brandId: "lg",
-      modelNumber: "KUSAL091A",
-      normalizedModelNumber: "kusal091a",
+      modelNumber: "KUSAL091A 9k",
+      normalizedModelNumber: "kusal091a-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 7000,
@@ -3264,15 +3974,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal121a-wall-single",
-      slug: "lg-kusal121a-wall-single",
-      name: "KUSAL121A",
+      id: "lg-kusal121a-wall-single-12000",
+      slug: "lg-kusal121a-wall-single-12000",
+      name: "KUSAL121A 12 000 BTU",
       seriesId: "lg-kusal121a",
       brandId: "lg",
-      modelNumber: "KUSAL121A",
-      normalizedModelNumber: "kusal121a",
+      modelNumber: "KUSAL121A 12k",
+      normalizedModelNumber: "kusal121a-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8400,
@@ -3290,15 +4001,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb181a-central-ducted",
-      slug: "lg-kusxb181a-central-ducted",
-      name: "KUSXB181A",
+      id: "lg-kusxb181a-central-ducted-18000",
+      slug: "lg-kusxb181a-central-ducted-18000",
+      name: "KUSXB181A 18 000 BTU",
       seriesId: "lg-kusxb181a",
       brandId: "lg",
-      modelNumber: "KUSXB181A",
-      normalizedModelNumber: "kusxb181a",
+      modelNumber: "KUSXB181A 18k",
+      normalizedModelNumber: "kusxb181a-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13000,
@@ -3316,15 +4028,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb241a-central-ducted",
-      slug: "lg-kusxb241a-central-ducted",
-      name: "KUSXB241A",
+      id: "lg-kusxb241a-central-ducted-20000",
+      slug: "lg-kusxb241a-central-ducted-20000",
+      name: "KUSXB241A 20 000 BTU",
       seriesId: "lg-kusxb241a",
       brandId: "lg",
-      modelNumber: "KUSXB241A",
-      normalizedModelNumber: "kusxb241a",
+      modelNumber: "KUSXB241A 20k",
+      normalizedModelNumber: "kusxb241a-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
       coolingCapacityMinBtu: 21600,
       coolingCapacityMaxBtu: 21600,
       heatingCapacity5FMinBtu: 16000,
@@ -3342,15 +4055,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb361a-central-ducted",
-      slug: "lg-kusxb361a-central-ducted",
-      name: "KUSXB361A",
+      id: "lg-kusxb361a-central-ducted-36000",
+      slug: "lg-kusxb361a-central-ducted-36000",
+      name: "KUSXB361A 36 000 BTU",
       seriesId: "lg-kusxb361a",
       brandId: "lg",
-      modelNumber: "KUSXB361A",
-      normalizedModelNumber: "kusxb361a",
+      modelNumber: "KUSXB361A 36k",
+      normalizedModelNumber: "kusxb361a-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 34400,
       coolingCapacityMaxBtu: 34400,
       heatingCapacity5FMinBtu: 24000,
@@ -3368,15 +4082,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb421a-central-ducted",
-      slug: "lg-kusxb421a-central-ducted",
-      name: "KUSXB421A",
+      id: "lg-kusxb421a-central-ducted-42000",
+      slug: "lg-kusxb421a-central-ducted-42000",
+      name: "KUSXB421A 42 000 BTU",
       seriesId: "lg-kusxb421a",
       brandId: "lg",
-      modelNumber: "KUSXB421A",
-      normalizedModelNumber: "kusxb421a",
+      modelNumber: "KUSXB421A 42k",
+      normalizedModelNumber: "kusxb421a-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 41000,
       coolingCapacityMaxBtu: 41000,
       heatingCapacity5FMinBtu: 29000,
@@ -3394,15 +4109,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb481a-central-ducted",
-      slug: "lg-kusxb481a-central-ducted",
-      name: "KUSXB481A",
+      id: "lg-kusxb481a-central-ducted-48000",
+      slug: "lg-kusxb481a-central-ducted-48000",
+      name: "KUSXB481A 48 000 BTU",
       seriesId: "lg-kusxb481a",
       brandId: "lg",
-      modelNumber: "KUSXB481A",
-      normalizedModelNumber: "kusxb481a",
+      modelNumber: "KUSXB481A 48k",
+      normalizedModelNumber: "kusxb481a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 45500,
       coolingCapacityMaxBtu: 45500,
       heatingCapacity5FMinBtu: 32000,
@@ -3420,15 +4136,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb601a-central-ducted",
-      slug: "lg-kusxb601a-central-ducted",
-      name: "KUSXB601A",
+      id: "lg-kusxb601a-central-ducted-48000",
+      slug: "lg-kusxb601a-central-ducted-48000",
+      name: "KUSXB601A 48 000 BTU",
       seriesId: "lg-kusxb601a",
       brandId: "lg",
-      modelNumber: "KUSXB601A",
-      normalizedModelNumber: "kusxb601a",
+      modelNumber: "KUSXB601A 48k",
+      normalizedModelNumber: "kusxb601a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 45500,
       coolingCapacityMaxBtu: 52500,
       heatingCapacity5FMinBtu: 32000,
@@ -3446,15 +4163,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa181a-central-ducted",
-      slug: "lg-kusxa181a-central-ducted",
-      name: "KUSXA181A",
+      id: "lg-kusxa181a-central-ducted-18000",
+      slug: "lg-kusxa181a-central-ducted-18000",
+      name: "KUSXA181A 18 000 BTU",
       seriesId: "lg-kusxa181a",
       brandId: "lg",
-      modelNumber: "KUSXA181A",
-      normalizedModelNumber: "kusxa181a",
+      modelNumber: "KUSXA181A 18k",
+      normalizedModelNumber: "kusxa181a-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13000,
@@ -3472,20 +4190,21 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa301a-central-ducted",
-      slug: "lg-kusxa301a-central-ducted",
-      name: "KUSXA301A",
+      id: "lg-kusxa301a-central-ducted-30000",
+      slug: "lg-kusxa301a-central-ducted-30000",
+      name: "KUSXA301A 30 000 BTU",
       seriesId: "lg-kusxa301a",
       brandId: "lg",
-      modelNumber: "KUSXA301A",
-      normalizedModelNumber: "kusxa301a",
+      modelNumber: "KUSXA301A 30k",
+      normalizedModelNumber: "kusxa301a-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 23000,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
-      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMinBtu: 22000,
       heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 15.5,
+      seer2Min: 15.7,
       seer2Max: 15.7,
       hspf2Min: 8.8,
       hspf2Max: 8.8,
@@ -3498,15 +4217,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa361a-central-ducted",
-      slug: "lg-kusxa361a-central-ducted",
-      name: "KUSXA361A",
+      id: "lg-kusxa361a-central-ducted-36000",
+      slug: "lg-kusxa361a-central-ducted-36000",
+      name: "KUSXA361A 36 000 BTU",
       seriesId: "lg-kusxa361a",
       brandId: "lg",
-      modelNumber: "KUSXA361A",
-      normalizedModelNumber: "kusxa361a",
+      modelNumber: "KUSXA361A 36k",
+      normalizedModelNumber: "kusxa361a-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 34400,
       coolingCapacityMaxBtu: 34400,
       heatingCapacity5FMinBtu: 24000,
@@ -3524,15 +4244,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa422a-central-ducted",
-      slug: "lg-kusxa422a-central-ducted",
-      name: "KUSXA422A",
+      id: "lg-kusxa422a-central-ducted-42000",
+      slug: "lg-kusxa422a-central-ducted-42000",
+      name: "KUSXA422A 42 000 BTU",
       seriesId: "lg-kusxa422a",
       brandId: "lg",
-      modelNumber: "KUSXA422A",
-      normalizedModelNumber: "kusxa422a",
+      modelNumber: "KUSXA422A 42k",
+      normalizedModelNumber: "kusxa422a-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 41000,
       coolingCapacityMaxBtu: 41000,
       heatingCapacity5FMinBtu: 29000,
@@ -3550,15 +4271,16 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa482a-central-ducted",
-      slug: "lg-kusxa482a-central-ducted",
-      name: "KUSXA482A",
+      id: "lg-kusxa482a-central-ducted-48000",
+      slug: "lg-kusxa482a-central-ducted-48000",
+      name: "KUSXA482A 48 000 BTU",
       seriesId: "lg-kusxa482a",
       brandId: "lg",
-      modelNumber: "KUSXA482A",
-      normalizedModelNumber: "kusxa482a",
+      modelNumber: "KUSXA482A 48k",
+      normalizedModelNumber: "kusxa482a-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 45500,
       coolingCapacityMaxBtu: 45500,
       heatingCapacity5FMinBtu: 32600,
@@ -3574,6 +4296,33 @@ export const lgDataset: BrandDataset = {
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxa301a-central-ducted-24000",
+      slug: "lg-kusxa301a-central-ducted-24000",
+      name: "KUSXA301A 24 000 BTU",
+      seriesId: "lg-kusxa301a",
+      brandId: "lg",
+      modelNumber: "KUSXA301A 24k",
+      normalizedModelNumber: "kusxa301a-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 15.5,
+      seer2Max: 15.5,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   outdoorUnits: [
@@ -3584,8 +4333,68 @@ export const lgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "lg-lmu24chv",
+      modelNumber: "LMU24CHV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lau180hyv1",
+      modelNumber: "LAU180HYV1",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-luu188hv",
+      modelNumber: "LUU188HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lsu180hsv5",
+      modelNumber: "LSU180HSV5",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-luu189hv",
+      modelNumber: "LUU189HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lmu180hv",
+      modelNumber: "LMU180HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
       id: "lg-luu247hv",
       modelNumber: "LUU247HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lmu30chv",
+      modelNumber: "LMU30CHV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-luu248hv",
+      modelNumber: "LUU248HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-luu249hv",
+      modelNumber: "LUU249HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lmu240hv",
+      modelNumber: "LMU240HV",
       brandId: "lg",
       refrigerant: null as any,
     },
@@ -3596,8 +4405,38 @@ export const lgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "lg-luu368hv",
+      modelNumber: "LUU368HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lmu360hhv",
+      modelNumber: "LMU360HHV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-luu369hv",
+      modelNumber: "LUU369HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
       id: "lg-lau120hyv",
       modelNumber: "LAU120HYV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-luu127hv",
+      modelNumber: "LUU127HV",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lgu121hsv3",
+      modelNumber: "LGU121HSV3",
       brandId: "lg",
       refrigerant: null as any,
     },
@@ -3608,8 +4447,20 @@ export const lgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lg-lmu24chv",
-      modelNumber: "LMU24CHV",
+      id: "lg-lau180hyv2",
+      modelNumber: "LAU180HYV2",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lau240hyv1",
+      modelNumber: "LAU240HYV1",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lsu243hlv",
+      modelNumber: "LSU243HLV",
       brandId: "lg",
       refrigerant: null as any,
     },
@@ -3632,8 +4483,8 @@ export const lgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lg-lmu30chv",
-      modelNumber: "LMU30CHV",
+      id: "lg-luu097hv",
+      modelNumber: "LUU097HV",
       brandId: "lg",
       refrigerant: null as any,
     },
@@ -3644,56 +4495,8 @@ export const lgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lg-lau180hyv1",
-      modelNumber: "LAU180HYV1",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lau240hyv1",
-      modelNumber: "LAU240HYV1",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lmu600hv",
-      modelNumber: "LMU600HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu127hv",
-      modelNumber: "LUU127HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lsu243hlv",
-      modelNumber: "LSU243HLV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lau180hyv2",
-      modelNumber: "LAU180HYV2",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu368hv",
-      modelNumber: "LUU368HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
       id: "lg-luu428hv",
       modelNumber: "LUU428HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu488hv",
-      modelNumber: "LUU488HV",
       brandId: "lg",
       refrigerant: null as any,
     },
@@ -3704,68 +4507,8 @@ export const lgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lg-lmu360hhv",
-      modelNumber: "LMU360HHV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu188hv",
-      modelNumber: "LUU188HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu248hv",
-      modelNumber: "LUU248HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lsu180hsv5",
-      modelNumber: "LSU180HSV5",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lgu121hsv3",
-      modelNumber: "LGU121HSV3",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu189hv",
-      modelNumber: "LUU189HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu249hv",
-      modelNumber: "LUU249HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu369hv",
-      modelNumber: "LUU369HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-luu097hv",
-      modelNumber: "LUU097HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lmu180hv",
-      modelNumber: "LMU180HV",
-      brandId: "lg",
-      refrigerant: null as any,
-    },
-    {
-      id: "lg-lmu240hv",
-      modelNumber: "LMU240HV",
+      id: "lg-luu488hv",
+      modelNumber: "LUU488HV",
       brandId: "lg",
       refrigerant: null as any,
     },
@@ -3784,6 +4527,12 @@ export const lgDataset: BrandDataset = {
     {
       id: "lg-arun048gss4",
       modelNumber: "ARUN048GSS4",
+      brandId: "lg",
+      refrigerant: null as any,
+    },
+    {
+      id: "lg-lmu600hv",
+      modelNumber: "LMU600HV",
       brandId: "lg",
       refrigerant: null as any,
     },
@@ -4291,9 +5040,9 @@ export const lgDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "lg-standard-wall-single-cfg-1",
-      slug: "lg-standard-wall-single-cfg-1",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-18000-cfg-1",
+      slug: "lg-standard-wall-single-18000-cfg-1",
+      modelId: "lg-standard-wall-single-18000",
       outdoorUnitId: "lg-luu187hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4305,107 +5054,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-2",
-      slug: "lg-standard-wall-single-cfg-2",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu247hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-3",
-      slug: "lg-standard-wall-single-cfg-3",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu367hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-4",
-      slug: "lg-standard-wall-single-cfg-4",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lau120hyv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-5",
-      slug: "lg-standard-wall-single-cfg-5",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu18chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 14000,
-      coolingCapacityMaxBtu: 14000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-6",
-      slug: "lg-standard-wall-single-cfg-6",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu24chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 20000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-7",
-      slug: "lg-standard-wall-single-cfg-7",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu36chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-8",
-      slug: "lg-standard-wall-single-cfg-8",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu36chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-9",
-      slug: "lg-standard-wall-single-cfg-9",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-18000-cfg-2",
+      slug: "lg-standard-wall-single-18000-cfg-2",
+      modelId: "lg-standard-wall-single-18000",
       outdoorUnitId: "lg-lmu24chv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17800,
@@ -4417,23 +5068,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-10",
-      slug: "lg-standard-wall-single-cfg-10",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu18chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15500,
-      coolingCapacityMaxBtu: 15500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-11",
-      slug: "lg-standard-wall-single-cfg-11",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-18000-cfg-3",
+      slug: "lg-standard-wall-single-18000-cfg-3",
+      modelId: "lg-standard-wall-single-18000",
       outdoorUnitId: "lg-lmu24chv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18900,
@@ -4445,135 +5082,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-12",
-      slug: "lg-standard-wall-single-cfg-12",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu36chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-13",
-      slug: "lg-standard-wall-single-cfg-13",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lsu090hsv4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-14",
-      slug: "lg-standard-wall-single-cfg-14",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lau090hyv1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-15",
-      slug: "lg-standard-wall-single-cfg-15",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu30chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-16",
-      slug: "lg-standard-wall-single-cfg-16",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu30chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26030,
-      coolingCapacityMaxBtu: 26030,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-17",
-      slug: "lg-standard-wall-single-cfg-17",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu480hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 44000,
-      coolingCapacityMaxBtu: 44000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-18",
-      slug: "lg-standard-wall-single-cfg-18",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu480hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-19",
-      slug: "lg-standard-wall-single-cfg-19",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu30chv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28020,
-      coolingCapacityMaxBtu: 28020,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-20",
-      slug: "lg-standard-wall-single-cfg-20",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu480hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-21",
-      slug: "lg-standard-wall-single-cfg-21",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-18000-cfg-4",
+      slug: "lg-standard-wall-single-18000-cfg-4",
+      modelId: "lg-standard-wall-single-18000",
       outdoorUnitId: "lg-lau180hyv1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18200,
@@ -4585,233 +5096,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-22",
-      slug: "lg-standard-wall-single-cfg-22",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lau240hyv1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-23",
-      slug: "lg-standard-wall-single-cfg-23",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu600hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-24",
-      slug: "lg-standard-wall-single-cfg-24",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu600hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 58000,
-      coolingCapacityMaxBtu: 58000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-25",
-      slug: "lg-standard-wall-single-cfg-25",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu600hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 59000,
-      coolingCapacityMaxBtu: 59000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-26",
-      slug: "lg-standard-wall-single-cfg-26",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu127hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11600,
-      coolingCapacityMaxBtu: 11600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-27",
-      slug: "lg-standard-wall-single-cfg-27",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lsu243hlv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-28",
-      slug: "lg-standard-wall-single-cfg-28",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lau180hyv2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-29",
-      slug: "lg-standard-wall-single-cfg-29",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu368hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-30",
-      slug: "lg-standard-wall-single-cfg-30",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu428hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-31",
-      slug: "lg-standard-wall-single-cfg-31",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu488hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-32",
-      slug: "lg-standard-wall-single-cfg-32",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu420hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-33",
-      slug: "lg-standard-wall-single-cfg-33",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu360hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-34",
-      slug: "lg-standard-wall-single-cfg-34",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu420hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-35",
-      slug: "lg-standard-wall-single-cfg-35",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu360hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-36",
-      slug: "lg-standard-wall-single-cfg-36",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu420hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-37",
-      slug: "lg-standard-wall-single-cfg-37",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu360hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-38",
-      slug: "lg-standard-wall-single-cfg-38",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-18000-cfg-5",
+      slug: "lg-standard-wall-single-18000-cfg-5",
+      modelId: "lg-standard-wall-single-18000",
       outdoorUnitId: "lg-luu188hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4823,9 +5110,135 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-39",
-      slug: "lg-standard-wall-single-cfg-39",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-18000-cfg-6",
+      slug: "lg-standard-wall-single-18000-cfg-6",
+      modelId: "lg-standard-wall-single-18000",
+      outdoorUnitId: "lg-lsu180hsv5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-18000-cfg-7",
+      slug: "lg-standard-wall-single-18000-cfg-7",
+      modelId: "lg-standard-wall-single-18000",
+      outdoorUnitId: "lg-lsu180hsv5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-18000-cfg-8",
+      slug: "lg-standard-wall-single-18000-cfg-8",
+      modelId: "lg-standard-wall-single-18000",
+      outdoorUnitId: "lg-luu189hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-18000-cfg-9",
+      slug: "lg-standard-wall-single-18000-cfg-9",
+      modelId: "lg-standard-wall-single-18000",
+      outdoorUnitId: "lg-luu189hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-18000-cfg-10",
+      slug: "lg-standard-wall-single-18000-cfg-10",
+      modelId: "lg-standard-wall-single-18000",
+      outdoorUnitId: "lg-lmu180hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-18000-cfg-11",
+      slug: "lg-standard-wall-single-18000-cfg-11",
+      modelId: "lg-standard-wall-single-18000",
+      outdoorUnitId: "lg-lmu180hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 17200,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-18000-cfg-12",
+      slug: "lg-standard-wall-single-18000-cfg-12",
+      modelId: "lg-standard-wall-single-18000",
+      outdoorUnitId: "lg-lmu180hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17600,
+      coolingCapacityMaxBtu: 17600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-24000-cfg-1",
+      slug: "lg-standard-wall-single-24000-cfg-1",
+      modelId: "lg-standard-wall-single-24000",
+      outdoorUnitId: "lg-luu247hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-24000-cfg-2",
+      slug: "lg-standard-wall-single-24000-cfg-2",
+      modelId: "lg-standard-wall-single-24000",
+      outdoorUnitId: "lg-lmu30chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26030,
+      coolingCapacityMaxBtu: 26030,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-24000-cfg-3",
+      slug: "lg-standard-wall-single-24000-cfg-3",
+      modelId: "lg-standard-wall-single-24000",
       outdoorUnitId: "lg-luu248hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4837,65 +5250,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-40",
-      slug: "lg-standard-wall-single-cfg-40",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lsu180hsv5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-41",
-      slug: "lg-standard-wall-single-cfg-41",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lsu180hsv5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-42",
-      slug: "lg-standard-wall-single-cfg-42",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lgu121hsv3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-43",
-      slug: "lg-standard-wall-single-cfg-43",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu189hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-44",
-      slug: "lg-standard-wall-single-cfg-44",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-24000-cfg-4",
+      slug: "lg-standard-wall-single-24000-cfg-4",
+      modelId: "lg-standard-wall-single-24000",
       outdoorUnitId: "lg-luu249hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4907,23 +5264,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-45",
-      slug: "lg-standard-wall-single-cfg-45",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu189hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-46",
-      slug: "lg-standard-wall-single-cfg-46",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-24000-cfg-5",
+      slug: "lg-standard-wall-single-24000-cfg-5",
+      modelId: "lg-standard-wall-single-24000",
       outdoorUnitId: "lg-luu249hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4935,9 +5278,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-47",
-      slug: "lg-standard-wall-single-cfg-47",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-24000-cfg-6",
+      slug: "lg-standard-wall-single-24000-cfg-6",
+      modelId: "lg-standard-wall-single-24000",
       outdoorUnitId: "lg-luu249hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4949,107 +5292,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-48",
-      slug: "lg-standard-wall-single-cfg-48",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu369hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-49",
-      slug: "lg-standard-wall-single-cfg-49",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu369hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-50",
-      slug: "lg-standard-wall-single-cfg-50",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu127hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11100,
-      coolingCapacityMaxBtu: 11100,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-51",
-      slug: "lg-standard-wall-single-cfg-51",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu097hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-52",
-      slug: "lg-standard-wall-single-cfg-52",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu127hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 10200,
-      coolingCapacityMaxBtu: 10200,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-53",
-      slug: "lg-standard-wall-single-cfg-53",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-luu097hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-54",
-      slug: "lg-standard-wall-single-cfg-54",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu180hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-55",
-      slug: "lg-standard-wall-single-cfg-55",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-24000-cfg-7",
+      slug: "lg-standard-wall-single-24000-cfg-7",
+      modelId: "lg-standard-wall-single-24000",
       outdoorUnitId: "lg-lmu240hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23600,
@@ -5061,51 +5306,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-56",
-      slug: "lg-standard-wall-single-cfg-56",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu180hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17200,
-      coolingCapacityMaxBtu: 17200,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-57",
-      slug: "lg-standard-wall-single-cfg-57",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu180hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17600,
-      coolingCapacityMaxBtu: 17600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-58",
-      slug: "lg-standard-wall-single-cfg-58",
-      modelId: "lg-standard-wall-single",
-      outdoorUnitId: "lg-lmu240hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-standard-wall-single-cfg-59",
-      slug: "lg-standard-wall-single-cfg-59",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-24000-cfg-8",
+      slug: "lg-standard-wall-single-24000-cfg-8",
+      modelId: "lg-standard-wall-single-24000",
       outdoorUnitId: "lg-lmu240hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22800,
@@ -5117,9 +5320,513 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-60",
-      slug: "lg-standard-wall-single-cfg-60",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-36000-cfg-1",
+      slug: "lg-standard-wall-single-36000-cfg-1",
+      modelId: "lg-standard-wall-single-36000",
+      outdoorUnitId: "lg-luu367hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-36000-cfg-2",
+      slug: "lg-standard-wall-single-36000-cfg-2",
+      modelId: "lg-standard-wall-single-36000",
+      outdoorUnitId: "lg-luu368hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-36000-cfg-3",
+      slug: "lg-standard-wall-single-36000-cfg-3",
+      modelId: "lg-standard-wall-single-36000",
+      outdoorUnitId: "lg-lmu360hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-36000-cfg-4",
+      slug: "lg-standard-wall-single-36000-cfg-4",
+      modelId: "lg-standard-wall-single-36000",
+      outdoorUnitId: "lg-lmu360hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-36000-cfg-5",
+      slug: "lg-standard-wall-single-36000-cfg-5",
+      modelId: "lg-standard-wall-single-36000",
+      outdoorUnitId: "lg-lmu360hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-36000-cfg-6",
+      slug: "lg-standard-wall-single-36000-cfg-6",
+      modelId: "lg-standard-wall-single-36000",
+      outdoorUnitId: "lg-luu369hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-36000-cfg-7",
+      slug: "lg-standard-wall-single-36000-cfg-7",
+      modelId: "lg-standard-wall-single-36000",
+      outdoorUnitId: "lg-luu369hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-12000-cfg-1",
+      slug: "lg-standard-wall-single-12000-cfg-1",
+      modelId: "lg-standard-wall-single-12000",
+      outdoorUnitId: "lg-lau120hyv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-12000-cfg-2",
+      slug: "lg-standard-wall-single-12000-cfg-2",
+      modelId: "lg-standard-wall-single-12000",
+      outdoorUnitId: "lg-luu127hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11600,
+      coolingCapacityMaxBtu: 11600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-12000-cfg-3",
+      slug: "lg-standard-wall-single-12000-cfg-3",
+      modelId: "lg-standard-wall-single-12000",
+      outdoorUnitId: "lg-lgu121hsv3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-12000-cfg-4",
+      slug: "lg-standard-wall-single-12000-cfg-4",
+      modelId: "lg-standard-wall-single-12000",
+      outdoorUnitId: "lg-luu127hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11100,
+      coolingCapacityMaxBtu: 11100,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-15000-cfg-1",
+      slug: "lg-standard-wall-single-15000-cfg-1",
+      modelId: "lg-standard-wall-single-15000",
+      outdoorUnitId: "lg-lmu18chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 14000,
+      coolingCapacityMaxBtu: 14000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-15000-cfg-2",
+      slug: "lg-standard-wall-single-15000-cfg-2",
+      modelId: "lg-standard-wall-single-15000",
+      outdoorUnitId: "lg-lmu18chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15500,
+      coolingCapacityMaxBtu: 15500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-15000-cfg-3",
+      slug: "lg-standard-wall-single-15000-cfg-3",
+      modelId: "lg-standard-wall-single-15000",
+      outdoorUnitId: "lg-lau180hyv2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-20000-cfg-1",
+      slug: "lg-standard-wall-single-20000-cfg-1",
+      modelId: "lg-standard-wall-single-20000",
+      outdoorUnitId: "lg-lmu24chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-20000-cfg-2",
+      slug: "lg-standard-wall-single-20000-cfg-2",
+      modelId: "lg-standard-wall-single-20000",
+      outdoorUnitId: "lg-lau240hyv1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-20000-cfg-3",
+      slug: "lg-standard-wall-single-20000-cfg-3",
+      modelId: "lg-standard-wall-single-20000",
+      outdoorUnitId: "lg-lsu243hlv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-20000-cfg-4",
+      slug: "lg-standard-wall-single-20000-cfg-4",
+      modelId: "lg-standard-wall-single-20000",
+      outdoorUnitId: "lg-lmu240hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-30000-cfg-1",
+      slug: "lg-standard-wall-single-30000-cfg-1",
+      modelId: "lg-standard-wall-single-30000",
+      outdoorUnitId: "lg-lmu36chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-30000-cfg-2",
+      slug: "lg-standard-wall-single-30000-cfg-2",
+      modelId: "lg-standard-wall-single-30000",
+      outdoorUnitId: "lg-lmu36chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-30000-cfg-3",
+      slug: "lg-standard-wall-single-30000-cfg-3",
+      modelId: "lg-standard-wall-single-30000",
+      outdoorUnitId: "lg-lmu36chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-30000-cfg-4",
+      slug: "lg-standard-wall-single-30000-cfg-4",
+      modelId: "lg-standard-wall-single-30000",
+      outdoorUnitId: "lg-lmu30chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-30000-cfg-5",
+      slug: "lg-standard-wall-single-30000-cfg-5",
+      modelId: "lg-standard-wall-single-30000",
+      outdoorUnitId: "lg-lmu30chv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28020,
+      coolingCapacityMaxBtu: 28020,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-9000-cfg-1",
+      slug: "lg-standard-wall-single-9000-cfg-1",
+      modelId: "lg-standard-wall-single-9000",
+      outdoorUnitId: "lg-lsu090hsv4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-9000-cfg-2",
+      slug: "lg-standard-wall-single-9000-cfg-2",
+      modelId: "lg-standard-wall-single-9000",
+      outdoorUnitId: "lg-lau090hyv1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-9000-cfg-3",
+      slug: "lg-standard-wall-single-9000-cfg-3",
+      modelId: "lg-standard-wall-single-9000",
+      outdoorUnitId: "lg-luu097hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-9000-cfg-4",
+      slug: "lg-standard-wall-single-9000-cfg-4",
+      modelId: "lg-standard-wall-single-9000",
+      outdoorUnitId: "lg-luu127hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 10200,
+      coolingCapacityMaxBtu: 10200,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-9000-cfg-5",
+      slug: "lg-standard-wall-single-9000-cfg-5",
+      modelId: "lg-standard-wall-single-9000",
+      outdoorUnitId: "lg-luu097hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-42000-cfg-1",
+      slug: "lg-standard-wall-single-42000-cfg-1",
+      modelId: "lg-standard-wall-single-42000",
+      outdoorUnitId: "lg-lmu480hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 44000,
+      coolingCapacityMaxBtu: 44000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-42000-cfg-2",
+      slug: "lg-standard-wall-single-42000-cfg-2",
+      modelId: "lg-standard-wall-single-42000",
+      outdoorUnitId: "lg-luu428hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-42000-cfg-3",
+      slug: "lg-standard-wall-single-42000-cfg-3",
+      modelId: "lg-standard-wall-single-42000",
+      outdoorUnitId: "lg-lmu420hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-42000-cfg-4",
+      slug: "lg-standard-wall-single-42000-cfg-4",
+      modelId: "lg-standard-wall-single-42000",
+      outdoorUnitId: "lg-lmu420hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-42000-cfg-5",
+      slug: "lg-standard-wall-single-42000-cfg-5",
+      modelId: "lg-standard-wall-single-42000",
+      outdoorUnitId: "lg-lmu420hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-48000-cfg-1",
+      slug: "lg-standard-wall-single-48000-cfg-1",
+      modelId: "lg-standard-wall-single-48000",
+      outdoorUnitId: "lg-lmu480hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-48000-cfg-2",
+      slug: "lg-standard-wall-single-48000-cfg-2",
+      modelId: "lg-standard-wall-single-48000",
+      outdoorUnitId: "lg-lmu480hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-48000-cfg-3",
+      slug: "lg-standard-wall-single-48000-cfg-3",
+      modelId: "lg-standard-wall-single-48000",
+      outdoorUnitId: "lg-luu488hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-48000-cfg-4",
+      slug: "lg-standard-wall-single-48000-cfg-4",
+      modelId: "lg-standard-wall-single-48000",
       outdoorUnitId: "lg-lmu481hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5131,9 +5838,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-61",
-      slug: "lg-standard-wall-single-cfg-61",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-48000-cfg-5",
+      slug: "lg-standard-wall-single-48000-cfg-5",
+      modelId: "lg-standard-wall-single-48000",
       outdoorUnitId: "lg-lmu541hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -5145,9 +5852,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-62",
-      slug: "lg-standard-wall-single-cfg-62",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-48000-cfg-6",
+      slug: "lg-standard-wall-single-48000-cfg-6",
+      modelId: "lg-standard-wall-single-48000",
       outdoorUnitId: "lg-lmu481hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5159,9 +5866,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-63",
-      slug: "lg-standard-wall-single-cfg-63",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-48000-cfg-7",
+      slug: "lg-standard-wall-single-48000-cfg-7",
+      modelId: "lg-standard-wall-single-48000",
       outdoorUnitId: "lg-lmu541hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -5173,9 +5880,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-64",
-      slug: "lg-standard-wall-single-cfg-64",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-48000-cfg-8",
+      slug: "lg-standard-wall-single-48000-cfg-8",
+      modelId: "lg-standard-wall-single-48000",
       outdoorUnitId: "lg-lmu481hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5187,9 +5894,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-standard-wall-single-cfg-65",
-      slug: "lg-standard-wall-single-cfg-65",
-      modelId: "lg-standard-wall-single",
+      id: "lg-standard-wall-single-48000-cfg-9",
+      slug: "lg-standard-wall-single-48000-cfg-9",
+      modelId: "lg-standard-wall-single-48000",
       outdoorUnitId: "lg-lmu541hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -5201,9 +5908,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun048gss4-wall-single-cfg-1",
-      slug: "lg-arun048gss4-wall-single-cfg-1",
-      modelId: "lg-arun048gss4-wall-single",
+      id: "lg-arun048gss4-wall-single-48000-cfg-1",
+      slug: "lg-arun048gss4-wall-single-48000-cfg-1",
+      modelId: "lg-arun048gss4-wall-single-48000",
       outdoorUnitId: "lg-arun048gss4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5215,9 +5922,51 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arub060gss4-wall-single-cfg-1",
-      slug: "lg-arub060gss4-wall-single-cfg-1",
-      modelId: "lg-arub060gss4-wall-single",
+      id: "lg-standard-wall-single-60000-cfg-1",
+      slug: "lg-standard-wall-single-60000-cfg-1",
+      modelId: "lg-standard-wall-single-60000",
+      outdoorUnitId: "lg-lmu600hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-60000-cfg-2",
+      slug: "lg-standard-wall-single-60000-cfg-2",
+      modelId: "lg-standard-wall-single-60000",
+      outdoorUnitId: "lg-lmu600hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 58000,
+      coolingCapacityMaxBtu: 58000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-standard-wall-single-60000-cfg-3",
+      slug: "lg-standard-wall-single-60000-cfg-3",
+      modelId: "lg-standard-wall-single-60000",
+      outdoorUnitId: "lg-lmu600hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 59000,
+      coolingCapacityMaxBtu: 59000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-arub060gss4-wall-single-60000-cfg-1",
+      slug: "lg-arub060gss4-wall-single-60000-cfg-1",
+      modelId: "lg-arub060gss4-wall-single-60000",
       outdoorUnitId: "lg-arub060gss4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -5229,9 +5978,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arub060gss4-wall-single-cfg-2",
-      slug: "lg-arub060gss4-wall-single-cfg-2",
-      modelId: "lg-arub060gss4-wall-single",
+      id: "lg-arub060gss4-wall-single-60000-cfg-2",
+      slug: "lg-arub060gss4-wall-single-60000-cfg-2",
+      modelId: "lg-arub060gss4-wall-single-60000",
       outdoorUnitId: "lg-arub060gss4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -5243,9 +5992,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun024gss4-wall-single-cfg-1",
-      slug: "lg-arun024gss4-wall-single-cfg-1",
-      modelId: "lg-arun024gss4-wall-single",
+      id: "lg-arun024gss4-wall-single-24000-cfg-1",
+      slug: "lg-arun024gss4-wall-single-24000-cfg-1",
+      modelId: "lg-arun024gss4-wall-single-24000",
       outdoorUnitId: "lg-arun024gss4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -5257,9 +6006,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun024gss4-wall-single-cfg-2",
-      slug: "lg-arun024gss4-wall-single-cfg-2",
-      modelId: "lg-arun024gss4-wall-single",
+      id: "lg-arun024gss4-wall-single-24000-cfg-2",
+      slug: "lg-arun024gss4-wall-single-24000-cfg-2",
+      modelId: "lg-arun024gss4-wall-single-24000",
       outdoorUnitId: "lg-arun024gss4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -5271,9 +6020,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu180hhv-wall-single-cfg-1",
-      slug: "lg-lmu180hhv-wall-single-cfg-1",
-      modelId: "lg-lmu180hhv-wall-single",
+      id: "lg-lmu180hhv-wall-single-18000-cfg-1",
+      slug: "lg-lmu180hhv-wall-single-18000-cfg-1",
+      modelId: "lg-lmu180hhv-wall-single-18000",
       outdoorUnitId: "lg-lmu180hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5285,9 +6034,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu180hhv-wall-single-cfg-2",
-      slug: "lg-lmu180hhv-wall-single-cfg-2",
-      modelId: "lg-lmu180hhv-wall-single",
+      id: "lg-lmu180hhv-wall-single-18000-cfg-2",
+      slug: "lg-lmu180hhv-wall-single-18000-cfg-2",
+      modelId: "lg-lmu180hhv-wall-single-18000",
+      outdoorUnitId: "lg-lmu180hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17200,
+      coolingCapacityMaxBtu: 17200,
+      seer2: 19.25,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-lmu180hhv-wall-single-15000-cfg-1",
+      slug: "lg-lmu180hhv-wall-single-15000-cfg-1",
+      modelId: "lg-lmu180hhv-wall-single-15000",
       outdoorUnitId: "lg-lmu180hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16500,
@@ -5299,23 +6062,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu180hhv-wall-single-cfg-3",
-      slug: "lg-lmu180hhv-wall-single-cfg-3",
-      modelId: "lg-lmu180hhv-wall-single",
-      outdoorUnitId: "lg-lmu180hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17200,
-      coolingCapacityMaxBtu: 17200,
-      seer2: 19.25,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-lmu240hhv-wall-single-cfg-1",
-      slug: "lg-lmu240hhv-wall-single-cfg-1",
-      modelId: "lg-lmu240hhv-wall-single",
+      id: "lg-lmu240hhv-wall-single-24000-cfg-1",
+      slug: "lg-lmu240hhv-wall-single-24000-cfg-1",
+      modelId: "lg-lmu240hhv-wall-single-24000",
       outdoorUnitId: "lg-lmu240hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -5327,9 +6076,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu240hhv-wall-single-cfg-2",
-      slug: "lg-lmu240hhv-wall-single-cfg-2",
-      modelId: "lg-lmu240hhv-wall-single",
+      id: "lg-lmu240hhv-wall-single-20000-cfg-1",
+      slug: "lg-lmu240hhv-wall-single-20000-cfg-1",
+      modelId: "lg-lmu240hhv-wall-single-20000",
       outdoorUnitId: "lg-lmu240hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 20000,
@@ -5341,9 +6090,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu240hhv-wall-single-cfg-3",
-      slug: "lg-lmu240hhv-wall-single-cfg-3",
-      modelId: "lg-lmu240hhv-wall-single",
+      id: "lg-lmu240hhv-wall-single-20000-cfg-2",
+      slug: "lg-lmu240hhv-wall-single-20000-cfg-2",
+      modelId: "lg-lmu240hhv-wall-single-20000",
       outdoorUnitId: "lg-lmu240hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -5355,9 +6104,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu300hhv-wall-single-cfg-1",
-      slug: "lg-lmu300hhv-wall-single-cfg-1",
-      modelId: "lg-lmu300hhv-wall-single",
+      id: "lg-lmu300hhv-wall-single-30000-cfg-1",
+      slug: "lg-lmu300hhv-wall-single-30000-cfg-1",
+      modelId: "lg-lmu300hhv-wall-single-30000",
       outdoorUnitId: "lg-lmu300hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -5369,9 +6118,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu300hhv-wall-single-cfg-2",
-      slug: "lg-lmu300hhv-wall-single-cfg-2",
-      modelId: "lg-lmu300hhv-wall-single",
+      id: "lg-lmu300hhv-wall-single-24000-cfg-1",
+      slug: "lg-lmu300hhv-wall-single-24000-cfg-1",
+      modelId: "lg-lmu300hhv-wall-single-24000",
       outdoorUnitId: "lg-lmu300hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24600,
@@ -5383,9 +6132,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu300hhv-wall-single-cfg-3",
-      slug: "lg-lmu300hhv-wall-single-cfg-3",
-      modelId: "lg-lmu300hhv-wall-single",
+      id: "lg-lmu300hhv-wall-single-24000-cfg-2",
+      slug: "lg-lmu300hhv-wall-single-24000-cfg-2",
+      modelId: "lg-lmu300hhv-wall-single-24000",
       outdoorUnitId: "lg-lmu300hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 26400,
@@ -5397,9 +6146,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun060gss4-wall-single-cfg-1",
-      slug: "lg-arun060gss4-wall-single-cfg-1",
-      modelId: "lg-arun060gss4-wall-single",
+      id: "lg-arun060gss4-wall-single-60000-cfg-1",
+      slug: "lg-arun060gss4-wall-single-60000-cfg-1",
+      modelId: "lg-arun060gss4-wall-single-60000",
       outdoorUnitId: "lg-arun060gss4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -5411,9 +6160,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arun060gss4-wall-single-cfg-2",
-      slug: "lg-arun060gss4-wall-single-cfg-2",
-      modelId: "lg-arun060gss4-wall-single",
+      id: "lg-arun060gss4-wall-single-60000-cfg-2",
+      slug: "lg-arun060gss4-wall-single-60000-cfg-2",
+      modelId: "lg-arun060gss4-wall-single-60000",
       outdoorUnitId: "lg-arun060gss4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -5425,9 +6174,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu090hsv5-wall-single-cfg-1",
-      slug: "lg-lsu090hsv5-wall-single-cfg-1",
-      modelId: "lg-lsu090hsv5-wall-single",
+      id: "lg-lsu090hsv5-wall-single-9000-cfg-1",
+      slug: "lg-lsu090hsv5-wall-single-9000-cfg-1",
+      modelId: "lg-lsu090hsv5-wall-single-9000",
       outdoorUnitId: "lg-lsu090hsv5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -5439,9 +6188,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu090hsv5-wall-single-cfg-2",
-      slug: "lg-lsu090hsv5-wall-single-cfg-2",
-      modelId: "lg-lsu090hsv5-wall-single",
+      id: "lg-lsu090hsv5-wall-single-9000-cfg-2",
+      slug: "lg-lsu090hsv5-wall-single-9000-cfg-2",
+      modelId: "lg-lsu090hsv5-wall-single-9000",
       outdoorUnitId: "lg-lsu090hsv5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -5453,9 +6202,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu120hsv5-wall-single-cfg-1",
-      slug: "lg-lsu120hsv5-wall-single-cfg-1",
-      modelId: "lg-lsu120hsv5-wall-single",
+      id: "lg-lsu120hsv5-wall-single-12000-cfg-1",
+      slug: "lg-lsu120hsv5-wall-single-12000-cfg-1",
+      modelId: "lg-lsu120hsv5-wall-single-12000",
       outdoorUnitId: "lg-lsu120hsv5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -5467,9 +6216,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu120hsv5-wall-single-cfg-2",
-      slug: "lg-lsu120hsv5-wall-single-cfg-2",
-      modelId: "lg-lsu120hsv5-wall-single",
+      id: "lg-lsu120hsv5-wall-single-12000-cfg-2",
+      slug: "lg-lsu120hsv5-wall-single-12000-cfg-2",
+      modelId: "lg-lsu120hsv5-wall-single-12000",
       outdoorUnitId: "lg-lsu120hsv5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -5481,9 +6230,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau090hyv3-wall-single-cfg-1",
-      slug: "lg-lau090hyv3-wall-single-cfg-1",
-      modelId: "lg-lau090hyv3-wall-single",
+      id: "lg-lau090hyv3-wall-single-9000-cfg-1",
+      slug: "lg-lau090hyv3-wall-single-9000-cfg-1",
+      modelId: "lg-lau090hyv3-wall-single-9000",
       outdoorUnitId: "lg-lau090hyv3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -5495,9 +6244,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau120hyv3-wall-single-cfg-1",
-      slug: "lg-lau120hyv3-wall-single-cfg-1",
-      modelId: "lg-lau120hyv3-wall-single",
+      id: "lg-lau120hyv3-wall-single-12000-cfg-1",
+      slug: "lg-lau120hyv3-wall-single-12000-cfg-1",
+      modelId: "lg-lau120hyv3-wall-single-12000",
       outdoorUnitId: "lg-lau120hyv3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -5509,9 +6258,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau150hyv3-wall-single-cfg-1",
-      slug: "lg-lau150hyv3-wall-single-cfg-1",
-      modelId: "lg-lau150hyv3-wall-single",
+      id: "lg-lau150hyv3-wall-single-15000-cfg-1",
+      slug: "lg-lau150hyv3-wall-single-15000-cfg-1",
+      modelId: "lg-lau150hyv3-wall-single-15000",
       outdoorUnitId: "lg-lau150hyv3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 15000,
@@ -5523,9 +6272,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau180hyv3-wall-single-cfg-1",
-      slug: "lg-lau180hyv3-wall-single-cfg-1",
-      modelId: "lg-lau180hyv3-wall-single",
+      id: "lg-lau180hyv3-wall-single-18000-cfg-1",
+      slug: "lg-lau180hyv3-wall-single-18000-cfg-1",
+      modelId: "lg-lau180hyv3-wall-single-18000",
       outdoorUnitId: "lg-lau180hyv3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5537,9 +6286,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lau240hyv3-wall-single-cfg-1",
-      slug: "lg-lau240hyv3-wall-single-cfg-1",
-      modelId: "lg-lau240hyv3-wall-single",
+      id: "lg-lau240hyv3-wall-single-20000-cfg-1",
+      slug: "lg-lau240hyv3-wall-single-20000-cfg-1",
+      modelId: "lg-lau240hyv3-wall-single-20000",
       outdoorUnitId: "lg-lau240hyv3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -5551,9 +6300,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu243hlv3-wall-single-cfg-1",
-      slug: "lg-lsu243hlv3-wall-single-cfg-1",
-      modelId: "lg-lsu243hlv3-wall-single",
+      id: "lg-lsu243hlv3-wall-single-20000-cfg-1",
+      slug: "lg-lsu243hlv3-wall-single-20000-cfg-1",
+      modelId: "lg-lsu243hlv3-wall-single-20000",
       outdoorUnitId: "lg-lsu243hlv3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -5565,9 +6314,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hhv-wall-single-cfg-1",
-      slug: "lg-luu180hhv-wall-single-cfg-1",
-      modelId: "lg-luu180hhv-wall-single",
+      id: "lg-luu180hhv-wall-single-18000-cfg-1",
+      slug: "lg-luu180hhv-wall-single-18000-cfg-1",
+      modelId: "lg-luu180hhv-wall-single-18000",
       outdoorUnitId: "lg-luu180hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5579,9 +6328,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hhv-wall-single-cfg-2",
-      slug: "lg-luu180hhv-wall-single-cfg-2",
-      modelId: "lg-luu180hhv-wall-single",
+      id: "lg-luu180hhv-wall-single-18000-cfg-2",
+      slug: "lg-luu180hhv-wall-single-18000-cfg-2",
+      modelId: "lg-luu180hhv-wall-single-18000",
       outdoorUnitId: "lg-luu180hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5593,9 +6342,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hhv-wall-single-cfg-3",
-      slug: "lg-luu180hhv-wall-single-cfg-3",
-      modelId: "lg-luu180hhv-wall-single",
+      id: "lg-luu180hhv-wall-single-18000-cfg-3",
+      slug: "lg-luu180hhv-wall-single-18000-cfg-3",
+      modelId: "lg-luu180hhv-wall-single-18000",
       outdoorUnitId: "lg-luu180hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5607,9 +6356,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hhv-wall-single-cfg-4",
-      slug: "lg-luu180hhv-wall-single-cfg-4",
-      modelId: "lg-luu180hhv-wall-single",
+      id: "lg-luu180hhv-wall-single-18000-cfg-4",
+      slug: "lg-luu180hhv-wall-single-18000-cfg-4",
+      modelId: "lg-luu180hhv-wall-single-18000",
       outdoorUnitId: "lg-luu180hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5621,9 +6370,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hhv-wall-single-cfg-1",
-      slug: "lg-luu240hhv-wall-single-cfg-1",
-      modelId: "lg-luu240hhv-wall-single",
+      id: "lg-luu240hhv-wall-single-24000-cfg-1",
+      slug: "lg-luu240hhv-wall-single-24000-cfg-1",
+      modelId: "lg-luu240hhv-wall-single-24000",
       outdoorUnitId: "lg-luu240hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -5635,9 +6384,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hhv-wall-single-cfg-2",
-      slug: "lg-luu240hhv-wall-single-cfg-2",
-      modelId: "lg-luu240hhv-wall-single",
+      id: "lg-luu240hhv-wall-single-24000-cfg-2",
+      slug: "lg-luu240hhv-wall-single-24000-cfg-2",
+      modelId: "lg-luu240hhv-wall-single-24000",
       outdoorUnitId: "lg-luu240hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -5649,9 +6398,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hhv-wall-single-cfg-3",
-      slug: "lg-luu240hhv-wall-single-cfg-3",
-      modelId: "lg-luu240hhv-wall-single",
+      id: "lg-luu240hhv-wall-single-24000-cfg-3",
+      slug: "lg-luu240hhv-wall-single-24000-cfg-3",
+      modelId: "lg-luu240hhv-wall-single-24000",
       outdoorUnitId: "lg-luu240hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -5663,9 +6412,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hhv-wall-single-cfg-4",
-      slug: "lg-luu240hhv-wall-single-cfg-4",
-      modelId: "lg-luu240hhv-wall-single",
+      id: "lg-luu240hhv-wall-single-24000-cfg-4",
+      slug: "lg-luu240hhv-wall-single-24000-cfg-4",
+      modelId: "lg-luu240hhv-wall-single-24000",
       outdoorUnitId: "lg-luu240hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -5677,9 +6426,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hhv-wall-single-cfg-1",
-      slug: "lg-luu420hhv-wall-single-cfg-1",
-      modelId: "lg-luu420hhv-wall-single",
+      id: "lg-luu420hhv-wall-single-42000-cfg-1",
+      slug: "lg-luu420hhv-wall-single-42000-cfg-1",
+      modelId: "lg-luu420hhv-wall-single-42000",
       outdoorUnitId: "lg-luu420hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5691,9 +6440,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hhv-wall-single-cfg-2",
-      slug: "lg-luu420hhv-wall-single-cfg-2",
-      modelId: "lg-luu420hhv-wall-single",
+      id: "lg-luu420hhv-wall-single-42000-cfg-2",
+      slug: "lg-luu420hhv-wall-single-42000-cfg-2",
+      modelId: "lg-luu420hhv-wall-single-42000",
       outdoorUnitId: "lg-luu420hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5705,9 +6454,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hhv-wall-single-cfg-3",
-      slug: "lg-luu420hhv-wall-single-cfg-3",
-      modelId: "lg-luu420hhv-wall-single",
+      id: "lg-luu420hhv-wall-single-42000-cfg-3",
+      slug: "lg-luu420hhv-wall-single-42000-cfg-3",
+      modelId: "lg-luu420hhv-wall-single-42000",
       outdoorUnitId: "lg-luu420hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5719,9 +6468,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hhv-wall-single-cfg-1",
-      slug: "lg-luu360hhv-wall-single-cfg-1",
-      modelId: "lg-luu360hhv-wall-single",
+      id: "lg-luu360hhv-wall-single-36000-cfg-1",
+      slug: "lg-luu360hhv-wall-single-36000-cfg-1",
+      modelId: "lg-luu360hhv-wall-single-36000",
       outdoorUnitId: "lg-luu360hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5733,9 +6482,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hhv-wall-single-cfg-2",
-      slug: "lg-luu360hhv-wall-single-cfg-2",
-      modelId: "lg-luu360hhv-wall-single",
+      id: "lg-luu360hhv-wall-single-36000-cfg-2",
+      slug: "lg-luu360hhv-wall-single-36000-cfg-2",
+      modelId: "lg-luu360hhv-wall-single-36000",
       outdoorUnitId: "lg-luu360hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5747,23 +6496,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hhv-wall-single-cfg-3",
-      slug: "lg-luu360hhv-wall-single-cfg-3",
-      modelId: "lg-luu360hhv-wall-single",
-      outdoorUnitId: "lg-luu360hhv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 16.4,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-luu480hhv-wall-single-cfg-1",
-      slug: "lg-luu480hhv-wall-single-cfg-1",
-      modelId: "lg-luu480hhv-wall-single",
+      id: "lg-luu480hhv-wall-single-48000-cfg-1",
+      slug: "lg-luu480hhv-wall-single-48000-cfg-1",
+      modelId: "lg-luu480hhv-wall-single-48000",
       outdoorUnitId: "lg-luu480hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5775,9 +6510,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hhv-wall-single-cfg-2",
-      slug: "lg-luu480hhv-wall-single-cfg-2",
-      modelId: "lg-luu480hhv-wall-single",
+      id: "lg-luu480hhv-wall-single-48000-cfg-2",
+      slug: "lg-luu480hhv-wall-single-48000-cfg-2",
+      modelId: "lg-luu480hhv-wall-single-48000",
       outdoorUnitId: "lg-luu480hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -5789,9 +6524,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hhv-wall-single-cfg-3",
-      slug: "lg-luu480hhv-wall-single-cfg-3",
-      modelId: "lg-luu480hhv-wall-single",
+      id: "lg-luu480hhv-wall-single-48000-cfg-3",
+      slug: "lg-luu480hhv-wall-single-48000-cfg-3",
+      modelId: "lg-luu480hhv-wall-single-48000",
       outdoorUnitId: "lg-luu480hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -5803,9 +6538,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum048gss5-wall-single-cfg-1",
-      slug: "lg-arum048gss5-wall-single-cfg-1",
-      modelId: "lg-arum048gss5-wall-single",
+      id: "lg-luu360hhv-wall-single-30000-cfg-1",
+      slug: "lg-luu360hhv-wall-single-30000-cfg-1",
+      modelId: "lg-luu360hhv-wall-single-30000",
+      outdoorUnitId: "lg-luu360hhv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 16.4,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-arum048gss5-wall-single-48000-cfg-1",
+      slug: "lg-arum048gss5-wall-single-48000-cfg-1",
+      modelId: "lg-arum048gss5-wall-single-48000",
       outdoorUnitId: "lg-arum048gss5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5817,9 +6566,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum048gss5-wall-single-cfg-2",
-      slug: "lg-arum048gss5-wall-single-cfg-2",
-      modelId: "lg-arum048gss5-wall-single",
+      id: "lg-arum048gss5-wall-single-48000-cfg-2",
+      slug: "lg-arum048gss5-wall-single-48000-cfg-2",
+      modelId: "lg-arum048gss5-wall-single-48000",
       outdoorUnitId: "lg-arum048gss5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5831,9 +6580,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum048gss5-wall-single-cfg-3",
-      slug: "lg-arum048gss5-wall-single-cfg-3",
-      modelId: "lg-arum048gss5-wall-single",
+      id: "lg-arum048gss5-wall-single-48000-cfg-3",
+      slug: "lg-arum048gss5-wall-single-48000-cfg-3",
+      modelId: "lg-arum048gss5-wall-single-48000",
       outdoorUnitId: "lg-arum048gss5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5845,9 +6594,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum036gss5-wall-single-cfg-1",
-      slug: "lg-arum036gss5-wall-single-cfg-1",
-      modelId: "lg-arum036gss5-wall-single",
+      id: "lg-arum036gss5-wall-single-36000-cfg-1",
+      slug: "lg-arum036gss5-wall-single-36000-cfg-1",
+      modelId: "lg-arum036gss5-wall-single-36000",
       outdoorUnitId: "lg-arum036gss5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5859,9 +6608,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum036gss5-wall-single-cfg-2",
-      slug: "lg-arum036gss5-wall-single-cfg-2",
-      modelId: "lg-arum036gss5-wall-single",
+      id: "lg-arum036gss5-wall-single-36000-cfg-2",
+      slug: "lg-arum036gss5-wall-single-36000-cfg-2",
+      modelId: "lg-arum036gss5-wall-single-36000",
       outdoorUnitId: "lg-arum036gss5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5873,9 +6622,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-arum036gss5-wall-single-cfg-3",
-      slug: "lg-arum036gss5-wall-single-cfg-3",
-      modelId: "lg-arum036gss5-wall-single",
+      id: "lg-arum036gss5-wall-single-36000-cfg-3",
+      slug: "lg-arum036gss5-wall-single-36000-cfg-3",
+      modelId: "lg-arum036gss5-wall-single-36000",
       outdoorUnitId: "lg-arum036gss5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5887,9 +6636,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu421hhv-wall-single-cfg-1",
-      slug: "lg-lmu421hhv-wall-single-cfg-1",
-      modelId: "lg-lmu421hhv-wall-single",
+      id: "lg-lmu421hhv-wall-single-42000-cfg-1",
+      slug: "lg-lmu421hhv-wall-single-42000-cfg-1",
+      modelId: "lg-lmu421hhv-wall-single-42000",
       outdoorUnitId: "lg-lmu421hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5901,9 +6650,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu421hhv-wall-single-cfg-2",
-      slug: "lg-lmu421hhv-wall-single-cfg-2",
-      modelId: "lg-lmu421hhv-wall-single",
+      id: "lg-lmu421hhv-wall-single-42000-cfg-2",
+      slug: "lg-lmu421hhv-wall-single-42000-cfg-2",
+      modelId: "lg-lmu421hhv-wall-single-42000",
       outdoorUnitId: "lg-lmu421hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5915,9 +6664,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu421hhv-wall-single-cfg-3",
-      slug: "lg-lmu421hhv-wall-single-cfg-3",
-      modelId: "lg-lmu421hhv-wall-single",
+      id: "lg-lmu421hhv-wall-single-42000-cfg-3",
+      slug: "lg-lmu421hhv-wall-single-42000-cfg-3",
+      modelId: "lg-lmu421hhv-wall-single-42000",
       outdoorUnitId: "lg-lmu421hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5929,9 +6678,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu480hhv-wall-single-cfg-1",
-      slug: "lg-lmu480hhv-wall-single-cfg-1",
-      modelId: "lg-lmu480hhv-wall-single",
+      id: "lg-lmu480hhv-wall-single-48000-cfg-1",
+      slug: "lg-lmu480hhv-wall-single-48000-cfg-1",
+      modelId: "lg-lmu480hhv-wall-single-48000",
       outdoorUnitId: "lg-lmu480hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5943,9 +6692,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu480hhv-wall-single-cfg-2",
-      slug: "lg-lmu480hhv-wall-single-cfg-2",
-      modelId: "lg-lmu480hhv-wall-single",
+      id: "lg-lmu480hhv-wall-single-48000-cfg-2",
+      slug: "lg-lmu480hhv-wall-single-48000-cfg-2",
+      modelId: "lg-lmu480hhv-wall-single-48000",
       outdoorUnitId: "lg-lmu480hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5957,9 +6706,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu480hhv-wall-single-cfg-3",
-      slug: "lg-lmu480hhv-wall-single-cfg-3",
-      modelId: "lg-lmu480hhv-wall-single",
+      id: "lg-lmu480hhv-wall-single-48000-cfg-3",
+      slug: "lg-lmu480hhv-wall-single-48000-cfg-3",
+      modelId: "lg-lmu480hhv-wall-single-48000",
       outdoorUnitId: "lg-lmu480hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -5971,9 +6720,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu601hv-wall-single-cfg-1",
-      slug: "lg-lmu601hv-wall-single-cfg-1",
-      modelId: "lg-lmu601hv-wall-single",
+      id: "lg-lmu601hv-wall-single-60000-cfg-1",
+      slug: "lg-lmu601hv-wall-single-60000-cfg-1",
+      modelId: "lg-lmu601hv-wall-single-60000",
       outdoorUnitId: "lg-lmu601hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -5985,9 +6734,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu601hv-wall-single-cfg-2",
-      slug: "lg-lmu601hv-wall-single-cfg-2",
-      modelId: "lg-lmu601hv-wall-single",
+      id: "lg-lmu601hv-wall-single-60000-cfg-2",
+      slug: "lg-lmu601hv-wall-single-60000-cfg-2",
+      modelId: "lg-lmu601hv-wall-single-60000",
       outdoorUnitId: "lg-lmu601hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -5999,9 +6748,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu601hv-wall-single-cfg-3",
-      slug: "lg-lmu601hv-wall-single-cfg-3",
-      modelId: "lg-lmu601hv-wall-single",
+      id: "lg-lmu601hv-wall-single-60000-cfg-3",
+      slug: "lg-lmu601hv-wall-single-60000-cfg-3",
+      modelId: "lg-lmu601hv-wall-single-60000",
       outdoorUnitId: "lg-lmu601hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -6013,9 +6762,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu361hhv-wall-single-cfg-1",
-      slug: "lg-lmu361hhv-wall-single-cfg-1",
-      modelId: "lg-lmu361hhv-wall-single",
+      id: "lg-lmu361hhv-wall-single-36000-cfg-1",
+      slug: "lg-lmu361hhv-wall-single-36000-cfg-1",
+      modelId: "lg-lmu361hhv-wall-single-36000",
       outdoorUnitId: "lg-lmu361hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -6027,9 +6776,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu361hhv-wall-single-cfg-2",
-      slug: "lg-lmu361hhv-wall-single-cfg-2",
-      modelId: "lg-lmu361hhv-wall-single",
+      id: "lg-lmu361hhv-wall-single-36000-cfg-2",
+      slug: "lg-lmu361hhv-wall-single-36000-cfg-2",
+      modelId: "lg-lmu361hhv-wall-single-36000",
       outdoorUnitId: "lg-lmu361hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -6041,9 +6790,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu361hhv-wall-single-cfg-3",
-      slug: "lg-lmu361hhv-wall-single-cfg-3",
-      modelId: "lg-lmu361hhv-wall-single",
+      id: "lg-lmu361hhv-wall-single-36000-cfg-3",
+      slug: "lg-lmu361hhv-wall-single-36000-cfg-3",
+      modelId: "lg-lmu361hhv-wall-single-36000",
       outdoorUnitId: "lg-lmu361hhv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -6055,9 +6804,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu181hsv5-wall-single-cfg-1",
-      slug: "lg-lsu181hsv5-wall-single-cfg-1",
-      modelId: "lg-lsu181hsv5-wall-single",
+      id: "lg-lsu181hsv5-wall-single-18000-cfg-1",
+      slug: "lg-lsu181hsv5-wall-single-18000-cfg-1",
+      modelId: "lg-lsu181hsv5-wall-single-18000",
       outdoorUnitId: "lg-lsu181hsv5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6069,9 +6818,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lsu181hsv5-wall-single-cfg-2",
-      slug: "lg-lsu181hsv5-wall-single-cfg-2",
-      modelId: "lg-lsu181hsv5-wall-single",
+      id: "lg-lsu181hsv5-wall-single-18000-cfg-2",
+      slug: "lg-lsu181hsv5-wall-single-18000-cfg-2",
+      modelId: "lg-lsu181hsv5-wall-single-18000",
       outdoorUnitId: "lg-lsu181hsv5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6083,9 +6832,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu183hv-wall-single-cfg-1",
-      slug: "lg-lmu183hv-wall-single-cfg-1",
-      modelId: "lg-lmu183hv-wall-single",
+      id: "lg-lmu183hv-wall-single-18000-cfg-1",
+      slug: "lg-lmu183hv-wall-single-18000-cfg-1",
+      modelId: "lg-lmu183hv-wall-single-18000",
       outdoorUnitId: "lg-lmu183hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6097,9 +6846,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu183hv-wall-single-cfg-2",
-      slug: "lg-lmu183hv-wall-single-cfg-2",
-      modelId: "lg-lmu183hv-wall-single",
+      id: "lg-lmu183hv-wall-single-18000-cfg-2",
+      slug: "lg-lmu183hv-wall-single-18000-cfg-2",
+      modelId: "lg-lmu183hv-wall-single-18000",
       outdoorUnitId: "lg-lmu183hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17200,
@@ -6111,9 +6860,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu183hv-wall-single-cfg-3",
-      slug: "lg-lmu183hv-wall-single-cfg-3",
-      modelId: "lg-lmu183hv-wall-single",
+      id: "lg-lmu183hv-wall-single-18000-cfg-3",
+      slug: "lg-lmu183hv-wall-single-18000-cfg-3",
+      modelId: "lg-lmu183hv-wall-single-18000",
       outdoorUnitId: "lg-lmu183hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17600,
@@ -6125,9 +6874,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu243hv-wall-single-cfg-1",
-      slug: "lg-lmu243hv-wall-single-cfg-1",
-      modelId: "lg-lmu243hv-wall-single",
+      id: "lg-lmu243hv-wall-single-24000-cfg-1",
+      slug: "lg-lmu243hv-wall-single-24000-cfg-1",
+      modelId: "lg-lmu243hv-wall-single-24000",
       outdoorUnitId: "lg-lmu243hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -6139,23 +6888,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu243hv-wall-single-cfg-2",
-      slug: "lg-lmu243hv-wall-single-cfg-2",
-      modelId: "lg-lmu243hv-wall-single",
-      outdoorUnitId: "lg-lmu243hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-lmu243hv-wall-single-cfg-3",
-      slug: "lg-lmu243hv-wall-single-cfg-3",
-      modelId: "lg-lmu243hv-wall-single",
+      id: "lg-lmu243hv-wall-single-24000-cfg-2",
+      slug: "lg-lmu243hv-wall-single-24000-cfg-2",
+      modelId: "lg-lmu243hv-wall-single-24000",
       outdoorUnitId: "lg-lmu243hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -6167,9 +6902,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu303hv-wall-single-cfg-1",
-      slug: "lg-lmu303hv-wall-single-cfg-1",
-      modelId: "lg-lmu303hv-wall-single",
+      id: "lg-lmu243hv-wall-single-20000-cfg-1",
+      slug: "lg-lmu243hv-wall-single-20000-cfg-1",
+      modelId: "lg-lmu243hv-wall-single-20000",
+      outdoorUnitId: "lg-lmu243hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-lmu303hv-wall-single-30000-cfg-1",
+      slug: "lg-lmu303hv-wall-single-30000-cfg-1",
+      modelId: "lg-lmu303hv-wall-single-30000",
       outdoorUnitId: "lg-lmu303hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -6181,9 +6930,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu303hv-wall-single-cfg-2",
-      slug: "lg-lmu303hv-wall-single-cfg-2",
-      modelId: "lg-lmu303hv-wall-single",
+      id: "lg-lmu303hv-wall-single-30000-cfg-2",
+      slug: "lg-lmu303hv-wall-single-30000-cfg-2",
+      modelId: "lg-lmu303hv-wall-single-30000",
       outdoorUnitId: "lg-lmu303hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -6195,9 +6944,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu303hv-wall-single-cfg-3",
-      slug: "lg-lmu303hv-wall-single-cfg-3",
-      modelId: "lg-lmu303hv-wall-single",
+      id: "lg-lmu303hv-wall-single-30000-cfg-3",
+      slug: "lg-lmu303hv-wall-single-30000-cfg-3",
+      modelId: "lg-lmu303hv-wall-single-30000",
       outdoorUnitId: "lg-lmu303hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28600,
@@ -6209,9 +6958,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu363hv-wall-single-cfg-1",
-      slug: "lg-lmu363hv-wall-single-cfg-1",
-      modelId: "lg-lmu363hv-wall-single",
+      id: "lg-lmu363hv-wall-single-30000-cfg-1",
+      slug: "lg-lmu363hv-wall-single-30000-cfg-1",
+      modelId: "lg-lmu363hv-wall-single-30000",
       outdoorUnitId: "lg-lmu363hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32800,
@@ -6223,9 +6972,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu363hv-wall-single-cfg-2",
-      slug: "lg-lmu363hv-wall-single-cfg-2",
-      modelId: "lg-lmu363hv-wall-single",
+      id: "lg-lmu363hv-wall-single-30000-cfg-2",
+      slug: "lg-lmu363hv-wall-single-30000-cfg-2",
+      modelId: "lg-lmu363hv-wall-single-30000",
       outdoorUnitId: "lg-lmu363hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30800,
@@ -6237,9 +6986,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu363hv-wall-single-cfg-3",
-      slug: "lg-lmu363hv-wall-single-cfg-3",
-      modelId: "lg-lmu363hv-wall-single",
+      id: "lg-lmu363hv-wall-single-30000-cfg-3",
+      slug: "lg-lmu363hv-wall-single-30000-cfg-3",
+      modelId: "lg-lmu363hv-wall-single-30000",
       outdoorUnitId: "lg-lmu363hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 31800,
@@ -6251,9 +7000,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu483hv-wall-single-cfg-1",
-      slug: "lg-lmu483hv-wall-single-cfg-1",
-      modelId: "lg-lmu483hv-wall-single",
+      id: "lg-lmu483hv-wall-single-48000-cfg-1",
+      slug: "lg-lmu483hv-wall-single-48000-cfg-1",
+      modelId: "lg-lmu483hv-wall-single-48000",
       outdoorUnitId: "lg-lmu483hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -6265,9 +7014,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu483hv-wall-single-cfg-2",
-      slug: "lg-lmu483hv-wall-single-cfg-2",
-      modelId: "lg-lmu483hv-wall-single",
+      id: "lg-lmu483hv-wall-single-48000-cfg-2",
+      slug: "lg-lmu483hv-wall-single-48000-cfg-2",
+      modelId: "lg-lmu483hv-wall-single-48000",
       outdoorUnitId: "lg-lmu483hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -6279,9 +7028,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu483hv-wall-single-cfg-3",
-      slug: "lg-lmu483hv-wall-single-cfg-3",
-      modelId: "lg-lmu483hv-wall-single",
+      id: "lg-lmu483hv-wall-single-48000-cfg-3",
+      slug: "lg-lmu483hv-wall-single-48000-cfg-3",
+      modelId: "lg-lmu483hv-wall-single-48000",
       outdoorUnitId: "lg-lmu483hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -6293,9 +7042,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu543hv-wall-single-cfg-1",
-      slug: "lg-lmu543hv-wall-single-cfg-1",
-      modelId: "lg-lmu543hv-wall-single",
+      id: "lg-lmu543hv-wall-single-48000-cfg-1",
+      slug: "lg-lmu543hv-wall-single-48000-cfg-1",
+      modelId: "lg-lmu543hv-wall-single-48000",
       outdoorUnitId: "lg-lmu543hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -6307,9 +7056,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu543hv-wall-single-cfg-2",
-      slug: "lg-lmu543hv-wall-single-cfg-2",
-      modelId: "lg-lmu543hv-wall-single",
+      id: "lg-lmu543hv-wall-single-48000-cfg-2",
+      slug: "lg-lmu543hv-wall-single-48000-cfg-2",
+      modelId: "lg-lmu543hv-wall-single-48000",
       outdoorUnitId: "lg-lmu543hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -6321,9 +7070,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-lmu543hv-wall-single-cfg-3",
-      slug: "lg-lmu543hv-wall-single-cfg-3",
-      modelId: "lg-lmu543hv-wall-single",
+      id: "lg-lmu543hv-wall-single-48000-cfg-3",
+      slug: "lg-lmu543hv-wall-single-48000-cfg-3",
+      modelId: "lg-lmu543hv-wall-single-48000",
       outdoorUnitId: "lg-lmu543hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -6335,9 +7084,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu090hv-wall-single-cfg-1",
-      slug: "lg-luu090hv-wall-single-cfg-1",
-      modelId: "lg-luu090hv-wall-single",
+      id: "lg-luu090hv-wall-single-9000-cfg-1",
+      slug: "lg-luu090hv-wall-single-9000-cfg-1",
+      modelId: "lg-luu090hv-wall-single-9000",
       outdoorUnitId: "lg-luu090hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -6349,9 +7098,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu090hv-wall-single-cfg-2",
-      slug: "lg-luu090hv-wall-single-cfg-2",
-      modelId: "lg-luu090hv-wall-single",
+      id: "lg-luu090hv-wall-single-9000-cfg-2",
+      slug: "lg-luu090hv-wall-single-9000-cfg-2",
+      modelId: "lg-luu090hv-wall-single-9000",
       outdoorUnitId: "lg-luu090hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -6363,9 +7112,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu090hv-wall-single-cfg-3",
-      slug: "lg-luu090hv-wall-single-cfg-3",
-      modelId: "lg-luu090hv-wall-single",
+      id: "lg-luu090hv-wall-single-9000-cfg-3",
+      slug: "lg-luu090hv-wall-single-9000-cfg-3",
+      modelId: "lg-luu090hv-wall-single-9000",
       outdoorUnitId: "lg-luu090hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -6377,9 +7126,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu120hv-wall-single-cfg-1",
-      slug: "lg-luu120hv-wall-single-cfg-1",
-      modelId: "lg-luu120hv-wall-single",
+      id: "lg-luu120hv-wall-single-12000-cfg-1",
+      slug: "lg-luu120hv-wall-single-12000-cfg-1",
+      modelId: "lg-luu120hv-wall-single-12000",
       outdoorUnitId: "lg-luu120hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11100,
@@ -6391,23 +7140,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu120hv-wall-single-cfg-2",
-      slug: "lg-luu120hv-wall-single-cfg-2",
-      modelId: "lg-luu120hv-wall-single",
-      outdoorUnitId: "lg-luu120hv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 10200,
-      coolingCapacityMaxBtu: 10200,
-      seer2: 20.8,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-luu120hv-wall-single-cfg-3",
-      slug: "lg-luu120hv-wall-single-cfg-3",
-      modelId: "lg-luu120hv-wall-single",
+      id: "lg-luu120hv-wall-single-12000-cfg-2",
+      slug: "lg-luu120hv-wall-single-12000-cfg-2",
+      modelId: "lg-luu120hv-wall-single-12000",
       outdoorUnitId: "lg-luu120hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -6419,9 +7154,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hv-wall-single-cfg-1",
-      slug: "lg-luu180hv-wall-single-cfg-1",
-      modelId: "lg-luu180hv-wall-single",
+      id: "lg-luu120hv-wall-single-9000-cfg-1",
+      slug: "lg-luu120hv-wall-single-9000-cfg-1",
+      modelId: "lg-luu120hv-wall-single-9000",
+      outdoorUnitId: "lg-luu120hv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 10200,
+      coolingCapacityMaxBtu: 10200,
+      seer2: 20.8,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-luu180hv-wall-single-18000-cfg-1",
+      slug: "lg-luu180hv-wall-single-18000-cfg-1",
+      modelId: "lg-luu180hv-wall-single-18000",
       outdoorUnitId: "lg-luu180hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6433,9 +7182,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hv-wall-single-cfg-2",
-      slug: "lg-luu180hv-wall-single-cfg-2",
-      modelId: "lg-luu180hv-wall-single",
+      id: "lg-luu180hv-wall-single-18000-cfg-2",
+      slug: "lg-luu180hv-wall-single-18000-cfg-2",
+      modelId: "lg-luu180hv-wall-single-18000",
       outdoorUnitId: "lg-luu180hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6447,9 +7196,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hv-wall-single-cfg-3",
-      slug: "lg-luu180hv-wall-single-cfg-3",
-      modelId: "lg-luu180hv-wall-single",
+      id: "lg-luu180hv-wall-single-18000-cfg-3",
+      slug: "lg-luu180hv-wall-single-18000-cfg-3",
+      modelId: "lg-luu180hv-wall-single-18000",
       outdoorUnitId: "lg-luu180hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6461,9 +7210,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hv-wall-single-cfg-1",
-      slug: "lg-luu240hv-wall-single-cfg-1",
-      modelId: "lg-luu240hv-wall-single",
+      id: "lg-luu240hv-wall-single-24000-cfg-1",
+      slug: "lg-luu240hv-wall-single-24000-cfg-1",
+      modelId: "lg-luu240hv-wall-single-24000",
       outdoorUnitId: "lg-luu240hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -6475,9 +7224,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hv-wall-single-cfg-2",
-      slug: "lg-luu240hv-wall-single-cfg-2",
-      modelId: "lg-luu240hv-wall-single",
+      id: "lg-luu240hv-wall-single-24000-cfg-2",
+      slug: "lg-luu240hv-wall-single-24000-cfg-2",
+      modelId: "lg-luu240hv-wall-single-24000",
       outdoorUnitId: "lg-luu240hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23200,
@@ -6489,9 +7238,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hv-wall-single-cfg-3",
-      slug: "lg-luu240hv-wall-single-cfg-3",
-      modelId: "lg-luu240hv-wall-single",
+      id: "lg-luu240hv-wall-single-24000-cfg-3",
+      slug: "lg-luu240hv-wall-single-24000-cfg-3",
+      modelId: "lg-luu240hv-wall-single-24000",
       outdoorUnitId: "lg-luu240hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -6503,9 +7252,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hv-wall-single-cfg-4",
-      slug: "lg-luu240hv-wall-single-cfg-4",
-      modelId: "lg-luu240hv-wall-single",
+      id: "lg-luu240hv-wall-single-24000-cfg-4",
+      slug: "lg-luu240hv-wall-single-24000-cfg-4",
+      modelId: "lg-luu240hv-wall-single-24000",
       outdoorUnitId: "lg-luu240hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -6517,9 +7266,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-wall-single-cfg-1",
-      slug: "lg-luu360hv-wall-single-cfg-1",
-      modelId: "lg-luu360hv-wall-single",
+      id: "lg-luu360hv-wall-single-36000-cfg-1",
+      slug: "lg-luu360hv-wall-single-36000-cfg-1",
+      modelId: "lg-luu360hv-wall-single-36000",
       outdoorUnitId: "lg-luu360hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -6531,9 +7280,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-wall-single-cfg-2",
-      slug: "lg-luu360hv-wall-single-cfg-2",
-      modelId: "lg-luu360hv-wall-single",
+      id: "lg-luu360hv-wall-single-36000-cfg-2",
+      slug: "lg-luu360hv-wall-single-36000-cfg-2",
+      modelId: "lg-luu360hv-wall-single-36000",
       outdoorUnitId: "lg-luu360hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -6545,9 +7294,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-wall-single-cfg-3",
-      slug: "lg-luu360hv-wall-single-cfg-3",
-      modelId: "lg-luu360hv-wall-single",
+      id: "lg-luu360hv-wall-single-36000-cfg-3",
+      slug: "lg-luu360hv-wall-single-36000-cfg-3",
+      modelId: "lg-luu360hv-wall-single-36000",
       outdoorUnitId: "lg-luu360hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33200,
@@ -6559,9 +7308,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hv-wall-single-cfg-1",
-      slug: "lg-luu420hv-wall-single-cfg-1",
-      modelId: "lg-luu420hv-wall-single",
+      id: "lg-luu420hv-wall-single-42000-cfg-1",
+      slug: "lg-luu420hv-wall-single-42000-cfg-1",
+      modelId: "lg-luu420hv-wall-single-42000",
       outdoorUnitId: "lg-luu420hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -6573,9 +7322,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hv-wall-single-cfg-2",
-      slug: "lg-luu420hv-wall-single-cfg-2",
-      modelId: "lg-luu420hv-wall-single",
+      id: "lg-luu420hv-wall-single-42000-cfg-2",
+      slug: "lg-luu420hv-wall-single-42000-cfg-2",
+      modelId: "lg-luu420hv-wall-single-42000",
       outdoorUnitId: "lg-luu420hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -6587,9 +7336,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hv-wall-single-cfg-1",
-      slug: "lg-luu480hv-wall-single-cfg-1",
-      modelId: "lg-luu480hv-wall-single",
+      id: "lg-luu480hv-wall-single-48000-cfg-1",
+      slug: "lg-luu480hv-wall-single-48000-cfg-1",
+      modelId: "lg-luu480hv-wall-single-48000",
       outdoorUnitId: "lg-luu480hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -6601,9 +7350,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu240hv-central-ducted-cfg-1",
-      slug: "lg-luu240hv-central-ducted-cfg-1",
-      modelId: "lg-luu240hv-central-ducted",
+      id: "lg-luu240hv-central-ducted-24000-cfg-1",
+      slug: "lg-luu240hv-central-ducted-24000-cfg-1",
+      modelId: "lg-luu240hv-central-ducted-24000",
       outdoorUnitId: "lg-luu240hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23200,
@@ -6615,9 +7364,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-central-ducted-cfg-1",
-      slug: "lg-luu360hv-central-ducted-cfg-1",
-      modelId: "lg-luu360hv-central-ducted",
+      id: "lg-luu360hv-central-ducted-36000-cfg-1",
+      slug: "lg-luu360hv-central-ducted-36000-cfg-1",
+      modelId: "lg-luu360hv-central-ducted-36000",
       outdoorUnitId: "lg-luu360hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33200,
@@ -6629,9 +7378,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-central-ducted-cfg-2",
-      slug: "lg-luu360hv-central-ducted-cfg-2",
-      modelId: "lg-luu360hv-central-ducted",
+      id: "lg-luu360hv-central-ducted-36000-cfg-2",
+      slug: "lg-luu360hv-central-ducted-36000-cfg-2",
+      modelId: "lg-luu360hv-central-ducted-36000",
       outdoorUnitId: "lg-luu360hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33200,
@@ -6643,9 +7392,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu360hv-central-ducted-cfg-3",
-      slug: "lg-luu360hv-central-ducted-cfg-3",
-      modelId: "lg-luu360hv-central-ducted",
+      id: "lg-luu360hv-central-ducted-36000-cfg-3",
+      slug: "lg-luu360hv-central-ducted-36000-cfg-3",
+      modelId: "lg-luu360hv-central-ducted-36000",
       outdoorUnitId: "lg-luu360hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33200,
@@ -6657,9 +7406,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hv-central-ducted-cfg-1",
-      slug: "lg-luu480hv-central-ducted-cfg-1",
-      modelId: "lg-luu480hv-central-ducted",
+      id: "lg-luu480hv-central-ducted-48000-cfg-1",
+      slug: "lg-luu480hv-central-ducted-48000-cfg-1",
+      modelId: "lg-luu480hv-central-ducted-48000",
       outdoorUnitId: "lg-luu480hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -6671,9 +7420,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu480hv-central-ducted-cfg-2",
-      slug: "lg-luu480hv-central-ducted-cfg-2",
-      modelId: "lg-luu480hv-central-ducted",
+      id: "lg-luu480hv-central-ducted-48000-cfg-2",
+      slug: "lg-luu480hv-central-ducted-48000-cfg-2",
+      modelId: "lg-luu480hv-central-ducted-48000",
       outdoorUnitId: "lg-luu480hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -6685,9 +7434,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu180hv-central-ducted-cfg-1",
-      slug: "lg-luu180hv-central-ducted-cfg-1",
-      modelId: "lg-luu180hv-central-ducted",
+      id: "lg-luu180hv-central-ducted-18000-cfg-1",
+      slug: "lg-luu180hv-central-ducted-18000-cfg-1",
+      modelId: "lg-luu180hv-central-ducted-18000",
       outdoorUnitId: "lg-luu180hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6699,9 +7448,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hv-central-ducted-cfg-1",
-      slug: "lg-luu420hv-central-ducted-cfg-1",
-      modelId: "lg-luu420hv-central-ducted",
+      id: "lg-luu420hv-central-ducted-42000-cfg-1",
+      slug: "lg-luu420hv-central-ducted-42000-cfg-1",
+      modelId: "lg-luu420hv-central-ducted-42000",
       outdoorUnitId: "lg-luu420hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -6713,9 +7462,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-luu420hv-central-ducted-cfg-2",
-      slug: "lg-luu420hv-central-ducted-cfg-2",
-      modelId: "lg-luu420hv-central-ducted",
+      id: "lg-luu420hv-central-ducted-42000-cfg-2",
+      slug: "lg-luu420hv-central-ducted-42000-cfg-2",
+      modelId: "lg-luu420hv-central-ducted-42000",
       outdoorUnitId: "lg-luu420hv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -6727,9 +7476,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa181a-wall-single-cfg-1",
-      slug: "lg-kusxa181a-wall-single-cfg-1",
-      modelId: "lg-kusxa181a-wall-single",
+      id: "lg-kusxa181a-wall-single-18000-cfg-1",
+      slug: "lg-kusxa181a-wall-single-18000-cfg-1",
+      modelId: "lg-kusxa181a-wall-single-18000",
       outdoorUnitId: "lg-kusxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6741,9 +7490,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa181a-wall-single-cfg-2",
-      slug: "lg-kusxa181a-wall-single-cfg-2",
-      modelId: "lg-kusxa181a-wall-single",
+      id: "lg-kusxa181a-wall-single-18000-cfg-2",
+      slug: "lg-kusxa181a-wall-single-18000-cfg-2",
+      modelId: "lg-kusxa181a-wall-single-18000",
       outdoorUnitId: "lg-kusxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6755,9 +7504,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa181a-wall-single-cfg-3",
-      slug: "lg-kusxa181a-wall-single-cfg-3",
-      modelId: "lg-kusxa181a-wall-single",
+      id: "lg-kusxa181a-wall-single-18000-cfg-3",
+      slug: "lg-kusxa181a-wall-single-18000-cfg-3",
+      modelId: "lg-kusxa181a-wall-single-18000",
       outdoorUnitId: "lg-kusxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6769,9 +7518,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa241a-wall-single-cfg-1",
-      slug: "lg-kusxa241a-wall-single-cfg-1",
-      modelId: "lg-kusxa241a-wall-single",
+      id: "lg-kusxa241a-wall-single-24000-cfg-1",
+      slug: "lg-kusxa241a-wall-single-24000-cfg-1",
+      modelId: "lg-kusxa241a-wall-single-24000",
       outdoorUnitId: "lg-kusxa241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -6783,9 +7532,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa241a-wall-single-cfg-2",
-      slug: "lg-kusxa241a-wall-single-cfg-2",
-      modelId: "lg-kusxa241a-wall-single",
+      id: "lg-kusxa241a-wall-single-24000-cfg-2",
+      slug: "lg-kusxa241a-wall-single-24000-cfg-2",
+      modelId: "lg-kusxa241a-wall-single-24000",
       outdoorUnitId: "lg-kusxa241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -6797,9 +7546,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa241a-wall-single-cfg-3",
-      slug: "lg-kusxa241a-wall-single-cfg-3",
-      modelId: "lg-kusxa241a-wall-single",
+      id: "lg-kusxa241a-wall-single-24000-cfg-3",
+      slug: "lg-kusxa241a-wall-single-24000-cfg-3",
+      modelId: "lg-kusxa241a-wall-single-24000",
       outdoorUnitId: "lg-kusxa241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -6811,9 +7560,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa241a-wall-single-cfg-4",
-      slug: "lg-kusxa241a-wall-single-cfg-4",
-      modelId: "lg-kusxa241a-wall-single",
+      id: "lg-kusxa241a-wall-single-24000-cfg-4",
+      slug: "lg-kusxa241a-wall-single-24000-cfg-4",
+      modelId: "lg-kusxa241a-wall-single-24000",
       outdoorUnitId: "lg-kusxa241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -6825,9 +7574,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb181a-wall-single-cfg-1",
-      slug: "lg-kusxb181a-wall-single-cfg-1",
-      modelId: "lg-kusxb181a-wall-single",
+      id: "lg-kusxb181a-wall-single-18000-cfg-1",
+      slug: "lg-kusxb181a-wall-single-18000-cfg-1",
+      modelId: "lg-kusxb181a-wall-single-18000",
       outdoorUnitId: "lg-kusxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6839,9 +7588,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb181a-wall-single-cfg-2",
-      slug: "lg-kusxb181a-wall-single-cfg-2",
-      modelId: "lg-kusxb181a-wall-single",
+      id: "lg-kusxb181a-wall-single-18000-cfg-2",
+      slug: "lg-kusxb181a-wall-single-18000-cfg-2",
+      modelId: "lg-kusxb181a-wall-single-18000",
       outdoorUnitId: "lg-kusxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6853,9 +7602,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb181a-wall-single-cfg-3",
-      slug: "lg-kusxb181a-wall-single-cfg-3",
-      modelId: "lg-kusxb181a-wall-single",
+      id: "lg-kusxb181a-wall-single-18000-cfg-3",
+      slug: "lg-kusxb181a-wall-single-18000-cfg-3",
+      modelId: "lg-kusxb181a-wall-single-18000",
       outdoorUnitId: "lg-kusxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6867,9 +7616,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb181a-wall-single-cfg-4",
-      slug: "lg-kusxb181a-wall-single-cfg-4",
-      modelId: "lg-kusxb181a-wall-single",
+      id: "lg-kusxb181a-wall-single-18000-cfg-4",
+      slug: "lg-kusxb181a-wall-single-18000-cfg-4",
+      modelId: "lg-kusxb181a-wall-single-18000",
       outdoorUnitId: "lg-kusxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -6881,9 +7630,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb241a-wall-single-cfg-1",
-      slug: "lg-kusxb241a-wall-single-cfg-1",
-      modelId: "lg-kusxb241a-wall-single",
+      id: "lg-kusxb241a-wall-single-24000-cfg-1",
+      slug: "lg-kusxb241a-wall-single-24000-cfg-1",
+      modelId: "lg-kusxb241a-wall-single-24000",
       outdoorUnitId: "lg-kusxb241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -6895,9 +7644,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb241a-wall-single-cfg-2",
-      slug: "lg-kusxb241a-wall-single-cfg-2",
-      modelId: "lg-kusxb241a-wall-single",
+      id: "lg-kusxb241a-wall-single-24000-cfg-2",
+      slug: "lg-kusxb241a-wall-single-24000-cfg-2",
+      modelId: "lg-kusxb241a-wall-single-24000",
       outdoorUnitId: "lg-kusxb241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -6909,9 +7658,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb241a-wall-single-cfg-3",
-      slug: "lg-kusxb241a-wall-single-cfg-3",
-      modelId: "lg-kusxb241a-wall-single",
+      id: "lg-kusxb241a-wall-single-24000-cfg-3",
+      slug: "lg-kusxb241a-wall-single-24000-cfg-3",
+      modelId: "lg-kusxb241a-wall-single-24000",
       outdoorUnitId: "lg-kusxb241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23200,
@@ -6923,9 +7672,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb301a-wall-single-cfg-1",
-      slug: "lg-kusxb301a-wall-single-cfg-1",
-      modelId: "lg-kusxb301a-wall-single",
+      id: "lg-kusxb301a-wall-single-30000-cfg-1",
+      slug: "lg-kusxb301a-wall-single-30000-cfg-1",
+      modelId: "lg-kusxb301a-wall-single-30000",
       outdoorUnitId: "lg-kusxb301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -6937,9 +7686,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb301a-wall-single-cfg-2",
-      slug: "lg-kusxb301a-wall-single-cfg-2",
-      modelId: "lg-kusxb301a-wall-single",
+      id: "lg-kusxb301a-wall-single-30000-cfg-2",
+      slug: "lg-kusxb301a-wall-single-30000-cfg-2",
+      modelId: "lg-kusxb301a-wall-single-30000",
       outdoorUnitId: "lg-kusxb301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -6951,23 +7700,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb301a-wall-single-cfg-3",
-      slug: "lg-kusxb301a-wall-single-cfg-3",
-      modelId: "lg-kusxb301a-wall-single",
-      outdoorUnitId: "lg-kusxb301a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 17,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kusxb301a-wall-single-cfg-4",
-      slug: "lg-kusxb301a-wall-single-cfg-4",
-      modelId: "lg-kusxb301a-wall-single",
+      id: "lg-kusxb301a-wall-single-30000-cfg-3",
+      slug: "lg-kusxb301a-wall-single-30000-cfg-3",
+      modelId: "lg-kusxb301a-wall-single-30000",
       outdoorUnitId: "lg-kusxb301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -6979,9 +7714,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb121a-wall-single-cfg-1",
-      slug: "lg-kusxb121a-wall-single-cfg-1",
-      modelId: "lg-kusxb121a-wall-single",
+      id: "lg-kusxb121a-wall-single-9000-cfg-1",
+      slug: "lg-kusxb121a-wall-single-9000-cfg-1",
+      modelId: "lg-kusxb121a-wall-single-9000",
       outdoorUnitId: "lg-kusxb121a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 10200,
@@ -6993,51 +7728,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb121a-wall-single-cfg-2",
-      slug: "lg-kusxb121a-wall-single-cfg-2",
-      modelId: "lg-kusxb121a-wall-single",
-      outdoorUnitId: "lg-kusxb121a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11100,
-      coolingCapacityMaxBtu: 11100,
-      seer2: 21.5,
-      hspf2: 10.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kusxb121a-wall-single-cfg-3",
-      slug: "lg-kusxb121a-wall-single-cfg-3",
-      modelId: "lg-kusxb121a-wall-single",
-      outdoorUnitId: "lg-kusxb121a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 16.4,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kusxb121a-wall-single-cfg-4",
-      slug: "lg-kusxb121a-wall-single-cfg-4",
-      modelId: "lg-kusxb121a-wall-single",
-      outdoorUnitId: "lg-kusxb121a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 17,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kusxa361a-wall-single-cfg-1",
-      slug: "lg-kusxa361a-wall-single-cfg-1",
-      modelId: "lg-kusxa361a-wall-single",
+      id: "lg-kusxa361a-wall-single-36000-cfg-1",
+      slug: "lg-kusxa361a-wall-single-36000-cfg-1",
+      modelId: "lg-kusxa361a-wall-single-36000",
       outdoorUnitId: "lg-kusxa361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7049,9 +7742,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa361a-wall-single-cfg-2",
-      slug: "lg-kusxa361a-wall-single-cfg-2",
-      modelId: "lg-kusxa361a-wall-single",
+      id: "lg-kusxa361a-wall-single-36000-cfg-2",
+      slug: "lg-kusxa361a-wall-single-36000-cfg-2",
+      modelId: "lg-kusxa361a-wall-single-36000",
       outdoorUnitId: "lg-kusxa361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7063,23 +7756,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa361a-wall-single-cfg-3",
-      slug: "lg-kusxa361a-wall-single-cfg-3",
-      modelId: "lg-kusxa361a-wall-single",
-      outdoorUnitId: "lg-kusxa361a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 18.2,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kusxb421a-wall-single-cfg-1",
-      slug: "lg-kusxb421a-wall-single-cfg-1",
-      modelId: "lg-kusxb421a-wall-single",
+      id: "lg-kusxb421a-wall-single-42000-cfg-1",
+      slug: "lg-kusxb421a-wall-single-42000-cfg-1",
+      modelId: "lg-kusxb421a-wall-single-42000",
       outdoorUnitId: "lg-kusxb421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7091,9 +7770,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb421a-wall-single-cfg-2",
-      slug: "lg-kusxb421a-wall-single-cfg-2",
-      modelId: "lg-kusxb421a-wall-single",
+      id: "lg-kusxb421a-wall-single-42000-cfg-2",
+      slug: "lg-kusxb421a-wall-single-42000-cfg-2",
+      modelId: "lg-kusxb421a-wall-single-42000",
       outdoorUnitId: "lg-kusxb421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7105,9 +7784,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb421a-wall-single-cfg-3",
-      slug: "lg-kusxb421a-wall-single-cfg-3",
-      modelId: "lg-kusxb421a-wall-single",
+      id: "lg-kusxb421a-wall-single-42000-cfg-3",
+      slug: "lg-kusxb421a-wall-single-42000-cfg-3",
+      modelId: "lg-kusxb421a-wall-single-42000",
       outdoorUnitId: "lg-kusxb421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7119,9 +7798,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb091a-wall-single-cfg-1",
-      slug: "lg-kusxb091a-wall-single-cfg-1",
-      modelId: "lg-kusxb091a-wall-single",
+      id: "lg-kusxb091a-wall-single-9000-cfg-1",
+      slug: "lg-kusxb091a-wall-single-9000-cfg-1",
+      modelId: "lg-kusxb091a-wall-single-9000",
       outdoorUnitId: "lg-kusxb091a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -7133,9 +7812,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb091a-wall-single-cfg-2",
-      slug: "lg-kusxb091a-wall-single-cfg-2",
-      modelId: "lg-kusxb091a-wall-single",
+      id: "lg-kusxb091a-wall-single-9000-cfg-2",
+      slug: "lg-kusxb091a-wall-single-9000-cfg-2",
+      modelId: "lg-kusxb091a-wall-single-9000",
       outdoorUnitId: "lg-kusxb091a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -7147,9 +7826,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb091a-wall-single-cfg-3",
-      slug: "lg-kusxb091a-wall-single-cfg-3",
-      modelId: "lg-kusxb091a-wall-single",
+      id: "lg-kusxb091a-wall-single-9000-cfg-3",
+      slug: "lg-kusxb091a-wall-single-9000-cfg-3",
+      modelId: "lg-kusxb091a-wall-single-9000",
       outdoorUnitId: "lg-kusxb091a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -7161,9 +7840,51 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa301a-wall-single-cfg-1",
-      slug: "lg-kusxa301a-wall-single-cfg-1",
-      modelId: "lg-kusxa301a-wall-single",
+      id: "lg-kusxb121a-wall-single-12000-cfg-1",
+      slug: "lg-kusxb121a-wall-single-12000-cfg-1",
+      modelId: "lg-kusxb121a-wall-single-12000",
+      outdoorUnitId: "lg-kusxb121a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11100,
+      coolingCapacityMaxBtu: 11100,
+      seer2: 21.5,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxb121a-wall-single-12000-cfg-2",
+      slug: "lg-kusxb121a-wall-single-12000-cfg-2",
+      modelId: "lg-kusxb121a-wall-single-12000",
+      outdoorUnitId: "lg-kusxb121a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 16.4,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxb121a-wall-single-12000-cfg-3",
+      slug: "lg-kusxb121a-wall-single-12000-cfg-3",
+      modelId: "lg-kusxb121a-wall-single-12000",
+      outdoorUnitId: "lg-kusxb121a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 17,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxa301a-wall-single-30000-cfg-1",
+      slug: "lg-kusxa301a-wall-single-30000-cfg-1",
+      modelId: "lg-kusxa301a-wall-single-30000",
       outdoorUnitId: "lg-kusxa301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -7175,9 +7896,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa301a-wall-single-cfg-2",
-      slug: "lg-kusxa301a-wall-single-cfg-2",
-      modelId: "lg-kusxa301a-wall-single",
+      id: "lg-kusxa301a-wall-single-30000-cfg-2",
+      slug: "lg-kusxa301a-wall-single-30000-cfg-2",
+      modelId: "lg-kusxa301a-wall-single-30000",
       outdoorUnitId: "lg-kusxa301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -7189,9 +7910,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa301a-wall-single-cfg-3",
-      slug: "lg-kusxa301a-wall-single-cfg-3",
-      modelId: "lg-kusxa301a-wall-single",
+      id: "lg-kusxa301a-wall-single-30000-cfg-3",
+      slug: "lg-kusxa301a-wall-single-30000-cfg-3",
+      modelId: "lg-kusxa301a-wall-single-30000",
       outdoorUnitId: "lg-kusxa301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -7203,9 +7924,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb481a-wall-single-cfg-1",
-      slug: "lg-kusxb481a-wall-single-cfg-1",
-      modelId: "lg-kusxb481a-wall-single",
+      id: "lg-kusxb481a-wall-single-48000-cfg-1",
+      slug: "lg-kusxb481a-wall-single-48000-cfg-1",
+      modelId: "lg-kusxb481a-wall-single-48000",
       outdoorUnitId: "lg-kusxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7217,9 +7938,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb481a-wall-single-cfg-2",
-      slug: "lg-kusxb481a-wall-single-cfg-2",
-      modelId: "lg-kusxb481a-wall-single",
+      id: "lg-kusxb481a-wall-single-48000-cfg-2",
+      slug: "lg-kusxb481a-wall-single-48000-cfg-2",
+      modelId: "lg-kusxb481a-wall-single-48000",
       outdoorUnitId: "lg-kusxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46500,
@@ -7231,9 +7952,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb481a-wall-single-cfg-3",
-      slug: "lg-kusxb481a-wall-single-cfg-3",
-      modelId: "lg-kusxb481a-wall-single",
+      id: "lg-kusxb481a-wall-single-48000-cfg-3",
+      slug: "lg-kusxb481a-wall-single-48000-cfg-3",
+      modelId: "lg-kusxb481a-wall-single-48000",
       outdoorUnitId: "lg-kusxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45500,
@@ -7245,9 +7966,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb361a-wall-single-cfg-1",
-      slug: "lg-kusxb361a-wall-single-cfg-1",
-      modelId: "lg-kusxb361a-wall-single",
+      id: "lg-kusxb361a-wall-single-36000-cfg-1",
+      slug: "lg-kusxb361a-wall-single-36000-cfg-1",
+      modelId: "lg-kusxb361a-wall-single-36000",
       outdoorUnitId: "lg-kusxb361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7259,9 +7980,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb361a-wall-single-cfg-2",
-      slug: "lg-kusxb361a-wall-single-cfg-2",
-      modelId: "lg-kusxb361a-wall-single",
+      id: "lg-kusxb361a-wall-single-36000-cfg-2",
+      slug: "lg-kusxb361a-wall-single-36000-cfg-2",
+      modelId: "lg-kusxb361a-wall-single-36000",
       outdoorUnitId: "lg-kusxb361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7273,23 +7994,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb361a-wall-single-cfg-3",
-      slug: "lg-kusxb361a-wall-single-cfg-3",
-      modelId: "lg-kusxb361a-wall-single",
-      outdoorUnitId: "lg-kusxb361a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 17.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kusxa421a-wall-single-cfg-1",
-      slug: "lg-kusxa421a-wall-single-cfg-1",
-      modelId: "lg-kusxa421a-wall-single",
+      id: "lg-kusxa421a-wall-single-42000-cfg-1",
+      slug: "lg-kusxa421a-wall-single-42000-cfg-1",
+      modelId: "lg-kusxa421a-wall-single-42000",
       outdoorUnitId: "lg-kusxa421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7301,9 +8008,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa421a-wall-single-cfg-2",
-      slug: "lg-kusxa421a-wall-single-cfg-2",
-      modelId: "lg-kusxa421a-wall-single",
+      id: "lg-kusxa421a-wall-single-42000-cfg-2",
+      slug: "lg-kusxa421a-wall-single-42000-cfg-2",
+      modelId: "lg-kusxa421a-wall-single-42000",
       outdoorUnitId: "lg-kusxa421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7315,9 +8022,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa481a-wall-single-cfg-1",
-      slug: "lg-kusxa481a-wall-single-cfg-1",
-      modelId: "lg-kusxa481a-wall-single",
+      id: "lg-kusxa481a-wall-single-48000-cfg-1",
+      slug: "lg-kusxa481a-wall-single-48000-cfg-1",
+      modelId: "lg-kusxa481a-wall-single-48000",
       outdoorUnitId: "lg-kusxa481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7329,9 +8036,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa481a-wall-single-cfg-2",
-      slug: "lg-kusxa481a-wall-single-cfg-2",
-      modelId: "lg-kusxa481a-wall-single",
+      id: "lg-kusxa481a-wall-single-48000-cfg-2",
+      slug: "lg-kusxa481a-wall-single-48000-cfg-2",
+      modelId: "lg-kusxa481a-wall-single-48000",
       outdoorUnitId: "lg-kusxa481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7343,9 +8050,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa181a-wall-single-cfg-1",
-      slug: "lg-kumxa181a-wall-single-cfg-1",
-      modelId: "lg-kumxa181a-wall-single",
+      id: "lg-kumxa181a-wall-single-18000-cfg-1",
+      slug: "lg-kumxa181a-wall-single-18000-cfg-1",
+      modelId: "lg-kumxa181a-wall-single-18000",
       outdoorUnitId: "lg-kumxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -7357,9 +8064,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa181a-wall-single-cfg-2",
-      slug: "lg-kumxa181a-wall-single-cfg-2",
-      modelId: "lg-kumxa181a-wall-single",
+      id: "lg-kumxa181a-wall-single-18000-cfg-2",
+      slug: "lg-kumxa181a-wall-single-18000-cfg-2",
+      modelId: "lg-kumxa181a-wall-single-18000",
       outdoorUnitId: "lg-kumxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17200,
@@ -7371,9 +8078,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa181a-wall-single-cfg-3",
-      slug: "lg-kumxa181a-wall-single-cfg-3",
-      modelId: "lg-kumxa181a-wall-single",
+      id: "lg-kumxa181a-wall-single-18000-cfg-3",
+      slug: "lg-kumxa181a-wall-single-18000-cfg-3",
+      modelId: "lg-kumxa181a-wall-single-18000",
       outdoorUnitId: "lg-kumxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17600,
@@ -7385,9 +8092,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa241a-wall-single-cfg-1",
-      slug: "lg-kumxa241a-wall-single-cfg-1",
-      modelId: "lg-kumxa241a-wall-single",
+      id: "lg-kumxa241a-wall-single-24000-cfg-1",
+      slug: "lg-kumxa241a-wall-single-24000-cfg-1",
+      modelId: "lg-kumxa241a-wall-single-24000",
       outdoorUnitId: "lg-kumxa241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7399,23 +8106,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa241a-wall-single-cfg-2",
-      slug: "lg-kumxa241a-wall-single-cfg-2",
-      modelId: "lg-kumxa241a-wall-single",
-      outdoorUnitId: "lg-kumxa241a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 18.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kumxa241a-wall-single-cfg-3",
-      slug: "lg-kumxa241a-wall-single-cfg-3",
-      modelId: "lg-kumxa241a-wall-single",
+      id: "lg-kumxa241a-wall-single-24000-cfg-2",
+      slug: "lg-kumxa241a-wall-single-24000-cfg-2",
+      modelId: "lg-kumxa241a-wall-single-24000",
       outdoorUnitId: "lg-kumxa241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -7427,9 +8120,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa301a-wall-single-cfg-1",
-      slug: "lg-kumxa301a-wall-single-cfg-1",
-      modelId: "lg-kumxa301a-wall-single",
+      id: "lg-kumxa241a-wall-single-20000-cfg-1",
+      slug: "lg-kumxa241a-wall-single-20000-cfg-1",
+      modelId: "lg-kumxa241a-wall-single-20000",
+      outdoorUnitId: "lg-kumxa241a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 18.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kumxa301a-wall-single-30000-cfg-1",
+      slug: "lg-kumxa301a-wall-single-30000-cfg-1",
+      modelId: "lg-kumxa301a-wall-single-30000",
       outdoorUnitId: "lg-kumxa301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -7441,9 +8148,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa301a-wall-single-cfg-2",
-      slug: "lg-kumxa301a-wall-single-cfg-2",
-      modelId: "lg-kumxa301a-wall-single",
+      id: "lg-kumxa301a-wall-single-24000-cfg-1",
+      slug: "lg-kumxa301a-wall-single-24000-cfg-1",
+      modelId: "lg-kumxa301a-wall-single-24000",
       outdoorUnitId: "lg-kumxa301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24600,
@@ -7455,9 +8162,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa301a-wall-single-cfg-3",
-      slug: "lg-kumxa301a-wall-single-cfg-3",
-      modelId: "lg-kumxa301a-wall-single",
+      id: "lg-kumxa301a-wall-single-24000-cfg-2",
+      slug: "lg-kumxa301a-wall-single-24000-cfg-2",
+      modelId: "lg-kumxa301a-wall-single-24000",
       outdoorUnitId: "lg-kumxa301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 26400,
@@ -7469,9 +8176,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb181a-wall-single-cfg-1",
-      slug: "lg-kumxb181a-wall-single-cfg-1",
-      modelId: "lg-kumxb181a-wall-single",
+      id: "lg-kumxb181a-wall-single-18000-cfg-1",
+      slug: "lg-kumxb181a-wall-single-18000-cfg-1",
+      modelId: "lg-kumxb181a-wall-single-18000",
       outdoorUnitId: "lg-kumxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -7483,9 +8190,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb181a-wall-single-cfg-2",
-      slug: "lg-kumxb181a-wall-single-cfg-2",
-      modelId: "lg-kumxb181a-wall-single",
+      id: "lg-kumxb181a-wall-single-18000-cfg-2",
+      slug: "lg-kumxb181a-wall-single-18000-cfg-2",
+      modelId: "lg-kumxb181a-wall-single-18000",
       outdoorUnitId: "lg-kumxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17200,
@@ -7497,9 +8204,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb181a-wall-single-cfg-3",
-      slug: "lg-kumxb181a-wall-single-cfg-3",
-      modelId: "lg-kumxb181a-wall-single",
+      id: "lg-kumxb181a-wall-single-18000-cfg-3",
+      slug: "lg-kumxb181a-wall-single-18000-cfg-3",
+      modelId: "lg-kumxb181a-wall-single-18000",
       outdoorUnitId: "lg-kumxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17600,
@@ -7511,9 +8218,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb241a-wall-single-cfg-1",
-      slug: "lg-kumxb241a-wall-single-cfg-1",
-      modelId: "lg-kumxb241a-wall-single",
+      id: "lg-kumxb241a-wall-single-24000-cfg-1",
+      slug: "lg-kumxb241a-wall-single-24000-cfg-1",
+      modelId: "lg-kumxb241a-wall-single-24000",
       outdoorUnitId: "lg-kumxb241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7525,23 +8232,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb241a-wall-single-cfg-2",
-      slug: "lg-kumxb241a-wall-single-cfg-2",
-      modelId: "lg-kumxb241a-wall-single",
-      outdoorUnitId: "lg-kumxb241a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kumxb241a-wall-single-cfg-3",
-      slug: "lg-kumxb241a-wall-single-cfg-3",
-      modelId: "lg-kumxb241a-wall-single",
+      id: "lg-kumxb241a-wall-single-24000-cfg-2",
+      slug: "lg-kumxb241a-wall-single-24000-cfg-2",
+      modelId: "lg-kumxb241a-wall-single-24000",
       outdoorUnitId: "lg-kumxb241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -7553,9 +8246,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum060gss0-wall-single-cfg-1",
-      slug: "lg-zrum060gss0-wall-single-cfg-1",
-      modelId: "lg-zrum060gss0-wall-single",
+      id: "lg-kumxb241a-wall-single-20000-cfg-1",
+      slug: "lg-kumxb241a-wall-single-20000-cfg-1",
+      modelId: "lg-kumxb241a-wall-single-20000",
+      outdoorUnitId: "lg-kumxb241a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-zrum060gss0-wall-single-60000-cfg-1",
+      slug: "lg-zrum060gss0-wall-single-60000-cfg-1",
+      modelId: "lg-zrum060gss0-wall-single-60000",
       outdoorUnitId: "lg-zrum060gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -7567,9 +8274,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum060gss0-wall-single-cfg-2",
-      slug: "lg-zrum060gss0-wall-single-cfg-2",
-      modelId: "lg-zrum060gss0-wall-single",
+      id: "lg-zrum060gss0-wall-single-60000-cfg-2",
+      slug: "lg-zrum060gss0-wall-single-60000-cfg-2",
+      modelId: "lg-zrum060gss0-wall-single-60000",
       outdoorUnitId: "lg-zrum060gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -7581,9 +8288,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum060gss0-wall-single-cfg-3",
-      slug: "lg-zrum060gss0-wall-single-cfg-3",
-      modelId: "lg-zrum060gss0-wall-single",
+      id: "lg-zrum060gss0-wall-single-60000-cfg-3",
+      slug: "lg-zrum060gss0-wall-single-60000-cfg-3",
+      modelId: "lg-zrum060gss0-wall-single-60000",
       outdoorUnitId: "lg-zrum060gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -7595,9 +8302,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum048gss0-wall-single-cfg-1",
-      slug: "lg-zrum048gss0-wall-single-cfg-1",
-      modelId: "lg-zrum048gss0-wall-single",
+      id: "lg-zrum048gss0-wall-single-48000-cfg-1",
+      slug: "lg-zrum048gss0-wall-single-48000-cfg-1",
+      modelId: "lg-zrum048gss0-wall-single-48000",
       outdoorUnitId: "lg-zrum048gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7609,9 +8316,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum048gss0-wall-single-cfg-2",
-      slug: "lg-zrum048gss0-wall-single-cfg-2",
-      modelId: "lg-zrum048gss0-wall-single",
+      id: "lg-zrum048gss0-wall-single-48000-cfg-2",
+      slug: "lg-zrum048gss0-wall-single-48000-cfg-2",
+      modelId: "lg-zrum048gss0-wall-single-48000",
       outdoorUnitId: "lg-zrum048gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7623,9 +8330,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum048gss0-wall-single-cfg-3",
-      slug: "lg-zrum048gss0-wall-single-cfg-3",
-      modelId: "lg-zrum048gss0-wall-single",
+      id: "lg-zrum048gss0-wall-single-48000-cfg-3",
+      slug: "lg-zrum048gss0-wall-single-48000-cfg-3",
+      modelId: "lg-zrum048gss0-wall-single-48000",
       outdoorUnitId: "lg-zrum048gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7637,9 +8344,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum036gss0-wall-single-cfg-1",
-      slug: "lg-zrum036gss0-wall-single-cfg-1",
-      modelId: "lg-zrum036gss0-wall-single",
+      id: "lg-zrum036gss0-wall-single-36000-cfg-1",
+      slug: "lg-zrum036gss0-wall-single-36000-cfg-1",
+      modelId: "lg-zrum036gss0-wall-single-36000",
       outdoorUnitId: "lg-zrum036gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7651,9 +8358,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum036gss0-wall-single-cfg-2",
-      slug: "lg-zrum036gss0-wall-single-cfg-2",
-      modelId: "lg-zrum036gss0-wall-single",
+      id: "lg-zrum036gss0-wall-single-36000-cfg-2",
+      slug: "lg-zrum036gss0-wall-single-36000-cfg-2",
+      modelId: "lg-zrum036gss0-wall-single-36000",
       outdoorUnitId: "lg-zrum036gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7665,9 +8372,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrum036gss0-wall-single-cfg-3",
-      slug: "lg-zrum036gss0-wall-single-cfg-3",
-      modelId: "lg-zrum036gss0-wall-single",
+      id: "lg-zrum036gss0-wall-single-36000-cfg-3",
+      slug: "lg-zrum036gss0-wall-single-36000-cfg-3",
+      modelId: "lg-zrum036gss0-wall-single-36000",
       outdoorUnitId: "lg-zrum036gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7679,9 +8386,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrun024gss0-wall-single-cfg-1",
-      slug: "lg-zrun024gss0-wall-single-cfg-1",
-      modelId: "lg-zrun024gss0-wall-single",
+      id: "lg-zrun024gss0-wall-single-24000-cfg-1",
+      slug: "lg-zrun024gss0-wall-single-24000-cfg-1",
+      modelId: "lg-zrun024gss0-wall-single-24000",
       outdoorUnitId: "lg-zrun024gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7693,9 +8400,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrun024gss0-wall-single-cfg-2",
-      slug: "lg-zrun024gss0-wall-single-cfg-2",
-      modelId: "lg-zrun024gss0-wall-single",
+      id: "lg-zrun024gss0-wall-single-24000-cfg-2",
+      slug: "lg-zrun024gss0-wall-single-24000-cfg-2",
+      modelId: "lg-zrun024gss0-wall-single-24000",
       outdoorUnitId: "lg-zrun024gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7707,9 +8414,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-zrun024gss0-wall-single-cfg-3",
-      slug: "lg-zrun024gss0-wall-single-cfg-3",
-      modelId: "lg-zrun024gss0-wall-single",
+      id: "lg-zrun024gss0-wall-single-24000-cfg-3",
+      slug: "lg-zrun024gss0-wall-single-24000-cfg-3",
+      modelId: "lg-zrun024gss0-wall-single-24000",
       outdoorUnitId: "lg-zrun024gss0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -7721,9 +8428,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb301a-wall-single-cfg-1",
-      slug: "lg-kumxb301a-wall-single-cfg-1",
-      modelId: "lg-kumxb301a-wall-single",
+      id: "lg-kumxb301a-wall-single-30000-cfg-1",
+      slug: "lg-kumxb301a-wall-single-30000-cfg-1",
+      modelId: "lg-kumxb301a-wall-single-30000",
       outdoorUnitId: "lg-kumxb301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -7735,9 +8442,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb301a-wall-single-cfg-2",
-      slug: "lg-kumxb301a-wall-single-cfg-2",
-      modelId: "lg-kumxb301a-wall-single",
+      id: "lg-kumxb301a-wall-single-30000-cfg-2",
+      slug: "lg-kumxb301a-wall-single-30000-cfg-2",
+      modelId: "lg-kumxb301a-wall-single-30000",
       outdoorUnitId: "lg-kumxb301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -7749,9 +8456,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb301a-wall-single-cfg-3",
-      slug: "lg-kumxb301a-wall-single-cfg-3",
-      modelId: "lg-kumxb301a-wall-single",
+      id: "lg-kumxb301a-wall-single-30000-cfg-3",
+      slug: "lg-kumxb301a-wall-single-30000-cfg-3",
+      modelId: "lg-kumxb301a-wall-single-30000",
       outdoorUnitId: "lg-kumxb301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28600,
@@ -7763,9 +8470,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb361a-wall-single-cfg-1",
-      slug: "lg-kumxb361a-wall-single-cfg-1",
-      modelId: "lg-kumxb361a-wall-single",
+      id: "lg-kumxb361a-wall-single-30000-cfg-1",
+      slug: "lg-kumxb361a-wall-single-30000-cfg-1",
+      modelId: "lg-kumxb361a-wall-single-30000",
       outdoorUnitId: "lg-kumxb361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32800,
@@ -7777,9 +8484,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb361a-wall-single-cfg-2",
-      slug: "lg-kumxb361a-wall-single-cfg-2",
-      modelId: "lg-kumxb361a-wall-single",
+      id: "lg-kumxb361a-wall-single-30000-cfg-2",
+      slug: "lg-kumxb361a-wall-single-30000-cfg-2",
+      modelId: "lg-kumxb361a-wall-single-30000",
       outdoorUnitId: "lg-kumxb361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30800,
@@ -7791,9 +8498,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb361a-wall-single-cfg-3",
-      slug: "lg-kumxb361a-wall-single-cfg-3",
-      modelId: "lg-kumxb361a-wall-single",
+      id: "lg-kumxb361a-wall-single-30000-cfg-3",
+      slug: "lg-kumxb361a-wall-single-30000-cfg-3",
+      modelId: "lg-kumxb361a-wall-single-30000",
       outdoorUnitId: "lg-kumxb361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 31800,
@@ -7805,9 +8512,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb481a-wall-single-cfg-1",
-      slug: "lg-kumxb481a-wall-single-cfg-1",
-      modelId: "lg-kumxb481a-wall-single",
+      id: "lg-kumxb481a-wall-single-48000-cfg-1",
+      slug: "lg-kumxb481a-wall-single-48000-cfg-1",
+      modelId: "lg-kumxb481a-wall-single-48000",
       outdoorUnitId: "lg-kumxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7819,9 +8526,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb481a-wall-single-cfg-2",
-      slug: "lg-kumxb481a-wall-single-cfg-2",
-      modelId: "lg-kumxb481a-wall-single",
+      id: "lg-kumxb481a-wall-single-48000-cfg-2",
+      slug: "lg-kumxb481a-wall-single-48000-cfg-2",
+      modelId: "lg-kumxb481a-wall-single-48000",
       outdoorUnitId: "lg-kumxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7833,9 +8540,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb481a-wall-single-cfg-3",
-      slug: "lg-kumxb481a-wall-single-cfg-3",
-      modelId: "lg-kumxb481a-wall-single",
+      id: "lg-kumxb481a-wall-single-48000-cfg-3",
+      slug: "lg-kumxb481a-wall-single-48000-cfg-3",
+      modelId: "lg-kumxb481a-wall-single-48000",
       outdoorUnitId: "lg-kumxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -7847,9 +8554,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb541a-wall-single-cfg-1",
-      slug: "lg-kumxb541a-wall-single-cfg-1",
-      modelId: "lg-kumxb541a-wall-single",
+      id: "lg-kumxb541a-wall-single-48000-cfg-1",
+      slug: "lg-kumxb541a-wall-single-48000-cfg-1",
+      modelId: "lg-kumxb541a-wall-single-48000",
       outdoorUnitId: "lg-kumxb541a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -7861,9 +8568,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb541a-wall-single-cfg-2",
-      slug: "lg-kumxb541a-wall-single-cfg-2",
-      modelId: "lg-kumxb541a-wall-single",
+      id: "lg-kumxb541a-wall-single-48000-cfg-2",
+      slug: "lg-kumxb541a-wall-single-48000-cfg-2",
+      modelId: "lg-kumxb541a-wall-single-48000",
       outdoorUnitId: "lg-kumxb541a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -7875,9 +8582,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb541a-wall-single-cfg-3",
-      slug: "lg-kumxb541a-wall-single-cfg-3",
-      modelId: "lg-kumxb541a-wall-single",
+      id: "lg-kumxb541a-wall-single-48000-cfg-3",
+      slug: "lg-kumxb541a-wall-single-48000-cfg-3",
+      modelId: "lg-kumxb541a-wall-single-48000",
       outdoorUnitId: "lg-kumxb541a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 50500,
@@ -7889,9 +8596,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb601a-wall-single-cfg-1",
-      slug: "lg-kumxb601a-wall-single-cfg-1",
-      modelId: "lg-kumxb601a-wall-single",
+      id: "lg-kumxb601a-wall-single-60000-cfg-1",
+      slug: "lg-kumxb601a-wall-single-60000-cfg-1",
+      modelId: "lg-kumxb601a-wall-single-60000",
       outdoorUnitId: "lg-kumxb601a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 56000,
@@ -7903,9 +8610,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb601a-wall-single-cfg-2",
-      slug: "lg-kumxb601a-wall-single-cfg-2",
-      modelId: "lg-kumxb601a-wall-single",
+      id: "lg-kumxb601a-wall-single-60000-cfg-2",
+      slug: "lg-kumxb601a-wall-single-60000-cfg-2",
+      modelId: "lg-kumxb601a-wall-single-60000",
       outdoorUnitId: "lg-kumxb601a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -7917,9 +8624,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxb601a-wall-single-cfg-3",
-      slug: "lg-kumxb601a-wall-single-cfg-3",
-      modelId: "lg-kumxb601a-wall-single",
+      id: "lg-kumxb601a-wall-single-60000-cfg-3",
+      slug: "lg-kumxb601a-wall-single-60000-cfg-3",
+      modelId: "lg-kumxb601a-wall-single-60000",
       outdoorUnitId: "lg-kumxb601a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 58000,
@@ -7931,9 +8638,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa361a-wall-single-cfg-1",
-      slug: "lg-kumxa361a-wall-single-cfg-1",
-      modelId: "lg-kumxa361a-wall-single",
+      id: "lg-kumxa361a-wall-single-36000-cfg-1",
+      slug: "lg-kumxa361a-wall-single-36000-cfg-1",
+      modelId: "lg-kumxa361a-wall-single-36000",
       outdoorUnitId: "lg-kumxa361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7945,9 +8652,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa361a-wall-single-cfg-2",
-      slug: "lg-kumxa361a-wall-single-cfg-2",
-      modelId: "lg-kumxa361a-wall-single",
+      id: "lg-kumxa361a-wall-single-36000-cfg-2",
+      slug: "lg-kumxa361a-wall-single-36000-cfg-2",
+      modelId: "lg-kumxa361a-wall-single-36000",
       outdoorUnitId: "lg-kumxa361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7959,9 +8666,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa361a-wall-single-cfg-3",
-      slug: "lg-kumxa361a-wall-single-cfg-3",
-      modelId: "lg-kumxa361a-wall-single",
+      id: "lg-kumxa361a-wall-single-36000-cfg-3",
+      slug: "lg-kumxa361a-wall-single-36000-cfg-3",
+      modelId: "lg-kumxa361a-wall-single-36000",
       outdoorUnitId: "lg-kumxa361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -7973,9 +8680,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa421a-wall-single-cfg-1",
-      slug: "lg-kumxa421a-wall-single-cfg-1",
-      modelId: "lg-kumxa421a-wall-single",
+      id: "lg-kumxa421a-wall-single-42000-cfg-1",
+      slug: "lg-kumxa421a-wall-single-42000-cfg-1",
+      modelId: "lg-kumxa421a-wall-single-42000",
       outdoorUnitId: "lg-kumxa421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -7987,9 +8694,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa421a-wall-single-cfg-2",
-      slug: "lg-kumxa421a-wall-single-cfg-2",
-      modelId: "lg-kumxa421a-wall-single",
+      id: "lg-kumxa421a-wall-single-42000-cfg-2",
+      slug: "lg-kumxa421a-wall-single-42000-cfg-2",
+      modelId: "lg-kumxa421a-wall-single-42000",
       outdoorUnitId: "lg-kumxa421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -8001,9 +8708,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa421a-wall-single-cfg-3",
-      slug: "lg-kumxa421a-wall-single-cfg-3",
-      modelId: "lg-kumxa421a-wall-single",
+      id: "lg-kumxa421a-wall-single-42000-cfg-3",
+      slug: "lg-kumxa421a-wall-single-42000-cfg-3",
+      modelId: "lg-kumxa421a-wall-single-42000",
       outdoorUnitId: "lg-kumxa421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -8015,9 +8722,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa481a-wall-single-cfg-1",
-      slug: "lg-kumxa481a-wall-single-cfg-1",
-      modelId: "lg-kumxa481a-wall-single",
+      id: "lg-kumxa481a-wall-single-48000-cfg-1",
+      slug: "lg-kumxa481a-wall-single-48000-cfg-1",
+      modelId: "lg-kumxa481a-wall-single-48000",
       outdoorUnitId: "lg-kumxa481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -8029,9 +8736,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa481a-wall-single-cfg-2",
-      slug: "lg-kumxa481a-wall-single-cfg-2",
-      modelId: "lg-kumxa481a-wall-single",
+      id: "lg-kumxa481a-wall-single-48000-cfg-2",
+      slug: "lg-kumxa481a-wall-single-48000-cfg-2",
+      modelId: "lg-kumxa481a-wall-single-48000",
       outdoorUnitId: "lg-kumxa481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -8043,9 +8750,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kumxa481a-wall-single-cfg-3",
-      slug: "lg-kumxa481a-wall-single-cfg-3",
-      modelId: "lg-kumxa481a-wall-single",
+      id: "lg-kumxa481a-wall-single-48000-cfg-3",
+      slug: "lg-kumxa481a-wall-single-48000-cfg-3",
+      modelId: "lg-kumxa481a-wall-single-48000",
       outdoorUnitId: "lg-kumxa481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -8057,9 +8764,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab091a-wall-single-cfg-1",
-      slug: "lg-kusab091a-wall-single-cfg-1",
-      modelId: "lg-kusab091a-wall-single",
+      id: "lg-kusab091a-wall-single-9000-cfg-1",
+      slug: "lg-kusab091a-wall-single-9000-cfg-1",
+      modelId: "lg-kusab091a-wall-single-9000",
       outdoorUnitId: "lg-kusab091a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -8071,9 +8778,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab091a-wall-single-cfg-2",
-      slug: "lg-kusab091a-wall-single-cfg-2",
-      modelId: "lg-kusab091a-wall-single",
+      id: "lg-kusab091a-wall-single-9000-cfg-2",
+      slug: "lg-kusab091a-wall-single-9000-cfg-2",
+      modelId: "lg-kusab091a-wall-single-9000",
       outdoorUnitId: "lg-kusab091a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -8085,9 +8792,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab121a-wall-single-cfg-1",
-      slug: "lg-kusab121a-wall-single-cfg-1",
-      modelId: "lg-kusab121a-wall-single",
+      id: "lg-kusab121a-wall-single-12000-cfg-1",
+      slug: "lg-kusab121a-wall-single-12000-cfg-1",
+      modelId: "lg-kusab121a-wall-single-12000",
       outdoorUnitId: "lg-kusab121a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -8099,9 +8806,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab121a-wall-single-cfg-2",
-      slug: "lg-kusab121a-wall-single-cfg-2",
-      modelId: "lg-kusab121a-wall-single",
+      id: "lg-kusab121a-wall-single-12000-cfg-2",
+      slug: "lg-kusab121a-wall-single-12000-cfg-2",
+      modelId: "lg-kusab121a-wall-single-12000",
       outdoorUnitId: "lg-kusab121a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -8113,9 +8820,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab181a-wall-single-cfg-1",
-      slug: "lg-kusab181a-wall-single-cfg-1",
-      modelId: "lg-kusab181a-wall-single",
+      id: "lg-kusab181a-wall-single-18000-cfg-1",
+      slug: "lg-kusab181a-wall-single-18000-cfg-1",
+      modelId: "lg-kusab181a-wall-single-18000",
       outdoorUnitId: "lg-kusab181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -8127,9 +8834,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusab181a-wall-single-cfg-2",
-      slug: "lg-kusab181a-wall-single-cfg-2",
-      modelId: "lg-kusab181a-wall-single",
+      id: "lg-kusab181a-wall-single-18000-cfg-2",
+      slug: "lg-kusab181a-wall-single-18000-cfg-2",
+      modelId: "lg-kusab181a-wall-single-18000",
       outdoorUnitId: "lg-kusab181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -8141,9 +8848,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa121a-wall-single-cfg-1",
-      slug: "lg-kusxa121a-wall-single-cfg-1",
-      modelId: "lg-kusxa121a-wall-single",
+      id: "lg-kusxa121a-wall-single-12000-cfg-1",
+      slug: "lg-kusxa121a-wall-single-12000-cfg-1",
+      modelId: "lg-kusxa121a-wall-single-12000",
       outdoorUnitId: "lg-kusxa121a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12500,
@@ -8155,9 +8862,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb601a-wall-single-cfg-1",
-      slug: "lg-kusxb601a-wall-single-cfg-1",
-      modelId: "lg-kusxb601a-wall-single",
+      id: "lg-kusxb601a-wall-single-48000-cfg-1",
+      slug: "lg-kusxb601a-wall-single-48000-cfg-1",
+      modelId: "lg-kusxb601a-wall-single-48000",
       outdoorUnitId: "lg-kusxb601a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52500,
@@ -8169,9 +8876,37 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa422a-wall-single-cfg-1",
-      slug: "lg-kusxa422a-wall-single-cfg-1",
-      modelId: "lg-kusxa422a-wall-single",
+      id: "lg-kusxa361a-wall-single-30000-cfg-1",
+      slug: "lg-kusxa361a-wall-single-30000-cfg-1",
+      modelId: "lg-kusxa361a-wall-single-30000",
+      outdoorUnitId: "lg-kusxa361a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 18.2,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxb301a-wall-single-24000-cfg-1",
+      slug: "lg-kusxb301a-wall-single-24000-cfg-1",
+      modelId: "lg-kusxb301a-wall-single-24000",
+      outdoorUnitId: "lg-kusxb301a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 17,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxa422a-wall-single-42000-cfg-1",
+      slug: "lg-kusxa422a-wall-single-42000-cfg-1",
+      modelId: "lg-kusxa422a-wall-single-42000",
       outdoorUnitId: "lg-kusxa422a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -8183,9 +8918,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa482a-wall-single-cfg-1",
-      slug: "lg-kusxa482a-wall-single-cfg-1",
-      modelId: "lg-kusxa482a-wall-single",
+      id: "lg-kusxa482a-wall-single-48000-cfg-1",
+      slug: "lg-kusxa482a-wall-single-48000-cfg-1",
+      modelId: "lg-kusxa482a-wall-single-48000",
       outdoorUnitId: "lg-kusxa482a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -8197,9 +8932,23 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusap241a-wall-single-cfg-1",
-      slug: "lg-kusap241a-wall-single-cfg-1",
-      modelId: "lg-kusap241a-wall-single",
+      id: "lg-kusxb361a-wall-single-30000-cfg-1",
+      slug: "lg-kusxb361a-wall-single-30000-cfg-1",
+      modelId: "lg-kusxb361a-wall-single-30000",
+      outdoorUnitId: "lg-kusxb361a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 17.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusap241a-wall-single-20000-cfg-1",
+      slug: "lg-kusap241a-wall-single-20000-cfg-1",
+      modelId: "lg-kusap241a-wall-single-20000",
       outdoorUnitId: "lg-kusap241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -8211,9 +8960,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal241a-wall-single-cfg-1",
-      slug: "lg-kusal241a-wall-single-cfg-1",
-      modelId: "lg-kusal241a-wall-single",
+      id: "lg-kusal241a-wall-single-20000-cfg-1",
+      slug: "lg-kusal241a-wall-single-20000-cfg-1",
+      modelId: "lg-kusal241a-wall-single-20000",
       outdoorUnitId: "lg-kusal241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -8225,9 +8974,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal151a-wall-single-cfg-1",
-      slug: "lg-kusal151a-wall-single-cfg-1",
-      modelId: "lg-kusal151a-wall-single",
+      id: "lg-kusal151a-wall-single-15000-cfg-1",
+      slug: "lg-kusal151a-wall-single-15000-cfg-1",
+      modelId: "lg-kusal151a-wall-single-15000",
       outdoorUnitId: "lg-kusal151a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 15000,
@@ -8239,9 +8988,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal181a-wall-single-cfg-1",
-      slug: "lg-kusal181a-wall-single-cfg-1",
-      modelId: "lg-kusal181a-wall-single",
+      id: "lg-kusal181a-wall-single-18000-cfg-1",
+      slug: "lg-kusal181a-wall-single-18000-cfg-1",
+      modelId: "lg-kusal181a-wall-single-18000",
       outdoorUnitId: "lg-kusal181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -8253,9 +9002,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal091a-wall-single-cfg-1",
-      slug: "lg-kusal091a-wall-single-cfg-1",
-      modelId: "lg-kusal091a-wall-single",
+      id: "lg-kusal091a-wall-single-9000-cfg-1",
+      slug: "lg-kusal091a-wall-single-9000-cfg-1",
+      modelId: "lg-kusal091a-wall-single-9000",
       outdoorUnitId: "lg-kusal091a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -8267,9 +9016,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusal121a-wall-single-cfg-1",
-      slug: "lg-kusal121a-wall-single-cfg-1",
-      modelId: "lg-kusal121a-wall-single",
+      id: "lg-kusal121a-wall-single-12000-cfg-1",
+      slug: "lg-kusal121a-wall-single-12000-cfg-1",
+      modelId: "lg-kusal121a-wall-single-12000",
       outdoorUnitId: "lg-kusal121a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -8281,9 +9030,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb181a-central-ducted-cfg-1",
-      slug: "lg-kusxb181a-central-ducted-cfg-1",
-      modelId: "lg-kusxb181a-central-ducted",
+      id: "lg-kusxb181a-central-ducted-18000-cfg-1",
+      slug: "lg-kusxb181a-central-ducted-18000-cfg-1",
+      modelId: "lg-kusxb181a-central-ducted-18000",
       outdoorUnitId: "lg-kusxb181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -8295,9 +9044,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb241a-central-ducted-cfg-1",
-      slug: "lg-kusxb241a-central-ducted-cfg-1",
-      modelId: "lg-kusxb241a-central-ducted",
+      id: "lg-kusxb241a-central-ducted-20000-cfg-1",
+      slug: "lg-kusxb241a-central-ducted-20000-cfg-1",
+      modelId: "lg-kusxb241a-central-ducted-20000",
       outdoorUnitId: "lg-kusxb241a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 21600,
@@ -8309,9 +9058,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb361a-central-ducted-cfg-1",
-      slug: "lg-kusxb361a-central-ducted-cfg-1",
-      modelId: "lg-kusxb361a-central-ducted",
+      id: "lg-kusxb361a-central-ducted-36000-cfg-1",
+      slug: "lg-kusxb361a-central-ducted-36000-cfg-1",
+      modelId: "lg-kusxb361a-central-ducted-36000",
       outdoorUnitId: "lg-kusxb361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34400,
@@ -8323,9 +9072,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb361a-central-ducted-cfg-2",
-      slug: "lg-kusxb361a-central-ducted-cfg-2",
-      modelId: "lg-kusxb361a-central-ducted",
+      id: "lg-kusxb361a-central-ducted-36000-cfg-2",
+      slug: "lg-kusxb361a-central-ducted-36000-cfg-2",
+      modelId: "lg-kusxb361a-central-ducted-36000",
       outdoorUnitId: "lg-kusxb361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34400,
@@ -8337,9 +9086,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb421a-central-ducted-cfg-1",
-      slug: "lg-kusxb421a-central-ducted-cfg-1",
-      modelId: "lg-kusxb421a-central-ducted",
+      id: "lg-kusxb421a-central-ducted-42000-cfg-1",
+      slug: "lg-kusxb421a-central-ducted-42000-cfg-1",
+      modelId: "lg-kusxb421a-central-ducted-42000",
       outdoorUnitId: "lg-kusxb421a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 41000,
@@ -8351,9 +9100,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb481a-central-ducted-cfg-1",
-      slug: "lg-kusxb481a-central-ducted-cfg-1",
-      modelId: "lg-kusxb481a-central-ducted",
+      id: "lg-kusxb481a-central-ducted-48000-cfg-1",
+      slug: "lg-kusxb481a-central-ducted-48000-cfg-1",
+      modelId: "lg-kusxb481a-central-ducted-48000",
       outdoorUnitId: "lg-kusxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45500,
@@ -8365,9 +9114,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb481a-central-ducted-cfg-2",
-      slug: "lg-kusxb481a-central-ducted-cfg-2",
-      modelId: "lg-kusxb481a-central-ducted",
+      id: "lg-kusxb481a-central-ducted-48000-cfg-2",
+      slug: "lg-kusxb481a-central-ducted-48000-cfg-2",
+      modelId: "lg-kusxb481a-central-ducted-48000",
       outdoorUnitId: "lg-kusxb481a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45500,
@@ -8379,9 +9128,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb601a-central-ducted-cfg-1",
-      slug: "lg-kusxb601a-central-ducted-cfg-1",
-      modelId: "lg-kusxb601a-central-ducted",
+      id: "lg-kusxb601a-central-ducted-48000-cfg-1",
+      slug: "lg-kusxb601a-central-ducted-48000-cfg-1",
+      modelId: "lg-kusxb601a-central-ducted-48000",
       outdoorUnitId: "lg-kusxb601a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52500,
@@ -8393,9 +9142,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb601a-central-ducted-cfg-2",
-      slug: "lg-kusxb601a-central-ducted-cfg-2",
-      modelId: "lg-kusxb601a-central-ducted",
+      id: "lg-kusxb601a-central-ducted-48000-cfg-2",
+      slug: "lg-kusxb601a-central-ducted-48000-cfg-2",
+      modelId: "lg-kusxb601a-central-ducted-48000",
       outdoorUnitId: "lg-kusxb601a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52500,
@@ -8407,9 +9156,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxb601a-central-ducted-cfg-3",
-      slug: "lg-kusxb601a-central-ducted-cfg-3",
-      modelId: "lg-kusxb601a-central-ducted",
+      id: "lg-kusxb601a-central-ducted-48000-cfg-3",
+      slug: "lg-kusxb601a-central-ducted-48000-cfg-3",
+      modelId: "lg-kusxb601a-central-ducted-48000",
       outdoorUnitId: "lg-kusxb601a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45500,
@@ -8421,9 +9170,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa181a-central-ducted-cfg-1",
-      slug: "lg-kusxa181a-central-ducted-cfg-1",
-      modelId: "lg-kusxa181a-central-ducted",
+      id: "lg-kusxa181a-central-ducted-18000-cfg-1",
+      slug: "lg-kusxa181a-central-ducted-18000-cfg-1",
+      modelId: "lg-kusxa181a-central-ducted-18000",
       outdoorUnitId: "lg-kusxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -8435,9 +9184,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa181a-central-ducted-cfg-2",
-      slug: "lg-kusxa181a-central-ducted-cfg-2",
-      modelId: "lg-kusxa181a-central-ducted",
+      id: "lg-kusxa181a-central-ducted-18000-cfg-2",
+      slug: "lg-kusxa181a-central-ducted-18000-cfg-2",
+      modelId: "lg-kusxa181a-central-ducted-18000",
       outdoorUnitId: "lg-kusxa181a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -8449,9 +9198,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa301a-central-ducted-cfg-1",
-      slug: "lg-kusxa301a-central-ducted-cfg-1",
-      modelId: "lg-kusxa301a-central-ducted",
+      id: "lg-kusxa301a-central-ducted-30000-cfg-1",
+      slug: "lg-kusxa301a-central-ducted-30000-cfg-1",
+      modelId: "lg-kusxa301a-central-ducted-30000",
       outdoorUnitId: "lg-kusxa301a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -8463,23 +9212,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa301a-central-ducted-cfg-2",
-      slug: "lg-kusxa301a-central-ducted-cfg-2",
-      modelId: "lg-kusxa301a-central-ducted",
-      outdoorUnitId: "lg-kusxa301a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 15.5,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lg-kusxa361a-central-ducted-cfg-1",
-      slug: "lg-kusxa361a-central-ducted-cfg-1",
-      modelId: "lg-kusxa361a-central-ducted",
+      id: "lg-kusxa361a-central-ducted-36000-cfg-1",
+      slug: "lg-kusxa361a-central-ducted-36000-cfg-1",
+      modelId: "lg-kusxa361a-central-ducted-36000",
       outdoorUnitId: "lg-kusxa361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34400,
@@ -8491,9 +9226,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa361a-central-ducted-cfg-2",
-      slug: "lg-kusxa361a-central-ducted-cfg-2",
-      modelId: "lg-kusxa361a-central-ducted",
+      id: "lg-kusxa361a-central-ducted-36000-cfg-2",
+      slug: "lg-kusxa361a-central-ducted-36000-cfg-2",
+      modelId: "lg-kusxa361a-central-ducted-36000",
       outdoorUnitId: "lg-kusxa361a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34400,
@@ -8505,9 +9240,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa422a-central-ducted-cfg-1",
-      slug: "lg-kusxa422a-central-ducted-cfg-1",
-      modelId: "lg-kusxa422a-central-ducted",
+      id: "lg-kusxa422a-central-ducted-42000-cfg-1",
+      slug: "lg-kusxa422a-central-ducted-42000-cfg-1",
+      modelId: "lg-kusxa422a-central-ducted-42000",
       outdoorUnitId: "lg-kusxa422a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 41000,
@@ -8519,9 +9254,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa482a-central-ducted-cfg-1",
-      slug: "lg-kusxa482a-central-ducted-cfg-1",
-      modelId: "lg-kusxa482a-central-ducted",
+      id: "lg-kusxa482a-central-ducted-48000-cfg-1",
+      slug: "lg-kusxa482a-central-ducted-48000-cfg-1",
+      modelId: "lg-kusxa482a-central-ducted-48000",
       outdoorUnitId: "lg-kusxa482a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45500,
@@ -8533,9 +9268,9 @@ export const lgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lg-kusxa482a-central-ducted-cfg-2",
-      slug: "lg-kusxa482a-central-ducted-cfg-2",
-      modelId: "lg-kusxa482a-central-ducted",
+      id: "lg-kusxa482a-central-ducted-48000-cfg-2",
+      slug: "lg-kusxa482a-central-ducted-48000-cfg-2",
+      modelId: "lg-kusxa482a-central-ducted-48000",
       outdoorUnitId: "lg-kusxa482a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45500,
@@ -8545,11 +9280,25 @@ export const lgDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lg-kusxa301a-central-ducted-24000-cfg-1",
+      slug: "lg-kusxa301a-central-ducted-24000-cfg-1",
+      modelId: "lg-kusxa301a-central-ducted-24000",
+      outdoorUnitId: "lg-kusxa301a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 15.5,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "lg-standard-wall-single-cfg-1",
+      configurationId: "lg-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8560,84 +9309,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-9",
+      configurationId: "lg-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8648,18 +9320,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13250,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-11",
+      configurationId: "lg-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8670,106 +9331,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19750,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6750,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34080,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-21",
+      configurationId: "lg-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8780,183 +9342,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-38",
+      configurationId: "lg-standard-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8967,18 +9353,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-40",
+      configurationId: "lg-standard-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8989,7 +9364,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-41",
+      configurationId: "lg-standard-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9000,18 +9375,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-43",
+      configurationId: "lg-standard-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9022,18 +9386,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-45",
+      configurationId: "lg-standard-wall-single-18000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9044,95 +9397,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-50",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-51",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-53",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-54",
+      configurationId: "lg-standard-wall-single-18000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9143,18 +9408,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-55",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-standard-wall-single-cfg-56",
+      configurationId: "lg-standard-wall-single-18000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9165,7 +9419,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-57",
+      configurationId: "lg-standard-wall-single-18000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9176,18 +9430,84 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-58",
+      configurationId: "lg-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
+          heatingCapacityBtu: 17600,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-59",
+      configurationId: "lg-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9198,7 +9518,403 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-60",
+      configurationId: "lg-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-36000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13250,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-15000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19750,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6750,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-42000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-42000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34080,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9209,7 +9925,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-61",
+      configurationId: "lg-standard-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9220,7 +9936,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-62",
+      configurationId: "lg-standard-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9231,7 +9947,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-63",
+      configurationId: "lg-standard-wall-single-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9242,7 +9958,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-64",
+      configurationId: "lg-standard-wall-single-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9253,7 +9969,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-standard-wall-single-cfg-65",
+      configurationId: "lg-standard-wall-single-48000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9264,7 +9980,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arun048gss4-wall-single-cfg-1",
+      configurationId: "lg-arun048gss4-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9275,7 +9991,40 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arub060gss4-wall-single-cfg-1",
+      configurationId: "lg-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-standard-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-arub060gss4-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9286,7 +10035,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arub060gss4-wall-single-cfg-2",
+      configurationId: "lg-arub060gss4-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9297,7 +10046,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arun024gss4-wall-single-cfg-1",
+      configurationId: "lg-arun024gss4-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9308,7 +10057,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arun024gss4-wall-single-cfg-2",
+      configurationId: "lg-arun024gss4-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9319,7 +10068,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu180hhv-wall-single-cfg-1",
+      configurationId: "lg-lmu180hhv-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9330,7 +10079,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu180hhv-wall-single-cfg-2",
+      configurationId: "lg-lmu180hhv-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9341,7 +10090,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu180hhv-wall-single-cfg-3",
+      configurationId: "lg-lmu180hhv-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9352,7 +10101,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu240hhv-wall-single-cfg-1",
+      configurationId: "lg-lmu240hhv-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9363,7 +10112,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu240hhv-wall-single-cfg-2",
+      configurationId: "lg-lmu240hhv-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9374,7 +10123,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu240hhv-wall-single-cfg-3",
+      configurationId: "lg-lmu240hhv-wall-single-20000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9385,7 +10134,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu300hhv-wall-single-cfg-1",
+      configurationId: "lg-lmu300hhv-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9396,7 +10145,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu300hhv-wall-single-cfg-2",
+      configurationId: "lg-lmu300hhv-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9407,7 +10156,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu300hhv-wall-single-cfg-3",
+      configurationId: "lg-lmu300hhv-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9418,7 +10167,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arun060gss4-wall-single-cfg-1",
+      configurationId: "lg-arun060gss4-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9429,7 +10178,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arun060gss4-wall-single-cfg-2",
+      configurationId: "lg-arun060gss4-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9440,7 +10189,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lsu090hsv5-wall-single-cfg-1",
+      configurationId: "lg-lsu090hsv5-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9451,7 +10200,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lsu090hsv5-wall-single-cfg-2",
+      configurationId: "lg-lsu090hsv5-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9462,7 +10211,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lsu120hsv5-wall-single-cfg-1",
+      configurationId: "lg-lsu120hsv5-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9473,7 +10222,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lsu120hsv5-wall-single-cfg-2",
+      configurationId: "lg-lsu120hsv5-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9484,7 +10233,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lau090hyv3-wall-single-cfg-1",
+      configurationId: "lg-lau090hyv3-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9495,7 +10244,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lau120hyv3-wall-single-cfg-1",
+      configurationId: "lg-lau120hyv3-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9506,7 +10255,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lau150hyv3-wall-single-cfg-1",
+      configurationId: "lg-lau150hyv3-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9517,7 +10266,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lau180hyv3-wall-single-cfg-1",
+      configurationId: "lg-lau180hyv3-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9528,7 +10277,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lau240hyv3-wall-single-cfg-1",
+      configurationId: "lg-lau240hyv3-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9539,7 +10288,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lsu243hlv3-wall-single-cfg-1",
+      configurationId: "lg-lsu243hlv3-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9550,7 +10299,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hhv-wall-single-cfg-1",
+      configurationId: "lg-luu180hhv-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9561,7 +10310,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hhv-wall-single-cfg-2",
+      configurationId: "lg-luu180hhv-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9572,7 +10321,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hhv-wall-single-cfg-3",
+      configurationId: "lg-luu180hhv-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9583,7 +10332,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hhv-wall-single-cfg-4",
+      configurationId: "lg-luu180hhv-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9594,7 +10343,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hhv-wall-single-cfg-1",
+      configurationId: "lg-luu240hhv-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9605,7 +10354,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hhv-wall-single-cfg-2",
+      configurationId: "lg-luu240hhv-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9616,7 +10365,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hhv-wall-single-cfg-3",
+      configurationId: "lg-luu240hhv-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9627,7 +10376,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hhv-wall-single-cfg-4",
+      configurationId: "lg-luu240hhv-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9638,7 +10387,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu420hhv-wall-single-cfg-1",
+      configurationId: "lg-luu420hhv-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9649,7 +10398,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu420hhv-wall-single-cfg-2",
+      configurationId: "lg-luu420hhv-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9660,7 +10409,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu420hhv-wall-single-cfg-3",
+      configurationId: "lg-luu420hhv-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9671,7 +10420,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hhv-wall-single-cfg-1",
+      configurationId: "lg-luu360hhv-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9682,7 +10431,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hhv-wall-single-cfg-2",
+      configurationId: "lg-luu360hhv-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9693,18 +10442,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hhv-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-luu480hhv-wall-single-cfg-1",
+      configurationId: "lg-luu480hhv-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9715,7 +10453,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu480hhv-wall-single-cfg-2",
+      configurationId: "lg-luu480hhv-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9726,7 +10464,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu480hhv-wall-single-cfg-3",
+      configurationId: "lg-luu480hhv-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9737,7 +10475,18 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arum048gss5-wall-single-cfg-1",
+      configurationId: "lg-luu360hhv-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-arum048gss5-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9748,7 +10497,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arum048gss5-wall-single-cfg-2",
+      configurationId: "lg-arum048gss5-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9759,7 +10508,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arum048gss5-wall-single-cfg-3",
+      configurationId: "lg-arum048gss5-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9770,7 +10519,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arum036gss5-wall-single-cfg-1",
+      configurationId: "lg-arum036gss5-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9781,7 +10530,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arum036gss5-wall-single-cfg-2",
+      configurationId: "lg-arum036gss5-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9792,7 +10541,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-arum036gss5-wall-single-cfg-3",
+      configurationId: "lg-arum036gss5-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9803,7 +10552,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu421hhv-wall-single-cfg-1",
+      configurationId: "lg-lmu421hhv-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9814,7 +10563,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu421hhv-wall-single-cfg-2",
+      configurationId: "lg-lmu421hhv-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9825,7 +10574,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu421hhv-wall-single-cfg-3",
+      configurationId: "lg-lmu421hhv-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9836,7 +10585,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu480hhv-wall-single-cfg-1",
+      configurationId: "lg-lmu480hhv-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9847,7 +10596,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu480hhv-wall-single-cfg-2",
+      configurationId: "lg-lmu480hhv-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9858,7 +10607,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu480hhv-wall-single-cfg-3",
+      configurationId: "lg-lmu480hhv-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9869,7 +10618,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu601hv-wall-single-cfg-1",
+      configurationId: "lg-lmu601hv-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9880,7 +10629,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu601hv-wall-single-cfg-2",
+      configurationId: "lg-lmu601hv-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9891,7 +10640,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu601hv-wall-single-cfg-3",
+      configurationId: "lg-lmu601hv-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9902,7 +10651,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu361hhv-wall-single-cfg-1",
+      configurationId: "lg-lmu361hhv-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9913,7 +10662,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu361hhv-wall-single-cfg-2",
+      configurationId: "lg-lmu361hhv-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9924,7 +10673,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu361hhv-wall-single-cfg-3",
+      configurationId: "lg-lmu361hhv-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9935,7 +10684,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lsu181hsv5-wall-single-cfg-1",
+      configurationId: "lg-lsu181hsv5-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9946,7 +10695,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lsu181hsv5-wall-single-cfg-2",
+      configurationId: "lg-lsu181hsv5-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9957,7 +10706,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu183hv-wall-single-cfg-1",
+      configurationId: "lg-lmu183hv-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9968,7 +10717,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu183hv-wall-single-cfg-2",
+      configurationId: "lg-lmu183hv-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9979,7 +10728,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu183hv-wall-single-cfg-3",
+      configurationId: "lg-lmu183hv-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -9990,7 +10739,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu243hv-wall-single-cfg-1",
+      configurationId: "lg-lmu243hv-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10001,18 +10750,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu243hv-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-lmu243hv-wall-single-cfg-3",
+      configurationId: "lg-lmu243hv-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10023,7 +10761,18 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu303hv-wall-single-cfg-1",
+      configurationId: "lg-lmu243hv-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-lmu303hv-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10034,7 +10783,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu303hv-wall-single-cfg-2",
+      configurationId: "lg-lmu303hv-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10045,7 +10794,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu303hv-wall-single-cfg-3",
+      configurationId: "lg-lmu303hv-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10056,7 +10805,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu363hv-wall-single-cfg-1",
+      configurationId: "lg-lmu363hv-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10067,7 +10816,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu363hv-wall-single-cfg-2",
+      configurationId: "lg-lmu363hv-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10078,7 +10827,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu363hv-wall-single-cfg-3",
+      configurationId: "lg-lmu363hv-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10089,7 +10838,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu483hv-wall-single-cfg-1",
+      configurationId: "lg-lmu483hv-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10100,7 +10849,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu483hv-wall-single-cfg-2",
+      configurationId: "lg-lmu483hv-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10111,7 +10860,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu483hv-wall-single-cfg-3",
+      configurationId: "lg-lmu483hv-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10122,7 +10871,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu543hv-wall-single-cfg-1",
+      configurationId: "lg-lmu543hv-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10133,7 +10882,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu543hv-wall-single-cfg-2",
+      configurationId: "lg-lmu543hv-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10144,7 +10893,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-lmu543hv-wall-single-cfg-3",
+      configurationId: "lg-lmu543hv-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10155,7 +10904,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu090hv-wall-single-cfg-1",
+      configurationId: "lg-luu090hv-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10166,7 +10915,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu090hv-wall-single-cfg-2",
+      configurationId: "lg-luu090hv-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10177,7 +10926,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu090hv-wall-single-cfg-3",
+      configurationId: "lg-luu090hv-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10188,7 +10937,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu120hv-wall-single-cfg-1",
+      configurationId: "lg-luu120hv-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10199,18 +10948,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu120hv-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9200,
-          cop: 2.09,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-luu120hv-wall-single-cfg-3",
+      configurationId: "lg-luu120hv-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10221,7 +10959,18 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hv-wall-single-cfg-1",
+      configurationId: "lg-luu120hv-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9200,
+          cop: 2.09,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-luu180hv-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10232,7 +10981,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hv-wall-single-cfg-2",
+      configurationId: "lg-luu180hv-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10243,7 +10992,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hv-wall-single-cfg-3",
+      configurationId: "lg-luu180hv-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10254,7 +11003,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hv-wall-single-cfg-1",
+      configurationId: "lg-luu240hv-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10265,7 +11014,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hv-wall-single-cfg-2",
+      configurationId: "lg-luu240hv-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10276,7 +11025,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hv-wall-single-cfg-3",
+      configurationId: "lg-luu240hv-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10287,7 +11036,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hv-wall-single-cfg-4",
+      configurationId: "lg-luu240hv-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10298,7 +11047,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hv-wall-single-cfg-1",
+      configurationId: "lg-luu360hv-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10309,7 +11058,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hv-wall-single-cfg-2",
+      configurationId: "lg-luu360hv-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10320,7 +11069,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hv-wall-single-cfg-3",
+      configurationId: "lg-luu360hv-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10331,7 +11080,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu420hv-wall-single-cfg-1",
+      configurationId: "lg-luu420hv-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10342,7 +11091,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu420hv-wall-single-cfg-2",
+      configurationId: "lg-luu420hv-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10353,7 +11102,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu480hv-wall-single-cfg-1",
+      configurationId: "lg-luu480hv-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10364,7 +11113,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu240hv-central-ducted-cfg-1",
+      configurationId: "lg-luu240hv-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10375,7 +11124,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hv-central-ducted-cfg-1",
+      configurationId: "lg-luu360hv-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10386,7 +11135,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hv-central-ducted-cfg-2",
+      configurationId: "lg-luu360hv-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10397,7 +11146,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu360hv-central-ducted-cfg-3",
+      configurationId: "lg-luu360hv-central-ducted-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10408,7 +11157,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu480hv-central-ducted-cfg-1",
+      configurationId: "lg-luu480hv-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10419,7 +11168,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu480hv-central-ducted-cfg-2",
+      configurationId: "lg-luu480hv-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10430,7 +11179,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu180hv-central-ducted-cfg-1",
+      configurationId: "lg-luu180hv-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10441,7 +11190,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu420hv-central-ducted-cfg-1",
+      configurationId: "lg-luu420hv-central-ducted-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10452,7 +11201,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-luu420hv-central-ducted-cfg-2",
+      configurationId: "lg-luu420hv-central-ducted-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10463,7 +11212,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa181a-wall-single-cfg-1",
+      configurationId: "lg-kusxa181a-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10474,7 +11223,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa181a-wall-single-cfg-2",
+      configurationId: "lg-kusxa181a-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10485,7 +11234,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa181a-wall-single-cfg-3",
+      configurationId: "lg-kusxa181a-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10496,7 +11245,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa241a-wall-single-cfg-1",
+      configurationId: "lg-kusxa241a-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10507,7 +11256,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa241a-wall-single-cfg-2",
+      configurationId: "lg-kusxa241a-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10518,7 +11267,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa241a-wall-single-cfg-3",
+      configurationId: "lg-kusxa241a-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10529,7 +11278,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa241a-wall-single-cfg-4",
+      configurationId: "lg-kusxa241a-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10540,7 +11289,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb181a-wall-single-cfg-1",
+      configurationId: "lg-kusxb181a-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10551,7 +11300,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb181a-wall-single-cfg-2",
+      configurationId: "lg-kusxb181a-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10562,7 +11311,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb181a-wall-single-cfg-3",
+      configurationId: "lg-kusxb181a-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10573,7 +11322,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb181a-wall-single-cfg-4",
+      configurationId: "lg-kusxb181a-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10584,7 +11333,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb241a-wall-single-cfg-1",
+      configurationId: "lg-kusxb241a-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10595,7 +11344,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb241a-wall-single-cfg-2",
+      configurationId: "lg-kusxb241a-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10606,7 +11355,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb241a-wall-single-cfg-3",
+      configurationId: "lg-kusxb241a-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10617,7 +11366,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb301a-wall-single-cfg-1",
+      configurationId: "lg-kusxb301a-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10628,7 +11377,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb301a-wall-single-cfg-2",
+      configurationId: "lg-kusxb301a-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10639,18 +11388,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb301a-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kusxb301a-wall-single-cfg-4",
+      configurationId: "lg-kusxb301a-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10661,7 +11399,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb121a-wall-single-cfg-1",
+      configurationId: "lg-kusxb121a-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10672,40 +11410,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb121a-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8700,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kusxb121a-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kusxb121a-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kusxa361a-wall-single-cfg-1",
+      configurationId: "lg-kusxa361a-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10716,7 +11421,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa361a-wall-single-cfg-2",
+      configurationId: "lg-kusxa361a-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10727,18 +11432,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa361a-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kusxb421a-wall-single-cfg-1",
+      configurationId: "lg-kusxb421a-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10749,7 +11443,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb421a-wall-single-cfg-2",
+      configurationId: "lg-kusxb421a-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10760,7 +11454,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb421a-wall-single-cfg-3",
+      configurationId: "lg-kusxb421a-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10771,7 +11465,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb091a-wall-single-cfg-1",
+      configurationId: "lg-kusxb091a-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10782,7 +11476,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb091a-wall-single-cfg-2",
+      configurationId: "lg-kusxb091a-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10793,7 +11487,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb091a-wall-single-cfg-3",
+      configurationId: "lg-kusxb091a-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10804,7 +11498,40 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa301a-wall-single-cfg-1",
+      configurationId: "lg-kusxb121a-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kusxb121a-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kusxb121a-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kusxa301a-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10815,7 +11542,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa301a-wall-single-cfg-2",
+      configurationId: "lg-kusxa301a-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10826,7 +11553,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa301a-wall-single-cfg-3",
+      configurationId: "lg-kusxa301a-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10837,7 +11564,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb481a-wall-single-cfg-1",
+      configurationId: "lg-kusxb481a-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10848,7 +11575,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb481a-wall-single-cfg-2",
+      configurationId: "lg-kusxb481a-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10859,7 +11586,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb481a-wall-single-cfg-3",
+      configurationId: "lg-kusxb481a-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10870,7 +11597,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb361a-wall-single-cfg-1",
+      configurationId: "lg-kusxb361a-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10881,7 +11608,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb361a-wall-single-cfg-2",
+      configurationId: "lg-kusxb361a-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10892,18 +11619,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb361a-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kusxa421a-wall-single-cfg-1",
+      configurationId: "lg-kusxa421a-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10914,7 +11630,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa421a-wall-single-cfg-2",
+      configurationId: "lg-kusxa421a-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10925,7 +11641,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa481a-wall-single-cfg-1",
+      configurationId: "lg-kusxa481a-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10936,7 +11652,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa481a-wall-single-cfg-2",
+      configurationId: "lg-kusxa481a-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10947,7 +11663,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa181a-wall-single-cfg-1",
+      configurationId: "lg-kumxa181a-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10958,7 +11674,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa181a-wall-single-cfg-2",
+      configurationId: "lg-kumxa181a-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10969,7 +11685,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa181a-wall-single-cfg-3",
+      configurationId: "lg-kumxa181a-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10980,7 +11696,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa241a-wall-single-cfg-1",
+      configurationId: "lg-kumxa241a-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -10991,18 +11707,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa241a-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kumxa241a-wall-single-cfg-3",
+      configurationId: "lg-kumxa241a-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11013,7 +11718,18 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa301a-wall-single-cfg-1",
+      configurationId: "lg-kumxa241a-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kumxa301a-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11024,7 +11740,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa301a-wall-single-cfg-2",
+      configurationId: "lg-kumxa301a-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11035,7 +11751,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa301a-wall-single-cfg-3",
+      configurationId: "lg-kumxa301a-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11046,7 +11762,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb181a-wall-single-cfg-1",
+      configurationId: "lg-kumxb181a-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11057,7 +11773,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb181a-wall-single-cfg-2",
+      configurationId: "lg-kumxb181a-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11068,7 +11784,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb181a-wall-single-cfg-3",
+      configurationId: "lg-kumxb181a-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11079,7 +11795,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb241a-wall-single-cfg-1",
+      configurationId: "lg-kumxb241a-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11090,18 +11806,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb241a-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kumxb241a-wall-single-cfg-3",
+      configurationId: "lg-kumxb241a-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11112,7 +11817,18 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum060gss0-wall-single-cfg-1",
+      configurationId: "lg-kumxb241a-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-zrum060gss0-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11123,7 +11839,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum060gss0-wall-single-cfg-2",
+      configurationId: "lg-zrum060gss0-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11134,7 +11850,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum060gss0-wall-single-cfg-3",
+      configurationId: "lg-zrum060gss0-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11145,7 +11861,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum048gss0-wall-single-cfg-1",
+      configurationId: "lg-zrum048gss0-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11156,7 +11872,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum048gss0-wall-single-cfg-2",
+      configurationId: "lg-zrum048gss0-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11167,7 +11883,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum048gss0-wall-single-cfg-3",
+      configurationId: "lg-zrum048gss0-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11178,7 +11894,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum036gss0-wall-single-cfg-1",
+      configurationId: "lg-zrum036gss0-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11189,7 +11905,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum036gss0-wall-single-cfg-2",
+      configurationId: "lg-zrum036gss0-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11200,7 +11916,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrum036gss0-wall-single-cfg-3",
+      configurationId: "lg-zrum036gss0-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11211,7 +11927,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrun024gss0-wall-single-cfg-1",
+      configurationId: "lg-zrun024gss0-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11222,7 +11938,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrun024gss0-wall-single-cfg-2",
+      configurationId: "lg-zrun024gss0-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11233,7 +11949,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-zrun024gss0-wall-single-cfg-3",
+      configurationId: "lg-zrun024gss0-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11244,7 +11960,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb301a-wall-single-cfg-1",
+      configurationId: "lg-kumxb301a-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11255,7 +11971,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb301a-wall-single-cfg-2",
+      configurationId: "lg-kumxb301a-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11266,7 +11982,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb301a-wall-single-cfg-3",
+      configurationId: "lg-kumxb301a-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11277,7 +11993,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb361a-wall-single-cfg-1",
+      configurationId: "lg-kumxb361a-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11288,7 +12004,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb361a-wall-single-cfg-2",
+      configurationId: "lg-kumxb361a-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11299,7 +12015,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb361a-wall-single-cfg-3",
+      configurationId: "lg-kumxb361a-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11310,7 +12026,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb481a-wall-single-cfg-1",
+      configurationId: "lg-kumxb481a-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11321,7 +12037,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb481a-wall-single-cfg-2",
+      configurationId: "lg-kumxb481a-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11332,7 +12048,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb481a-wall-single-cfg-3",
+      configurationId: "lg-kumxb481a-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11343,7 +12059,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb541a-wall-single-cfg-1",
+      configurationId: "lg-kumxb541a-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11354,7 +12070,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb541a-wall-single-cfg-2",
+      configurationId: "lg-kumxb541a-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11365,7 +12081,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb541a-wall-single-cfg-3",
+      configurationId: "lg-kumxb541a-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11376,7 +12092,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb601a-wall-single-cfg-1",
+      configurationId: "lg-kumxb601a-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11387,7 +12103,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb601a-wall-single-cfg-2",
+      configurationId: "lg-kumxb601a-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11398,7 +12114,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxb601a-wall-single-cfg-3",
+      configurationId: "lg-kumxb601a-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11409,7 +12125,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa361a-wall-single-cfg-1",
+      configurationId: "lg-kumxa361a-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11420,7 +12136,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa361a-wall-single-cfg-2",
+      configurationId: "lg-kumxa361a-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11431,7 +12147,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa361a-wall-single-cfg-3",
+      configurationId: "lg-kumxa361a-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11442,7 +12158,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa421a-wall-single-cfg-1",
+      configurationId: "lg-kumxa421a-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11453,7 +12169,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa421a-wall-single-cfg-2",
+      configurationId: "lg-kumxa421a-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11464,7 +12180,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa421a-wall-single-cfg-3",
+      configurationId: "lg-kumxa421a-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11475,7 +12191,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa481a-wall-single-cfg-1",
+      configurationId: "lg-kumxa481a-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11486,7 +12202,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa481a-wall-single-cfg-2",
+      configurationId: "lg-kumxa481a-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11497,7 +12213,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kumxa481a-wall-single-cfg-3",
+      configurationId: "lg-kumxa481a-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11508,7 +12224,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusab091a-wall-single-cfg-1",
+      configurationId: "lg-kusab091a-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11519,7 +12235,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusab091a-wall-single-cfg-2",
+      configurationId: "lg-kusab091a-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11530,7 +12246,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusab121a-wall-single-cfg-1",
+      configurationId: "lg-kusab121a-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11541,7 +12257,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusab121a-wall-single-cfg-2",
+      configurationId: "lg-kusab121a-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11552,7 +12268,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusab181a-wall-single-cfg-1",
+      configurationId: "lg-kusab181a-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11563,7 +12279,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusab181a-wall-single-cfg-2",
+      configurationId: "lg-kusab181a-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11574,7 +12290,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa121a-wall-single-cfg-1",
+      configurationId: "lg-kusxa121a-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11585,7 +12301,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb601a-wall-single-cfg-1",
+      configurationId: "lg-kusxb601a-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11596,7 +12312,29 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa422a-wall-single-cfg-1",
+      configurationId: "lg-kusxa361a-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kusxb301a-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kusxa422a-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11607,7 +12345,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa482a-wall-single-cfg-1",
+      configurationId: "lg-kusxa482a-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11618,7 +12356,18 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusap241a-wall-single-cfg-1",
+      configurationId: "lg-kusxb361a-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kusap241a-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11629,7 +12378,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusal241a-wall-single-cfg-1",
+      configurationId: "lg-kusal241a-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11640,7 +12389,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusal151a-wall-single-cfg-1",
+      configurationId: "lg-kusal151a-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11651,7 +12400,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusal181a-wall-single-cfg-1",
+      configurationId: "lg-kusal181a-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11662,7 +12411,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusal091a-wall-single-cfg-1",
+      configurationId: "lg-kusal091a-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11673,7 +12422,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusal121a-wall-single-cfg-1",
+      configurationId: "lg-kusal121a-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11684,7 +12433,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb181a-central-ducted-cfg-1",
+      configurationId: "lg-kusxb181a-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11695,7 +12444,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb241a-central-ducted-cfg-1",
+      configurationId: "lg-kusxb241a-central-ducted-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11706,7 +12455,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb361a-central-ducted-cfg-1",
+      configurationId: "lg-kusxb361a-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11717,7 +12466,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb361a-central-ducted-cfg-2",
+      configurationId: "lg-kusxb361a-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11728,7 +12477,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb421a-central-ducted-cfg-1",
+      configurationId: "lg-kusxb421a-central-ducted-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11739,7 +12488,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb481a-central-ducted-cfg-1",
+      configurationId: "lg-kusxb481a-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11750,7 +12499,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb481a-central-ducted-cfg-2",
+      configurationId: "lg-kusxb481a-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11761,7 +12510,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb601a-central-ducted-cfg-1",
+      configurationId: "lg-kusxb601a-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11772,7 +12521,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb601a-central-ducted-cfg-2",
+      configurationId: "lg-kusxb601a-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11783,7 +12532,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxb601a-central-ducted-cfg-3",
+      configurationId: "lg-kusxb601a-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11794,7 +12543,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa181a-central-ducted-cfg-1",
+      configurationId: "lg-kusxa181a-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11805,7 +12554,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa181a-central-ducted-cfg-2",
+      configurationId: "lg-kusxa181a-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11816,7 +12565,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa301a-central-ducted-cfg-1",
+      configurationId: "lg-kusxa301a-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11827,18 +12576,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa301a-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lg-kusxa361a-central-ducted-cfg-1",
+      configurationId: "lg-kusxa361a-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11849,7 +12587,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa361a-central-ducted-cfg-2",
+      configurationId: "lg-kusxa361a-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11860,7 +12598,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa422a-central-ducted-cfg-1",
+      configurationId: "lg-kusxa422a-central-ducted-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11871,7 +12609,7 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa482a-central-ducted-cfg-1",
+      configurationId: "lg-kusxa482a-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -11882,12 +12620,23 @@ export const lgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lg-kusxa482a-central-ducted-cfg-2",
+      configurationId: "lg-kusxa482a-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 32600,
           cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lg-kusxa301a-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.8,
           confidence: "verified",
         }
       ]

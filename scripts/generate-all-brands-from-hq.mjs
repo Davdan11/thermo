@@ -39,6 +39,21 @@ function inferSystemType(entry) {
   return "wall-single";
 }
 
+function getStandardCapacity(btu) {
+  if (!btu) return null;
+  const tiers = [6000, 9000, 12000, 15000, 18000, 20000, 24000, 30000, 36000, 42000, 48000, 60000];
+  let closest = tiers[0];
+  let minDiff = Math.abs(btu - closest);
+  for (const tier of tiers) {
+    const diff = Math.abs(btu - tier);
+    if (diff < minDiff) {
+      closest = tier;
+      minDiff = diff;
+    }
+  }
+  return closest;
+}
+
 function main() {
   console.log("🔄 Generating ALL brand files from HQ LogisVert data...\n");
 
@@ -76,18 +91,23 @@ function main() {
     if (brandSlug === "aux") brandSlug = "aux-brand";
     if (brandSlug === "new") brandSlug = "new-brand";
 
-    // ── Group by series + system type → "commercial range" ──
-    const rangesMap = new Map(); // rangeSlug → { seriesName, systemType, entries: [] }
+    // ── Group by series + system type + capacity → "commercial range" ──
+    const rangesMap = new Map(); // rangeSlug → { seriesName, systemType, capacityBtu, entries: [] }
 
     for (const entry of brandEntries) {
       const seriesName = entry.s || "Standard";
       const systemType = inferSystemType(entry);
-      const rangeSlug = cleanSlug(`${brandSlug}-${seriesName}-${systemType}`);
+      
+      const rawBtu = entry.c || entry.hn || null;
+      const capacityBtu = getStandardCapacity(rawBtu) || 12000;
+
+      const rangeSlug = cleanSlug(`${brandSlug}-${seriesName}-${systemType}-${capacityBtu}`);
 
       if (!rangesMap.has(rangeSlug)) {
         rangesMap.set(rangeSlug, {
           seriesName,
           systemType,
+          capacityBtu,
           entries: [],
         });
       }
@@ -108,7 +128,7 @@ function main() {
     const seenIndoor = new Set();
 
     for (const [rangeSlug, range] of rangesMap.entries()) {
-      const { seriesName, systemType, entries: rangeEntries } = range;
+      const { seriesName, systemType, capacityBtu, entries: rangeEntries } = range;
       const seriesSlug = cleanSlug(`${brandSlug}-${seriesName}`);
 
       // Compute min/max specs
@@ -157,13 +177,14 @@ function main() {
       modelsArr.push(`    {
       id: "${rangeSlug}",
       slug: "${rangeSlug}",
-      name: "${escStr(seriesName)}",
+      name: "${escStr(seriesName)} ${capacityBtu / 1000} 000 BTU",
       seriesId: "${seriesSlug}",
       brandId: "${brandSlug}",
-      modelNumber: "${escStr(seriesName)}",
-      normalizedModelNumber: "${cleanSlug(seriesName)}",
+      modelNumber: "${escStr(seriesName)} ${capacityBtu / 1000}k",
+      normalizedModelNumber: "${cleanSlug(seriesName)}-${capacityBtu}",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: ${capacityBtu},
       coolingCapacityMinBtu: ${minCool === Infinity ? "null" : minCool},
       coolingCapacityMaxBtu: ${maxCool === -Infinity ? "null" : maxCool},
       heatingCapacity5FMinBtu: ${minHeat17 === Infinity ? "null" : minHeat17},

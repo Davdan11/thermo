@@ -70,25 +70,26 @@ export const tgmDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "tgm-m-series-wall-single",
-      slug: "tgm-m-series-wall-single",
-      name: "M series",
+      id: "tgm-m-series-wall-single-12000",
+      slug: "tgm-m-series-wall-single-12000",
+      name: "M series 12 000 BTU",
       seriesId: "tgm-m-series",
       brandId: "tgm",
-      modelNumber: "M series",
-      normalizedModelNumber: "m-series",
+      modelNumber: "M series 12k",
+      normalizedModelNumber: "m-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8900,
-      heatingCapacity5FMaxBtu: 34000,
-      seer2Min: 18.9,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 19,
       seer2Max: 25.5,
-      hspf2Min: 9.8,
-      hspf2Max: 10.6,
+      hspf2Min: 10,
+      hspf2Max: 10.4,
       cop5FMin: 1.8,
-      cop5FMax: 2.4,
+      cop5FMax: 2.27,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -96,15 +97,16 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mr-series-wall-single",
-      slug: "tgm-mr-series-wall-single",
-      name: "MR Series",
+      id: "tgm-mr-series-wall-single-24000",
+      slug: "tgm-mr-series-wall-single-24000",
+      name: "MR Series 24 000 BTU",
       seriesId: "tgm-mr-series",
       brandId: "tgm",
-      modelNumber: "MR Series",
-      normalizedModelNumber: "mr-series",
+      modelNumber: "MR Series 24k",
+      normalizedModelNumber: "mr-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 16000,
@@ -122,18 +124,343 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-standard-wall-single",
-      slug: "tgm-standard-wall-single",
-      name: "Standard",
-      seriesId: "tgm-standard",
+      id: "tgm-m-series-wall-single-15000",
+      slug: "tgm-m-series-wall-single-15000",
+      name: "M series 15 000 BTU",
+      seriesId: "tgm-m-series",
       brandId: "tgm",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "M series 15k",
+      normalizedModelNumber: "m-series-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-standard-wall-single-36000",
+      slug: "tgm-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "tgm-standard",
+      brandId: "tgm",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-m-series-wall-single-48000",
+      slug: "tgm-m-series-wall-single-48000",
+      name: "M series 48 000 BTU",
+      seriesId: "tgm-m-series",
+      brandId: "tgm",
+      modelNumber: "M series 48k",
+      normalizedModelNumber: "m-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 18.9,
+      seer2Max: 18.9,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-m-series-wall-single-18000",
+      slug: "tgm-m-series-wall-single-18000",
+      name: "M series 18 000 BTU",
+      seriesId: "tgm-m-series",
+      brandId: "tgm",
+      modelNumber: "M series 18k",
+      normalizedModelNumber: "m-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12600,
+      heatingCapacity5FMaxBtu: 14800,
+      seer2Min: 19,
+      seer2Max: 23,
+      hspf2Min: 9.8,
+      hspf2Max: 10.6,
+      cop5FMin: 2,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mm-series-wall-single-24000",
+      slug: "tgm-mm-series-wall-single-24000",
+      name: "MM Series 24 000 BTU",
+      seriesId: "tgm-mm-series",
+      brandId: "tgm",
+      modelNumber: "MM Series 24k",
+      normalizedModelNumber: "mm-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mm-series-wall-single-30000",
+      slug: "tgm-mm-series-wall-single-30000",
+      name: "MM Series 30 000 BTU",
+      seriesId: "tgm-mm-series",
+      brandId: "tgm",
+      modelNumber: "MM Series 30k",
+      normalizedModelNumber: "mm-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 21,
+      seer2Max: 22.25,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mm-series-wall-single-36000",
+      slug: "tgm-mm-series-wall-single-36000",
+      name: "MM Series 36 000 BTU",
+      seriesId: "tgm-mm-series",
+      brandId: "tgm",
+      modelNumber: "MM Series 36k",
+      normalizedModelNumber: "mm-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 26400,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.68,
+      cop5FMax: 1.68,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mm-series-wall-single-48000",
+      slug: "tgm-mm-series-wall-single-48000",
+      name: "MM Series 48 000 BTU",
+      seriesId: "tgm-mm-series",
+      brandId: "tgm",
+      modelNumber: "MM Series 48k",
+      normalizedModelNumber: "mm-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 21.1,
+      seer2Max: 21.1,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-18000",
+      slug: "tgm-mrs-series-wall-single-18000",
+      name: "MRS Series 18 000 BTU",
+      seriesId: "tgm-mrs-series",
+      brandId: "tgm",
+      modelNumber: "MRS Series 18k",
+      normalizedModelNumber: "mrs-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13700,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 22.3,
+      hspf2Min: 10.4,
+      hspf2Max: 11.4,
+      cop5FMin: 2.05,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-24000",
+      slug: "tgm-mrs-series-wall-single-24000",
+      name: "MRS Series 24 000 BTU",
+      seriesId: "tgm-mrs-series",
+      brandId: "tgm",
+      modelNumber: "MRS Series 24k",
+      normalizedModelNumber: "mrs-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 19,
+      seer2Max: 22,
+      hspf2Min: 10.5,
+      hspf2Max: 11.1,
+      cop5FMin: 2.27,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-36000",
+      slug: "tgm-mrs-series-wall-single-36000",
+      name: "MRS Series 36 000 BTU",
+      seriesId: "tgm-mrs-series",
+      brandId: "tgm",
+      modelNumber: "MRS Series 36k",
+      normalizedModelNumber: "mrs-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-48000",
+      slug: "tgm-mrs-series-wall-single-48000",
+      name: "MRS Series 48 000 BTU",
+      seriesId: "tgm-mrs-series",
+      brandId: "tgm",
+      modelNumber: "MRS Series 48k",
+      normalizedModelNumber: "mrs-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36600,
+      heatingCapacity5FMaxBtu: 39500,
+      seer2Min: 17.1,
+      seer2Max: 19.8,
+      hspf2Min: 9.8,
+      hspf2Max: 10.2,
+      cop5FMin: 1.95,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-standard-wall-single-60000",
+      slug: "tgm-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "tgm-standard",
+      brandId: "tgm",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 40000,
       heatingCapacity5FMaxBtu: 40000,
       seer2Min: null,
       seer2Max: null,
@@ -148,53 +475,28 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mm-series-wall-single",
-      slug: "tgm-mm-series-wall-single",
-      name: "MM Series",
-      seriesId: "tgm-mm-series",
+      id: "tgm-standard-wall-single-48000",
+      slug: "tgm-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "tgm-standard",
       brandId: "tgm",
-      modelNumber: "MM Series",
-      normalizedModelNumber: "mm-series",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 20000,
-      heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 20,
-      seer2Max: 23.5,
-      hspf2Min: 9.2,
-      hspf2Max: 9.5,
-      cop5FMin: 1.68,
-      cop5FMax: 2,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 37200,
+      heatingCapacity5FMaxBtu: 37200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-mrs-series-wall-single",
-      slug: "tgm-mrs-series-wall-single",
-      name: "MRS Series",
-      seriesId: "tgm-mrs-series",
-      brandId: "tgm",
-      modelNumber: "MRS Series",
-      normalizedModelNumber: "mrs-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 16800,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 13700,
-      heatingCapacity5FMaxBtu: 39500,
-      seer2Min: 17.1,
-      seer2Max: 22.3,
-      hspf2Min: 9.8,
-      hspf2Max: 11.4,
-      cop5FMin: 1.95,
-      cop5FMax: 2.4,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -214,8 +516,26 @@ export const tgmDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "tgm-mrapt24as",
+      modelNumber: "MRAPT24AS",
+      brandId: "tgm",
+      refrigerant: null as any,
+    },
+    {
+      id: "tgm-mrsvht24as",
+      modelNumber: "MRSVHT24AS",
+      brandId: "tgm",
+      refrigerant: null as any,
+    },
+    {
       id: "tgm-mrsvht18as",
       modelNumber: "MRSVHT18AS",
+      brandId: "tgm",
+      refrigerant: null as any,
+    },
+    {
+      id: "tgm-mrsvht36as",
+      modelNumber: "MRSVHT36AS",
       brandId: "tgm",
       refrigerant: null as any,
     },
@@ -234,30 +554,6 @@ export const tgmDataset: BrandDataset = {
     {
       id: "tgm-mmrsht18as2",
       modelNumber: "MMRSHT18AS2",
-      brandId: "tgm",
-      refrigerant: null as any,
-    },
-    {
-      id: "tgm-mrapt24as",
-      modelNumber: "MRAPT24AS",
-      brandId: "tgm",
-      refrigerant: null as any,
-    },
-    {
-      id: "tgm-mrsvht24as",
-      modelNumber: "MRSVHT24AS",
-      brandId: "tgm",
-      refrigerant: null as any,
-    },
-    {
-      id: "tgm-mrsvht36as",
-      modelNumber: "MRSVHT36AS",
-      brandId: "tgm",
-      refrigerant: null as any,
-    },
-    {
-      id: "tgm-mr5svht60as",
-      modelNumber: "MR5SVHT60AS",
       brandId: "tgm",
       refrigerant: null as any,
     },
@@ -302,6 +598,12 @@ export const tgmDataset: BrandDataset = {
       modelNumber: "MRS5VHT48AS",
       brandId: "tgm",
       refrigerant: null as any,
+    },
+    {
+      id: "tgm-mr5svht60as",
+      modelNumber: "MR5SVHT60AS",
+      brandId: "tgm",
+      refrigerant: null as any,
     }
   ],
   indoorUnits: [
@@ -309,9 +611,9 @@ export const tgmDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "tgm-m-series-wall-single-cfg-1",
-      slug: "tgm-m-series-wall-single-cfg-1",
-      modelId: "tgm-m-series-wall-single",
+      id: "tgm-m-series-wall-single-12000-cfg-1",
+      slug: "tgm-m-series-wall-single-12000-cfg-1",
+      modelId: "tgm-m-series-wall-single-12000",
       outdoorUnitId: "tgm-mrapt12as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -323,9 +625,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-m-series-wall-single-cfg-2",
-      slug: "tgm-m-series-wall-single-cfg-2",
-      modelId: "tgm-m-series-wall-single",
+      id: "tgm-m-series-wall-single-12000-cfg-2",
+      slug: "tgm-m-series-wall-single-12000-cfg-2",
+      modelId: "tgm-m-series-wall-single-12000",
       outdoorUnitId: "tgm-mrsvht12as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -337,37 +639,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-m-series-wall-single-cfg-3",
-      slug: "tgm-m-series-wall-single-cfg-3",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mrsvht18as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-4",
-      slug: "tgm-m-series-wall-single-cfg-4",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mrsvht48as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.9,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-5",
-      slug: "tgm-m-series-wall-single-cfg-5",
-      modelId: "tgm-m-series-wall-single",
+      id: "tgm-m-series-wall-single-12000-cfg-3",
+      slug: "tgm-m-series-wall-single-12000-cfg-3",
+      modelId: "tgm-m-series-wall-single-12000",
       outdoorUnitId: "tgm-mrsvht12as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 11500,
@@ -379,107 +653,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-m-series-wall-single-cfg-6",
-      slug: "tgm-m-series-wall-single-cfg-6",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mrsvht18as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-7",
-      slug: "tgm-m-series-wall-single-cfg-7",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mrsvht48as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.9,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-8",
-      slug: "tgm-m-series-wall-single-cfg-8",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mc4vht18s",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-9",
-      slug: "tgm-m-series-wall-single-cfg-9",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mrsvht48as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.9,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-10",
-      slug: "tgm-m-series-wall-single-cfg-10",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mmrsht18as2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-11",
-      slug: "tgm-m-series-wall-single-cfg-11",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mmrsht18as2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-m-series-wall-single-cfg-12",
-      slug: "tgm-m-series-wall-single-cfg-12",
-      modelId: "tgm-m-series-wall-single",
-      outdoorUnitId: "tgm-mmrsht18as2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-mr-series-wall-single-cfg-1",
-      slug: "tgm-mr-series-wall-single-cfg-1",
-      modelId: "tgm-mr-series-wall-single",
+      id: "tgm-mr-series-wall-single-24000-cfg-1",
+      slug: "tgm-mr-series-wall-single-24000-cfg-1",
+      modelId: "tgm-mr-series-wall-single-24000",
       outdoorUnitId: "tgm-mrapt24as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -491,9 +667,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mr-series-wall-single-cfg-2",
-      slug: "tgm-mr-series-wall-single-cfg-2",
-      modelId: "tgm-mr-series-wall-single",
+      id: "tgm-mr-series-wall-single-24000-cfg-2",
+      slug: "tgm-mr-series-wall-single-24000-cfg-2",
+      modelId: "tgm-mr-series-wall-single-24000",
       outdoorUnitId: "tgm-mrsvht24as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -505,9 +681,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mr-series-wall-single-cfg-3",
-      slug: "tgm-mr-series-wall-single-cfg-3",
-      modelId: "tgm-mr-series-wall-single",
+      id: "tgm-mr-series-wall-single-24000-cfg-3",
+      slug: "tgm-mr-series-wall-single-24000-cfg-3",
+      modelId: "tgm-mr-series-wall-single-24000",
       outdoorUnitId: "tgm-mrsvht24as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -519,9 +695,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mr-series-wall-single-cfg-4",
-      slug: "tgm-mr-series-wall-single-cfg-4",
-      modelId: "tgm-mr-series-wall-single",
+      id: "tgm-mr-series-wall-single-24000-cfg-4",
+      slug: "tgm-mr-series-wall-single-24000-cfg-4",
+      modelId: "tgm-mr-series-wall-single-24000",
       outdoorUnitId: "tgm-mrsvht24as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -533,9 +709,23 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-standard-wall-single-cfg-1",
-      slug: "tgm-standard-wall-single-cfg-1",
-      modelId: "tgm-standard-wall-single",
+      id: "tgm-m-series-wall-single-15000-cfg-1",
+      slug: "tgm-m-series-wall-single-15000-cfg-1",
+      modelId: "tgm-m-series-wall-single-15000",
+      outdoorUnitId: "tgm-mrsvht18as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20.5,
+      hspf2: 10.5,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-standard-wall-single-36000-cfg-1",
+      slug: "tgm-standard-wall-single-36000-cfg-1",
+      modelId: "tgm-standard-wall-single-36000",
       outdoorUnitId: "tgm-mrsvht36as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -547,9 +737,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-standard-wall-single-cfg-2",
-      slug: "tgm-standard-wall-single-cfg-2",
-      modelId: "tgm-standard-wall-single",
+      id: "tgm-standard-wall-single-36000-cfg-2",
+      slug: "tgm-standard-wall-single-36000-cfg-2",
+      modelId: "tgm-standard-wall-single-36000",
       outdoorUnitId: "tgm-mrsvht36as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -561,9 +751,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-standard-wall-single-cfg-3",
-      slug: "tgm-standard-wall-single-cfg-3",
-      modelId: "tgm-standard-wall-single",
+      id: "tgm-standard-wall-single-36000-cfg-3",
+      slug: "tgm-standard-wall-single-36000-cfg-3",
+      modelId: "tgm-standard-wall-single-36000",
       outdoorUnitId: "tgm-mrsvht36as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -575,37 +765,121 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-standard-wall-single-cfg-4",
-      slug: "tgm-standard-wall-single-cfg-4",
-      modelId: "tgm-standard-wall-single",
-      outdoorUnitId: "tgm-mr5svht60as",
+      id: "tgm-m-series-wall-single-48000-cfg-1",
+      slug: "tgm-m-series-wall-single-48000-cfg-1",
+      modelId: "tgm-m-series-wall-single-48000",
+      outdoorUnitId: "tgm-mrsvht48as",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 58000,
-      coolingCapacityMaxBtu: 58000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-standard-wall-single-cfg-5",
-      slug: "tgm-standard-wall-single-cfg-5",
-      modelId: "tgm-standard-wall-single",
-      outdoorUnitId: "tgm-mr5svht60as",
+      id: "tgm-m-series-wall-single-48000-cfg-2",
+      slug: "tgm-m-series-wall-single-48000-cfg-2",
+      modelId: "tgm-m-series-wall-single-48000",
+      outdoorUnitId: "tgm-mrsvht48as",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mm-series-wall-single-cfg-1",
-      slug: "tgm-mm-series-wall-single-cfg-1",
-      modelId: "tgm-mm-series-wall-single",
+      id: "tgm-m-series-wall-single-48000-cfg-3",
+      slug: "tgm-m-series-wall-single-48000-cfg-3",
+      modelId: "tgm-m-series-wall-single-48000",
+      outdoorUnitId: "tgm-mrsvht48as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-m-series-wall-single-18000-cfg-1",
+      slug: "tgm-m-series-wall-single-18000-cfg-1",
+      modelId: "tgm-m-series-wall-single-18000",
+      outdoorUnitId: "tgm-mrsvht18as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-m-series-wall-single-18000-cfg-2",
+      slug: "tgm-m-series-wall-single-18000-cfg-2",
+      modelId: "tgm-m-series-wall-single-18000",
+      outdoorUnitId: "tgm-mc4vht18s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-m-series-wall-single-18000-cfg-3",
+      slug: "tgm-m-series-wall-single-18000-cfg-3",
+      modelId: "tgm-m-series-wall-single-18000",
+      outdoorUnitId: "tgm-mmrsht18as2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-m-series-wall-single-18000-cfg-4",
+      slug: "tgm-m-series-wall-single-18000-cfg-4",
+      modelId: "tgm-m-series-wall-single-18000",
+      outdoorUnitId: "tgm-mmrsht18as2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-m-series-wall-single-18000-cfg-5",
+      slug: "tgm-m-series-wall-single-18000-cfg-5",
+      modelId: "tgm-m-series-wall-single-18000",
+      outdoorUnitId: "tgm-mmrsht18as2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mm-series-wall-single-24000-cfg-1",
+      slug: "tgm-mm-series-wall-single-24000-cfg-1",
+      modelId: "tgm-mm-series-wall-single-24000",
       outdoorUnitId: "tgm-mmrsht27as3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -617,9 +891,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mm-series-wall-single-cfg-2",
-      slug: "tgm-mm-series-wall-single-cfg-2",
-      modelId: "tgm-mm-series-wall-single",
+      id: "tgm-mm-series-wall-single-30000-cfg-1",
+      slug: "tgm-mm-series-wall-single-30000-cfg-1",
+      modelId: "tgm-mm-series-wall-single-30000",
       outdoorUnitId: "tgm-mmrsht27as3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -631,9 +905,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mm-series-wall-single-cfg-3",
-      slug: "tgm-mm-series-wall-single-cfg-3",
-      modelId: "tgm-mm-series-wall-single",
+      id: "tgm-mm-series-wall-single-30000-cfg-2",
+      slug: "tgm-mm-series-wall-single-30000-cfg-2",
+      modelId: "tgm-mm-series-wall-single-30000",
       outdoorUnitId: "tgm-mmrsht27as3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -645,9 +919,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mm-series-wall-single-cfg-4",
-      slug: "tgm-mm-series-wall-single-cfg-4",
-      modelId: "tgm-mm-series-wall-single",
+      id: "tgm-mm-series-wall-single-36000-cfg-1",
+      slug: "tgm-mm-series-wall-single-36000-cfg-1",
+      modelId: "tgm-mm-series-wall-single-36000",
       outdoorUnitId: "tgm-mmrsht36as4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -659,9 +933,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mm-series-wall-single-cfg-5",
-      slug: "tgm-mm-series-wall-single-cfg-5",
-      modelId: "tgm-mm-series-wall-single",
+      id: "tgm-mm-series-wall-single-48000-cfg-1",
+      slug: "tgm-mm-series-wall-single-48000-cfg-1",
+      modelId: "tgm-mm-series-wall-single-48000",
       outdoorUnitId: "tgm-mmrsht48as5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -673,9 +947,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mm-series-wall-single-cfg-6",
-      slug: "tgm-mm-series-wall-single-cfg-6",
-      modelId: "tgm-mm-series-wall-single",
+      id: "tgm-mm-series-wall-single-48000-cfg-2",
+      slug: "tgm-mm-series-wall-single-48000-cfg-2",
+      modelId: "tgm-mm-series-wall-single-48000",
       outdoorUnitId: "tgm-mmrsht48as5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -687,9 +961,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-1",
-      slug: "tgm-mrs-series-wall-single-cfg-1",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-18000-cfg-1",
+      slug: "tgm-mrs-series-wall-single-18000-cfg-1",
+      modelId: "tgm-mrs-series-wall-single-18000",
       outdoorUnitId: "tgm-mrs5vht18as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -701,65 +975,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-2",
-      slug: "tgm-mrs-series-wall-single-cfg-2",
-      modelId: "tgm-mrs-series-wall-single",
-      outdoorUnitId: "tgm-mrs5vht24as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.1,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-mrs-series-wall-single-cfg-3",
-      slug: "tgm-mrs-series-wall-single-cfg-3",
-      modelId: "tgm-mrs-series-wall-single",
-      outdoorUnitId: "tgm-mrs5vht36as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-mrs-series-wall-single-cfg-4",
-      slug: "tgm-mrs-series-wall-single-cfg-4",
-      modelId: "tgm-mrs-series-wall-single",
-      outdoorUnitId: "tgm-mrs5vht48as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19.8,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-mrs-series-wall-single-cfg-5",
-      slug: "tgm-mrs-series-wall-single-cfg-5",
-      modelId: "tgm-mrs-series-wall-single",
-      outdoorUnitId: "tgm-mrs5vht48as",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 9.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "tgm-mrs-series-wall-single-cfg-6",
-      slug: "tgm-mrs-series-wall-single-cfg-6",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-18000-cfg-2",
+      slug: "tgm-mrs-series-wall-single-18000-cfg-2",
+      modelId: "tgm-mrs-series-wall-single-18000",
       outdoorUnitId: "tgm-mrs5vht18as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16800,
@@ -771,9 +989,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-7",
-      slug: "tgm-mrs-series-wall-single-cfg-7",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-18000-cfg-3",
+      slug: "tgm-mrs-series-wall-single-18000-cfg-3",
+      modelId: "tgm-mrs-series-wall-single-18000",
       outdoorUnitId: "tgm-mrs5vht18as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -785,9 +1003,23 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-8",
-      slug: "tgm-mrs-series-wall-single-cfg-8",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-24000-cfg-1",
+      slug: "tgm-mrs-series-wall-single-24000-cfg-1",
+      modelId: "tgm-mrs-series-wall-single-24000",
+      outdoorUnitId: "tgm-mrs5vht24as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.1,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-24000-cfg-2",
+      slug: "tgm-mrs-series-wall-single-24000-cfg-2",
+      modelId: "tgm-mrs-series-wall-single-24000",
       outdoorUnitId: "tgm-mrs5vht24as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -799,9 +1031,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-9",
-      slug: "tgm-mrs-series-wall-single-cfg-9",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-24000-cfg-3",
+      slug: "tgm-mrs-series-wall-single-24000-cfg-3",
+      modelId: "tgm-mrs-series-wall-single-24000",
       outdoorUnitId: "tgm-mrs5vht24as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -813,9 +1045,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-10",
-      slug: "tgm-mrs-series-wall-single-cfg-10",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-36000-cfg-1",
+      slug: "tgm-mrs-series-wall-single-36000-cfg-1",
+      modelId: "tgm-mrs-series-wall-single-36000",
       outdoorUnitId: "tgm-mrs5vht36as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -827,9 +1059,9 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-11",
-      slug: "tgm-mrs-series-wall-single-cfg-11",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-36000-cfg-2",
+      slug: "tgm-mrs-series-wall-single-36000-cfg-2",
+      modelId: "tgm-mrs-series-wall-single-36000",
       outdoorUnitId: "tgm-mrs5vht36as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -841,9 +1073,51 @@ export const tgmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "tgm-mrs-series-wall-single-cfg-12",
-      slug: "tgm-mrs-series-wall-single-cfg-12",
-      modelId: "tgm-mrs-series-wall-single",
+      id: "tgm-mrs-series-wall-single-36000-cfg-3",
+      slug: "tgm-mrs-series-wall-single-36000-cfg-3",
+      modelId: "tgm-mrs-series-wall-single-36000",
+      outdoorUnitId: "tgm-mrs5vht36as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-48000-cfg-1",
+      slug: "tgm-mrs-series-wall-single-48000-cfg-1",
+      modelId: "tgm-mrs-series-wall-single-48000",
+      outdoorUnitId: "tgm-mrs5vht48as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19.8,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-48000-cfg-2",
+      slug: "tgm-mrs-series-wall-single-48000-cfg-2",
+      modelId: "tgm-mrs-series-wall-single-48000",
+      outdoorUnitId: "tgm-mrs5vht48as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-mrs-series-wall-single-48000-cfg-3",
+      slug: "tgm-mrs-series-wall-single-48000-cfg-3",
+      modelId: "tgm-mrs-series-wall-single-48000",
       outdoorUnitId: "tgm-mrs5vht48as",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -853,11 +1127,39 @@ export const tgmDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-standard-wall-single-60000-cfg-1",
+      slug: "tgm-standard-wall-single-60000-cfg-1",
+      modelId: "tgm-standard-wall-single-60000",
+      outdoorUnitId: "tgm-mr5svht60as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 58000,
+      coolingCapacityMaxBtu: 58000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "tgm-standard-wall-single-48000-cfg-1",
+      slug: "tgm-standard-wall-single-48000-cfg-1",
+      modelId: "tgm-standard-wall-single-48000",
+      outdoorUnitId: "tgm-mr5svht60as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "tgm-m-series-wall-single-cfg-1",
+      configurationId: "tgm-m-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -868,7 +1170,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-m-series-wall-single-cfg-2",
+      configurationId: "tgm-m-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -879,29 +1181,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-m-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-5",
+      configurationId: "tgm-m-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -912,84 +1192,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-m-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: 2.08,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-m-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-mr-series-wall-single-cfg-1",
+      configurationId: "tgm-mr-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1000,7 +1203,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mr-series-wall-single-cfg-2",
+      configurationId: "tgm-mr-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1011,7 +1214,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mr-series-wall-single-cfg-3",
+      configurationId: "tgm-mr-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1022,7 +1225,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mr-series-wall-single-cfg-4",
+      configurationId: "tgm-mr-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1033,7 +1236,18 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-standard-wall-single-cfg-1",
+      configurationId: "tgm-m-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1044,7 +1258,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-standard-wall-single-cfg-2",
+      configurationId: "tgm-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1055,7 +1269,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-standard-wall-single-cfg-3",
+      configurationId: "tgm-standard-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1066,29 +1280,95 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-standard-wall-single-cfg-4",
+      configurationId: "tgm-m-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: null,
+          heatingCapacityBtu: 30000,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tgm-standard-wall-single-cfg-5",
+      configurationId: "tgm-m-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 37200,
-          cop: null,
+          heatingCapacityBtu: 34000,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "tgm-mm-series-wall-single-cfg-1",
+      configurationId: "tgm-m-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-m-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-m-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: 2.08,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-m-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-m-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-m-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-mm-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1099,7 +1379,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mm-series-wall-single-cfg-2",
+      configurationId: "tgm-mm-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1110,7 +1390,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mm-series-wall-single-cfg-3",
+      configurationId: "tgm-mm-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1121,7 +1401,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mm-series-wall-single-cfg-4",
+      configurationId: "tgm-mm-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1132,7 +1412,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mm-series-wall-single-cfg-5",
+      configurationId: "tgm-mm-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1143,7 +1423,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mm-series-wall-single-cfg-6",
+      configurationId: "tgm-mm-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1154,7 +1434,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-1",
+      configurationId: "tgm-mrs-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1165,51 +1445,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-mrs-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-mrs-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-mrs-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36600,
-          cop: 2.11,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "tgm-mrs-series-wall-single-cfg-6",
+      configurationId: "tgm-mrs-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1220,7 +1456,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-7",
+      configurationId: "tgm-mrs-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1231,7 +1467,18 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-8",
+      configurationId: "tgm-mrs-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-mrs-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1242,7 +1489,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-9",
+      configurationId: "tgm-mrs-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1253,7 +1500,18 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-10",
+      configurationId: "tgm-mrs-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-mrs-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1264,7 +1522,7 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-11",
+      configurationId: "tgm-mrs-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1275,12 +1533,56 @@ export const tgmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "tgm-mrs-series-wall-single-cfg-12",
+      configurationId: "tgm-mrs-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-mrs-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36600,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-mrs-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 39000,
           cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "tgm-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37200,
+          cop: null,
           confidence: "verified",
         }
       ]

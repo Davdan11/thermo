@@ -26,18 +26,73 @@ export const generalluxstarDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "generallux-star-standard-wall-single",
-      slug: "generallux-star-standard-wall-single",
-      name: "Standard",
+      id: "generallux-star-standard-wall-single-12000",
+      slug: "generallux-star-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "generallux-star-standard",
       brandId: "generallux-star",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6800,
+      heatingCapacity5FMaxBtu: 7500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "generallux-star-standard-wall-single-18000",
+      slug: "generallux-star-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "generallux-star-standard",
+      brandId: "generallux-star",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 11600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "generallux-star-standard-wall-single-24000",
+      slug: "generallux-star-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "generallux-star-standard",
+      brandId: "generallux-star",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14500,
       heatingCapacity5FMaxBtu: 14500,
       seer2Min: null,
       seer2Max: null,
@@ -60,26 +115,8 @@ export const generalluxstarDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "generallux-star-ast-18uw3sbbtu00-o",
-      modelNumber: "AST-18UW3SBBTU00(O)",
-      brandId: "generallux-star",
-      refrigerant: null as any,
-    },
-    {
-      id: "generallux-star-ast-24uw3sdbtu01-o",
-      modelNumber: "AST-24UW3SDBTU01(O)",
-      brandId: "generallux-star",
-      refrigerant: null as any,
-    },
-    {
       id: "generallux-star-ast-12uw3sxetu02-o",
       modelNumber: "AST-12UW3SXETU02(O)",
-      brandId: "generallux-star",
-      refrigerant: null as any,
-    },
-    {
-      id: "generallux-star-ast-18uw3sbbtu01-o",
-      modelNumber: "AST-18UW3SBBTU01(O)",
       brandId: "generallux-star",
       refrigerant: null as any,
     },
@@ -90,20 +127,38 @@ export const generalluxstarDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "generallux-star-gns-18hch23to1",
-      modelNumber: "GNS-18HCH23TO1",
-      brandId: "generallux-star",
-      refrigerant: null as any,
-    },
-    {
       id: "generallux-star-gns-12hch23to2",
       modelNumber: "GNS-12HCH23TO2",
       brandId: "generallux-star",
       refrigerant: null as any,
     },
     {
+      id: "generallux-star-ast-18uw3sbbtu00-o",
+      modelNumber: "AST-18UW3SBBTU00(O)",
+      brandId: "generallux-star",
+      refrigerant: null as any,
+    },
+    {
+      id: "generallux-star-ast-18uw3sbbtu01-o",
+      modelNumber: "AST-18UW3SBBTU01(O)",
+      brandId: "generallux-star",
+      refrigerant: null as any,
+    },
+    {
+      id: "generallux-star-gns-18hch23to1",
+      modelNumber: "GNS-18HCH23TO1",
+      brandId: "generallux-star",
+      refrigerant: null as any,
+    },
+    {
       id: "generallux-star-gns-18hch21to2",
       modelNumber: "GNS-18HCH21TO2",
+      brandId: "generallux-star",
+      refrigerant: null as any,
+    },
+    {
+      id: "generallux-star-ast-24uw3sdbtu01-o",
+      modelNumber: "AST-24UW3SDBTU01(O)",
       brandId: "generallux-star",
       refrigerant: null as any,
     }
@@ -113,9 +168,9 @@ export const generalluxstarDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "generallux-star-standard-wall-single-cfg-1",
-      slug: "generallux-star-standard-wall-single-cfg-1",
-      modelId: "generallux-star-standard-wall-single",
+      id: "generallux-star-standard-wall-single-12000-cfg-1",
+      slug: "generallux-star-standard-wall-single-12000-cfg-1",
+      modelId: "generallux-star-standard-wall-single-12000",
       outdoorUnitId: "generallux-star-ast-12uw3sxetu01-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -127,37 +182,9 @@ export const generalluxstarDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "generallux-star-standard-wall-single-cfg-2",
-      slug: "generallux-star-standard-wall-single-cfg-2",
-      modelId: "generallux-star-standard-wall-single",
-      outdoorUnitId: "generallux-star-ast-18uw3sbbtu00-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "generallux-star-standard-wall-single-cfg-3",
-      slug: "generallux-star-standard-wall-single-cfg-3",
-      modelId: "generallux-star-standard-wall-single",
-      outdoorUnitId: "generallux-star-ast-24uw3sdbtu01-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23400,
-      coolingCapacityMaxBtu: 23400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "generallux-star-standard-wall-single-cfg-4",
-      slug: "generallux-star-standard-wall-single-cfg-4",
-      modelId: "generallux-star-standard-wall-single",
+      id: "generallux-star-standard-wall-single-12000-cfg-2",
+      slug: "generallux-star-standard-wall-single-12000-cfg-2",
+      modelId: "generallux-star-standard-wall-single-12000",
       outdoorUnitId: "generallux-star-ast-12uw3sxetu02-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -169,23 +196,9 @@ export const generalluxstarDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "generallux-star-standard-wall-single-cfg-5",
-      slug: "generallux-star-standard-wall-single-cfg-5",
-      modelId: "generallux-star-standard-wall-single",
-      outdoorUnitId: "generallux-star-ast-18uw3sbbtu01-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "generallux-star-standard-wall-single-cfg-6",
-      slug: "generallux-star-standard-wall-single-cfg-6",
-      modelId: "generallux-star-standard-wall-single",
+      id: "generallux-star-standard-wall-single-12000-cfg-3",
+      slug: "generallux-star-standard-wall-single-12000-cfg-3",
+      modelId: "generallux-star-standard-wall-single-12000",
       outdoorUnitId: "generallux-star-gns-12hch22to1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -197,23 +210,9 @@ export const generalluxstarDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "generallux-star-standard-wall-single-cfg-7",
-      slug: "generallux-star-standard-wall-single-cfg-7",
-      modelId: "generallux-star-standard-wall-single",
-      outdoorUnitId: "generallux-star-gns-18hch23to1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "generallux-star-standard-wall-single-cfg-8",
-      slug: "generallux-star-standard-wall-single-cfg-8",
-      modelId: "generallux-star-standard-wall-single",
+      id: "generallux-star-standard-wall-single-12000-cfg-4",
+      slug: "generallux-star-standard-wall-single-12000-cfg-4",
+      modelId: "generallux-star-standard-wall-single-12000",
       outdoorUnitId: "generallux-star-gns-12hch23to2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -225,9 +224,51 @@ export const generalluxstarDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "generallux-star-standard-wall-single-cfg-9",
-      slug: "generallux-star-standard-wall-single-cfg-9",
-      modelId: "generallux-star-standard-wall-single",
+      id: "generallux-star-standard-wall-single-18000-cfg-1",
+      slug: "generallux-star-standard-wall-single-18000-cfg-1",
+      modelId: "generallux-star-standard-wall-single-18000",
+      outdoorUnitId: "generallux-star-ast-18uw3sbbtu00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "generallux-star-standard-wall-single-18000-cfg-2",
+      slug: "generallux-star-standard-wall-single-18000-cfg-2",
+      modelId: "generallux-star-standard-wall-single-18000",
+      outdoorUnitId: "generallux-star-ast-18uw3sbbtu01-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "generallux-star-standard-wall-single-18000-cfg-3",
+      slug: "generallux-star-standard-wall-single-18000-cfg-3",
+      modelId: "generallux-star-standard-wall-single-18000",
+      outdoorUnitId: "generallux-star-gns-18hch23to1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "generallux-star-standard-wall-single-18000-cfg-4",
+      slug: "generallux-star-standard-wall-single-18000-cfg-4",
+      modelId: "generallux-star-standard-wall-single-18000",
       outdoorUnitId: "generallux-star-gns-18hch21to2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -237,11 +278,25 @@ export const generalluxstarDataset: BrandDataset = {
       minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "generallux-star-standard-wall-single-24000-cfg-1",
+      slug: "generallux-star-standard-wall-single-24000-cfg-1",
+      modelId: "generallux-star-standard-wall-single-24000",
+      outdoorUnitId: "generallux-star-ast-24uw3sdbtu01-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "generallux-star-standard-wall-single-cfg-1",
+      configurationId: "generallux-star-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -252,7 +307,40 @@ export const generalluxstarDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "generallux-star-standard-wall-single-cfg-2",
+      configurationId: "generallux-star-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "generallux-star-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "generallux-star-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "generallux-star-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -263,29 +351,7 @@ export const generalluxstarDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "generallux-star-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "generallux-star-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "generallux-star-standard-wall-single-cfg-5",
+      configurationId: "generallux-star-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -296,18 +362,7 @@ export const generalluxstarDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "generallux-star-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "generallux-star-standard-wall-single-cfg-7",
+      configurationId: "generallux-star-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -318,22 +373,22 @@ export const generalluxstarDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "generallux-star-standard-wall-single-cfg-8",
+      configurationId: "generallux-star-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 6800,
+          heatingCapacityBtu: 10500,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "generallux-star-standard-wall-single-cfg-9",
+      configurationId: "generallux-star-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 10500,
+          heatingCapacityBtu: 14500,
           cop: null,
           confidence: "verified",
         }

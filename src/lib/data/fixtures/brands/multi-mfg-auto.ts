@@ -92,22 +92,23 @@ export const multimfgDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "multi-mfg-hes-series-central-ducted",
-      slug: "multi-mfg-hes-series-central-ducted",
-      name: "HES Series",
+      id: "multi-mfg-hes-series-central-ducted-24000",
+      slug: "multi-mfg-hes-series-central-ducted-24000",
+      name: "HES Series 24 000 BTU",
       seriesId: "multi-mfg-hes-series",
       brandId: "multi-mfg",
-      modelNumber: "HES Series",
-      normalizedModelNumber: "hes-series",
+      modelNumber: "HES Series 24k",
+      normalizedModelNumber: "hes-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 54000,
-      heatingCapacity5FMinBtu: 11800,
-      heatingCapacity5FMaxBtu: 33000,
-      seer2Min: 15.2,
-      seer2Max: 18.8,
-      hspf2Min: 8.4,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19500,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16,
+      seer2Max: 18.1,
+      hspf2Min: 9,
       hspf2Max: 10.4,
       cop5FMin: 1.8,
       cop5FMax: 2.33,
@@ -118,24 +119,25 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted",
-      slug: "multi-mfg-hhs-series-central-ducted",
-      name: "HHS Series",
+      id: "multi-mfg-hhs-series-central-ducted-18000",
+      slug: "multi-mfg-hhs-series-central-ducted-18000",
+      name: "HHS Series 18 000 BTU",
       seriesId: "multi-mfg-hhs-series",
       brandId: "multi-mfg",
-      modelNumber: "HHS Series",
-      normalizedModelNumber: "hhs-series",
+      modelNumber: "HHS Series 18k",
+      normalizedModelNumber: "hhs-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.3,
+      heatingCapacity5FMaxBtu: 15800,
+      seer2Min: 16.8,
       seer2Max: 19.3,
-      hspf2Min: 8.8,
+      hspf2Min: 9.3,
       hspf2Max: 10.8,
-      cop5FMin: 1.75,
+      cop5FMin: 1.8,
       cop5FMax: 2.3,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -144,24 +146,187 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single",
-      slug: "multi-mfg-msh-series-wall-single",
-      name: "MSH Series",
-      seriesId: "multi-mfg-msh-series",
+      id: "multi-mfg-hhs-series-central-ducted-24000",
+      slug: "multi-mfg-hhs-series-central-ducted-24000",
+      name: "HHS Series 24 000 BTU",
+      seriesId: "multi-mfg-hhs-series",
       brandId: "multi-mfg",
-      modelNumber: "MSH Series",
-      normalizedModelNumber: "msh-series",
+      modelNumber: "HHS Series 24k",
+      normalizedModelNumber: "hhs-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 9000,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.8,
-      seer2Max: 28.1,
-      hspf2Min: 10,
-      hspf2Max: 13.8,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 17,
+      seer2Max: 19,
+      hspf2Min: 9.2,
+      hspf2Max: 10.5,
+      cop5FMin: 1.75,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-30000",
+      slug: "multi-mfg-hhs-series-central-ducted-30000",
+      name: "HHS Series 30 000 BTU",
+      seriesId: "multi-mfg-hhs-series",
+      brandId: "multi-mfg",
+      modelNumber: "HHS Series 30k",
+      normalizedModelNumber: "hhs-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 16.2,
+      seer2Max: 18.2,
+      hspf2Min: 8.8,
+      hspf2Max: 10.2,
       cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-36000",
+      slug: "multi-mfg-hhs-series-central-ducted-36000",
+      name: "HHS Series 36 000 BTU",
+      seriesId: "multi-mfg-hhs-series",
+      brandId: "multi-mfg",
+      modelNumber: "HHS Series 36k",
+      normalizedModelNumber: "hhs-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 28600,
+      heatingCapacity5FMaxBtu: 32800,
+      seer2Min: 15.4,
+      seer2Max: 17.6,
+      hspf2Min: 9.2,
+      hspf2Max: 10.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.97,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-48000",
+      slug: "multi-mfg-hhs-series-central-ducted-48000",
+      name: "HHS Series 48 000 BTU",
+      seriesId: "multi-mfg-hhs-series",
+      brandId: "multi-mfg",
+      modelNumber: "HHS Series 48k",
+      normalizedModelNumber: "hhs-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.6,
+      seer2Max: 16.5,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-60000",
+      slug: "multi-mfg-hhs-series-central-ducted-60000",
+      name: "HHS Series 60 000 BTU",
+      seriesId: "multi-mfg-hhs-series",
+      brandId: "multi-mfg",
+      modelNumber: "HHS Series 60k",
+      normalizedModelNumber: "hhs-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-18000",
+      slug: "multi-mfg-hes-series-central-ducted-18000",
+      name: "HES Series 18 000 BTU",
+      seriesId: "multi-mfg-hes-series",
+      brandId: "multi-mfg",
+      modelNumber: "HES Series 18k",
+      normalizedModelNumber: "hes-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11800,
+      heatingCapacity5FMaxBtu: 12600,
+      seer2Min: 16.5,
+      seer2Max: 18.8,
+      hspf2Min: 8.6,
+      hspf2Max: 9.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-24000",
+      slug: "multi-mfg-msh-series-wall-single-24000",
+      name: "MSH Series 24 000 BTU",
+      seriesId: "multi-mfg-msh-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSH Series 24k",
+      normalizedModelNumber: "msh-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 20400,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 19,
+      seer2Max: 22.3,
+      hspf2Min: 10.5,
+      hspf2Max: 13.3,
+      cop5FMin: 2,
       cop5FMax: 2.23,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -170,25 +335,26 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single",
-      slug: "multi-mfg-mpc-series-wall-single",
-      name: "MPC Series",
+      id: "multi-mfg-mpc-series-wall-single-36000",
+      slug: "multi-mfg-mpc-series-wall-single-36000",
+      name: "MPC Series 36 000 BTU",
       seriesId: "multi-mfg-mpc-series",
       brandId: "multi-mfg",
-      modelNumber: "MPC Series",
-      normalizedModelNumber: "mpc-series",
+      modelNumber: "MPC Series 36k",
+      normalizedModelNumber: "mpc-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 53000,
-      heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 19,
-      seer2Max: 24.6,
-      hspf2Min: 8.7,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 36600,
+      seer2Min: 19.4,
+      seer2Max: 23.9,
+      hspf2Min: 9.2,
       hspf2Max: 11.3,
-      cop5FMin: 1.75,
-      cop5FMax: 2.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -196,24 +362,106 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single",
-      slug: "multi-mfg-msz-series-wall-single",
-      name: "MSZ Series",
-      seriesId: "multi-mfg-msz-series",
+      id: "multi-mfg-msh-series-wall-single-12000",
+      slug: "multi-mfg-msh-series-wall-single-12000",
+      name: "MSH Series 12 000 BTU",
+      seriesId: "multi-mfg-msh-series",
       brandId: "multi-mfg",
-      modelNumber: "MSZ Series",
-      normalizedModelNumber: "msz-series",
+      modelNumber: "MSH Series 12k",
+      normalizedModelNumber: "msh-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 30000,
-      heatingCapacity5FMinBtu: 11400,
-      heatingCapacity5FMaxBtu: 21200,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19.5,
+      seer2Max: 25.5,
+      hspf2Min: 10,
+      hspf2Max: 11.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000",
+      slug: "multi-mfg-msh-series-wall-single-9000",
+      name: "MSH Series 9 000 BTU",
+      seriesId: "multi-mfg-msh-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSH Series 9k",
+      normalizedModelNumber: "msh-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20.2,
+      seer2Max: 28.1,
+      hspf2Min: 11.5,
+      hspf2Max: 13.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000",
+      slug: "multi-mfg-mpc-series-wall-single-30000",
+      name: "MPC Series 30 000 BTU",
+      seriesId: "multi-mfg-mpc-series",
+      brandId: "multi-mfg",
+      modelNumber: "MPC Series 30k",
+      normalizedModelNumber: "mpc-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 27000,
       seer2Min: 19,
+      seer2Max: 24.6,
+      hspf2Min: 9.2,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-wall-single-18000",
+      slug: "multi-mfg-msz-series-wall-single-18000",
+      name: "MSZ Series 18 000 BTU",
+      seriesId: "multi-mfg-msz-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSZ Series 18k",
+      normalizedModelNumber: "msz-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11400,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 19.5,
       seer2Max: 24,
       hspf2Min: 8.7,
-      hspf2Max: 13.5,
-      cop5FMin: 1.85,
+      hspf2Max: 12.2,
+      cop5FMin: 2.05,
       cop5FMax: 2.4,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -222,24 +470,106 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-central-ducted",
-      slug: "multi-mfg-msz-series-central-ducted",
-      name: "MSZ Series",
+      id: "multi-mfg-msz-series-wall-single-30000",
+      slug: "multi-mfg-msz-series-wall-single-30000",
+      name: "MSZ Series 30 000 BTU",
       seriesId: "multi-mfg-msz-series",
       brandId: "multi-mfg",
-      modelNumber: "MSZ Series",
-      normalizedModelNumber: "msz-series",
+      modelNumber: "MSZ Series 30k",
+      normalizedModelNumber: "msz-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000",
+      slug: "multi-mfg-mpc-series-wall-single-18000",
+      name: "MPC Series 18 000 BTU",
+      seriesId: "multi-mfg-mpc-series",
+      brandId: "multi-mfg",
+      modelNumber: "MPC Series 18k",
+      normalizedModelNumber: "mpc-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 19,
+      seer2Max: 23,
+      hspf2Min: 9.3,
+      hspf2Max: 10.5,
+      cop5FMin: 1.85,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000",
+      slug: "multi-mfg-mpc-series-wall-single-48000",
+      name: "MPC Series 48 000 BTU",
+      seriesId: "multi-mfg-mpc-series",
+      brandId: "multi-mfg",
+      modelNumber: "MPC Series 48k",
+      normalizedModelNumber: "mpc-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 23.4,
+      hspf2Min: 8.7,
+      hspf2Max: 11,
+      cop5FMin: 1.75,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-central-ducted-18000",
+      slug: "multi-mfg-msz-series-central-ducted-18000",
+      name: "MSZ Series 18 000 BTU",
+      seriesId: "multi-mfg-msz-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSZ Series 18k",
+      normalizedModelNumber: "msz-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13200,
-      heatingCapacity5FMaxBtu: 17600,
+      heatingCapacity5FMaxBtu: 13200,
       seer2Min: 18.5,
-      seer2Max: 19.7,
-      hspf2Min: 9,
+      seer2Max: 18.5,
+      hspf2Min: 9.8,
       hspf2Max: 9.8,
-      cop5FMin: 2.2,
+      cop5FMin: 2.3,
       cop5FMax: 2.3,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -248,15 +578,151 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mez-series-wall-single",
-      slug: "multi-mfg-mez-series-wall-single",
-      name: "MEZ Series",
-      seriesId: "multi-mfg-mez-series",
+      id: "multi-mfg-msz-series-central-ducted-24000",
+      slug: "multi-mfg-msz-series-central-ducted-24000",
+      name: "MSZ Series 24 000 BTU",
+      seriesId: "multi-mfg-msz-series",
       brandId: "multi-mfg",
-      modelNumber: "MEZ Series",
-      normalizedModelNumber: "mez-series",
+      modelNumber: "MSZ Series 24k",
+      normalizedModelNumber: "msz-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17600,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 19.7,
+      seer2Max: 19.7,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-36000",
+      slug: "multi-mfg-hes-series-central-ducted-36000",
+      name: "HES Series 36 000 BTU",
+      seriesId: "multi-mfg-hes-series",
+      brandId: "multi-mfg",
+      modelNumber: "HES Series 36k",
+      normalizedModelNumber: "hes-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 24600,
+      heatingCapacity5FMaxBtu: 24800,
+      seer2Min: 15.4,
+      seer2Max: 16.7,
+      hspf2Min: 8.7,
+      hspf2Max: 9.3,
+      cop5FMin: 1.86,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-48000",
+      slug: "multi-mfg-hes-series-central-ducted-48000",
+      name: "HES Series 48 000 BTU",
+      seriesId: "multi-mfg-hes-series",
+      brandId: "multi-mfg",
+      modelNumber: "HES Series 48k",
+      normalizedModelNumber: "hes-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 16,
+      hspf2Min: 8.4,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-42000",
+      slug: "multi-mfg-hhs-series-central-ducted-42000",
+      name: "HHS Series 42 000 BTU",
+      seriesId: "multi-mfg-hhs-series",
+      brandId: "multi-mfg",
+      modelNumber: "HHS Series 42k",
+      normalizedModelNumber: "hhs-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 16.7,
+      seer2Max: 16.7,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-30000",
+      slug: "multi-mfg-hes-series-central-ducted-30000",
+      name: "HES Series 30 000 BTU",
+      seriesId: "multi-mfg-hes-series",
+      brandId: "multi-mfg",
+      modelNumber: "HES Series 30k",
+      normalizedModelNumber: "hes-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 18200,
+      heatingCapacity5FMaxBtu: 18200,
+      seer2Min: 18.6,
+      seer2Max: 18.6,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 1.99,
+      cop5FMax: 1.99,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mez-series-wall-single-9000",
+      slug: "multi-mfg-mez-series-wall-single-9000",
+      name: "MEZ Series 9 000 BTU",
+      seriesId: "multi-mfg-mez-series",
+      brandId: "multi-mfg",
+      modelNumber: "MEZ Series 9k",
+      normalizedModelNumber: "mez-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 8000,
@@ -274,25 +740,296 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msu-series-wall-single",
-      slug: "multi-mfg-msu-series-wall-single",
-      name: "MSU Series",
-      seriesId: "multi-mfg-msu-series",
+      id: "multi-mfg-msz-series-wall-single-24000",
+      slug: "multi-mfg-msz-series-wall-single-24000",
+      name: "MSZ Series 24 000 BTU",
+      seriesId: "multi-mfg-msz-series",
       brandId: "multi-mfg",
-      modelNumber: "MSU Series",
-      normalizedModelNumber: "msu-series",
+      modelNumber: "MSZ Series 24k",
+      normalizedModelNumber: "msz-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19500,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 19,
+      seer2Max: 23.5,
+      hspf2Min: 10,
+      hspf2Max: 11.1,
+      cop5FMin: 2.15,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-30000",
+      slug: "multi-mfg-msh-series-wall-single-30000",
+      name: "MSH Series 30 000 BTU",
+      seriesId: "multi-mfg-msh-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSH Series 30k",
+      normalizedModelNumber: "msh-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 29600,
+      heatingCapacity5FMaxBtu: 29600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msu-series-wall-single-36000",
+      slug: "multi-mfg-msu-series-wall-single-36000",
+      name: "MSU Series 36 000 BTU",
+      seriesId: "multi-mfg-msu-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSU Series 36k",
+      normalizedModelNumber: "msu-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 26800,
+      heatingCapacity5FMaxBtu: 26800,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msu-series-wall-single-48000",
+      slug: "multi-mfg-msu-series-wall-single-48000",
+      name: "MSU Series 48 000 BTU",
+      seriesId: "multi-mfg-msu-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSU Series 48k",
+      normalizedModelNumber: "msu-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 39000,
       heatingCapacity5FMaxBtu: 39500,
       seer2Min: 17.1,
-      seer2Max: 20,
+      seer2Max: 19.8,
       hspf2Min: 9.8,
-      hspf2Max: 10.3,
+      hspf2Max: 10.2,
       cop5FMin: 1.95,
-      cop5FMax: 2.2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-36000",
+      slug: "multi-mfg-msh-series-wall-single-36000",
+      name: "MSH Series 36 000 BTU",
+      seriesId: "multi-mfg-msh-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSH Series 36k",
+      normalizedModelNumber: "msh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36600,
+      heatingCapacity5FMinBtu: 30200,
+      heatingCapacity5FMaxBtu: 31600,
+      seer2Min: 17.7,
+      seer2Max: 21.2,
+      hspf2Min: 10.6,
+      hspf2Max: 11.1,
+      cop5FMin: 1.95,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-48000",
+      slug: "multi-mfg-msh-series-wall-single-48000",
+      name: "MSH Series 48 000 BTU",
+      seriesId: "multi-mfg-msh-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSH Series 48k",
+      normalizedModelNumber: "msh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 38500,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 16.7,
+      seer2Max: 18.5,
+      hspf2Min: 10.1,
+      hspf2Max: 10.8,
+      cop5FMin: 1.83,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-60000",
+      slug: "multi-mfg-msh-series-wall-single-60000",
+      name: "MSH Series 60 000 BTU",
+      seriesId: "multi-mfg-msh-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSH Series 60k",
+      normalizedModelNumber: "msh-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 45000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-wall-single-15000",
+      slug: "multi-mfg-msz-series-wall-single-15000",
+      name: "MSZ Series 15 000 BTU",
+      seriesId: "multi-mfg-msz-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSZ Series 15k",
+      normalizedModelNumber: "msz-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14100,
+      heatingCapacity5FMaxBtu: 14100,
+      seer2Min: 23.8,
+      seer2Max: 23.8,
+      hspf2Min: 13.5,
+      hspf2Max: 13.5,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-20000",
+      slug: "multi-mfg-msh-series-wall-single-20000",
+      name: "MSH Series 20 000 BTU",
+      seriesId: "multi-mfg-msh-series",
+      brandId: "multi-mfg",
+      modelNumber: "MSH Series 20k",
+      normalizedModelNumber: "msh-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 20.4,
+      seer2Max: 20.4,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-42000",
+      slug: "multi-mfg-mpc-series-wall-single-42000",
+      name: "MPC Series 42 000 BTU",
+      seriesId: "multi-mfg-mpc-series",
+      brandId: "multi-mfg",
+      modelNumber: "MPC Series 42k",
+      normalizedModelNumber: "mpc-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: 20.4,
+      seer2Max: 21.3,
+      hspf2Min: 10,
+      hspf2Max: 10.6,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-24000",
+      slug: "multi-mfg-mpc-series-wall-single-24000",
+      name: "MPC Series 24 000 BTU",
+      seriesId: "multi-mfg-mpc-series",
+      brandId: "multi-mfg",
+      modelNumber: "MPC Series 24k",
+      normalizedModelNumber: "mpc-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 23600,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -304,6 +1041,90 @@ export const multimfgDataset: BrandDataset = {
     {
       id: "multi-mfg-hes-24hd-a",
       modelNumber: "HES-24HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hes-24hd-b",
+      modelNumber: "HES-24HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-18hd-a",
+      modelNumber: "HHS-18HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-18hd-b",
+      modelNumber: "HHS-18HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-24hd-a",
+      modelNumber: "HHS-24HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-24hd-b",
+      modelNumber: "HHS-24HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-25hd-b",
+      modelNumber: "HHS-25HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-30hd-a",
+      modelNumber: "HHS-30HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-30hd-b",
+      modelNumber: "HHS-30HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-36hd-a",
+      modelNumber: "HHS-36HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-36hd-b",
+      modelNumber: "HHS-36HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-48hd-a",
+      modelNumber: "HHS-48HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-48hd-b",
+      modelNumber: "HHS-48HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-60hd-b",
+      modelNumber: "HHS-60HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-hhs-60hd-a",
+      modelNumber: "HHS-60HD-A",
       brandId: "multi-mfg",
       refrigerant: null as any,
     },
@@ -320,8 +1141,140 @@ export const multimfgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "multi-mfg-hes-24hd-b",
-      modelNumber: "HES-24HD-B",
+      id: "multi-mfg-msh-24hd-a",
+      modelNumber: "MSH-24HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-msh-24hd-b",
+      modelNumber: "MSH-24HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-36mpc4-hh-a",
+      modelNumber: "36MPC4-HH-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-36mpc4-xx-a",
+      modelNumber: "36MPC4-XX-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-36mpc5-he-b",
+      modelNumber: "36MPC5-HE-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-36mpc5-hh-b",
+      modelNumber: "36MPC5-HH-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-msh-12hd-a",
+      modelNumber: "MSH-12HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-msh-12hd-b",
+      modelNumber: "MSH-12HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-msh-09hd-a",
+      modelNumber: "MSH-09HD-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-msh-09hd-b",
+      modelNumber: "MSH-09HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-28mpc3-hh-a",
+      modelNumber: "28MPC3-HH-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-27mpc3-xx-a",
+      modelNumber: "27MPC3-XX-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-27mpc4-hh-b",
+      modelNumber: "27MPC4-HH-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-18msz-m-a",
+      modelNumber: "18MSZ-M-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-18msz-m-b",
+      modelNumber: "18MSZ-M-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-30msz-m-a",
+      modelNumber: "30MSZ-M-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-18mpc2-xx-a",
+      modelNumber: "18MPC2-XX-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-19mpc2-hh-a",
+      modelNumber: "19MPC2-HH-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-18mpc3-he-b",
+      modelNumber: "18MPC3-HE-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-48mpc5-xx-a",
+      modelNumber: "48MPC5-XX-A",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-48mpc6-hh-b",
+      modelNumber: "48MPC6-HH-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-55mpc6-hh-b",
+      modelNumber: "55MPC6-HH-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-24msz-m-b",
+      modelNumber: "24MSZ-M-B",
       brandId: "multi-mfg",
       refrigerant: null as any,
     },
@@ -344,134 +1297,38 @@ export const multimfgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "multi-mfg-hes-30hd-b",
-      modelNumber: "HES-30HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-18hd-a",
-      modelNumber: "HHS-18HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-24hd-a",
-      modelNumber: "HHS-24HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-30hd-a",
-      modelNumber: "HHS-30HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-36hd-a",
-      modelNumber: "HHS-36HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-48hd-a",
-      modelNumber: "HHS-48HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-60hd-a",
-      modelNumber: "HHS-60HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-36hd-b",
-      modelNumber: "HHS-36HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
       id: "multi-mfg-hhs-42hd-b",
       modelNumber: "HHS-42HD-B",
       brandId: "multi-mfg",
       refrigerant: null as any,
     },
     {
-      id: "multi-mfg-hhs-48hd-b",
-      modelNumber: "HHS-48HD-B",
+      id: "multi-mfg-hes-30hd-b",
+      modelNumber: "HES-30HD-B",
       brandId: "multi-mfg",
       refrigerant: null as any,
     },
     {
-      id: "multi-mfg-hhs-60hd-b",
-      modelNumber: "HHS-60HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-18hd-b",
-      modelNumber: "HHS-18HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-24hd-b",
-      modelNumber: "HHS-24HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-30hd-b",
-      modelNumber: "HHS-30HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-hhs-25hd-b",
-      modelNumber: "HHS-25HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msh-24hd-a",
-      modelNumber: "MSH-24HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msh-12hd-a",
-      modelNumber: "MSH-12HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msh-09hd-a",
-      modelNumber: "MSH-09HD-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msh-09hd-b",
-      modelNumber: "MSH-09HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msh-12hd-b",
-      modelNumber: "MSH-12HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msh-24hd-b",
-      modelNumber: "MSH-24HD-B",
+      id: "multi-mfg-9mez-m-b",
+      modelNumber: "9MEZ-M-B",
       brandId: "multi-mfg",
       refrigerant: null as any,
     },
     {
       id: "multi-mfg-msh-30hd-b",
       modelNumber: "MSH-30HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-msu-36hd-b",
+      modelNumber: "MSU-36HD-B",
+      brandId: "multi-mfg",
+      refrigerant: null as any,
+    },
+    {
+      id: "multi-mfg-msu-48hd-b",
+      modelNumber: "MSU-48HD-B",
       brandId: "multi-mfg",
       refrigerant: null as any,
     },
@@ -494,128 +1351,8 @@ export const multimfgDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "multi-mfg-36mpc4-hh-a",
-      modelNumber: "36MPC4-HH-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-28mpc3-hh-a",
-      modelNumber: "28MPC3-HH-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-18mpc2-xx-a",
-      modelNumber: "18MPC2-XX-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-27mpc3-xx-a",
-      modelNumber: "27MPC3-XX-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-36mpc4-xx-a",
-      modelNumber: "36MPC4-XX-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-48mpc5-xx-a",
-      modelNumber: "48MPC5-XX-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-19mpc2-hh-a",
-      modelNumber: "19MPC2-HH-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-18mpc3-he-b",
-      modelNumber: "18MPC3-HE-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-36mpc5-he-b",
-      modelNumber: "36MPC5-HE-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
       id: "multi-mfg-48mpc6-he-b",
       modelNumber: "48MPC6-HE-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-27mpc4-hh-b",
-      modelNumber: "27MPC4-HH-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-36mpc5-hh-b",
-      modelNumber: "36MPC5-HH-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-48mpc6-hh-b",
-      modelNumber: "48MPC6-HH-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-55mpc6-hh-b",
-      modelNumber: "55MPC6-HH-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-18msz-m-a",
-      modelNumber: "18MSZ-M-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-30msz-m-a",
-      modelNumber: "30MSZ-M-A",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-18msz-m-b",
-      modelNumber: "18MSZ-M-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-24msz-m-b",
-      modelNumber: "24MSZ-M-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-9mez-m-b",
-      modelNumber: "9MEZ-M-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msu-36hd-b",
-      modelNumber: "MSU-36HD-B",
-      brandId: "multi-mfg",
-      refrigerant: null as any,
-    },
-    {
-      id: "multi-mfg-msu-48hd-b",
-      modelNumber: "MSU-48HD-B",
       brandId: "multi-mfg",
       refrigerant: null as any,
     }
@@ -625,9 +1362,9 @@ export const multimfgDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "multi-mfg-hes-series-central-ducted-cfg-1",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-1",
-      modelId: "multi-mfg-hes-series-central-ducted",
+      id: "multi-mfg-hes-series-central-ducted-24000-cfg-1",
+      slug: "multi-mfg-hes-series-central-ducted-24000-cfg-1",
+      modelId: "multi-mfg-hes-series-central-ducted-24000",
       outdoorUnitId: "multi-mfg-hes-24hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -639,9 +1376,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hes-series-central-ducted-cfg-2",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-2",
-      modelId: "multi-mfg-hes-series-central-ducted",
+      id: "multi-mfg-hes-series-central-ducted-24000-cfg-2",
+      slug: "multi-mfg-hes-series-central-ducted-24000-cfg-2",
+      modelId: "multi-mfg-hes-series-central-ducted-24000",
       outdoorUnitId: "multi-mfg-hes-24hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -653,37 +1390,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hes-series-central-ducted-cfg-3",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-3",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-18hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-4",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-4",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-18hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.8,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-5",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-5",
-      modelId: "multi-mfg-hes-series-central-ducted",
+      id: "multi-mfg-hes-series-central-ducted-24000-cfg-3",
+      slug: "multi-mfg-hes-series-central-ducted-24000-cfg-3",
+      modelId: "multi-mfg-hes-series-central-ducted-24000",
       outdoorUnitId: "multi-mfg-hes-24hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -695,65 +1404,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hes-series-central-ducted-cfg-6",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-6",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-7",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-7",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-48hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-8",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-8",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-60hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-9",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-9",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-18hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.5,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-10",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-10",
-      modelId: "multi-mfg-hes-series-central-ducted",
+      id: "multi-mfg-hes-series-central-ducted-24000-cfg-4",
+      slug: "multi-mfg-hes-series-central-ducted-24000-cfg-4",
+      modelId: "multi-mfg-hes-series-central-ducted-24000",
       outdoorUnitId: "multi-mfg-hes-24hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -765,51 +1418,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hes-series-central-ducted-cfg-11",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-11",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-30hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 18.6,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-12",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-12",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.7,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-13",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-13",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-18hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.8,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hes-series-central-ducted-cfg-14",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-14",
-      modelId: "multi-mfg-hes-series-central-ducted",
+      id: "multi-mfg-hes-series-central-ducted-24000-cfg-5",
+      slug: "multi-mfg-hes-series-central-ducted-24000-cfg-5",
+      modelId: "multi-mfg-hes-series-central-ducted-24000",
       outdoorUnitId: "multi-mfg-hes-24hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -821,23 +1432,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hes-series-central-ducted-cfg-15",
-      slug: "multi-mfg-hes-series-central-ducted-cfg-15",
-      modelId: "multi-mfg-hes-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hes-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.4,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-1",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-1",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-18000-cfg-1",
+      slug: "multi-mfg-hhs-series-central-ducted-18000-cfg-1",
+      modelId: "multi-mfg-hhs-series-central-ducted-18000",
       outdoorUnitId: "multi-mfg-hhs-18hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -849,9 +1446,65 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-2",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-2",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-18000-cfg-2",
+      slug: "multi-mfg-hhs-series-central-ducted-18000-cfg-2",
+      modelId: "multi-mfg-hhs-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hhs-18hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.3,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-18000-cfg-3",
+      slug: "multi-mfg-hhs-series-central-ducted-18000-cfg-3",
+      modelId: "multi-mfg-hhs-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hhs-18hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 17,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-18000-cfg-4",
+      slug: "multi-mfg-hhs-series-central-ducted-18000-cfg-4",
+      modelId: "multi-mfg-hhs-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hhs-18hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.3,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-18000-cfg-5",
+      slug: "multi-mfg-hhs-series-central-ducted-18000-cfg-5",
+      modelId: "multi-mfg-hhs-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hhs-18hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-24000-cfg-1",
+      slug: "multi-mfg-hhs-series-central-ducted-24000-cfg-1",
+      modelId: "multi-mfg-hhs-series-central-ducted-24000",
       outdoorUnitId: "multi-mfg-hhs-24hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -863,9 +1516,93 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-3",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-3",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-24000-cfg-2",
+      slug: "multi-mfg-hhs-series-central-ducted-24000-cfg-2",
+      modelId: "multi-mfg-hhs-series-central-ducted-24000",
+      outdoorUnitId: "multi-mfg-hhs-24hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-24000-cfg-3",
+      slug: "multi-mfg-hhs-series-central-ducted-24000-cfg-3",
+      modelId: "multi-mfg-hhs-series-central-ducted-24000",
+      outdoorUnitId: "multi-mfg-hhs-24hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-24000-cfg-4",
+      slug: "multi-mfg-hhs-series-central-ducted-24000-cfg-4",
+      modelId: "multi-mfg-hhs-series-central-ducted-24000",
+      outdoorUnitId: "multi-mfg-hhs-24hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-24000-cfg-5",
+      slug: "multi-mfg-hhs-series-central-ducted-24000-cfg-5",
+      modelId: "multi-mfg-hhs-series-central-ducted-24000",
+      outdoorUnitId: "multi-mfg-hhs-24hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-24000-cfg-6",
+      slug: "multi-mfg-hhs-series-central-ducted-24000-cfg-6",
+      modelId: "multi-mfg-hhs-series-central-ducted-24000",
+      outdoorUnitId: "multi-mfg-hhs-25hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-24000-cfg-7",
+      slug: "multi-mfg-hhs-series-central-ducted-24000-cfg-7",
+      modelId: "multi-mfg-hhs-series-central-ducted-24000",
+      outdoorUnitId: "multi-mfg-hhs-25hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-30000-cfg-1",
+      slug: "multi-mfg-hhs-series-central-ducted-30000-cfg-1",
+      modelId: "multi-mfg-hhs-series-central-ducted-30000",
       outdoorUnitId: "multi-mfg-hhs-30hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -877,93 +1614,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-4",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-4",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-36hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-5",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-5",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-48hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-6",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-6",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-60hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-7",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-7",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-36hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.6,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-8",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-8",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-24hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-9",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-9",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-18hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.3,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-10",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-10",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-30000-cfg-2",
+      slug: "multi-mfg-hhs-series-central-ducted-30000-cfg-2",
+      modelId: "multi-mfg-hhs-series-central-ducted-30000",
       outdoorUnitId: "multi-mfg-hhs-30hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -975,37 +1628,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-11",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-11",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-18hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 17,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-12",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-12",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-24hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-13",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-13",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-30000-cfg-3",
+      slug: "multi-mfg-hhs-series-central-ducted-30000-cfg-3",
+      modelId: "multi-mfg-hhs-series-central-ducted-30000",
       outdoorUnitId: "multi-mfg-hhs-30hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1017,107 +1642,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-14",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-14",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-36hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17,
-      hspf2: 9.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-15",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-15",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-16",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-16",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-42hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 16.7,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-17",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-17",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-48hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-18",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-18",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-60hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-19",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-19",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-18hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.3,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-20",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-20",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-24hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-21",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-21",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-30000-cfg-4",
+      slug: "multi-mfg-hhs-series-central-ducted-30000-cfg-4",
+      modelId: "multi-mfg-hhs-series-central-ducted-30000",
       outdoorUnitId: "multi-mfg-hhs-30hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1129,51 +1656,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-22",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-22",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.8,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-23",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-23",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-18hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.8,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-24",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-24",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-24hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-25",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-25",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-30000-cfg-5",
+      slug: "multi-mfg-hhs-series-central-ducted-30000-cfg-5",
+      modelId: "multi-mfg-hhs-series-central-ducted-30000",
       outdoorUnitId: "multi-mfg-hhs-30hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1185,9 +1670,79 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-26",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-26",
-      modelId: "multi-mfg-hhs-series-central-ducted",
+      id: "multi-mfg-hhs-series-central-ducted-36000-cfg-1",
+      slug: "multi-mfg-hhs-series-central-ducted-36000-cfg-1",
+      modelId: "multi-mfg-hhs-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hhs-36hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-36000-cfg-2",
+      slug: "multi-mfg-hhs-series-central-ducted-36000-cfg-2",
+      modelId: "multi-mfg-hhs-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hhs-36hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.6,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-36000-cfg-3",
+      slug: "multi-mfg-hhs-series-central-ducted-36000-cfg-3",
+      modelId: "multi-mfg-hhs-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hhs-36hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17,
+      hspf2: 9.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-36000-cfg-4",
+      slug: "multi-mfg-hhs-series-central-ducted-36000-cfg-4",
+      modelId: "multi-mfg-hhs-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hhs-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-36000-cfg-5",
+      slug: "multi-mfg-hhs-series-central-ducted-36000-cfg-5",
+      modelId: "multi-mfg-hhs-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hhs-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.8,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-36000-cfg-6",
+      slug: "multi-mfg-hhs-series-central-ducted-36000-cfg-6",
+      modelId: "multi-mfg-hhs-series-central-ducted-36000",
       outdoorUnitId: "multi-mfg-hhs-36hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1199,37 +1754,121 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-27",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-27",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-25hd-b",
+      id: "multi-mfg-hhs-series-central-ducted-48000-cfg-1",
+      slug: "multi-mfg-hhs-series-central-ducted-48000-cfg-1",
+      modelId: "multi-mfg-hhs-series-central-ducted-48000",
+      outdoorUnitId: "multi-mfg-hhs-48hd-a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
       hspf2: 9.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-hhs-series-central-ducted-cfg-28",
-      slug: "multi-mfg-hhs-series-central-ducted-cfg-28",
-      modelId: "multi-mfg-hhs-series-central-ducted",
-      outdoorUnitId: "multi-mfg-hhs-25hd-b",
+      id: "multi-mfg-hhs-series-central-ducted-48000-cfg-2",
+      slug: "multi-mfg-hhs-series-central-ducted-48000-cfg-2",
+      modelId: "multi-mfg-hhs-series-central-ducted-48000",
+      outdoorUnitId: "multi-mfg-hhs-48hd-b",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.5,
-      hspf2: 10,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single-cfg-1",
-      slug: "multi-mfg-msh-series-wall-single-cfg-1",
-      modelId: "multi-mfg-msh-series-wall-single",
+      id: "multi-mfg-hhs-series-central-ducted-48000-cfg-3",
+      slug: "multi-mfg-hhs-series-central-ducted-48000-cfg-3",
+      modelId: "multi-mfg-hhs-series-central-ducted-48000",
+      outdoorUnitId: "multi-mfg-hhs-60hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-60000-cfg-1",
+      slug: "multi-mfg-hhs-series-central-ducted-60000-cfg-1",
+      modelId: "multi-mfg-hhs-series-central-ducted-60000",
+      outdoorUnitId: "multi-mfg-hhs-60hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-18000-cfg-1",
+      slug: "multi-mfg-hes-series-central-ducted-18000-cfg-1",
+      modelId: "multi-mfg-hes-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hes-18hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.5,
+      hspf2: 8.6,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-18000-cfg-2",
+      slug: "multi-mfg-hes-series-central-ducted-18000-cfg-2",
+      modelId: "multi-mfg-hes-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hes-18hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.8,
+      hspf2: 9.1,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-18000-cfg-3",
+      slug: "multi-mfg-hes-series-central-ducted-18000-cfg-3",
+      modelId: "multi-mfg-hes-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hes-18hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.5,
+      hspf2: 9.4,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-18000-cfg-4",
+      slug: "multi-mfg-hes-series-central-ducted-18000-cfg-4",
+      modelId: "multi-mfg-hes-series-central-ducted-18000",
+      outdoorUnitId: "multi-mfg-hes-18hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 8.8,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-24000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-24000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-24000",
       outdoorUnitId: "multi-mfg-msh-24hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1241,37 +1880,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single-cfg-2",
-      slug: "multi-mfg-msh-series-wall-single-cfg-2",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-3",
-      slug: "multi-mfg-msh-series-wall-single-cfg-3",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 12.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-4",
-      slug: "multi-mfg-msh-series-wall-single-cfg-4",
-      modelId: "multi-mfg-msh-series-wall-single",
+      id: "multi-mfg-msh-series-wall-single-24000-cfg-2",
+      slug: "multi-mfg-msh-series-wall-single-24000-cfg-2",
+      modelId: "multi-mfg-msh-series-wall-single-24000",
       outdoorUnitId: "multi-mfg-msh-24hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1283,51 +1894,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single-cfg-5",
-      slug: "multi-mfg-msh-series-wall-single-cfg-5",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 28.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-6",
-      slug: "multi-mfg-msh-series-wall-single-cfg-6",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.2,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-7",
-      slug: "multi-mfg-msh-series-wall-single-cfg-7",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-8",
-      slug: "multi-mfg-msh-series-wall-single-cfg-8",
-      modelId: "multi-mfg-msh-series-wall-single",
+      id: "multi-mfg-msh-series-wall-single-24000-cfg-3",
+      slug: "multi-mfg-msh-series-wall-single-24000-cfg-3",
+      modelId: "multi-mfg-msh-series-wall-single-24000",
       outdoorUnitId: "multi-mfg-msh-24hd-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1339,51 +1908,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single-cfg-9",
-      slug: "multi-mfg-msh-series-wall-single-cfg-9",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-10",
-      slug: "multi-mfg-msh-series-wall-single-cfg-10",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 26,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-11",
-      slug: "multi-mfg-msh-series-wall-single-cfg-11",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-12",
-      slug: "multi-mfg-msh-series-wall-single-cfg-12",
-      modelId: "multi-mfg-msh-series-wall-single",
+      id: "multi-mfg-msh-series-wall-single-24000-cfg-4",
+      slug: "multi-mfg-msh-series-wall-single-24000-cfg-4",
+      modelId: "multi-mfg-msh-series-wall-single-24000",
       outdoorUnitId: "multi-mfg-msh-24hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1395,51 +1922,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single-cfg-13",
-      slug: "multi-mfg-msh-series-wall-single-cfg-13",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-30hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 20,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-14",
-      slug: "multi-mfg-msh-series-wall-single-cfg-14",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.6,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-15",
-      slug: "multi-mfg-msh-series-wall-single-cfg-15",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.2,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-16",
-      slug: "multi-mfg-msh-series-wall-single-cfg-16",
-      modelId: "multi-mfg-msh-series-wall-single",
+      id: "multi-mfg-msh-series-wall-single-24000-cfg-5",
+      slug: "multi-mfg-msh-series-wall-single-24000-cfg-5",
+      modelId: "multi-mfg-msh-series-wall-single-24000",
       outdoorUnitId: "multi-mfg-msh-24hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23400,
@@ -1451,93 +1936,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single-cfg-17",
-      slug: "multi-mfg-msh-series-wall-single-cfg-17",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36600,
-      coolingCapacityMaxBtu: 36600,
-      seer2: 21.2,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-18",
-      slug: "multi-mfg-msh-series-wall-single-cfg-18",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-48hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.7,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-19",
-      slug: "multi-mfg-msh-series-wall-single-cfg-19",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.4,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-20",
-      slug: "multi-mfg-msh-series-wall-single-cfg-20",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-21",
-      slug: "multi-mfg-msh-series-wall-single-cfg-21",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-22",
-      slug: "multi-mfg-msh-series-wall-single-cfg-22",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-23",
-      slug: "multi-mfg-msh-series-wall-single-cfg-23",
-      modelId: "multi-mfg-msh-series-wall-single",
+      id: "multi-mfg-msh-series-wall-single-24000-cfg-6",
+      slug: "multi-mfg-msh-series-wall-single-24000-cfg-6",
+      modelId: "multi-mfg-msh-series-wall-single-24000",
       outdoorUnitId: "multi-mfg-msh-24hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1549,135 +1950,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msh-series-wall-single-cfg-24",
-      slug: "multi-mfg-msh-series-wall-single-cfg-24",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.7,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-25",
-      slug: "multi-mfg-msh-series-wall-single-cfg-25",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-48hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.7,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-26",
-      slug: "multi-mfg-msh-series-wall-single-cfg-26",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-60hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.8,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-27",
-      slug: "multi-mfg-msh-series-wall-single-cfg-27",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-12hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-28",
-      slug: "multi-mfg-msh-series-wall-single-cfg-28",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-24hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.4,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-29",
-      slug: "multi-mfg-msh-series-wall-single-cfg-29",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-36hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36400,
-      coolingCapacityMaxBtu: 36400,
-      seer2: 20,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-30",
-      slug: "multi-mfg-msh-series-wall-single-cfg-30",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-48hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.5,
-      hspf2: 10.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-31",
-      slug: "multi-mfg-msh-series-wall-single-cfg-31",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-60hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 18,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msh-series-wall-single-cfg-32",
-      slug: "multi-mfg-msh-series-wall-single-cfg-32",
-      modelId: "multi-mfg-msh-series-wall-single",
-      outdoorUnitId: "multi-mfg-msh-09hd-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-1",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-1",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-1",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-1",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc4-hh-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1689,9 +1964,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-2",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-2",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-2",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-2",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc4-hh-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1703,135 +1978,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-3",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-3",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-28mpc3-hh-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 23,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-4",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-4",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-28mpc3-hh-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-5",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-5",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-28mpc3-hh-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21.5,
-      hspf2: 10.05,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-6",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-6",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-18mpc2-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.9,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-7",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-7",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-18mpc2-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-8",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-8",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-18mpc2-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20.95,
-      hspf2: 10.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-9",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-9",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-27mpc3-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 24.6,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-10",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-10",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-27mpc3-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-11",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-11",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-27mpc3-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 22.8,
-      hspf2: 9.35,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-12",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-12",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-3",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-3",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc4-xx-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1843,121 +1992,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-13",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-13",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc5-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 23.4,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-14",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-14",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc5-xx-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.95,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-15",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-15",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-19mpc2-hh-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 22,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-16",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-16",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-19mpc2-hh-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 19,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-17",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-17",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-19mpc2-hh-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20.5,
-      hspf2: 9.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-18",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-18",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-18mpc3-he-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-19",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-19",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-18mpc3-he-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-20",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-20",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-18mpc3-he-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-21",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-21",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-4",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-4",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc5-he-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1969,9 +2006,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-22",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-22",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-5",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-5",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc5-he-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1983,9 +2020,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-23",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-23",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-6",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-6",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc5-he-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1997,93 +2034,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-24",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-24",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc6-he-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 21.3,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-25",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-25",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc6-he-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 20.4,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-26",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-26",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc6-he-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 20.85,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-27",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-27",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-27mpc4-hh-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-28",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-28",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-27mpc4-hh-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-29",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-29",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-27mpc4-hh-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 20,
-      hspf2: 9.75,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-mpc-series-wall-single-cfg-30",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-30",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-7",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-7",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc5-hh-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2095,9 +2048,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-31",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-31",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-8",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-8",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc5-hh-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2109,9 +2062,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-32",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-32",
-      modelId: "multi-mfg-mpc-series-wall-single",
+      id: "multi-mfg-mpc-series-wall-single-36000-cfg-9",
+      slug: "multi-mfg-mpc-series-wall-single-36000-cfg-9",
+      modelId: "multi-mfg-mpc-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-36mpc5-hh-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2123,93 +2076,345 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-33",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-33",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc6-hh-b",
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 21.2,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
       hspf2: 10.2,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-34",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-34",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc6-hh-b",
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-2",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-2",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-35",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-35",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-48mpc6-hh-b",
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-3",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-3",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: 20.8,
-      hspf2: 10.6,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-36",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-36",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-55mpc6-hh-b",
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-4",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-4",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-b",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
-      seer2: 21.4,
-      hspf2: 10.6,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 10.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-37",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-37",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-55mpc6-hh-b",
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-5",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-5",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-b",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-6",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-6",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
       seer2: 20,
-      hspf2: 10.7,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mpc-series-wall-single-cfg-38",
-      slug: "multi-mfg-mpc-series-wall-single-cfg-38",
-      modelId: "multi-mfg-mpc-series-wall-single",
-      outdoorUnitId: "multi-mfg-55mpc6-hh-b",
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-7",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-7",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-b",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 20.7,
-      hspf2: 10.65,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10.6,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single-cfg-1",
-      slug: "multi-mfg-msz-series-wall-single-cfg-1",
-      modelId: "multi-mfg-msz-series-wall-single",
+      id: "multi-mfg-msh-series-wall-single-12000-cfg-8",
+      slug: "multi-mfg-msh-series-wall-single-12000-cfg-8",
+      modelId: "multi-mfg-msh-series-wall-single-12000",
+      outdoorUnitId: "multi-mfg-msh-12hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-2",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-2",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-3",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-3",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.2,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-4",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-4",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-5",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-5",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-6",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-6",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-7",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-7",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-9000-cfg-8",
+      slug: "multi-mfg-msh-series-wall-single-9000-cfg-8",
+      modelId: "multi-mfg-msh-series-wall-single-9000",
+      outdoorUnitId: "multi-mfg-msh-09hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-1",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-1",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-28mpc3-hh-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 23,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-2",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-2",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-28mpc3-hh-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-3",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-3",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-28mpc3-hh-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.5,
+      hspf2: 10.05,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-4",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-4",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-27mpc3-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 24.6,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-5",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-5",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-27mpc3-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-6",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-6",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-27mpc3-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.8,
+      hspf2: 9.35,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-7",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-7",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-27mpc4-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-30000-cfg-8",
+      slug: "multi-mfg-mpc-series-wall-single-30000-cfg-8",
+      modelId: "multi-mfg-mpc-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-27mpc4-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 20,
+      hspf2: 9.75,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-wall-single-18000-cfg-1",
+      slug: "multi-mfg-msz-series-wall-single-18000-cfg-1",
+      modelId: "multi-mfg-msz-series-wall-single-18000",
       outdoorUnitId: "multi-mfg-18msz-m-a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2221,23 +2426,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single-cfg-2",
-      slug: "multi-mfg-msz-series-wall-single-cfg-2",
-      modelId: "multi-mfg-msz-series-wall-single",
-      outdoorUnitId: "multi-mfg-30msz-m-a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 21,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msz-series-wall-single-cfg-3",
-      slug: "multi-mfg-msz-series-wall-single-cfg-3",
-      modelId: "multi-mfg-msz-series-wall-single",
+      id: "multi-mfg-msz-series-wall-single-18000-cfg-2",
+      slug: "multi-mfg-msz-series-wall-single-18000-cfg-2",
+      modelId: "multi-mfg-msz-series-wall-single-18000",
       outdoorUnitId: "multi-mfg-18msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2249,23 +2440,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single-cfg-4",
-      slug: "multi-mfg-msz-series-wall-single-cfg-4",
-      modelId: "multi-mfg-msz-series-wall-single",
-      outdoorUnitId: "multi-mfg-24msz-m-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 23.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msz-series-wall-single-cfg-5",
-      slug: "multi-mfg-msz-series-wall-single-cfg-5",
-      modelId: "multi-mfg-msz-series-wall-single",
+      id: "multi-mfg-msz-series-wall-single-18000-cfg-3",
+      slug: "multi-mfg-msz-series-wall-single-18000-cfg-3",
+      modelId: "multi-mfg-msz-series-wall-single-18000",
       outdoorUnitId: "multi-mfg-18msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16800,
@@ -2277,23 +2454,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single-cfg-6",
-      slug: "multi-mfg-msz-series-wall-single-cfg-6",
-      modelId: "multi-mfg-msz-series-wall-single",
-      outdoorUnitId: "multi-mfg-24msz-m-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msz-series-wall-single-cfg-7",
-      slug: "multi-mfg-msz-series-wall-single-cfg-7",
-      modelId: "multi-mfg-msz-series-wall-single",
+      id: "multi-mfg-msz-series-wall-single-18000-cfg-4",
+      slug: "multi-mfg-msz-series-wall-single-18000-cfg-4",
+      modelId: "multi-mfg-msz-series-wall-single-18000",
       outdoorUnitId: "multi-mfg-18msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2305,9 +2468,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single-cfg-8",
-      slug: "multi-mfg-msz-series-wall-single-cfg-8",
-      modelId: "multi-mfg-msz-series-wall-single",
+      id: "multi-mfg-msz-series-wall-single-18000-cfg-5",
+      slug: "multi-mfg-msz-series-wall-single-18000-cfg-5",
+      modelId: "multi-mfg-msz-series-wall-single-18000",
       outdoorUnitId: "multi-mfg-18msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -2319,37 +2482,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single-cfg-9",
-      slug: "multi-mfg-msz-series-wall-single-cfg-9",
-      modelId: "multi-mfg-msz-series-wall-single",
-      outdoorUnitId: "multi-mfg-24msz-m-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msz-series-wall-single-cfg-10",
-      slug: "multi-mfg-msz-series-wall-single-cfg-10",
-      modelId: "multi-mfg-msz-series-wall-single",
-      outdoorUnitId: "multi-mfg-18msz-m-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 23.8,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msz-series-wall-single-cfg-11",
-      slug: "multi-mfg-msz-series-wall-single-cfg-11",
-      modelId: "multi-mfg-msz-series-wall-single",
+      id: "multi-mfg-msz-series-wall-single-18000-cfg-6",
+      slug: "multi-mfg-msz-series-wall-single-18000-cfg-6",
+      modelId: "multi-mfg-msz-series-wall-single-18000",
       outdoorUnitId: "multi-mfg-18msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2361,23 +2496,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-wall-single-cfg-12",
-      slug: "multi-mfg-msz-series-wall-single-cfg-12",
-      modelId: "multi-mfg-msz-series-wall-single",
-      outdoorUnitId: "multi-mfg-24msz-m-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.1,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "multi-mfg-msz-series-wall-single-cfg-13",
-      slug: "multi-mfg-msz-series-wall-single-cfg-13",
-      modelId: "multi-mfg-msz-series-wall-single",
+      id: "multi-mfg-msz-series-wall-single-18000-cfg-7",
+      slug: "multi-mfg-msz-series-wall-single-18000-cfg-7",
+      modelId: "multi-mfg-msz-series-wall-single-18000",
       outdoorUnitId: "multi-mfg-18msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2389,9 +2510,247 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-central-ducted-cfg-1",
-      slug: "multi-mfg-msz-series-central-ducted-cfg-1",
-      modelId: "multi-mfg-msz-series-central-ducted",
+      id: "multi-mfg-msz-series-wall-single-30000-cfg-1",
+      slug: "multi-mfg-msz-series-wall-single-30000-cfg-1",
+      modelId: "multi-mfg-msz-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-30msz-m-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 21,
+      hspf2: 8.7,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-1",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-1",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-18mpc2-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.9,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-2",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-2",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-18mpc2-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-3",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-3",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-18mpc2-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.95,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-4",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-4",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-19mpc2-hh-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 22,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-5",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-5",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-19mpc2-hh-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-6",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-6",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-19mpc2-hh-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 9.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-7",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-7",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-18mpc3-he-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-8",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-8",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-18mpc3-he-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-18000-cfg-9",
+      slug: "multi-mfg-mpc-series-wall-single-18000-cfg-9",
+      modelId: "multi-mfg-mpc-series-wall-single-18000",
+      outdoorUnitId: "multi-mfg-18mpc3-he-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000-cfg-1",
+      slug: "multi-mfg-mpc-series-wall-single-48000-cfg-1",
+      modelId: "multi-mfg-mpc-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-48mpc5-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 23.4,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000-cfg-2",
+      slug: "multi-mfg-mpc-series-wall-single-48000-cfg-2",
+      modelId: "multi-mfg-mpc-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-48mpc5-xx-a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.95,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000-cfg-3",
+      slug: "multi-mfg-mpc-series-wall-single-48000-cfg-3",
+      modelId: "multi-mfg-mpc-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-48mpc6-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000-cfg-4",
+      slug: "multi-mfg-mpc-series-wall-single-48000-cfg-4",
+      modelId: "multi-mfg-mpc-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-48mpc6-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: 20.8,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000-cfg-5",
+      slug: "multi-mfg-mpc-series-wall-single-48000-cfg-5",
+      modelId: "multi-mfg-mpc-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-55mpc6-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 21.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000-cfg-6",
+      slug: "multi-mfg-mpc-series-wall-single-48000-cfg-6",
+      modelId: "multi-mfg-mpc-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-55mpc6-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-48000-cfg-7",
+      slug: "multi-mfg-mpc-series-wall-single-48000-cfg-7",
+      modelId: "multi-mfg-mpc-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-55mpc6-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 20.7,
+      hspf2: 10.65,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-central-ducted-18000-cfg-1",
+      slug: "multi-mfg-msz-series-central-ducted-18000-cfg-1",
+      modelId: "multi-mfg-msz-series-central-ducted-18000",
       outdoorUnitId: "multi-mfg-18msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2403,9 +2762,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msz-series-central-ducted-cfg-2",
-      slug: "multi-mfg-msz-series-central-ducted-cfg-2",
-      modelId: "multi-mfg-msz-series-central-ducted",
+      id: "multi-mfg-msz-series-central-ducted-24000-cfg-1",
+      slug: "multi-mfg-msz-series-central-ducted-24000-cfg-1",
+      modelId: "multi-mfg-msz-series-central-ducted-24000",
       outdoorUnitId: "multi-mfg-24msz-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2417,9 +2776,107 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-mez-series-wall-single-cfg-1",
-      slug: "multi-mfg-mez-series-wall-single-cfg-1",
-      modelId: "multi-mfg-mez-series-wall-single",
+      id: "multi-mfg-hes-series-central-ducted-36000-cfg-1",
+      slug: "multi-mfg-hes-series-central-ducted-36000-cfg-1",
+      modelId: "multi-mfg-hes-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hes-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-36000-cfg-2",
+      slug: "multi-mfg-hes-series-central-ducted-36000-cfg-2",
+      modelId: "multi-mfg-hes-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hes-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.7,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-36000-cfg-3",
+      slug: "multi-mfg-hes-series-central-ducted-36000-cfg-3",
+      modelId: "multi-mfg-hes-series-central-ducted-36000",
+      outdoorUnitId: "multi-mfg-hes-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.4,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-48000-cfg-1",
+      slug: "multi-mfg-hes-series-central-ducted-48000-cfg-1",
+      modelId: "multi-mfg-hes-series-central-ducted-48000",
+      outdoorUnitId: "multi-mfg-hes-48hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-48000-cfg-2",
+      slug: "multi-mfg-hes-series-central-ducted-48000-cfg-2",
+      modelId: "multi-mfg-hes-series-central-ducted-48000",
+      outdoorUnitId: "multi-mfg-hes-60hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hhs-series-central-ducted-42000-cfg-1",
+      slug: "multi-mfg-hhs-series-central-ducted-42000-cfg-1",
+      modelId: "multi-mfg-hhs-series-central-ducted-42000",
+      outdoorUnitId: "multi-mfg-hhs-42hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 16.7,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-hes-series-central-ducted-30000-cfg-1",
+      slug: "multi-mfg-hes-series-central-ducted-30000-cfg-1",
+      modelId: "multi-mfg-hes-series-central-ducted-30000",
+      outdoorUnitId: "multi-mfg-hes-30hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.6,
+      hspf2: 8.7,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mez-series-wall-single-9000-cfg-1",
+      slug: "multi-mfg-mez-series-wall-single-9000-cfg-1",
+      modelId: "multi-mfg-mez-series-wall-single-9000",
       outdoorUnitId: "multi-mfg-9mez-m-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2431,9 +2888,79 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msu-series-wall-single-cfg-1",
-      slug: "multi-mfg-msu-series-wall-single-cfg-1",
-      modelId: "multi-mfg-msu-series-wall-single",
+      id: "multi-mfg-msz-series-wall-single-24000-cfg-1",
+      slug: "multi-mfg-msz-series-wall-single-24000-cfg-1",
+      modelId: "multi-mfg-msz-series-wall-single-24000",
+      outdoorUnitId: "multi-mfg-24msz-m-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-wall-single-24000-cfg-2",
+      slug: "multi-mfg-msz-series-wall-single-24000-cfg-2",
+      modelId: "multi-mfg-msz-series-wall-single-24000",
+      outdoorUnitId: "multi-mfg-24msz-m-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-wall-single-24000-cfg-3",
+      slug: "multi-mfg-msz-series-wall-single-24000-cfg-3",
+      modelId: "multi-mfg-msz-series-wall-single-24000",
+      outdoorUnitId: "multi-mfg-24msz-m-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-wall-single-24000-cfg-4",
+      slug: "multi-mfg-msz-series-wall-single-24000-cfg-4",
+      modelId: "multi-mfg-msz-series-wall-single-24000",
+      outdoorUnitId: "multi-mfg-24msz-m-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.1,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-30000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-30000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-30000",
+      outdoorUnitId: "multi-mfg-msh-30hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msu-series-wall-single-36000-cfg-1",
+      slug: "multi-mfg-msu-series-wall-single-36000-cfg-1",
+      modelId: "multi-mfg-msu-series-wall-single-36000",
       outdoorUnitId: "multi-mfg-msu-36hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2445,9 +2972,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msu-series-wall-single-cfg-2",
-      slug: "multi-mfg-msu-series-wall-single-cfg-2",
-      modelId: "multi-mfg-msu-series-wall-single",
+      id: "multi-mfg-msu-series-wall-single-48000-cfg-1",
+      slug: "multi-mfg-msu-series-wall-single-48000-cfg-1",
+      modelId: "multi-mfg-msu-series-wall-single-48000",
       outdoorUnitId: "multi-mfg-msu-48hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2459,9 +2986,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msu-series-wall-single-cfg-3",
-      slug: "multi-mfg-msu-series-wall-single-cfg-3",
-      modelId: "multi-mfg-msu-series-wall-single",
+      id: "multi-mfg-msu-series-wall-single-48000-cfg-2",
+      slug: "multi-mfg-msu-series-wall-single-48000-cfg-2",
+      modelId: "multi-mfg-msu-series-wall-single-48000",
       outdoorUnitId: "multi-mfg-msu-48hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2473,9 +3000,9 @@ export const multimfgDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "multi-mfg-msu-series-wall-single-cfg-4",
-      slug: "multi-mfg-msu-series-wall-single-cfg-4",
-      modelId: "multi-mfg-msu-series-wall-single",
+      id: "multi-mfg-msu-series-wall-single-48000-cfg-3",
+      slug: "multi-mfg-msu-series-wall-single-48000-cfg-3",
+      modelId: "multi-mfg-msu-series-wall-single-48000",
       outdoorUnitId: "multi-mfg-msu-48hd-b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2485,11 +3012,221 @@ export const multimfgDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-36000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-36000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-36000",
+      outdoorUnitId: "multi-mfg-msh-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36600,
+      coolingCapacityMaxBtu: 36600,
+      seer2: 21.2,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-36000-cfg-2",
+      slug: "multi-mfg-msh-series-wall-single-36000-cfg-2",
+      modelId: "multi-mfg-msh-series-wall-single-36000",
+      outdoorUnitId: "multi-mfg-msh-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.7,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-36000-cfg-3",
+      slug: "multi-mfg-msh-series-wall-single-36000-cfg-3",
+      modelId: "multi-mfg-msh-series-wall-single-36000",
+      outdoorUnitId: "multi-mfg-msh-36hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36400,
+      coolingCapacityMaxBtu: 36400,
+      seer2: 20,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-48000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-48000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-msh-48hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-48000-cfg-2",
+      slug: "multi-mfg-msh-series-wall-single-48000-cfg-2",
+      modelId: "multi-mfg-msh-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-msh-48hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-48000-cfg-3",
+      slug: "multi-mfg-msh-series-wall-single-48000-cfg-3",
+      modelId: "multi-mfg-msh-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-msh-48hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.5,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-48000-cfg-4",
+      slug: "multi-mfg-msh-series-wall-single-48000-cfg-4",
+      modelId: "multi-mfg-msh-series-wall-single-48000",
+      outdoorUnitId: "multi-mfg-msh-60hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 18,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-60000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-60000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-60000",
+      outdoorUnitId: "multi-mfg-msh-60hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.8,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msz-series-wall-single-15000-cfg-1",
+      slug: "multi-mfg-msz-series-wall-single-15000-cfg-1",
+      modelId: "multi-mfg-msz-series-wall-single-15000",
+      outdoorUnitId: "multi-mfg-18msz-m-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 23.8,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-msh-series-wall-single-20000-cfg-1",
+      slug: "multi-mfg-msh-series-wall-single-20000-cfg-1",
+      modelId: "multi-mfg-msh-series-wall-single-20000",
+      outdoorUnitId: "multi-mfg-msh-24hd-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.4,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-42000-cfg-1",
+      slug: "multi-mfg-mpc-series-wall-single-42000-cfg-1",
+      modelId: "multi-mfg-mpc-series-wall-single-42000",
+      outdoorUnitId: "multi-mfg-48mpc6-he-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-42000-cfg-2",
+      slug: "multi-mfg-mpc-series-wall-single-42000-cfg-2",
+      modelId: "multi-mfg-mpc-series-wall-single-42000",
+      outdoorUnitId: "multi-mfg-48mpc6-he-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-42000-cfg-3",
+      slug: "multi-mfg-mpc-series-wall-single-42000-cfg-3",
+      modelId: "multi-mfg-mpc-series-wall-single-42000",
+      outdoorUnitId: "multi-mfg-48mpc6-he-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.85,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-42000-cfg-4",
+      slug: "multi-mfg-mpc-series-wall-single-42000-cfg-4",
+      modelId: "multi-mfg-mpc-series-wall-single-42000",
+      outdoorUnitId: "multi-mfg-48mpc6-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.2,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "multi-mfg-mpc-series-wall-single-24000-cfg-1",
+      slug: "multi-mfg-mpc-series-wall-single-24000-cfg-1",
+      modelId: "multi-mfg-mpc-series-wall-single-24000",
+      outdoorUnitId: "multi-mfg-27mpc4-hh-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-1",
+      configurationId: "multi-mfg-hes-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2500,7 +3237,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-2",
+      configurationId: "multi-mfg-hes-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2511,29 +3248,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.93,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-5",
+      configurationId: "multi-mfg-hes-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2544,51 +3259,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-10",
+      configurationId: "multi-mfg-hes-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2599,40 +3270,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18200,
-          cop: 1.99,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24800,
-          cop: 1.99,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-14",
+      configurationId: "multi-mfg-hes-series-central-ducted-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2643,18 +3281,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hes-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-1",
+      configurationId: "multi-mfg-hhs-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2665,84 +3292,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-9",
+      configurationId: "multi-mfg-hhs-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2753,18 +3303,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-11",
+      configurationId: "multi-mfg-hhs-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2775,84 +3314,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-19",
+      configurationId: "multi-mfg-hhs-series-central-ducted-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2863,7 +3325,51 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-20",
+      configurationId: "multi-mfg-hhs-series-central-ducted-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2874,40 +3380,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-24",
+      configurationId: "multi-mfg-hhs-series-central-ducted-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2918,29 +3391,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-27",
+      configurationId: "multi-mfg-hhs-series-central-ducted-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2951,7 +3402,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-hhs-series-central-ducted-cfg-28",
+      configurationId: "multi-mfg-hhs-series-central-ducted-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2962,7 +3413,216 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-1",
+      configurationId: "multi-mfg-hhs-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.93,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2973,29 +3633,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-4",
+      configurationId: "multi-mfg-msh-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3006,40 +3644,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10100,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-8",
+      configurationId: "multi-mfg-msh-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3050,40 +3655,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-12",
+      configurationId: "multi-mfg-msh-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3094,40 +3666,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29600,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-16",
+      configurationId: "multi-mfg-msh-series-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3138,73 +3677,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30600,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-23",
+      configurationId: "multi-mfg-msh-series-wall-single-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3215,106 +3688,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30200,
-          cop: 2.02,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38500,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msh-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-1",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3325,7 +3699,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-2",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3336,29 +3710,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-5",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3369,172 +3721,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.25,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-21",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3545,7 +3732,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-22",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3556,7 +3743,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-23",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3567,73 +3754,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35400,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-30",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3644,7 +3765,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-31",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3655,7 +3776,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-32",
+      configurationId: "multi-mfg-mpc-series-wall-single-36000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3666,73 +3787,271 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-33",
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 40500,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-34",
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
+          heatingCapacityBtu: 9600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-35",
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 42500,
+          heatingCapacityBtu: 10100,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-9000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-36",
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
+          heatingCapacityBtu: 22000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-37",
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
+          heatingCapacityBtu: 21400,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "multi-mfg-mpc-series-wall-single-cfg-38",
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.05,
+          heatingCapacityBtu: 23000,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-1",
+      configurationId: "multi-mfg-mpc-series-wall-single-30000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msz-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3743,18 +4062,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-3",
+      configurationId: "multi-mfg-msz-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3765,18 +4073,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19500,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-5",
+      configurationId: "multi-mfg-msz-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3787,18 +4084,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-7",
+      configurationId: "multi-mfg-msz-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3809,7 +4095,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-8",
+      configurationId: "multi-mfg-msz-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3820,29 +4106,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-11",
+      configurationId: "multi-mfg-msz-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3853,18 +4117,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "multi-mfg-msz-series-wall-single-cfg-13",
+      configurationId: "multi-mfg-msz-series-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3875,7 +4128,194 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-central-ducted-cfg-1",
+      configurationId: "multi-mfg-msz-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msz-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3886,7 +4326,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msz-series-central-ducted-cfg-2",
+      configurationId: "multi-mfg-msz-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3897,7 +4337,84 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-mez-series-wall-single-cfg-1",
+      configurationId: "multi-mfg-hes-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24800,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hhs-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-hes-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18200,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mez-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3908,7 +4425,62 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msu-series-wall-single-cfg-1",
+      configurationId: "multi-mfg-msz-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msz-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msz-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msz-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msu-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3919,7 +4491,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msu-series-wall-single-cfg-2",
+      configurationId: "multi-mfg-msu-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3930,7 +4502,7 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msu-series-wall-single-cfg-3",
+      configurationId: "multi-mfg-msu-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3941,12 +4513,177 @@ export const multimfgDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "multi-mfg-msu-series-wall-single-cfg-4",
+      configurationId: "multi-mfg-msu-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 39500,
           cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30200,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38500,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msz-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-msh-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35400,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-42000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "multi-mfg-mpc-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 1.9,
           confidence: "verified",
         }
       ]

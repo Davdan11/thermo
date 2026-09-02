@@ -136,19 +136,20 @@ export const weathermakerDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "weathermaker-standard-wall-single",
-      slug: "weathermaker-standard-wall-single",
-      name: "Standard",
+      id: "weathermaker-standard-wall-single-36000",
+      slug: "weathermaker-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
       seriesId: "weathermaker-standard",
       brandId: "weathermaker",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 6900,
-      heatingCapacity5FMaxBtu: 40500,
+      heatingCapacity5FMinBtu: 17900,
+      heatingCapacity5FMaxBtu: 27000,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -162,24 +163,79 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single",
-      slug: "weathermaker-38mar-series-wall-single",
-      name: "38MAR-series",
-      seriesId: "weathermaker-38mar-series",
+      id: "weathermaker-standard-wall-single-48000",
+      slug: "weathermaker-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "weathermaker-standard",
       brandId: "weathermaker",
-      modelNumber: "38MAR-series",
-      normalizedModelNumber: "38mar-series",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 37200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-20000",
+      slug: "weathermaker-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "weathermaker-standard",
+      brandId: "weathermaker",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17500,
+      heatingCapacity5FMaxBtu: 17500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-24000",
+      slug: "weathermaker-38mar-series-wall-single-24000",
+      name: "38MAR-series 24 000 BTU",
+      seriesId: "weathermaker-38mar-series",
+      brandId: "weathermaker",
+      modelNumber: "38MAR-series 24k",
+      normalizedModelNumber: "38mar-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 6100,
+      heatingCapacity5FMinBtu: 14500,
       heatingCapacity5FMaxBtu: 21000,
-      seer2Min: 18,
-      seer2Max: 28.1,
-      hspf2Min: 9.5,
-      hspf2Max: 12,
-      cop5FMin: 1.59,
+      seer2Min: 19.2,
+      seer2Max: 21.5,
+      hspf2Min: 10.5,
+      hspf2Max: 11.5,
+      cop5FMin: 2,
       cop5FMax: 2.21,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -188,24 +244,25 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-wall-single",
-      slug: "weathermaker-38m-series-wall-single",
-      name: "38M series",
+      id: "weathermaker-38m-series-wall-single-30000",
+      slug: "weathermaker-38m-series-wall-single-30000",
+      name: "38M series 30 000 BTU",
       seriesId: "weathermaker-38m-series",
       brandId: "weathermaker",
-      modelNumber: "38M series",
-      normalizedModelNumber: "38m-series",
+      modelNumber: "38M series 30k",
+      normalizedModelNumber: "38m-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 19000,
-      heatingCapacity5FMaxBtu: 30000,
+      heatingCapacity5FMaxBtu: 19000,
       seer2Min: 20,
-      seer2Max: 21.95,
+      seer2Max: 20.1,
       hspf2Min: 9,
       hspf2Max: 9.2,
-      cop5FMin: 1.75,
+      cop5FMin: 1.92,
       cop5FMax: 1.95,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
@@ -214,25 +271,26 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mp-series-wall-single",
-      slug: "weathermaker-38mp-series-wall-single",
-      name: "38MP-series",
-      seriesId: "weathermaker-38mp-series",
+      id: "weathermaker-38mar-series-wall-single-12000",
+      slug: "weathermaker-38mar-series-wall-single-12000",
+      name: "38MAR-series 12 000 BTU",
+      seriesId: "weathermaker-38mar-series",
       brandId: "weathermaker",
-      modelNumber: "38MP-series",
-      normalizedModelNumber: "38mp-series",
+      modelNumber: "38MAR-series 12k",
+      normalizedModelNumber: "38mar-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 10400,
-      heatingCapacity5FMaxBtu: 20200,
-      seer2Min: 26.3,
-      seer2Max: 28.5,
-      hspf2Min: 11,
-      hspf2Max: 12,
-      cop5FMin: 1.85,
-      cop5FMax: 2.89,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7400,
+      heatingCapacity5FMaxBtu: 8400,
+      seer2Min: 19.5,
+      seer2Max: 25.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2.16,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -240,24 +298,25 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single",
-      slug: "weathermaker-38mg-series-wall-single",
-      name: "38MG-series",
-      seriesId: "weathermaker-38mg-series",
+      id: "weathermaker-38mar-series-wall-single-9000",
+      slug: "weathermaker-38mar-series-wall-single-9000",
+      name: "38MAR-series 9 000 BTU",
+      seriesId: "weathermaker-38mar-series",
       brandId: "weathermaker",
-      modelNumber: "38MG-series",
-      normalizedModelNumber: "38mg-series",
+      modelNumber: "38MAR-series 9k",
+      normalizedModelNumber: "38mar-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 11000,
-      heatingCapacity5FMaxBtu: 30400,
-      seer2Min: 19,
-      seer2Max: 26,
-      hspf2Min: 8.7,
-      hspf2Max: 10.5,
-      cop5FMin: 1.68,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6100,
+      heatingCapacity5FMaxBtu: 7500,
+      seer2Min: 20.2,
+      seer2Max: 28.1,
+      hspf2Min: 10.3,
+      hspf2Max: 12,
+      cop5FMin: 1.59,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -266,15 +325,394 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mb-series-wall-single",
-      slug: "weathermaker-38mb-series-wall-single",
-      name: "38MB-series",
-      seriesId: "weathermaker-38mb-series",
+      id: "weathermaker-38mar-series-wall-single-18000",
+      slug: "weathermaker-38mar-series-wall-single-18000",
+      name: "38MAR-series 18 000 BTU",
+      seriesId: "weathermaker-38mar-series",
       brandId: "weathermaker",
-      modelNumber: "38MB-series",
-      normalizedModelNumber: "38mb-series",
+      modelNumber: "38MAR-series 18k",
+      normalizedModelNumber: "38mar-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10800,
+      heatingCapacity5FMaxBtu: 12700,
+      seer2Min: 18,
+      seer2Max: 21.5,
+      hspf2Min: 9.5,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-9000",
+      slug: "weathermaker-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "weathermaker-standard",
+      brandId: "weathermaker",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMaxBtu: 7000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000",
+      slug: "weathermaker-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "weathermaker-standard",
+      brandId: "weathermaker",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 8300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-18000",
+      slug: "weathermaker-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "weathermaker-standard",
+      brandId: "weathermaker",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-24000",
+      slug: "weathermaker-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "weathermaker-standard",
+      brandId: "weathermaker",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 18800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-20000",
+      slug: "weathermaker-38mar-series-wall-single-20000",
+      name: "38MAR-series 20 000 BTU",
+      seriesId: "weathermaker-38mar-series",
+      brandId: "weathermaker",
+      modelNumber: "38MAR-series 20k",
+      normalizedModelNumber: "38mar-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      heatingCapacity5FMinBtu: 19800,
+      heatingCapacity5FMaxBtu: 19800,
+      seer2Min: 18.9,
+      seer2Max: 18.9,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 1.89,
+      cop5FMax: 1.89,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mp-series-wall-single-9000",
+      slug: "weathermaker-38mp-series-wall-single-9000",
+      name: "38MP-series 9 000 BTU",
+      seriesId: "weathermaker-38mp-series",
+      brandId: "weathermaker",
+      modelNumber: "38MP-series 9k",
+      normalizedModelNumber: "38mp-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 10400,
+      seer2Min: 28.5,
+      seer2Max: 28.5,
+      hspf2Min: 12,
+      hspf2Max: 12,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mp-series-wall-single-12000",
+      slug: "weathermaker-38mp-series-wall-single-12000",
+      name: "38MP-series 12 000 BTU",
+      seriesId: "weathermaker-38mp-series",
+      brandId: "weathermaker",
+      modelNumber: "38MP-series 12k",
+      normalizedModelNumber: "38mp-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 10400,
+      seer2Min: 27,
+      seer2Max: 27,
+      hspf2Min: 12,
+      hspf2Max: 12,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-18000",
+      slug: "weathermaker-38mg-series-wall-single-18000",
+      name: "38MG-series 18 000 BTU",
+      seriesId: "weathermaker-38mg-series",
+      brandId: "weathermaker",
+      modelNumber: "38MG-series 18k",
+      normalizedModelNumber: "38mg-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11800,
+      seer2Min: 19,
+      seer2Max: 22.9,
+      hspf2Min: 9.8,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-24000",
+      slug: "weathermaker-38mg-series-wall-single-24000",
+      name: "38MG-series 24 000 BTU",
+      seriesId: "weathermaker-38mg-series",
+      brandId: "weathermaker",
+      modelNumber: "38MG-series 24k",
+      normalizedModelNumber: "38mg-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 18500,
+      seer2Min: 21.3,
+      seer2Max: 24.6,
+      hspf2Min: 9.7,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-30000",
+      slug: "weathermaker-38mg-series-wall-single-30000",
+      name: "38MG-series 30 000 BTU",
+      seriesId: "weathermaker-38mg-series",
+      brandId: "weathermaker",
+      modelNumber: "38MG-series 30k",
+      normalizedModelNumber: "38mg-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 17500,
+      heatingCapacity5FMaxBtu: 19000,
+      seer2Min: 20,
+      seer2Max: 26,
+      hspf2Min: 9.2,
+      hspf2Max: 9.8,
+      cop5FMin: 1.68,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-36000",
+      slug: "weathermaker-38mg-series-wall-single-36000",
+      name: "38MG-series 36 000 BTU",
+      seriesId: "weathermaker-38mg-series",
+      brandId: "weathermaker",
+      modelNumber: "38MG-series 36k",
+      normalizedModelNumber: "38mg-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 23400,
+      seer2Min: 19,
+      seer2Max: 23.9,
+      hspf2Min: 9.5,
+      hspf2Max: 10.3,
+      cop5FMin: 1.7,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-48000",
+      slug: "weathermaker-38mg-series-wall-single-48000",
+      name: "38MG-series 48 000 BTU",
+      seriesId: "weathermaker-38mg-series",
+      brandId: "weathermaker",
+      modelNumber: "38MG-series 48k",
+      normalizedModelNumber: "38mg-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 28000,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 20.9,
+      seer2Max: 23.4,
+      hspf2Min: 8.7,
+      hspf2Max: 9.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-wall-single-48000",
+      slug: "weathermaker-38m-series-wall-single-48000",
+      name: "38M series 48 000 BTU",
+      seriesId: "weathermaker-38m-series",
+      brandId: "weathermaker",
+      modelNumber: "38M series 48k",
+      normalizedModelNumber: "38m-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 21.95,
+      seer2Max: 21.95,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mb-series-wall-single-48000",
+      slug: "weathermaker-38mb-series-wall-single-48000",
+      name: "38MB-series 48 000 BTU",
+      seriesId: "weathermaker-38mb-series",
+      brandId: "weathermaker",
+      modelNumber: "38MB-series 48k",
+      normalizedModelNumber: "38mb-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 30000,
@@ -292,24 +730,133 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mseries-central-ducted",
-      slug: "weathermaker-38mseries-central-ducted",
-      name: "38Mseries",
-      seriesId: "weathermaker-38mseries",
+      id: "weathermaker-38mp-series-wall-single-18000",
+      slug: "weathermaker-38mp-series-wall-single-18000",
+      name: "38MP-series 18 000 BTU",
+      seriesId: "weathermaker-38mp-series",
       brandId: "weathermaker",
-      modelNumber: "38Mseries",
-      normalizedModelNumber: "38mseries",
+      modelNumber: "38MP-series 18k",
+      normalizedModelNumber: "38mp-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 47000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 26.3,
+      seer2Max: 26.3,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.89,
+      cop5FMax: 2.89,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mseries-central-ducted-18000",
+      slug: "weathermaker-38mseries-central-ducted-18000",
+      name: "38Mseries 18 000 BTU",
+      seriesId: "weathermaker-38mseries",
+      brandId: "weathermaker",
+      modelNumber: "38Mseries 18k",
+      normalizedModelNumber: "38mseries-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12000,
-      heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 15.6,
+      heatingCapacity5FMaxBtu: 13500,
+      seer2Min: 17.6,
       seer2Max: 18,
-      hspf2Min: 8.9,
+      hspf2Min: 9.3,
+      hspf2Max: 9.6,
+      cop5FMin: 2,
+      cop5FMax: 2.04,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-60000",
+      slug: "weathermaker-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "weathermaker-standard",
+      brandId: "weathermaker",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-30000",
+      slug: "weathermaker-38m-series-central-ducted-30000",
+      name: "38M series 30 000 BTU",
+      seriesId: "weathermaker-38m-series",
+      brandId: "weathermaker",
+      modelNumber: "38M series 30k",
+      normalizedModelNumber: "38m-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 15.5,
+      seer2Max: 17.5,
+      hspf2Min: 8.4,
+      hspf2Max: 9.7,
+      cop5FMin: 1.81,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mseries-central-ducted-24000",
+      slug: "weathermaker-38mseries-central-ducted-24000",
+      name: "38Mseries 24 000 BTU",
+      seriesId: "weathermaker-38mseries",
+      brandId: "weathermaker",
+      modelNumber: "38Mseries 24k",
+      normalizedModelNumber: "38mseries-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 17,
+      seer2Max: 17.4,
+      hspf2Min: 9.2,
       hspf2Max: 10,
-      cop5FMin: 1.8,
+      cop5FMin: 1.91,
       cop5FMax: 2.1,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -318,24 +865,106 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-central-ducted",
-      slug: "weathermaker-38m-series-central-ducted",
-      name: "38M series",
-      seriesId: "weathermaker-38m-series",
+      id: "weathermaker-38mseries-central-ducted-48000",
+      slug: "weathermaker-38mseries-central-ducted-48000",
+      name: "38Mseries 48 000 BTU",
+      seriesId: "weathermaker-38mseries",
       brandId: "weathermaker",
-      modelNumber: "38M series",
-      normalizedModelNumber: "38m-series",
+      modelNumber: "38Mseries 48k",
+      normalizedModelNumber: "38mseries-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mseries-central-ducted-36000",
+      slug: "weathermaker-38mseries-central-ducted-36000",
+      name: "38Mseries 36 000 BTU",
+      seriesId: "weathermaker-38mseries",
+      brandId: "weathermaker",
+      modelNumber: "38Mseries 36k",
+      normalizedModelNumber: "38mseries-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.97,
+      cop5FMax: 1.97,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mseries-central-ducted-30000",
+      slug: "weathermaker-38mseries-central-ducted-30000",
+      name: "38Mseries 30 000 BTU",
+      seriesId: "weathermaker-38mseries",
+      brandId: "weathermaker",
+      modelNumber: "38Mseries 30k",
+      normalizedModelNumber: "38mseries-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.2,
+      seer2Max: 16.2,
+      hspf2Min: 8.9,
+      hspf2Max: 8.9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-18000",
+      slug: "weathermaker-38m-series-central-ducted-18000",
+      name: "38M Series 18 000 BTU",
+      seriesId: "weathermaker-38m-series",
+      brandId: "weathermaker",
+      modelNumber: "38M Series 18k",
+      normalizedModelNumber: "38m-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 37000,
-      seer2Min: 15.3,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 16.1,
       seer2Max: 18,
-      hspf2Min: 8.4,
-      hspf2Max: 9.8,
-      cop5FMin: 1.81,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 2.04,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -344,15 +973,151 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mu-series-central-ducted",
-      slug: "weathermaker-38mu-series-central-ducted",
-      name: "38MU series",
-      seriesId: "weathermaker-38mu-series",
+      id: "weathermaker-standard-wall-single-30000",
+      slug: "weathermaker-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "weathermaker-standard",
       brandId: "weathermaker",
-      modelNumber: "38MU series",
-      normalizedModelNumber: "38mu-series",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-24000",
+      slug: "weathermaker-38m-series-central-ducted-24000",
+      name: "38M series 24 000 BTU",
+      seriesId: "weathermaker-38m-series",
+      brandId: "weathermaker",
+      modelNumber: "38M series 24k",
+      normalizedModelNumber: "38m-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 16.1,
+      seer2Max: 16.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.8,
+      cop5FMin: 1.95,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-36000",
+      slug: "weathermaker-38m-series-central-ducted-36000",
+      name: "38M series 36 000 BTU",
+      seriesId: "weathermaker-38m-series",
+      brandId: "weathermaker",
+      modelNumber: "38M series 36k",
+      normalizedModelNumber: "38m-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 15.5,
+      seer2Max: 15.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-48000",
+      slug: "weathermaker-38m-series-central-ducted-48000",
+      name: "38M Series 48 000 BTU",
+      seriesId: "weathermaker-38m-series",
+      brandId: "weathermaker",
+      modelNumber: "38M Series 48k",
+      normalizedModelNumber: "38m-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 32000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-60000",
+      slug: "weathermaker-38m-series-central-ducted-60000",
+      name: "38M Series 60 000 BTU",
+      seriesId: "weathermaker-38m-series",
+      brandId: "weathermaker",
+      modelNumber: "38M Series 60k",
+      normalizedModelNumber: "38m-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mu-series-central-ducted-36000",
+      slug: "weathermaker-38mu-series-central-ducted-36000",
+      name: "38MU series 36 000 BTU",
+      seriesId: "weathermaker-38mu-series",
+      brandId: "weathermaker",
+      modelNumber: "38MU series 36k",
+      normalizedModelNumber: "38mu-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 35000,
       coolingCapacityMaxBtu: 35000,
       heatingCapacity5FMinBtu: 33000,
@@ -370,24 +1135,25 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted",
-      slug: "weathermaker-45m-series-central-ducted",
-      name: "45M Series",
+      id: "weathermaker-45m-series-central-ducted-18000",
+      slug: "weathermaker-45m-series-central-ducted-18000",
+      name: "45M Series 18 000 BTU",
       seriesId: "weathermaker-45m-series",
       brandId: "weathermaker",
-      modelNumber: "45M Series",
-      normalizedModelNumber: "45m-series",
+      modelNumber: "45M Series 18k",
+      normalizedModelNumber: "45m-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13200,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.2,
-      seer2Max: 19.8,
-      hspf2Min: 8.4,
-      hspf2Max: 10.8,
-      cop5FMin: 1.8,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18.2,
+      seer2Max: 19,
+      hspf2Min: 9.8,
+      hspf2Max: 10.2,
+      cop5FMin: 2,
       cop5FMax: 2.3,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -396,24 +1162,133 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-central-ducted",
-      slug: "weathermaker-37m-series-central-ducted",
-      name: "37M Series",
-      seriesId: "weathermaker-37m-series",
+      id: "weathermaker-45m-series-central-ducted-24000",
+      slug: "weathermaker-45m-series-central-ducted-24000",
+      name: "45M Series 24 000 BTU",
+      seriesId: "weathermaker-45m-series",
       brandId: "weathermaker",
-      modelNumber: "37M Series",
-      normalizedModelNumber: "37m-series",
+      modelNumber: "45M Series 24k",
+      normalizedModelNumber: "45m-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 30000,
-      heatingCapacity5FMinBtu: 12600,
-      heatingCapacity5FMaxBtu: 18500,
-      seer2Min: 18.6,
-      seer2Max: 18.8,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16900,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 18.2,
+      seer2Max: 19.8,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.87,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-30000",
+      slug: "weathermaker-45m-series-central-ducted-30000",
+      name: "45M Series 30 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 30k",
+      normalizedModelNumber: "45m-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 16.7,
+      seer2Max: 17.2,
+      hspf2Min: 8.8,
+      hspf2Max: 10.8,
+      cop5FMin: 1.96,
+      cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-36000",
+      slug: "weathermaker-45m-series-central-ducted-36000",
+      name: "45M Series 36 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 36k",
+      normalizedModelNumber: "45m-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 25600,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 16.2,
+      seer2Max: 18,
       hspf2Min: 8.7,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 2.06,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000",
+      slug: "weathermaker-45m-series-central-ducted-48000",
+      name: "45M Series 48 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 48k",
+      normalizedModelNumber: "45m-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32400,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 17.8,
+      hspf2Min: 8.4,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-central-ducted-18000",
+      slug: "weathermaker-37m-series-central-ducted-18000",
+      name: "37M Series 18 000 BTU",
+      seriesId: "weathermaker-37m-series",
+      brandId: "weathermaker",
+      modelNumber: "37M Series 18k",
+      normalizedModelNumber: "37m-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12600,
+      heatingCapacity5FMaxBtu: 12600,
+      seer2Min: 18.8,
+      seer2Max: 18.8,
+      hspf2Min: 9.2,
       hspf2Max: 9.2,
-      cop5FMin: 1.99,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["conventional", "ducted"],
@@ -422,25 +1297,53 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single",
-      slug: "weathermaker-45m-series-wall-single",
-      name: "45M Series",
-      seriesId: "weathermaker-45m-series",
+      id: "weathermaker-37m-series-central-ducted-30000",
+      slug: "weathermaker-37m-series-central-ducted-30000",
+      name: "37M Series 30 000 BTU",
+      seriesId: "weathermaker-37m-series",
       brandId: "weathermaker",
-      modelNumber: "45M Series",
-      normalizedModelNumber: "45m-series",
+      modelNumber: "37M Series 30k",
+      normalizedModelNumber: "37m-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 6600,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.9,
-      seer2Max: 27.3,
-      hspf2Min: 9,
-      hspf2Max: 13.9,
-      cop5FMin: 1.83,
-      cop5FMax: 2.5,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 18500,
+      heatingCapacity5FMaxBtu: 18500,
+      seer2Min: 18.6,
+      seer2Max: 18.6,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 1.99,
+      cop5FMax: 1.99,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-36000",
+      slug: "weathermaker-45m-series-wall-single-36000",
+      name: "45M Series 36 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 36k",
+      normalizedModelNumber: "45m-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36600,
+      heatingCapacity5FMinBtu: 25000,
+      heatingCapacity5FMaxBtu: 31600,
+      seer2Min: 17.8,
+      seer2Max: 21.3,
+      hspf2Min: 10.4,
+      hspf2Max: 11.1,
+      cop5FMin: 1.95,
+      cop5FMax: 2.2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -448,24 +1351,133 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-d5m-series-wall-single",
-      slug: "weathermaker-d5m-series-wall-single",
-      name: "D5M Series",
+      id: "weathermaker-d5m-series-wall-single-6000",
+      slug: "weathermaker-d5m-series-wall-single-6000",
+      name: "D5M Series 6 000 BTU",
       seriesId: "weathermaker-d5m-series",
       brandId: "weathermaker",
-      modelNumber: "D5M Series",
-      normalizedModelNumber: "d5m-series",
+      modelNumber: "D5M Series 6k",
+      normalizedModelNumber: "d5m-series-6000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 33000,
+      coolingCapacityMaxBtu: 6000,
       heatingCapacity5FMinBtu: 7900,
-      heatingCapacity5FMaxBtu: 30000,
-      seer2Min: 17,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 25.7,
       seer2Max: 35.1,
-      hspf2Min: 8.5,
-      hspf2Max: 16.2,
+      hspf2Min: 14.8,
+      hspf2Max: 15.6,
+      cop5FMin: 2,
+      cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-9000",
+      slug: "weathermaker-d5m-series-wall-single-9000",
+      name: "D5M Series 9 000 BTU",
+      seriesId: "weathermaker-d5m-series",
+      brandId: "weathermaker",
+      modelNumber: "D5M Series 9k",
+      normalizedModelNumber: "d5m-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 19,
+      seer2Max: 33.5,
+      hspf2Min: 9.7,
+      hspf2Max: 14.6,
       cop5FMin: 1.8,
+      cop5FMax: 2.36,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-12000",
+      slug: "weathermaker-d5m-series-wall-single-12000",
+      name: "D5M Series 12 000 BTU",
+      seriesId: "weathermaker-d5m-series",
+      brandId: "weathermaker",
+      modelNumber: "D5M Series 12k",
+      normalizedModelNumber: "d5m-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8700,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 23.5,
+      seer2Max: 29.5,
+      hspf2Min: 9.5,
+      hspf2Max: 12.7,
+      cop5FMin: 1.8,
+      cop5FMax: 2.33,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-18000",
+      slug: "weathermaker-d5m-series-wall-single-18000",
+      name: "D5M Series 18 000 BTU",
+      seriesId: "weathermaker-d5m-series",
+      brandId: "weathermaker",
+      modelNumber: "D5M Series 18k",
+      normalizedModelNumber: "d5m-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13600,
+      heatingCapacity5FMaxBtu: 19300,
+      seer2Min: 21.5,
+      seer2Max: 25.8,
+      hspf2Min: 10.8,
+      hspf2Max: 16.2,
+      cop5FMin: 1.92,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-24000",
+      slug: "weathermaker-d5m-series-wall-single-24000",
+      name: "D5M Series 24 000 BTU",
+      seriesId: "weathermaker-d5m-series",
+      brandId: "weathermaker",
+      modelNumber: "D5M Series 24k",
+      normalizedModelNumber: "d5m-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17100,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 17,
+      seer2Max: 23.1,
+      hspf2Min: 8.5,
+      hspf2Max: 13.5,
+      cop5FMin: 2.01,
       cop5FMax: 2.54,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -474,27 +1486,460 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single",
-      slug: "weathermaker-37m-series-wall-single",
-      name: "37M Series",
-      seriesId: "weathermaker-37m-series",
+      id: "weathermaker-d5m-series-wall-single-30000",
+      slug: "weathermaker-d5m-series-wall-single-30000",
+      name: "D5M Series 30 000 BTU",
+      seriesId: "weathermaker-d5m-series",
       brandId: "weathermaker",
-      modelNumber: "37M Series",
-      normalizedModelNumber: "37m-series",
+      modelNumber: "D5M Series 30k",
+      normalizedModelNumber: "d5m-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 53000,
-      heatingCapacity5FMinBtu: 11700,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 19.5,
-      seer2Max: 25.2,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 20400,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19.6,
+      seer2Max: 20.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.98,
+      cop5FMax: 2.03,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-6000",
+      slug: "weathermaker-45m-series-wall-single-6000",
+      name: "45M Series 6 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 6k",
+      normalizedModelNumber: "45m-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 21.5,
+      seer2Max: 22,
+      hspf2Min: 12,
+      hspf2Max: 13.8,
+      cop5FMin: 2.4,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000",
+      slug: "weathermaker-45m-series-wall-single-9000",
+      name: "45M Series 9 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 9k",
+      normalizedModelNumber: "45m-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 19.6,
+      seer2Max: 27.3,
       hspf2Min: 9.1,
-      hspf2Max: 11.3,
+      hspf2Max: 13.9,
+      cop5FMin: 1.83,
+      cop5FMax: 2.31,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000",
+      slug: "weathermaker-45m-series-wall-single-12000",
+      name: "45M Series 12 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 12k",
+      normalizedModelNumber: "45m-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 19,
+      seer2Max: 25,
+      hspf2Min: 10.1,
+      hspf2Max: 11.6,
+      cop5FMin: 1.88,
+      cop5FMax: 2.5,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000",
+      slug: "weathermaker-45m-series-wall-single-18000",
+      name: "45M Series 18 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 18k",
+      normalizedModelNumber: "45m-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13700,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 22.4,
+      hspf2Min: 10.3,
+      hspf2Max: 12.2,
+      cop5FMin: 1.86,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-15000",
+      slug: "weathermaker-45m-series-wall-single-15000",
+      name: "45M Series 15 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 15k",
+      normalizedModelNumber: "45m-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14100,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 23.9,
+      hspf2Min: 10.3,
+      hspf2Max: 13.5,
       cop5FMin: 1.9,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-24000",
+      slug: "weathermaker-45m-series-wall-single-24000",
+      name: "45M Series 24 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 24k",
+      normalizedModelNumber: "45m-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 19,
+      seer2Max: 22.1,
+      hspf2Min: 10.5,
+      hspf2Max: 11.7,
+      cop5FMin: 2.18,
       cop5FMax: 2.3,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-20000",
+      slug: "weathermaker-45m-series-wall-single-20000",
+      name: "45M Series 20 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 20k",
+      normalizedModelNumber: "45m-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000",
+      slug: "weathermaker-45m-series-wall-single-48000",
+      name: "45M Series 48 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 48k",
+      normalizedModelNumber: "45m-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 36600,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 16.8,
+      seer2Max: 19.9,
+      hspf2Min: 9.8,
+      hspf2Max: 11,
+      cop5FMin: 1.83,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-60000",
+      slug: "weathermaker-45m-series-wall-single-60000",
+      name: "45M Series 60 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 60k",
+      normalizedModelNumber: "45m-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 45000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.9,
+      seer2Max: 15.9,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-18000",
+      slug: "weathermaker-37m-series-wall-single-18000",
+      name: "37M Series 18 000 BTU",
+      seriesId: "weathermaker-37m-series",
+      brandId: "weathermaker",
+      modelNumber: "37M Series 18k",
+      normalizedModelNumber: "37m-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 11700,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 20,
+      seer2Max: 25.2,
+      hspf2Min: 9.1,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-24000",
+      slug: "weathermaker-37m-series-wall-single-24000",
+      name: "37M Series 24 000 BTU",
+      seriesId: "weathermaker-37m-series",
+      brandId: "weathermaker",
+      modelNumber: "37M Series 24k",
+      normalizedModelNumber: "37m-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17800,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 20,
+      seer2Max: 25,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-30000",
+      slug: "weathermaker-37m-series-wall-single-30000",
+      name: "37M Series 30 000 BTU",
+      seriesId: "weathermaker-37m-series",
+      brandId: "weathermaker",
+      modelNumber: "37M Series 30k",
+      normalizedModelNumber: "37m-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 26000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.5,
+      seer2Max: 25,
+      hspf2Min: 9.5,
+      hspf2Max: 10.7,
+      cop5FMin: 1.95,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-36000",
+      slug: "weathermaker-37m-series-wall-single-36000",
+      name: "37M Series 36 000 BTU",
+      seriesId: "weathermaker-37m-series",
+      brandId: "weathermaker",
+      modelNumber: "37M Series 36k",
+      normalizedModelNumber: "37m-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.5,
+      seer2Max: 24,
+      hspf2Min: 9.2,
+      hspf2Max: 10.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-48000",
+      slug: "weathermaker-37m-series-wall-single-48000",
+      name: "37M Series 48 000 BTU",
+      seriesId: "weathermaker-37m-series",
+      brandId: "weathermaker",
+      modelNumber: "37M Series 48k",
+      normalizedModelNumber: "37m-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 37400,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20.2,
+      seer2Max: 24,
+      hspf2Min: 10.4,
+      hspf2Max: 11.3,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-42000",
+      slug: "weathermaker-37m-series-wall-single-42000",
+      name: "37M Series 42 000 BTU",
+      seriesId: "weathermaker-37m-series",
+      brandId: "weathermaker",
+      modelNumber: "37M Series 42k",
+      normalizedModelNumber: "37m-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-30000",
+      slug: "weathermaker-45m-series-wall-single-30000",
+      name: "45M Series 30 000 BTU",
+      seriesId: "weathermaker-45m-series",
+      brandId: "weathermaker",
+      modelNumber: "45M Series 30k",
+      normalizedModelNumber: "45m-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 22.4,
+      seer2Max: 22.4,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.94,
+      cop5FMax: 1.94,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -508,44 +1953,8 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-38mbrbq48aa3",
-      modelNumber: "38MBRBQ48AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38maqb24r-3",
-      modelNumber: "38MAQB24R--3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38maqb09r-3",
-      modelNumber: "38MAQB09R--3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38maqb12r-3",
-      modelNumber: "38MAQB12R--3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38maqb18r-3",
-      modelNumber: "38MAQB18R--3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
       id: "weathermaker-38mbrcq36aa3",
       modelNumber: "38MBRCQ36AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38mbrcq58aa3",
-      modelNumber: "38MBRCQ58AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -556,26 +1965,32 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-38muraq48aa3",
-      modelNumber: "38MURAQ48AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
       id: "weathermaker-38muraq36aa3",
       modelNumber: "38MURAQ36AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-38muraq30aa3",
-      modelNumber: "38MURAQ30AA3",
+      id: "weathermaker-37maraq36aa3",
+      modelNumber: "37MARAQ36AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-38muraq18aa3",
-      modelNumber: "38MURAQ18AA3",
+      id: "weathermaker-37mhraq36aa3",
+      modelNumber: "37MHRAQ36AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38mbrbq48aa3",
+      modelNumber: "38MBRBQ48AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38muraq48aa3",
+      modelNumber: "38MURAQ48AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -586,8 +2001,68 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-38maqb24r-3",
+      modelNumber: "38MAQB24R--3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38marbq24aa3",
+      modelNumber: "38MARBQ24AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38marbq30aa3",
+      modelNumber: "38MARBQ30AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38marbq30aa311",
+      modelNumber: "38MARBQ30AA311",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38marbq12aa1",
+      modelNumber: "38MARBQ12AA1",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38marbq12aa3",
+      modelNumber: "38MARBQ12AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38marbq09aa3",
+      modelNumber: "38MARBQ09AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38marbq18aa3",
+      modelNumber: "38MARBQ18AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38maqb09r-3",
+      modelNumber: "38MAQB09R--3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-37mvraq09aa1",
       modelNumber: "37MVRAQ09AA1",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38maqb12r-3",
+      modelNumber: "38MAQB12R--3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -604,24 +2079,6 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mvraq18aa3",
-      modelNumber: "37MVRAQ18AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mgraq55fa3",
-      modelNumber: "37MGRAQ55FA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37maraq36aa3",
-      modelNumber: "37MARAQ36AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
       id: "weathermaker-37mhraq12aa1",
       modelNumber: "37MHRAQ12AA1",
       brandId: "weathermaker",
@@ -634,62 +2091,26 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-38maqb18r-3",
+      modelNumber: "38MAQB18R--3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38muraq18aa3",
+      modelNumber: "38MURAQ18AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mvraq18aa3",
+      modelNumber: "37MVRAQ18AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-37mhraq24aa3",
       modelNumber: "37MHRAQ24AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mhraq36aa3",
-      modelNumber: "37MHRAQ36AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38marbq24aa3",
-      modelNumber: "38MARBQ24AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38marbq12aa1",
-      modelNumber: "38MARBQ12AA1",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38marbq09aa3",
-      modelNumber: "38MARBQ09AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38marbq12aa3",
-      modelNumber: "38MARBQ12AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38marbq18aa3",
-      modelNumber: "38MARBQ18AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38marbq30aa3",
-      modelNumber: "38MARBQ30AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38mgrbq48ea3",
-      modelNumber: "38MGRBQ48EA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38marbq30aa311",
-      modelNumber: "38MARBQ30AA311",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -702,12 +2123,6 @@ export const weathermakerDataset: BrandDataset = {
     {
       id: "weathermaker-38mprbq12aa3",
       modelNumber: "38MPRBQ12AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38mprbq18aa3",
-      modelNumber: "38MPRBQ18AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -736,14 +2151,20 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-38mghbq36da3",
+      modelNumber: "38MGHBQ36DA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-38mghbq48ea3",
       modelNumber: "38MGHBQ48EA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-38mghbq36da3",
-      modelNumber: "38MGHBQ36DA3",
+      id: "weathermaker-38mgrbq48ea3",
+      modelNumber: "38MGRBQ48EA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -754,8 +2175,44 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-38mprbq18aa3",
+      modelNumber: "38MPRBQ18AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38muraq18ab3",
+      modelNumber: "38MURAQ18AB3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38mbrcq58aa3",
+      modelNumber: "38MBRCQ58AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mgraq55fa3",
+      modelNumber: "37MGRAQ55FA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38muraq30ab3",
+      modelNumber: "38MURAQ30AB3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-38muraq24aa3",
       modelNumber: "38MURAQ24AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-38muraq24ab3",
+      modelNumber: "38MURAQ24AB3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -772,20 +2229,8 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-38muraq30ab3",
-      modelNumber: "38MURAQ30AB3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38muraq18ab3",
-      modelNumber: "38MURAQ18AB3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-38muraq24ab3",
-      modelNumber: "38MURAQ24AB3",
+      id: "weathermaker-38muraq30aa3",
+      modelNumber: "38MURAQ30AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -802,8 +2247,38 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-37mahaq18aa3",
+      modelNumber: "37MAHAQ18AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37maraq18aa3",
+      modelNumber: "37MARAQ18AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-37muhaq24aa3",
       modelNumber: "37MUHAQ24AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37muraq24aa3",
+      modelNumber: "37MURAQ24AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mahaq24aa3",
+      modelNumber: "37MAHAQ24AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37maraq24aa3",
+      modelNumber: "37MARAQ24AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -814,8 +2289,32 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-37mahaq33aa3",
+      modelNumber: "37MAHAQ33AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37maraq30aa3",
+      modelNumber: "37MARAQ30AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-37muhaq36aa3",
       modelNumber: "37MUHAQ36AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37muraq36aa3",
+      modelNumber: "37MURAQ36AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mbhaq36aa3",
+      modelNumber: "37MBHAQ36AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -832,18 +2331,6 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37muraq24aa3",
-      modelNumber: "37MURAQ24AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37muraq36aa3",
-      modelNumber: "37MURAQ36AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
       id: "weathermaker-37muraq48aa3",
       modelNumber: "37MURAQ48AA3",
       brandId: "weathermaker",
@@ -852,42 +2339,6 @@ export const weathermakerDataset: BrandDataset = {
     {
       id: "weathermaker-37muraq60aa3",
       modelNumber: "37MURAQ60AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mahaq18aa3",
-      modelNumber: "37MAHAQ18AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mahaq24aa3",
-      modelNumber: "37MAHAQ24AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mahaq33aa3",
-      modelNumber: "37MAHAQ33AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37maraq18aa3",
-      modelNumber: "37MARAQ18AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37maraq24aa3",
-      modelNumber: "37MARAQ24AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mbhaq36aa3",
-      modelNumber: "37MBHAQ36AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -906,12 +2357,6 @@ export const weathermakerDataset: BrandDataset = {
     {
       id: "weathermaker-37mbraq48aa3",
       modelNumber: "37MBRAQ48AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37maraq30aa3",
-      modelNumber: "37MARAQ30AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -940,14 +2385,14 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mahaq09aa3",
-      modelNumber: "37MAHAQ09AA3",
+      id: "weathermaker-37mpraq06aa3",
+      modelNumber: "37MPRAQ06AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mahaq12aa3",
-      modelNumber: "37MAHAQ12AA3",
+      id: "weathermaker-37mahaq09aa3",
+      modelNumber: "37MAHAQ09AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -958,26 +2403,20 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37maraq12aa3",
-      modelNumber: "37MARAQ12AA3",
+      id: "weathermaker-37mvraq09aa3",
+      modelNumber: "37MVRAQ09AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mhraq09aa1",
-      modelNumber: "37MHRAQ09AA1",
+      id: "weathermaker-37mpraq09aa3",
+      modelNumber: "37MPRAQ09AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mhraq09aa3",
-      modelNumber: "37MHRAQ09AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mhraq30aa3",
-      modelNumber: "37MHRAQ30AA3",
+      id: "weathermaker-37mahaq12aa3",
+      modelNumber: "37MAHAQ12AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -988,26 +2427,8 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mvraq09aa3",
-      modelNumber: "37MVRAQ09AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mvraq24aa3",
-      modelNumber: "37MVRAQ24AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mpraq06aa3",
-      modelNumber: "37MPRAQ06AA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mpraq09aa3",
-      modelNumber: "37MPRAQ09AA3",
+      id: "weathermaker-37maraq12aa3",
+      modelNumber: "37MARAQ12AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -1024,8 +2445,38 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-37mvraq24aa3",
+      modelNumber: "37MVRAQ24AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mhraq09aa1",
+      modelNumber: "37MHRAQ09AA1",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mhraq09aa3",
+      modelNumber: "37MHRAQ09AA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-37mghaq18ca3",
       modelNumber: "37MGHAQ18CA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mgraq18ca3",
+      modelNumber: "37MGRAQ18CA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mhraq18aa3",
+      modelNumber: "37MHRAQ18AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -1036,14 +2487,32 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-37mgraq24da3",
+      modelNumber: "37MGRAQ24DA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-37mghaq30ea3",
       modelNumber: "37MGHAQ30EA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
+      id: "weathermaker-37mgraq30ea3",
+      modelNumber: "37MGRAQ30EA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
       id: "weathermaker-37mghaq36ea3",
       modelNumber: "37MGHAQ36EA3",
+      brandId: "weathermaker",
+      refrigerant: null as any,
+    },
+    {
+      id: "weathermaker-37mgraq36ea3",
+      modelNumber: "37MGRAQ36EA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
@@ -1060,38 +2529,14 @@ export const weathermakerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mgraq18ca3",
-      modelNumber: "37MGRAQ18CA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mgraq24da3",
-      modelNumber: "37MGRAQ24DA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mgraq30ea3",
-      modelNumber: "37MGRAQ30EA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
-      id: "weathermaker-37mgraq36ea3",
-      modelNumber: "37MGRAQ36EA3",
-      brandId: "weathermaker",
-      refrigerant: null as any,
-    },
-    {
       id: "weathermaker-37mgraq48fa3",
       modelNumber: "37MGRAQ48FA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     },
     {
-      id: "weathermaker-37mhraq18aa3",
-      modelNumber: "37MHRAQ18AA3",
+      id: "weathermaker-37mhraq30aa3",
+      modelNumber: "37MHRAQ30AA3",
       brandId: "weathermaker",
       refrigerant: null as any,
     }
@@ -1101,9 +2546,9 @@ export const weathermakerDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "weathermaker-standard-wall-single-cfg-1",
-      slug: "weathermaker-standard-wall-single-cfg-1",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-1",
+      slug: "weathermaker-standard-wall-single-36000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-38mbrbq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1115,37 +2560,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-2",
-      slug: "weathermaker-standard-wall-single-cfg-2",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38mbrbq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-3",
-      slug: "weathermaker-standard-wall-single-cfg-3",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38maqb24r-3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 20800,
-      coolingCapacityMaxBtu: 20800,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-4",
-      slug: "weathermaker-standard-wall-single-cfg-4",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-2",
+      slug: "weathermaker-standard-wall-single-36000-cfg-2",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-38mbrbq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1157,9 +2574,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-5",
-      slug: "weathermaker-standard-wall-single-cfg-5",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-3",
+      slug: "weathermaker-standard-wall-single-36000-cfg-3",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-38mbrbq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1171,9 +2588,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-6",
-      slug: "weathermaker-standard-wall-single-cfg-6",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-4",
+      slug: "weathermaker-standard-wall-single-36000-cfg-4",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-38mbrbq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1185,107 +2602,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-7",
-      slug: "weathermaker-standard-wall-single-cfg-7",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38mbrbq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-8",
-      slug: "weathermaker-standard-wall-single-cfg-8",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38mbrbq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-9",
-      slug: "weathermaker-standard-wall-single-cfg-9",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38mbrbq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-10",
-      slug: "weathermaker-standard-wall-single-cfg-10",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38maqb09r-3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-11",
-      slug: "weathermaker-standard-wall-single-cfg-11",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38maqb12r-3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-12",
-      slug: "weathermaker-standard-wall-single-cfg-12",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38maqb18r-3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-13",
-      slug: "weathermaker-standard-wall-single-cfg-13",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38maqb24r-3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-14",
-      slug: "weathermaker-standard-wall-single-cfg-14",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-5",
+      slug: "weathermaker-standard-wall-single-36000-cfg-5",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-38mbrcq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1297,23 +2616,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-15",
-      slug: "weathermaker-standard-wall-single-cfg-15",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38mbrcq58aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-16",
-      slug: "weathermaker-standard-wall-single-cfg-16",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-6",
+      slug: "weathermaker-standard-wall-single-36000-cfg-6",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-38marbq36ab3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1325,23 +2630,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-17",
-      slug: "weathermaker-standard-wall-single-cfg-17",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38muraq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-18",
-      slug: "weathermaker-standard-wall-single-cfg-18",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-7",
+      slug: "weathermaker-standard-wall-single-36000-cfg-7",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-38muraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1353,219 +2644,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-19",
-      slug: "weathermaker-standard-wall-single-cfg-19",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38muraq30aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-20",
-      slug: "weathermaker-standard-wall-single-cfg-20",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-38muraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-21",
-      slug: "weathermaker-standard-wall-single-cfg-21",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mbraq58aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-22",
-      slug: "weathermaker-standard-wall-single-cfg-22",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq09aa1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-23",
-      slug: "weathermaker-standard-wall-single-cfg-23",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq12aa1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-24",
-      slug: "weathermaker-standard-wall-single-cfg-24",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-25",
-      slug: "weathermaker-standard-wall-single-cfg-25",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-26",
-      slug: "weathermaker-standard-wall-single-cfg-26",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mbraq58aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-27",
-      slug: "weathermaker-standard-wall-single-cfg-27",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mbraq58aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 58000,
-      coolingCapacityMaxBtu: 58000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-28",
-      slug: "weathermaker-standard-wall-single-cfg-28",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq12aa1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-29",
-      slug: "weathermaker-standard-wall-single-cfg-29",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-30",
-      slug: "weathermaker-standard-wall-single-cfg-30",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-31",
-      slug: "weathermaker-standard-wall-single-cfg-31",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mgraq55fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-32",
-      slug: "weathermaker-standard-wall-single-cfg-32",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mgraq55fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-33",
-      slug: "weathermaker-standard-wall-single-cfg-33",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mgraq55fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-34",
-      slug: "weathermaker-standard-wall-single-cfg-34",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-8",
+      slug: "weathermaker-standard-wall-single-36000-cfg-8",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-37maraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1577,9 +2658,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-35",
-      slug: "weathermaker-standard-wall-single-cfg-35",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-9",
+      slug: "weathermaker-standard-wall-single-36000-cfg-9",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-37maraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1591,51 +2672,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-standard-wall-single-cfg-36",
-      slug: "weathermaker-standard-wall-single-cfg-36",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mhraq12aa1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-37",
-      slug: "weathermaker-standard-wall-single-cfg-37",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mhraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-38",
-      slug: "weathermaker-standard-wall-single-cfg-38",
-      modelId: "weathermaker-standard-wall-single",
-      outdoorUnitId: "weathermaker-37mhraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-standard-wall-single-cfg-39",
-      slug: "weathermaker-standard-wall-single-cfg-39",
-      modelId: "weathermaker-standard-wall-single",
+      id: "weathermaker-standard-wall-single-36000-cfg-10",
+      slug: "weathermaker-standard-wall-single-36000-cfg-10",
+      modelId: "weathermaker-standard-wall-single-36000",
       outdoorUnitId: "weathermaker-37mhraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1647,9 +2686,107 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single-cfg-1",
-      slug: "weathermaker-38mar-series-wall-single-cfg-1",
-      modelId: "weathermaker-38mar-series-wall-single",
+      id: "weathermaker-standard-wall-single-48000-cfg-1",
+      slug: "weathermaker-standard-wall-single-48000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mbrbq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-48000-cfg-2",
+      slug: "weathermaker-standard-wall-single-48000-cfg-2",
+      modelId: "weathermaker-standard-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mbrbq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-48000-cfg-3",
+      slug: "weathermaker-standard-wall-single-48000-cfg-3",
+      modelId: "weathermaker-standard-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mbrbq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-48000-cfg-4",
+      slug: "weathermaker-standard-wall-single-48000-cfg-4",
+      modelId: "weathermaker-standard-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mbrbq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-48000-cfg-5",
+      slug: "weathermaker-standard-wall-single-48000-cfg-5",
+      modelId: "weathermaker-standard-wall-single-48000",
+      outdoorUnitId: "weathermaker-38muraq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-48000-cfg-6",
+      slug: "weathermaker-standard-wall-single-48000-cfg-6",
+      modelId: "weathermaker-standard-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbraq58aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-20000-cfg-1",
+      slug: "weathermaker-standard-wall-single-20000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-20000",
+      outdoorUnitId: "weathermaker-38maqb24r-3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20800,
+      coolingCapacityMaxBtu: 20800,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-24000-cfg-1",
+      slug: "weathermaker-38mar-series-wall-single-24000-cfg-1",
+      modelId: "weathermaker-38mar-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38marbq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1661,65 +2798,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single-cfg-2",
-      slug: "weathermaker-38mar-series-wall-single-cfg-2",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq12aa1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-3",
-      slug: "weathermaker-38mar-series-wall-single-cfg-3",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 28.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-4",
-      slug: "weathermaker-38mar-series-wall-single-cfg-4",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-5",
-      slug: "weathermaker-38mar-series-wall-single-cfg-5",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-6",
-      slug: "weathermaker-38mar-series-wall-single-cfg-6",
-      modelId: "weathermaker-38mar-series-wall-single",
+      id: "weathermaker-38mar-series-wall-single-24000-cfg-2",
+      slug: "weathermaker-38mar-series-wall-single-24000-cfg-2",
+      modelId: "weathermaker-38mar-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38marbq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1731,107 +2812,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single-cfg-7",
-      slug: "weathermaker-38mar-series-wall-single-cfg-7",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-8",
-      slug: "weathermaker-38mar-series-wall-single-cfg-8",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.2,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-9",
-      slug: "weathermaker-38mar-series-wall-single-cfg-9",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-10",
-      slug: "weathermaker-38mar-series-wall-single-cfg-10",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-11",
-      slug: "weathermaker-38mar-series-wall-single-cfg-11",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.6,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-12",
-      slug: "weathermaker-38mar-series-wall-single-cfg-12",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-13",
-      slug: "weathermaker-38mar-series-wall-single-cfg-13",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-14",
-      slug: "weathermaker-38mar-series-wall-single-cfg-14",
-      modelId: "weathermaker-38mar-series-wall-single",
+      id: "weathermaker-38mar-series-wall-single-24000-cfg-3",
+      slug: "weathermaker-38mar-series-wall-single-24000-cfg-3",
+      modelId: "weathermaker-38mar-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38marbq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1843,9 +2826,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single-cfg-15",
-      slug: "weathermaker-38mar-series-wall-single-cfg-15",
-      modelId: "weathermaker-38mar-series-wall-single",
+      id: "weathermaker-38mar-series-wall-single-24000-cfg-4",
+      slug: "weathermaker-38mar-series-wall-single-24000-cfg-4",
+      modelId: "weathermaker-38mar-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38marbq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1857,9 +2840,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single-cfg-16",
-      slug: "weathermaker-38mar-series-wall-single-cfg-16",
-      modelId: "weathermaker-38mar-series-wall-single",
+      id: "weathermaker-38mar-series-wall-single-24000-cfg-5",
+      slug: "weathermaker-38mar-series-wall-single-24000-cfg-5",
+      modelId: "weathermaker-38mar-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38marbq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1871,65 +2854,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single-cfg-17",
-      slug: "weathermaker-38mar-series-wall-single-cfg-17",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 25,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-18",
-      slug: "weathermaker-38mar-series-wall-single-cfg-18",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.6,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-19",
-      slug: "weathermaker-38mar-series-wall-single-cfg-19",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-20",
-      slug: "weathermaker-38mar-series-wall-single-cfg-20",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21600,
-      coolingCapacityMaxBtu: 21600,
-      seer2: 18.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mar-series-wall-single-cfg-21",
-      slug: "weathermaker-38mar-series-wall-single-cfg-21",
-      modelId: "weathermaker-38mar-series-wall-single",
+      id: "weathermaker-38mar-series-wall-single-24000-cfg-6",
+      slug: "weathermaker-38mar-series-wall-single-24000-cfg-6",
+      modelId: "weathermaker-38mar-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38marbq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1941,23 +2868,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mar-series-wall-single-cfg-22",
-      slug: "weathermaker-38mar-series-wall-single-cfg-22",
-      modelId: "weathermaker-38mar-series-wall-single",
-      outdoorUnitId: "weathermaker-38marbq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 18,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38m-series-wall-single-cfg-1",
-      slug: "weathermaker-38m-series-wall-single-cfg-1",
-      modelId: "weathermaker-38m-series-wall-single",
+      id: "weathermaker-38m-series-wall-single-30000-cfg-1",
+      slug: "weathermaker-38m-series-wall-single-30000-cfg-1",
+      modelId: "weathermaker-38m-series-wall-single-30000",
       outdoorUnitId: "weathermaker-38marbq30aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1969,23 +2882,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-wall-single-cfg-2",
-      slug: "weathermaker-38m-series-wall-single-cfg-2",
-      modelId: "weathermaker-38m-series-wall-single",
-      outdoorUnitId: "weathermaker-38mgrbq48ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.95,
-      hspf2: 9.2,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38m-series-wall-single-cfg-3",
-      slug: "weathermaker-38m-series-wall-single-cfg-3",
-      modelId: "weathermaker-38m-series-wall-single",
+      id: "weathermaker-38m-series-wall-single-30000-cfg-2",
+      slug: "weathermaker-38m-series-wall-single-30000-cfg-2",
+      modelId: "weathermaker-38m-series-wall-single-30000",
       outdoorUnitId: "weathermaker-38marbq30aa311",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1997,9 +2896,443 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mp-series-wall-single-cfg-1",
-      slug: "weathermaker-38mp-series-wall-single-cfg-1",
-      modelId: "weathermaker-38mp-series-wall-single",
+      id: "weathermaker-38mar-series-wall-single-12000-cfg-1",
+      slug: "weathermaker-38mar-series-wall-single-12000-cfg-1",
+      modelId: "weathermaker-38mar-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-38marbq12aa1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-12000-cfg-2",
+      slug: "weathermaker-38mar-series-wall-single-12000-cfg-2",
+      modelId: "weathermaker-38mar-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-38marbq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-12000-cfg-3",
+      slug: "weathermaker-38mar-series-wall-single-12000-cfg-3",
+      modelId: "weathermaker-38mar-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-38marbq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-12000-cfg-4",
+      slug: "weathermaker-38mar-series-wall-single-12000-cfg-4",
+      modelId: "weathermaker-38mar-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-38marbq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-12000-cfg-5",
+      slug: "weathermaker-38mar-series-wall-single-12000-cfg-5",
+      modelId: "weathermaker-38mar-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-38marbq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.6,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-12000-cfg-6",
+      slug: "weathermaker-38mar-series-wall-single-12000-cfg-6",
+      modelId: "weathermaker-38mar-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-38marbq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.6,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-9000-cfg-1",
+      slug: "weathermaker-38mar-series-wall-single-9000-cfg-1",
+      modelId: "weathermaker-38mar-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-38marbq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-9000-cfg-2",
+      slug: "weathermaker-38mar-series-wall-single-9000-cfg-2",
+      modelId: "weathermaker-38mar-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-38marbq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-9000-cfg-3",
+      slug: "weathermaker-38mar-series-wall-single-9000-cfg-3",
+      modelId: "weathermaker-38mar-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-38marbq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.2,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-9000-cfg-4",
+      slug: "weathermaker-38mar-series-wall-single-9000-cfg-4",
+      modelId: "weathermaker-38mar-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-38marbq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 25,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-18000-cfg-1",
+      slug: "weathermaker-38mar-series-wall-single-18000-cfg-1",
+      modelId: "weathermaker-38mar-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-38marbq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-18000-cfg-2",
+      slug: "weathermaker-38mar-series-wall-single-18000-cfg-2",
+      modelId: "weathermaker-38mar-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-38marbq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-18000-cfg-3",
+      slug: "weathermaker-38mar-series-wall-single-18000-cfg-3",
+      modelId: "weathermaker-38mar-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-38marbq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-18000-cfg-4",
+      slug: "weathermaker-38mar-series-wall-single-18000-cfg-4",
+      modelId: "weathermaker-38mar-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-38marbq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-18000-cfg-5",
+      slug: "weathermaker-38mar-series-wall-single-18000-cfg-5",
+      modelId: "weathermaker-38mar-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-38marbq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 18,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-9000-cfg-1",
+      slug: "weathermaker-standard-wall-single-9000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-9000",
+      outdoorUnitId: "weathermaker-38maqb09r-3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-9000-cfg-2",
+      slug: "weathermaker-standard-wall-single-9000-cfg-2",
+      modelId: "weathermaker-standard-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mvraq09aa1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000-cfg-1",
+      slug: "weathermaker-standard-wall-single-12000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-12000",
+      outdoorUnitId: "weathermaker-38maqb12r-3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000-cfg-2",
+      slug: "weathermaker-standard-wall-single-12000-cfg-2",
+      modelId: "weathermaker-standard-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mvraq12aa1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000-cfg-3",
+      slug: "weathermaker-standard-wall-single-12000-cfg-3",
+      modelId: "weathermaker-standard-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mvraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000-cfg-4",
+      slug: "weathermaker-standard-wall-single-12000-cfg-4",
+      modelId: "weathermaker-standard-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mvraq12aa1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000-cfg-5",
+      slug: "weathermaker-standard-wall-single-12000-cfg-5",
+      modelId: "weathermaker-standard-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mvraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000-cfg-6",
+      slug: "weathermaker-standard-wall-single-12000-cfg-6",
+      modelId: "weathermaker-standard-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mhraq12aa1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-12000-cfg-7",
+      slug: "weathermaker-standard-wall-single-12000-cfg-7",
+      modelId: "weathermaker-standard-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mhraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-18000-cfg-1",
+      slug: "weathermaker-standard-wall-single-18000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-18000",
+      outdoorUnitId: "weathermaker-38maqb18r-3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-18000-cfg-2",
+      slug: "weathermaker-standard-wall-single-18000-cfg-2",
+      modelId: "weathermaker-standard-wall-single-18000",
+      outdoorUnitId: "weathermaker-38muraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-18000-cfg-3",
+      slug: "weathermaker-standard-wall-single-18000-cfg-3",
+      modelId: "weathermaker-standard-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mvraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-18000-cfg-4",
+      slug: "weathermaker-standard-wall-single-18000-cfg-4",
+      modelId: "weathermaker-standard-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mvraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-24000-cfg-1",
+      slug: "weathermaker-standard-wall-single-24000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-24000",
+      outdoorUnitId: "weathermaker-38maqb24r-3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-24000-cfg-2",
+      slug: "weathermaker-standard-wall-single-24000-cfg-2",
+      modelId: "weathermaker-standard-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mhraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mar-series-wall-single-20000-cfg-1",
+      slug: "weathermaker-38mar-series-wall-single-20000-cfg-1",
+      modelId: "weathermaker-38mar-series-wall-single-20000",
+      outdoorUnitId: "weathermaker-38marbq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      seer2: 18.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mp-series-wall-single-9000-cfg-1",
+      slug: "weathermaker-38mp-series-wall-single-9000-cfg-1",
+      modelId: "weathermaker-38mp-series-wall-single-9000",
       outdoorUnitId: "weathermaker-38mprbq09aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2011,9 +3344,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mp-series-wall-single-cfg-2",
-      slug: "weathermaker-38mp-series-wall-single-cfg-2",
-      modelId: "weathermaker-38mp-series-wall-single",
+      id: "weathermaker-38mp-series-wall-single-12000-cfg-1",
+      slug: "weathermaker-38mp-series-wall-single-12000-cfg-1",
+      modelId: "weathermaker-38mp-series-wall-single-12000",
       outdoorUnitId: "weathermaker-38mprbq12aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2025,23 +3358,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mp-series-wall-single-cfg-3",
-      slug: "weathermaker-38mp-series-wall-single-cfg-3",
-      modelId: "weathermaker-38mp-series-wall-single",
-      outdoorUnitId: "weathermaker-38mprbq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 26.3,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mg-series-wall-single-cfg-1",
-      slug: "weathermaker-38mg-series-wall-single-cfg-1",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-18000-cfg-1",
+      slug: "weathermaker-38mg-series-wall-single-18000-cfg-1",
+      modelId: "weathermaker-38mg-series-wall-single-18000",
       outdoorUnitId: "weathermaker-38mgrbq18ba3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2053,9 +3372,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-2",
-      slug: "weathermaker-38mg-series-wall-single-cfg-2",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-18000-cfg-2",
+      slug: "weathermaker-38mg-series-wall-single-18000-cfg-2",
+      modelId: "weathermaker-38mg-series-wall-single-18000",
       outdoorUnitId: "weathermaker-38mgrbq18ba3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2067,9 +3386,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-3",
-      slug: "weathermaker-38mg-series-wall-single-cfg-3",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-18000-cfg-3",
+      slug: "weathermaker-38mg-series-wall-single-18000-cfg-3",
+      modelId: "weathermaker-38mg-series-wall-single-18000",
       outdoorUnitId: "weathermaker-38mgrbq18ba3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2081,9 +3400,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-4",
-      slug: "weathermaker-38mg-series-wall-single-cfg-4",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-24000-cfg-1",
+      slug: "weathermaker-38mg-series-wall-single-24000-cfg-1",
+      modelId: "weathermaker-38mg-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38mghbq24ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2095,9 +3414,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-5",
-      slug: "weathermaker-38mg-series-wall-single-cfg-5",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-24000-cfg-2",
+      slug: "weathermaker-38mg-series-wall-single-24000-cfg-2",
+      modelId: "weathermaker-38mg-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38mghbq24ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2109,9 +3428,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-6",
-      slug: "weathermaker-38mg-series-wall-single-cfg-6",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-24000-cfg-3",
+      slug: "weathermaker-38mg-series-wall-single-24000-cfg-3",
+      modelId: "weathermaker-38mg-series-wall-single-24000",
       outdoorUnitId: "weathermaker-38mghbq24ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2123,9 +3442,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-7",
-      slug: "weathermaker-38mg-series-wall-single-cfg-7",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-30000-cfg-1",
+      slug: "weathermaker-38mg-series-wall-single-30000-cfg-1",
+      modelId: "weathermaker-38mg-series-wall-single-30000",
       outdoorUnitId: "weathermaker-38mghbq30da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2137,9 +3456,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-8",
-      slug: "weathermaker-38mg-series-wall-single-cfg-8",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-30000-cfg-2",
+      slug: "weathermaker-38mg-series-wall-single-30000-cfg-2",
+      modelId: "weathermaker-38mg-series-wall-single-30000",
       outdoorUnitId: "weathermaker-38mghbq30da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2151,9 +3470,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-9",
-      slug: "weathermaker-38mg-series-wall-single-cfg-9",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-30000-cfg-3",
+      slug: "weathermaker-38mg-series-wall-single-30000-cfg-3",
+      modelId: "weathermaker-38mg-series-wall-single-30000",
       outdoorUnitId: "weathermaker-38mghbq30da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2165,9 +3484,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-10",
-      slug: "weathermaker-38mg-series-wall-single-cfg-10",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-36000-cfg-1",
+      slug: "weathermaker-38mg-series-wall-single-36000-cfg-1",
+      modelId: "weathermaker-38mg-series-wall-single-36000",
       outdoorUnitId: "weathermaker-38mgrbq36da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2179,51 +3498,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-11",
-      slug: "weathermaker-38mg-series-wall-single-cfg-11",
-      modelId: "weathermaker-38mg-series-wall-single",
-      outdoorUnitId: "weathermaker-38mghbq48ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.8,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mg-series-wall-single-cfg-12",
-      slug: "weathermaker-38mg-series-wall-single-cfg-12",
-      modelId: "weathermaker-38mg-series-wall-single",
-      outdoorUnitId: "weathermaker-38mghbq48ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mg-series-wall-single-cfg-13",
-      slug: "weathermaker-38mg-series-wall-single-cfg-13",
-      modelId: "weathermaker-38mg-series-wall-single",
-      outdoorUnitId: "weathermaker-38mghbq48ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.35,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mg-series-wall-single-cfg-14",
-      slug: "weathermaker-38mg-series-wall-single-cfg-14",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-36000-cfg-2",
+      slug: "weathermaker-38mg-series-wall-single-36000-cfg-2",
+      modelId: "weathermaker-38mg-series-wall-single-36000",
       outdoorUnitId: "weathermaker-38mghbq36da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2235,9 +3512,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-15",
-      slug: "weathermaker-38mg-series-wall-single-cfg-15",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-36000-cfg-3",
+      slug: "weathermaker-38mg-series-wall-single-36000-cfg-3",
+      modelId: "weathermaker-38mg-series-wall-single-36000",
       outdoorUnitId: "weathermaker-38mghbq36da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2249,9 +3526,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-16",
-      slug: "weathermaker-38mg-series-wall-single-cfg-16",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-36000-cfg-4",
+      slug: "weathermaker-38mg-series-wall-single-36000-cfg-4",
+      modelId: "weathermaker-38mg-series-wall-single-36000",
       outdoorUnitId: "weathermaker-38mghbq36da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2263,9 +3540,51 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-17",
-      slug: "weathermaker-38mg-series-wall-single-cfg-17",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-48000-cfg-1",
+      slug: "weathermaker-38mg-series-wall-single-48000-cfg-1",
+      modelId: "weathermaker-38mg-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mghbq48ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.8,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-48000-cfg-2",
+      slug: "weathermaker-38mg-series-wall-single-48000-cfg-2",
+      modelId: "weathermaker-38mg-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mghbq48ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-48000-cfg-3",
+      slug: "weathermaker-38mg-series-wall-single-48000-cfg-3",
+      modelId: "weathermaker-38mg-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mghbq48ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.35,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mg-series-wall-single-48000-cfg-4",
+      slug: "weathermaker-38mg-series-wall-single-48000-cfg-4",
+      modelId: "weathermaker-38mg-series-wall-single-48000",
       outdoorUnitId: "weathermaker-38mgrbq48ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2277,9 +3596,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mg-series-wall-single-cfg-18",
-      slug: "weathermaker-38mg-series-wall-single-cfg-18",
-      modelId: "weathermaker-38mg-series-wall-single",
+      id: "weathermaker-38mg-series-wall-single-48000-cfg-5",
+      slug: "weathermaker-38mg-series-wall-single-48000-cfg-5",
+      modelId: "weathermaker-38mg-series-wall-single-48000",
       outdoorUnitId: "weathermaker-38mgrbq48ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2291,9 +3610,23 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mb-series-wall-single-cfg-1",
-      slug: "weathermaker-38mb-series-wall-single-cfg-1",
-      modelId: "weathermaker-38mb-series-wall-single",
+      id: "weathermaker-38m-series-wall-single-48000-cfg-1",
+      slug: "weathermaker-38m-series-wall-single-48000-cfg-1",
+      modelId: "weathermaker-38m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-38mgrbq48ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.95,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mb-series-wall-single-48000-cfg-1",
+      slug: "weathermaker-38mb-series-wall-single-48000-cfg-1",
+      modelId: "weathermaker-38mb-series-wall-single-48000",
       outdoorUnitId: "weathermaker-38mbrcq48aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2305,9 +3638,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mb-series-wall-single-cfg-2",
-      slug: "weathermaker-38mb-series-wall-single-cfg-2",
-      modelId: "weathermaker-38mb-series-wall-single",
+      id: "weathermaker-38mb-series-wall-single-48000-cfg-2",
+      slug: "weathermaker-38mb-series-wall-single-48000-cfg-2",
+      modelId: "weathermaker-38mb-series-wall-single-48000",
       outdoorUnitId: "weathermaker-38mbrcq48aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2319,9 +3652,23 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mseries-central-ducted-cfg-1",
-      slug: "weathermaker-38mseries-central-ducted-cfg-1",
-      modelId: "weathermaker-38mseries-central-ducted",
+      id: "weathermaker-38mp-series-wall-single-18000-cfg-1",
+      slug: "weathermaker-38mp-series-wall-single-18000-cfg-1",
+      modelId: "weathermaker-38mp-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-38mprbq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 26.3,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mseries-central-ducted-18000-cfg-1",
+      slug: "weathermaker-38mseries-central-ducted-18000-cfg-1",
+      modelId: "weathermaker-38mseries-central-ducted-18000",
       outdoorUnitId: "weathermaker-38marbq18aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2333,65 +3680,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mseries-central-ducted-cfg-2",
-      slug: "weathermaker-38mseries-central-ducted-cfg-2",
-      modelId: "weathermaker-38mseries-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mseries-central-ducted-cfg-3",
-      slug: "weathermaker-38mseries-central-ducted-cfg-3",
-      modelId: "weathermaker-38mseries-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq48ab3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mseries-central-ducted-cfg-4",
-      slug: "weathermaker-38mseries-central-ducted-cfg-4",
-      modelId: "weathermaker-38mseries-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq36ab3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mseries-central-ducted-cfg-5",
-      slug: "weathermaker-38mseries-central-ducted-cfg-5",
-      modelId: "weathermaker-38mseries-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq30ab3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38mseries-central-ducted-cfg-6",
-      slug: "weathermaker-38mseries-central-ducted-cfg-6",
-      modelId: "weathermaker-38mseries-central-ducted",
+      id: "weathermaker-38mseries-central-ducted-18000-cfg-2",
+      slug: "weathermaker-38mseries-central-ducted-18000-cfg-2",
+      modelId: "weathermaker-38mseries-central-ducted-18000",
       outdoorUnitId: "weathermaker-38muraq18ab3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2403,23 +3694,93 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mseries-central-ducted-cfg-7",
-      slug: "weathermaker-38mseries-central-ducted-cfg-7",
-      modelId: "weathermaker-38mseries-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq24ab3",
+      id: "weathermaker-standard-wall-single-60000-cfg-1",
+      slug: "weathermaker-standard-wall-single-60000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-60000",
+      outdoorUnitId: "weathermaker-38mbrcq58aa3",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-central-ducted-cfg-1",
-      slug: "weathermaker-38m-series-central-ducted-cfg-1",
-      modelId: "weathermaker-38m-series-central-ducted",
+      id: "weathermaker-standard-wall-single-60000-cfg-2",
+      slug: "weathermaker-standard-wall-single-60000-cfg-2",
+      modelId: "weathermaker-standard-wall-single-60000",
+      outdoorUnitId: "weathermaker-37mbraq58aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-60000-cfg-3",
+      slug: "weathermaker-standard-wall-single-60000-cfg-3",
+      modelId: "weathermaker-standard-wall-single-60000",
+      outdoorUnitId: "weathermaker-37mbraq58aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 58000,
+      coolingCapacityMaxBtu: 58000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-60000-cfg-4",
+      slug: "weathermaker-standard-wall-single-60000-cfg-4",
+      modelId: "weathermaker-standard-wall-single-60000",
+      outdoorUnitId: "weathermaker-37mgraq55fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-60000-cfg-5",
+      slug: "weathermaker-standard-wall-single-60000-cfg-5",
+      modelId: "weathermaker-standard-wall-single-60000",
+      outdoorUnitId: "weathermaker-37mgraq55fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-60000-cfg-6",
+      slug: "weathermaker-standard-wall-single-60000-cfg-6",
+      modelId: "weathermaker-standard-wall-single-60000",
+      outdoorUnitId: "weathermaker-37mgraq55fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-30000-cfg-1",
+      slug: "weathermaker-38m-series-central-ducted-30000-cfg-1",
+      modelId: "weathermaker-38m-series-central-ducted-30000",
       outdoorUnitId: "weathermaker-38marbq30aa311",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2431,65 +3792,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-central-ducted-cfg-2",
-      slug: "weathermaker-38m-series-central-ducted-cfg-2",
-      modelId: "weathermaker-38m-series-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq18ab3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38m-series-central-ducted-cfg-3",
-      slug: "weathermaker-38m-series-central-ducted-cfg-3",
-      modelId: "weathermaker-38m-series-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq18ab3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38m-series-central-ducted-cfg-4",
-      slug: "weathermaker-38m-series-central-ducted-cfg-4",
-      modelId: "weathermaker-38m-series-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq24ab3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.1,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38m-series-central-ducted-cfg-5",
-      slug: "weathermaker-38m-series-central-ducted-cfg-5",
-      modelId: "weathermaker-38m-series-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq24ab3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-38m-series-central-ducted-cfg-6",
-      slug: "weathermaker-38m-series-central-ducted-cfg-6",
-      modelId: "weathermaker-38m-series-central-ducted",
+      id: "weathermaker-38m-series-central-ducted-30000-cfg-2",
+      slug: "weathermaker-38m-series-central-ducted-30000-cfg-2",
+      modelId: "weathermaker-38m-series-central-ducted-30000",
       outdoorUnitId: "weathermaker-38muraq30ab3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2501,23 +3806,37 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-central-ducted-cfg-7",
-      slug: "weathermaker-38m-series-central-ducted-cfg-7",
-      modelId: "weathermaker-38m-series-central-ducted",
-      outdoorUnitId: "weathermaker-38muraq36ab3",
+      id: "weathermaker-38mseries-central-ducted-24000-cfg-1",
+      slug: "weathermaker-38mseries-central-ducted-24000-cfg-1",
+      modelId: "weathermaker-38mseries-central-ducted-24000",
+      outdoorUnitId: "weathermaker-38muraq24aa3",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9.2,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-central-ducted-cfg-8",
-      slug: "weathermaker-38m-series-central-ducted-cfg-8",
-      modelId: "weathermaker-38m-series-central-ducted",
+      id: "weathermaker-38mseries-central-ducted-24000-cfg-2",
+      slug: "weathermaker-38mseries-central-ducted-24000-cfg-2",
+      modelId: "weathermaker-38mseries-central-ducted-24000",
+      outdoorUnitId: "weathermaker-38muraq24ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mseries-central-ducted-48000-cfg-1",
+      slug: "weathermaker-38mseries-central-ducted-48000-cfg-1",
+      modelId: "weathermaker-38mseries-central-ducted-48000",
       outdoorUnitId: "weathermaker-38muraq48ab3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2529,9 +3848,135 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38m-series-central-ducted-cfg-9",
-      slug: "weathermaker-38m-series-central-ducted-cfg-9",
-      modelId: "weathermaker-38m-series-central-ducted",
+      id: "weathermaker-38mseries-central-ducted-36000-cfg-1",
+      slug: "weathermaker-38mseries-central-ducted-36000-cfg-1",
+      modelId: "weathermaker-38mseries-central-ducted-36000",
+      outdoorUnitId: "weathermaker-38muraq36ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38mseries-central-ducted-30000-cfg-1",
+      slug: "weathermaker-38mseries-central-ducted-30000-cfg-1",
+      modelId: "weathermaker-38mseries-central-ducted-30000",
+      outdoorUnitId: "weathermaker-38muraq30ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-18000-cfg-1",
+      slug: "weathermaker-38m-series-central-ducted-18000-cfg-1",
+      modelId: "weathermaker-38m-series-central-ducted-18000",
+      outdoorUnitId: "weathermaker-38muraq18ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-18000-cfg-2",
+      slug: "weathermaker-38m-series-central-ducted-18000-cfg-2",
+      modelId: "weathermaker-38m-series-central-ducted-18000",
+      outdoorUnitId: "weathermaker-38muraq18ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-standard-wall-single-30000-cfg-1",
+      slug: "weathermaker-standard-wall-single-30000-cfg-1",
+      modelId: "weathermaker-standard-wall-single-30000",
+      outdoorUnitId: "weathermaker-38muraq30aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-24000-cfg-1",
+      slug: "weathermaker-38m-series-central-ducted-24000-cfg-1",
+      modelId: "weathermaker-38m-series-central-ducted-24000",
+      outdoorUnitId: "weathermaker-38muraq24ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.1,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-24000-cfg-2",
+      slug: "weathermaker-38m-series-central-ducted-24000-cfg-2",
+      modelId: "weathermaker-38m-series-central-ducted-24000",
+      outdoorUnitId: "weathermaker-38muraq24ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-36000-cfg-1",
+      slug: "weathermaker-38m-series-central-ducted-36000-cfg-1",
+      modelId: "weathermaker-38m-series-central-ducted-36000",
+      outdoorUnitId: "weathermaker-38muraq36ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-48000-cfg-1",
+      slug: "weathermaker-38m-series-central-ducted-48000-cfg-1",
+      modelId: "weathermaker-38m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-38muraq48ab3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-38m-series-central-ducted-60000-cfg-1",
+      slug: "weathermaker-38m-series-central-ducted-60000-cfg-1",
+      modelId: "weathermaker-38m-series-central-ducted-60000",
       outdoorUnitId: "weathermaker-38muraq60ab3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -2543,9 +3988,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-38mu-series-central-ducted-cfg-1",
-      slug: "weathermaker-38mu-series-central-ducted-cfg-1",
-      modelId: "weathermaker-38mu-series-central-ducted",
+      id: "weathermaker-38mu-series-central-ducted-36000-cfg-1",
+      slug: "weathermaker-38mu-series-central-ducted-36000-cfg-1",
+      modelId: "weathermaker-38mu-series-central-ducted-36000",
       outdoorUnitId: "weathermaker-38muraq36ab3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2557,9 +4002,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted-cfg-1",
-      slug: "weathermaker-45m-series-central-ducted-cfg-1",
-      modelId: "weathermaker-45m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-18000-cfg-1",
+      slug: "weathermaker-45m-series-central-ducted-18000-cfg-1",
+      modelId: "weathermaker-45m-series-central-ducted-18000",
       outdoorUnitId: "weathermaker-37muhaq18aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2571,9 +4016,51 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted-cfg-2",
-      slug: "weathermaker-45m-series-central-ducted-cfg-2",
-      modelId: "weathermaker-45m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-18000-cfg-2",
+      slug: "weathermaker-45m-series-central-ducted-18000-cfg-2",
+      modelId: "weathermaker-45m-series-central-ducted-18000",
+      outdoorUnitId: "weathermaker-37muhaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-18000-cfg-3",
+      slug: "weathermaker-45m-series-central-ducted-18000-cfg-3",
+      modelId: "weathermaker-45m-series-central-ducted-18000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.2,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-18000-cfg-4",
+      slug: "weathermaker-45m-series-central-ducted-18000-cfg-4",
+      modelId: "weathermaker-45m-series-central-ducted-18000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-24000-cfg-1",
+      slug: "weathermaker-45m-series-central-ducted-24000-cfg-1",
+      modelId: "weathermaker-45m-series-central-ducted-24000",
       outdoorUnitId: "weathermaker-37muhaq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2585,9 +4072,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted-cfg-3",
-      slug: "weathermaker-45m-series-central-ducted-cfg-3",
-      modelId: "weathermaker-45m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-24000-cfg-2",
+      slug: "weathermaker-45m-series-central-ducted-24000-cfg-2",
+      modelId: "weathermaker-45m-series-central-ducted-24000",
       outdoorUnitId: "weathermaker-37muhaq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2599,79 +4086,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted-cfg-4",
-      slug: "weathermaker-45m-series-central-ducted-cfg-4",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq30aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.9,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-5",
-      slug: "weathermaker-45m-series-central-ducted-cfg-5",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq36aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-6",
-      slug: "weathermaker-45m-series-central-ducted-cfg-6",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-7",
-      slug: "weathermaker-45m-series-central-ducted-cfg-7",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq60aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-8",
-      slug: "weathermaker-45m-series-central-ducted-cfg-8",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq60aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 17.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-9",
-      slug: "weathermaker-45m-series-central-ducted-cfg-9",
-      modelId: "weathermaker-45m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-24000-cfg-3",
+      slug: "weathermaker-45m-series-central-ducted-24000-cfg-3",
+      modelId: "weathermaker-45m-series-central-ducted-24000",
       outdoorUnitId: "weathermaker-37muraq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2683,107 +4100,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted-cfg-10",
-      slug: "weathermaker-45m-series-central-ducted-cfg-10",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muraq36aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.2,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-11",
-      slug: "weathermaker-45m-series-central-ducted-cfg-11",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muraq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-12",
-      slug: "weathermaker-45m-series-central-ducted-cfg-12",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muraq60aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-13",
-      slug: "weathermaker-45m-series-central-ducted-cfg-13",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-14",
-      slug: "weathermaker-45m-series-central-ducted-cfg-14",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq30aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 17.2,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-15",
-      slug: "weathermaker-45m-series-central-ducted-cfg-15",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-16",
-      slug: "weathermaker-45m-series-central-ducted-cfg-16",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.2,
-      hspf2: 10.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-17",
-      slug: "weathermaker-45m-series-central-ducted-cfg-17",
-      modelId: "weathermaker-45m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-24000-cfg-4",
+      slug: "weathermaker-45m-series-central-ducted-24000-cfg-4",
+      modelId: "weathermaker-45m-series-central-ducted-24000",
       outdoorUnitId: "weathermaker-37mahaq24aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2795,9 +4114,51 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted-cfg-18",
-      slug: "weathermaker-45m-series-central-ducted-cfg-18",
-      modelId: "weathermaker-45m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-24000-cfg-5",
+      slug: "weathermaker-45m-series-central-ducted-24000-cfg-5",
+      modelId: "weathermaker-45m-series-central-ducted-24000",
+      outdoorUnitId: "weathermaker-37maraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.8,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-30000-cfg-1",
+      slug: "weathermaker-45m-series-central-ducted-30000-cfg-1",
+      modelId: "weathermaker-45m-series-central-ducted-30000",
+      outdoorUnitId: "weathermaker-37muhaq30aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-30000-cfg-2",
+      slug: "weathermaker-45m-series-central-ducted-30000-cfg-2",
+      modelId: "weathermaker-45m-series-central-ducted-30000",
+      outdoorUnitId: "weathermaker-37muhaq30aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.2,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-30000-cfg-3",
+      slug: "weathermaker-45m-series-central-ducted-30000-cfg-3",
+      modelId: "weathermaker-45m-series-central-ducted-30000",
       outdoorUnitId: "weathermaker-37mahaq33aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -2809,107 +4170,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-central-ducted-cfg-19",
-      slug: "weathermaker-45m-series-central-ducted-cfg-19",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-20",
-      slug: "weathermaker-45m-series-central-ducted-cfg-20",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37maraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.8,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-21",
-      slug: "weathermaker-45m-series-central-ducted-cfg-21",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37mbhaq36aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.3,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-22",
-      slug: "weathermaker-45m-series-central-ducted-cfg-22",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37mbhaq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-23",
-      slug: "weathermaker-45m-series-central-ducted-cfg-23",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37mbhaq58aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.4,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-24",
-      slug: "weathermaker-45m-series-central-ducted-cfg-24",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37mbraq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17.8,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-25",
-      slug: "weathermaker-45m-series-central-ducted-cfg-25",
-      modelId: "weathermaker-45m-series-central-ducted",
-      outdoorUnitId: "weathermaker-37muhaq36aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-central-ducted-cfg-26",
-      slug: "weathermaker-45m-series-central-ducted-cfg-26",
-      modelId: "weathermaker-45m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-30000-cfg-4",
+      slug: "weathermaker-45m-series-central-ducted-30000-cfg-4",
+      modelId: "weathermaker-45m-series-central-ducted-30000",
       outdoorUnitId: "weathermaker-37maraq30aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2921,9 +4184,191 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-central-ducted-cfg-1",
-      slug: "weathermaker-37m-series-central-ducted-cfg-1",
-      modelId: "weathermaker-37m-series-central-ducted",
+      id: "weathermaker-45m-series-central-ducted-36000-cfg-1",
+      slug: "weathermaker-45m-series-central-ducted-36000-cfg-1",
+      modelId: "weathermaker-45m-series-central-ducted-36000",
+      outdoorUnitId: "weathermaker-37muhaq36aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-36000-cfg-2",
+      slug: "weathermaker-45m-series-central-ducted-36000-cfg-2",
+      modelId: "weathermaker-45m-series-central-ducted-36000",
+      outdoorUnitId: "weathermaker-37muraq36aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.2,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-36000-cfg-3",
+      slug: "weathermaker-45m-series-central-ducted-36000-cfg-3",
+      modelId: "weathermaker-45m-series-central-ducted-36000",
+      outdoorUnitId: "weathermaker-37mbhaq36aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.3,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-36000-cfg-4",
+      slug: "weathermaker-45m-series-central-ducted-36000-cfg-4",
+      modelId: "weathermaker-45m-series-central-ducted-36000",
+      outdoorUnitId: "weathermaker-37muhaq36aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-1",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-1",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37muhaq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-2",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-2",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37muhaq60aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-3",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-3",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37muhaq60aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 17.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-4",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-4",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37muraq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-5",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-5",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37muraq60aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-6",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-6",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37muhaq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-7",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-7",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37mbhaq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-8",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-8",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37mbhaq58aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.4,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-central-ducted-48000-cfg-9",
+      slug: "weathermaker-45m-series-central-ducted-48000-cfg-9",
+      modelId: "weathermaker-45m-series-central-ducted-48000",
+      outdoorUnitId: "weathermaker-37mbraq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-central-ducted-18000-cfg-1",
+      slug: "weathermaker-37m-series-central-ducted-18000-cfg-1",
+      modelId: "weathermaker-37m-series-central-ducted-18000",
       outdoorUnitId: "weathermaker-37muraq18aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2935,9 +4380,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-central-ducted-cfg-2",
-      slug: "weathermaker-37m-series-central-ducted-cfg-2",
-      modelId: "weathermaker-37m-series-central-ducted",
+      id: "weathermaker-37m-series-central-ducted-30000-cfg-1",
+      slug: "weathermaker-37m-series-central-ducted-30000-cfg-1",
+      modelId: "weathermaker-37m-series-central-ducted-30000",
       outdoorUnitId: "weathermaker-37muraq30aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2949,9 +4394,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-1",
-      slug: "weathermaker-45m-series-wall-single-cfg-1",
-      modelId: "weathermaker-45m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-36000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-36000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mbraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2963,555 +4408,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-2",
-      slug: "weathermaker-45m-series-wall-single-cfg-2",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq06aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 22,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-3",
-      slug: "weathermaker-45m-series-wall-single-cfg-3",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq06aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 21.5,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-4",
-      slug: "weathermaker-45m-series-wall-single-cfg-4",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-5",
-      slug: "weathermaker-45m-series-wall-single-cfg-5",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.7,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-6",
-      slug: "weathermaker-45m-series-wall-single-cfg-6",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.3,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-7",
-      slug: "weathermaker-45m-series-wall-single-cfg-7",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.5,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-8",
-      slug: "weathermaker-45m-series-wall-single-cfg-8",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.6,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-9",
-      slug: "weathermaker-45m-series-wall-single-cfg-9",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-10",
-      slug: "weathermaker-45m-series-wall-single-cfg-10",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-11",
-      slug: "weathermaker-45m-series-wall-single-cfg-11",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-12",
-      slug: "weathermaker-45m-series-wall-single-cfg-12",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-13",
-      slug: "weathermaker-45m-series-wall-single-cfg-13",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20.2,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-14",
-      slug: "weathermaker-45m-series-wall-single-cfg-14",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16700,
-      coolingCapacityMaxBtu: 16700,
-      seer2: 20.7,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-15",
-      slug: "weathermaker-45m-series-wall-single-cfg-15",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-16",
-      slug: "weathermaker-45m-series-wall-single-cfg-16",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20.2,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-17",
-      slug: "weathermaker-45m-series-wall-single-cfg-17",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-18",
-      slug: "weathermaker-45m-series-wall-single-cfg-18",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-19",
-      slug: "weathermaker-45m-series-wall-single-cfg-19",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 18.5,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-20",
-      slug: "weathermaker-45m-series-wall-single-cfg-20",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23400,
-      coolingCapacityMaxBtu: 23400,
-      seer2: 20.8,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-21",
-      slug: "weathermaker-45m-series-wall-single-cfg-21",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.5,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-22",
-      slug: "weathermaker-45m-series-wall-single-cfg-22",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.2,
-      hspf2: 11.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-23",
-      slug: "weathermaker-45m-series-wall-single-cfg-23",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.7,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-24",
-      slug: "weathermaker-45m-series-wall-single-cfg-24",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 26,
-      hspf2: 13.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-25",
-      slug: "weathermaker-45m-series-wall-single-cfg-25",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 19.6,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-26",
-      slug: "weathermaker-45m-series-wall-single-cfg-26",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 19.8,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-27",
-      slug: "weathermaker-45m-series-wall-single-cfg-27",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.2,
-      hspf2: 10.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-28",
-      slug: "weathermaker-45m-series-wall-single-cfg-28",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 21.2,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-29",
-      slug: "weathermaker-45m-series-wall-single-cfg-29",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-30",
-      slug: "weathermaker-45m-series-wall-single-cfg-30",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: 19,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-31",
-      slug: "weathermaker-45m-series-wall-single-cfg-31",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-32",
-      slug: "weathermaker-45m-series-wall-single-cfg-32",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.3,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-33",
-      slug: "weathermaker-45m-series-wall-single-cfg-33",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16800,
-      coolingCapacityMaxBtu: 16800,
-      seer2: 20.8,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-34",
-      slug: "weathermaker-45m-series-wall-single-cfg-34",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 23.9,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-35",
-      slug: "weathermaker-45m-series-wall-single-cfg-35",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-36",
-      slug: "weathermaker-45m-series-wall-single-cfg-36",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-37",
-      slug: "weathermaker-45m-series-wall-single-cfg-37",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 20,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-38",
-      slug: "weathermaker-45m-series-wall-single-cfg-38",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22.1,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-39",
-      slug: "weathermaker-45m-series-wall-single-cfg-39",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.2,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-40",
-      slug: "weathermaker-45m-series-wall-single-cfg-40",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-41",
-      slug: "weathermaker-45m-series-wall-single-cfg-41",
-      modelId: "weathermaker-45m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-36000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-36000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mbhaq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36600,
@@ -3523,9 +4422,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-42",
-      slug: "weathermaker-45m-series-wall-single-cfg-42",
-      modelId: "weathermaker-45m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-36000-cfg-3",
+      slug: "weathermaker-45m-series-wall-single-36000-cfg-3",
+      modelId: "weathermaker-45m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mbhaq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36400,
@@ -3537,9 +4436,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-43",
-      slug: "weathermaker-45m-series-wall-single-cfg-43",
-      modelId: "weathermaker-45m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-36000-cfg-4",
+      slug: "weathermaker-45m-series-wall-single-36000-cfg-4",
+      modelId: "weathermaker-45m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mbhaq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3551,79 +4450,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-44",
-      slug: "weathermaker-45m-series-wall-single-cfg-44",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbhaq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.2,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-45",
-      slug: "weathermaker-45m-series-wall-single-cfg-45",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbhaq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.7,
-      hspf2: 10.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-46",
-      slug: "weathermaker-45m-series-wall-single-cfg-46",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbhaq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.8,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-47",
-      slug: "weathermaker-45m-series-wall-single-cfg-47",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbhaq58aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 18.1,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-48",
-      slug: "weathermaker-45m-series-wall-single-cfg-48",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbhaq58aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-49",
-      slug: "weathermaker-45m-series-wall-single-cfg-49",
-      modelId: "weathermaker-45m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-36000-cfg-5",
+      slug: "weathermaker-45m-series-wall-single-36000-cfg-5",
+      modelId: "weathermaker-45m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mbraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3635,9 +4464,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-50",
-      slug: "weathermaker-45m-series-wall-single-cfg-50",
-      modelId: "weathermaker-45m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-36000-cfg-6",
+      slug: "weathermaker-45m-series-wall-single-36000-cfg-6",
+      modelId: "weathermaker-45m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mbraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3649,9 +4478,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-51",
-      slug: "weathermaker-45m-series-wall-single-cfg-51",
-      modelId: "weathermaker-45m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-36000-cfg-7",
+      slug: "weathermaker-45m-series-wall-single-36000-cfg-7",
+      modelId: "weathermaker-45m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mbraq36aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3663,93 +4492,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-45m-series-wall-single-cfg-52",
-      slug: "weathermaker-45m-series-wall-single-cfg-52",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbraq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19.1,
-      hspf2: 9.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-53",
-      slug: "weathermaker-45m-series-wall-single-cfg-53",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbraq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19.9,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-54",
-      slug: "weathermaker-45m-series-wall-single-cfg-54",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mbraq48aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17.2,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-55",
-      slug: "weathermaker-45m-series-wall-single-cfg-55",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mhraq09aa1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.5,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-56",
-      slug: "weathermaker-45m-series-wall-single-cfg-56",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mhraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.7,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-45m-series-wall-single-cfg-57",
-      slug: "weathermaker-45m-series-wall-single-cfg-57",
-      modelId: "weathermaker-45m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mhraq30aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22.4,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-1",
-      slug: "weathermaker-d5m-series-wall-single-cfg-1",
-      modelId: "weathermaker-d5m-series-wall-single",
+      id: "weathermaker-d5m-series-wall-single-6000-cfg-1",
+      slug: "weathermaker-d5m-series-wall-single-6000-cfg-1",
+      modelId: "weathermaker-d5m-series-wall-single-6000",
       outdoorUnitId: "weathermaker-37mahaq06aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -3761,205 +4506,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-d5m-series-wall-single-cfg-2",
-      slug: "weathermaker-d5m-series-wall-single-cfg-2",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.5,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-3",
-      slug: "weathermaker-d5m-series-wall-single-cfg-3",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-4",
-      slug: "weathermaker-d5m-series-wall-single-cfg-4",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-5",
-      slug: "weathermaker-d5m-series-wall-single-cfg-5",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.2,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-6",
-      slug: "weathermaker-d5m-series-wall-single-cfg-6",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mahaq33aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.6,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-7",
-      slug: "weathermaker-d5m-series-wall-single-cfg-7",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq12aa1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-8",
-      slug: "weathermaker-d5m-series-wall-single-cfg-8",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 26,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-9",
-      slug: "weathermaker-d5m-series-wall-single-cfg-9",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq12aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-10",
-      slug: "weathermaker-d5m-series-wall-single-cfg-10",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq18aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.5,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-11",
-      slug: "weathermaker-d5m-series-wall-single-cfg-11",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37maraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 23.1,
-      hspf2: 11.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-12",
-      slug: "weathermaker-d5m-series-wall-single-cfg-12",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 19,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-13",
-      slug: "weathermaker-d5m-series-wall-single-cfg-13",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-14",
-      slug: "weathermaker-d5m-series-wall-single-cfg-14",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq09aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 19,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-15",
-      slug: "weathermaker-d5m-series-wall-single-cfg-15",
-      modelId: "weathermaker-d5m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mvraq24aa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-d5m-series-wall-single-cfg-16",
-      slug: "weathermaker-d5m-series-wall-single-cfg-16",
-      modelId: "weathermaker-d5m-series-wall-single",
+      id: "weathermaker-d5m-series-wall-single-6000-cfg-2",
+      slug: "weathermaker-d5m-series-wall-single-6000-cfg-2",
+      modelId: "weathermaker-d5m-series-wall-single-6000",
       outdoorUnitId: "weathermaker-37mpraq06aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -3971,9 +4520,65 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-d5m-series-wall-single-cfg-17",
-      slug: "weathermaker-d5m-series-wall-single-cfg-17",
-      modelId: "weathermaker-d5m-series-wall-single",
+      id: "weathermaker-d5m-series-wall-single-9000-cfg-1",
+      slug: "weathermaker-d5m-series-wall-single-9000-cfg-1",
+      modelId: "weathermaker-d5m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mahaq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.5,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-9000-cfg-2",
+      slug: "weathermaker-d5m-series-wall-single-9000-cfg-2",
+      modelId: "weathermaker-d5m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37maraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-9000-cfg-3",
+      slug: "weathermaker-d5m-series-wall-single-9000-cfg-3",
+      modelId: "weathermaker-d5m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mvraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-9000-cfg-4",
+      slug: "weathermaker-d5m-series-wall-single-9000-cfg-4",
+      modelId: "weathermaker-d5m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mvraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-9000-cfg-5",
+      slug: "weathermaker-d5m-series-wall-single-9000-cfg-5",
+      modelId: "weathermaker-d5m-series-wall-single-9000",
       outdoorUnitId: "weathermaker-37mpraq09aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3985,9 +4590,51 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-d5m-series-wall-single-cfg-18",
-      slug: "weathermaker-d5m-series-wall-single-cfg-18",
-      modelId: "weathermaker-d5m-series-wall-single",
+      id: "weathermaker-d5m-series-wall-single-12000-cfg-1",
+      slug: "weathermaker-d5m-series-wall-single-12000-cfg-1",
+      modelId: "weathermaker-d5m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mahaq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-12000-cfg-2",
+      slug: "weathermaker-d5m-series-wall-single-12000-cfg-2",
+      modelId: "weathermaker-d5m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37maraq12aa1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-12000-cfg-3",
+      slug: "weathermaker-d5m-series-wall-single-12000-cfg-3",
+      modelId: "weathermaker-d5m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37maraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-12000-cfg-4",
+      slug: "weathermaker-d5m-series-wall-single-12000-cfg-4",
+      modelId: "weathermaker-d5m-series-wall-single-12000",
       outdoorUnitId: "weathermaker-37mpraq12aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3999,9 +4646,37 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-d5m-series-wall-single-cfg-19",
-      slug: "weathermaker-d5m-series-wall-single-cfg-19",
-      modelId: "weathermaker-d5m-series-wall-single",
+      id: "weathermaker-d5m-series-wall-single-18000-cfg-1",
+      slug: "weathermaker-d5m-series-wall-single-18000-cfg-1",
+      modelId: "weathermaker-d5m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-18000-cfg-2",
+      slug: "weathermaker-d5m-series-wall-single-18000-cfg-2",
+      modelId: "weathermaker-d5m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-18000-cfg-3",
+      slug: "weathermaker-d5m-series-wall-single-18000-cfg-3",
+      modelId: "weathermaker-d5m-series-wall-single-18000",
       outdoorUnitId: "weathermaker-37mpraq18aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4013,9 +4688,79 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-d5m-series-wall-single-cfg-20",
-      slug: "weathermaker-d5m-series-wall-single-cfg-20",
-      modelId: "weathermaker-d5m-series-wall-single",
+      id: "weathermaker-d5m-series-wall-single-24000-cfg-1",
+      slug: "weathermaker-d5m-series-wall-single-24000-cfg-1",
+      modelId: "weathermaker-d5m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mahaq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.2,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-24000-cfg-2",
+      slug: "weathermaker-d5m-series-wall-single-24000-cfg-2",
+      modelId: "weathermaker-d5m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37maraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23.1,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-24000-cfg-3",
+      slug: "weathermaker-d5m-series-wall-single-24000-cfg-3",
+      modelId: "weathermaker-d5m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mvraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-24000-cfg-4",
+      slug: "weathermaker-d5m-series-wall-single-24000-cfg-4",
+      modelId: "weathermaker-d5m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mvraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-30000-cfg-1",
+      slug: "weathermaker-d5m-series-wall-single-30000-cfg-1",
+      modelId: "weathermaker-d5m-series-wall-single-30000",
+      outdoorUnitId: "weathermaker-37mahaq33aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.6,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-d5m-series-wall-single-30000-cfg-2",
+      slug: "weathermaker-d5m-series-wall-single-30000-cfg-2",
+      modelId: "weathermaker-d5m-series-wall-single-30000",
       outdoorUnitId: "weathermaker-37maraq30aa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4027,9 +4772,695 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-1",
-      slug: "weathermaker-37m-series-wall-single-cfg-1",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-45m-series-wall-single-6000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-6000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-6000",
+      outdoorUnitId: "weathermaker-37mahaq06aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 22,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-6000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-6000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-6000",
+      outdoorUnitId: "weathermaker-37mahaq06aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 21.5,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mahaq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mahaq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.7,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-3",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-3",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mahaq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.3,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-4",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-4",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mahaq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-5",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-5",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mahaq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.6,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-6",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-6",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37maraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-7",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-7",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37maraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26,
+      hspf2: 13.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-8",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-8",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37maraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 19.6,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-9",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-9",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37maraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 19.8,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-10",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-10",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mhraq09aa1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-9000-cfg-11",
+      slug: "weathermaker-45m-series-wall-single-9000-cfg-11",
+      modelId: "weathermaker-45m-series-wall-single-9000",
+      outdoorUnitId: "weathermaker-37mhraq09aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mahaq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mahaq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-3",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-3",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mahaq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-4",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-4",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mahaq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-5",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-5",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37mahaq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20.2,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-6",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-6",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37maraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-7",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-7",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37maraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21.2,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-8",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-8",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37maraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.7,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-9",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-9",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37maraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-12000-cfg-10",
+      slug: "weathermaker-45m-series-wall-single-12000-cfg-10",
+      modelId: "weathermaker-45m-series-wall-single-12000",
+      outdoorUnitId: "weathermaker-37maraq12aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 16700,
+      seer2: 20.7,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-3",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-3",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-4",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-4",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 18.5,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-5",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-5",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.3,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-6",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-6",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 16800,
+      seer2: 20.8,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-7",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-7",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-8",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-8",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-18000-cfg-9",
+      slug: "weathermaker-45m-series-wall-single-18000-cfg-9",
+      modelId: "weathermaker-45m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 20,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-15000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-15000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-15000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-15000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-15000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-15000",
+      outdoorUnitId: "weathermaker-37mahaq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-15000-cfg-3",
+      slug: "weathermaker-45m-series-wall-single-15000-cfg-3",
+      modelId: "weathermaker-45m-series-wall-single-15000",
+      outdoorUnitId: "weathermaker-37maraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 23.9,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-24000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-24000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mahaq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: 20.8,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-24000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-24000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mahaq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.2,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-24000-cfg-3",
+      slug: "weathermaker-45m-series-wall-single-24000-cfg-3",
+      modelId: "weathermaker-45m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37maraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.1,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-24000-cfg-4",
+      slug: "weathermaker-45m-series-wall-single-24000-cfg-4",
+      modelId: "weathermaker-45m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37maraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.2,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-24000-cfg-5",
+      slug: "weathermaker-45m-series-wall-single-24000-cfg-5",
+      modelId: "weathermaker-45m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37maraq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-20000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-20000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-20000",
+      outdoorUnitId: "weathermaker-37mahaq24aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.5,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-48000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbhaq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.2,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000-cfg-2",
+      slug: "weathermaker-45m-series-wall-single-48000-cfg-2",
+      modelId: "weathermaker-45m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbhaq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.7,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000-cfg-3",
+      slug: "weathermaker-45m-series-wall-single-48000-cfg-3",
+      modelId: "weathermaker-45m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbhaq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.8,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000-cfg-4",
+      slug: "weathermaker-45m-series-wall-single-48000-cfg-4",
+      modelId: "weathermaker-45m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbhaq58aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 18.1,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000-cfg-5",
+      slug: "weathermaker-45m-series-wall-single-48000-cfg-5",
+      modelId: "weathermaker-45m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbraq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19.1,
+      hspf2: 9.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000-cfg-6",
+      slug: "weathermaker-45m-series-wall-single-48000-cfg-6",
+      modelId: "weathermaker-45m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbraq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19.9,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-48000-cfg-7",
+      slug: "weathermaker-45m-series-wall-single-48000-cfg-7",
+      modelId: "weathermaker-45m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mbraq48aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17.2,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-60000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-60000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-60000",
+      outdoorUnitId: "weathermaker-37mbhaq58aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-18000-cfg-1",
+      slug: "weathermaker-37m-series-wall-single-18000-cfg-1",
+      modelId: "weathermaker-37m-series-wall-single-18000",
       outdoorUnitId: "weathermaker-37mghaq18ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -4041,9 +5472,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-2",
-      slug: "weathermaker-37m-series-wall-single-cfg-2",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-18000-cfg-2",
+      slug: "weathermaker-37m-series-wall-single-18000-cfg-2",
+      modelId: "weathermaker-37m-series-wall-single-18000",
       outdoorUnitId: "weathermaker-37mghaq18ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -4055,9 +5486,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-3",
-      slug: "weathermaker-37m-series-wall-single-cfg-3",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-18000-cfg-3",
+      slug: "weathermaker-37m-series-wall-single-18000-cfg-3",
+      modelId: "weathermaker-37m-series-wall-single-18000",
       outdoorUnitId: "weathermaker-37mghaq18ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -4069,219 +5500,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-4",
-      slug: "weathermaker-37m-series-wall-single-cfg-4",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq24da3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 24,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-5",
-      slug: "weathermaker-37m-series-wall-single-cfg-5",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq24da3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-6",
-      slug: "weathermaker-37m-series-wall-single-cfg-6",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq24da3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 9.75,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-7",
-      slug: "weathermaker-37m-series-wall-single-cfg-7",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq30ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 24,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-8",
-      slug: "weathermaker-37m-series-wall-single-cfg-8",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq30ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-9",
-      slug: "weathermaker-37m-series-wall-single-cfg-9",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq30ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 21.75,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-10",
-      slug: "weathermaker-37m-series-wall-single-cfg-10",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq36ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23.1,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-11",
-      slug: "weathermaker-37m-series-wall-single-cfg-11",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq36ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-12",
-      slug: "weathermaker-37m-series-wall-single-cfg-12",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq36ea3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.3,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-13",
-      slug: "weathermaker-37m-series-wall-single-cfg-13",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq48fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-14",
-      slug: "weathermaker-37m-series-wall-single-cfg-14",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq48fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.5,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-15",
-      slug: "weathermaker-37m-series-wall-single-cfg-15",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq48fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.75,
-      hspf2: 11.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-16",
-      slug: "weathermaker-37m-series-wall-single-cfg-16",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq55fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
-      seer2: 22.3,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-17",
-      slug: "weathermaker-37m-series-wall-single-cfg-17",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq55fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 20.2,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-18",
-      slug: "weathermaker-37m-series-wall-single-cfg-18",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mghaq55fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 21.25,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-19",
-      slug: "weathermaker-37m-series-wall-single-cfg-19",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-18000-cfg-4",
+      slug: "weathermaker-37m-series-wall-single-18000-cfg-4",
+      modelId: "weathermaker-37m-series-wall-single-18000",
       outdoorUnitId: "weathermaker-37mgraq18ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4293,9 +5514,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-20",
-      slug: "weathermaker-37m-series-wall-single-cfg-20",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-18000-cfg-5",
+      slug: "weathermaker-37m-series-wall-single-18000-cfg-5",
+      modelId: "weathermaker-37m-series-wall-single-18000",
       outdoorUnitId: "weathermaker-37mgraq18ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4307,9 +5528,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-21",
-      slug: "weathermaker-37m-series-wall-single-cfg-21",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-18000-cfg-6",
+      slug: "weathermaker-37m-series-wall-single-18000-cfg-6",
+      modelId: "weathermaker-37m-series-wall-single-18000",
       outdoorUnitId: "weathermaker-37mgraq18ca3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4321,9 +5542,65 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-22",
-      slug: "weathermaker-37m-series-wall-single-cfg-22",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-18000-cfg-7",
+      slug: "weathermaker-37m-series-wall-single-18000-cfg-7",
+      modelId: "weathermaker-37m-series-wall-single-18000",
+      outdoorUnitId: "weathermaker-37mhraq18aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.3,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-24000-cfg-1",
+      slug: "weathermaker-37m-series-wall-single-24000-cfg-1",
+      modelId: "weathermaker-37m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mghaq24da3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 24,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-24000-cfg-2",
+      slug: "weathermaker-37m-series-wall-single-24000-cfg-2",
+      modelId: "weathermaker-37m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mghaq24da3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-24000-cfg-3",
+      slug: "weathermaker-37m-series-wall-single-24000-cfg-3",
+      modelId: "weathermaker-37m-series-wall-single-24000",
+      outdoorUnitId: "weathermaker-37mghaq24da3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 9.75,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-24000-cfg-4",
+      slug: "weathermaker-37m-series-wall-single-24000-cfg-4",
+      modelId: "weathermaker-37m-series-wall-single-24000",
       outdoorUnitId: "weathermaker-37mgraq24da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4335,9 +5612,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-23",
-      slug: "weathermaker-37m-series-wall-single-cfg-23",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-24000-cfg-5",
+      slug: "weathermaker-37m-series-wall-single-24000-cfg-5",
+      modelId: "weathermaker-37m-series-wall-single-24000",
       outdoorUnitId: "weathermaker-37mgraq24da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4349,9 +5626,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-24",
-      slug: "weathermaker-37m-series-wall-single-cfg-24",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-24000-cfg-6",
+      slug: "weathermaker-37m-series-wall-single-24000-cfg-6",
+      modelId: "weathermaker-37m-series-wall-single-24000",
       outdoorUnitId: "weathermaker-37mgraq24da3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4363,9 +5640,51 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-25",
-      slug: "weathermaker-37m-series-wall-single-cfg-25",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-30000-cfg-1",
+      slug: "weathermaker-37m-series-wall-single-30000-cfg-1",
+      modelId: "weathermaker-37m-series-wall-single-30000",
+      outdoorUnitId: "weathermaker-37mghaq30ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 24,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-30000-cfg-2",
+      slug: "weathermaker-37m-series-wall-single-30000-cfg-2",
+      modelId: "weathermaker-37m-series-wall-single-30000",
+      outdoorUnitId: "weathermaker-37mghaq30ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-30000-cfg-3",
+      slug: "weathermaker-37m-series-wall-single-30000-cfg-3",
+      modelId: "weathermaker-37m-series-wall-single-30000",
+      outdoorUnitId: "weathermaker-37mghaq30ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 21.75,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-30000-cfg-4",
+      slug: "weathermaker-37m-series-wall-single-30000-cfg-4",
+      modelId: "weathermaker-37m-series-wall-single-30000",
       outdoorUnitId: "weathermaker-37mgraq30ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4377,9 +5696,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-26",
-      slug: "weathermaker-37m-series-wall-single-cfg-26",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-30000-cfg-5",
+      slug: "weathermaker-37m-series-wall-single-30000-cfg-5",
+      modelId: "weathermaker-37m-series-wall-single-30000",
       outdoorUnitId: "weathermaker-37mgraq30ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4391,9 +5710,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-27",
-      slug: "weathermaker-37m-series-wall-single-cfg-27",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-30000-cfg-6",
+      slug: "weathermaker-37m-series-wall-single-30000-cfg-6",
+      modelId: "weathermaker-37m-series-wall-single-30000",
       outdoorUnitId: "weathermaker-37mgraq30ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4405,9 +5724,51 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-28",
-      slug: "weathermaker-37m-series-wall-single-cfg-28",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-36000-cfg-1",
+      slug: "weathermaker-37m-series-wall-single-36000-cfg-1",
+      modelId: "weathermaker-37m-series-wall-single-36000",
+      outdoorUnitId: "weathermaker-37mghaq36ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23.1,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-36000-cfg-2",
+      slug: "weathermaker-37m-series-wall-single-36000-cfg-2",
+      modelId: "weathermaker-37m-series-wall-single-36000",
+      outdoorUnitId: "weathermaker-37mghaq36ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-36000-cfg-3",
+      slug: "weathermaker-37m-series-wall-single-36000-cfg-3",
+      modelId: "weathermaker-37m-series-wall-single-36000",
+      outdoorUnitId: "weathermaker-37mghaq36ea3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.3,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-36000-cfg-4",
+      slug: "weathermaker-37m-series-wall-single-36000-cfg-4",
+      modelId: "weathermaker-37m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mgraq36ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -4419,9 +5780,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-29",
-      slug: "weathermaker-37m-series-wall-single-cfg-29",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-36000-cfg-5",
+      slug: "weathermaker-37m-series-wall-single-36000-cfg-5",
+      modelId: "weathermaker-37m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mgraq36ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -4433,9 +5794,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-30",
-      slug: "weathermaker-37m-series-wall-single-cfg-30",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-36000-cfg-6",
+      slug: "weathermaker-37m-series-wall-single-36000-cfg-6",
+      modelId: "weathermaker-37m-series-wall-single-36000",
       outdoorUnitId: "weathermaker-37mgraq36ea3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35400,
@@ -4447,9 +5808,93 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-31",
-      slug: "weathermaker-37m-series-wall-single-cfg-31",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-48000-cfg-1",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-1",
+      modelId: "weathermaker-37m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mghaq48fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-48000-cfg-2",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-2",
+      modelId: "weathermaker-37m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mghaq48fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.5,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-48000-cfg-3",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-3",
+      modelId: "weathermaker-37m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mghaq48fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.75,
+      hspf2: 11.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-48000-cfg-4",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-4",
+      modelId: "weathermaker-37m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mghaq55fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 22.3,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-48000-cfg-5",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-5",
+      modelId: "weathermaker-37m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mghaq55fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20.2,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-48000-cfg-6",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-6",
+      modelId: "weathermaker-37m-series-wall-single-48000",
+      outdoorUnitId: "weathermaker-37mghaq55fa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 21.25,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-37m-series-wall-single-48000-cfg-7",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-7",
+      modelId: "weathermaker-37m-series-wall-single-48000",
       outdoorUnitId: "weathermaker-37mgraq48fa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -4461,23 +5906,9 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-32",
-      slug: "weathermaker-37m-series-wall-single-cfg-32",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mgraq48fa3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 20.5,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "weathermaker-37m-series-wall-single-cfg-33",
-      slug: "weathermaker-37m-series-wall-single-cfg-33",
-      modelId: "weathermaker-37m-series-wall-single",
+      id: "weathermaker-37m-series-wall-single-48000-cfg-8",
+      slug: "weathermaker-37m-series-wall-single-48000-cfg-8",
+      modelId: "weathermaker-37m-series-wall-single-48000",
       outdoorUnitId: "weathermaker-37mgraq48fa3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -4489,23 +5920,37 @@ export const weathermakerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "weathermaker-37m-series-wall-single-cfg-34",
-      slug: "weathermaker-37m-series-wall-single-cfg-34",
-      modelId: "weathermaker-37m-series-wall-single",
-      outdoorUnitId: "weathermaker-37mhraq18aa3",
+      id: "weathermaker-37m-series-wall-single-42000-cfg-1",
+      slug: "weathermaker-37m-series-wall-single-42000-cfg-1",
+      modelId: "weathermaker-37m-series-wall-single-42000",
+      outdoorUnitId: "weathermaker-37mgraq48fa3",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20.3,
-      hspf2: 9.1,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.5,
+      hspf2: 10.6,
       minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "weathermaker-45m-series-wall-single-30000-cfg-1",
+      slug: "weathermaker-45m-series-wall-single-30000-cfg-1",
+      modelId: "weathermaker-45m-series-wall-single-30000",
+      outdoorUnitId: "weathermaker-37mhraq30aa3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22.4,
+      hspf2: 9,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-1",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4516,29 +5961,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-4",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4549,7 +5972,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-5",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4560,7 +5983,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-6",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4571,84 +5994,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-14",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4659,18 +6005,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-16",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4681,18 +6016,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-18",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4703,172 +6027,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-34",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4879,7 +6038,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-35",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4890,40 +6049,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-standard-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-standard-wall-single-cfg-39",
+      configurationId: "weathermaker-standard-wall-single-36000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4934,7 +6060,84 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-1",
+      configurationId: "weathermaker-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4945,7 +6148,84 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-2",
+      configurationId: "weathermaker-38mar-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4956,18 +6236,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-4",
+      configurationId: "weathermaker-38mar-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4978,51 +6247,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6100,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-9",
+      configurationId: "weathermaker-38mar-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5033,7 +6258,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-10",
+      configurationId: "weathermaker-38mar-series-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5044,7 +6269,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-11",
+      configurationId: "weathermaker-38mar-series-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5055,62 +6280,51 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-12",
+      configurationId: "weathermaker-38mar-series-wall-single-12000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 12700,
-          cop: 1.85,
+          heatingCapacityBtu: 7500,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-13",
+      configurationId: "weathermaker-38mar-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
+          heatingCapacityBtu: 7500,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-16",
+      configurationId: "weathermaker-38mar-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 2.1,
+          heatingCapacityBtu: 6100,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-17",
+      configurationId: "weathermaker-38mar-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5121,18 +6335,40 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-18",
+      configurationId: "weathermaker-38mar-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
+          heatingCapacityBtu: 10800,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-19",
+      configurationId: "weathermaker-38mar-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12700,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5143,7 +6379,183 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-20",
+      configurationId: "weathermaker-38mar-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mar-series-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5154,62 +6566,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mar-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38m-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38m-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38m-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mp-series-wall-single-cfg-1",
+      configurationId: "weathermaker-38mp-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5220,7 +6577,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mp-series-wall-single-cfg-2",
+      configurationId: "weathermaker-38mp-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5231,18 +6588,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mp-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-1",
+      configurationId: "weathermaker-38mg-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5253,7 +6599,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-2",
+      configurationId: "weathermaker-38mg-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5264,7 +6610,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-3",
+      configurationId: "weathermaker-38mg-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5275,7 +6621,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-4",
+      configurationId: "weathermaker-38mg-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5286,7 +6632,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-5",
+      configurationId: "weathermaker-38mg-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5297,7 +6643,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-6",
+      configurationId: "weathermaker-38mg-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5308,7 +6654,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-7",
+      configurationId: "weathermaker-38mg-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5319,7 +6665,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-8",
+      configurationId: "weathermaker-38mg-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5330,7 +6676,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-9",
+      configurationId: "weathermaker-38mg-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5341,7 +6687,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-10",
+      configurationId: "weathermaker-38mg-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5352,40 +6698,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-14",
+      configurationId: "weathermaker-38mg-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5396,7 +6709,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-15",
+      configurationId: "weathermaker-38mg-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5407,7 +6720,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-16",
+      configurationId: "weathermaker-38mg-series-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5418,7 +6731,40 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-17",
+      configurationId: "weathermaker-38mg-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mg-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mg-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mg-series-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5429,7 +6775,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mg-series-wall-single-cfg-18",
+      configurationId: "weathermaker-38mg-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5440,7 +6786,18 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mb-series-wall-single-cfg-1",
+      configurationId: "weathermaker-38m-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mb-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5451,7 +6808,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mb-series-wall-single-cfg-2",
+      configurationId: "weathermaker-38mb-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5462,7 +6819,18 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mseries-central-ducted-cfg-1",
+      configurationId: "weathermaker-38mp-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mseries-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5473,51 +6841,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mseries-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mseries-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mseries-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mseries-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38mseries-central-ducted-cfg-6",
+      configurationId: "weathermaker-38mseries-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5528,18 +6852,73 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mseries-central-ducted-cfg-7",
+      configurationId: "weathermaker-standard-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
+          heatingCapacityBtu: 34000,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-1",
+      configurationId: "weathermaker-standard-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-60000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-60000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-60000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5550,51 +6929,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-6",
+      configurationId: "weathermaker-38m-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5605,7 +6940,117 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-7",
+      configurationId: "weathermaker-38mseries-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mseries-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mseries-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mseries-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38mseries-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-38m-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5616,7 +7061,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-8",
+      configurationId: "weathermaker-38m-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5627,7 +7072,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38m-series-central-ducted-cfg-9",
+      configurationId: "weathermaker-38m-series-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5638,7 +7083,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-38mu-series-central-ducted-cfg-1",
+      configurationId: "weathermaker-38mu-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5649,7 +7094,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-1",
+      configurationId: "weathermaker-45m-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5660,128 +7105,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 2.14,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-13",
+      configurationId: "weathermaker-45m-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5792,29 +7116,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-16",
+      configurationId: "weathermaker-45m-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5825,29 +7127,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16900,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-19",
+      configurationId: "weathermaker-45m-series-central-ducted-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5858,7 +7138,51 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-20",
+      configurationId: "weathermaker-45m-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.14,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16900,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5869,62 +7193,40 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-21",
+      configurationId: "weathermaker-45m-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.06,
+          heatingCapacityBtu: 23800,
+          cop: 1.96,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-22",
+      configurationId: "weathermaker-45m-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
+          heatingCapacityBtu: 24000,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-central-ducted-cfg-26",
+      configurationId: "weathermaker-45m-series-central-ducted-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5935,7 +7237,150 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-central-ducted-cfg-1",
+      configurationId: "weathermaker-45m-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-central-ducted-48000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5946,7 +7391,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-central-ducted-cfg-2",
+      configurationId: "weathermaker-37m-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5957,7 +7402,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-1",
+      configurationId: "weathermaker-45m-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5968,436 +7413,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.23,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.17,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 2.25,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 2.31,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 2.48,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 2.5,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2.25,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9100,
-          cop: 2.44,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13900,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13700,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-41",
+      configurationId: "weathermaker-45m-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6408,7 +7424,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-42",
+      configurationId: "weathermaker-45m-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6419,7 +7435,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-43",
+      configurationId: "weathermaker-45m-series-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6430,62 +7446,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38500,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-49",
+      configurationId: "weathermaker-45m-series-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6496,7 +7457,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-50",
+      configurationId: "weathermaker-45m-series-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6507,7 +7468,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-51",
+      configurationId: "weathermaker-45m-series-wall-single-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6518,73 +7479,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36600,
-          cop: 2.11,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-53",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-54",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-55",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6600,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-56",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-45m-series-wall-single-cfg-57",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.94,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-1",
+      configurationId: "weathermaker-d5m-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6595,7 +7490,18 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-2",
+      configurationId: "weathermaker-d5m-series-wall-single-6000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6606,62 +7512,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8700,
-          cop: 2.33,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-8",
+      configurationId: "weathermaker-d5m-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6672,7 +7523,62 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-9",
+      configurationId: "weathermaker-d5m-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: 2.33,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6683,7 +7589,29 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-10",
+      configurationId: "weathermaker-d5m-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6694,95 +7622,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18800,
-          cop: 2.54,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17100,
-          cop: 2.01,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17100,
-          cop: 2.01,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-19",
+      configurationId: "weathermaker-d5m-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6793,7 +7633,62 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-d5m-series-wall-single-cfg-20",
+      configurationId: "weathermaker-d5m-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18800,
+          cop: 2.54,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17100,
+          cop: 2.01,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17100,
+          cop: 2.01,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-d5m-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6804,183 +7699,535 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-1",
+      configurationId: "weathermaker-45m-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17600,
+          heatingCapacityBtu: 7000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-6000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.17,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 2.31,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-9000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-2",
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
+          heatingCapacityBtu: 9600,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-3",
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17300,
+          heatingCapacityBtu: 10000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-4",
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
+          heatingCapacityBtu: 9800,
+          cop: 1.88,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-5",
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
+          heatingCapacityBtu: 9600,
           cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-6",
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
+          heatingCapacityBtu: 10200,
           cop: 1.95,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-7",
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
+          heatingCapacityBtu: 8600,
+          cop: 2.48,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.5,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-12000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-8",
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
+          heatingCapacityBtu: 15000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13700,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
           cop: 1.95,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-9",
+      configurationId: "weathermaker-45m-series-wall-single-15000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 1.98,
+          heatingCapacityBtu: 14100,
+          cop: 2.16,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-10",
+      configurationId: "weathermaker-45m-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
+          heatingCapacityBtu: 20400,
+          cop: 2.23,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-11",
+      configurationId: "weathermaker-45m-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
+          heatingCapacityBtu: 21600,
+          cop: 2.18,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-12",
+      configurationId: "weathermaker-45m-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
+          heatingCapacityBtu: 20400,
+          cop: 2.3,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-13",
+      configurationId: "weathermaker-45m-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 44000,
-          cop: 2,
+          cop: 1.96,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-14",
+      configurationId: "weathermaker-45m-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
+          heatingCapacityBtu: 38500,
+          cop: 1.83,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-15",
+      configurationId: "weathermaker-45m-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
+          heatingCapacityBtu: 45000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-16",
+      configurationId: "weathermaker-45m-series-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
+          heatingCapacityBtu: 41000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36600,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-17",
+      configurationId: "weathermaker-45m-series-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6991,18 +8238,40 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-18",
+      configurationId: "weathermaker-37m-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2.05,
+          heatingCapacityBtu: 17600,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-19",
+      configurationId: "weathermaker-37m-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7013,7 +8282,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-20",
+      configurationId: "weathermaker-37m-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7024,7 +8293,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-21",
+      configurationId: "weathermaker-37m-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7035,7 +8304,51 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-22",
+      configurationId: "weathermaker-37m-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7046,7 +8359,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-23",
+      configurationId: "weathermaker-37m-series-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7057,7 +8370,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-24",
+      configurationId: "weathermaker-37m-series-wall-single-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7068,7 +8381,40 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-25",
+      configurationId: "weathermaker-37m-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7079,7 +8425,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-26",
+      configurationId: "weathermaker-37m-series-wall-single-30000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7090,7 +8436,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-27",
+      configurationId: "weathermaker-37m-series-wall-single-30000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7101,7 +8447,40 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-28",
+      configurationId: "weathermaker-37m-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7112,7 +8491,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-29",
+      configurationId: "weathermaker-37m-series-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7123,7 +8502,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-30",
+      configurationId: "weathermaker-37m-series-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7134,7 +8513,73 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-31",
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7145,18 +8590,7 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-33",
+      configurationId: "weathermaker-37m-series-wall-single-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7167,12 +8601,23 @@ export const weathermakerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "weathermaker-37m-series-wall-single-cfg-34",
+      configurationId: "weathermaker-37m-series-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 11700,
-          cop: 2,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "weathermaker-45m-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.94,
           confidence: "verified",
         }
       ]

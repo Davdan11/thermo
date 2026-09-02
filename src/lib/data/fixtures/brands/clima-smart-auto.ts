@@ -37,15 +37,16 @@ export const climasmartDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "clima-smart-standard-wall-single",
-      slug: "clima-smart-standard-wall-single",
-      name: "Standard",
+      id: "clima-smart-standard-wall-single-12000",
+      slug: "clima-smart-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "clima-smart-standard",
       brandId: "clima-smart",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7100,
@@ -63,21 +64,49 @@ export const climasmartDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "clima-smart-t-pro-wall-single",
-      slug: "clima-smart-t-pro-wall-single",
-      name: "T-PRO",
+      id: "clima-smart-t-pro-wall-single-18000",
+      slug: "clima-smart-t-pro-wall-single-18000",
+      name: "T-PRO 18 000 BTU",
       seriesId: "clima-smart-t-pro",
       brandId: "clima-smart",
-      modelNumber: "T-PRO",
-      normalizedModelNumber: "t-pro",
+      modelNumber: "T-PRO 18k",
+      normalizedModelNumber: "t-pro-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 23000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "clima-smart-t-pro-wall-single-24000",
+      slug: "clima-smart-t-pro-wall-single-24000",
+      name: "T-PRO 24 000 BTU",
+      seriesId: "clima-smart-t-pro",
+      brandId: "clima-smart",
+      modelNumber: "T-PRO 24k",
+      normalizedModelNumber: "t-pro-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 13900,
       heatingCapacity5FMaxBtu: 13900,
       seer2Min: 20,
-      seer2Max: 22,
+      seer2Max: 20,
       hspf2Min: 9,
       hspf2Max: 9,
       cop5FMin: 1.8,
@@ -120,9 +149,9 @@ export const climasmartDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "clima-smart-standard-wall-single-cfg-1",
-      slug: "clima-smart-standard-wall-single-cfg-1",
-      modelId: "clima-smart-standard-wall-single",
+      id: "clima-smart-standard-wall-single-12000-cfg-1",
+      slug: "clima-smart-standard-wall-single-12000-cfg-1",
+      modelId: "clima-smart-standard-wall-single-12000",
       outdoorUnitId: "clima-smart-mch12-cs-s23-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -134,9 +163,9 @@ export const climasmartDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "clima-smart-standard-wall-single-cfg-2",
-      slug: "clima-smart-standard-wall-single-cfg-2",
-      modelId: "clima-smart-standard-wall-single",
+      id: "clima-smart-standard-wall-single-12000-cfg-2",
+      slug: "clima-smart-standard-wall-single-12000-cfg-2",
+      modelId: "clima-smart-standard-wall-single-12000",
       outdoorUnitId: "clima-smart-mch12-cs-s23-230v-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -148,9 +177,9 @@ export const climasmartDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "clima-smart-t-pro-wall-single-cfg-1",
-      slug: "clima-smart-t-pro-wall-single-cfg-1",
-      modelId: "clima-smart-t-pro-wall-single",
+      id: "clima-smart-t-pro-wall-single-18000-cfg-1",
+      slug: "clima-smart-t-pro-wall-single-18000-cfg-1",
+      modelId: "clima-smart-t-pro-wall-single-18000",
       outdoorUnitId: "clima-smart-mch18-cs-s23-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -162,9 +191,9 @@ export const climasmartDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "clima-smart-t-pro-wall-single-cfg-2",
-      slug: "clima-smart-t-pro-wall-single-cfg-2",
-      modelId: "clima-smart-t-pro-wall-single",
+      id: "clima-smart-t-pro-wall-single-24000-cfg-1",
+      slug: "clima-smart-t-pro-wall-single-24000-cfg-1",
+      modelId: "clima-smart-t-pro-wall-single-24000",
       outdoorUnitId: "clima-smart-mch24-cs-s23-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -178,7 +207,7 @@ export const climasmartDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "clima-smart-standard-wall-single-cfg-1",
+      configurationId: "clima-smart-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -189,7 +218,7 @@ export const climasmartDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "clima-smart-standard-wall-single-cfg-2",
+      configurationId: "clima-smart-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -200,7 +229,7 @@ export const climasmartDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "clima-smart-t-pro-wall-single-cfg-1",
+      configurationId: "clima-smart-t-pro-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -211,7 +240,7 @@ export const climasmartDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "clima-smart-t-pro-wall-single-cfg-2",
+      configurationId: "clima-smart-t-pro-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

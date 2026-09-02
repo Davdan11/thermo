@@ -81,18 +81,154 @@ export const senvilleDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "senville-standard-wall-single",
-      slug: "senville-standard-wall-single",
-      name: "Standard",
+      id: "senville-standard-wall-single-9000",
+      slug: "senville-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "senville-standard",
       brandId: "senville",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 7200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-12000",
+      slug: "senville-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "senville-standard",
+      brandId: "senville",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7300,
+      heatingCapacity5FMaxBtu: 8700,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-18000",
+      slug: "senville-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "senville-standard",
+      brandId: "senville",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 12300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-30000",
+      slug: "senville-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "senville-standard",
+      brandId: "senville",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 17200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-36000",
+      slug: "senville-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "senville-standard",
+      brandId: "senville",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-48000",
+      slug: "senville-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "senville-standard",
+      brandId: "senville",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 29600,
       heatingCapacity5FMaxBtu: 29600,
       seer2Min: null,
       seer2Max: null,
@@ -107,24 +243,133 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single",
-      slug: "senville-sen-series-wall-single",
-      name: "SEN series",
-      seriesId: "senville-sen-series",
+      id: "senville-standard-wall-single-24000",
+      slug: "senville-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "senville-standard",
       brandId: "senville",
-      modelNumber: "SEN series",
-      normalizedModelNumber: "sen-series",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 17200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-9000",
+      slug: "senville-sen-series-wall-single-9000",
+      name: "SEN series 9 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN series 9k",
+      normalizedModelNumber: "sen-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6800,
-      heatingCapacity5FMaxBtu: 35000,
-      seer2Min: 18,
+      heatingCapacity5FMaxBtu: 10100,
+      seer2Min: 20.2,
       seer2Max: 28.1,
-      hspf2Min: 8.7,
+      hspf2Min: 9,
       hspf2Max: 12,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-12000",
+      slug: "senville-sen-series-wall-single-12000",
+      name: "SEN series 12 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN series 12k",
+      normalizedModelNumber: "sen-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19.5,
+      seer2Max: 25.5,
+      hspf2Min: 10,
+      hspf2Max: 10.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.99,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-15000",
+      slug: "senville-sen-series-wall-single-15000",
+      name: "SEN series 15 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN series 15k",
+      normalizedModelNumber: "sen-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
       cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-24000",
+      slug: "senville-sen-series-wall-single-24000",
+      name: "SEN series 24 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN series 24k",
+      normalizedModelNumber: "sen-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 19.2,
+      seer2Max: 21.5,
+      hspf2Min: 10.5,
+      hspf2Max: 11.5,
+      cop5FMin: 2,
       cop5FMax: 2.21,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -133,24 +378,133 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-central-ducted",
-      slug: "senville-sendc-central-ducted",
-      name: "SENDC",
-      seriesId: "senville-sendc",
+      id: "senville-sen-series-wall-single-18000",
+      slug: "senville-sen-series-wall-single-18000",
+      name: "SEN series 18 000 BTU",
+      seriesId: "senville-sen-series",
       brandId: "senville",
-      modelNumber: "SENDC",
-      normalizedModelNumber: "sendc",
+      modelNumber: "SEN series 18k",
+      normalizedModelNumber: "sen-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 19200,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.3,
-      seer2Max: 17.4,
-      hspf2Min: 9.4,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 22.9,
+      hspf2Min: 9.5,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-30000",
+      slug: "senville-sen-series-wall-single-30000",
+      name: "SEN series 30 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN series 30k",
+      normalizedModelNumber: "sen-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 28800,
+      seer2Min: 19.5,
+      seer2Max: 24.6,
+      hspf2Min: 9.2,
       hspf2Max: 10,
-      cop5FMin: 1.9,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-36000",
+      slug: "senville-sen-series-wall-single-36000",
+      name: "SEN series 36 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN series 36k",
+      normalizedModelNumber: "sen-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26800,
+      heatingCapacity5FMaxBtu: 26800,
+      seer2Min: 23.9,
+      seer2Max: 23.9,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-48000",
+      slug: "senville-sen-series-wall-single-48000",
+      name: "SEN series 48 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN series 48k",
+      normalizedModelNumber: "sen-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 21.95,
+      seer2Max: 23.4,
+      hspf2Min: 8.7,
+      hspf2Max: 9.2,
+      cop5FMin: 1.75,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-central-ducted-36000",
+      slug: "senville-sendc-central-ducted-36000",
+      name: "SENDC 36 000 BTU",
+      seriesId: "senville-sendc",
+      brandId: "senville",
+      modelNumber: "SENDC 36k",
+      normalizedModelNumber: "sendc-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.97,
       cop5FMax: 1.97,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -159,25 +513,107 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single",
-      slug: "senville-sena-series-wall-single",
-      name: "SENA Series",
-      seriesId: "senville-sena-series",
+      id: "senville-sendc-central-ducted-24000",
+      slug: "senville-sendc-central-ducted-24000",
+      name: "SENDC 24 000 BTU",
+      seriesId: "senville-sendc",
       brandId: "senville",
-      modelNumber: "SENA Series",
-      normalizedModelNumber: "sena-series",
+      modelNumber: "SENDC 24k",
+      normalizedModelNumber: "sendc-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 53000,
-      heatingCapacity5FMinBtu: 7000,
-      heatingCapacity5FMaxBtu: 45000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-central-ducted-48000",
+      slug: "senville-sendc-central-ducted-48000",
+      name: "SENDC 48 000 BTU",
+      seriesId: "senville-sendc",
+      brandId: "senville",
+      modelNumber: "SENDC 48k",
+      normalizedModelNumber: "sendc-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-central-ducted-60000",
+      slug: "senville-sendc-central-ducted-60000",
+      name: "SENDC 60 000 BTU",
+      seriesId: "senville-sendc",
+      brandId: "senville",
+      modelNumber: "SENDC 60k",
+      normalizedModelNumber: "sendc-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-18000",
+      slug: "senville-sena-series-wall-single-18000",
+      name: "SENA Series 18 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA Series 18k",
+      normalizedModelNumber: "sena-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 14400,
+      heatingCapacity5FMaxBtu: 17600,
       seer2Min: 18,
-      seer2Max: 27.4,
-      hspf2Min: 9,
-      hspf2Max: 14.8,
-      cop5FMin: 1.8,
-      cop5FMax: 2.4,
+      seer2Max: 25,
+      hspf2Min: 9.3,
+      hspf2Max: 12.2,
+      cop5FMin: 1.85,
+      cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -185,24 +621,133 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-senl-series-wall-single",
-      slug: "senville-senl-series-wall-single",
-      name: "SENL Series",
-      seriesId: "senville-senl-series",
+      id: "senville-sena-series-wall-single-30000",
+      slug: "senville-sena-series-wall-single-30000",
+      name: "SENA Series 30 000 BTU",
+      seriesId: "senville-sena-series",
       brandId: "senville",
-      modelNumber: "SENL Series",
-      normalizedModelNumber: "senl-series",
+      modelNumber: "SENA Series 30k",
+      normalizedModelNumber: "sena-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-36000",
+      slug: "senville-sena-series-wall-single-36000",
+      name: "SENA Series 36 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA Series 36k",
+      normalizedModelNumber: "sena-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.4,
+      seer2Max: 23,
+      hspf2Min: 10,
+      hspf2Max: 10.9,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000",
+      slug: "senville-sena-series-wall-single-48000",
+      name: "SENA-series 48 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA-series 48k",
+      normalizedModelNumber: "sena-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 9,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-senl-series-wall-single-9000",
+      slug: "senville-senl-series-wall-single-9000",
+      name: "SENL Series 9 000 BTU",
+      seriesId: "senville-senl-series",
+      brandId: "senville",
+      modelNumber: "SENL Series 9k",
+      normalizedModelNumber: "senl-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6500,
-      heatingCapacity5FMaxBtu: 16900,
-      seer2Min: 18.7,
+      heatingCapacity5FMaxBtu: 6800,
+      seer2Min: 21.2,
       seer2Max: 21.5,
       hspf2Min: 9,
-      hspf2Max: 9.3,
+      hspf2Max: 9.1,
       cop5FMin: 1.96,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-senl-series-wall-single-24000",
+      slug: "senville-senl-series-wall-single-24000",
+      name: "SENL Series 24 000 BTU",
+      seriesId: "senville-senl-series",
+      brandId: "senville",
+      modelNumber: "SENL Series 24k",
+      normalizedModelNumber: "senl-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16900,
+      heatingCapacity5FMaxBtu: 16900,
+      seer2Min: 18.7,
+      seer2Max: 18.7,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 2.14,
       cop5FMax: 2.14,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -211,24 +756,214 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-series-central-ducted",
-      slug: "senville-sendc-series-central-ducted",
-      name: "SENDC Series",
-      seriesId: "senville-sendc-series",
+      id: "senville-sena-series-wall-single-6000",
+      slug: "senville-sena-series-wall-single-6000",
+      name: "SENA Series 6 000 BTU",
+      seriesId: "senville-sena-series",
       brandId: "senville",
-      modelNumber: "SENDC Series",
-      normalizedModelNumber: "sendc-series",
+      modelNumber: "SENA Series 6k",
+      normalizedModelNumber: "sena-series-6000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 54000,
-      heatingCapacity5FMinBtu: 20000,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 16,
-      seer2Max: 18.3,
-      hspf2Min: 9,
-      hspf2Max: 10.3,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6500,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 7900,
+      seer2Min: 22,
+      seer2Max: 25.5,
+      hspf2Min: 12,
+      hspf2Max: 14.8,
+      cop5FMin: 2.39,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-9000",
+      slug: "senville-sena-series-wall-single-9000",
+      name: "SENA Series 9 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA Series 9k",
+      normalizedModelNumber: "sena-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 21.4,
+      seer2Max: 27.4,
+      hspf2Min: 12.1,
+      hspf2Max: 12.5,
       cop5FMin: 1.8,
+      cop5FMax: 1.89,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-12000",
+      slug: "senville-sena-series-wall-single-12000",
+      name: "SENA Series 12 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA Series 12k",
+      normalizedModelNumber: "sena-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 20,
+      seer2Max: 25.4,
+      hspf2Min: 10,
+      hspf2Max: 11.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-24000",
+      slug: "senville-sena-series-wall-single-24000",
+      name: "SENA Series 24 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA Series 24k",
+      normalizedModelNumber: "sena-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 20400,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 19,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 13.5,
+      cop5FMin: 2,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-15000",
+      slug: "senville-sena-series-wall-single-15000",
+      name: "SENA Series 15 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA Series 15k",
+      normalizedModelNumber: "sena-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14900,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 12.3,
+      hspf2Max: 12.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-20000",
+      slug: "senville-sena-series-wall-single-20000",
+      name: "SENA Series 20 000 BTU",
+      seriesId: "senville-sena-series",
+      brandId: "senville",
+      modelNumber: "SENA Series 20k",
+      normalizedModelNumber: "sena-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 20.4,
+      seer2Max: 20.4,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-series-central-ducted-24000",
+      slug: "senville-sendc-series-central-ducted-24000",
+      name: "SENDC Series 24 000 BTU",
+      seriesId: "senville-sendc-series",
+      brandId: "senville",
+      modelNumber: "SENDC Series 24k",
+      normalizedModelNumber: "sendc-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 18.3,
+      seer2Max: 18.3,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.87,
+      cop5FMax: 1.87,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-series-central-ducted-30000",
+      slug: "senville-sendc-series-central-ducted-30000",
+      name: "SENDC Series 30 000 BTU",
+      seriesId: "senville-sendc-series",
+      brandId: "senville",
+      modelNumber: "SENDC Series 30k",
+      normalizedModelNumber: "sendc-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 23800,
+      seer2Min: 16.8,
+      seer2Max: 16.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
       cop5FMax: 1.96,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -237,25 +972,134 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-central-ducted",
-      slug: "senville-sen-series-central-ducted",
-      name: "SEN Series",
-      seriesId: "senville-sen-series",
+      id: "senville-sendc-series-central-ducted-36000",
+      slug: "senville-sendc-series-central-ducted-36000",
+      name: "SENDC Series 36 000 BTU",
+      seriesId: "senville-sendc-series",
       brandId: "senville",
-      modelNumber: "SEN Series",
-      normalizedModelNumber: "sen-series",
+      modelNumber: "SENDC Series 36k",
+      normalizedModelNumber: "sendc-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 52000,
-      heatingCapacity5FMinBtu: 19700,
-      heatingCapacity5FMaxBtu: 37800,
-      seer2Min: 15.8,
-      seer2Max: 16,
-      hspf2Min: 8.5,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 31800,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-series-central-ducted-48000",
+      slug: "senville-sendc-series-central-ducted-48000",
+      name: "SENDC Series 48 000 BTU",
+      seriesId: "senville-sendc-series",
+      brandId: "senville",
+      modelNumber: "SENDC Series 48k",
+      normalizedModelNumber: "sendc-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 16,
+      seer2Max: 16.5,
+      hspf2Min: 9,
       hspf2Max: 9.5,
       cop5FMin: 1.8,
       cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-central-ducted-24000",
+      slug: "senville-sen-series-central-ducted-24000",
+      name: "SEN Series 24 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN Series 24k",
+      normalizedModelNumber: "sen-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19700,
+      heatingCapacity5FMaxBtu: 19700,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-central-ducted-36000",
+      slug: "senville-sen-series-central-ducted-36000",
+      name: "SEN Series 36 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN Series 36k",
+      normalizedModelNumber: "sen-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 29200,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-central-ducted-48000",
+      slug: "senville-sen-series-central-ducted-48000",
+      name: "SEN Series 48 000 BTU",
+      seriesId: "senville-sen-series",
+      brandId: "senville",
+      modelNumber: "SEN Series 48k",
+      normalizedModelNumber: "sen-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      heatingCapacity5FMinBtu: 37800,
+      heatingCapacity5FMaxBtu: 37800,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -271,62 +1115,14 @@ export const senvilleDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "senville-sena-12hf-oz",
-      modelNumber: "SENA/12HF/OZ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-18hf-moz",
-      modelNumber: "SENA/18HF/MOZ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-30hf-moz",
-      modelNumber: "SENA/30HF/MOZ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-36hf-moz",
-      modelNumber: "SENA/36HF/MOZ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-48hf-moz",
-      modelNumber: "SENA/48HF/MOZ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
       id: "senville-senl-09cd-ox",
       modelNumber: "SENL/09CD/OX",
       brandId: "senville",
       refrigerant: null as any,
     },
     {
-      id: "senville-senl-18cd-ox",
-      modelNumber: "SENL/18CD/OX",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-24hf-oz",
-      modelNumber: "SENA/24HF/OZ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-senl-36cd-oy",
-      modelNumber: "SENL/36CD/OY",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-senl-18cd-oy",
-      modelNumber: "SENL/18CD/OY",
+      id: "senville-sena-12hf-oz",
+      modelNumber: "SENA/12HF/OZ",
       brandId: "senville",
       refrigerant: null as any,
     },
@@ -343,8 +1139,44 @@ export const senvilleDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "senville-sena-18hf-moz",
+      modelNumber: "SENA/18HF/MOZ",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-senl-18cd-ox",
+      modelNumber: "SENL/18CD/OX",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-senl-18cd-oy",
+      modelNumber: "SENL/18CD/OY",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
       id: "senville-senl-18cd-ol",
       modelNumber: "SENL-18CD-OL",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-30hf-moz",
+      modelNumber: "SENA/30HF/MOZ",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-36hf-moz",
+      modelNumber: "SENA/36HF/MOZ",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-senl-36cd-oy",
+      modelNumber: "SENL/36CD/OY",
       brandId: "senville",
       refrigerant: null as any,
     },
@@ -355,8 +1187,32 @@ export const senvilleDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "senville-sena-48hf-moz",
+      modelNumber: "SENA/48HF/MOZ",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-24hf-oz",
+      modelNumber: "SENA/24HF/OZ",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
       id: "senville-sena-09hf-oq",
       modelNumber: "SENA/09HF/OQ",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-senl-09cd-oy",
+      modelNumber: "SENL/09CD/OY",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-senl-09cd220-oy",
+      modelNumber: "SENL/09CD220/OY",
       brandId: "senville",
       refrigerant: null as any,
     },
@@ -379,18 +1235,6 @@ export const senvilleDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "senville-senl-09cd-oy",
-      modelNumber: "SENL/09CD/OY",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-senl-09cd220-oy",
-      modelNumber: "SENL/09CD220/OY",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
       id: "senville-sena-18hf-moq",
       modelNumber: "SENA/18HF/MOQ",
       brandId: "senville",
@@ -403,18 +1247,6 @@ export const senvilleDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "senville-sena-36hf-moq",
-      modelNumber: "SENA/36HF/MOQ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-48hf-moq",
-      modelNumber: "SENA/48HF/MOQ",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
       id: "senville-sena-33hf-oq",
       modelNumber: "SENA-33HF-OQ",
       brandId: "senville",
@@ -423,6 +1255,18 @@ export const senvilleDataset: BrandDataset = {
     {
       id: "senville-senl-30cd-ol",
       modelNumber: "SENL-30CD-OL",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-36hf-moq",
+      modelNumber: "SENA/36HF/MOQ",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-48hf-moq",
+      modelNumber: "SENA/48HF/MOQ",
       brandId: "senville",
       refrigerant: null as any,
     },
@@ -457,56 +1301,8 @@ export const senvilleDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "senville-sena-28hf-mob",
-      modelNumber: "SENA-28HF-MOB",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-36hf-mob",
-      modelNumber: "SENA-36HF-MOB",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-48hf-mob",
-      modelNumber: "SENA-48HF-MOB",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-06hf-og",
-      modelNumber: "SENA-06HF-OG",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-09hf-og",
-      modelNumber: "SENA-09HF-OG",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-12hf-og",
-      modelNumber: "SENA-12HF-OG",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
       id: "senville-sena-18hf-og",
       modelNumber: "SENA-18HF-OG",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-24hf-og",
-      modelNumber: "SENA-24HF-OG",
-      brandId: "senville",
-      refrigerant: null as any,
-    },
-    {
-      id: "senville-sena-33hf-og",
-      modelNumber: "SENA-33HF-OG",
       brandId: "senville",
       refrigerant: null as any,
     },
@@ -517,14 +1313,38 @@ export const senvilleDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "senville-sena-28hf-mob",
+      modelNumber: "SENA-28HF-MOB",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-33hf-og",
+      modelNumber: "SENA-33HF-OG",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
       id: "senville-sena-28hf-moa",
       modelNumber: "SENA-28HF-MOA",
       brandId: "senville",
       refrigerant: null as any,
     },
     {
+      id: "senville-sena-36hf-mob",
+      modelNumber: "SENA-36HF-MOB",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
       id: "senville-sena-36hf-moa",
       modelNumber: "SENA-36HF-MOA",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-48hf-mob",
+      modelNumber: "SENA-48HF-MOB",
       brandId: "senville",
       refrigerant: null as any,
     },
@@ -555,6 +1375,30 @@ export const senvilleDataset: BrandDataset = {
     {
       id: "senville-senl-24cd-ol",
       modelNumber: "SENL-24CD-OL",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-06hf-og",
+      modelNumber: "SENA-06HF-OG",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-09hf-og",
+      modelNumber: "SENA-09HF-OG",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-12hf-og",
+      modelNumber: "SENA-12HF-OG",
+      brandId: "senville",
+      refrigerant: null as any,
+    },
+    {
+      id: "senville-sena-24hf-og",
+      modelNumber: "SENA-24HF-OG",
       brandId: "senville",
       refrigerant: null as any,
     },
@@ -594,9 +1438,9 @@ export const senvilleDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "senville-standard-wall-single-cfg-1",
-      slug: "senville-standard-wall-single-cfg-1",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-9000-cfg-1",
+      slug: "senville-standard-wall-single-9000-cfg-1",
+      modelId: "senville-standard-wall-single-9000",
       outdoorUnitId: "senville-sena-09hf-oz",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -608,79 +1452,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-2",
-      slug: "senville-standard-wall-single-cfg-2",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-sena-12hf-oz",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-3",
-      slug: "senville-standard-wall-single-cfg-3",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-sena-18hf-moz",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-4",
-      slug: "senville-standard-wall-single-cfg-4",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-sena-30hf-moz",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-5",
-      slug: "senville-standard-wall-single-cfg-5",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-sena-36hf-moz",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-6",
-      slug: "senville-standard-wall-single-cfg-6",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-sena-48hf-moz",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-7",
-      slug: "senville-standard-wall-single-cfg-7",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-9000-cfg-2",
+      slug: "senville-standard-wall-single-9000-cfg-2",
+      modelId: "senville-standard-wall-single-9000",
       outdoorUnitId: "senville-senl-09cd-ox",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -692,23 +1466,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-8",
-      slug: "senville-standard-wall-single-cfg-8",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-senl-18cd-ox",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-9",
-      slug: "senville-standard-wall-single-cfg-9",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-9000-cfg-3",
+      slug: "senville-standard-wall-single-9000-cfg-3",
+      modelId: "senville-standard-wall-single-9000",
       outdoorUnitId: "senville-sena-09hf-oz",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -720,9 +1480,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-10",
-      slug: "senville-standard-wall-single-cfg-10",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-12000-cfg-1",
+      slug: "senville-standard-wall-single-12000-cfg-1",
+      modelId: "senville-standard-wall-single-12000",
       outdoorUnitId: "senville-sena-12hf-oz",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -734,13 +1494,13 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-11",
-      slug: "senville-standard-wall-single-cfg-11",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-sena-24hf-oz",
+      id: "senville-standard-wall-single-12000-cfg-2",
+      slug: "senville-standard-wall-single-12000-cfg-2",
+      modelId: "senville-standard-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-oz",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -748,51 +1508,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-12",
-      slug: "senville-standard-wall-single-cfg-12",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-senl-36cd-oy",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-13",
-      slug: "senville-standard-wall-single-cfg-13",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-senl-18cd-oy",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-14",
-      slug: "senville-standard-wall-single-cfg-14",
-      modelId: "senville-standard-wall-single",
-      outdoorUnitId: "senville-senl-36cd-oy",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-standard-wall-single-cfg-15",
-      slug: "senville-standard-wall-single-cfg-15",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-12000-cfg-3",
+      slug: "senville-standard-wall-single-12000-cfg-3",
+      modelId: "senville-standard-wall-single-12000",
       outdoorUnitId: "senville-senl-12cd-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -804,9 +1522,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-16",
-      slug: "senville-standard-wall-single-cfg-16",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-12000-cfg-4",
+      slug: "senville-standard-wall-single-12000-cfg-4",
+      modelId: "senville-standard-wall-single-12000",
       outdoorUnitId: "senville-senl-12cd220-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -818,9 +1536,51 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-17",
-      slug: "senville-standard-wall-single-cfg-17",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-18000-cfg-1",
+      slug: "senville-standard-wall-single-18000-cfg-1",
+      modelId: "senville-standard-wall-single-18000",
+      outdoorUnitId: "senville-sena-18hf-moz",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-18000-cfg-2",
+      slug: "senville-standard-wall-single-18000-cfg-2",
+      modelId: "senville-standard-wall-single-18000",
+      outdoorUnitId: "senville-senl-18cd-ox",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-18000-cfg-3",
+      slug: "senville-standard-wall-single-18000-cfg-3",
+      modelId: "senville-standard-wall-single-18000",
+      outdoorUnitId: "senville-senl-18cd-oy",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-18000-cfg-4",
+      slug: "senville-standard-wall-single-18000-cfg-4",
+      modelId: "senville-standard-wall-single-18000",
       outdoorUnitId: "senville-senl-18cd-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -832,9 +1592,65 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-standard-wall-single-cfg-18",
-      slug: "senville-standard-wall-single-cfg-18",
-      modelId: "senville-standard-wall-single",
+      id: "senville-standard-wall-single-30000-cfg-1",
+      slug: "senville-standard-wall-single-30000-cfg-1",
+      modelId: "senville-standard-wall-single-30000",
+      outdoorUnitId: "senville-sena-30hf-moz",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-36000-cfg-1",
+      slug: "senville-standard-wall-single-36000-cfg-1",
+      modelId: "senville-standard-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-moz",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-36000-cfg-2",
+      slug: "senville-standard-wall-single-36000-cfg-2",
+      modelId: "senville-standard-wall-single-36000",
+      outdoorUnitId: "senville-senl-36cd-oy",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-36000-cfg-3",
+      slug: "senville-standard-wall-single-36000-cfg-3",
+      modelId: "senville-standard-wall-single-36000",
+      outdoorUnitId: "senville-senl-36cd-oy",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-36000-cfg-4",
+      slug: "senville-standard-wall-single-36000-cfg-4",
+      modelId: "senville-standard-wall-single-36000",
       outdoorUnitId: "senville-senl-36cd-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -846,9 +1662,37 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-1",
-      slug: "senville-sen-series-wall-single-cfg-1",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-standard-wall-single-48000-cfg-1",
+      slug: "senville-standard-wall-single-48000-cfg-1",
+      modelId: "senville-standard-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-moz",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-standard-wall-single-24000-cfg-1",
+      slug: "senville-standard-wall-single-24000-cfg-1",
+      modelId: "senville-standard-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-oz",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-9000-cfg-1",
+      slug: "senville-sen-series-wall-single-9000-cfg-1",
+      modelId: "senville-sen-series-wall-single-9000",
       outdoorUnitId: "senville-sena-09hf-oq",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -860,51 +1704,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-2",
-      slug: "senville-sen-series-wall-single-cfg-2",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-3",
-      slug: "senville-sen-series-wall-single-cfg-3",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-4",
-      slug: "senville-sen-series-wall-single-cfg-4",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-5",
-      slug: "senville-sen-series-wall-single-cfg-5",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-9000-cfg-2",
+      slug: "senville-sen-series-wall-single-9000-cfg-2",
+      modelId: "senville-sen-series-wall-single-9000",
       outdoorUnitId: "senville-senl-09cd-oy",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -916,9 +1718,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-6",
-      slug: "senville-sen-series-wall-single-cfg-6",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-9000-cfg-3",
+      slug: "senville-sen-series-wall-single-9000-cfg-3",
+      modelId: "senville-sen-series-wall-single-9000",
       outdoorUnitId: "senville-senl-09cd220-oy",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -930,149 +1732,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-7",
-      slug: "senville-sen-series-wall-single-cfg-7",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.9,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-8",
-      slug: "senville-sen-series-wall-single-cfg-8",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-9",
-      slug: "senville-sen-series-wall-single-cfg-9",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20.95,
-      hspf2: 10.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-10",
-      slug: "senville-sen-series-wall-single-cfg-10",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-30hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 24.6,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-11",
-      slug: "senville-sen-series-wall-single-cfg-11",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-30hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-12",
-      slug: "senville-sen-series-wall-single-cfg-12",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-30hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 22.8,
-      hspf2: 9.35,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-13",
-      slug: "senville-sen-series-wall-single-cfg-13",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-36hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23.9,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-14",
-      slug: "senville-sen-series-wall-single-cfg-14",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 23.4,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-15",
-      slug: "senville-sen-series-wall-single-cfg-15",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 23.4,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-16",
-      slug: "senville-sen-series-wall-single-cfg-16",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-moq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.95,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-17",
-      slug: "senville-sen-series-wall-single-cfg-17",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-9000-cfg-4",
+      slug: "senville-sen-series-wall-single-9000-cfg-4",
+      modelId: "senville-sen-series-wall-single-9000",
       outdoorUnitId: "senville-sena-09hf-oq",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1084,51 +1746,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-18",
-      slug: "senville-sen-series-wall-single-cfg-18",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-19",
-      slug: "senville-sen-series-wall-single-cfg-19",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-20",
-      slug: "senville-sen-series-wall-single-cfg-20",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-21",
-      slug: "senville-sen-series-wall-single-cfg-21",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-9000-cfg-5",
+      slug: "senville-sen-series-wall-single-9000-cfg-5",
+      modelId: "senville-sen-series-wall-single-9000",
       outdoorUnitId: "senville-sena-09hf-oq",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1140,93 +1760,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-22",
-      slug: "senville-sen-series-wall-single-cfg-22",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-23",
-      slug: "senville-sen-series-wall-single-cfg-23",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-24",
-      slug: "senville-sen-series-wall-single-cfg-24",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-25",
-      slug: "senville-sen-series-wall-single-cfg-25",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.6,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-26",
-      slug: "senville-sen-series-wall-single-cfg-26",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-27",
-      slug: "senville-sen-series-wall-single-cfg-27",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-28",
-      slug: "senville-sen-series-wall-single-cfg-28",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-9000-cfg-6",
+      slug: "senville-sen-series-wall-single-9000-cfg-6",
+      modelId: "senville-sen-series-wall-single-9000",
       outdoorUnitId: "senville-sena-09hf-oq",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1238,9 +1774,65 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-29",
-      slug: "senville-sen-series-wall-single-cfg-29",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-12000-cfg-1",
+      slug: "senville-sen-series-wall-single-12000-cfg-1",
+      modelId: "senville-sen-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-12000-cfg-2",
+      slug: "senville-sen-series-wall-single-12000-cfg-2",
+      modelId: "senville-sen-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-12000-cfg-3",
+      slug: "senville-sen-series-wall-single-12000-cfg-3",
+      modelId: "senville-sen-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-12000-cfg-4",
+      slug: "senville-sen-series-wall-single-12000-cfg-4",
+      modelId: "senville-sen-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.6,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-12000-cfg-5",
+      slug: "senville-sen-series-wall-single-12000-cfg-5",
+      modelId: "senville-sen-series-wall-single-12000",
       outdoorUnitId: "senville-sena-12hf-oq",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1252,37 +1844,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-30",
-      slug: "senville-sen-series-wall-single-cfg-30",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-31",
-      slug: "senville-sen-series-wall-single-cfg-31",
-      modelId: "senville-sen-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-oq",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sen-series-wall-single-cfg-32",
-      slug: "senville-sen-series-wall-single-cfg-32",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-12000-cfg-6",
+      slug: "senville-sen-series-wall-single-12000-cfg-6",
+      modelId: "senville-sen-series-wall-single-12000",
       outdoorUnitId: "senville-sena-12hf-oq",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1294,9 +1858,233 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-33",
-      slug: "senville-sen-series-wall-single-cfg-33",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-15000-cfg-1",
+      slug: "senville-sen-series-wall-single-15000-cfg-1",
+      modelId: "senville-sen-series-wall-single-15000",
+      outdoorUnitId: "senville-sena-18hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-15000-cfg-2",
+      slug: "senville-sen-series-wall-single-15000-cfg-2",
+      modelId: "senville-sen-series-wall-single-15000",
+      outdoorUnitId: "senville-sena-18hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-24000-cfg-1",
+      slug: "senville-sen-series-wall-single-24000-cfg-1",
+      modelId: "senville-sen-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-24000-cfg-2",
+      slug: "senville-sen-series-wall-single-24000-cfg-2",
+      modelId: "senville-sen-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-24000-cfg-3",
+      slug: "senville-sen-series-wall-single-24000-cfg-3",
+      modelId: "senville-sen-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-24000-cfg-4",
+      slug: "senville-sen-series-wall-single-24000-cfg-4",
+      modelId: "senville-sen-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-24000-cfg-5",
+      slug: "senville-sen-series-wall-single-24000-cfg-5",
+      modelId: "senville-sen-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-18000-cfg-1",
+      slug: "senville-sen-series-wall-single-18000-cfg-1",
+      modelId: "senville-sen-series-wall-single-18000",
+      outdoorUnitId: "senville-sena-18hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.9,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-18000-cfg-2",
+      slug: "senville-sen-series-wall-single-18000-cfg-2",
+      modelId: "senville-sen-series-wall-single-18000",
+      outdoorUnitId: "senville-sena-18hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-18000-cfg-3",
+      slug: "senville-sen-series-wall-single-18000-cfg-3",
+      modelId: "senville-sen-series-wall-single-18000",
+      outdoorUnitId: "senville-sena-18hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.95,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-18000-cfg-4",
+      slug: "senville-sen-series-wall-single-18000-cfg-4",
+      modelId: "senville-sen-series-wall-single-18000",
+      outdoorUnitId: "senville-sena-18hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-18000-cfg-5",
+      slug: "senville-sen-series-wall-single-18000-cfg-5",
+      modelId: "senville-sen-series-wall-single-18000",
+      outdoorUnitId: "senville-sena-18hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-18000-cfg-6",
+      slug: "senville-sen-series-wall-single-18000-cfg-6",
+      modelId: "senville-sen-series-wall-single-18000",
+      outdoorUnitId: "senville-sena-18hf-oq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-30000-cfg-1",
+      slug: "senville-sen-series-wall-single-30000-cfg-1",
+      modelId: "senville-sen-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-30hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 24.6,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-30000-cfg-2",
+      slug: "senville-sen-series-wall-single-30000-cfg-2",
+      modelId: "senville-sen-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-30hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-30000-cfg-3",
+      slug: "senville-sen-series-wall-single-30000-cfg-3",
+      modelId: "senville-sen-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-30hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.8,
+      hspf2: 9.35,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-30000-cfg-4",
+      slug: "senville-sen-series-wall-single-30000-cfg-4",
+      modelId: "senville-sen-series-wall-single-30000",
       outdoorUnitId: "senville-sena-33hf-oq",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -1308,9 +2096,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-wall-single-cfg-34",
-      slug: "senville-sen-series-wall-single-cfg-34",
-      modelId: "senville-sen-series-wall-single",
+      id: "senville-sen-series-wall-single-30000-cfg-5",
+      slug: "senville-sen-series-wall-single-30000-cfg-5",
+      modelId: "senville-sen-series-wall-single-30000",
       outdoorUnitId: "senville-senl-30cd-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1322,9 +2110,65 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-central-ducted-cfg-1",
-      slug: "senville-sendc-central-ducted-cfg-1",
-      modelId: "senville-sendc-central-ducted",
+      id: "senville-sen-series-wall-single-36000-cfg-1",
+      slug: "senville-sen-series-wall-single-36000-cfg-1",
+      modelId: "senville-sen-series-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23.9,
+      hspf2: 9.5,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-48000-cfg-1",
+      slug: "senville-sen-series-wall-single-48000-cfg-1",
+      modelId: "senville-sen-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 23.4,
+      hspf2: 8.7,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-48000-cfg-2",
+      slug: "senville-sen-series-wall-single-48000-cfg-2",
+      modelId: "senville-sen-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 23.4,
+      hspf2: 8.7,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sen-series-wall-single-48000-cfg-3",
+      slug: "senville-sen-series-wall-single-48000-cfg-3",
+      modelId: "senville-sen-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-moq",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.95,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-central-ducted-36000-cfg-1",
+      slug: "senville-sendc-central-ducted-36000-cfg-1",
+      modelId: "senville-sendc-central-ducted-36000",
       outdoorUnitId: "senville-sendc-36hf-om",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1336,9 +2180,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-central-ducted-cfg-2",
-      slug: "senville-sendc-central-ducted-cfg-2",
-      modelId: "senville-sendc-central-ducted",
+      id: "senville-sendc-central-ducted-24000-cfg-1",
+      slug: "senville-sendc-central-ducted-24000-cfg-1",
+      modelId: "senville-sendc-central-ducted-24000",
       outdoorUnitId: "senville-sendc-24hf-om",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1350,9 +2194,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-central-ducted-cfg-3",
-      slug: "senville-sendc-central-ducted-cfg-3",
-      modelId: "senville-sendc-central-ducted",
+      id: "senville-sendc-central-ducted-48000-cfg-1",
+      slug: "senville-sendc-central-ducted-48000-cfg-1",
+      modelId: "senville-sendc-central-ducted-48000",
       outdoorUnitId: "senville-sendc-48hf-om",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1364,9 +2208,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-central-ducted-cfg-4",
-      slug: "senville-sendc-central-ducted-cfg-4",
-      modelId: "senville-sendc-central-ducted",
+      id: "senville-sendc-central-ducted-60000-cfg-1",
+      slug: "senville-sendc-central-ducted-60000-cfg-1",
+      modelId: "senville-sendc-central-ducted-60000",
       outdoorUnitId: "senville-sendc-60hf-om",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1378,9 +2222,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-1",
-      slug: "senville-sena-series-wall-single-cfg-1",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-1",
+      slug: "senville-sena-series-wall-single-18000-cfg-1",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-mob",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1392,9 +2236,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-2",
-      slug: "senville-sena-series-wall-single-cfg-2",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-2",
+      slug: "senville-sena-series-wall-single-18000-cfg-2",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-mob",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1406,9 +2250,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-3",
-      slug: "senville-sena-series-wall-single-cfg-3",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-3",
+      slug: "senville-sena-series-wall-single-18000-cfg-3",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-mob",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1420,177 +2264,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-4",
-      slug: "senville-sena-series-wall-single-cfg-4",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-28hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 23,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-5",
-      slug: "senville-sena-series-wall-single-cfg-5",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-28hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-6",
-      slug: "senville-sena-series-wall-single-cfg-6",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-28hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21.5,
-      hspf2: 10.05,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-7",
-      slug: "senville-sena-series-wall-single-cfg-7",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-36hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.4,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-8",
-      slug: "senville-sena-series-wall-single-cfg-8",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-36hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-9",
-      slug: "senville-sena-series-wall-single-cfg-9",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-36hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.9,
-      hspf2: 10.45,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-10",
-      slug: "senville-sena-series-wall-single-cfg-10",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.8,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-11",
-      slug: "senville-sena-series-wall-single-cfg-11",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-12",
-      slug: "senville-sena-series-wall-single-cfg-12",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-mob",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.35,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-13",
-      slug: "senville-sena-series-wall-single-cfg-13",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-06hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 25.5,
-      hspf2: 14.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-14",
-      slug: "senville-sena-series-wall-single-cfg-14",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-09hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.4,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-15",
-      slug: "senville-sena-series-wall-single-cfg-15",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.4,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-16",
-      slug: "senville-sena-series-wall-single-cfg-16",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-4",
+      slug: "senville-sena-series-wall-single-18000-cfg-4",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1602,65 +2278,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-17",
-      slug: "senville-sena-series-wall-single-cfg-17",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-18",
-      slug: "senville-sena-series-wall-single-cfg-18",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-33hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-19",
-      slug: "senville-sena-series-wall-single-cfg-19",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-09hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.4,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-20",
-      slug: "senville-sena-series-wall-single-cfg-20",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-21",
-      slug: "senville-sena-series-wall-single-cfg-21",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-5",
+      slug: "senville-sena-series-wall-single-18000-cfg-5",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1672,93 +2292,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-22",
-      slug: "senville-sena-series-wall-single-cfg-22",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-23",
-      slug: "senville-sena-series-wall-single-cfg-23",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-09hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.6,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-24",
-      slug: "senville-sena-series-wall-single-cfg-24",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.2,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-25",
-      slug: "senville-sena-series-wall-single-cfg-25",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-18hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-26",
-      slug: "senville-sena-series-wall-single-cfg-26",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23400,
-      coolingCapacityMaxBtu: 23400,
-      seer2: 20.7,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-27",
-      slug: "senville-sena-series-wall-single-cfg-27",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-28",
-      slug: "senville-sena-series-wall-single-cfg-28",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-6",
+      slug: "senville-sena-series-wall-single-18000-cfg-6",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1770,23 +2306,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-29",
-      slug: "senville-sena-series-wall-single-cfg-29",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-24hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.4,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-30",
-      slug: "senville-sena-series-wall-single-cfg-30",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-7",
+      slug: "senville-sena-series-wall-single-18000-cfg-7",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-moa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1798,9 +2320,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-31",
-      slug: "senville-sena-series-wall-single-cfg-31",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-8",
+      slug: "senville-sena-series-wall-single-18000-cfg-8",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-moa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1812,9 +2334,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-32",
-      slug: "senville-sena-series-wall-single-cfg-32",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-9",
+      slug: "senville-sena-series-wall-single-18000-cfg-9",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-moa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1826,219 +2348,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sena-series-wall-single-cfg-33",
-      slug: "senville-sena-series-wall-single-cfg-33",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-28hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-34",
-      slug: "senville-sena-series-wall-single-cfg-34",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-28hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-35",
-      slug: "senville-sena-series-wall-single-cfg-35",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-28hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-36",
-      slug: "senville-sena-series-wall-single-cfg-36",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-36hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-37",
-      slug: "senville-sena-series-wall-single-cfg-37",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-36hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-38",
-      slug: "senville-sena-series-wall-single-cfg-38",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-36hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.2,
-      hspf2: 10.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-39",
-      slug: "senville-sena-series-wall-single-cfg-39",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-40",
-      slug: "senville-sena-series-wall-single-cfg-40",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-41",
-      slug: "senville-sena-series-wall-single-cfg-41",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-48hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-42",
-      slug: "senville-sena-series-wall-single-cfg-42",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-55hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
-      seer2: 22.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-43",
-      slug: "senville-sena-series-wall-single-cfg-43",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-55hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 20,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-44",
-      slug: "senville-sena-series-wall-single-cfg-44",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-55hf-moa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 21.1,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-45",
-      slug: "senville-sena-series-wall-single-cfg-45",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-06hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 22,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-46",
-      slug: "senville-sena-series-wall-single-cfg-46",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-09hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-47",
-      slug: "senville-sena-series-wall-single-cfg-47",
-      modelId: "senville-sena-series-wall-single",
-      outdoorUnitId: "senville-sena-12hf-og",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "senville-sena-series-wall-single-cfg-48",
-      slug: "senville-sena-series-wall-single-cfg-48",
-      modelId: "senville-sena-series-wall-single",
+      id: "senville-sena-series-wall-single-18000-cfg-10",
+      slug: "senville-sena-series-wall-single-18000-cfg-10",
+      modelId: "senville-sena-series-wall-single-18000",
       outdoorUnitId: "senville-sena-18hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16700,
@@ -2050,9 +2362,303 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-senl-series-wall-single-cfg-1",
-      slug: "senville-senl-series-wall-single-cfg-1",
-      modelId: "senville-senl-series-wall-single",
+      id: "senville-sena-series-wall-single-30000-cfg-1",
+      slug: "senville-sena-series-wall-single-30000-cfg-1",
+      modelId: "senville-sena-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-28hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 23,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-30000-cfg-2",
+      slug: "senville-sena-series-wall-single-30000-cfg-2",
+      modelId: "senville-sena-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-28hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-30000-cfg-3",
+      slug: "senville-sena-series-wall-single-30000-cfg-3",
+      modelId: "senville-sena-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-28hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.5,
+      hspf2: 10.05,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-30000-cfg-4",
+      slug: "senville-sena-series-wall-single-30000-cfg-4",
+      modelId: "senville-sena-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-33hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-30000-cfg-5",
+      slug: "senville-sena-series-wall-single-30000-cfg-5",
+      modelId: "senville-sena-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-28hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-30000-cfg-6",
+      slug: "senville-sena-series-wall-single-30000-cfg-6",
+      modelId: "senville-sena-series-wall-single-30000",
+      outdoorUnitId: "senville-sena-28hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-36000-cfg-1",
+      slug: "senville-sena-series-wall-single-36000-cfg-1",
+      modelId: "senville-sena-series-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.4,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-36000-cfg-2",
+      slug: "senville-sena-series-wall-single-36000-cfg-2",
+      modelId: "senville-sena-series-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-36000-cfg-3",
+      slug: "senville-sena-series-wall-single-36000-cfg-3",
+      modelId: "senville-sena-series-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.9,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-36000-cfg-4",
+      slug: "senville-sena-series-wall-single-36000-cfg-4",
+      modelId: "senville-sena-series-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-36000-cfg-5",
+      slug: "senville-sena-series-wall-single-36000-cfg-5",
+      modelId: "senville-sena-series-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-36000-cfg-6",
+      slug: "senville-sena-series-wall-single-36000-cfg-6",
+      modelId: "senville-sena-series-wall-single-36000",
+      outdoorUnitId: "senville-sena-36hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.2,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-1",
+      slug: "senville-sena-series-wall-single-48000-cfg-1",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.8,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-2",
+      slug: "senville-sena-series-wall-single-48000-cfg-2",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-3",
+      slug: "senville-sena-series-wall-single-48000-cfg-3",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-mob",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.35,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-4",
+      slug: "senville-sena-series-wall-single-48000-cfg-4",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-5",
+      slug: "senville-sena-series-wall-single-48000-cfg-5",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-6",
+      slug: "senville-sena-series-wall-single-48000-cfg-6",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-48hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.7,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-7",
+      slug: "senville-sena-series-wall-single-48000-cfg-7",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-55hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 22.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-8",
+      slug: "senville-sena-series-wall-single-48000-cfg-8",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-55hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-48000-cfg-9",
+      slug: "senville-sena-series-wall-single-48000-cfg-9",
+      modelId: "senville-sena-series-wall-single-48000",
+      outdoorUnitId: "senville-sena-55hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 21.1,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-senl-series-wall-single-9000-cfg-1",
+      slug: "senville-senl-series-wall-single-9000-cfg-1",
+      modelId: "senville-senl-series-wall-single-9000",
       outdoorUnitId: "senville-senl-09cd-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2064,9 +2670,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-senl-series-wall-single-cfg-2",
-      slug: "senville-senl-series-wall-single-cfg-2",
-      modelId: "senville-senl-series-wall-single",
+      id: "senville-senl-series-wall-single-9000-cfg-2",
+      slug: "senville-senl-series-wall-single-9000-cfg-2",
+      modelId: "senville-senl-series-wall-single-9000",
       outdoorUnitId: "senville-senl-09cd220-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2078,9 +2684,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-senl-series-wall-single-cfg-3",
-      slug: "senville-senl-series-wall-single-cfg-3",
-      modelId: "senville-senl-series-wall-single",
+      id: "senville-senl-series-wall-single-24000-cfg-1",
+      slug: "senville-senl-series-wall-single-24000-cfg-1",
+      modelId: "senville-senl-series-wall-single-24000",
       outdoorUnitId: "senville-senl-24cd-ol",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2092,9 +2698,247 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-series-central-ducted-cfg-1",
-      slug: "senville-sendc-series-central-ducted-cfg-1",
-      modelId: "senville-sendc-series-central-ducted",
+      id: "senville-sena-series-wall-single-6000-cfg-1",
+      slug: "senville-sena-series-wall-single-6000-cfg-1",
+      modelId: "senville-sena-series-wall-single-6000",
+      outdoorUnitId: "senville-sena-06hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 25.5,
+      hspf2: 14.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-6000-cfg-2",
+      slug: "senville-sena-series-wall-single-6000-cfg-2",
+      modelId: "senville-sena-series-wall-single-6000",
+      outdoorUnitId: "senville-sena-06hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 22,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-9000-cfg-1",
+      slug: "senville-sena-series-wall-single-9000-cfg-1",
+      modelId: "senville-sena-series-wall-single-9000",
+      outdoorUnitId: "senville-sena-09hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-9000-cfg-2",
+      slug: "senville-sena-series-wall-single-9000-cfg-2",
+      modelId: "senville-sena-series-wall-single-9000",
+      outdoorUnitId: "senville-sena-09hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-9000-cfg-3",
+      slug: "senville-sena-series-wall-single-9000-cfg-3",
+      modelId: "senville-sena-series-wall-single-9000",
+      outdoorUnitId: "senville-sena-09hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-9000-cfg-4",
+      slug: "senville-sena-series-wall-single-9000-cfg-4",
+      modelId: "senville-sena-series-wall-single-9000",
+      outdoorUnitId: "senville-sena-09hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-12000-cfg-1",
+      slug: "senville-sena-series-wall-single-12000-cfg-1",
+      modelId: "senville-sena-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.4,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-12000-cfg-2",
+      slug: "senville-sena-series-wall-single-12000-cfg-2",
+      modelId: "senville-sena-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-12000-cfg-3",
+      slug: "senville-sena-series-wall-single-12000-cfg-3",
+      modelId: "senville-sena-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-12000-cfg-4",
+      slug: "senville-sena-series-wall-single-12000-cfg-4",
+      modelId: "senville-sena-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-12000-cfg-5",
+      slug: "senville-sena-series-wall-single-12000-cfg-5",
+      modelId: "senville-sena-series-wall-single-12000",
+      outdoorUnitId: "senville-sena-12hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-24000-cfg-1",
+      slug: "senville-sena-series-wall-single-24000-cfg-1",
+      modelId: "senville-sena-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-24000-cfg-2",
+      slug: "senville-sena-series-wall-single-24000-cfg-2",
+      modelId: "senville-sena-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-24000-cfg-3",
+      slug: "senville-sena-series-wall-single-24000-cfg-3",
+      modelId: "senville-sena-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-24hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: 20.7,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-24000-cfg-4",
+      slug: "senville-sena-series-wall-single-24000-cfg-4",
+      modelId: "senville-sena-series-wall-single-24000",
+      outdoorUnitId: "senville-sena-28hf-moa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-15000-cfg-1",
+      slug: "senville-sena-series-wall-single-15000-cfg-1",
+      modelId: "senville-sena-series-wall-single-15000",
+      outdoorUnitId: "senville-sena-18hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sena-series-wall-single-20000-cfg-1",
+      slug: "senville-sena-series-wall-single-20000-cfg-1",
+      modelId: "senville-sena-series-wall-single-20000",
+      outdoorUnitId: "senville-sena-24hf-og",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.4,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "senville-sendc-series-central-ducted-24000-cfg-1",
+      slug: "senville-sendc-series-central-ducted-24000-cfg-1",
+      modelId: "senville-sendc-series-central-ducted-24000",
       outdoorUnitId: "senville-sendc-24hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2106,9 +2950,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-series-central-ducted-cfg-2",
-      slug: "senville-sendc-series-central-ducted-cfg-2",
-      modelId: "senville-sendc-series-central-ducted",
+      id: "senville-sendc-series-central-ducted-30000-cfg-1",
+      slug: "senville-sendc-series-central-ducted-30000-cfg-1",
+      modelId: "senville-sendc-series-central-ducted-30000",
       outdoorUnitId: "senville-sendc-30hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2120,9 +2964,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-series-central-ducted-cfg-3",
-      slug: "senville-sendc-series-central-ducted-cfg-3",
-      modelId: "senville-sendc-series-central-ducted",
+      id: "senville-sendc-series-central-ducted-36000-cfg-1",
+      slug: "senville-sendc-series-central-ducted-36000-cfg-1",
+      modelId: "senville-sendc-series-central-ducted-36000",
       outdoorUnitId: "senville-sendc-36hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2134,9 +2978,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-series-central-ducted-cfg-4",
-      slug: "senville-sendc-series-central-ducted-cfg-4",
-      modelId: "senville-sendc-series-central-ducted",
+      id: "senville-sendc-series-central-ducted-48000-cfg-1",
+      slug: "senville-sendc-series-central-ducted-48000-cfg-1",
+      modelId: "senville-sendc-series-central-ducted-48000",
       outdoorUnitId: "senville-sendc-48hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2148,9 +2992,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sendc-series-central-ducted-cfg-5",
-      slug: "senville-sendc-series-central-ducted-cfg-5",
-      modelId: "senville-sendc-series-central-ducted",
+      id: "senville-sendc-series-central-ducted-48000-cfg-2",
+      slug: "senville-sendc-series-central-ducted-48000-cfg-2",
+      modelId: "senville-sendc-series-central-ducted-48000",
       outdoorUnitId: "senville-sendc-60hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2162,9 +3006,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-central-ducted-cfg-1",
-      slug: "senville-sen-series-central-ducted-cfg-1",
-      modelId: "senville-sen-series-central-ducted",
+      id: "senville-sen-series-central-ducted-24000-cfg-1",
+      slug: "senville-sen-series-central-ducted-24000-cfg-1",
+      modelId: "senville-sen-series-central-ducted-24000",
       outdoorUnitId: "senville-sendc-24hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2176,9 +3020,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-central-ducted-cfg-2",
-      slug: "senville-sen-series-central-ducted-cfg-2",
-      modelId: "senville-sen-series-central-ducted",
+      id: "senville-sen-series-central-ducted-36000-cfg-1",
+      slug: "senville-sen-series-central-ducted-36000-cfg-1",
+      modelId: "senville-sen-series-central-ducted-36000",
       outdoorUnitId: "senville-sendc-36hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2190,9 +3034,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-central-ducted-cfg-3",
-      slug: "senville-sen-series-central-ducted-cfg-3",
-      modelId: "senville-sen-series-central-ducted",
+      id: "senville-sen-series-central-ducted-36000-cfg-2",
+      slug: "senville-sen-series-central-ducted-36000-cfg-2",
+      modelId: "senville-sen-series-central-ducted-36000",
       outdoorUnitId: "senville-sendc-36hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2204,9 +3048,9 @@ export const senvilleDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "senville-sen-series-central-ducted-cfg-4",
-      slug: "senville-sen-series-central-ducted-cfg-4",
-      modelId: "senville-sen-series-central-ducted",
+      id: "senville-sen-series-central-ducted-48000-cfg-1",
+      slug: "senville-sen-series-central-ducted-48000-cfg-1",
+      modelId: "senville-sen-series-central-ducted-48000",
       outdoorUnitId: "senville-sendc-60hf-og",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -2220,7 +3064,7 @@ export const senvilleDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "senville-standard-wall-single-cfg-1",
+      configurationId: "senville-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2231,62 +3075,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-7",
+      configurationId: "senville-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2297,18 +3086,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-9",
+      configurationId: "senville-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2319,7 +3097,18 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-standard-wall-single-cfg-10",
+      configurationId: "senville-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2330,51 +3119,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-standard-wall-single-cfg-15",
+      configurationId: "senville-standard-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2385,7 +3130,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-standard-wall-single-cfg-16",
+      configurationId: "senville-standard-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2396,7 +3141,40 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-standard-wall-single-cfg-17",
+      configurationId: "senville-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2407,7 +3185,18 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-standard-wall-single-cfg-18",
+      configurationId: "senville-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2418,7 +3207,62 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-1",
+      configurationId: "senville-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2429,40 +3273,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-5",
+      configurationId: "senville-sen-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2473,7 +3284,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-6",
+      configurationId: "senville-sen-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2484,117 +3295,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-17",
+      configurationId: "senville-sen-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2605,40 +3306,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-21",
+      configurationId: "senville-sen-series-wall-single-9000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2649,73 +3317,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-28",
+      configurationId: "senville-sen-series-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2726,7 +3328,51 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-29",
+      configurationId: "senville-sen-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2737,29 +3383,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sen-series-wall-single-cfg-32",
+      configurationId: "senville-sen-series-wall-single-12000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2770,7 +3394,183 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-33",
+      configurationId: "senville-sen-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2781,7 +3581,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-wall-single-cfg-34",
+      configurationId: "senville-sen-series-wall-single-30000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2792,106 +3592,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sendc-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sendc-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sendc-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sendc-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-6",
+      configurationId: "senville-sen-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2902,106 +3603,117 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-7",
+      configurationId: "senville-sen-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-8",
+      configurationId: "senville-sen-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
+          heatingCapacityBtu: 30400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sen-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sendc-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sendc-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sendc-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
           cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-9",
+      configurationId: "senville-sendc-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 1.95,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-10",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
+          heatingCapacityBtu: 15000,
+          cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-11",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-12",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
+          heatingCapacityBtu: 15500,
+          cop: 1.88,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7900,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-16",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3012,51 +3724,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-21",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3067,73 +3735,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.23,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-28",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3144,18 +3746,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-30",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3166,7 +3757,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-31",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3177,7 +3768,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-32",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3188,172 +3779,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sena-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "senville-sena-series-wall-single-cfg-48",
+      configurationId: "senville-sena-series-wall-single-18000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3364,7 +3790,238 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-senl-series-wall-single-cfg-1",
+      configurationId: "senville-sena-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-48000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-senl-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3375,7 +4032,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-senl-series-wall-single-cfg-2",
+      configurationId: "senville-senl-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3386,7 +4043,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-senl-series-wall-single-cfg-3",
+      configurationId: "senville-senl-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3397,7 +4054,194 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sendc-series-central-ducted-cfg-1",
+      configurationId: "senville-sena-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7900,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-6000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.23,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sena-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "senville-sendc-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3408,7 +4252,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sendc-series-central-ducted-cfg-2",
+      configurationId: "senville-sendc-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3419,7 +4263,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sendc-series-central-ducted-cfg-3",
+      configurationId: "senville-sendc-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3430,7 +4274,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sendc-series-central-ducted-cfg-4",
+      configurationId: "senville-sendc-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3441,7 +4285,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sendc-series-central-ducted-cfg-5",
+      configurationId: "senville-sendc-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3452,7 +4296,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-central-ducted-cfg-1",
+      configurationId: "senville-sen-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3463,7 +4307,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-central-ducted-cfg-2",
+      configurationId: "senville-sen-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3474,7 +4318,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-central-ducted-cfg-3",
+      configurationId: "senville-sen-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3485,7 +4329,7 @@ export const senvilleDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "senville-sen-series-central-ducted-cfg-4",
+      configurationId: "senville-sen-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

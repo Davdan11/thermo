@@ -70,22 +70,77 @@ export const ouelletDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "ouellet-flexx-central-ducted",
-      slug: "ouellet-flexx-central-ducted",
-      name: "Flexx",
+      id: "ouellet-flexx-central-ducted-24000",
+      slug: "ouellet-flexx-central-ducted-24000",
+      name: "Flexx 24 000 BTU",
       seriesId: "ouellet-flexx",
       brandId: "ouellet",
-      modelNumber: "Flexx",
-      normalizedModelNumber: "flexx",
+      modelNumber: "Flexx 24k",
+      normalizedModelNumber: "flexx-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 20600,
+      seer2Min: 16,
+      seer2Max: 18,
+      hspf2Min: 8.5,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-36000",
+      slug: "ouellet-flexx-central-ducted-36000",
+      name: "Flexx 36 000 BTU",
+      seriesId: "ouellet-flexx",
+      brandId: "ouellet",
+      modelNumber: "Flexx 36k",
+      normalizedModelNumber: "flexx-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 28200,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18.2,
+      seer2Max: 18.2,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-48000",
+      slug: "ouellet-flexx-central-ducted-48000",
+      name: "Flexx 48 000 BTU",
+      seriesId: "ouellet-flexx",
+      brandId: "ouellet",
+      modelNumber: "Flexx 48k",
+      normalizedModelNumber: "flexx-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 31200,
       heatingCapacity5FMaxBtu: 45000,
       seer2Min: 16,
       seer2Max: 19,
-      hspf2Min: 8.5,
+      hspf2Min: 9,
       hspf2Max: 10.5,
       cop5FMin: 1.8,
       cop5FMax: 2.1,
@@ -96,24 +151,106 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single",
-      slug: "ouellet-myriad-wall-single",
-      name: "Myriad",
+      id: "ouellet-myriad-wall-single-18000",
+      slug: "ouellet-myriad-wall-single-18000",
+      name: "Myriad 18 000 BTU",
       seriesId: "ouellet-myriad",
       brandId: "ouellet",
-      modelNumber: "Myriad",
-      normalizedModelNumber: "myriad",
+      modelNumber: "Myriad 18k",
+      normalizedModelNumber: "myriad-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 15000,
-      heatingCapacity5FMaxBtu: 40000,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 18,
       seer2Max: 21,
       hspf2Min: 8.1,
       hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-24000",
+      slug: "ouellet-myriad-wall-single-24000",
+      name: "Myriad 24 000 BTU",
+      seriesId: "ouellet-myriad",
+      brandId: "ouellet",
+      modelNumber: "Myriad 24k",
+      normalizedModelNumber: "myriad-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-30000",
+      slug: "ouellet-myriad-wall-single-30000",
+      name: "Myriad 30 000 BTU",
+      seriesId: "ouellet-myriad",
+      brandId: "ouellet",
+      modelNumber: "Myriad 30k",
+      normalizedModelNumber: "myriad-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-36000",
+      slug: "ouellet-myriad-wall-single-36000",
+      name: "Myriad 36 000 BTU",
+      seriesId: "ouellet-myriad",
+      brandId: "ouellet",
+      modelNumber: "Myriad 36k",
+      normalizedModelNumber: "myriad-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -122,19 +259,47 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single",
-      slug: "ouellet-olympia-wall-single",
-      name: "Olympia",
-      seriesId: "ouellet-olympia",
+      id: "ouellet-myriad-wall-single-42000",
+      slug: "ouellet-myriad-wall-single-42000",
+      name: "Myriad 42 000 BTU",
+      seriesId: "ouellet-myriad",
       brandId: "ouellet",
-      modelNumber: "Olympia",
-      normalizedModelNumber: "olympia",
+      modelNumber: "Myriad 42k",
+      normalizedModelNumber: "myriad-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-9000",
+      slug: "ouellet-olympia-wall-single-9000",
+      name: "Olympia 9 000 BTU",
+      seriesId: "ouellet-olympia",
+      brandId: "ouellet",
+      modelNumber: "Olympia 9k",
+      normalizedModelNumber: "olympia-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
+      coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8900,
-      heatingCapacity5FMaxBtu: 20000,
+      heatingCapacity5FMaxBtu: 8900,
       seer2Min: 22.3,
       seer2Max: 30,
       hspf2Min: 9.5,
@@ -148,24 +313,52 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-pacific-wall-single",
-      slug: "ouellet-pacific-wall-single",
-      name: "Pacific",
-      seriesId: "ouellet-pacific",
+      id: "ouellet-olympia-wall-single-12000",
+      slug: "ouellet-olympia-wall-single-12000",
+      name: "Olympia 12 000 BTU",
+      seriesId: "ouellet-olympia",
       brandId: "ouellet",
-      modelNumber: "Pacific",
-      normalizedModelNumber: "pacific",
+      modelNumber: "Olympia 12k",
+      normalizedModelNumber: "olympia-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10300,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 29.5,
+      seer2Max: 29.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-pacific-wall-single-9000",
+      slug: "ouellet-pacific-wall-single-9000",
+      name: "Pacific 9 000 BTU",
+      seriesId: "ouellet-pacific",
+      brandId: "ouellet",
+      modelNumber: "Pacific 9k",
+      normalizedModelNumber: "pacific-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
+      coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8800,
-      heatingCapacity5FMaxBtu: 19800,
-      seer2Min: 21,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 22,
       seer2Max: 26,
-      hspf2Min: 9,
+      hspf2Min: 9.2,
       hspf2Max: 10.4,
-      cop5FMin: 1.8,
+      cop5FMin: 1.88,
       cop5FMax: 2.15,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -174,27 +367,325 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-harmony-wall-single",
-      slug: "ouellet-harmony-wall-single",
-      name: "Harmony",
-      seriesId: "ouellet-harmony",
+      id: "ouellet-pacific-wall-single-12000",
+      slug: "ouellet-pacific-wall-single-12000",
+      name: "Pacific 12 000 BTU",
+      seriesId: "ouellet-pacific",
       brandId: "ouellet",
-      modelNumber: "Harmony",
-      normalizedModelNumber: "harmony",
+      modelNumber: "Pacific 12k",
+      normalizedModelNumber: "pacific-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 33600,
-      heatingCapacity5FMinBtu: 8100,
-      heatingCapacity5FMaxBtu: 27400,
-      seer2Min: 19,
-      seer2Max: 22,
-      hspf2Min: 8.5,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 21,
+      seer2Max: 24.5,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-pacific-wall-single-18000",
+      slug: "ouellet-pacific-wall-single-18000",
+      name: "Pacific 18 000 BTU",
+      seriesId: "ouellet-pacific",
+      brandId: "ouellet",
+      modelNumber: "Pacific 18k",
+      normalizedModelNumber: "pacific-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9,
       hspf2Max: 9,
-      cop5FMin: 1.8,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-harmony-wall-single-9000",
+      slug: "ouellet-harmony-wall-single-9000",
+      name: "Harmony 9 000 BTU",
+      seriesId: "ouellet-harmony",
+      brandId: "ouellet",
+      modelNumber: "Harmony 9k",
+      normalizedModelNumber: "harmony-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8100,
+      heatingCapacity5FMaxBtu: 8100,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.94,
       cop5FMax: 1.94,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-harmony-wall-single-12000",
+      slug: "ouellet-harmony-wall-single-12000",
+      name: "Harmony 12 000 BTU",
+      seriesId: "ouellet-harmony",
+      brandId: "ouellet",
+      modelNumber: "Harmony 12k",
+      normalizedModelNumber: "harmony-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9700,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-harmony-wall-single-18000",
+      slug: "ouellet-harmony-wall-single-18000",
+      name: "Harmony 18 000 BTU",
+      seriesId: "ouellet-harmony",
+      brandId: "ouellet",
+      modelNumber: "Harmony 18k",
+      normalizedModelNumber: "harmony-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15300,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-harmony-wall-single-24000",
+      slug: "ouellet-harmony-wall-single-24000",
+      name: "Harmony 24 000 BTU",
+      seriesId: "ouellet-harmony",
+      brandId: "ouellet",
+      modelNumber: "Harmony 24k",
+      normalizedModelNumber: "harmony-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-harmony-wall-single-30000",
+      slug: "ouellet-harmony-wall-single-30000",
+      name: "Harmony 30 000 BTU",
+      seriesId: "ouellet-harmony",
+      brandId: "ouellet",
+      modelNumber: "Harmony 30k",
+      normalizedModelNumber: "harmony-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-harmony-wall-single-36000",
+      slug: "ouellet-harmony-wall-single-36000",
+      name: "Harmony 36 000 BTU",
+      seriesId: "ouellet-harmony",
+      brandId: "ouellet",
+      modelNumber: "Harmony 36k",
+      normalizedModelNumber: "harmony-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-20000",
+      slug: "ouellet-olympia-wall-single-20000",
+      name: "Olympia 20 000 BTU",
+      seriesId: "ouellet-olympia",
+      brandId: "ouellet",
+      modelNumber: "Olympia 20k",
+      normalizedModelNumber: "olympia-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 27,
+      seer2Max: 27,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-18000",
+      slug: "ouellet-olympia-wall-single-18000",
+      name: "Olympia 18 000 BTU",
+      seriesId: "ouellet-olympia",
+      brandId: "ouellet",
+      modelNumber: "Olympia 18k",
+      normalizedModelNumber: "olympia-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15500,
+      heatingCapacity5FMaxBtu: 15500,
+      seer2Min: 27.5,
+      seer2Max: 27.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-pacific-wall-single-20000",
+      slug: "ouellet-pacific-wall-single-20000",
+      name: "Pacific 20 000 BTU",
+      seriesId: "ouellet-pacific",
+      brandId: "ouellet",
+      modelNumber: "Pacific 20k",
+      normalizedModelNumber: "pacific-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 19800,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-30000",
+      slug: "ouellet-flexx-central-ducted-30000",
+      name: "Flexx 30 000 BTU",
+      seriesId: "ouellet-flexx",
+      brandId: "ouellet",
+      modelNumber: "Flexx 30k",
+      normalizedModelNumber: "flexx-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -268,18 +759,6 @@ export const ouelletDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "ouellet-oarx-h24a-o",
-      modelNumber: "OARX-H24A-O",
-      brandId: "ouellet",
-      refrigerant: null as any,
-    },
-    {
-      id: "ouellet-oarx-h18a-o",
-      modelNumber: "OARX-H18A-O",
-      brandId: "ouellet",
-      refrigerant: null as any,
-    },
-    {
       id: "ouellet-ocvx-h09a-o",
       modelNumber: "OCVX-H09A-O",
       brandId: "ouellet",
@@ -294,12 +773,6 @@ export const ouelletDataset: BrandDataset = {
     {
       id: "ouellet-ocvx-h18a-o",
       modelNumber: "OCVX-H18A-O",
-      brandId: "ouellet",
-      refrigerant: null as any,
-    },
-    {
-      id: "ouellet-ocvx-h24a-o",
-      modelNumber: "OCVX-H24A-O",
       brandId: "ouellet",
       refrigerant: null as any,
     },
@@ -338,6 +811,24 @@ export const ouelletDataset: BrandDataset = {
       modelNumber: "OCHX-H36A-O",
       brandId: "ouellet",
       refrigerant: null as any,
+    },
+    {
+      id: "ouellet-oarx-h24a-o",
+      modelNumber: "OARX-H24A-O",
+      brandId: "ouellet",
+      refrigerant: null as any,
+    },
+    {
+      id: "ouellet-oarx-h18a-o",
+      modelNumber: "OARX-H18A-O",
+      brandId: "ouellet",
+      refrigerant: null as any,
+    },
+    {
+      id: "ouellet-ocvx-h24a-o",
+      modelNumber: "OCVX-H24A-O",
+      brandId: "ouellet",
+      refrigerant: null as any,
     }
   ],
   indoorUnits: [
@@ -345,9 +836,9 @@ export const ouelletDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "ouellet-flexx-central-ducted-cfg-1",
-      slug: "ouellet-flexx-central-ducted-cfg-1",
-      modelId: "ouellet-flexx-central-ducted",
+      id: "ouellet-flexx-central-ducted-24000-cfg-1",
+      slug: "ouellet-flexx-central-ducted-24000-cfg-1",
+      modelId: "ouellet-flexx-central-ducted-24000",
       outdoorUnitId: "ouellet-oflx1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -359,51 +850,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-flexx-central-ducted-cfg-2",
-      slug: "ouellet-flexx-central-ducted-cfg-2",
-      modelId: "ouellet-flexx-central-ducted",
-      outdoorUnitId: "ouellet-oflx1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18.2,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-flexx-central-ducted-cfg-3",
-      slug: "ouellet-flexx-central-ducted-cfg-3",
-      modelId: "ouellet-flexx-central-ducted",
-      outdoorUnitId: "ouellet-oflx1-h48a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-flexx-central-ducted-cfg-4",
-      slug: "ouellet-flexx-central-ducted-cfg-4",
-      modelId: "ouellet-flexx-central-ducted",
-      outdoorUnitId: "ouellet-oflx1-h60a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 18.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-flexx-central-ducted-cfg-5",
-      slug: "ouellet-flexx-central-ducted-cfg-5",
-      modelId: "ouellet-flexx-central-ducted",
+      id: "ouellet-flexx-central-ducted-24000-cfg-2",
+      slug: "ouellet-flexx-central-ducted-24000-cfg-2",
+      modelId: "ouellet-flexx-central-ducted-24000",
       outdoorUnitId: "ouellet-oflx1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -415,23 +864,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-flexx-central-ducted-cfg-6",
-      slug: "ouellet-flexx-central-ducted-cfg-6",
-      modelId: "ouellet-flexx-central-ducted",
-      outdoorUnitId: "ouellet-oflx1-h60a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-flexx-central-ducted-cfg-7",
-      slug: "ouellet-flexx-central-ducted-cfg-7",
-      modelId: "ouellet-flexx-central-ducted",
+      id: "ouellet-flexx-central-ducted-24000-cfg-3",
+      slug: "ouellet-flexx-central-ducted-24000-cfg-3",
+      modelId: "ouellet-flexx-central-ducted-24000",
       outdoorUnitId: "ouellet-oflx1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -443,51 +878,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-flexx-central-ducted-cfg-8",
-      slug: "ouellet-flexx-central-ducted-cfg-8",
-      modelId: "ouellet-flexx-central-ducted",
-      outdoorUnitId: "ouellet-oflx1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: 16,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-flexx-central-ducted-cfg-9",
-      slug: "ouellet-flexx-central-ducted-cfg-9",
-      modelId: "ouellet-flexx-central-ducted",
-      outdoorUnitId: "ouellet-oflx1-h60a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-flexx-central-ducted-cfg-10",
-      slug: "ouellet-flexx-central-ducted-cfg-10",
-      modelId: "ouellet-flexx-central-ducted",
-      outdoorUnitId: "ouellet-oflx1-h60a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-flexx-central-ducted-cfg-11",
-      slug: "ouellet-flexx-central-ducted-cfg-11",
-      modelId: "ouellet-flexx-central-ducted",
+      id: "ouellet-flexx-central-ducted-24000-cfg-4",
+      slug: "ouellet-flexx-central-ducted-24000-cfg-4",
+      modelId: "ouellet-flexx-central-ducted-24000",
       outdoorUnitId: "ouellet-oflx1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -499,9 +892,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-flexx-central-ducted-cfg-12",
-      slug: "ouellet-flexx-central-ducted-cfg-12",
-      modelId: "ouellet-flexx-central-ducted",
+      id: "ouellet-flexx-central-ducted-36000-cfg-1",
+      slug: "ouellet-flexx-central-ducted-36000-cfg-1",
+      modelId: "ouellet-flexx-central-ducted-36000",
       outdoorUnitId: "ouellet-oflx1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -513,9 +906,51 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-flexx-central-ducted-cfg-13",
-      slug: "ouellet-flexx-central-ducted-cfg-13",
-      modelId: "ouellet-flexx-central-ducted",
+      id: "ouellet-flexx-central-ducted-36000-cfg-2",
+      slug: "ouellet-flexx-central-ducted-36000-cfg-2",
+      modelId: "ouellet-flexx-central-ducted-36000",
+      outdoorUnitId: "ouellet-oflx1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-48000-cfg-1",
+      slug: "ouellet-flexx-central-ducted-48000-cfg-1",
+      modelId: "ouellet-flexx-central-ducted-48000",
+      outdoorUnitId: "ouellet-oflx1-h48a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-48000-cfg-2",
+      slug: "ouellet-flexx-central-ducted-48000-cfg-2",
+      modelId: "ouellet-flexx-central-ducted-48000",
+      outdoorUnitId: "ouellet-oflx1-h60a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 18.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-48000-cfg-3",
+      slug: "ouellet-flexx-central-ducted-48000-cfg-3",
+      modelId: "ouellet-flexx-central-ducted-48000",
       outdoorUnitId: "ouellet-oflx1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -527,9 +962,51 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-flexx-central-ducted-cfg-14",
-      slug: "ouellet-flexx-central-ducted-cfg-14",
-      modelId: "ouellet-flexx-central-ducted",
+      id: "ouellet-flexx-central-ducted-48000-cfg-4",
+      slug: "ouellet-flexx-central-ducted-48000-cfg-4",
+      modelId: "ouellet-flexx-central-ducted-48000",
+      outdoorUnitId: "ouellet-oflx1-h60a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-48000-cfg-5",
+      slug: "ouellet-flexx-central-ducted-48000-cfg-5",
+      modelId: "ouellet-flexx-central-ducted-48000",
+      outdoorUnitId: "ouellet-oflx1-h60a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-48000-cfg-6",
+      slug: "ouellet-flexx-central-ducted-48000-cfg-6",
+      modelId: "ouellet-flexx-central-ducted-48000",
+      outdoorUnitId: "ouellet-oflx1-h60a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-48000-cfg-7",
+      slug: "ouellet-flexx-central-ducted-48000-cfg-7",
+      modelId: "ouellet-flexx-central-ducted-48000",
       outdoorUnitId: "ouellet-oflx1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -541,9 +1018,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single-cfg-1",
-      slug: "ouellet-myriad-wall-single-cfg-1",
-      modelId: "ouellet-myriad-wall-single",
+      id: "ouellet-myriad-wall-single-18000-cfg-1",
+      slug: "ouellet-myriad-wall-single-18000-cfg-1",
+      modelId: "ouellet-myriad-wall-single-18000",
       outdoorUnitId: "ouellet-ofrm2x1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -555,65 +1032,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single-cfg-2",
-      slug: "ouellet-myriad-wall-single-cfg-2",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm3x1-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-3",
-      slug: "ouellet-myriad-wall-single-cfg-3",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm4x1-h30a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-4",
-      slug: "ouellet-myriad-wall-single-cfg-4",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm4x1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-5",
-      slug: "ouellet-myriad-wall-single-cfg-5",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm5x1-h42a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-6",
-      slug: "ouellet-myriad-wall-single-cfg-6",
-      modelId: "ouellet-myriad-wall-single",
+      id: "ouellet-myriad-wall-single-18000-cfg-2",
+      slug: "ouellet-myriad-wall-single-18000-cfg-2",
+      modelId: "ouellet-myriad-wall-single-18000",
       outdoorUnitId: "ouellet-ofrm2x1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -625,65 +1046,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single-cfg-7",
-      slug: "ouellet-myriad-wall-single-cfg-7",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm3x1-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-8",
-      slug: "ouellet-myriad-wall-single-cfg-8",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm4x1-h30a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-9",
-      slug: "ouellet-myriad-wall-single-cfg-9",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm4x1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-10",
-      slug: "ouellet-myriad-wall-single-cfg-10",
-      modelId: "ouellet-myriad-wall-single",
-      outdoorUnitId: "ouellet-ofrm5x1-h42a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-myriad-wall-single-cfg-11",
-      slug: "ouellet-myriad-wall-single-cfg-11",
-      modelId: "ouellet-myriad-wall-single",
+      id: "ouellet-myriad-wall-single-18000-cfg-3",
+      slug: "ouellet-myriad-wall-single-18000-cfg-3",
+      modelId: "ouellet-myriad-wall-single-18000",
       outdoorUnitId: "ouellet-ofrm2x1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -695,9 +1060,37 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single-cfg-12",
-      slug: "ouellet-myriad-wall-single-cfg-12",
-      modelId: "ouellet-myriad-wall-single",
+      id: "ouellet-myriad-wall-single-24000-cfg-1",
+      slug: "ouellet-myriad-wall-single-24000-cfg-1",
+      modelId: "ouellet-myriad-wall-single-24000",
+      outdoorUnitId: "ouellet-ofrm3x1-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-24000-cfg-2",
+      slug: "ouellet-myriad-wall-single-24000-cfg-2",
+      modelId: "ouellet-myriad-wall-single-24000",
+      outdoorUnitId: "ouellet-ofrm3x1-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-24000-cfg-3",
+      slug: "ouellet-myriad-wall-single-24000-cfg-3",
+      modelId: "ouellet-myriad-wall-single-24000",
       outdoorUnitId: "ouellet-ofrm3x1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -709,9 +1102,37 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single-cfg-13",
-      slug: "ouellet-myriad-wall-single-cfg-13",
-      modelId: "ouellet-myriad-wall-single",
+      id: "ouellet-myriad-wall-single-30000-cfg-1",
+      slug: "ouellet-myriad-wall-single-30000-cfg-1",
+      modelId: "ouellet-myriad-wall-single-30000",
+      outdoorUnitId: "ouellet-ofrm4x1-h30a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-30000-cfg-2",
+      slug: "ouellet-myriad-wall-single-30000-cfg-2",
+      modelId: "ouellet-myriad-wall-single-30000",
+      outdoorUnitId: "ouellet-ofrm4x1-h30a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-30000-cfg-3",
+      slug: "ouellet-myriad-wall-single-30000-cfg-3",
+      modelId: "ouellet-myriad-wall-single-30000",
       outdoorUnitId: "ouellet-ofrm4x1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -723,9 +1144,37 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single-cfg-14",
-      slug: "ouellet-myriad-wall-single-cfg-14",
-      modelId: "ouellet-myriad-wall-single",
+      id: "ouellet-myriad-wall-single-36000-cfg-1",
+      slug: "ouellet-myriad-wall-single-36000-cfg-1",
+      modelId: "ouellet-myriad-wall-single-36000",
+      outdoorUnitId: "ouellet-ofrm4x1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-36000-cfg-2",
+      slug: "ouellet-myriad-wall-single-36000-cfg-2",
+      modelId: "ouellet-myriad-wall-single-36000",
+      outdoorUnitId: "ouellet-ofrm4x1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-36000-cfg-3",
+      slug: "ouellet-myriad-wall-single-36000-cfg-3",
+      modelId: "ouellet-myriad-wall-single-36000",
       outdoorUnitId: "ouellet-ofrm4x1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -737,9 +1186,37 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-myriad-wall-single-cfg-15",
-      slug: "ouellet-myriad-wall-single-cfg-15",
-      modelId: "ouellet-myriad-wall-single",
+      id: "ouellet-myriad-wall-single-42000-cfg-1",
+      slug: "ouellet-myriad-wall-single-42000-cfg-1",
+      modelId: "ouellet-myriad-wall-single-42000",
+      outdoorUnitId: "ouellet-ofrm5x1-h42a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-42000-cfg-2",
+      slug: "ouellet-myriad-wall-single-42000-cfg-2",
+      modelId: "ouellet-myriad-wall-single-42000",
+      outdoorUnitId: "ouellet-ofrm5x1-h42a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-myriad-wall-single-42000-cfg-3",
+      slug: "ouellet-myriad-wall-single-42000-cfg-3",
+      modelId: "ouellet-myriad-wall-single-42000",
       outdoorUnitId: "ouellet-ofrm5x1-h42a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -751,9 +1228,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single-cfg-1",
-      slug: "ouellet-olympia-wall-single-cfg-1",
-      modelId: "ouellet-olympia-wall-single",
+      id: "ouellet-olympia-wall-single-9000-cfg-1",
+      slug: "ouellet-olympia-wall-single-9000-cfg-1",
+      modelId: "ouellet-olympia-wall-single-9000",
       outdoorUnitId: "ouellet-oarx-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -765,51 +1242,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single-cfg-2",
-      slug: "ouellet-olympia-wall-single-cfg-2",
-      modelId: "ouellet-olympia-wall-single",
-      outdoorUnitId: "ouellet-oarx-h12a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 29.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-olympia-wall-single-cfg-3",
-      slug: "ouellet-olympia-wall-single-cfg-3",
-      modelId: "ouellet-olympia-wall-single",
-      outdoorUnitId: "ouellet-oarx-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 27,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-olympia-wall-single-cfg-4",
-      slug: "ouellet-olympia-wall-single-cfg-4",
-      modelId: "ouellet-olympia-wall-single",
-      outdoorUnitId: "ouellet-oarx-h18a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-olympia-wall-single-cfg-5",
-      slug: "ouellet-olympia-wall-single-cfg-5",
-      modelId: "ouellet-olympia-wall-single",
+      id: "ouellet-olympia-wall-single-9000-cfg-2",
+      slug: "ouellet-olympia-wall-single-9000-cfg-2",
+      modelId: "ouellet-olympia-wall-single-9000",
       outdoorUnitId: "ouellet-oarx-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -821,9 +1256,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single-cfg-6",
-      slug: "ouellet-olympia-wall-single-cfg-6",
-      modelId: "ouellet-olympia-wall-single",
+      id: "ouellet-olympia-wall-single-9000-cfg-3",
+      slug: "ouellet-olympia-wall-single-9000-cfg-3",
+      modelId: "ouellet-olympia-wall-single-9000",
       outdoorUnitId: "ouellet-oarx-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -835,9 +1270,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single-cfg-7",
-      slug: "ouellet-olympia-wall-single-cfg-7",
-      modelId: "ouellet-olympia-wall-single",
+      id: "ouellet-olympia-wall-single-12000-cfg-1",
+      slug: "ouellet-olympia-wall-single-12000-cfg-1",
+      modelId: "ouellet-olympia-wall-single-12000",
       outdoorUnitId: "ouellet-oarx-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -849,9 +1284,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single-cfg-8",
-      slug: "ouellet-olympia-wall-single-cfg-8",
-      modelId: "ouellet-olympia-wall-single",
+      id: "ouellet-olympia-wall-single-12000-cfg-2",
+      slug: "ouellet-olympia-wall-single-12000-cfg-2",
+      modelId: "ouellet-olympia-wall-single-12000",
       outdoorUnitId: "ouellet-oarx-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -863,65 +1298,23 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single-cfg-9",
-      slug: "ouellet-olympia-wall-single-cfg-9",
-      modelId: "ouellet-olympia-wall-single",
-      outdoorUnitId: "ouellet-oarx-h18a-o",
+      id: "ouellet-olympia-wall-single-12000-cfg-3",
+      slug: "ouellet-olympia-wall-single-12000-cfg-3",
+      modelId: "ouellet-olympia-wall-single-12000",
+      outdoorUnitId: "ouellet-oarx-h12a-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.5,
       hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-olympia-wall-single-cfg-10",
-      slug: "ouellet-olympia-wall-single-cfg-10",
-      modelId: "ouellet-olympia-wall-single",
-      outdoorUnitId: "ouellet-oarx-h18a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-olympia-wall-single-cfg-11",
-      slug: "ouellet-olympia-wall-single-cfg-11",
-      modelId: "ouellet-olympia-wall-single",
-      outdoorUnitId: "ouellet-oarx-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 27,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-olympia-wall-single-cfg-12",
-      slug: "ouellet-olympia-wall-single-cfg-12",
-      modelId: "ouellet-olympia-wall-single",
-      outdoorUnitId: "ouellet-oarx-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 27,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-pacific-wall-single-cfg-1",
-      slug: "ouellet-pacific-wall-single-cfg-1",
-      modelId: "ouellet-pacific-wall-single",
+      id: "ouellet-pacific-wall-single-9000-cfg-1",
+      slug: "ouellet-pacific-wall-single-9000-cfg-1",
+      modelId: "ouellet-pacific-wall-single-9000",
       outdoorUnitId: "ouellet-ocvx-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -933,51 +1326,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-pacific-wall-single-cfg-2",
-      slug: "ouellet-pacific-wall-single-cfg-2",
-      modelId: "ouellet-pacific-wall-single",
-      outdoorUnitId: "ouellet-ocvx-h12a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-pacific-wall-single-cfg-3",
-      slug: "ouellet-pacific-wall-single-cfg-3",
-      modelId: "ouellet-pacific-wall-single",
-      outdoorUnitId: "ouellet-ocvx-h18a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-pacific-wall-single-cfg-4",
-      slug: "ouellet-pacific-wall-single-cfg-4",
-      modelId: "ouellet-pacific-wall-single",
-      outdoorUnitId: "ouellet-ocvx-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-pacific-wall-single-cfg-5",
-      slug: "ouellet-pacific-wall-single-cfg-5",
-      modelId: "ouellet-pacific-wall-single",
+      id: "ouellet-pacific-wall-single-9000-cfg-2",
+      slug: "ouellet-pacific-wall-single-9000-cfg-2",
+      modelId: "ouellet-pacific-wall-single-9000",
       outdoorUnitId: "ouellet-ocvx-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -989,9 +1340,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-pacific-wall-single-cfg-6",
-      slug: "ouellet-pacific-wall-single-cfg-6",
-      modelId: "ouellet-pacific-wall-single",
+      id: "ouellet-pacific-wall-single-9000-cfg-3",
+      slug: "ouellet-pacific-wall-single-9000-cfg-3",
+      modelId: "ouellet-pacific-wall-single-9000",
       outdoorUnitId: "ouellet-ocvx-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -1003,9 +1354,23 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-pacific-wall-single-cfg-7",
-      slug: "ouellet-pacific-wall-single-cfg-7",
-      modelId: "ouellet-pacific-wall-single",
+      id: "ouellet-pacific-wall-single-12000-cfg-1",
+      slug: "ouellet-pacific-wall-single-12000-cfg-1",
+      modelId: "ouellet-pacific-wall-single-12000",
+      outdoorUnitId: "ouellet-ocvx-h12a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-pacific-wall-single-12000-cfg-2",
+      slug: "ouellet-pacific-wall-single-12000-cfg-2",
+      modelId: "ouellet-pacific-wall-single-12000",
       outdoorUnitId: "ouellet-ocvx-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1017,9 +1382,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-pacific-wall-single-cfg-8",
-      slug: "ouellet-pacific-wall-single-cfg-8",
-      modelId: "ouellet-pacific-wall-single",
+      id: "ouellet-pacific-wall-single-12000-cfg-3",
+      slug: "ouellet-pacific-wall-single-12000-cfg-3",
+      modelId: "ouellet-pacific-wall-single-12000",
       outdoorUnitId: "ouellet-ocvx-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1031,37 +1396,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-pacific-wall-single-cfg-9",
-      slug: "ouellet-pacific-wall-single-cfg-9",
-      modelId: "ouellet-pacific-wall-single",
-      outdoorUnitId: "ouellet-ocvx-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-pacific-wall-single-cfg-10",
-      slug: "ouellet-pacific-wall-single-cfg-10",
-      modelId: "ouellet-pacific-wall-single",
-      outdoorUnitId: "ouellet-ocvx-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ouellet-pacific-wall-single-cfg-11",
-      slug: "ouellet-pacific-wall-single-cfg-11",
-      modelId: "ouellet-pacific-wall-single",
+      id: "ouellet-pacific-wall-single-18000-cfg-1",
+      slug: "ouellet-pacific-wall-single-18000-cfg-1",
+      modelId: "ouellet-pacific-wall-single-18000",
       outdoorUnitId: "ouellet-ocvx-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1073,9 +1410,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-pacific-wall-single-cfg-12",
-      slug: "ouellet-pacific-wall-single-cfg-12",
-      modelId: "ouellet-pacific-wall-single",
+      id: "ouellet-pacific-wall-single-18000-cfg-2",
+      slug: "ouellet-pacific-wall-single-18000-cfg-2",
+      modelId: "ouellet-pacific-wall-single-18000",
       outdoorUnitId: "ouellet-ocvx-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1087,9 +1424,23 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-harmony-wall-single-cfg-1",
-      slug: "ouellet-harmony-wall-single-cfg-1",
-      modelId: "ouellet-harmony-wall-single",
+      id: "ouellet-pacific-wall-single-18000-cfg-3",
+      slug: "ouellet-pacific-wall-single-18000-cfg-3",
+      modelId: "ouellet-pacific-wall-single-18000",
+      outdoorUnitId: "ouellet-ocvx-h18a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-harmony-wall-single-9000-cfg-1",
+      slug: "ouellet-harmony-wall-single-9000-cfg-1",
+      modelId: "ouellet-harmony-wall-single-9000",
       outdoorUnitId: "ouellet-ochx-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -1101,9 +1452,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-harmony-wall-single-cfg-2",
-      slug: "ouellet-harmony-wall-single-cfg-2",
-      modelId: "ouellet-harmony-wall-single",
+      id: "ouellet-harmony-wall-single-12000-cfg-1",
+      slug: "ouellet-harmony-wall-single-12000-cfg-1",
+      modelId: "ouellet-harmony-wall-single-12000",
       outdoorUnitId: "ouellet-ochx-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1115,9 +1466,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-harmony-wall-single-cfg-3",
-      slug: "ouellet-harmony-wall-single-cfg-3",
-      modelId: "ouellet-harmony-wall-single",
+      id: "ouellet-harmony-wall-single-18000-cfg-1",
+      slug: "ouellet-harmony-wall-single-18000-cfg-1",
+      modelId: "ouellet-harmony-wall-single-18000",
       outdoorUnitId: "ouellet-ochx-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1129,9 +1480,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-harmony-wall-single-cfg-4",
-      slug: "ouellet-harmony-wall-single-cfg-4",
-      modelId: "ouellet-harmony-wall-single",
+      id: "ouellet-harmony-wall-single-24000-cfg-1",
+      slug: "ouellet-harmony-wall-single-24000-cfg-1",
+      modelId: "ouellet-harmony-wall-single-24000",
       outdoorUnitId: "ouellet-ochx-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1143,9 +1494,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-harmony-wall-single-cfg-5",
-      slug: "ouellet-harmony-wall-single-cfg-5",
-      modelId: "ouellet-harmony-wall-single",
+      id: "ouellet-harmony-wall-single-30000-cfg-1",
+      slug: "ouellet-harmony-wall-single-30000-cfg-1",
+      modelId: "ouellet-harmony-wall-single-30000",
       outdoorUnitId: "ouellet-ochx-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1157,9 +1508,9 @@ export const ouelletDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ouellet-harmony-wall-single-cfg-6",
-      slug: "ouellet-harmony-wall-single-cfg-6",
-      modelId: "ouellet-harmony-wall-single",
+      id: "ouellet-harmony-wall-single-36000-cfg-1",
+      slug: "ouellet-harmony-wall-single-36000-cfg-1",
+      modelId: "ouellet-harmony-wall-single-36000",
       outdoorUnitId: "ouellet-ochx-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33600,
@@ -1169,11 +1520,151 @@ export const ouelletDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-20000-cfg-1",
+      slug: "ouellet-olympia-wall-single-20000-cfg-1",
+      modelId: "ouellet-olympia-wall-single-20000",
+      outdoorUnitId: "ouellet-oarx-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 27,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-20000-cfg-2",
+      slug: "ouellet-olympia-wall-single-20000-cfg-2",
+      modelId: "ouellet-olympia-wall-single-20000",
+      outdoorUnitId: "ouellet-oarx-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 27,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-20000-cfg-3",
+      slug: "ouellet-olympia-wall-single-20000-cfg-3",
+      modelId: "ouellet-olympia-wall-single-20000",
+      outdoorUnitId: "ouellet-oarx-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 27,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-18000-cfg-1",
+      slug: "ouellet-olympia-wall-single-18000-cfg-1",
+      modelId: "ouellet-olympia-wall-single-18000",
+      outdoorUnitId: "ouellet-oarx-h18a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-18000-cfg-2",
+      slug: "ouellet-olympia-wall-single-18000-cfg-2",
+      modelId: "ouellet-olympia-wall-single-18000",
+      outdoorUnitId: "ouellet-oarx-h18a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-olympia-wall-single-18000-cfg-3",
+      slug: "ouellet-olympia-wall-single-18000-cfg-3",
+      modelId: "ouellet-olympia-wall-single-18000",
+      outdoorUnitId: "ouellet-oarx-h18a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-pacific-wall-single-20000-cfg-1",
+      slug: "ouellet-pacific-wall-single-20000-cfg-1",
+      modelId: "ouellet-pacific-wall-single-20000",
+      outdoorUnitId: "ouellet-ocvx-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 23.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-pacific-wall-single-20000-cfg-2",
+      slug: "ouellet-pacific-wall-single-20000-cfg-2",
+      modelId: "ouellet-pacific-wall-single-20000",
+      outdoorUnitId: "ouellet-ocvx-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 23.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-pacific-wall-single-20000-cfg-3",
+      slug: "ouellet-pacific-wall-single-20000-cfg-3",
+      modelId: "ouellet-pacific-wall-single-20000",
+      outdoorUnitId: "ouellet-ocvx-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 23.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ouellet-flexx-central-ducted-30000-cfg-1",
+      slug: "ouellet-flexx-central-ducted-30000-cfg-1",
+      modelId: "ouellet-flexx-central-ducted-30000",
+      outdoorUnitId: "ouellet-oflx1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-1",
+      configurationId: "ouellet-flexx-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1184,40 +1675,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-flexx-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-flexx-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-flexx-central-ducted-cfg-5",
+      configurationId: "ouellet-flexx-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1228,18 +1686,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-flexx-central-ducted-cfg-7",
+      configurationId: "ouellet-flexx-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1250,18 +1697,73 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-8",
+      configurationId: "ouellet-flexx-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.8,
+          heatingCapacityBtu: 20600,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-9",
+      configurationId: "ouellet-flexx-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-flexx-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-flexx-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-flexx-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-flexx-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-flexx-central-ducted-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1272,7 +1774,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-10",
+      configurationId: "ouellet-flexx-central-ducted-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1283,29 +1785,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-flexx-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-flexx-central-ducted-cfg-13",
+      configurationId: "ouellet-flexx-central-ducted-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1316,7 +1796,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-flexx-central-ducted-cfg-14",
+      configurationId: "ouellet-flexx-central-ducted-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1327,7 +1807,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-myriad-wall-single-cfg-1",
+      configurationId: "ouellet-myriad-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1338,51 +1818,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-myriad-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-6",
+      configurationId: "ouellet-myriad-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1393,51 +1829,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-myriad-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-myriad-wall-single-cfg-11",
+      configurationId: "ouellet-myriad-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1448,7 +1840,29 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-myriad-wall-single-cfg-12",
+      configurationId: "ouellet-myriad-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1459,7 +1873,29 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-myriad-wall-single-cfg-13",
+      configurationId: "ouellet-myriad-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1470,7 +1906,29 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-myriad-wall-single-cfg-14",
+      configurationId: "ouellet-myriad-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1481,7 +1939,29 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-myriad-wall-single-cfg-15",
+      configurationId: "ouellet-myriad-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-myriad-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1492,7 +1972,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-olympia-wall-single-cfg-1",
+      configurationId: "ouellet-olympia-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1503,40 +1983,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-olympia-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-olympia-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-olympia-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-olympia-wall-single-cfg-5",
+      configurationId: "ouellet-olympia-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1547,7 +1994,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-olympia-wall-single-cfg-6",
+      configurationId: "ouellet-olympia-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1558,7 +2005,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-olympia-wall-single-cfg-7",
+      configurationId: "ouellet-olympia-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1569,7 +2016,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-olympia-wall-single-cfg-8",
+      configurationId: "ouellet-olympia-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1580,51 +2027,18 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-olympia-wall-single-cfg-9",
+      configurationId: "ouellet-olympia-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
+          heatingCapacityBtu: 10300,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "ouellet-olympia-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-olympia-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-olympia-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-pacific-wall-single-cfg-1",
+      configurationId: "ouellet-pacific-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1635,40 +2049,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-pacific-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-pacific-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-pacific-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-pacific-wall-single-cfg-5",
+      configurationId: "ouellet-pacific-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1679,7 +2060,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-pacific-wall-single-cfg-6",
+      configurationId: "ouellet-pacific-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1690,7 +2071,18 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-pacific-wall-single-cfg-7",
+      configurationId: "ouellet-pacific-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-pacific-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1701,7 +2093,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-pacific-wall-single-cfg-8",
+      configurationId: "ouellet-pacific-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1712,29 +2104,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-pacific-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-pacific-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ouellet-pacific-wall-single-cfg-11",
+      configurationId: "ouellet-pacific-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1745,7 +2115,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-pacific-wall-single-cfg-12",
+      configurationId: "ouellet-pacific-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1756,7 +2126,18 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-harmony-wall-single-cfg-1",
+      configurationId: "ouellet-pacific-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-harmony-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1767,7 +2148,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-harmony-wall-single-cfg-2",
+      configurationId: "ouellet-harmony-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1778,7 +2159,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-harmony-wall-single-cfg-3",
+      configurationId: "ouellet-harmony-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1789,7 +2170,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-harmony-wall-single-cfg-4",
+      configurationId: "ouellet-harmony-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1800,7 +2181,7 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-harmony-wall-single-cfg-5",
+      configurationId: "ouellet-harmony-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1811,11 +2192,121 @@ export const ouelletDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ouellet-harmony-wall-single-cfg-6",
+      configurationId: "ouellet-harmony-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-olympia-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-olympia-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-olympia-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-olympia-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-olympia-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-olympia-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-pacific-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-pacific-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-pacific-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ouellet-flexx-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
           cop: 1.8,
           confidence: "verified",
         }

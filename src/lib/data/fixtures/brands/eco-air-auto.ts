@@ -70,15 +70,16 @@ export const ecoairDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "eco-air-standard-wall-single",
-      slug: "eco-air-standard-wall-single",
-      name: "Standard",
+      id: "eco-air-standard-wall-single-60000",
+      slug: "eco-air-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
       seriesId: "eco-air-standard",
       brandId: "eco-air",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 34400,
@@ -96,15 +97,16 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m2o-series-wall-single",
-      slug: "eco-air-m2o-series-wall-single",
-      name: "M2O Series",
+      id: "eco-air-m2o-series-wall-single-18000",
+      slug: "eco-air-m2o-series-wall-single-18000",
+      name: "M2O Series 18 000 BTU",
       seriesId: "eco-air-m2o-series",
       brandId: "eco-air",
-      modelNumber: "M2O Series",
-      normalizedModelNumber: "m2o-series",
+      modelNumber: "M2O Series 18k",
+      normalizedModelNumber: "m2o-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 19000,
       coolingCapacityMaxBtu: 19000,
       heatingCapacity5FMinBtu: 15000,
@@ -122,15 +124,16 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m3o-series-wall-single",
-      slug: "eco-air-m3o-series-wall-single",
-      name: "M3O Series",
+      id: "eco-air-m3o-series-wall-single-30000",
+      slug: "eco-air-m3o-series-wall-single-30000",
+      name: "M3O Series 30 000 BTU",
       seriesId: "eco-air-m3o-series",
       brandId: "eco-air",
-      modelNumber: "M3O Series",
-      normalizedModelNumber: "m3o-series",
+      modelNumber: "M3O Series 30k",
+      normalizedModelNumber: "m3o-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 28000,
       coolingCapacityMaxBtu: 28000,
       heatingCapacity5FMinBtu: 26600,
@@ -148,15 +151,16 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m40-series-wall-single",
-      slug: "eco-air-m40-series-wall-single",
-      name: "M40 Series",
+      id: "eco-air-m40-series-wall-single-36000",
+      slug: "eco-air-m40-series-wall-single-36000",
+      name: "M40 Series 36 000 BTU",
       seriesId: "eco-air-m40-series",
       brandId: "eco-air",
-      modelNumber: "M40 Series",
-      normalizedModelNumber: "m40-series",
+      modelNumber: "M40 Series 36k",
+      normalizedModelNumber: "m40-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 33000,
@@ -174,25 +178,53 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m5o-series-wall-single",
-      slug: "eco-air-m5o-series-wall-single",
-      name: "M5O Series",
+      id: "eco-air-m5o-series-wall-single-48000",
+      slug: "eco-air-m5o-series-wall-single-48000",
+      name: "M5O Series 48 000 BTU",
       seriesId: "eco-air-m5o-series",
       brandId: "eco-air",
-      modelNumber: "M5O Series",
-      normalizedModelNumber: "m5o-series",
+      modelNumber: "M5O Series 48k",
+      normalizedModelNumber: "m5o-series-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 34400,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 18.8,
-      seer2Max: 22,
+      seer2Min: 20.9,
+      seer2Max: 21.8,
       hspf2Min: 9,
       hspf2Max: 9.8,
-      cop5FMin: 1.9,
+      cop5FMin: 2,
       cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single-60000",
+      slug: "eco-air-m5o-series-wall-single-60000",
+      name: "M5O Series 60 000 BTU",
+      seriesId: "eco-air-m5o-series",
+      brandId: "eco-air",
+      modelNumber: "M5O Series 60k",
+      normalizedModelNumber: "m5o-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 35200,
+      seer2Min: 18.8,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -243,9 +275,9 @@ export const ecoairDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "eco-air-standard-wall-single-cfg-1",
-      slug: "eco-air-standard-wall-single-cfg-1",
-      modelId: "eco-air-standard-wall-single",
+      id: "eco-air-standard-wall-single-60000-cfg-1",
+      slug: "eco-air-standard-wall-single-60000-cfg-1",
+      modelId: "eco-air-standard-wall-single-60000",
       outdoorUnitId: "eco-air-m5oa-55hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -257,9 +289,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-standard-wall-single-cfg-2",
-      slug: "eco-air-standard-wall-single-cfg-2",
-      modelId: "eco-air-standard-wall-single",
+      id: "eco-air-standard-wall-single-60000-cfg-2",
+      slug: "eco-air-standard-wall-single-60000-cfg-2",
+      modelId: "eco-air-standard-wall-single-60000",
       outdoorUnitId: "eco-air-m5oa-55hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -271,9 +303,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m2o-series-wall-single-cfg-1",
-      slug: "eco-air-m2o-series-wall-single-cfg-1",
-      modelId: "eco-air-m2o-series-wall-single",
+      id: "eco-air-m2o-series-wall-single-18000-cfg-1",
+      slug: "eco-air-m2o-series-wall-single-18000-cfg-1",
+      modelId: "eco-air-m2o-series-wall-single-18000",
       outdoorUnitId: "eco-air-m2oi-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -285,9 +317,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m2o-series-wall-single-cfg-2",
-      slug: "eco-air-m2o-series-wall-single-cfg-2",
-      modelId: "eco-air-m2o-series-wall-single",
+      id: "eco-air-m2o-series-wall-single-18000-cfg-2",
+      slug: "eco-air-m2o-series-wall-single-18000-cfg-2",
+      modelId: "eco-air-m2o-series-wall-single-18000",
       outdoorUnitId: "eco-air-m2oi-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -299,9 +331,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m2o-series-wall-single-cfg-3",
-      slug: "eco-air-m2o-series-wall-single-cfg-3",
-      modelId: "eco-air-m2o-series-wall-single",
+      id: "eco-air-m2o-series-wall-single-18000-cfg-3",
+      slug: "eco-air-m2o-series-wall-single-18000-cfg-3",
+      modelId: "eco-air-m2o-series-wall-single-18000",
       outdoorUnitId: "eco-air-m2oi-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -313,9 +345,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m3o-series-wall-single-cfg-1",
-      slug: "eco-air-m3o-series-wall-single-cfg-1",
-      modelId: "eco-air-m3o-series-wall-single",
+      id: "eco-air-m3o-series-wall-single-30000-cfg-1",
+      slug: "eco-air-m3o-series-wall-single-30000-cfg-1",
+      modelId: "eco-air-m3o-series-wall-single-30000",
       outdoorUnitId: "eco-air-m3oi-28hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -327,9 +359,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m3o-series-wall-single-cfg-2",
-      slug: "eco-air-m3o-series-wall-single-cfg-2",
-      modelId: "eco-air-m3o-series-wall-single",
+      id: "eco-air-m3o-series-wall-single-30000-cfg-2",
+      slug: "eco-air-m3o-series-wall-single-30000-cfg-2",
+      modelId: "eco-air-m3o-series-wall-single-30000",
       outdoorUnitId: "eco-air-m3oi-28hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -341,9 +373,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m3o-series-wall-single-cfg-3",
-      slug: "eco-air-m3o-series-wall-single-cfg-3",
-      modelId: "eco-air-m3o-series-wall-single",
+      id: "eco-air-m3o-series-wall-single-30000-cfg-3",
+      slug: "eco-air-m3o-series-wall-single-30000-cfg-3",
+      modelId: "eco-air-m3o-series-wall-single-30000",
       outdoorUnitId: "eco-air-m3oi-28hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -355,9 +387,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m40-series-wall-single-cfg-1",
-      slug: "eco-air-m40-series-wall-single-cfg-1",
-      modelId: "eco-air-m40-series-wall-single",
+      id: "eco-air-m40-series-wall-single-36000-cfg-1",
+      slug: "eco-air-m40-series-wall-single-36000-cfg-1",
+      modelId: "eco-air-m40-series-wall-single-36000",
       outdoorUnitId: "eco-air-m4oi-36hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -369,9 +401,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m40-series-wall-single-cfg-2",
-      slug: "eco-air-m40-series-wall-single-cfg-2",
-      modelId: "eco-air-m40-series-wall-single",
+      id: "eco-air-m40-series-wall-single-36000-cfg-2",
+      slug: "eco-air-m40-series-wall-single-36000-cfg-2",
+      modelId: "eco-air-m40-series-wall-single-36000",
       outdoorUnitId: "eco-air-m4oi-36hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -383,9 +415,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m5o-series-wall-single-cfg-1",
-      slug: "eco-air-m5o-series-wall-single-cfg-1",
-      modelId: "eco-air-m5o-series-wall-single",
+      id: "eco-air-m5o-series-wall-single-48000-cfg-1",
+      slug: "eco-air-m5o-series-wall-single-48000-cfg-1",
+      modelId: "eco-air-m5o-series-wall-single-48000",
       outdoorUnitId: "eco-air-m5og-48hfn1-m-x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -397,9 +429,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m5o-series-wall-single-cfg-2",
-      slug: "eco-air-m5o-series-wall-single-cfg-2",
-      modelId: "eco-air-m5o-series-wall-single",
+      id: "eco-air-m5o-series-wall-single-48000-cfg-2",
+      slug: "eco-air-m5o-series-wall-single-48000-cfg-2",
+      modelId: "eco-air-m5o-series-wall-single-48000",
       outdoorUnitId: "eco-air-m5og-48hfn1-m-x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -411,9 +443,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m5o-series-wall-single-cfg-3",
-      slug: "eco-air-m5o-series-wall-single-cfg-3",
-      modelId: "eco-air-m5o-series-wall-single",
+      id: "eco-air-m5o-series-wall-single-48000-cfg-3",
+      slug: "eco-air-m5o-series-wall-single-48000-cfg-3",
+      modelId: "eco-air-m5o-series-wall-single-48000",
       outdoorUnitId: "eco-air-m5og-48hfn1-m-x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47500,
@@ -425,9 +457,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m5o-series-wall-single-cfg-4",
-      slug: "eco-air-m5o-series-wall-single-cfg-4",
-      modelId: "eco-air-m5o-series-wall-single",
+      id: "eco-air-m5o-series-wall-single-60000-cfg-1",
+      slug: "eco-air-m5o-series-wall-single-60000-cfg-1",
+      modelId: "eco-air-m5o-series-wall-single-60000",
       outdoorUnitId: "eco-air-m5oa-55hfn1-m-x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -439,9 +471,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m5o-series-wall-single-cfg-5",
-      slug: "eco-air-m5o-series-wall-single-cfg-5",
-      modelId: "eco-air-m5o-series-wall-single",
+      id: "eco-air-m5o-series-wall-single-60000-cfg-2",
+      slug: "eco-air-m5o-series-wall-single-60000-cfg-2",
+      modelId: "eco-air-m5o-series-wall-single-60000",
       outdoorUnitId: "eco-air-m5oa-55hfn1-m-x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -453,9 +485,9 @@ export const ecoairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "eco-air-m5o-series-wall-single-cfg-6",
-      slug: "eco-air-m5o-series-wall-single-cfg-6",
-      modelId: "eco-air-m5o-series-wall-single",
+      id: "eco-air-m5o-series-wall-single-60000-cfg-3",
+      slug: "eco-air-m5o-series-wall-single-60000-cfg-3",
+      modelId: "eco-air-m5o-series-wall-single-60000",
       outdoorUnitId: "eco-air-m5oa-55hfn1-m-x",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -469,7 +501,7 @@ export const ecoairDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "eco-air-standard-wall-single-cfg-1",
+      configurationId: "eco-air-standard-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -480,7 +512,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-standard-wall-single-cfg-2",
+      configurationId: "eco-air-standard-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -491,7 +523,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m2o-series-wall-single-cfg-1",
+      configurationId: "eco-air-m2o-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -502,7 +534,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m2o-series-wall-single-cfg-2",
+      configurationId: "eco-air-m2o-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -513,7 +545,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m2o-series-wall-single-cfg-3",
+      configurationId: "eco-air-m2o-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -524,7 +556,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m3o-series-wall-single-cfg-1",
+      configurationId: "eco-air-m3o-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -535,7 +567,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m3o-series-wall-single-cfg-2",
+      configurationId: "eco-air-m3o-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -546,7 +578,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m3o-series-wall-single-cfg-3",
+      configurationId: "eco-air-m3o-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -557,7 +589,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m40-series-wall-single-cfg-1",
+      configurationId: "eco-air-m40-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -568,7 +600,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m40-series-wall-single-cfg-2",
+      configurationId: "eco-air-m40-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -579,7 +611,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m5o-series-wall-single-cfg-1",
+      configurationId: "eco-air-m5o-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -590,7 +622,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m5o-series-wall-single-cfg-2",
+      configurationId: "eco-air-m5o-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -601,7 +633,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m5o-series-wall-single-cfg-3",
+      configurationId: "eco-air-m5o-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -612,7 +644,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m5o-series-wall-single-cfg-4",
+      configurationId: "eco-air-m5o-series-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -623,7 +655,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m5o-series-wall-single-cfg-5",
+      configurationId: "eco-air-m5o-series-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -634,7 +666,7 @@ export const ecoairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "eco-air-m5o-series-wall-single-cfg-6",
+      configurationId: "eco-air-m5o-series-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,

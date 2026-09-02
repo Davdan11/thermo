@@ -92,18 +92,424 @@ export const lbgproductsDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "lbg-products-standard-wall-single",
-      slug: "lbg-products-standard-wall-single",
-      name: "Standard",
+      id: "lbg-products-standard-wall-single-36000",
+      slug: "lbg-products-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
       seriesId: "lbg-products-standard",
       brandId: "lbg-products",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19800,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-20000",
+      slug: "lbg-products-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "lbg-products-standard",
+      brandId: "lbg-products",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 14600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-9000",
+      slug: "lbg-products-lbh-series-wall-single-9000",
+      name: "LBH series 9 000 BTU",
+      seriesId: "lbg-products-lbh-series",
+      brandId: "lbg-products",
+      modelNumber: "LBH series 9k",
+      normalizedModelNumber: "lbh-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 11400,
+      seer2Min: 19.2,
+      seer2Max: 29,
+      hspf2Min: 9.1,
+      hspf2Max: 14,
+      cop5FMin: 1.8,
+      cop5FMax: 2.25,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-12000",
+      slug: "lbg-products-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "lbg-products-standard",
+      brandId: "lbg-products",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 7800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-24000",
+      slug: "lbg-products-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "lbg-products-standard",
+      brandId: "lbg-products",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16500,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-18000",
+      slug: "lbg-products-lbh-series-wall-single-18000",
+      name: "LBH series 18 000 BTU",
+      seriesId: "lbg-products-lbh-series",
+      brandId: "lbg-products",
+      modelNumber: "LBH series 18k",
+      normalizedModelNumber: "lbh-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11100,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 24,
+      hspf2Min: 8.7,
+      hspf2Max: 10.6,
+      cop5FMin: 1.85,
+      cop5FMax: 2.44,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000",
+      slug: "lbg-products-lbh-series-wall-single-12000",
+      name: "LBH series 12 000 BTU",
+      seriesId: "lbg-products-lbh-series",
+      brandId: "lbg-products",
+      modelNumber: "LBH series 12k",
+      normalizedModelNumber: "lbh-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8900,
+      heatingCapacity5FMaxBtu: 11400,
+      seer2Min: 19,
+      seer2Max: 27.5,
+      hspf2Min: 10,
+      hspf2Max: 14.5,
+      cop5FMin: 1.86,
+      cop5FMax: 2.41,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000",
+      slug: "lbg-products-lbh-series-wall-single-24000",
+      name: "LBH series 24 000 BTU",
+      seriesId: "lbg-products-lbh-series",
+      brandId: "lbg-products",
+      modelNumber: "LBH series 24k",
+      normalizedModelNumber: "lbh-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 19,
+      seer2Max: 22.3,
+      hspf2Min: 8.5,
+      hspf2Max: 11.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-18000",
+      slug: "lbg-products-lmhb18do-wall-single-18000",
+      name: "LMHB18DO 18 000 BTU",
+      seriesId: "lbg-products-lmhb18do",
+      brandId: "lbg-products",
+      modelNumber: "LMHB18DO 18k",
+      normalizedModelNumber: "lmhb18do-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-30000",
+      slug: "lbg-products-lmhb18do-wall-single-30000",
+      name: "LMHB18DO 30 000 BTU",
+      seriesId: "lbg-products-lmhb18do",
+      brandId: "lbg-products",
+      modelNumber: "LMHB18DO 30k",
+      normalizedModelNumber: "lmhb18do-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 26200,
+      seer2Min: 21,
+      seer2Max: 22.6,
+      hspf2Min: 9.2,
+      hspf2Max: 9.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-24000",
+      slug: "lbg-products-lmhb18do-wall-single-24000",
+      name: "LMHB18DO 24 000 BTU",
+      seriesId: "lbg-products-lmhb18do",
+      brandId: "lbg-products",
+      modelNumber: "LMHB18DO 24k",
+      normalizedModelNumber: "lmhb18do-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmh-series-wall-single-36000",
+      slug: "lbg-products-lmh-series-wall-single-36000",
+      name: "LMH Series 36 000 BTU",
+      seriesId: "lbg-products-lmh-series",
+      brandId: "lbg-products",
+      modelNumber: "LMH Series 36k",
+      normalizedModelNumber: "lmh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 26400,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.68,
+      cop5FMax: 1.68,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmh-series-wall-single-48000",
+      slug: "lbg-products-lmh-series-wall-single-48000",
+      name: "LMH Series 48 000 BTU",
+      seriesId: "lbg-products-lmh-series",
+      brandId: "lbg-products",
+      modelNumber: "LMH Series 48k",
+      normalizedModelNumber: "lmh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 21.1,
+      seer2Max: 21.1,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-36000",
+      slug: "lbg-products-lmhb18do-wall-single-36000",
+      name: "LMHB18DO 36 000 BTU",
+      seriesId: "lbg-products-lmhb18do",
+      brandId: "lbg-products",
+      modelNumber: "LMHB18DO 36k",
+      normalizedModelNumber: "lmhb18do-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 9.7,
+      hspf2Max: 10,
+      cop5FMin: 1.7,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-48000",
+      slug: "lbg-products-lmhb18do-wall-single-48000",
+      name: "LMHB18DO 48 000 BTU",
+      seriesId: "lbg-products-lmhb18do",
+      brandId: "lbg-products",
+      modelNumber: "LMHB18DO 48k",
+      normalizedModelNumber: "lmhb18do-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 39000,
+      seer2Min: 20.9,
+      seer2Max: 21.2,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-60000",
+      slug: "lbg-products-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "lbg-products-standard",
+      brandId: "lbg-products",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 33800,
       heatingCapacity5FMaxBtu: 37000,
       seer2Min: null,
       seer2Max: null,
@@ -118,77 +524,80 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single",
-      slug: "lbg-products-lbh-series-wall-single",
-      name: "LBH series",
+      id: "lbg-products-lbh-series-wall-single-15000",
+      slug: "lbg-products-lbh-series-wall-single-15000",
+      name: "LBH series 15 000 BTU",
       seriesId: "lbg-products-lbh-series",
       brandId: "lbg-products",
-      modelNumber: "LBH series",
-      normalizedModelNumber: "lbh-series",
+      modelNumber: "LBH series 15k",
+      normalizedModelNumber: "lbh-series-15000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 21200,
-      seer2Min: 18,
-      seer2Max: 29,
-      hspf2Min: 8.5,
-      hspf2Max: 14.5,
-      cop5FMin: 1.75,
-      cop5FMax: 2.44,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single",
-      slug: "lbg-products-lmhb18do-wall-single",
-      name: "LMHB18DO",
-      seriesId: "lbg-products-lmhb18do",
-      brandId: "lbg-products",
-      modelNumber: "LMHB18DO",
-      normalizedModelNumber: "lmhb18do",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 39000,
-      seer2Min: 19,
-      seer2Max: 23.5,
-      hspf2Min: 9,
-      hspf2Max: 10.2,
-      cop5FMin: 1.7,
-      cop5FMax: 2,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmh-series-wall-single",
-      slug: "lbg-products-lmh-series-wall-single",
-      name: "LMH Series",
-      seriesId: "lbg-products-lmh-series",
-      brandId: "lbg-products",
-      modelNumber: "LMH Series",
-      normalizedModelNumber: "lmh-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 26400,
-      heatingCapacity5FMaxBtu: 36000,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 15600,
       seer2Min: 20,
-      seer2Max: 21.1,
-      hspf2Min: 9.2,
-      hspf2Max: 9.5,
-      cop5FMin: 1.68,
-      cop5FMax: 1.8,
+      seer2Max: 20.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.75,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-luh-series-wall-single-48000",
+      slug: "lbg-products-luh-series-wall-single-48000",
+      name: "LUH series 48 000 BTU",
+      seriesId: "lbg-products-luh-series",
+      brandId: "lbg-products",
+      modelNumber: "LUH series 48k",
+      normalizedModelNumber: "luh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 39500,
+      seer2Min: 16.8,
+      seer2Max: 18.9,
+      hspf2Min: 9.8,
+      hspf2Max: 10.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.98,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-48000",
+      slug: "lbg-products-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "lbg-products-standard",
+      brandId: "lbg-products",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
       status: "published",
@@ -196,22 +605,50 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single",
-      slug: "lbg-products-luh-series-wall-single",
-      name: "LUH series",
-      seriesId: "lbg-products-luh-series",
+      id: "lbg-products-lbh-series-wall-single-6000",
+      slug: "lbg-products-lbh-series-wall-single-6000",
+      name: "LBH series 6 000 BTU",
+      seriesId: "lbg-products-lbh-series",
       brandId: "lbg-products",
-      modelNumber: "LUH series",
-      normalizedModelNumber: "luh-series",
+      modelNumber: "LBH series 6k",
+      normalizedModelNumber: "lbh-series-6000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 7500,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 12,
+      hspf2Max: 12,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-luh-series-wall-single-36000",
+      slug: "lbg-products-luh-series-wall-single-36000",
+      name: "LUH series 36 000 BTU",
+      seriesId: "lbg-products-luh-series",
+      brandId: "lbg-products",
+      modelNumber: "LUH series 36k",
+      normalizedModelNumber: "luh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 29000,
-      heatingCapacity5FMaxBtu: 39500,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 34000,
       seer2Min: 16.5,
       seer2Max: 19.4,
-      hspf2Min: 9.8,
+      hspf2Min: 10,
       hspf2Max: 11,
       cop5FMin: 1.75,
       cop5FMax: 1.98,
@@ -222,24 +659,52 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lchb-series-central-ducted",
-      slug: "lbg-products-lchb-series-central-ducted",
-      name: "LCHB series",
-      seriesId: "lbg-products-lchb-series",
+      id: "lbg-products-standard-wall-single-18000",
+      slug: "lbg-products-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "lbg-products-standard",
       brandId: "lbg-products",
-      modelNumber: "LCHB series",
-      normalizedModelNumber: "lchb-series",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 35000,
-      heatingCapacity5FMinBtu: 14700,
-      heatingCapacity5FMaxBtu: 33000,
-      seer2Min: 15.2,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 13000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lchb-series-central-ducted-24000",
+      slug: "lbg-products-lchb-series-central-ducted-24000",
+      name: "LCHB series 24 000 BTU",
+      seriesId: "lbg-products-lchb-series",
+      brandId: "lbg-products",
+      modelNumber: "LCHB series 24k",
+      normalizedModelNumber: "lchb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 15.7,
       seer2Max: 17,
       hspf2Min: 9.2,
-      hspf2Max: 10,
-      cop5FMin: 1.85,
+      hspf2Max: 9.8,
+      cop5FMin: 1.95,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -248,25 +713,269 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lcuh-series-central-ducted",
-      slug: "lbg-products-lcuh-series-central-ducted",
-      name: "LCUH series",
-      seriesId: "lbg-products-lcuh-series",
+      id: "lbg-products-standard-wall-single-30000",
+      slug: "lbg-products-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "lbg-products-standard",
       brandId: "lbg-products",
-      modelNumber: "LCUH series",
-      normalizedModelNumber: "lcuh-series",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lchb-series-central-ducted-18000",
+      slug: "lbg-products-lchb-series-central-ducted-18000",
+      name: "LCHB series 18 000 BTU",
+      seriesId: "lbg-products-lchb-series",
+      brandId: "lbg-products",
+      modelNumber: "LCHB series 18k",
+      normalizedModelNumber: "lchb-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 16.1,
+      seer2Max: 16.1,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lchb-series-central-ducted-30000",
+      slug: "lbg-products-lchb-series-central-ducted-30000",
+      name: "LCHB series 30 000 BTU",
+      seriesId: "lbg-products-lchb-series",
+      brandId: "lbg-products",
+      modelNumber: "LCHB series 30k",
+      normalizedModelNumber: "lchb-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 22600,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 15.5,
+      seer2Max: 15.5,
+      hspf2Min: 9.7,
+      hspf2Max: 9.7,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lchb-series-central-ducted-36000",
+      slug: "lbg-products-lchb-series-central-ducted-36000",
+      name: "LCHB series 36 000 BTU",
+      seriesId: "lbg-products-lchb-series",
+      brandId: "lbg-products",
+      modelNumber: "LCHB series 36k",
+      normalizedModelNumber: "lchb-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-48000",
+      slug: "lbg-products-lcuh-series-central-ducted-48000",
+      name: "LCUH series 48 000 BTU",
+      seriesId: "lbg-products-lcuh-series",
+      brandId: "lbg-products",
+      modelNumber: "LCUH series 48k",
+      normalizedModelNumber: "lcuh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-60000",
+      slug: "lbg-products-lcuh-series-central-ducted-60000",
+      name: "LCUH series 60 000 BTU",
+      seriesId: "lbg-products-lcuh-series",
+      brandId: "lbg-products",
+      modelNumber: "LCUH series 60k",
+      normalizedModelNumber: "lcuh-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
       coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMinBtu: 37000,
       heatingCapacity5FMaxBtu: 42000,
       seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-18000",
+      slug: "lbg-products-lcuh-series-central-ducted-18000",
+      name: "LCUH series 18 000 BTU",
+      seriesId: "lbg-products-lcuh-series",
+      brandId: "lbg-products",
+      modelNumber: "LCUH series 18k",
+      normalizedModelNumber: "lcuh-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 13500,
+      seer2Min: 18,
       seer2Max: 18,
-      hspf2Min: 8.9,
-      hspf2Max: 10,
-      cop5FMin: 1.8,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 2.04,
       cop5FMax: 2.04,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-24000",
+      slug: "lbg-products-lcuh-series-central-ducted-24000",
+      name: "LCUH series 24 000 BTU",
+      seriesId: "lbg-products-lcuh-series",
+      brandId: "lbg-products",
+      modelNumber: "LCUH series 24k",
+      normalizedModelNumber: "lcuh-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-30000",
+      slug: "lbg-products-lcuh-series-central-ducted-30000",
+      name: "LCUH series 30 000 BTU",
+      seriesId: "lbg-products-lcuh-series",
+      brandId: "lbg-products",
+      modelNumber: "LCUH series 30k",
+      normalizedModelNumber: "lcuh-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.2,
+      seer2Max: 16.2,
+      hspf2Min: 8.9,
+      hspf2Max: 8.9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-36000",
+      slug: "lbg-products-lcuh-series-central-ducted-36000",
+      name: "LCUH series 36 000 BTU",
+      seriesId: "lbg-products-lcuh-series",
+      brandId: "lbg-products",
+      modelNumber: "LCUH series 36k",
+      normalizedModelNumber: "lcuh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.97,
+      cop5FMax: 1.97,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -282,38 +991,8 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lbh24dwo",
-      modelNumber: "LBH24DWO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lbh12ato",
-      modelNumber: "LBH12ATO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lbh24dto",
-      modelNumber: "LBH24DTO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
       id: "lbg-products-lbh36dto",
       modelNumber: "LBH36DTO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lbh12dto",
-      modelNumber: "LBH12DTO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lchb60do",
-      modelNumber: "LCHB60DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -324,32 +1003,14 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-luhb60do",
-      modelNumber: "LUHB60DO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lchb18do",
-      modelNumber: "LCHB18DO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lchb30do",
-      modelNumber: "LCHB30DO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
       id: "lbg-products-lchb36do",
       modelNumber: "LCHB36DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lchb48do",
-      modelNumber: "LCHB48DO",
+      id: "lbg-products-lbh24dwo",
+      modelNumber: "LBH24DWO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -366,26 +1027,8 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lbh18dto",
-      modelNumber: "LBH18DTO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
       id: "lbg-products-lbhb09dywo",
       modelNumber: "LBHB09DYWO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lbhb12dywo",
-      modelNumber: "LBHB12DYWO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lbhb18dywo",
-      modelNumber: "LBHB18DYWO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -396,8 +1039,32 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lbhb12duwo",
-      modelNumber: "LBHB12DUWO",
+      id: "lbg-products-lbhb09dvwo",
+      modelNumber: "LBHB09DVWO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lbh12ato",
+      modelNumber: "LBH12ATO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lbh12dto",
+      modelNumber: "LBH12DTO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lbh24dto",
+      modelNumber: "LBH24DTO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lbh18dto",
+      modelNumber: "LBH18DTO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -408,20 +1075,20 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lbhb24duwo",
-      modelNumber: "LBHB24DUWO",
+      id: "lbg-products-lbhb18dvwo",
+      modelNumber: "LBHB18DVWO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lbhb06dvwo",
-      modelNumber: "LBHB06DVWO",
+      id: "lbg-products-lbhb12dywo",
+      modelNumber: "LBHB12DYWO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lbhb09dvwo",
-      modelNumber: "LBHB09DVWO",
+      id: "lbg-products-lbhb12duwo",
+      modelNumber: "LBHB12DUWO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -432,8 +1099,14 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lbhb18dvwo",
-      modelNumber: "LBHB18DVWO",
+      id: "lbg-products-lbhb18dywo",
+      modelNumber: "LBHB18DYWO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lbhb24duwo",
+      modelNumber: "LBHB24DUWO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -450,32 +1123,20 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lmhb27do",
-      modelNumber: "LMHB27DO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
       id: "lbg-products-lmuhb18do",
       modelNumber: "LMUHB18DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
     {
+      id: "lbg-products-lmhb27do",
+      modelNumber: "LMHB27DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
       id: "lbg-products-lmuhb27do",
       modelNumber: "LMUHB27DO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lmuhb36do",
-      modelNumber: "LMUHB36DO",
-      brandId: "lbg-products",
-      refrigerant: null as any,
-    },
-    {
-      id: "lbg-products-lmuhb48do",
-      modelNumber: "LMUHB48DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -492,14 +1153,32 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-luhb48do",
-      modelNumber: "LUHB48DO",
+      id: "lbg-products-lmuhb36do",
+      modelNumber: "LMUHB36DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-luuhb36do",
-      modelNumber: "LUUHB36DO",
+      id: "lbg-products-lmuhb48do",
+      modelNumber: "LMUHB48DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lchb60do",
+      modelNumber: "LCHB60DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-luhb60do",
+      modelNumber: "LUHB60DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-luhb48do",
+      modelNumber: "LUHB48DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -510,20 +1189,50 @@ export const lbgproductsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "lbg-products-lchb48do",
+      modelNumber: "LCHB48DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lbhb06dvwo",
+      modelNumber: "LBHB06DVWO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-luuhb36do",
+      modelNumber: "LUUHB36DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lchb18do",
+      modelNumber: "LCHB18DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
       id: "lbg-products-lchb24do",
       modelNumber: "LCHB24DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lcuhb18do",
-      modelNumber: "LCUHB18DO",
+      id: "lbg-products-lcuhb24do",
+      modelNumber: "LCUHB24DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
     {
-      id: "lbg-products-lcuhb24do",
-      modelNumber: "LCUHB24DO",
+      id: "lbg-products-lchb30do",
+      modelNumber: "LCHB30DO",
+      brandId: "lbg-products",
+      refrigerant: null as any,
+    },
+    {
+      id: "lbg-products-lcuhb18do",
+      modelNumber: "LCUHB18DO",
       brandId: "lbg-products",
       refrigerant: null as any,
     },
@@ -557,9 +1266,9 @@ export const lbgproductsDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "lbg-products-standard-wall-single-cfg-1",
-      slug: "lbg-products-standard-wall-single-cfg-1",
-      modelId: "lbg-products-standard-wall-single",
+      id: "lbg-products-standard-wall-single-36000-cfg-1",
+      slug: "lbg-products-standard-wall-single-36000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-36000",
       outdoorUnitId: "lbg-products-lch24036do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -571,51 +1280,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-2",
-      slug: "lbg-products-standard-wall-single-cfg-2",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lbh24dwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-3",
-      slug: "lbg-products-standard-wall-single-cfg-3",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lbh12ato",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-4",
-      slug: "lbg-products-standard-wall-single-cfg-4",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lbh24dto",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-5",
-      slug: "lbg-products-standard-wall-single-cfg-5",
-      modelId: "lbg-products-standard-wall-single",
+      id: "lbg-products-standard-wall-single-36000-cfg-2",
+      slug: "lbg-products-standard-wall-single-36000-cfg-2",
+      modelId: "lbg-products-standard-wall-single-36000",
       outdoorUnitId: "lbg-products-lbh36dto",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -627,37 +1294,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-6",
-      slug: "lbg-products-standard-wall-single-cfg-6",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lbh12dto",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-7",
-      slug: "lbg-products-standard-wall-single-cfg-7",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb60do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-8",
-      slug: "lbg-products-standard-wall-single-cfg-8",
-      modelId: "lbg-products-standard-wall-single",
+      id: "lbg-products-standard-wall-single-36000-cfg-3",
+      slug: "lbg-products-standard-wall-single-36000-cfg-3",
+      modelId: "lbg-products-standard-wall-single-36000",
       outdoorUnitId: "lbg-products-luhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -669,9 +1308,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-9",
-      slug: "lbg-products-standard-wall-single-cfg-9",
-      modelId: "lbg-products-standard-wall-single",
+      id: "lbg-products-standard-wall-single-36000-cfg-4",
+      slug: "lbg-products-standard-wall-single-36000-cfg-4",
+      modelId: "lbg-products-standard-wall-single-36000",
       outdoorUnitId: "lbg-products-luhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -683,23 +1322,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-10",
-      slug: "lbg-products-standard-wall-single-cfg-10",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-luhb60do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 59000,
-      coolingCapacityMaxBtu: 59000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-11",
-      slug: "lbg-products-standard-wall-single-cfg-11",
-      modelId: "lbg-products-standard-wall-single",
+      id: "lbg-products-standard-wall-single-36000-cfg-5",
+      slug: "lbg-products-standard-wall-single-36000-cfg-5",
+      modelId: "lbg-products-standard-wall-single-36000",
       outdoorUnitId: "lbg-products-luhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -711,51 +1336,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-12",
-      slug: "lbg-products-standard-wall-single-cfg-12",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-luhb60do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-13",
-      slug: "lbg-products-standard-wall-single-cfg-13",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb18do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-14",
-      slug: "lbg-products-standard-wall-single-cfg-14",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb30do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-15",
-      slug: "lbg-products-standard-wall-single-cfg-15",
-      modelId: "lbg-products-standard-wall-single",
+      id: "lbg-products-standard-wall-single-36000-cfg-6",
+      slug: "lbg-products-standard-wall-single-36000-cfg-6",
+      modelId: "lbg-products-standard-wall-single-36000",
       outdoorUnitId: "lbg-products-lchb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -767,65 +1350,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-16",
-      slug: "lbg-products-standard-wall-single-cfg-16",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb48do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-17",
-      slug: "lbg-products-standard-wall-single-cfg-17",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb60do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-18",
-      slug: "lbg-products-standard-wall-single-cfg-18",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb18do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-19",
-      slug: "lbg-products-standard-wall-single-cfg-19",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb30do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-standard-wall-single-cfg-20",
-      slug: "lbg-products-standard-wall-single-cfg-20",
-      modelId: "lbg-products-standard-wall-single",
+      id: "lbg-products-standard-wall-single-36000-cfg-7",
+      slug: "lbg-products-standard-wall-single-36000-cfg-7",
+      modelId: "lbg-products-standard-wall-single-36000",
       outdoorUnitId: "lbg-products-lchb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -837,13 +1364,13 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-21",
-      slug: "lbg-products-standard-wall-single-cfg-21",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb48do",
+      id: "lbg-products-standard-wall-single-20000-cfg-1",
+      slug: "lbg-products-standard-wall-single-20000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-20000",
+      outdoorUnitId: "lbg-products-lbh24dwo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -851,23 +1378,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-standard-wall-single-cfg-22",
-      slug: "lbg-products-standard-wall-single-cfg-22",
-      modelId: "lbg-products-standard-wall-single",
-      outdoorUnitId: "lbg-products-lchb60do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-1",
-      slug: "lbg-products-lbh-series-wall-single-cfg-1",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-1",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-1",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbh09ato",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -879,9 +1392,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-2",
-      slug: "lbg-products-lbh-series-wall-single-cfg-2",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-2",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-2",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbh09dto",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -893,23 +1406,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-3",
-      slug: "lbg-products-lbh-series-wall-single-cfg-3",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbh18dto",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.5,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-4",
-      slug: "lbg-products-lbh-series-wall-single-cfg-4",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-3",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-3",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbhb09dywo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -921,37 +1420,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-5",
-      slug: "lbg-products-lbh-series-wall-single-cfg-5",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12dywo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 27.5,
-      hspf2: 14.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-6",
-      slug: "lbg-products-lbh-series-wall-single-cfg-6",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18dywo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-7",
-      slug: "lbg-products-lbh-series-wall-single-cfg-7",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-4",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-4",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbhb09duwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -963,51 +1434,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-8",
-      slug: "lbg-products-lbh-series-wall-single-cfg-8",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-9",
-      slug: "lbg-products-lbh-series-wall-single-cfg-9",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-10",
-      slug: "lbg-products-lbh-series-wall-single-cfg-10",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb24duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-11",
-      slug: "lbg-products-lbh-series-wall-single-cfg-11",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-5",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-5",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbhb09duwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1019,51 +1448,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-12",
-      slug: "lbg-products-lbh-series-wall-single-cfg-12",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.7,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-13",
-      slug: "lbg-products-lbh-series-wall-single-cfg-13",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-14",
-      slug: "lbg-products-lbh-series-wall-single-cfg-14",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb24duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-15",
-      slug: "lbg-products-lbh-series-wall-single-cfg-15",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-6",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-6",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbhb09duwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1075,107 +1462,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-16",
-      slug: "lbg-products-lbh-series-wall-single-cfg-16",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: 19,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-17",
-      slug: "lbg-products-lbh-series-wall-single-cfg-17",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-18",
-      slug: "lbg-products-lbh-series-wall-single-cfg-18",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb24duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 19,
-      hspf2: 11.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-19",
-      slug: "lbg-products-lbh-series-wall-single-cfg-19",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.7,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-20",
-      slug: "lbg-products-lbh-series-wall-single-cfg-20",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-21",
-      slug: "lbg-products-lbh-series-wall-single-cfg-21",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb24duwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.2,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-22",
-      slug: "lbg-products-lbh-series-wall-single-cfg-22",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb06dvwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 23.5,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-23",
-      slug: "lbg-products-lbh-series-wall-single-cfg-23",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-7",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-7",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbhb09dvwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1187,51 +1476,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-24",
-      slug: "lbg-products-lbh-series-wall-single-cfg-24",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12dvwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-25",
-      slug: "lbg-products-lbh-series-wall-single-cfg-25",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18dvwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-26",
-      slug: "lbg-products-lbh-series-wall-single-cfg-26",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb24dvwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 22.3,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-27",
-      slug: "lbg-products-lbh-series-wall-single-cfg-27",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-8",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-8",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbhb09dvwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1243,51 +1490,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-28",
-      slug: "lbg-products-lbh-series-wall-single-cfg-28",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12dvwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-29",
-      slug: "lbg-products-lbh-series-wall-single-cfg-29",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18dvwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-30",
-      slug: "lbg-products-lbh-series-wall-single-cfg-30",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb24dvwo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lbh-series-wall-single-cfg-31",
-      slug: "lbg-products-lbh-series-wall-single-cfg-31",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-9000-cfg-9",
+      slug: "lbg-products-lbh-series-wall-single-9000-cfg-9",
+      modelId: "lbg-products-lbh-series-wall-single-9000",
       outdoorUnitId: "lbg-products-lbhb09dvwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1299,23 +1504,121 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-32",
-      slug: "lbg-products-lbh-series-wall-single-cfg-32",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb12dvwo",
+      id: "lbg-products-standard-wall-single-12000-cfg-1",
+      slug: "lbg-products-standard-wall-single-12000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbh12ato",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-12000-cfg-2",
+      slug: "lbg-products-standard-wall-single-12000-cfg-2",
+      modelId: "lbg-products-standard-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbh12dto",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-24000-cfg-1",
+      slug: "lbg-products-standard-wall-single-24000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbh24dto",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-18000-cfg-1",
+      slug: "lbg-products-lbh-series-wall-single-18000-cfg-1",
+      modelId: "lbg-products-lbh-series-wall-single-18000",
+      outdoorUnitId: "lbg-products-lbh18dto",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-18000-cfg-2",
+      slug: "lbg-products-lbh-series-wall-single-18000-cfg-2",
+      modelId: "lbg-products-lbh-series-wall-single-18000",
+      outdoorUnitId: "lbg-products-lbhb18duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-18000-cfg-3",
+      slug: "lbg-products-lbh-series-wall-single-18000-cfg-3",
+      modelId: "lbg-products-lbh-series-wall-single-18000",
+      outdoorUnitId: "lbg-products-lbhb18duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-18000-cfg-4",
+      slug: "lbg-products-lbh-series-wall-single-18000-cfg-4",
+      modelId: "lbg-products-lbh-series-wall-single-18000",
+      outdoorUnitId: "lbg-products-lbhb18duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
       hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-33",
-      slug: "lbg-products-lbh-series-wall-single-cfg-33",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-18000-cfg-5",
+      slug: "lbg-products-lbh-series-wall-single-18000-cfg-5",
+      modelId: "lbg-products-lbh-series-wall-single-18000",
+      outdoorUnitId: "lbg-products-lbhb18dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-18000-cfg-6",
+      slug: "lbg-products-lbh-series-wall-single-18000-cfg-6",
+      modelId: "lbg-products-lbh-series-wall-single-18000",
       outdoorUnitId: "lbg-products-lbhb18dvwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1327,23 +1630,135 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-34",
-      slug: "lbg-products-lbh-series-wall-single-cfg-34",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb24dvwo",
+      id: "lbg-products-lbh-series-wall-single-18000-cfg-7",
+      slug: "lbg-products-lbh-series-wall-single-18000-cfg-7",
+      modelId: "lbg-products-lbh-series-wall-single-18000",
+      outdoorUnitId: "lbg-products-lbhb18dvwo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.2,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-1",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-1",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12dywo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 27.5,
+      hspf2: 14.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-2",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-2",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-3",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-3",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.7,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-4",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-4",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-5",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-5",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.7,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-6",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-6",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
       hspf2: 10.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-35",
-      slug: "lbg-products-lbh-series-wall-single-cfg-35",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-7",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-7",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-8",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-8",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
+      outdoorUnitId: "lbg-products-lbhb12dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-12000-cfg-9",
+      slug: "lbg-products-lbh-series-wall-single-12000-cfg-9",
+      modelId: "lbg-products-lbh-series-wall-single-12000",
       outdoorUnitId: "lbg-products-lbhb12dvwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1355,23 +1770,121 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-36",
-      slug: "lbg-products-lbh-series-wall-single-cfg-36",
-      modelId: "lbg-products-lbh-series-wall-single",
-      outdoorUnitId: "lbg-products-lbhb18dvwo",
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-1",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-1",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb18dywo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lbh-series-wall-single-cfg-37",
-      slug: "lbg-products-lbh-series-wall-single-cfg-37",
-      modelId: "lbg-products-lbh-series-wall-single",
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-2",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-2",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb24duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-3",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-3",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb24duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-4",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-4",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb24duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 19,
+      hspf2: 11.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-5",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-5",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb24duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-6",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-6",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb24dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-7",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-7",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb24dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-8",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-8",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
+      outdoorUnitId: "lbg-products-lbhb24dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-24000-cfg-9",
+      slug: "lbg-products-lbh-series-wall-single-24000-cfg-9",
+      modelId: "lbg-products-lbh-series-wall-single-24000",
       outdoorUnitId: "lbg-products-lbhb24dvwo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1383,9 +1896,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-1",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-1",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-18000-cfg-1",
+      slug: "lbg-products-lmhb18do-wall-single-18000-cfg-1",
+      modelId: "lbg-products-lmhb18do-wall-single-18000",
       outdoorUnitId: "lbg-products-lmhb18do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1397,9 +1910,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-2",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-2",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-18000-cfg-2",
+      slug: "lbg-products-lmhb18do-wall-single-18000-cfg-2",
+      modelId: "lbg-products-lmhb18do-wall-single-18000",
       outdoorUnitId: "lbg-products-lmhb18do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1411,9 +1924,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-3",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-3",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-18000-cfg-3",
+      slug: "lbg-products-lmhb18do-wall-single-18000-cfg-3",
+      modelId: "lbg-products-lmhb18do-wall-single-18000",
       outdoorUnitId: "lbg-products-lmhb18do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1425,51 +1938,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-4",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-4",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmhb27do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single-cfg-5",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-5",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmhb27do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single-cfg-6",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-6",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmhb27do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 22.25,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single-cfg-7",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-7",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-18000-cfg-4",
+      slug: "lbg-products-lmhb18do-wall-single-18000-cfg-4",
+      modelId: "lbg-products-lmhb18do-wall-single-18000",
       outdoorUnitId: "lbg-products-lmuhb18do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1481,9 +1952,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-8",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-8",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-18000-cfg-5",
+      slug: "lbg-products-lmhb18do-wall-single-18000-cfg-5",
+      modelId: "lbg-products-lmhb18do-wall-single-18000",
       outdoorUnitId: "lbg-products-lmuhb18do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1495,9 +1966,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-9",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-9",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-18000-cfg-6",
+      slug: "lbg-products-lmhb18do-wall-single-18000-cfg-6",
+      modelId: "lbg-products-lmhb18do-wall-single-18000",
       outdoorUnitId: "lbg-products-lmuhb18do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1509,9 +1980,37 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-10",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-10",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-30000-cfg-1",
+      slug: "lbg-products-lmhb18do-wall-single-30000-cfg-1",
+      modelId: "lbg-products-lmhb18do-wall-single-30000",
+      outdoorUnitId: "lbg-products-lmhb27do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-30000-cfg-2",
+      slug: "lbg-products-lmhb18do-wall-single-30000-cfg-2",
+      modelId: "lbg-products-lmhb18do-wall-single-30000",
+      outdoorUnitId: "lbg-products-lmhb27do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-30000-cfg-3",
+      slug: "lbg-products-lmhb18do-wall-single-30000-cfg-3",
+      modelId: "lbg-products-lmhb18do-wall-single-30000",
       outdoorUnitId: "lbg-products-lmuhb27do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1523,9 +2022,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-11",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-11",
-      modelId: "lbg-products-lmhb18do-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-30000-cfg-4",
+      slug: "lbg-products-lmhb18do-wall-single-30000-cfg-4",
+      modelId: "lbg-products-lmhb18do-wall-single-30000",
       outdoorUnitId: "lbg-products-lmuhb27do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1537,93 +2036,23 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-12",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-12",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmuhb36do",
+      id: "lbg-products-lmhb18do-wall-single-24000-cfg-1",
+      slug: "lbg-products-lmhb18do-wall-single-24000-cfg-1",
+      modelId: "lbg-products-lmhb18do-wall-single-24000",
+      outdoorUnitId: "lbg-products-lmhb27do",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmhb18do-wall-single-cfg-13",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-13",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmuhb36do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single-cfg-14",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-14",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmuhb36do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.5,
-      hspf2: 9.85,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single-cfg-15",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-15",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmuhb48do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.2,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single-cfg-16",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-16",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmuhb48do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmhb18do-wall-single-cfg-17",
-      slug: "lbg-products-lmhb18do-wall-single-cfg-17",
-      modelId: "lbg-products-lmhb18do-wall-single",
-      outdoorUnitId: "lbg-products-lmuhb48do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.05,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lmh-series-wall-single-cfg-1",
-      slug: "lbg-products-lmh-series-wall-single-cfg-1",
-      modelId: "lbg-products-lmh-series-wall-single",
+      id: "lbg-products-lmh-series-wall-single-36000-cfg-1",
+      slug: "lbg-products-lmh-series-wall-single-36000-cfg-1",
+      modelId: "lbg-products-lmh-series-wall-single-36000",
       outdoorUnitId: "lbg-products-lmhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1635,9 +2064,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmh-series-wall-single-cfg-2",
-      slug: "lbg-products-lmh-series-wall-single-cfg-2",
-      modelId: "lbg-products-lmh-series-wall-single",
+      id: "lbg-products-lmh-series-wall-single-48000-cfg-1",
+      slug: "lbg-products-lmh-series-wall-single-48000-cfg-1",
+      modelId: "lbg-products-lmh-series-wall-single-48000",
       outdoorUnitId: "lbg-products-lmhb48do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1649,9 +2078,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmh-series-wall-single-cfg-3",
-      slug: "lbg-products-lmh-series-wall-single-cfg-3",
-      modelId: "lbg-products-lmh-series-wall-single",
+      id: "lbg-products-lmh-series-wall-single-48000-cfg-2",
+      slug: "lbg-products-lmh-series-wall-single-48000-cfg-2",
+      modelId: "lbg-products-lmh-series-wall-single-48000",
       outdoorUnitId: "lbg-products-lmhb48do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1663,9 +2092,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lmh-series-wall-single-cfg-4",
-      slug: "lbg-products-lmh-series-wall-single-cfg-4",
-      modelId: "lbg-products-lmh-series-wall-single",
+      id: "lbg-products-lmh-series-wall-single-48000-cfg-3",
+      slug: "lbg-products-lmh-series-wall-single-48000-cfg-3",
+      modelId: "lbg-products-lmh-series-wall-single-48000",
       outdoorUnitId: "lbg-products-lmhb48do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1677,9 +2106,163 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single-cfg-1",
-      slug: "lbg-products-luh-series-wall-single-cfg-1",
-      modelId: "lbg-products-luh-series-wall-single",
+      id: "lbg-products-lmhb18do-wall-single-36000-cfg-1",
+      slug: "lbg-products-lmhb18do-wall-single-36000-cfg-1",
+      modelId: "lbg-products-lmhb18do-wall-single-36000",
+      outdoorUnitId: "lbg-products-lmuhb36do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-36000-cfg-2",
+      slug: "lbg-products-lmhb18do-wall-single-36000-cfg-2",
+      modelId: "lbg-products-lmhb18do-wall-single-36000",
+      outdoorUnitId: "lbg-products-lmuhb36do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-36000-cfg-3",
+      slug: "lbg-products-lmhb18do-wall-single-36000-cfg-3",
+      modelId: "lbg-products-lmhb18do-wall-single-36000",
+      outdoorUnitId: "lbg-products-lmuhb36do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.5,
+      hspf2: 9.85,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-48000-cfg-1",
+      slug: "lbg-products-lmhb18do-wall-single-48000-cfg-1",
+      modelId: "lbg-products-lmhb18do-wall-single-48000",
+      outdoorUnitId: "lbg-products-lmuhb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-48000-cfg-2",
+      slug: "lbg-products-lmhb18do-wall-single-48000-cfg-2",
+      modelId: "lbg-products-lmhb18do-wall-single-48000",
+      outdoorUnitId: "lbg-products-lmuhb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lmhb18do-wall-single-48000-cfg-3",
+      slug: "lbg-products-lmhb18do-wall-single-48000-cfg-3",
+      modelId: "lbg-products-lmhb18do-wall-single-48000",
+      outdoorUnitId: "lbg-products-lmuhb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.05,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-60000-cfg-1",
+      slug: "lbg-products-standard-wall-single-60000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-60000",
+      outdoorUnitId: "lbg-products-lchb60do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-60000-cfg-2",
+      slug: "lbg-products-standard-wall-single-60000-cfg-2",
+      modelId: "lbg-products-standard-wall-single-60000",
+      outdoorUnitId: "lbg-products-luhb60do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 59000,
+      coolingCapacityMaxBtu: 59000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-60000-cfg-3",
+      slug: "lbg-products-standard-wall-single-60000-cfg-3",
+      modelId: "lbg-products-standard-wall-single-60000",
+      outdoorUnitId: "lbg-products-lchb60do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-15000-cfg-1",
+      slug: "lbg-products-lbh-series-wall-single-15000-cfg-1",
+      modelId: "lbg-products-lbh-series-wall-single-15000",
+      outdoorUnitId: "lbg-products-lbhb18duwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-15000-cfg-2",
+      slug: "lbg-products-lbh-series-wall-single-15000-cfg-2",
+      modelId: "lbg-products-lbh-series-wall-single-15000",
+      outdoorUnitId: "lbg-products-lbhb18dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-luh-series-wall-single-48000-cfg-1",
+      slug: "lbg-products-luh-series-wall-single-48000-cfg-1",
+      modelId: "lbg-products-luh-series-wall-single-48000",
       outdoorUnitId: "lbg-products-luhb48do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1691,9 +2274,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single-cfg-2",
-      slug: "lbg-products-luh-series-wall-single-cfg-2",
-      modelId: "lbg-products-luh-series-wall-single",
+      id: "lbg-products-luh-series-wall-single-48000-cfg-2",
+      slug: "lbg-products-luh-series-wall-single-48000-cfg-2",
+      modelId: "lbg-products-luh-series-wall-single-48000",
       outdoorUnitId: "lbg-products-luhb48do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1705,9 +2288,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single-cfg-3",
-      slug: "lbg-products-luh-series-wall-single-cfg-3",
-      modelId: "lbg-products-luh-series-wall-single",
+      id: "lbg-products-luh-series-wall-single-48000-cfg-3",
+      slug: "lbg-products-luh-series-wall-single-48000-cfg-3",
+      modelId: "lbg-products-luh-series-wall-single-48000",
       outdoorUnitId: "lbg-products-luhb48do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1719,9 +2302,121 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single-cfg-4",
-      slug: "lbg-products-luh-series-wall-single-cfg-4",
-      modelId: "lbg-products-luh-series-wall-single",
+      id: "lbg-products-luh-series-wall-single-48000-cfg-4",
+      slug: "lbg-products-luh-series-wall-single-48000-cfg-4",
+      modelId: "lbg-products-luh-series-wall-single-48000",
+      outdoorUnitId: "lbg-products-luuhb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.8,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-luh-series-wall-single-48000-cfg-5",
+      slug: "lbg-products-luh-series-wall-single-48000-cfg-5",
+      modelId: "lbg-products-luh-series-wall-single-48000",
+      outdoorUnitId: "lbg-products-luuhb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.8,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-luh-series-wall-single-48000-cfg-6",
+      slug: "lbg-products-luh-series-wall-single-48000-cfg-6",
+      modelId: "lbg-products-luh-series-wall-single-48000",
+      outdoorUnitId: "lbg-products-luuhb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-48000-cfg-1",
+      slug: "lbg-products-standard-wall-single-48000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-48000",
+      outdoorUnitId: "lbg-products-luhb60do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-48000-cfg-2",
+      slug: "lbg-products-standard-wall-single-48000-cfg-2",
+      modelId: "lbg-products-standard-wall-single-48000",
+      outdoorUnitId: "lbg-products-lchb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-48000-cfg-3",
+      slug: "lbg-products-standard-wall-single-48000-cfg-3",
+      modelId: "lbg-products-standard-wall-single-48000",
+      outdoorUnitId: "lbg-products-lchb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-48000-cfg-4",
+      slug: "lbg-products-standard-wall-single-48000-cfg-4",
+      modelId: "lbg-products-standard-wall-single-48000",
+      outdoorUnitId: "lbg-products-lchb60do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lbh-series-wall-single-6000-cfg-1",
+      slug: "lbg-products-lbh-series-wall-single-6000-cfg-1",
+      modelId: "lbg-products-lbh-series-wall-single-6000",
+      outdoorUnitId: "lbg-products-lbhb06dvwo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 23.5,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-luh-series-wall-single-36000-cfg-1",
+      slug: "lbg-products-luh-series-wall-single-36000-cfg-1",
+      modelId: "lbg-products-luh-series-wall-single-36000",
       outdoorUnitId: "lbg-products-luuhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1733,23 +2428,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single-cfg-5",
-      slug: "lbg-products-luh-series-wall-single-cfg-5",
-      modelId: "lbg-products-luh-series-wall-single",
-      outdoorUnitId: "lbg-products-luuhb48do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.8,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-luh-series-wall-single-cfg-6",
-      slug: "lbg-products-luh-series-wall-single-cfg-6",
-      modelId: "lbg-products-luh-series-wall-single",
+      id: "lbg-products-luh-series-wall-single-36000-cfg-2",
+      slug: "lbg-products-luh-series-wall-single-36000-cfg-2",
+      modelId: "lbg-products-luh-series-wall-single-36000",
       outdoorUnitId: "lbg-products-luuhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1761,23 +2442,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single-cfg-7",
-      slug: "lbg-products-luh-series-wall-single-cfg-7",
-      modelId: "lbg-products-luh-series-wall-single",
-      outdoorUnitId: "lbg-products-luuhb48do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.8,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-luh-series-wall-single-cfg-8",
-      slug: "lbg-products-luh-series-wall-single-cfg-8",
-      modelId: "lbg-products-luh-series-wall-single",
+      id: "lbg-products-luh-series-wall-single-36000-cfg-3",
+      slug: "lbg-products-luh-series-wall-single-36000-cfg-3",
+      modelId: "lbg-products-luh-series-wall-single-36000",
       outdoorUnitId: "lbg-products-luuhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1789,23 +2456,37 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-luh-series-wall-single-cfg-9",
-      slug: "lbg-products-luh-series-wall-single-cfg-9",
-      modelId: "lbg-products-luh-series-wall-single",
-      outdoorUnitId: "lbg-products-luuhb48do",
+      id: "lbg-products-standard-wall-single-18000-cfg-1",
+      slug: "lbg-products-standard-wall-single-18000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-18000",
+      outdoorUnitId: "lbg-products-lchb18do",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lchb-series-central-ducted-cfg-1",
-      slug: "lbg-products-lchb-series-central-ducted-cfg-1",
-      modelId: "lbg-products-lchb-series-central-ducted",
+      id: "lbg-products-standard-wall-single-18000-cfg-2",
+      slug: "lbg-products-standard-wall-single-18000-cfg-2",
+      modelId: "lbg-products-standard-wall-single-18000",
+      outdoorUnitId: "lbg-products-lchb18do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lchb-series-central-ducted-24000-cfg-1",
+      slug: "lbg-products-lchb-series-central-ducted-24000-cfg-1",
+      modelId: "lbg-products-lchb-series-central-ducted-24000",
       outdoorUnitId: "lbg-products-lchb24do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1817,9 +2498,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lchb-series-central-ducted-cfg-2",
-      slug: "lbg-products-lchb-series-central-ducted-cfg-2",
-      modelId: "lbg-products-lchb-series-central-ducted",
+      id: "lbg-products-lchb-series-central-ducted-24000-cfg-2",
+      slug: "lbg-products-lchb-series-central-ducted-24000-cfg-2",
+      modelId: "lbg-products-lchb-series-central-ducted-24000",
       outdoorUnitId: "lbg-products-lchb24do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1831,23 +2512,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lchb-series-central-ducted-cfg-3",
-      slug: "lbg-products-lchb-series-central-ducted-cfg-3",
-      modelId: "lbg-products-lchb-series-central-ducted",
-      outdoorUnitId: "lbg-products-lcuhb18do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lchb-series-central-ducted-cfg-4",
-      slug: "lbg-products-lchb-series-central-ducted-cfg-4",
-      modelId: "lbg-products-lchb-series-central-ducted",
+      id: "lbg-products-lchb-series-central-ducted-24000-cfg-3",
+      slug: "lbg-products-lchb-series-central-ducted-24000-cfg-3",
+      modelId: "lbg-products-lchb-series-central-ducted-24000",
       outdoorUnitId: "lbg-products-lcuhb24do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1859,9 +2526,51 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lchb-series-central-ducted-cfg-5",
-      slug: "lbg-products-lchb-series-central-ducted-cfg-5",
-      modelId: "lbg-products-lchb-series-central-ducted",
+      id: "lbg-products-standard-wall-single-30000-cfg-1",
+      slug: "lbg-products-standard-wall-single-30000-cfg-1",
+      modelId: "lbg-products-standard-wall-single-30000",
+      outdoorUnitId: "lbg-products-lchb30do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-standard-wall-single-30000-cfg-2",
+      slug: "lbg-products-standard-wall-single-30000-cfg-2",
+      modelId: "lbg-products-standard-wall-single-30000",
+      outdoorUnitId: "lbg-products-lchb30do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lchb-series-central-ducted-18000-cfg-1",
+      slug: "lbg-products-lchb-series-central-ducted-18000-cfg-1",
+      modelId: "lbg-products-lchb-series-central-ducted-18000",
+      outdoorUnitId: "lbg-products-lcuhb18do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lchb-series-central-ducted-30000-cfg-1",
+      slug: "lbg-products-lchb-series-central-ducted-30000-cfg-1",
+      modelId: "lbg-products-lchb-series-central-ducted-30000",
       outdoorUnitId: "lbg-products-lcuhb30do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1873,9 +2582,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lchb-series-central-ducted-cfg-6",
-      slug: "lbg-products-lchb-series-central-ducted-cfg-6",
-      modelId: "lbg-products-lchb-series-central-ducted",
+      id: "lbg-products-lchb-series-central-ducted-36000-cfg-1",
+      slug: "lbg-products-lchb-series-central-ducted-36000-cfg-1",
+      modelId: "lbg-products-lchb-series-central-ducted-36000",
       outdoorUnitId: "lbg-products-lcuhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1887,9 +2596,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-1",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-1",
-      modelId: "lbg-products-lcuh-series-central-ducted",
+      id: "lbg-products-lcuh-series-central-ducted-48000-cfg-1",
+      slug: "lbg-products-lcuh-series-central-ducted-48000-cfg-1",
+      modelId: "lbg-products-lcuh-series-central-ducted-48000",
       outdoorUnitId: "lbg-products-lcuhb48do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1901,9 +2610,23 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-2",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-2",
-      modelId: "lbg-products-lcuh-series-central-ducted",
+      id: "lbg-products-lcuh-series-central-ducted-48000-cfg-2",
+      slug: "lbg-products-lcuh-series-central-ducted-48000-cfg-2",
+      modelId: "lbg-products-lcuh-series-central-ducted-48000",
+      outdoorUnitId: "lbg-products-lcuhb48do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-60000-cfg-1",
+      slug: "lbg-products-lcuh-series-central-ducted-60000-cfg-1",
+      modelId: "lbg-products-lcuh-series-central-ducted-60000",
       outdoorUnitId: "lbg-products-lcuhb60do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1915,9 +2638,23 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-3",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-3",
-      modelId: "lbg-products-lcuh-series-central-ducted",
+      id: "lbg-products-lcuh-series-central-ducted-60000-cfg-2",
+      slug: "lbg-products-lcuh-series-central-ducted-60000-cfg-2",
+      modelId: "lbg-products-lcuh-series-central-ducted-60000",
+      outdoorUnitId: "lbg-products-lcuhb60do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "lbg-products-lcuh-series-central-ducted-18000-cfg-1",
+      slug: "lbg-products-lcuh-series-central-ducted-18000-cfg-1",
+      modelId: "lbg-products-lcuh-series-central-ducted-18000",
       outdoorUnitId: "lbg-products-lcuhb18do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1929,9 +2666,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-4",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-4",
-      modelId: "lbg-products-lcuh-series-central-ducted",
+      id: "lbg-products-lcuh-series-central-ducted-24000-cfg-1",
+      slug: "lbg-products-lcuh-series-central-ducted-24000-cfg-1",
+      modelId: "lbg-products-lcuh-series-central-ducted-24000",
       outdoorUnitId: "lbg-products-lcuhb24do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1943,9 +2680,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-5",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-5",
-      modelId: "lbg-products-lcuh-series-central-ducted",
+      id: "lbg-products-lcuh-series-central-ducted-30000-cfg-1",
+      slug: "lbg-products-lcuh-series-central-ducted-30000-cfg-1",
+      modelId: "lbg-products-lcuh-series-central-ducted-30000",
       outdoorUnitId: "lbg-products-lcuhb30do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1957,9 +2694,9 @@ export const lbgproductsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-6",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-6",
-      modelId: "lbg-products-lcuh-series-central-ducted",
+      id: "lbg-products-lcuh-series-central-ducted-36000-cfg-1",
+      slug: "lbg-products-lcuh-series-central-ducted-36000-cfg-1",
+      modelId: "lbg-products-lcuh-series-central-ducted-36000",
       outdoorUnitId: "lbg-products-lcuhb36do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1969,39 +2706,11 @@ export const lbgproductsDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-7",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-7",
-      modelId: "lbg-products-lcuh-series-central-ducted",
-      outdoorUnitId: "lbg-products-lcuhb48do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "lbg-products-lcuh-series-central-ducted-cfg-8",
-      slug: "lbg-products-lcuh-series-central-ducted-cfg-8",
-      modelId: "lbg-products-lcuh-series-central-ducted",
-      outdoorUnitId: "lbg-products-lcuhb60do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-1",
+      configurationId: "lbg-products-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2012,40 +2721,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-5",
+      configurationId: "lbg-products-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2056,29 +2732,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-8",
+      configurationId: "lbg-products-standard-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2089,7 +2743,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-9",
+      configurationId: "lbg-products-standard-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2100,18 +2754,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-11",
+      configurationId: "lbg-products-standard-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2122,40 +2765,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-15",
+      configurationId: "lbg-products-standard-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2166,51 +2776,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-standard-wall-single-cfg-20",
+      configurationId: "lbg-products-standard-wall-single-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2221,29 +2787,18 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-21",
+      configurationId: "lbg-products-standard-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
+          heatingCapacityBtu: 14600,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "lbg-products-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-1",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2254,7 +2809,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-2",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2265,18 +2820,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-4",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2287,29 +2831,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-7",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2320,40 +2842,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2.41,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.44,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-11",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2364,40 +2853,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8900,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-15",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2408,84 +2864,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 2.26,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 2.26,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: 2.08,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-23",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2496,40 +2875,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11100,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18900,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-27",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2540,40 +2886,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-31",
+      configurationId: "lbg-products-lbh-series-wall-single-9000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2584,18 +2897,95 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-32",
+      configurationId: "lbg-products-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
+          heatingCapacityBtu: 7800,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-33",
+      configurationId: "lbg-products-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: 2.08,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2606,29 +2996,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-36",
+      configurationId: "lbg-products-lbh-series-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2639,7 +3007,194 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lbh-series-wall-single-cfg-37",
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2.41,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 2.26,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.26,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-24000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2650,7 +3205,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-1",
+      configurationId: "lbg-products-lmhb18do-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2661,7 +3216,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-2",
+      configurationId: "lbg-products-lmhb18do-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2672,7 +3227,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-3",
+      configurationId: "lbg-products-lmhb18do-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2683,40 +3238,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-7",
+      configurationId: "lbg-products-lmhb18do-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2727,7 +3249,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-8",
+      configurationId: "lbg-products-lmhb18do-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2738,7 +3260,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-9",
+      configurationId: "lbg-products-lmhb18do-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2749,7 +3271,29 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-10",
+      configurationId: "lbg-products-lmhb18do-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lmhb18do-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lmhb18do-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2760,7 +3304,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-11",
+      configurationId: "lbg-products-lmhb18do-wall-single-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2771,73 +3315,18 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-12",
+      configurationId: "lbg-products-lmhb18do-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.7,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
+          heatingCapacityBtu: 20000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmhb18do-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lmh-series-wall-single-cfg-1",
+      configurationId: "lbg-products-lmh-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2848,7 +3337,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmh-series-wall-single-cfg-2",
+      configurationId: "lbg-products-lmh-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2859,7 +3348,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmh-series-wall-single-cfg-3",
+      configurationId: "lbg-products-lmh-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2870,7 +3359,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lmh-series-wall-single-cfg-4",
+      configurationId: "lbg-products-lmh-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2881,7 +3370,128 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-1",
+      configurationId: "lbg-products-lmhb18do-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lmhb18do-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.7,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lmhb18do-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lmhb18do-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lmhb18do-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lmhb18do-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-luh-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2892,7 +3502,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-2",
+      configurationId: "lbg-products-luh-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2903,7 +3513,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-3",
+      configurationId: "lbg-products-luh-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2914,18 +3524,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-5",
+      configurationId: "lbg-products-luh-series-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2936,18 +3535,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-7",
+      configurationId: "lbg-products-luh-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2958,18 +3546,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-luh-series-wall-single-cfg-9",
+      configurationId: "lbg-products-luh-series-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2980,7 +3557,117 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lchb-series-central-ducted-cfg-1",
+      configurationId: "lbg-products-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lbh-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-luh-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-luh-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-luh-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lchb-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2991,7 +3678,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lchb-series-central-ducted-cfg-2",
+      configurationId: "lbg-products-lchb-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3002,18 +3689,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lchb-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lchb-series-central-ducted-cfg-4",
+      configurationId: "lbg-products-lchb-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3024,7 +3700,40 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lchb-series-central-ducted-cfg-5",
+      configurationId: "lbg-products-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lchb-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lchb-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3035,7 +3744,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lchb-series-central-ducted-cfg-6",
+      configurationId: "lbg-products-lchb-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3046,7 +3755,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-1",
+      configurationId: "lbg-products-lcuh-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3057,62 +3766,7 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-7",
+      configurationId: "lbg-products-lcuh-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3123,12 +3777,67 @@ export const lbgproductsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "lbg-products-lcuh-series-central-ducted-cfg-8",
+      configurationId: "lbg-products-lcuh-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lcuh-series-central-ducted-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 42000,
           cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lcuh-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lcuh-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lcuh-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "lbg-products-lcuh-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
           confidence: "verified",
         }
       ]

@@ -26,15 +26,16 @@ export const concertoDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "concerto-standard-wall-single",
-      slug: "concerto-standard-wall-single",
-      name: "Standard",
+      id: "concerto-standard-wall-single-12000",
+      slug: "concerto-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "concerto-standard",
       brandId: "concerto",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 8400,
@@ -65,9 +66,9 @@ export const concertoDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "concerto-standard-wall-single-cfg-1",
-      slug: "concerto-standard-wall-single-cfg-1",
-      modelId: "concerto-standard-wall-single",
+      id: "concerto-standard-wall-single-12000-cfg-1",
+      slug: "concerto-standard-wall-single-12000-cfg-1",
+      modelId: "concerto-standard-wall-single-12000",
       outdoorUnitId: "concerto-mob30-12hfn1-mv0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -81,7 +82,7 @@ export const concertoDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "concerto-standard-wall-single-cfg-1",
+      configurationId: "concerto-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

@@ -136,19 +136,20 @@ export const perfectaireDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "perfectaire-standard-wall-single",
-      slug: "perfectaire-standard-wall-single",
-      name: "Standard",
+      id: "perfectaire-standard-wall-single-9000",
+      slug: "perfectaire-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "perfectaire-standard",
       brandId: "perfectaire",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6900,
-      heatingCapacity5FMaxBtu: 36400,
+      heatingCapacity5FMaxBtu: 7200,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -162,24 +163,187 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hiultra-wall-single",
-      slug: "perfectaire-hiultra-wall-single",
-      name: "HiULTRA",
-      seriesId: "perfectaire-hiultra",
+      id: "perfectaire-standard-wall-single-12000",
+      slug: "perfectaire-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "perfectaire-standard",
       brandId: "perfectaire",
-      modelNumber: "HiULTRA",
-      normalizedModelNumber: "hiultra",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7700,
+      heatingCapacity5FMaxBtu: 8700,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-24000",
+      slug: "perfectaire-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "perfectaire-standard",
+      brandId: "perfectaire",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 15400,
+      heatingCapacity5FMaxBtu: 15400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-48000",
+      slug: "perfectaire-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "perfectaire-standard",
+      brandId: "perfectaire",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 28000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-30000",
+      slug: "perfectaire-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "perfectaire-standard",
+      brandId: "perfectaire",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-18000",
+      slug: "perfectaire-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "perfectaire-standard",
+      brandId: "perfectaire",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-36000",
+      slug: "perfectaire-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "perfectaire-standard",
+      brandId: "perfectaire",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23200,
+      heatingCapacity5FMaxBtu: 24600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-hiultra-wall-single-9000",
+      slug: "perfectaire-hiultra-wall-single-9000",
+      name: "HiULTRA 9 000 BTU",
+      seriesId: "perfectaire-hiultra",
+      brandId: "perfectaire",
+      modelNumber: "HiULTRA 9k",
+      normalizedModelNumber: "hiultra-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 23000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 5000,
-      heatingCapacity5FMaxBtu: 14500,
+      heatingCapacity5FMaxBtu: 5000,
       seer2Min: 18.5,
-      seer2Max: 22.5,
-      hspf2Min: 8.6,
-      hspf2Max: 9.5,
-      cop5FMin: 1.75,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -188,24 +352,133 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-karda-wall-single",
-      slug: "perfectaire-karda-wall-single",
-      name: "KARDA",
-      seriesId: "perfectaire-karda",
+      id: "perfectaire-hiultra-wall-single-12000",
+      slug: "perfectaire-hiultra-wall-single-12000",
+      name: "HiULTRA 12 000 BTU",
+      seriesId: "perfectaire-hiultra",
       brandId: "perfectaire",
-      modelNumber: "KARDA",
-      normalizedModelNumber: "karda",
+      modelNumber: "HiULTRA 12k",
+      normalizedModelNumber: "hiultra-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 15000,
-      heatingCapacity5FMaxBtu: 21000,
-      seer2Min: 18,
-      seer2Max: 19.2,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 7500,
+      seer2Min: 21.7,
+      seer2Max: 21.7,
       hspf2Min: 9.5,
-      hspf2Max: 10.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-hiultra-wall-single-18000",
+      slug: "perfectaire-hiultra-wall-single-18000",
+      name: "HiULTRA 18 000 BTU",
+      seriesId: "perfectaire-hiultra",
+      brandId: "perfectaire",
+      modelNumber: "HiULTRA 18k",
+      normalizedModelNumber: "hiultra-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11600,
+      heatingCapacity5FMaxBtu: 11600,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-hiultra-wall-single-24000",
+      slug: "perfectaire-hiultra-wall-single-24000",
+      name: "HiULTRA 24 000 BTU",
+      seriesId: "perfectaire-hiultra",
+      brandId: "perfectaire",
+      modelNumber: "HiULTRA 24k",
+      normalizedModelNumber: "hiultra-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 14500,
+      heatingCapacity5FMaxBtu: 14500,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-karda-wall-single-18000",
+      slug: "perfectaire-karda-wall-single-18000",
+      name: "KARDA 18 000 BTU",
+      seriesId: "perfectaire-karda",
+      brandId: "perfectaire",
+      modelNumber: "KARDA 18k",
+      normalizedModelNumber: "karda-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
       cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-karda-wall-single-24000",
+      slug: "perfectaire-karda-wall-single-24000",
+      name: "KARDA 24 000 BTU",
+      seriesId: "perfectaire-karda",
+      brandId: "perfectaire",
+      modelNumber: "KARDA 24k",
+      normalizedModelNumber: "karda-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 19.2,
+      seer2Max: 19.2,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -214,22 +487,23 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hi-multi-xtreme-wall-single",
-      slug: "perfectaire-hi-multi-xtreme-wall-single",
-      name: "Hi MULTI Xtreme",
+      id: "perfectaire-hi-multi-xtreme-wall-single-18000",
+      slug: "perfectaire-hi-multi-xtreme-wall-single-18000",
+      name: "Hi MULTI Xtreme 18 000 BTU",
       seriesId: "perfectaire-hi-multi-xtreme",
       brandId: "perfectaire",
-      modelNumber: "Hi MULTI Xtreme",
-      normalizedModelNumber: "hi-multi-xtreme",
+      modelNumber: "Hi MULTI Xtreme 18k",
+      normalizedModelNumber: "hi-multi-xtreme-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12200,
-      heatingCapacity5FMaxBtu: 15400,
+      heatingCapacity5FMaxBtu: 12200,
       seer2Min: 21,
-      seer2Max: 22,
-      hspf2Min: 9.05,
+      seer2Max: 21,
+      hspf2Min: 9.5,
       hspf2Max: 9.5,
       cop5FMin: 1.84,
       cop5FMax: 1.84,
@@ -240,15 +514,43 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-1pams-wall-single",
-      slug: "perfectaire-1pams-wall-single",
-      name: "1PAMS",
-      seriesId: "perfectaire-1pams",
+      id: "perfectaire-hi-multi-xtreme-wall-single-24000",
+      slug: "perfectaire-hi-multi-xtreme-wall-single-24000",
+      name: "Hi MULTI Xtreme 24 000 BTU",
+      seriesId: "perfectaire-hi-multi-xtreme",
       brandId: "perfectaire",
-      modelNumber: "1PAMS",
-      normalizedModelNumber: "1pams",
+      modelNumber: "Hi MULTI Xtreme 24k",
+      normalizedModelNumber: "hi-multi-xtreme-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 15400,
+      heatingCapacity5FMaxBtu: 15400,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9.05,
+      hspf2Max: 9.05,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-1pams-wall-single-24000",
+      slug: "perfectaire-1pams-wall-single-24000",
+      name: "1PAMS 24 000 BTU",
+      seriesId: "perfectaire-1pams",
+      brandId: "perfectaire",
+      modelNumber: "1PAMS 24k",
+      normalizedModelNumber: "1pams-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 14500,
@@ -266,24 +568,25 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single",
-      slug: "perfectaire-3pams-wall-single",
-      name: "3PAMS",
+      id: "perfectaire-3pams-wall-single-18000",
+      slug: "perfectaire-3pams-wall-single-18000",
+      name: "3PAMS 18 000 BTU",
       seriesId: "perfectaire-3pams",
       brandId: "perfectaire",
-      modelNumber: "3PAMS",
-      normalizedModelNumber: "3pams",
+      modelNumber: "3PAMS 18k",
+      normalizedModelNumber: "3pams-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 9300,
-      heatingCapacity5FMaxBtu: 39000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 10900,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 18,
-      seer2Max: 26.4,
+      seer2Max: 21,
       hspf2Min: 9,
-      hspf2Max: 12,
-      cop5FMin: 1.68,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -292,15 +595,205 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pam-wall-single",
-      slug: "perfectaire-3pam-wall-single",
-      name: "3PAM",
-      seriesId: "perfectaire-3pam",
+      id: "perfectaire-3pams-wall-single-9000",
+      slug: "perfectaire-3pams-wall-single-9000",
+      name: "3PAMS 9 000 BTU",
+      seriesId: "perfectaire-3pams",
       brandId: "perfectaire",
-      modelNumber: "3PAM",
-      normalizedModelNumber: "3pam",
+      modelNumber: "3PAMS 9k",
+      normalizedModelNumber: "3pams-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9300,
+      heatingCapacity5FMaxBtu: 10100,
+      seer2Min: 20.2,
+      seer2Max: 26.4,
+      hspf2Min: 11.6,
+      hspf2Max: 12,
+      cop5FMin: 1.85,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-12000",
+      slug: "perfectaire-3pams-wall-single-12000",
+      name: "3PAMS 12 000 BTU",
+      seriesId: "perfectaire-3pams",
+      brandId: "perfectaire",
+      modelNumber: "3PAMS 12k",
+      normalizedModelNumber: "3pams-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19.5,
+      seer2Max: 24.2,
+      hspf2Min: 10,
+      hspf2Max: 10.7,
+      cop5FMin: 1.88,
+      cop5FMax: 1.99,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-24000",
+      slug: "perfectaire-3pams-wall-single-24000",
+      name: "3PAMS 24 000 BTU",
+      seriesId: "perfectaire-3pams",
+      brandId: "perfectaire",
+      modelNumber: "3PAMS 24k",
+      normalizedModelNumber: "3pams-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 18900,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 19.2,
+      seer2Max: 23.5,
+      hspf2Min: 9.2,
+      hspf2Max: 11.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-30000",
+      slug: "perfectaire-3pams-wall-single-30000",
+      name: "3PAMS 30 000 BTU",
+      seriesId: "perfectaire-3pams",
+      brandId: "perfectaire",
+      modelNumber: "3PAMS 30k",
+      normalizedModelNumber: "3pams-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 22.6,
+      hspf2Min: 9.2,
+      hspf2Max: 9.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-36000",
+      slug: "perfectaire-3pams-wall-single-36000",
+      name: "3PAMS 36 000 BTU",
+      seriesId: "perfectaire-3pams",
+      brandId: "perfectaire",
+      modelNumber: "3PAMS 36k",
+      normalizedModelNumber: "3pams-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 9.2,
+      hspf2Max: 10,
+      cop5FMin: 1.68,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-48000",
+      slug: "perfectaire-3pams-wall-single-48000",
+      name: "3PAMS 48 000 BTU",
+      seriesId: "perfectaire-3pams",
+      brandId: "perfectaire",
+      modelNumber: "3PAMS 48k",
+      normalizedModelNumber: "3pams-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 39000,
+      seer2Min: 20.9,
+      seer2Max: 21.2,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-15000",
+      slug: "perfectaire-3pams-wall-single-15000",
+      name: "3PAMS 15 000 BTU",
+      seriesId: "perfectaire-3pams",
+      brandId: "perfectaire",
+      modelNumber: "3PAMS 15k",
+      normalizedModelNumber: "3pams-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 15600,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pam-wall-single-18000",
+      slug: "perfectaire-3pam-wall-single-18000",
+      name: "3PAM 18 000 BTU",
+      seriesId: "perfectaire-3pam",
+      brandId: "perfectaire",
+      modelNumber: "3PAM 18k",
+      normalizedModelNumber: "3pam-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 11100,
@@ -318,24 +811,25 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pahh-series-central-ducted",
-      slug: "perfectaire-3pahh-series-central-ducted",
-      name: "3PAHH series",
+      id: "perfectaire-3pahh-series-central-ducted-18000",
+      slug: "perfectaire-3pahh-series-central-ducted-18000",
+      name: "3PAHH series 18 000 BTU",
       seriesId: "perfectaire-3pahh-series",
       brandId: "perfectaire",
-      modelNumber: "3PAHH series",
-      normalizedModelNumber: "3pahh-series",
+      modelNumber: "3PAHH series 18k",
+      normalizedModelNumber: "3pahh-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.3,
+      heatingCapacity5FMaxBtu: 13500,
+      seer2Min: 18,
       seer2Max: 18,
-      hspf2Min: 8.9,
-      hspf2Max: 10,
-      cop5FMin: 1.8,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 2.04,
       cop5FMax: 2.04,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -344,15 +838,205 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pam-series-wall-single",
-      slug: "perfectaire-3pam-series-wall-single",
-      name: "3PAM series",
-      seriesId: "perfectaire-3pam-series",
+      id: "perfectaire-3pahh-series-central-ducted-24000",
+      slug: "perfectaire-3pahh-series-central-ducted-24000",
+      name: "3PAHH series 24 000 BTU",
+      seriesId: "perfectaire-3pahh-series",
       brandId: "perfectaire",
-      modelNumber: "3PAM series",
-      normalizedModelNumber: "3pam-series",
+      modelNumber: "3PAHH series 24k",
+      normalizedModelNumber: "3pahh-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pahh-series-central-ducted-30000",
+      slug: "perfectaire-3pahh-series-central-ducted-30000",
+      name: "3PAHH series 30 000 BTU",
+      seriesId: "perfectaire-3pahh-series",
+      brandId: "perfectaire",
+      modelNumber: "3PAHH series 30k",
+      normalizedModelNumber: "3pahh-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.2,
+      seer2Max: 16.2,
+      hspf2Min: 8.9,
+      hspf2Max: 8.9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pahh-series-central-ducted-36000",
+      slug: "perfectaire-3pahh-series-central-ducted-36000",
+      name: "3PAHH series 36 000 BTU",
+      seriesId: "perfectaire-3pahh-series",
+      brandId: "perfectaire",
+      modelNumber: "3PAHH series 36k",
+      normalizedModelNumber: "3pahh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.97,
+      cop5FMax: 1.97,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pahh-series-central-ducted-48000",
+      slug: "perfectaire-3pahh-series-central-ducted-48000",
+      name: "3PAHH series 48 000 BTU",
+      seriesId: "perfectaire-3pahh-series",
+      brandId: "perfectaire",
+      modelNumber: "3PAHH series 48k",
+      normalizedModelNumber: "3pahh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pahh-series-central-ducted-60000",
+      slug: "perfectaire-3pahh-series-central-ducted-60000",
+      name: "3PAHH series 60 000 BTU",
+      seriesId: "perfectaire-3pahh-series",
+      brandId: "perfectaire",
+      modelNumber: "3PAHH series 60k",
+      normalizedModelNumber: "3pahh-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-60000",
+      slug: "perfectaire-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "perfectaire-standard",
+      brandId: "perfectaire",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 35800,
+      heatingCapacity5FMaxBtu: 36400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-60000",
+      slug: "perfectaire-3pams-wall-single-60000",
+      name: "3PAMS 60 000 BTU",
+      seriesId: "perfectaire-3pams",
+      brandId: "perfectaire",
+      modelNumber: "3PAMS 60k",
+      normalizedModelNumber: "3pams-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 34800,
+      heatingCapacity5FMaxBtu: 35200,
+      seer2Min: 18.8,
+      seer2Max: 20,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pam-series-wall-single-6000",
+      slug: "perfectaire-3pam-series-wall-single-6000",
+      name: "3PAM series 6 000 BTU",
+      seriesId: "perfectaire-3pam-series",
+      brandId: "perfectaire",
+      modelNumber: "3PAM series 6k",
+      normalizedModelNumber: "3pam-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
       coolingCapacityMaxBtu: 6000,
       heatingCapacity5FMinBtu: 7500,
@@ -370,24 +1054,25 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pamshh-series-wall-single",
-      slug: "perfectaire-3pamshh-series-wall-single",
-      name: "3PAMSHH series",
+      id: "perfectaire-3pamshh-series-wall-single-18000",
+      slug: "perfectaire-3pamshh-series-wall-single-18000",
+      name: "3PAMSHH series 18 000 BTU",
       seriesId: "perfectaire-3pamshh-series",
       brandId: "perfectaire",
-      modelNumber: "3PAMSHH series",
-      normalizedModelNumber: "3pamshh-series",
+      modelNumber: "3PAMSHH series 18k",
+      normalizedModelNumber: "3pamshh-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 23000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 11100,
-      heatingCapacity5FMaxBtu: 18900,
+      heatingCapacity5FMaxBtu: 11100,
       seer2Min: 22,
-      seer2Max: 22.3,
-      hspf2Min: 10.3,
+      seer2Max: 22,
+      hspf2Min: 10.6,
       hspf2Max: 10.6,
-      cop5FMin: 1.8,
+      cop5FMin: 1.89,
       cop5FMax: 1.89,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -396,25 +1081,269 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single",
-      slug: "perfectaire-4pam-series-wall-single",
-      name: "4PAM Series",
-      seriesId: "perfectaire-4pam-series",
+      id: "perfectaire-3pamshh-series-wall-single-24000",
+      slug: "perfectaire-3pamshh-series-wall-single-24000",
+      name: "3PAMSHH series 24 000 BTU",
+      seriesId: "perfectaire-3pamshh-series",
       brandId: "perfectaire",
-      modelNumber: "4PAM Series",
-      normalizedModelNumber: "4pam-series",
+      modelNumber: "3PAMSHH series 24k",
+      normalizedModelNumber: "3pamshh-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 53000,
-      heatingCapacity5FMinBtu: 7600,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 17,
-      seer2Max: 26,
-      hspf2Min: 8.5,
-      hspf2Max: 14.6,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 18900,
+      heatingCapacity5FMaxBtu: 18900,
+      seer2Min: 22.3,
+      seer2Max: 22.3,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-9000",
+      slug: "perfectaire-4pam-series-wall-single-9000",
+      name: "4PAM Series 9 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 9k",
+      normalizedModelNumber: "4pam-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 19,
+      seer2Max: 26,
+      hspf2Min: 9.7,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.15,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-24000",
+      slug: "perfectaire-4pam-series-wall-single-24000",
+      name: "4PAM Series 24 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 24k",
+      normalizedModelNumber: "4pam-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 17100,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 17,
+      seer2Max: 22.3,
+      hspf2Min: 8.5,
+      hspf2Max: 13.3,
+      cop5FMin: 1.9,
+      cop5FMax: 2.01,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-6000",
+      slug: "perfectaire-4pam-series-wall-single-6000",
+      name: "4PAM Series 6 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 6k",
+      normalizedModelNumber: "4pam-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 7600,
+      heatingCapacity5FMaxBtu: 7600,
+      seer2Min: 25.3,
+      seer2Max: 25.3,
+      hspf2Min: 14.6,
+      hspf2Max: 14.6,
+      cop5FMin: 2.3,
       cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-12000",
+      slug: "perfectaire-4pam-series-wall-single-12000",
+      name: "4PAM Series 12 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 12k",
+      normalizedModelNumber: "4pam-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000",
+      slug: "perfectaire-4pam-series-wall-single-18000",
+      name: "4PAM Series 18 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 18k",
+      normalizedModelNumber: "4pam-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 14400,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 20,
+      seer2Max: 21.7,
+      hspf2Min: 10,
+      hspf2Max: 10.8,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-30000",
+      slug: "perfectaire-4pam-series-wall-single-30000",
+      name: "4PAM Series 30 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 30k",
+      normalizedModelNumber: "4pam-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 23200,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.75,
+      cop5FMin: 1.95,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-36000",
+      slug: "perfectaire-4pam-series-wall-single-36000",
+      name: "4PAM Series 36 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 36k",
+      normalizedModelNumber: "4pam-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 36600,
+      seer2Min: 19.4,
+      seer2Max: 21.5,
+      hspf2Min: 10.4,
+      hspf2Max: 11.3,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-42000",
+      slug: "perfectaire-4pam-series-wall-single-42000",
+      name: "4PAM Series 42 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 42k",
+      normalizedModelNumber: "4pam-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 40500,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: 21.2,
+      seer2Max: 21.2,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-48000",
+      slug: "perfectaire-4pam-series-wall-single-48000",
+      name: "4PAM Series 48 000 BTU",
+      seriesId: "perfectaire-4pam-series",
+      brandId: "perfectaire",
+      modelNumber: "4PAM Series 48k",
+      normalizedModelNumber: "4pam-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 42500,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 21.4,
+      hspf2Min: 10.6,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -430,68 +1359,14 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "perfectaire-1pamshh12-szo-22-5",
-      modelNumber: "1PAMSHH12-SZO-22.5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-1pamshh24-szo-20-5",
-      modelNumber: "1PAMSHH24-SZO-20.5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-2pamsh48-mzo5",
-      modelNumber: "2PAMSH48-MZO5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-2pamsh27-mzo3",
-      modelNumber: "2PAMSH27-MZO3",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-2pamsh18-mzo2",
-      modelNumber: "2PAMSH18-MZO2",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-2pams27-hh-mzo3",
-      modelNumber: "2PAMS27-HH-MZO3",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-2pams36-hh-mzo4",
-      modelNumber: "2PAMS36-HH-MZO4",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-2pams48-hh-mzo5",
-      modelNumber: "2PAMS48-HH-MZO5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-2pamsh18-mzo",
-      modelNumber: "2PAMSH18-MZO",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-3pamsh55-mzo5",
-      modelNumber: "3PAMSH55-MZO5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
       id: "perfectaire-4pamsh09a-szo",
       modelNumber: "4PAMSH09A-SZO",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-1pamshh12-szo-22-5",
+      modelNumber: "1PAMSHH12-SZO-22.5",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -508,8 +1383,56 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "perfectaire-1pamshh24-szo-20-5",
+      modelNumber: "1PAMSHH24-SZO-20.5",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-2pamsh48-mzo5",
+      modelNumber: "2PAMSH48-MZO5",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-2pams48-hh-mzo5",
+      modelNumber: "2PAMS48-HH-MZO5",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-2pamsh27-mzo3",
+      modelNumber: "2PAMSH27-MZO3",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-2pams27-hh-mzo3",
+      modelNumber: "2PAMS27-HH-MZO3",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-2pamsh18-mzo2",
+      modelNumber: "2PAMSH18-MZO2",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-2pamsh18-mzo",
+      modelNumber: "2PAMSH18-MZO",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
       id: "perfectaire-4pamsh18b-szo",
       modelNumber: "4PAMSH18B-SZO",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-2pams36-hh-mzo4",
+      modelNumber: "2PAMS36-HH-MZO4",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -574,6 +1497,24 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "perfectaire-3pams18-hh-mzo2",
+      modelNumber: "3PAMS18-HH-MZO2",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-3pamsh18-mzo2",
+      modelNumber: "3PAMSH18-MZO2",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-3pamshh18-szo",
+      modelNumber: "3PAMSHH18-SZO",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
       id: "perfectaire-3pamshh09-szo",
       modelNumber: "3PAMSHH09-SZO",
       brandId: "perfectaire",
@@ -592,8 +1533,8 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "perfectaire-3pams18-hh-mzo2",
-      modelNumber: "3PAMS18-HH-MZO2",
+      id: "perfectaire-3pamsh27-mzo3",
+      modelNumber: "3PAMSH27-MZO3",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -610,44 +1551,20 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "perfectaire-3pams48-hh-mzo5",
-      modelNumber: "3PAMS48-HH-MZO5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-3pamsh18-mzo2",
-      modelNumber: "3PAMSH18-MZO2",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-3pamsh27-mzo3",
-      modelNumber: "3PAMSH27-MZO3",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
       id: "perfectaire-3pamsh36-mzo4",
       modelNumber: "3PAMSH36-MZO4",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
     {
+      id: "perfectaire-3pams48-hh-mzo5",
+      modelNumber: "3PAMS48-HH-MZO5",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
       id: "perfectaire-3pamsh48-mzo5",
       modelNumber: "3PAMSH48-MZO5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-3pamshh18-szo",
-      modelNumber: "3PAMSHH18-SZO",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-3pams55-hh-mzo5",
-      modelNumber: "3PAMS55-HH-MZO5",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -688,6 +1605,18 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "perfectaire-3pamsh55-mzo5",
+      modelNumber: "3PAMSH55-MZO5",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-3pams55-hh-mzo5",
+      modelNumber: "3PAMS55-HH-MZO5",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
       id: "perfectaire-3pamshh06-szo",
       modelNumber: "3PAMSHH06-SZO",
       brandId: "perfectaire",
@@ -706,20 +1635,38 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "perfectaire-4pamshh09-szo",
+      modelNumber: "4PAMSHH09-SZO",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
       id: "perfectaire-4pamsh24b-szo",
       modelNumber: "4PAMSH24B-SZO",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
     {
-      id: "perfectaire-4pamshh06-szo",
-      modelNumber: "4PAMSHH06-SZO",
+      id: "perfectaire-4pamshh24-szo",
+      modelNumber: "4PAMSHH24-SZO",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
     {
-      id: "perfectaire-4pamshh09-szo",
-      modelNumber: "4PAMSHH09-SZO",
+      id: "perfectaire-4pams27-hh-mzo3",
+      modelNumber: "4PAMS27-HH-MZO3",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-4pams27-hh-mzo4",
+      modelNumber: "4PAMS27-HH-MZO4",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-4pamshh06-szo",
+      modelNumber: "4PAMSHH06-SZO",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -736,38 +1683,8 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "perfectaire-4pamshh24-szo",
-      modelNumber: "4PAMSHH24-SZO",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
       id: "perfectaire-4pams18-hh-mzo2",
       modelNumber: "4PAMS18-HH-MZO2",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-4pams27-hh-mzo3",
-      modelNumber: "4PAMS27-HH-MZO3",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-4pams36-hh-mzo4",
-      modelNumber: "4PAMS36-HH-MZO4",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-4pams48-hh-mzo5",
-      modelNumber: "4PAMS48-HH-MZO5",
-      brandId: "perfectaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "perfectaire-4pams55-hh-mzo5",
-      modelNumber: "4PAMS55-HH-MZO5",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -778,8 +1695,8 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "perfectaire-4pams27-hh-mzo4",
-      modelNumber: "4PAMS27-HH-MZO4",
+      id: "perfectaire-4pams36-hh-mzo4",
+      modelNumber: "4PAMS36-HH-MZO4",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -790,8 +1707,20 @@ export const perfectaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "perfectaire-4pams48-hh-mzo5",
+      modelNumber: "4PAMS48-HH-MZO5",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
       id: "perfectaire-4pams48-hh-mzo6",
       modelNumber: "4PAMS48-HH-MZO6",
+      brandId: "perfectaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "perfectaire-4pams55-hh-mzo5",
+      modelNumber: "4PAMS55-HH-MZO5",
       brandId: "perfectaire",
       refrigerant: null as any,
     },
@@ -807,9 +1736,9 @@ export const perfectaireDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "perfectaire-standard-wall-single-cfg-1",
-      slug: "perfectaire-standard-wall-single-cfg-1",
-      modelId: "perfectaire-standard-wall-single",
+      id: "perfectaire-standard-wall-single-9000-cfg-1",
+      slug: "perfectaire-standard-wall-single-9000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-9000",
       outdoorUnitId: "perfectaire-1pamshh09-szo-25",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -821,177 +1750,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-standard-wall-single-cfg-2",
-      slug: "perfectaire-standard-wall-single-cfg-2",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-1pamshh12-szo-22-5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-3",
-      slug: "perfectaire-standard-wall-single-cfg-3",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-1pamshh24-szo-20-5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-4",
-      slug: "perfectaire-standard-wall-single-cfg-4",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pamsh48-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-5",
-      slug: "perfectaire-standard-wall-single-cfg-5",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pamsh27-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-6",
-      slug: "perfectaire-standard-wall-single-cfg-6",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pamsh18-mzo2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-7",
-      slug: "perfectaire-standard-wall-single-cfg-7",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pams27-hh-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-8",
-      slug: "perfectaire-standard-wall-single-cfg-8",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pams36-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-9",
-      slug: "perfectaire-standard-wall-single-cfg-9",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pams36-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-10",
-      slug: "perfectaire-standard-wall-single-cfg-10",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pams48-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-11",
-      slug: "perfectaire-standard-wall-single-cfg-11",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pams48-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-12",
-      slug: "perfectaire-standard-wall-single-cfg-12",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-2pamsh18-mzo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-13",
-      slug: "perfectaire-standard-wall-single-cfg-13",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-1pamshh12-szo-22-5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-14",
-      slug: "perfectaire-standard-wall-single-cfg-14",
-      modelId: "perfectaire-standard-wall-single",
+      id: "perfectaire-standard-wall-single-9000-cfg-2",
+      slug: "perfectaire-standard-wall-single-9000-cfg-2",
+      modelId: "perfectaire-standard-wall-single-9000",
       outdoorUnitId: "perfectaire-1pamshh09-szo-25",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1003,51 +1764,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-standard-wall-single-cfg-15",
-      slug: "perfectaire-standard-wall-single-cfg-15",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-1pamshh12-szo-22-5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-16",
-      slug: "perfectaire-standard-wall-single-cfg-16",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh55-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-17",
-      slug: "perfectaire-standard-wall-single-cfg-17",
-      modelId: "perfectaire-standard-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh55-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-standard-wall-single-cfg-18",
-      slug: "perfectaire-standard-wall-single-cfg-18",
-      modelId: "perfectaire-standard-wall-single",
+      id: "perfectaire-standard-wall-single-9000-cfg-3",
+      slug: "perfectaire-standard-wall-single-9000-cfg-3",
+      modelId: "perfectaire-standard-wall-single-9000",
       outdoorUnitId: "perfectaire-4pamsh09a-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1059,9 +1778,51 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-standard-wall-single-cfg-19",
-      slug: "perfectaire-standard-wall-single-cfg-19",
-      modelId: "perfectaire-standard-wall-single",
+      id: "perfectaire-standard-wall-single-12000-cfg-1",
+      slug: "perfectaire-standard-wall-single-12000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-12000",
+      outdoorUnitId: "perfectaire-1pamshh12-szo-22-5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-12000-cfg-2",
+      slug: "perfectaire-standard-wall-single-12000-cfg-2",
+      modelId: "perfectaire-standard-wall-single-12000",
+      outdoorUnitId: "perfectaire-1pamshh12-szo-22-5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-12000-cfg-3",
+      slug: "perfectaire-standard-wall-single-12000-cfg-3",
+      modelId: "perfectaire-standard-wall-single-12000",
+      outdoorUnitId: "perfectaire-1pamshh12-szo-22-5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-12000-cfg-4",
+      slug: "perfectaire-standard-wall-single-12000-cfg-4",
+      modelId: "perfectaire-standard-wall-single-12000",
       outdoorUnitId: "perfectaire-4pamsh12aa-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1073,9 +1834,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-standard-wall-single-cfg-20",
-      slug: "perfectaire-standard-wall-single-cfg-20",
-      modelId: "perfectaire-standard-wall-single",
+      id: "perfectaire-standard-wall-single-12000-cfg-5",
+      slug: "perfectaire-standard-wall-single-12000-cfg-5",
+      modelId: "perfectaire-standard-wall-single-12000",
       outdoorUnitId: "perfectaire-4pamsh12b-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1087,9 +1848,121 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-standard-wall-single-cfg-21",
-      slug: "perfectaire-standard-wall-single-cfg-21",
-      modelId: "perfectaire-standard-wall-single",
+      id: "perfectaire-standard-wall-single-24000-cfg-1",
+      slug: "perfectaire-standard-wall-single-24000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-24000",
+      outdoorUnitId: "perfectaire-1pamshh24-szo-20-5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-48000-cfg-1",
+      slug: "perfectaire-standard-wall-single-48000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-48000",
+      outdoorUnitId: "perfectaire-2pamsh48-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-48000-cfg-2",
+      slug: "perfectaire-standard-wall-single-48000-cfg-2",
+      modelId: "perfectaire-standard-wall-single-48000",
+      outdoorUnitId: "perfectaire-2pams48-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-48000-cfg-3",
+      slug: "perfectaire-standard-wall-single-48000-cfg-3",
+      modelId: "perfectaire-standard-wall-single-48000",
+      outdoorUnitId: "perfectaire-2pams48-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-30000-cfg-1",
+      slug: "perfectaire-standard-wall-single-30000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-30000",
+      outdoorUnitId: "perfectaire-2pamsh27-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-30000-cfg-2",
+      slug: "perfectaire-standard-wall-single-30000-cfg-2",
+      modelId: "perfectaire-standard-wall-single-30000",
+      outdoorUnitId: "perfectaire-2pams27-hh-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-18000-cfg-1",
+      slug: "perfectaire-standard-wall-single-18000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-18000",
+      outdoorUnitId: "perfectaire-2pamsh18-mzo2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-18000-cfg-2",
+      slug: "perfectaire-standard-wall-single-18000-cfg-2",
+      modelId: "perfectaire-standard-wall-single-18000",
+      outdoorUnitId: "perfectaire-2pamsh18-mzo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-18000-cfg-3",
+      slug: "perfectaire-standard-wall-single-18000-cfg-3",
+      modelId: "perfectaire-standard-wall-single-18000",
       outdoorUnitId: "perfectaire-4pamsh18b-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1101,9 +1974,37 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hiultra-wall-single-cfg-1",
-      slug: "perfectaire-hiultra-wall-single-cfg-1",
-      modelId: "perfectaire-hiultra-wall-single",
+      id: "perfectaire-standard-wall-single-36000-cfg-1",
+      slug: "perfectaire-standard-wall-single-36000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-36000",
+      outdoorUnitId: "perfectaire-2pams36-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-36000-cfg-2",
+      slug: "perfectaire-standard-wall-single-36000-cfg-2",
+      modelId: "perfectaire-standard-wall-single-36000",
+      outdoorUnitId: "perfectaire-2pams36-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-hiultra-wall-single-9000-cfg-1",
+      slug: "perfectaire-hiultra-wall-single-9000-cfg-1",
+      modelId: "perfectaire-hiultra-wall-single-9000",
       outdoorUnitId: "perfectaire-3pamshqco09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1115,23 +2016,23 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hiultra-wall-single-cfg-2",
-      slug: "perfectaire-hiultra-wall-single-cfg-2",
-      modelId: "perfectaire-hiultra-wall-single",
+      id: "perfectaire-hiultra-wall-single-12000-cfg-1",
+      slug: "perfectaire-hiultra-wall-single-12000-cfg-1",
+      modelId: "perfectaire-hiultra-wall-single-12000",
       outdoorUnitId: "perfectaire-3pamshqco12",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 21.7,
       hspf2: 9.5,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hiultra-wall-single-cfg-3",
-      slug: "perfectaire-hiultra-wall-single-cfg-3",
-      modelId: "perfectaire-hiultra-wall-single",
+      id: "perfectaire-hiultra-wall-single-18000-cfg-1",
+      slug: "perfectaire-hiultra-wall-single-18000-cfg-1",
+      modelId: "perfectaire-hiultra-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamshqco18",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1143,9 +2044,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hiultra-wall-single-cfg-4",
-      slug: "perfectaire-hiultra-wall-single-cfg-4",
-      modelId: "perfectaire-hiultra-wall-single",
+      id: "perfectaire-hiultra-wall-single-24000-cfg-1",
+      slug: "perfectaire-hiultra-wall-single-24000-cfg-1",
+      modelId: "perfectaire-hiultra-wall-single-24000",
       outdoorUnitId: "perfectaire-3pamshqco24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1157,9 +2058,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-karda-wall-single-cfg-1",
-      slug: "perfectaire-karda-wall-single-cfg-1",
-      modelId: "perfectaire-karda-wall-single",
+      id: "perfectaire-karda-wall-single-18000-cfg-1",
+      slug: "perfectaire-karda-wall-single-18000-cfg-1",
+      modelId: "perfectaire-karda-wall-single-18000",
       outdoorUnitId: "perfectaire-2karda18szo20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1171,9 +2072,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-karda-wall-single-cfg-2",
-      slug: "perfectaire-karda-wall-single-cfg-2",
-      modelId: "perfectaire-karda-wall-single",
+      id: "perfectaire-karda-wall-single-24000-cfg-1",
+      slug: "perfectaire-karda-wall-single-24000-cfg-1",
+      modelId: "perfectaire-karda-wall-single-24000",
       outdoorUnitId: "perfectaire-1karda24szo20-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1185,9 +2086,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hi-multi-xtreme-wall-single-cfg-1",
-      slug: "perfectaire-hi-multi-xtreme-wall-single-cfg-1",
-      modelId: "perfectaire-hi-multi-xtreme-wall-single",
+      id: "perfectaire-hi-multi-xtreme-wall-single-18000-cfg-1",
+      slug: "perfectaire-hi-multi-xtreme-wall-single-18000-cfg-1",
+      modelId: "perfectaire-hi-multi-xtreme-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamshhqc18-mzo2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1199,9 +2100,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-hi-multi-xtreme-wall-single-cfg-2",
-      slug: "perfectaire-hi-multi-xtreme-wall-single-cfg-2",
-      modelId: "perfectaire-hi-multi-xtreme-wall-single",
+      id: "perfectaire-hi-multi-xtreme-wall-single-24000-cfg-1",
+      slug: "perfectaire-hi-multi-xtreme-wall-single-24000-cfg-1",
+      modelId: "perfectaire-hi-multi-xtreme-wall-single-24000",
       outdoorUnitId: "perfectaire-3pamshhqc24-mzo3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1213,9 +2114,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-1pams-wall-single-cfg-1",
-      slug: "perfectaire-1pams-wall-single-cfg-1",
-      modelId: "perfectaire-1pams-wall-single",
+      id: "perfectaire-1pams-wall-single-24000-cfg-1",
+      slug: "perfectaire-1pams-wall-single-24000-cfg-1",
+      modelId: "perfectaire-1pams-wall-single-24000",
       outdoorUnitId: "perfectaire-1pamshh24-szw-20-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1227,9 +2128,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-1pams-wall-single-cfg-2",
-      slug: "perfectaire-1pams-wall-single-cfg-2",
-      modelId: "perfectaire-1pams-wall-single",
+      id: "perfectaire-1pams-wall-single-24000-cfg-2",
+      slug: "perfectaire-1pams-wall-single-24000-cfg-2",
+      modelId: "perfectaire-1pams-wall-single-24000",
       outdoorUnitId: "perfectaire-1pamshh24-szw-20-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1241,9 +2142,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-1",
-      slug: "perfectaire-3pams-wall-single-cfg-1",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-18000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamshh18-szo-20-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1255,51 +2156,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-2",
-      slug: "perfectaire-3pams-wall-single-cfg-2",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh09-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 26.4,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-3",
-      slug: "perfectaire-3pams-wall-single-cfg-3",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh12-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-4",
-      slug: "perfectaire-3pams-wall-single-cfg-4",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh24-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 22.3,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-5",
-      slug: "perfectaire-3pams-wall-single-cfg-5",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-18000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-18000",
       outdoorUnitId: "perfectaire-3pams18-hh-mzo2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1311,9 +2170,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-6",
-      slug: "perfectaire-3pams-wall-single-cfg-6",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-18000-cfg-3",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-3",
+      modelId: "perfectaire-3pams-wall-single-18000",
       outdoorUnitId: "perfectaire-3pams18-hh-mzo2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1325,9 +2184,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-7",
-      slug: "perfectaire-3pams-wall-single-cfg-7",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-18000-cfg-4",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-4",
+      modelId: "perfectaire-3pams-wall-single-18000",
       outdoorUnitId: "perfectaire-3pams18-hh-mzo2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1339,135 +2198,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-8",
-      slug: "perfectaire-3pams-wall-single-cfg-8",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams27-hh-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-9",
-      slug: "perfectaire-3pams-wall-single-cfg-9",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams27-hh-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 22.6,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-10",
-      slug: "perfectaire-3pams-wall-single-cfg-10",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams27-hh-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21.3,
-      hspf2: 9.65,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-11",
-      slug: "perfectaire-3pams-wall-single-cfg-11",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams36-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-12",
-      slug: "perfectaire-3pams-wall-single-cfg-12",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams36-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-13",
-      slug: "perfectaire-3pams-wall-single-cfg-13",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams36-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.5,
-      hspf2: 9.85,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-14",
-      slug: "perfectaire-3pams-wall-single-cfg-14",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams48-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.2,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-15",
-      slug: "perfectaire-3pams-wall-single-cfg-15",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams48-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-16",
-      slug: "perfectaire-3pams-wall-single-cfg-16",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams48-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.05,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-17",
-      slug: "perfectaire-3pams-wall-single-cfg-17",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-18000-cfg-5",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-5",
+      modelId: "perfectaire-3pams-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamsh18-mzo2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1479,9 +2212,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-18",
-      slug: "perfectaire-3pams-wall-single-cfg-18",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-18000-cfg-6",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-6",
+      modelId: "perfectaire-3pams-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamsh18-mzo2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1493,9 +2226,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-19",
-      slug: "perfectaire-3pams-wall-single-cfg-19",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-18000-cfg-7",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-7",
+      modelId: "perfectaire-3pams-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamsh18-mzo2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1507,107 +2240,51 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-20",
-      slug: "perfectaire-3pams-wall-single-cfg-20",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh27-mzo3",
+      id: "perfectaire-3pams-wall-single-18000-cfg-8",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-8",
+      modelId: "perfectaire-3pams-wall-single-18000",
+      outdoorUnitId: "perfectaire-3pamshh18-szo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-21",
-      slug: "perfectaire-3pams-wall-single-cfg-21",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh27-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-22",
-      slug: "perfectaire-3pams-wall-single-cfg-22",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh27-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 22.25,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-23",
-      slug: "perfectaire-3pams-wall-single-cfg-23",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh36-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-24",
-      slug: "perfectaire-3pams-wall-single-cfg-24",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh48-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.1,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
       hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-25",
-      slug: "perfectaire-3pams-wall-single-cfg-25",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh48-mzo5",
+      id: "perfectaire-3pams-wall-single-18000-cfg-9",
+      slug: "perfectaire-3pams-wall-single-18000-cfg-9",
+      modelId: "perfectaire-3pams-wall-single-18000",
+      outdoorUnitId: "perfectaire-3pamshh18-szo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.1,
-      hspf2: 9.5,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-26",
-      slug: "perfectaire-3pams-wall-single-cfg-26",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamsh48-mzo5",
+      id: "perfectaire-3pams-wall-single-9000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-9000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-9000",
+      outdoorUnitId: "perfectaire-3pamshh09-szo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.1,
-      hspf2: 9.5,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26.4,
+      hspf2: 11.6,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-27",
-      slug: "perfectaire-3pams-wall-single-cfg-27",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-9000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-9000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-9000",
       outdoorUnitId: "perfectaire-3pamshh09-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1619,9 +2296,23 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-28",
-      slug: "perfectaire-3pams-wall-single-cfg-28",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-12000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-12000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-12000",
+      outdoorUnitId: "perfectaire-3pamshh12-szo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-12000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-12000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-12000",
       outdoorUnitId: "perfectaire-3pamshh12-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1633,9 +2324,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-29",
-      slug: "perfectaire-3pams-wall-single-cfg-29",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-12000-cfg-3",
+      slug: "perfectaire-3pams-wall-single-12000-cfg-3",
+      modelId: "perfectaire-3pams-wall-single-12000",
       outdoorUnitId: "perfectaire-3pamshh12-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1647,9 +2338,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-30",
-      slug: "perfectaire-3pams-wall-single-cfg-30",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-12000-cfg-4",
+      slug: "perfectaire-3pams-wall-single-12000-cfg-4",
+      modelId: "perfectaire-3pams-wall-single-12000",
       outdoorUnitId: "perfectaire-3pamshh12-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1661,79 +2352,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-31",
-      slug: "perfectaire-3pams-wall-single-cfg-31",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh18-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-32",
-      slug: "perfectaire-3pams-wall-single-cfg-32",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh18-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-33",
-      slug: "perfectaire-3pams-wall-single-cfg-33",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh18-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-34",
-      slug: "perfectaire-3pams-wall-single-cfg-34",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh24-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-35",
-      slug: "perfectaire-3pams-wall-single-cfg-35",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pamshh24-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-3pams-wall-single-cfg-36",
-      slug: "perfectaire-3pams-wall-single-cfg-36",
-      modelId: "perfectaire-3pams-wall-single",
+      id: "perfectaire-3pams-wall-single-12000-cfg-5",
+      slug: "perfectaire-3pams-wall-single-12000-cfg-5",
+      modelId: "perfectaire-3pams-wall-single-12000",
       outdoorUnitId: "perfectaire-3pamshh12-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1745,13 +2366,69 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-37",
-      slug: "perfectaire-3pams-wall-single-cfg-37",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams55-hh-mzo5",
+      id: "perfectaire-3pams-wall-single-24000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-24000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-24000",
+      outdoorUnitId: "perfectaire-3pamshh24-szo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-24000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-24000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-24000",
+      outdoorUnitId: "perfectaire-3pamsh27-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-24000-cfg-3",
+      slug: "perfectaire-3pams-wall-single-24000-cfg-3",
+      modelId: "perfectaire-3pams-wall-single-24000",
+      outdoorUnitId: "perfectaire-3pamshh24-szo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-24000-cfg-4",
+      slug: "perfectaire-3pams-wall-single-24000-cfg-4",
+      modelId: "perfectaire-3pams-wall-single-24000",
+      outdoorUnitId: "perfectaire-3pamshh24-szo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-30000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-30000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-30000",
+      outdoorUnitId: "perfectaire-3pams27-hh-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
       seer2: 20,
       hspf2: 9.5,
       minHeatingTempC: -25,
@@ -1759,37 +2436,219 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-38",
-      slug: "perfectaire-3pams-wall-single-cfg-38",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams55-hh-mzo5",
+      id: "perfectaire-3pams-wall-single-30000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-30000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-30000",
+      outdoorUnitId: "perfectaire-3pams27-hh-mzo3",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 18.8,
-      hspf2: 9.3,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.6,
+      hspf2: 9.8,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pams-wall-single-cfg-39",
-      slug: "perfectaire-3pams-wall-single-cfg-39",
-      modelId: "perfectaire-3pams-wall-single",
-      outdoorUnitId: "perfectaire-3pams55-hh-mzo5",
+      id: "perfectaire-3pams-wall-single-30000-cfg-3",
+      slug: "perfectaire-3pams-wall-single-30000-cfg-3",
+      modelId: "perfectaire-3pams-wall-single-30000",
+      outdoorUnitId: "perfectaire-3pams27-hh-mzo3",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 19.4,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.3,
+      hspf2: 9.65,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-30000-cfg-4",
+      slug: "perfectaire-3pams-wall-single-30000-cfg-4",
+      modelId: "perfectaire-3pams-wall-single-30000",
+      outdoorUnitId: "perfectaire-3pamsh27-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-30000-cfg-5",
+      slug: "perfectaire-3pams-wall-single-30000-cfg-5",
+      modelId: "perfectaire-3pams-wall-single-30000",
+      outdoorUnitId: "perfectaire-3pamsh27-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-36000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-36000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-36000",
+      outdoorUnitId: "perfectaire-3pams36-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-36000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-36000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-36000",
+      outdoorUnitId: "perfectaire-3pams36-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-36000-cfg-3",
+      slug: "perfectaire-3pams-wall-single-36000-cfg-3",
+      modelId: "perfectaire-3pams-wall-single-36000",
+      outdoorUnitId: "perfectaire-3pams36-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.5,
+      hspf2: 9.85,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-36000-cfg-4",
+      slug: "perfectaire-3pams-wall-single-36000-cfg-4",
+      modelId: "perfectaire-3pams-wall-single-36000",
+      outdoorUnitId: "perfectaire-3pamsh36-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-48000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-48000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-48000",
+      outdoorUnitId: "perfectaire-3pams48-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-48000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-48000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-48000",
+      outdoorUnitId: "perfectaire-3pams48-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-48000-cfg-3",
+      slug: "perfectaire-3pams-wall-single-48000-cfg-3",
+      modelId: "perfectaire-3pams-wall-single-48000",
+      outdoorUnitId: "perfectaire-3pams48-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.05,
       hspf2: 9.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pam-wall-single-cfg-1",
-      slug: "perfectaire-3pam-wall-single-cfg-1",
-      modelId: "perfectaire-3pam-wall-single",
+      id: "perfectaire-3pams-wall-single-48000-cfg-4",
+      slug: "perfectaire-3pams-wall-single-48000-cfg-4",
+      modelId: "perfectaire-3pams-wall-single-48000",
+      outdoorUnitId: "perfectaire-3pamsh48-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-48000-cfg-5",
+      slug: "perfectaire-3pams-wall-single-48000-cfg-5",
+      modelId: "perfectaire-3pams-wall-single-48000",
+      outdoorUnitId: "perfectaire-3pamsh48-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-48000-cfg-6",
+      slug: "perfectaire-3pams-wall-single-48000-cfg-6",
+      modelId: "perfectaire-3pams-wall-single-48000",
+      outdoorUnitId: "perfectaire-3pamsh48-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-15000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-15000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-15000",
+      outdoorUnitId: "perfectaire-3pamshh18-szo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pam-wall-single-18000-cfg-1",
+      slug: "perfectaire-3pam-wall-single-18000-cfg-1",
+      modelId: "perfectaire-3pam-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamshh18-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1801,9 +2660,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pahh-series-central-ducted-cfg-1",
-      slug: "perfectaire-3pahh-series-central-ducted-cfg-1",
-      modelId: "perfectaire-3pahh-series-central-ducted",
+      id: "perfectaire-3pahh-series-central-ducted-18000-cfg-1",
+      slug: "perfectaire-3pahh-series-central-ducted-18000-cfg-1",
+      modelId: "perfectaire-3pahh-series-central-ducted-18000",
       outdoorUnitId: "perfectaire-3pahhsd18-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1815,9 +2674,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pahh-series-central-ducted-cfg-2",
-      slug: "perfectaire-3pahh-series-central-ducted-cfg-2",
-      modelId: "perfectaire-3pahh-series-central-ducted",
+      id: "perfectaire-3pahh-series-central-ducted-24000-cfg-1",
+      slug: "perfectaire-3pahh-series-central-ducted-24000-cfg-1",
+      modelId: "perfectaire-3pahh-series-central-ducted-24000",
       outdoorUnitId: "perfectaire-3pahhsd24-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1829,9 +2688,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pahh-series-central-ducted-cfg-3",
-      slug: "perfectaire-3pahh-series-central-ducted-cfg-3",
-      modelId: "perfectaire-3pahh-series-central-ducted",
+      id: "perfectaire-3pahh-series-central-ducted-30000-cfg-1",
+      slug: "perfectaire-3pahh-series-central-ducted-30000-cfg-1",
+      modelId: "perfectaire-3pahh-series-central-ducted-30000",
       outdoorUnitId: "perfectaire-3pahhsd30-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1843,9 +2702,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pahh-series-central-ducted-cfg-4",
-      slug: "perfectaire-3pahh-series-central-ducted-cfg-4",
-      modelId: "perfectaire-3pahh-series-central-ducted",
+      id: "perfectaire-3pahh-series-central-ducted-36000-cfg-1",
+      slug: "perfectaire-3pahh-series-central-ducted-36000-cfg-1",
+      modelId: "perfectaire-3pahh-series-central-ducted-36000",
       outdoorUnitId: "perfectaire-3pahhsd36-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1857,9 +2716,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pahh-series-central-ducted-cfg-5",
-      slug: "perfectaire-3pahh-series-central-ducted-cfg-5",
-      modelId: "perfectaire-3pahh-series-central-ducted",
+      id: "perfectaire-3pahh-series-central-ducted-48000-cfg-1",
+      slug: "perfectaire-3pahh-series-central-ducted-48000-cfg-1",
+      modelId: "perfectaire-3pahh-series-central-ducted-48000",
       outdoorUnitId: "perfectaire-3pahhsd48-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1871,9 +2730,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pahh-series-central-ducted-cfg-6",
-      slug: "perfectaire-3pahh-series-central-ducted-cfg-6",
-      modelId: "perfectaire-3pahh-series-central-ducted",
+      id: "perfectaire-3pahh-series-central-ducted-60000-cfg-1",
+      slug: "perfectaire-3pahh-series-central-ducted-60000-cfg-1",
+      modelId: "perfectaire-3pahh-series-central-ducted-60000",
       outdoorUnitId: "perfectaire-3pahhsd60-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1885,9 +2744,79 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pam-series-wall-single-cfg-1",
-      slug: "perfectaire-3pam-series-wall-single-cfg-1",
-      modelId: "perfectaire-3pam-series-wall-single",
+      id: "perfectaire-standard-wall-single-60000-cfg-1",
+      slug: "perfectaire-standard-wall-single-60000-cfg-1",
+      modelId: "perfectaire-standard-wall-single-60000",
+      outdoorUnitId: "perfectaire-3pamsh55-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-standard-wall-single-60000-cfg-2",
+      slug: "perfectaire-standard-wall-single-60000-cfg-2",
+      modelId: "perfectaire-standard-wall-single-60000",
+      outdoorUnitId: "perfectaire-3pamsh55-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-60000-cfg-1",
+      slug: "perfectaire-3pams-wall-single-60000-cfg-1",
+      modelId: "perfectaire-3pams-wall-single-60000",
+      outdoorUnitId: "perfectaire-3pams55-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-60000-cfg-2",
+      slug: "perfectaire-3pams-wall-single-60000-cfg-2",
+      modelId: "perfectaire-3pams-wall-single-60000",
+      outdoorUnitId: "perfectaire-3pams55-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pams-wall-single-60000-cfg-3",
+      slug: "perfectaire-3pams-wall-single-60000-cfg-3",
+      modelId: "perfectaire-3pams-wall-single-60000",
+      outdoorUnitId: "perfectaire-3pams55-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 19.4,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-3pam-series-wall-single-6000-cfg-1",
+      slug: "perfectaire-3pam-series-wall-single-6000-cfg-1",
+      modelId: "perfectaire-3pam-series-wall-single-6000",
       outdoorUnitId: "perfectaire-3pamshh06-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -1899,9 +2828,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pamshh-series-wall-single-cfg-1",
-      slug: "perfectaire-3pamshh-series-wall-single-cfg-1",
-      modelId: "perfectaire-3pamshh-series-wall-single",
+      id: "perfectaire-3pamshh-series-wall-single-18000-cfg-1",
+      slug: "perfectaire-3pamshh-series-wall-single-18000-cfg-1",
+      modelId: "perfectaire-3pamshh-series-wall-single-18000",
       outdoorUnitId: "perfectaire-3pamshh18-szo-20-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1913,9 +2842,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-3pamshh-series-wall-single-cfg-2",
-      slug: "perfectaire-3pamshh-series-wall-single-cfg-2",
-      modelId: "perfectaire-3pamshh-series-wall-single",
+      id: "perfectaire-3pamshh-series-wall-single-24000-cfg-1",
+      slug: "perfectaire-3pamshh-series-wall-single-24000-cfg-1",
+      modelId: "perfectaire-3pamshh-series-wall-single-24000",
       outdoorUnitId: "perfectaire-3pamshh24-szo-21",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1927,9 +2856,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-1",
-      slug: "perfectaire-4pam-series-wall-single-cfg-1",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-9000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-9000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-9000",
       outdoorUnitId: "perfectaire-4pamsh09b-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1941,37 +2870,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-2",
-      slug: "perfectaire-4pam-series-wall-single-cfg-2",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pamsh24b-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-3",
-      slug: "perfectaire-4pam-series-wall-single-cfg-3",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pamshh06-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 25.3,
-      hspf2: 14.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-4",
-      slug: "perfectaire-4pam-series-wall-single-cfg-4",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-9000-cfg-2",
+      slug: "perfectaire-4pam-series-wall-single-9000-cfg-2",
+      modelId: "perfectaire-4pam-series-wall-single-9000",
       outdoorUnitId: "perfectaire-4pamshh09-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1983,37 +2884,23 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-5",
-      slug: "perfectaire-4pam-series-wall-single-cfg-5",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pamshh12-szo",
+      id: "perfectaire-4pam-series-wall-single-24000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-24000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-24000",
+      outdoorUnitId: "perfectaire-4pamsh24b-szo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 10.5,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 8.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-6",
-      slug: "perfectaire-4pam-series-wall-single-cfg-6",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pamshh18-szo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.7,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-7",
-      slug: "perfectaire-4pam-series-wall-single-cfg-7",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-24000-cfg-2",
+      slug: "perfectaire-4pam-series-wall-single-24000-cfg-2",
+      modelId: "perfectaire-4pam-series-wall-single-24000",
       outdoorUnitId: "perfectaire-4pamshh24-szo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2025,51 +2912,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-8",
-      slug: "perfectaire-4pam-series-wall-single-cfg-8",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams18-hh-mzo2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-9",
-      slug: "perfectaire-4pam-series-wall-single-cfg-9",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams18-hh-mzo2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-10",
-      slug: "perfectaire-4pam-series-wall-single-cfg-10",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams18-hh-mzo2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-11",
-      slug: "perfectaire-4pam-series-wall-single-cfg-11",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-24000-cfg-3",
+      slug: "perfectaire-4pam-series-wall-single-24000-cfg-3",
+      modelId: "perfectaire-4pam-series-wall-single-24000",
       outdoorUnitId: "perfectaire-4pams27-hh-mzo3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -2081,9 +2926,149 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-12",
-      slug: "perfectaire-4pam-series-wall-single-cfg-12",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-24000-cfg-4",
+      slug: "perfectaire-4pam-series-wall-single-24000-cfg-4",
+      modelId: "perfectaire-4pam-series-wall-single-24000",
+      outdoorUnitId: "perfectaire-4pams27-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-6000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-6000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-6000",
+      outdoorUnitId: "perfectaire-4pamshh06-szo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 25.3,
+      hspf2: 14.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-12000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-12000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-12000",
+      outdoorUnitId: "perfectaire-4pamshh12-szo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-18000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-18000",
+      outdoorUnitId: "perfectaire-4pamshh18-szo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000-cfg-2",
+      slug: "perfectaire-4pam-series-wall-single-18000-cfg-2",
+      modelId: "perfectaire-4pam-series-wall-single-18000",
+      outdoorUnitId: "perfectaire-4pams18-hh-mzo2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000-cfg-3",
+      slug: "perfectaire-4pam-series-wall-single-18000-cfg-3",
+      modelId: "perfectaire-4pam-series-wall-single-18000",
+      outdoorUnitId: "perfectaire-4pams18-hh-mzo2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000-cfg-4",
+      slug: "perfectaire-4pam-series-wall-single-18000-cfg-4",
+      modelId: "perfectaire-4pam-series-wall-single-18000",
+      outdoorUnitId: "perfectaire-4pams18-hh-mzo2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000-cfg-5",
+      slug: "perfectaire-4pam-series-wall-single-18000-cfg-5",
+      modelId: "perfectaire-4pam-series-wall-single-18000",
+      outdoorUnitId: "perfectaire-4pams18-hh-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000-cfg-6",
+      slug: "perfectaire-4pam-series-wall-single-18000-cfg-6",
+      modelId: "perfectaire-4pam-series-wall-single-18000",
+      outdoorUnitId: "perfectaire-4pams18-hh-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-18000-cfg-7",
+      slug: "perfectaire-4pam-series-wall-single-18000-cfg-7",
+      modelId: "perfectaire-4pam-series-wall-single-18000",
+      outdoorUnitId: "perfectaire-4pams18-hh-mzo3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-30000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-30000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-30000",
       outdoorUnitId: "perfectaire-4pams27-hh-mzo3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -2095,9 +3080,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-13",
-      slug: "perfectaire-4pam-series-wall-single-cfg-13",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-30000-cfg-2",
+      slug: "perfectaire-4pam-series-wall-single-30000-cfg-2",
+      modelId: "perfectaire-4pam-series-wall-single-30000",
       outdoorUnitId: "perfectaire-4pams27-hh-mzo3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -2109,9 +3094,37 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-14",
-      slug: "perfectaire-4pam-series-wall-single-cfg-14",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-30000-cfg-3",
+      slug: "perfectaire-4pam-series-wall-single-30000-cfg-3",
+      modelId: "perfectaire-4pam-series-wall-single-30000",
+      outdoorUnitId: "perfectaire-4pams27-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-30000-cfg-4",
+      slug: "perfectaire-4pam-series-wall-single-30000-cfg-4",
+      modelId: "perfectaire-4pam-series-wall-single-30000",
+      outdoorUnitId: "perfectaire-4pams27-hh-mzo4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 20,
+      hspf2: 9.75,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-36000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-36000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-36000",
       outdoorUnitId: "perfectaire-4pams36-hh-mzo4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2123,9 +3136,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-15",
-      slug: "perfectaire-4pam-series-wall-single-cfg-15",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-36000-cfg-2",
+      slug: "perfectaire-4pam-series-wall-single-36000-cfg-2",
+      modelId: "perfectaire-4pam-series-wall-single-36000",
       outdoorUnitId: "perfectaire-4pams36-hh-mzo4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2137,9 +3150,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-16",
-      slug: "perfectaire-4pam-series-wall-single-cfg-16",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-36000-cfg-3",
+      slug: "perfectaire-4pam-series-wall-single-36000-cfg-3",
+      modelId: "perfectaire-4pam-series-wall-single-36000",
       outdoorUnitId: "perfectaire-4pams36-hh-mzo4",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2151,9 +3164,51 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-17",
-      slug: "perfectaire-4pam-series-wall-single-cfg-17",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-36000-cfg-4",
+      slug: "perfectaire-4pam-series-wall-single-36000-cfg-4",
+      modelId: "perfectaire-4pam-series-wall-single-36000",
+      outdoorUnitId: "perfectaire-4pams36-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-36000-cfg-5",
+      slug: "perfectaire-4pam-series-wall-single-36000-cfg-5",
+      modelId: "perfectaire-4pam-series-wall-single-36000",
+      outdoorUnitId: "perfectaire-4pams36-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-36000-cfg-6",
+      slug: "perfectaire-4pam-series-wall-single-36000-cfg-6",
+      modelId: "perfectaire-4pam-series-wall-single-36000",
+      outdoorUnitId: "perfectaire-4pams36-hh-mzo5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.45,
+      hspf2: 10.85,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-42000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-42000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-42000",
       outdoorUnitId: "perfectaire-4pams48-hh-mzo5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -2165,9 +3220,23 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-18",
-      slug: "perfectaire-4pam-series-wall-single-cfg-18",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-42000-cfg-2",
+      slug: "perfectaire-4pam-series-wall-single-42000-cfg-2",
+      modelId: "perfectaire-4pam-series-wall-single-42000",
+      outdoorUnitId: "perfectaire-4pams48-hh-mzo6",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.2,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-1",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-1",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams48-hh-mzo5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2179,9 +3248,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-19",
-      slug: "perfectaire-4pam-series-wall-single-cfg-19",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-2",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-2",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams48-hh-mzo5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -2193,9 +3262,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-20",
-      slug: "perfectaire-4pam-series-wall-single-cfg-20",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-3",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-3",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams55-hh-mzo5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -2207,9 +3276,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-21",
-      slug: "perfectaire-4pam-series-wall-single-cfg-21",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-4",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-4",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams55-hh-mzo5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -2221,9 +3290,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-22",
-      slug: "perfectaire-4pam-series-wall-single-cfg-22",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-5",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-5",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams55-hh-mzo5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -2235,149 +3304,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-23",
-      slug: "perfectaire-4pam-series-wall-single-cfg-23",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams18-hh-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-24",
-      slug: "perfectaire-4pam-series-wall-single-cfg-24",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams18-hh-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-25",
-      slug: "perfectaire-4pam-series-wall-single-cfg-25",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams18-hh-mzo3",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-26",
-      slug: "perfectaire-4pam-series-wall-single-cfg-26",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams27-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-27",
-      slug: "perfectaire-4pam-series-wall-single-cfg-27",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams27-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-28",
-      slug: "perfectaire-4pam-series-wall-single-cfg-28",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams27-hh-mzo4",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 20,
-      hspf2: 9.75,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-29",
-      slug: "perfectaire-4pam-series-wall-single-cfg-29",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams36-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-30",
-      slug: "perfectaire-4pam-series-wall-single-cfg-30",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams36-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-31",
-      slug: "perfectaire-4pam-series-wall-single-cfg-31",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams36-hh-mzo5",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.45,
-      hspf2: 10.85,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-32",
-      slug: "perfectaire-4pam-series-wall-single-cfg-32",
-      modelId: "perfectaire-4pam-series-wall-single",
-      outdoorUnitId: "perfectaire-4pams48-hh-mzo6",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 21.2,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "perfectaire-4pam-series-wall-single-cfg-33",
-      slug: "perfectaire-4pam-series-wall-single-cfg-33",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-6",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-6",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams48-hh-mzo6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2389,9 +3318,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-34",
-      slug: "perfectaire-4pam-series-wall-single-cfg-34",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-7",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-7",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams48-hh-mzo6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -2403,9 +3332,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-35",
-      slug: "perfectaire-4pam-series-wall-single-cfg-35",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-8",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-8",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams55-hh-mzo6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -2417,9 +3346,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-36",
-      slug: "perfectaire-4pam-series-wall-single-cfg-36",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-9",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-9",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams55-hh-mzo6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -2431,9 +3360,9 @@ export const perfectaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "perfectaire-4pam-series-wall-single-cfg-37",
-      slug: "perfectaire-4pam-series-wall-single-cfg-37",
-      modelId: "perfectaire-4pam-series-wall-single",
+      id: "perfectaire-4pam-series-wall-single-48000-cfg-10",
+      slug: "perfectaire-4pam-series-wall-single-48000-cfg-10",
+      modelId: "perfectaire-4pam-series-wall-single-48000",
       outdoorUnitId: "perfectaire-4pams55-hh-mzo6",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -2447,7 +3376,7 @@ export const perfectaireDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "perfectaire-standard-wall-single-cfg-1",
+      configurationId: "perfectaire-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2458,139 +3387,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-14",
+      configurationId: "perfectaire-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2601,40 +3398,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-standard-wall-single-cfg-18",
+      configurationId: "perfectaire-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2645,7 +3409,40 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-standard-wall-single-cfg-19",
+      configurationId: "perfectaire-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2656,7 +3453,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-standard-wall-single-cfg-20",
+      configurationId: "perfectaire-standard-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2667,7 +3464,95 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-standard-wall-single-cfg-21",
+      configurationId: "perfectaire-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2678,7 +3563,29 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-hiultra-wall-single-cfg-1",
+      configurationId: "perfectaire-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-hiultra-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2689,7 +3596,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-hiultra-wall-single-cfg-2",
+      configurationId: "perfectaire-hiultra-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2700,7 +3607,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-hiultra-wall-single-cfg-3",
+      configurationId: "perfectaire-hiultra-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2711,7 +3618,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-hiultra-wall-single-cfg-4",
+      configurationId: "perfectaire-hiultra-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2722,7 +3629,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-karda-wall-single-cfg-1",
+      configurationId: "perfectaire-karda-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2733,7 +3640,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-karda-wall-single-cfg-2",
+      configurationId: "perfectaire-karda-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2744,7 +3651,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-hi-multi-xtreme-wall-single-cfg-1",
+      configurationId: "perfectaire-hi-multi-xtreme-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2755,7 +3662,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-hi-multi-xtreme-wall-single-cfg-2",
+      configurationId: "perfectaire-hi-multi-xtreme-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2766,7 +3673,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-1pams-wall-single-cfg-1",
+      configurationId: "perfectaire-1pams-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2777,7 +3684,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-1pams-wall-single-cfg-2",
+      configurationId: "perfectaire-1pams-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2788,7 +3695,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-1",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2799,40 +3706,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18900,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-5",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2843,7 +3717,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-6",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2854,7 +3728,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-7",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2865,106 +3739,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.7,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-17",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2975,7 +3750,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-18",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2986,7 +3761,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-19",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2997,139 +3772,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 1.68,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10100,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-32",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3140,7 +3783,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-33",
+      configurationId: "perfectaire-3pams-wall-single-18000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3151,29 +3794,73 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-34",
+      configurationId: "perfectaire-3pams-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
+          heatingCapacityBtu: 9300,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-35",
+      configurationId: "perfectaire-3pams-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
+          heatingCapacityBtu: 10100,
+          cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-36",
+      configurationId: "perfectaire-3pams-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3184,139 +3871,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-3pams-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pams-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pam-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11100,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pahh-series-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pahh-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pahh-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pahh-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pahh-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pahh-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pam-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pamshh-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11100,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-3pamshh-series-wall-single-cfg-2",
+      configurationId: "perfectaire-3pams-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3327,7 +3882,381 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-1",
+      configurationId: "perfectaire-3pams-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.7,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 1.68,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pam-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pahh-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pahh-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pahh-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pahh-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pahh-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pahh-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-standard-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pams-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pam-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pamshh-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-3pamshh-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3338,7 +4267,18 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-2",
+      configurationId: "perfectaire-4pam-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3349,51 +4289,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7600,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-7",
+      configurationId: "perfectaire-4pam-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3404,40 +4300,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16700,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-11",
+      configurationId: "perfectaire-4pam-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3448,7 +4311,117 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-12",
+      configurationId: "perfectaire-4pam-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3459,7 +4432,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-13",
+      configurationId: "perfectaire-4pam-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3470,7 +4443,29 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-14",
+      configurationId: "perfectaire-4pam-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3481,7 +4476,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-15",
+      configurationId: "perfectaire-4pam-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3492,7 +4487,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-16",
+      configurationId: "perfectaire-4pam-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3503,7 +4498,40 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-17",
+      configurationId: "perfectaire-4pam-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3514,7 +4542,18 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-18",
+      configurationId: "perfectaire-4pam-series-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3525,7 +4564,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-19",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3536,7 +4575,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-20",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3547,7 +4586,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-21",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3558,7 +4597,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-22",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3569,117 +4608,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16700,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34800,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-33",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3690,7 +4619,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-34",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3701,7 +4630,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-35",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3712,7 +4641,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-36",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3723,7 +4652,7 @@ export const perfectaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "perfectaire-4pam-series-wall-single-cfg-37",
+      configurationId: "perfectaire-4pam-series-wall-single-48000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,

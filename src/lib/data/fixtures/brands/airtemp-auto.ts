@@ -114,18 +114,73 @@ export const airtempDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "airtemp-standard-wall-single",
-      slug: "airtemp-standard-wall-single",
-      name: "Standard",
+      id: "airtemp-standard-wall-single-9000",
+      slug: "airtemp-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "airtemp-standard",
       brandId: "airtemp",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMaxBtu: 8600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-20000",
+      slug: "airtemp-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "airtemp-standard",
+      brandId: "airtemp",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 13900,
+      heatingCapacity5FMaxBtu: 19400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-36000",
+      slug: "airtemp-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "airtemp-standard",
+      brandId: "airtemp",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 27800,
       heatingCapacity5FMaxBtu: 29000,
       seer2Min: null,
       seer2Max: null,
@@ -140,18 +195,73 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-ultra-side-discharge-central-ducted",
-      slug: "airtemp-ultra-side-discharge-central-ducted",
-      name: "Ultra Side Discharge",
+      id: "airtemp-ultra-side-discharge-central-ducted-24000",
+      slug: "airtemp-ultra-side-discharge-central-ducted-24000",
+      name: "Ultra Side Discharge 24 000 BTU",
       seriesId: "airtemp-ultra-side-discharge",
       brandId: "airtemp",
-      modelNumber: "Ultra Side Discharge",
-      normalizedModelNumber: "ultra-side-discharge",
+      modelNumber: "Ultra Side Discharge 24k",
+      normalizedModelNumber: "ultra-side-discharge-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-ultra-side-discharge-central-ducted-36000",
+      slug: "airtemp-ultra-side-discharge-central-ducted-36000",
+      name: "Ultra Side Discharge 36 000 BTU",
+      seriesId: "airtemp-ultra-side-discharge",
+      brandId: "airtemp",
+      modelNumber: "Ultra Side Discharge 36k",
+      normalizedModelNumber: "ultra-side-discharge-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-ultra-side-discharge-central-ducted-48000",
+      slug: "airtemp-ultra-side-discharge-central-ducted-48000",
+      name: "Ultra Side Discharge 48 000 BTU",
+      seriesId: "airtemp-ultra-side-discharge",
+      brandId: "airtemp",
+      modelNumber: "Ultra Side Discharge 48k",
+      normalizedModelNumber: "ultra-side-discharge-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 39500,
       heatingCapacity5FMaxBtu: 44000,
       seer2Min: 16,
       seer2Max: 17,
@@ -166,24 +276,52 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-flex-match-wall-single",
-      slug: "airtemp-flex-match-wall-single",
-      name: "Flex Match",
+      id: "airtemp-flex-match-wall-single-36000",
+      slug: "airtemp-flex-match-wall-single-36000",
+      name: "Flex Match 36 000 BTU",
       seriesId: "airtemp-flex-match",
       brandId: "airtemp",
-      modelNumber: "Flex Match",
-      normalizedModelNumber: "flex-match",
+      modelNumber: "Flex Match 36k",
+      normalizedModelNumber: "flex-match-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 17000,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
       coolingCapacityMaxBtu: 36000,
-      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMinBtu: 30800,
       heatingCapacity5FMaxBtu: 35600,
       seer2Min: 21,
       seer2Max: 21,
       hspf2Min: 10,
       hspf2Max: 10,
       cop5FMin: 1.82,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-flex-match-wall-single-18000",
+      slug: "airtemp-flex-match-wall-single-18000",
+      name: "Flex Match 18 000 BTU",
+      seriesId: "airtemp-flex-match",
+      brandId: "airtemp",
+      modelNumber: "Flex Match 18k",
+      normalizedModelNumber: "flex-match-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.22,
       cop5FMax: 2.22,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -192,15 +330,70 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-lomo-wall-single",
-      slug: "airtemp-lomo-wall-single",
-      name: "Lomo",
-      seriesId: "airtemp-lomo",
+      id: "airtemp-flex-match-wall-single-24000",
+      slug: "airtemp-flex-match-wall-single-24000",
+      name: "Flex Match 24 000 BTU",
+      seriesId: "airtemp-flex-match",
       brandId: "airtemp",
-      modelNumber: "Lomo",
-      normalizedModelNumber: "lomo",
+      modelNumber: "Flex Match 24k",
+      normalizedModelNumber: "flex-match-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      heatingCapacity5FMinBtu: 23600,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-flex-match-wall-single-30000",
+      slug: "airtemp-flex-match-wall-single-30000",
+      name: "Flex Match 30 000 BTU",
+      seriesId: "airtemp-flex-match",
+      brandId: "airtemp",
+      modelNumber: "Flex Match 30k",
+      normalizedModelNumber: "flex-match-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 27200,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-lomo-wall-single-12000",
+      slug: "airtemp-lomo-wall-single-12000",
+      name: "Lomo 12 000 BTU",
+      seriesId: "airtemp-lomo",
+      brandId: "airtemp",
+      modelNumber: "Lomo 12k",
+      normalizedModelNumber: "lomo-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 10000,
@@ -218,24 +411,160 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single",
-      slug: "airtemp-multizone-outdoors-wall-single",
-      name: "Multizone Outdoors",
-      seriesId: "airtemp-multizone-outdoors",
+      id: "airtemp-standard-wall-single-30000",
+      slug: "airtemp-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "airtemp-standard",
       brandId: "airtemp",
-      modelNumber: "Multizone Outdoors",
-      normalizedModelNumber: "multizone-outdoors",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-18000",
+      slug: "airtemp-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "airtemp-standard",
+      brandId: "airtemp",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10800,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-18000",
+      slug: "airtemp-multizone-outdoors-wall-single-18000",
+      name: "Multizone Outdoors 18 000 BTU",
+      seriesId: "airtemp-multizone-outdoors",
+      brandId: "airtemp",
+      modelNumber: "Multizone Outdoors 18k",
+      normalizedModelNumber: "multizone-outdoors-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 15000,
-      heatingCapacity5FMaxBtu: 40000,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 18,
       seer2Max: 21,
       hspf2Min: 8.1,
       hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-24000",
+      slug: "airtemp-multizone-outdoors-wall-single-24000",
+      name: "Multizone Outdoors 24 000 BTU",
+      seriesId: "airtemp-multizone-outdoors",
+      brandId: "airtemp",
+      modelNumber: "Multizone Outdoors 24k",
+      normalizedModelNumber: "multizone-outdoors-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-30000",
+      slug: "airtemp-multizone-outdoors-wall-single-30000",
+      name: "Multizone Outdoors 30 000 BTU",
+      seriesId: "airtemp-multizone-outdoors",
+      brandId: "airtemp",
+      modelNumber: "Multizone Outdoors 30k",
+      normalizedModelNumber: "multizone-outdoors-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-36000",
+      slug: "airtemp-multizone-outdoors-wall-single-36000",
+      name: "Multizone Outdoors 36 000 BTU",
+      seriesId: "airtemp-multizone-outdoors",
+      brandId: "airtemp",
+      modelNumber: "Multizone Outdoors 36k",
+      normalizedModelNumber: "multizone-outdoors-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -244,15 +573,43 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-19-20-5-seer2-minisplits-wall-single",
-      slug: "airtemp-19-20-5-seer2-minisplits-wall-single",
-      name: "(19-20.5 SEER2) Minisplits",
-      seriesId: "airtemp-19-20-5-seer2-minisplits",
+      id: "airtemp-multizone-outdoors-wall-single-42000",
+      slug: "airtemp-multizone-outdoors-wall-single-42000",
+      name: "Multizone Outdoors 42 000 BTU",
+      seriesId: "airtemp-multizone-outdoors",
       brandId: "airtemp",
-      modelNumber: "(19-20.5 SEER2) Minisplits",
-      normalizedModelNumber: "19-20-5-seer2-minisplits",
+      modelNumber: "Multizone Outdoors 42k",
+      normalizedModelNumber: "multizone-outdoors-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-19-20-5-seer2-minisplits-wall-single-36000",
+      slug: "airtemp-19-20-5-seer2-minisplits-wall-single-36000",
+      name: "(19-20.5 SEER2) Minisplits 36 000 BTU",
+      seriesId: "airtemp-19-20-5-seer2-minisplits",
+      brandId: "airtemp",
+      modelNumber: "(19-20.5 SEER2) Minisplits 36k",
+      normalizedModelNumber: "19-20-5-seer2-minisplits-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 33600,
       coolingCapacityMaxBtu: 33600,
       heatingCapacity5FMinBtu: 27400,
@@ -270,24 +627,106 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-24-26-seer2-minisplits-wall-single",
-      slug: "airtemp-24-26-seer2-minisplits-wall-single",
-      name: "(24-26 SEER2) Minisplits",
-      seriesId: "airtemp-24-26-seer2-minisplits",
+      id: "airtemp-standard-wall-single-24000",
+      slug: "airtemp-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "airtemp-standard",
       brandId: "airtemp",
-      modelNumber: "(24-26 SEER2) Minisplits",
-      normalizedModelNumber: "24-26-seer2-minisplits",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-12000",
+      slug: "airtemp-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "airtemp-standard",
+      brandId: "airtemp",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 9700,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-24-26-seer2-minisplits-wall-single-9000",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-9000",
+      name: "(24-26 SEER2) Minisplits 9 000 BTU",
+      seriesId: "airtemp-24-26-seer2-minisplits",
+      brandId: "airtemp",
+      modelNumber: "(24-26 SEER2) Minisplits 9k",
+      normalizedModelNumber: "24-26-seer2-minisplits-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
+      coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8800,
-      heatingCapacity5FMaxBtu: 20000,
-      seer2Min: 24.5,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 26,
       seer2Max: 26,
-      hspf2Min: 9,
+      hspf2Min: 10.4,
       hspf2Max: 10.4,
-      cop5FMin: 1.8,
+      cop5FMin: 1.88,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-24-26-seer2-minisplits-wall-single-12000",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-12000",
+      name: "(24-26 SEER2) Minisplits 12 000 BTU",
+      seriesId: "airtemp-24-26-seer2-minisplits",
+      brandId: "airtemp",
+      modelNumber: "(24-26 SEER2) Minisplits 12k",
+      normalizedModelNumber: "24-26-seer2-minisplits-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.95,
       cop5FMax: 1.95,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -296,24 +735,79 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single",
-      slug: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single",
-      name: "Multizone Indoors Eight-way Compact Cassettes",
-      seriesId: "airtemp-multizone-indoors-eight-way-compact-cassettes",
+      id: "airtemp-24-26-seer2-minisplits-wall-single-20000",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-20000",
+      name: "(24-26 SEER2) Minisplits 20 000 BTU",
+      seriesId: "airtemp-24-26-seer2-minisplits",
       brandId: "airtemp",
-      modelNumber: "Multizone Indoors Eight-way Compact Cassettes",
-      normalizedModelNumber: "multizone-indoors-eight-way-compact-cassettes",
+      modelNumber: "(24-26 SEER2) Minisplits 20k",
+      normalizedModelNumber: "24-26-seer2-minisplits-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 12000,
-      heatingCapacity5FMinBtu: 8800,
-      heatingCapacity5FMaxBtu: 10000,
-      seer2Min: 23,
-      seer2Max: 24,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 26,
+      seer2Max: 26,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-24-26-seer2-minisplits-wall-single-18000",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-18000",
+      name: "(24-26 SEER2) Minisplits 18 000 BTU",
+      seriesId: "airtemp-24-26-seer2-minisplits",
+      brandId: "airtemp",
+      modelNumber: "(24-26 SEER2) Minisplits 18k",
+      normalizedModelNumber: "24-26-seer2-minisplits-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
       hspf2Min: 9,
-      hspf2Max: 9.2,
+      hspf2Max: 9,
       cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-9000",
+      slug: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-9000",
+      name: "Multizone Indoors Eight-way Compact Cassettes 9 000 BTU",
+      seriesId: "airtemp-multizone-indoors-eight-way-compact-cassettes",
+      brandId: "airtemp",
+      modelNumber: "Multizone Indoors Eight-way Compact Cassettes 9k",
+      normalizedModelNumber: "multizone-indoors-eight-way-compact-cassettes-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8800,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.94,
       cop5FMax: 1.94,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -322,20 +816,102 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-e-series-central-ducted",
-      slug: "airtemp-e-series-central-ducted",
-      name: "E Series",
-      seriesId: "airtemp-e-series",
+      id: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-12000",
+      slug: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-12000",
+      name: "Multizone Indoors Eight-way Compact Cassettes 12 000 BTU",
+      seriesId: "airtemp-multizone-indoors-eight-way-compact-cassettes",
       brandId: "airtemp",
-      modelNumber: "E Series",
-      normalizedModelNumber: "e-series",
+      modelNumber: "Multizone Indoors Eight-way Compact Cassettes 12k",
+      normalizedModelNumber: "multizone-indoors-eight-way-compact-cassettes-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-e-series-central-ducted-24000",
+      slug: "airtemp-e-series-central-ducted-24000",
+      name: "E Series 24 000 BTU",
+      seriesId: "airtemp-e-series",
+      brandId: "airtemp",
+      modelNumber: "E Series 24k",
+      normalizedModelNumber: "e-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 20600,
-      heatingCapacity5FMaxBtu: 45000,
+      heatingCapacity5FMaxBtu: 20600,
       seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-e-series-central-ducted-36000",
+      slug: "airtemp-e-series-central-ducted-36000",
+      name: "E Series 36 000 BTU",
+      seriesId: "airtemp-e-series",
+      brandId: "airtemp",
+      modelNumber: "E Series 36k",
+      normalizedModelNumber: "e-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 28200,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18.2,
+      seer2Max: 18.2,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-e-series-central-ducted-48000",
+      slug: "airtemp-e-series-central-ducted-48000",
+      name: "E Series 48 000 BTU",
+      seriesId: "airtemp-e-series",
+      brandId: "airtemp",
+      modelNumber: "E Series 48k",
+      normalizedModelNumber: "e-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 39500,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 18.2,
       seer2Max: 19,
       hspf2Min: 10,
       hspf2Max: 10,
@@ -362,50 +938,8 @@ export const airtempDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "airtemp-gxh24-7-0-lsk4dh",
-      modelNumber: "GXH24(7.0)LSK4DH",
-      brandId: "airtemp",
-      refrigerant: null as any,
-    },
-    {
-      id: "airtemp-gxh42-12-3-fmk4dh",
-      modelNumber: "GXH42(12.3)FMK4DH",
-      brandId: "airtemp",
-      refrigerant: null as any,
-    },
-    {
-      id: "airtemp-gxh24-7-0-lsk4dl2",
-      modelNumber: "GXH24(7.0)LSK4DL2",
-      brandId: "airtemp",
-      refrigerant: null as any,
-    },
-    {
       id: "airtemp-gxh09-2-6-lsk4dh2",
       modelNumber: "GXH09(2.6)LSK4DH2",
-      brandId: "airtemp",
-      refrigerant: null as any,
-    },
-    {
-      id: "airtemp-gxh24-7-0-lsk4dh2",
-      modelNumber: "GXH24(7.0)LSK4DH2",
-      brandId: "airtemp",
-      refrigerant: null as any,
-    },
-    {
-      id: "airtemp-gxh30-8-8-lsk4dh2",
-      modelNumber: "GXH30(8.8)LSK4DH2",
-      brandId: "airtemp",
-      refrigerant: null as any,
-    },
-    {
-      id: "airtemp-gxh36-10-6-lsk4dh2",
-      modelNumber: "GXH36(10.6)LSK4DH2",
-      brandId: "airtemp",
-      refrigerant: null as any,
-    },
-    {
-      id: "airtemp-gxh18-5-3-lsk4dh2",
-      modelNumber: "GXH18(5.3)LSK4DH2",
       brandId: "airtemp",
       refrigerant: null as any,
     },
@@ -422,32 +956,32 @@ export const airtempDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "airtemp-dxh24esk3il",
-      modelNumber: "DXH24ESK3IL",
+      id: "airtemp-gxh24-7-0-lsk4dh",
+      modelNumber: "GXH24(7.0)LSK4DH",
       brandId: "airtemp",
       refrigerant: null as any,
     },
     {
-      id: "airtemp-dxh12esk3il",
-      modelNumber: "DXH12ESK3IL",
+      id: "airtemp-gxh24-7-0-lsk4dl2",
+      modelNumber: "GXH24(7.0)LSK4DL2",
       brandId: "airtemp",
       refrigerant: null as any,
     },
     {
-      id: "airtemp-dxh12esa3il",
-      modelNumber: "DXH12ESA3IL",
+      id: "airtemp-gxh24-7-0-lsk4dh2",
+      modelNumber: "GXH24(7.0)LSK4DH2",
       brandId: "airtemp",
       refrigerant: null as any,
     },
     {
-      id: "airtemp-dxh18esk3il",
-      modelNumber: "DXH18ESK3IL",
+      id: "airtemp-gxh42-12-3-fmk4dh",
+      modelNumber: "GXH42(12.3)FMK4DH",
       brandId: "airtemp",
       refrigerant: null as any,
     },
     {
-      id: "airtemp-dxh30esk3il",
-      modelNumber: "DXH30ESK3IL",
+      id: "airtemp-gxh36-10-6-lsk4dh2",
+      modelNumber: "GXH36(10.6)LSK4DH2",
       brandId: "airtemp",
       refrigerant: null as any,
     },
@@ -500,6 +1034,30 @@ export const airtempDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "airtemp-gxh30-8-8-lsk4dh2",
+      modelNumber: "GXH30(8.8)LSK4DH2",
+      brandId: "airtemp",
+      refrigerant: null as any,
+    },
+    {
+      id: "airtemp-dxh30esk3il",
+      modelNumber: "DXH30ESK3IL",
+      brandId: "airtemp",
+      refrigerant: null as any,
+    },
+    {
+      id: "airtemp-gxh18-5-3-lsk4dh2",
+      modelNumber: "GXH18(5.3)LSK4DH2",
+      brandId: "airtemp",
+      refrigerant: null as any,
+    },
+    {
+      id: "airtemp-dxh18esk3il",
+      modelNumber: "DXH18ESK3IL",
+      brandId: "airtemp",
+      refrigerant: null as any,
+    },
+    {
       id: "airtemp-dxh18fmk3ih",
       modelNumber: "DXH18FMK3IH",
       brandId: "airtemp",
@@ -532,6 +1090,24 @@ export const airtempDataset: BrandDataset = {
     {
       id: "airtemp-dxh36esk3il",
       modelNumber: "DXH36ESK3IL",
+      brandId: "airtemp",
+      refrigerant: null as any,
+    },
+    {
+      id: "airtemp-dxh24esk3il",
+      modelNumber: "DXH24ESK3IL",
+      brandId: "airtemp",
+      refrigerant: null as any,
+    },
+    {
+      id: "airtemp-dxh12esk3il",
+      modelNumber: "DXH12ESK3IL",
+      brandId: "airtemp",
+      refrigerant: null as any,
+    },
+    {
+      id: "airtemp-dxh12esa3il",
+      modelNumber: "DXH12ESA3IL",
       brandId: "airtemp",
       refrigerant: null as any,
     },
@@ -577,9 +1153,9 @@ export const airtempDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "airtemp-standard-wall-single-cfg-1",
-      slug: "airtemp-standard-wall-single-cfg-1",
-      modelId: "airtemp-standard-wall-single",
+      id: "airtemp-standard-wall-single-9000-cfg-1",
+      slug: "airtemp-standard-wall-single-9000-cfg-1",
+      modelId: "airtemp-standard-wall-single-9000",
       outdoorUnitId: "airtemp-gxh09-2-6-lsa4dh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -591,9 +1167,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-2",
-      slug: "airtemp-standard-wall-single-cfg-2",
-      modelId: "airtemp-standard-wall-single",
+      id: "airtemp-standard-wall-single-9000-cfg-2",
+      slug: "airtemp-standard-wall-single-9000-cfg-2",
+      modelId: "airtemp-standard-wall-single-9000",
       outdoorUnitId: "airtemp-gxh09-2-6-lsk4dh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -605,51 +1181,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-3",
-      slug: "airtemp-standard-wall-single-cfg-3",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh24-7-0-lsk4dh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-4",
-      slug: "airtemp-standard-wall-single-cfg-4",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh42-12-3-fmk4dh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 39000,
-      coolingCapacityMaxBtu: 39000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-5",
-      slug: "airtemp-standard-wall-single-cfg-5",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh24-7-0-lsk4dl2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-6",
-      slug: "airtemp-standard-wall-single-cfg-6",
-      modelId: "airtemp-standard-wall-single",
+      id: "airtemp-standard-wall-single-9000-cfg-3",
+      slug: "airtemp-standard-wall-single-9000-cfg-3",
+      modelId: "airtemp-standard-wall-single-9000",
       outdoorUnitId: "airtemp-gxh09-2-6-lsk4dh2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -661,79 +1195,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-7",
-      slug: "airtemp-standard-wall-single-cfg-7",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh24-7-0-lsk4dh2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-8",
-      slug: "airtemp-standard-wall-single-cfg-8",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh30-8-8-lsk4dh2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-9",
-      slug: "airtemp-standard-wall-single-cfg-9",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh36-10-6-lsk4dh2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-10",
-      slug: "airtemp-standard-wall-single-cfg-10",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh18-5-3-lsk4dh2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-11",
-      slug: "airtemp-standard-wall-single-cfg-11",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-gxh18-5-3-lsk4dh2",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-standard-wall-single-cfg-12",
-      slug: "airtemp-standard-wall-single-cfg-12",
-      modelId: "airtemp-standard-wall-single",
+      id: "airtemp-standard-wall-single-9000-cfg-4",
+      slug: "airtemp-standard-wall-single-9000-cfg-4",
+      modelId: "airtemp-standard-wall-single-9000",
       outdoorUnitId: "airtemp-dxh09esk3il",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -745,9 +1209,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-13",
-      slug: "airtemp-standard-wall-single-cfg-13",
-      modelId: "airtemp-standard-wall-single",
+      id: "airtemp-standard-wall-single-9000-cfg-5",
+      slug: "airtemp-standard-wall-single-9000-cfg-5",
+      modelId: "airtemp-standard-wall-single-9000",
       outdoorUnitId: "airtemp-dxh09esa3il",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -759,13 +1223,13 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-14",
-      slug: "airtemp-standard-wall-single-cfg-14",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-dxh24esk3il",
+      id: "airtemp-standard-wall-single-20000-cfg-1",
+      slug: "airtemp-standard-wall-single-20000-cfg-1",
+      modelId: "airtemp-standard-wall-single-20000",
+      outdoorUnitId: "airtemp-gxh24-7-0-lsk4dh",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -773,13 +1237,13 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-15",
-      slug: "airtemp-standard-wall-single-cfg-15",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-dxh12esk3il",
+      id: "airtemp-standard-wall-single-20000-cfg-2",
+      slug: "airtemp-standard-wall-single-20000-cfg-2",
+      modelId: "airtemp-standard-wall-single-20000",
+      outdoorUnitId: "airtemp-gxh24-7-0-lsk4dl2",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -787,13 +1251,13 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-16",
-      slug: "airtemp-standard-wall-single-cfg-16",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-dxh12esa3il",
+      id: "airtemp-standard-wall-single-20000-cfg-3",
+      slug: "airtemp-standard-wall-single-20000-cfg-3",
+      modelId: "airtemp-standard-wall-single-20000",
+      outdoorUnitId: "airtemp-gxh24-7-0-lsk4dh2",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -801,13 +1265,13 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-17",
-      slug: "airtemp-standard-wall-single-cfg-17",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-dxh18esk3il",
+      id: "airtemp-standard-wall-single-36000-cfg-1",
+      slug: "airtemp-standard-wall-single-36000-cfg-1",
+      modelId: "airtemp-standard-wall-single-36000",
+      outdoorUnitId: "airtemp-gxh42-12-3-fmk4dh",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMinBtu: 39000,
+      coolingCapacityMaxBtu: 39000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -815,13 +1279,13 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-standard-wall-single-cfg-18",
-      slug: "airtemp-standard-wall-single-cfg-18",
-      modelId: "airtemp-standard-wall-single",
-      outdoorUnitId: "airtemp-dxh30esk3il",
+      id: "airtemp-standard-wall-single-36000-cfg-2",
+      slug: "airtemp-standard-wall-single-36000-cfg-2",
+      modelId: "airtemp-standard-wall-single-36000",
+      outdoorUnitId: "airtemp-gxh36-10-6-lsk4dh2",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -829,9 +1293,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-ultra-side-discharge-central-ducted-cfg-1",
-      slug: "airtemp-ultra-side-discharge-central-ducted-cfg-1",
-      modelId: "airtemp-ultra-side-discharge-central-ducted",
+      id: "airtemp-ultra-side-discharge-central-ducted-24000-cfg-1",
+      slug: "airtemp-ultra-side-discharge-central-ducted-24000-cfg-1",
+      modelId: "airtemp-ultra-side-discharge-central-ducted-24000",
       outdoorUnitId: "airtemp-gxh24-36msk4dh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -843,9 +1307,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-ultra-side-discharge-central-ducted-cfg-2",
-      slug: "airtemp-ultra-side-discharge-central-ducted-cfg-2",
-      modelId: "airtemp-ultra-side-discharge-central-ducted",
+      id: "airtemp-ultra-side-discharge-central-ducted-36000-cfg-1",
+      slug: "airtemp-ultra-side-discharge-central-ducted-36000-cfg-1",
+      modelId: "airtemp-ultra-side-discharge-central-ducted-36000",
       outdoorUnitId: "airtemp-gxh24-36msk4dh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -857,9 +1321,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-ultra-side-discharge-central-ducted-cfg-3",
-      slug: "airtemp-ultra-side-discharge-central-ducted-cfg-3",
-      modelId: "airtemp-ultra-side-discharge-central-ducted",
+      id: "airtemp-ultra-side-discharge-central-ducted-48000-cfg-1",
+      slug: "airtemp-ultra-side-discharge-central-ducted-48000-cfg-1",
+      modelId: "airtemp-ultra-side-discharge-central-ducted-48000",
       outdoorUnitId: "airtemp-gxh48-60msk4dh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -871,9 +1335,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-ultra-side-discharge-central-ducted-cfg-4",
-      slug: "airtemp-ultra-side-discharge-central-ducted-cfg-4",
-      modelId: "airtemp-ultra-side-discharge-central-ducted",
+      id: "airtemp-ultra-side-discharge-central-ducted-48000-cfg-2",
+      slug: "airtemp-ultra-side-discharge-central-ducted-48000-cfg-2",
+      modelId: "airtemp-ultra-side-discharge-central-ducted-48000",
       outdoorUnitId: "airtemp-gxh48-60msk4dh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -885,9 +1349,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-flex-match-wall-single-cfg-1",
-      slug: "airtemp-flex-match-wall-single-cfg-1",
-      modelId: "airtemp-flex-match-wall-single",
+      id: "airtemp-flex-match-wall-single-36000-cfg-1",
+      slug: "airtemp-flex-match-wall-single-36000-cfg-1",
+      modelId: "airtemp-flex-match-wall-single-36000",
       outdoorUnitId: "airtemp-gxh36-10-6-fmk4dh-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -899,9 +1363,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-flex-match-wall-single-cfg-2",
-      slug: "airtemp-flex-match-wall-single-cfg-2",
-      modelId: "airtemp-flex-match-wall-single",
+      id: "airtemp-flex-match-wall-single-36000-cfg-2",
+      slug: "airtemp-flex-match-wall-single-36000-cfg-2",
+      modelId: "airtemp-flex-match-wall-single-36000",
       outdoorUnitId: "airtemp-gxh42-12-3-fmk4dh-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -913,9 +1377,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-flex-match-wall-single-cfg-3",
-      slug: "airtemp-flex-match-wall-single-cfg-3",
-      modelId: "airtemp-flex-match-wall-single",
+      id: "airtemp-flex-match-wall-single-18000-cfg-1",
+      slug: "airtemp-flex-match-wall-single-18000-cfg-1",
+      modelId: "airtemp-flex-match-wall-single-18000",
       outdoorUnitId: "airtemp-gxh18-5-3-fmk4dh-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -927,9 +1391,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-flex-match-wall-single-cfg-4",
-      slug: "airtemp-flex-match-wall-single-cfg-4",
-      modelId: "airtemp-flex-match-wall-single",
+      id: "airtemp-flex-match-wall-single-24000-cfg-1",
+      slug: "airtemp-flex-match-wall-single-24000-cfg-1",
+      modelId: "airtemp-flex-match-wall-single-24000",
       outdoorUnitId: "airtemp-gxh24-7-0-fmk4dh-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23200,
@@ -941,9 +1405,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-flex-match-wall-single-cfg-5",
-      slug: "airtemp-flex-match-wall-single-cfg-5",
-      modelId: "airtemp-flex-match-wall-single",
+      id: "airtemp-flex-match-wall-single-30000-cfg-1",
+      slug: "airtemp-flex-match-wall-single-30000-cfg-1",
+      modelId: "airtemp-flex-match-wall-single-30000",
       outdoorUnitId: "airtemp-gxh30-8-8-fmk4dh-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -955,9 +1419,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-lomo-wall-single-cfg-1",
-      slug: "airtemp-lomo-wall-single-cfg-1",
-      modelId: "airtemp-lomo-wall-single",
+      id: "airtemp-lomo-wall-single-12000-cfg-1",
+      slug: "airtemp-lomo-wall-single-12000-cfg-1",
+      modelId: "airtemp-lomo-wall-single-12000",
       outdoorUnitId: "airtemp-gxh12-3-5-lsk4dh2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -969,9 +1433,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-lomo-wall-single-cfg-2",
-      slug: "airtemp-lomo-wall-single-cfg-2",
-      modelId: "airtemp-lomo-wall-single",
+      id: "airtemp-lomo-wall-single-12000-cfg-2",
+      slug: "airtemp-lomo-wall-single-12000-cfg-2",
+      modelId: "airtemp-lomo-wall-single-12000",
       outdoorUnitId: "airtemp-gxh12-3-5-lsk4dh2",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -983,9 +1447,79 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-1",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-1",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-standard-wall-single-30000-cfg-1",
+      slug: "airtemp-standard-wall-single-30000-cfg-1",
+      modelId: "airtemp-standard-wall-single-30000",
+      outdoorUnitId: "airtemp-gxh30-8-8-lsk4dh2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-30000-cfg-2",
+      slug: "airtemp-standard-wall-single-30000-cfg-2",
+      modelId: "airtemp-standard-wall-single-30000",
+      outdoorUnitId: "airtemp-dxh30esk3il",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-18000-cfg-1",
+      slug: "airtemp-standard-wall-single-18000-cfg-1",
+      modelId: "airtemp-standard-wall-single-18000",
+      outdoorUnitId: "airtemp-gxh18-5-3-lsk4dh2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-18000-cfg-2",
+      slug: "airtemp-standard-wall-single-18000-cfg-2",
+      modelId: "airtemp-standard-wall-single-18000",
+      outdoorUnitId: "airtemp-gxh18-5-3-lsk4dh2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-18000-cfg-3",
+      slug: "airtemp-standard-wall-single-18000-cfg-3",
+      modelId: "airtemp-standard-wall-single-18000",
+      outdoorUnitId: "airtemp-dxh18esk3il",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-18000-cfg-1",
+      slug: "airtemp-multizone-outdoors-wall-single-18000-cfg-1",
+      modelId: "airtemp-multizone-outdoors-wall-single-18000",
       outdoorUnitId: "airtemp-dxh18fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -997,65 +1531,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-2",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-2",
-      modelId: "airtemp-multizone-outdoors-wall-single",
-      outdoorUnitId: "airtemp-dxh24fmk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-3",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-3",
-      modelId: "airtemp-multizone-outdoors-wall-single",
-      outdoorUnitId: "airtemp-dxh30fmk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-4",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-4",
-      modelId: "airtemp-multizone-outdoors-wall-single",
-      outdoorUnitId: "airtemp-dxh36fmk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-5",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-5",
-      modelId: "airtemp-multizone-outdoors-wall-single",
-      outdoorUnitId: "airtemp-dxh42fmk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-6",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-6",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-multizone-outdoors-wall-single-18000-cfg-2",
+      slug: "airtemp-multizone-outdoors-wall-single-18000-cfg-2",
+      modelId: "airtemp-multizone-outdoors-wall-single-18000",
       outdoorUnitId: "airtemp-dxh18fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1067,9 +1545,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-7",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-7",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-multizone-outdoors-wall-single-18000-cfg-3",
+      slug: "airtemp-multizone-outdoors-wall-single-18000-cfg-3",
+      modelId: "airtemp-multizone-outdoors-wall-single-18000",
       outdoorUnitId: "airtemp-dxh18fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1081,9 +1559,23 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-8",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-8",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-multizone-outdoors-wall-single-24000-cfg-1",
+      slug: "airtemp-multizone-outdoors-wall-single-24000-cfg-1",
+      modelId: "airtemp-multizone-outdoors-wall-single-24000",
+      outdoorUnitId: "airtemp-dxh24fmk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-24000-cfg-2",
+      slug: "airtemp-multizone-outdoors-wall-single-24000-cfg-2",
+      modelId: "airtemp-multizone-outdoors-wall-single-24000",
       outdoorUnitId: "airtemp-dxh24fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1095,51 +1587,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-9",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-9",
-      modelId: "airtemp-multizone-outdoors-wall-single",
-      outdoorUnitId: "airtemp-dxh30fmk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-10",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-10",
-      modelId: "airtemp-multizone-outdoors-wall-single",
-      outdoorUnitId: "airtemp-dxh36fmk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-11",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-11",
-      modelId: "airtemp-multizone-outdoors-wall-single",
-      outdoorUnitId: "airtemp-dxh42fmk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-12",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-12",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-multizone-outdoors-wall-single-24000-cfg-3",
+      slug: "airtemp-multizone-outdoors-wall-single-24000-cfg-3",
+      modelId: "airtemp-multizone-outdoors-wall-single-24000",
       outdoorUnitId: "airtemp-dxh24fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1151,9 +1601,37 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-13",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-13",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-multizone-outdoors-wall-single-30000-cfg-1",
+      slug: "airtemp-multizone-outdoors-wall-single-30000-cfg-1",
+      modelId: "airtemp-multizone-outdoors-wall-single-30000",
+      outdoorUnitId: "airtemp-dxh30fmk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-30000-cfg-2",
+      slug: "airtemp-multizone-outdoors-wall-single-30000-cfg-2",
+      modelId: "airtemp-multizone-outdoors-wall-single-30000",
+      outdoorUnitId: "airtemp-dxh30fmk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-30000-cfg-3",
+      slug: "airtemp-multizone-outdoors-wall-single-30000-cfg-3",
+      modelId: "airtemp-multizone-outdoors-wall-single-30000",
       outdoorUnitId: "airtemp-dxh30fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -1165,9 +1643,37 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-14",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-14",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-multizone-outdoors-wall-single-36000-cfg-1",
+      slug: "airtemp-multizone-outdoors-wall-single-36000-cfg-1",
+      modelId: "airtemp-multizone-outdoors-wall-single-36000",
+      outdoorUnitId: "airtemp-dxh36fmk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-36000-cfg-2",
+      slug: "airtemp-multizone-outdoors-wall-single-36000-cfg-2",
+      modelId: "airtemp-multizone-outdoors-wall-single-36000",
+      outdoorUnitId: "airtemp-dxh36fmk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-36000-cfg-3",
+      slug: "airtemp-multizone-outdoors-wall-single-36000-cfg-3",
+      modelId: "airtemp-multizone-outdoors-wall-single-36000",
       outdoorUnitId: "airtemp-dxh36fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1179,9 +1685,37 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-outdoors-wall-single-cfg-15",
-      slug: "airtemp-multizone-outdoors-wall-single-cfg-15",
-      modelId: "airtemp-multizone-outdoors-wall-single",
+      id: "airtemp-multizone-outdoors-wall-single-42000-cfg-1",
+      slug: "airtemp-multizone-outdoors-wall-single-42000-cfg-1",
+      modelId: "airtemp-multizone-outdoors-wall-single-42000",
+      outdoorUnitId: "airtemp-dxh42fmk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-42000-cfg-2",
+      slug: "airtemp-multizone-outdoors-wall-single-42000-cfg-2",
+      modelId: "airtemp-multizone-outdoors-wall-single-42000",
+      outdoorUnitId: "airtemp-dxh42fmk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-outdoors-wall-single-42000-cfg-3",
+      slug: "airtemp-multizone-outdoors-wall-single-42000-cfg-3",
+      modelId: "airtemp-multizone-outdoors-wall-single-42000",
       outdoorUnitId: "airtemp-dxh42fmk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -1193,9 +1727,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-19-20-5-seer2-minisplits-wall-single-cfg-1",
-      slug: "airtemp-19-20-5-seer2-minisplits-wall-single-cfg-1",
-      modelId: "airtemp-19-20-5-seer2-minisplits-wall-single",
+      id: "airtemp-19-20-5-seer2-minisplits-wall-single-36000-cfg-1",
+      slug: "airtemp-19-20-5-seer2-minisplits-wall-single-36000-cfg-1",
+      modelId: "airtemp-19-20-5-seer2-minisplits-wall-single-36000",
       outdoorUnitId: "airtemp-dxh36esk3il",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33600,
@@ -1207,9 +1741,51 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-24-26-seer2-minisplits-wall-single-cfg-1",
-      slug: "airtemp-24-26-seer2-minisplits-wall-single-cfg-1",
-      modelId: "airtemp-24-26-seer2-minisplits-wall-single",
+      id: "airtemp-standard-wall-single-24000-cfg-1",
+      slug: "airtemp-standard-wall-single-24000-cfg-1",
+      modelId: "airtemp-standard-wall-single-24000",
+      outdoorUnitId: "airtemp-dxh24esk3il",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-12000-cfg-1",
+      slug: "airtemp-standard-wall-single-12000-cfg-1",
+      modelId: "airtemp-standard-wall-single-12000",
+      outdoorUnitId: "airtemp-dxh12esk3il",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-standard-wall-single-12000-cfg-2",
+      slug: "airtemp-standard-wall-single-12000-cfg-2",
+      modelId: "airtemp-standard-wall-single-12000",
+      outdoorUnitId: "airtemp-dxh12esa3il",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-24-26-seer2-minisplits-wall-single-9000-cfg-1",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-9000-cfg-1",
+      modelId: "airtemp-24-26-seer2-minisplits-wall-single-9000",
       outdoorUnitId: "airtemp-dxh09psk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -1221,9 +1797,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-24-26-seer2-minisplits-wall-single-cfg-2",
-      slug: "airtemp-24-26-seer2-minisplits-wall-single-cfg-2",
-      modelId: "airtemp-24-26-seer2-minisplits-wall-single",
+      id: "airtemp-24-26-seer2-minisplits-wall-single-12000-cfg-1",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-12000-cfg-1",
+      modelId: "airtemp-24-26-seer2-minisplits-wall-single-12000",
       outdoorUnitId: "airtemp-dxh12psk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1235,9 +1811,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-24-26-seer2-minisplits-wall-single-cfg-3",
-      slug: "airtemp-24-26-seer2-minisplits-wall-single-cfg-3",
-      modelId: "airtemp-24-26-seer2-minisplits-wall-single",
+      id: "airtemp-24-26-seer2-minisplits-wall-single-20000-cfg-1",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-20000-cfg-1",
+      modelId: "airtemp-24-26-seer2-minisplits-wall-single-20000",
       outdoorUnitId: "airtemp-dxh24psk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1249,23 +1825,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-24-26-seer2-minisplits-wall-single-cfg-4",
-      slug: "airtemp-24-26-seer2-minisplits-wall-single-cfg-4",
-      modelId: "airtemp-24-26-seer2-minisplits-wall-single",
-      outdoorUnitId: "airtemp-dxh18psk3ih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "airtemp-24-26-seer2-minisplits-wall-single-cfg-5",
-      slug: "airtemp-24-26-seer2-minisplits-wall-single-cfg-5",
-      modelId: "airtemp-24-26-seer2-minisplits-wall-single",
+      id: "airtemp-24-26-seer2-minisplits-wall-single-20000-cfg-2",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-20000-cfg-2",
+      modelId: "airtemp-24-26-seer2-minisplits-wall-single-20000",
       outdoorUnitId: "airtemp-dxh24psk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1277,9 +1839,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-24-26-seer2-minisplits-wall-single-cfg-6",
-      slug: "airtemp-24-26-seer2-minisplits-wall-single-cfg-6",
-      modelId: "airtemp-24-26-seer2-minisplits-wall-single",
+      id: "airtemp-24-26-seer2-minisplits-wall-single-18000-cfg-1",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-18000-cfg-1",
+      modelId: "airtemp-24-26-seer2-minisplits-wall-single-18000",
       outdoorUnitId: "airtemp-dxh18psk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1291,9 +1853,23 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-cfg-1",
-      slug: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-cfg-1",
-      modelId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single",
+      id: "airtemp-24-26-seer2-minisplits-wall-single-18000-cfg-2",
+      slug: "airtemp-24-26-seer2-minisplits-wall-single-18000-cfg-2",
+      modelId: "airtemp-24-26-seer2-minisplits-wall-single-18000",
+      outdoorUnitId: "airtemp-dxh18psk3ih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-9000-cfg-1",
+      slug: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-9000-cfg-1",
+      modelId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-9000",
       outdoorUnitId: "airtemp-dxh09psk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -1305,9 +1881,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-cfg-2",
-      slug: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-cfg-2",
-      modelId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single",
+      id: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-12000-cfg-1",
+      slug: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-12000-cfg-1",
+      modelId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-12000",
       outdoorUnitId: "airtemp-dxh12psk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1319,9 +1895,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-e-series-central-ducted-cfg-1",
-      slug: "airtemp-e-series-central-ducted-cfg-1",
-      modelId: "airtemp-e-series-central-ducted",
+      id: "airtemp-e-series-central-ducted-24000-cfg-1",
+      slug: "airtemp-e-series-central-ducted-24000-cfg-1",
+      modelId: "airtemp-e-series-central-ducted-24000",
       outdoorUnitId: "airtemp-uxh24-36msk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1333,9 +1909,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-e-series-central-ducted-cfg-2",
-      slug: "airtemp-e-series-central-ducted-cfg-2",
-      modelId: "airtemp-e-series-central-ducted",
+      id: "airtemp-e-series-central-ducted-36000-cfg-1",
+      slug: "airtemp-e-series-central-ducted-36000-cfg-1",
+      modelId: "airtemp-e-series-central-ducted-36000",
       outdoorUnitId: "airtemp-uxh24-36msk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -1347,9 +1923,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-e-series-central-ducted-cfg-3",
-      slug: "airtemp-e-series-central-ducted-cfg-3",
-      modelId: "airtemp-e-series-central-ducted",
+      id: "airtemp-e-series-central-ducted-48000-cfg-1",
+      slug: "airtemp-e-series-central-ducted-48000-cfg-1",
+      modelId: "airtemp-e-series-central-ducted-48000",
       outdoorUnitId: "airtemp-uxh48-60msk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1361,9 +1937,9 @@ export const airtempDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "airtemp-e-series-central-ducted-cfg-4",
-      slug: "airtemp-e-series-central-ducted-cfg-4",
-      modelId: "airtemp-e-series-central-ducted",
+      id: "airtemp-e-series-central-ducted-48000-cfg-2",
+      slug: "airtemp-e-series-central-ducted-48000-cfg-2",
+      modelId: "airtemp-e-series-central-ducted-48000",
       outdoorUnitId: "airtemp-uxh48-60msk3ih",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -1377,7 +1953,7 @@ export const airtempDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "airtemp-standard-wall-single-cfg-1",
+      configurationId: "airtemp-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1388,7 +1964,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-standard-wall-single-cfg-2",
+      configurationId: "airtemp-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1399,40 +1975,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-6",
+      configurationId: "airtemp-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1443,7 +1986,51 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-standard-wall-single-cfg-7",
+      configurationId: "airtemp-standard-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-20000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1454,18 +2041,18 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-standard-wall-single-cfg-8",
+      configurationId: "airtemp-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
+          heatingCapacityBtu: 29000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "airtemp-standard-wall-single-cfg-9",
+      configurationId: "airtemp-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1476,106 +2063,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-ultra-side-discharge-central-ducted-cfg-1",
+      configurationId: "airtemp-ultra-side-discharge-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1586,7 +2074,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-ultra-side-discharge-central-ducted-cfg-2",
+      configurationId: "airtemp-ultra-side-discharge-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1597,7 +2085,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-ultra-side-discharge-central-ducted-cfg-3",
+      configurationId: "airtemp-ultra-side-discharge-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1608,7 +2096,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-ultra-side-discharge-central-ducted-cfg-4",
+      configurationId: "airtemp-ultra-side-discharge-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1619,7 +2107,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-flex-match-wall-single-cfg-1",
+      configurationId: "airtemp-flex-match-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1630,7 +2118,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-flex-match-wall-single-cfg-2",
+      configurationId: "airtemp-flex-match-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1641,7 +2129,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-flex-match-wall-single-cfg-3",
+      configurationId: "airtemp-flex-match-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1652,7 +2140,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-flex-match-wall-single-cfg-4",
+      configurationId: "airtemp-flex-match-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1663,7 +2151,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-flex-match-wall-single-cfg-5",
+      configurationId: "airtemp-flex-match-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1674,7 +2162,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-lomo-wall-single-cfg-1",
+      configurationId: "airtemp-lomo-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1685,7 +2173,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-lomo-wall-single-cfg-2",
+      configurationId: "airtemp-lomo-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1696,7 +2184,62 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-1",
+      configurationId: "airtemp-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1707,51 +2250,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-6",
+      configurationId: "airtemp-multizone-outdoors-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1762,7 +2261,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-7",
+      configurationId: "airtemp-multizone-outdoors-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1773,7 +2272,18 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-8",
+      configurationId: "airtemp-multizone-outdoors-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1784,40 +2294,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-12",
+      configurationId: "airtemp-multizone-outdoors-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1828,7 +2305,29 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-13",
+      configurationId: "airtemp-multizone-outdoors-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1839,7 +2338,29 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-14",
+      configurationId: "airtemp-multizone-outdoors-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1850,7 +2371,29 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-outdoors-wall-single-cfg-15",
+      configurationId: "airtemp-multizone-outdoors-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-outdoors-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1861,7 +2404,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-19-20-5-seer2-minisplits-wall-single-cfg-1",
+      configurationId: "airtemp-19-20-5-seer2-minisplits-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1872,7 +2415,40 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-cfg-1",
+      configurationId: "airtemp-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1883,7 +2459,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-cfg-2",
+      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1894,7 +2470,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-cfg-3",
+      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1905,18 +2481,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-cfg-5",
+      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-20000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1927,7 +2492,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-cfg-6",
+      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1938,7 +2503,18 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-cfg-1",
+      configurationId: "airtemp-24-26-seer2-minisplits-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1949,7 +2525,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-cfg-2",
+      configurationId: "airtemp-multizone-indoors-eight-way-compact-cassettes-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1960,7 +2536,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-e-series-central-ducted-cfg-1",
+      configurationId: "airtemp-e-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1971,7 +2547,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-e-series-central-ducted-cfg-2",
+      configurationId: "airtemp-e-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1982,7 +2558,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-e-series-central-ducted-cfg-3",
+      configurationId: "airtemp-e-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1993,7 +2569,7 @@ export const airtempDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "airtemp-e-series-central-ducted-cfg-4",
+      configurationId: "airtemp-e-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

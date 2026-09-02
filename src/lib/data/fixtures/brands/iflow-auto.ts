@@ -26,18 +26,100 @@ export const iflowDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "iflow-standard-wall-single",
-      slug: "iflow-standard-wall-single",
-      name: "Standard",
+      id: "iflow-standard-wall-single-24000",
+      slug: "iflow-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
       seriesId: "iflow-standard",
       brandId: "iflow",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "iflow-standard-wall-single-30000",
+      slug: "iflow-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "iflow-standard",
+      brandId: "iflow",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 22600,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "iflow-standard-wall-single-36000",
+      slug: "iflow-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "iflow-standard",
+      brandId: "iflow",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "iflow-standard-wall-single-48000",
+      slug: "iflow-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "iflow-standard",
+      brandId: "iflow",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 32000,
       heatingCapacity5FMaxBtu: 34000,
       seer2Min: null,
       seer2Max: null,
@@ -89,9 +171,9 @@ export const iflowDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "iflow-standard-wall-single-cfg-1",
-      slug: "iflow-standard-wall-single-cfg-1",
-      modelId: "iflow-standard-wall-single",
+      id: "iflow-standard-wall-single-24000-cfg-1",
+      slug: "iflow-standard-wall-single-24000-cfg-1",
+      modelId: "iflow-standard-wall-single-24000",
       outdoorUnitId: "iflow-70hpic24a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -103,9 +185,9 @@ export const iflowDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "iflow-standard-wall-single-cfg-2",
-      slug: "iflow-standard-wall-single-cfg-2",
-      modelId: "iflow-standard-wall-single",
+      id: "iflow-standard-wall-single-30000-cfg-1",
+      slug: "iflow-standard-wall-single-30000-cfg-1",
+      modelId: "iflow-standard-wall-single-30000",
       outdoorUnitId: "iflow-70hpic30a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -117,9 +199,9 @@ export const iflowDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "iflow-standard-wall-single-cfg-3",
-      slug: "iflow-standard-wall-single-cfg-3",
-      modelId: "iflow-standard-wall-single",
+      id: "iflow-standard-wall-single-36000-cfg-1",
+      slug: "iflow-standard-wall-single-36000-cfg-1",
+      modelId: "iflow-standard-wall-single-36000",
       outdoorUnitId: "iflow-70hpic36a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -131,9 +213,23 @@ export const iflowDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "iflow-standard-wall-single-cfg-4",
-      slug: "iflow-standard-wall-single-cfg-4",
-      modelId: "iflow-standard-wall-single",
+      id: "iflow-standard-wall-single-36000-cfg-2",
+      slug: "iflow-standard-wall-single-36000-cfg-2",
+      modelId: "iflow-standard-wall-single-36000",
+      outdoorUnitId: "iflow-70hpic36a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "iflow-standard-wall-single-48000-cfg-1",
+      slug: "iflow-standard-wall-single-48000-cfg-1",
+      modelId: "iflow-standard-wall-single-48000",
       outdoorUnitId: "iflow-70hpic48a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -145,9 +241,9 @@ export const iflowDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "iflow-standard-wall-single-cfg-5",
-      slug: "iflow-standard-wall-single-cfg-5",
-      modelId: "iflow-standard-wall-single",
+      id: "iflow-standard-wall-single-48000-cfg-2",
+      slug: "iflow-standard-wall-single-48000-cfg-2",
+      modelId: "iflow-standard-wall-single-48000",
       outdoorUnitId: "iflow-70hpic60a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -157,25 +253,11 @@ export const iflowDataset: BrandDataset = {
       minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "iflow-standard-wall-single-cfg-6",
-      slug: "iflow-standard-wall-single-cfg-6",
-      modelId: "iflow-standard-wall-single",
-      outdoorUnitId: "iflow-70hpic36a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "iflow-standard-wall-single-cfg-1",
+      configurationId: "iflow-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -186,7 +268,7 @@ export const iflowDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "iflow-standard-wall-single-cfg-2",
+      configurationId: "iflow-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -197,7 +279,7 @@ export const iflowDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "iflow-standard-wall-single-cfg-3",
+      configurationId: "iflow-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -208,7 +290,18 @@ export const iflowDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "iflow-standard-wall-single-cfg-4",
+      configurationId: "iflow-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "iflow-standard-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -219,22 +312,11 @@ export const iflowDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "iflow-standard-wall-single-cfg-5",
+      configurationId: "iflow-standard-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "iflow-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
           cop: null,
           confidence: "verified",
         }

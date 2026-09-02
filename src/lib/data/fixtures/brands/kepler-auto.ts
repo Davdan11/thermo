@@ -59,24 +59,25 @@ export const keplerDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "kepler-azpn-series-central-ducted",
-      slug: "kepler-azpn-series-central-ducted",
-      name: "AZPN Series",
+      id: "kepler-azpn-series-central-ducted-18000",
+      slug: "kepler-azpn-series-central-ducted-18000",
+      name: "AZPN Series 18 000 BTU",
       seriesId: "kepler-azpn-series",
       brandId: "kepler",
-      modelNumber: "AZPN Series",
-      normalizedModelNumber: "azpn-series",
+      modelNumber: "AZPN Series 18k",
+      normalizedModelNumber: "azpn-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.2,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 16.1,
       seer2Max: 18,
-      hspf2Min: 8.5,
-      hspf2Max: 10.2,
-      cop5FMin: 1.8,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 2.04,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -85,18 +86,235 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single",
-      slug: "kepler-standard-wall-single",
-      name: "Standard",
-      seriesId: "kepler-standard",
+      id: "kepler-azpn-series-central-ducted-24000",
+      slug: "kepler-azpn-series-central-ducted-24000",
+      name: "AZPN Series 24 000 BTU",
+      seriesId: "kepler-azpn-series",
       brandId: "kepler",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "AZPN Series 24k",
+      normalizedModelNumber: "azpn-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 15.7,
+      seer2Max: 17.4,
+      hspf2Min: 9.2,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-36000",
+      slug: "kepler-azpn-series-central-ducted-36000",
+      name: "AZPN Series 36 000 BTU",
+      seriesId: "kepler-azpn-series",
+      brandId: "kepler",
+      modelNumber: "AZPN Series 36k",
+      normalizedModelNumber: "azpn-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 16.3,
+      hspf2Min: 8.5,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-30000",
+      slug: "kepler-azpn-series-central-ducted-30000",
+      name: "AZPN Series 30 000 BTU",
+      seriesId: "kepler-azpn-series",
+      brandId: "kepler",
+      modelNumber: "AZPN Series 30k",
+      normalizedModelNumber: "azpn-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 15.2,
+      seer2Max: 16.2,
+      hspf2Min: 8.5,
+      hspf2Max: 9.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-60000",
+      slug: "kepler-azpn-series-central-ducted-60000",
+      name: "AZPN Series 60 000 BTU",
+      seriesId: "kepler-azpn-series",
+      brandId: "kepler",
+      modelNumber: "AZPN Series 60k",
+      normalizedModelNumber: "azpn-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-48000",
+      slug: "kepler-azpn-series-central-ducted-48000",
+      name: "AZPN Series 48 000 BTU",
+      seriesId: "kepler-azpn-series",
+      brandId: "kepler",
+      modelNumber: "AZPN Series 48k",
+      normalizedModelNumber: "azpn-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-18000",
+      slug: "kepler-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "kepler-standard",
+      brandId: "kepler",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 13000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-30000",
+      slug: "kepler-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "kepler-standard",
+      brandId: "kepler",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-36000",
+      slug: "kepler-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "kepler-standard",
+      brandId: "kepler",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-48000",
+      slug: "kepler-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "kepler-standard",
+      brandId: "kepler",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 30400,
       heatingCapacity5FMaxBtu: 37000,
       seer2Min: null,
       seer2Max: null,
@@ -111,24 +329,160 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single",
-      slug: "kepler-idu-series-wall-single",
-      name: "IDU Series",
-      seriesId: "kepler-idu-series",
+      id: "kepler-standard-wall-single-60000",
+      slug: "kepler-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "kepler-standard",
       brandId: "kepler",
-      modelNumber: "IDU Series",
-      normalizedModelNumber: "idu-series",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-20000",
+      slug: "kepler-azpn-series-central-ducted-20000",
+      name: "AZPN Series 20 000 BTU",
+      seriesId: "kepler-azpn-series",
+      brandId: "kepler",
+      modelNumber: "AZPN Series 20k",
+      normalizedModelNumber: "azpn-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      heatingCapacity5FMinBtu: 22400,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 16.3,
+      seer2Max: 16.3,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-6000",
+      slug: "kepler-idu-series-wall-single-6000",
+      name: "IDU Series 6 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 6k",
+      normalizedModelNumber: "idu-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 26.5,
+      seer2Max: 26.5,
+      hspf2Min: 13.6,
+      hspf2Max: 13.6,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-9000",
+      slug: "kepler-idu-series-wall-single-9000",
+      name: "IDU Series 9 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 9k",
+      normalizedModelNumber: "idu-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 18,
+      heatingCapacity5FMaxBtu: 10100,
+      seer2Min: 19.2,
       seer2Max: 28.1,
       hspf2Min: 9,
-      hspf2Max: 13.6,
-      cop5FMin: 1.75,
+      hspf2Max: 12.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2.17,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000",
+      slug: "kepler-idu-series-wall-single-12000",
+      name: "IDU Series 12 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 12k",
+      normalizedModelNumber: "idu-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19,
+      seer2Max: 25.5,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 1.8,
+      cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-18000",
+      slug: "kepler-idu-series-wall-single-18000",
+      name: "IDU Series 18 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 18k",
+      normalizedModelNumber: "idu-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 12600,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 18,
+      seer2Max: 23.5,
+      hspf2Min: 9.3,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
       cop5FMax: 2.4,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -137,27 +491,352 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single",
-      slug: "kepler-odu-series-wall-single",
-      name: "ODU Series",
-      seriesId: "kepler-odu-series",
+      id: "kepler-idu-series-wall-single-24000",
+      slug: "kepler-idu-series-wall-single-24000",
+      name: "IDU Series 24 000 BTU",
+      seriesId: "kepler-idu-series",
       brandId: "kepler",
-      modelNumber: "ODU Series",
-      normalizedModelNumber: "odu-series",
+      modelNumber: "IDU Series 24k",
+      normalizedModelNumber: "idu-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 11400,
-      heatingCapacity5FMaxBtu: 35000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 16200,
+      heatingCapacity5FMaxBtu: 23000,
       seer2Min: 19,
-      seer2Max: 24.6,
+      seer2Max: 22,
+      hspf2Min: 9.7,
+      hspf2Max: 11.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-30000",
+      slug: "kepler-idu-series-wall-single-30000",
+      name: "IDU Series 30 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 30k",
+      normalizedModelNumber: "idu-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 28800,
+      heatingCapacity5FMaxBtu: 28800,
+      seer2Min: 19.5,
+      seer2Max: 19.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-18000",
+      slug: "kepler-odu-series-wall-single-18000",
+      name: "ODU Series 18 000 BTU",
+      seriesId: "kepler-odu-series",
+      brandId: "kepler",
+      modelNumber: "ODU Series 18k",
+      normalizedModelNumber: "odu-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11400,
+      heatingCapacity5FMaxBtu: 14800,
+      seer2Min: 19,
+      seer2Max: 22.9,
       hspf2Min: 8.7,
-      hspf2Max: 10.6,
-      cop5FMin: 1.75,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
       cop5FMax: 2.06,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-15000",
+      slug: "kepler-idu-series-wall-single-15000",
+      name: "IDU Series 15 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 15k",
+      normalizedModelNumber: "idu-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 20.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.75,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-36000",
+      slug: "kepler-idu-series-wall-single-36000",
+      name: "IDU Series 36 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 36k",
+      normalizedModelNumber: "idu-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 19.4,
+      seer2Max: 22.4,
+      hspf2Min: 10,
+      hspf2Max: 10.9,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-48000",
+      slug: "kepler-idu-series-wall-single-48000",
+      name: "IDU Series 48 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 48k",
+      normalizedModelNumber: "idu-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 20.9,
+      seer2Max: 21.8,
+      hspf2Min: 9,
+      hspf2Max: 9.8,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-60000",
+      slug: "kepler-idu-series-wall-single-60000",
+      name: "IDU Series 60 000 BTU",
+      seriesId: "kepler-idu-series",
+      brandId: "kepler",
+      modelNumber: "IDU Series 60k",
+      normalizedModelNumber: "idu-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 35200,
+      seer2Min: 18.8,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-42000",
+      slug: "kepler-azpn-series-central-ducted-42000",
+      name: "AZPN Series 42 000 BTU",
+      seriesId: "kepler-azpn-series",
+      brandId: "kepler",
+      modelNumber: "AZPN Series 42k",
+      normalizedModelNumber: "azpn-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-12000",
+      slug: "kepler-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "kepler-standard",
+      brandId: "kepler",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 7800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-24000",
+      slug: "kepler-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "kepler-standard",
+      brandId: "kepler",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16500,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-30000",
+      slug: "kepler-odu-series-wall-single-30000",
+      name: "ODU Series 30 000 BTU",
+      seriesId: "kepler-odu-series",
+      brandId: "kepler",
+      modelNumber: "ODU Series 30k",
+      normalizedModelNumber: "odu-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 24.6,
+      hspf2Min: 9.2,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-36000",
+      slug: "kepler-odu-series-wall-single-36000",
+      name: "ODU Series 36 000 BTU",
+      seriesId: "kepler-odu-series",
+      brandId: "kepler",
+      modelNumber: "ODU Series 36k",
+      normalizedModelNumber: "odu-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26800,
+      heatingCapacity5FMaxBtu: 26800,
+      seer2Min: 23.9,
+      seer2Max: 23.9,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-48000",
+      slug: "kepler-odu-series-wall-single-48000",
+      name: "ODU Series 48 000 BTU",
+      seriesId: "kepler-odu-series",
+      brandId: "kepler",
+      modelNumber: "ODU Series 48k",
+      normalizedModelNumber: "odu-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 21.95,
+      seer2Max: 23.4,
+      hspf2Min: 8.7,
+      hspf2Max: 9.2,
+      cop5FMin: 1.75,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -177,38 +856,20 @@ export const keplerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kepler-azpns-24rod",
+      modelNumber: "AZPNS/24ROD",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
       id: "kepler-azpn-36wac",
       modelNumber: "AZPN/36WAC",
       brandId: "kepler",
       refrigerant: null as any,
     },
     {
-      id: "kepler-azpn-30wd",
-      modelNumber: "AZPN/30WD",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
       id: "kepler-azpn-36wd",
       modelNumber: "AZPN/36WD",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-azpn-60wd",
-      modelNumber: "AZPN/60WD",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-azpn-48wd",
-      modelNumber: "AZPN/48WD",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-azpns-24rod",
-      modelNumber: "AZPNS/24ROD",
       brandId: "kepler",
       refrigerant: null as any,
     },
@@ -225,14 +886,26 @@ export const keplerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kepler-azpn48wd",
-      modelNumber: "AZPN48WD",
+      id: "kepler-azpn-30wd",
+      modelNumber: "AZPN/30WD",
       brandId: "kepler",
       refrigerant: null as any,
     },
     {
-      id: "kepler-azpn-45wd",
-      modelNumber: "AZPN/45WD",
+      id: "kepler-azpn-60wd",
+      modelNumber: "AZPN/60WD",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-azpn-48wd",
+      modelNumber: "AZPN/48WD",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-azpn48wd",
+      modelNumber: "AZPN48WD",
       brandId: "kepler",
       refrigerant: null as any,
     },
@@ -255,18 +928,6 @@ export const keplerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kepler-azpns-48rod",
-      modelNumber: "AZPNS/48ROD",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-azpns-60rod",
-      modelNumber: "AZPNS/60ROD",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
       id: "kepler-azpns-36rod",
       modelNumber: "AZPNS/36ROD",
       brandId: "kepler",
@@ -279,20 +940,14 @@ export const keplerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kepler-odumox230-12hfn1-bs8w",
-      modelNumber: "ODUMOX230-12HFN1-BS8W",
+      id: "kepler-azpns-48rod",
+      modelNumber: "AZPNS/48ROD",
       brandId: "kepler",
       refrigerant: null as any,
     },
     {
-      id: "kepler-odumox230-12hfn1-ms8w",
-      modelNumber: "ODUMOX230-12HFN1-MS8W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odumox430-24hfn1-mr0w",
-      modelNumber: "ODUMOX430-24HFN1-MR0W",
+      id: "kepler-azpns-60rod",
+      modelNumber: "AZPNS/60ROD",
       brandId: "kepler",
       refrigerant: null as any,
     },
@@ -315,30 +970,6 @@ export const keplerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kepler-odumox330-12hfn1mw5w",
-      modelNumber: "ODUMOX330-12HFN1MW5W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odumox430-17hfn1mt0w",
-      modelNumber: "ODUMOX430-17HFN1MT0W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odumod30-24hfn1mu0w",
-      modelNumber: "ODUMOD30-24HFN1MU0W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odumod30-33hfn1msr0w",
-      modelNumber: "ODUMOD30-33HFN1MSR0W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
       id: "kepler-odumox230-09hfn1-bs5w",
       modelNumber: "ODUMOX230-09HFN1-BS5W",
       brandId: "kepler",
@@ -351,14 +982,86 @@ export const keplerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kepler-odumox230-09hfn1-bw0w",
+      modelNumber: "ODUMOX230-09HFN1-BW0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumox230-09hfn1-mw5w",
+      modelNumber: "ODUMOX230-09HFN1-MW5W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumox330-12hfn1mw5w",
+      modelNumber: "ODUMOX330-12HFN1MW5W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumox230-12hfn1-bw0w",
+      modelNumber: "ODUMOX230-12HFN1-BW0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumox230-12hfn1-mv5w",
+      modelNumber: "ODUMOX230-12HFN1-MV5W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumox430-17hfn1mt0w",
+      modelNumber: "ODUMOX430-17HFN1MT0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
       id: "kepler-odum2oi-18hfn1-m",
       modelNumber: "ODUM2OI-18HFN1-M",
       brandId: "kepler",
       refrigerant: null as any,
     },
     {
+      id: "kepler-odumox430-18hfn1-mu0w",
+      modelNumber: "ODUMOX430-18HFN1-MU0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumod30-24hfn1mu0w",
+      modelNumber: "ODUMOD30-24HFN1MU0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
       id: "kepler-odum3ok-27hfn1-m",
       modelNumber: "ODUM3OK-27HFN1-M",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumod33-24hfn1-mt0w",
+      modelNumber: "ODUMOD33-24HFN1-MT0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumod30-33hfn1msr0w",
+      modelNumber: "ODUMOD30-33HFN1MSR0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odumox330-18hfn1-ms0w",
+      modelNumber: "ODUMOX330-18HFN1-MS0W",
+      brandId: "kepler",
+      refrigerant: null as any,
+    },
+    {
+      id: "kepler-odum2oa-18hfn1-m",
+      modelNumber: "ODUM2OA-18HFN1-M",
       brandId: "kepler",
       refrigerant: null as any,
     },
@@ -387,50 +1090,26 @@ export const keplerDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kepler-odumox230-09hfn1-bw0w",
-      modelNumber: "ODUMOX230-09HFN1-BW0W",
+      id: "kepler-azpn-45wd",
+      modelNumber: "AZPN/45WD",
       brandId: "kepler",
       refrigerant: null as any,
     },
     {
-      id: "kepler-odumox230-12hfn1-bw0w",
-      modelNumber: "ODUMOX230-12HFN1-BW0W",
+      id: "kepler-odumox230-12hfn1-bs8w",
+      modelNumber: "ODUMOX230-12HFN1-BS8W",
       brandId: "kepler",
       refrigerant: null as any,
     },
     {
-      id: "kepler-odumox230-09hfn1-mw5w",
-      modelNumber: "ODUMOX230-09HFN1-MW5W",
+      id: "kepler-odumox230-12hfn1-ms8w",
+      modelNumber: "ODUMOX230-12HFN1-MS8W",
       brandId: "kepler",
       refrigerant: null as any,
     },
     {
-      id: "kepler-odumox230-12hfn1-mv5w",
-      modelNumber: "ODUMOX230-12HFN1-MV5W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odumox430-18hfn1-mu0w",
-      modelNumber: "ODUMOX430-18HFN1-MU0W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odumod33-24hfn1-mt0w",
-      modelNumber: "ODUMOD33-24HFN1-MT0W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odumox330-18hfn1-ms0w",
-      modelNumber: "ODUMOX330-18HFN1-MS0W",
-      brandId: "kepler",
-      refrigerant: null as any,
-    },
-    {
-      id: "kepler-odum2oa-18hfn1-m",
-      modelNumber: "ODUM2OA-18HFN1-M",
+      id: "kepler-odumox430-24hfn1-mr0w",
+      modelNumber: "ODUMOX430-24HFN1-MR0W",
       brandId: "kepler",
       refrigerant: null as any,
     },
@@ -458,9 +1137,9 @@ export const keplerDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "kepler-azpn-series-central-ducted-cfg-1",
-      slug: "kepler-azpn-series-central-ducted-cfg-1",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-18000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-18000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-18000",
       outdoorUnitId: "kepler-azpn-18wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -472,79 +1151,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-2",
-      slug: "kepler-azpn-series-central-ducted-cfg-2",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-24wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-3",
-      slug: "kepler-azpn-series-central-ducted-cfg-3",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-36wac",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-4",
-      slug: "kepler-azpn-series-central-ducted-cfg-4",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-30wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-5",
-      slug: "kepler-azpn-series-central-ducted-cfg-5",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-36wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-6",
-      slug: "kepler-azpn-series-central-ducted-cfg-6",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-60wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-7",
-      slug: "kepler-azpn-series-central-ducted-cfg-7",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-18000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-18000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-18000",
       outdoorUnitId: "kepler-azpn-18wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -556,9 +1165,37 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-8",
-      slug: "kepler-azpn-series-central-ducted-cfg-8",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-18000-cfg-3",
+      slug: "kepler-azpn-series-central-ducted-18000-cfg-3",
+      modelId: "kepler-azpn-series-central-ducted-18000",
+      outdoorUnitId: "kepler-azpn-18wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-24000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-24000",
+      outdoorUnitId: "kepler-azpn-24wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-24000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-24000",
       outdoorUnitId: "kepler-azpn-24wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -570,65 +1207,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-9",
-      slug: "kepler-azpn-series-central-ducted-cfg-9",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-30wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-10",
-      slug: "kepler-azpn-series-central-ducted-cfg-10",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-36wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-11",
-      slug: "kepler-azpn-series-central-ducted-cfg-11",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-48wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-12",
-      slug: "kepler-azpn-series-central-ducted-cfg-12",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-60wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-13",
-      slug: "kepler-azpn-series-central-ducted-cfg-13",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-24000-cfg-3",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-3",
+      modelId: "kepler-azpn-series-central-ducted-24000",
       outdoorUnitId: "kepler-azpns-24rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -640,9 +1221,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-14",
-      slug: "kepler-azpn-series-central-ducted-cfg-14",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-24000-cfg-4",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-4",
+      modelId: "kepler-azpn-series-central-ducted-24000",
       outdoorUnitId: "kepler-azpns-24rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -654,23 +1235,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-15",
-      slug: "kepler-azpn-series-central-ducted-cfg-15",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-24wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 20000,
-      seer2: 16.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-16",
-      slug: "kepler-azpn-series-central-ducted-cfg-16",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-24000-cfg-5",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-5",
+      modelId: "kepler-azpn-series-central-ducted-24000",
       outdoorUnitId: "kepler-azpn-24wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -682,135 +1249,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-17",
-      slug: "kepler-azpn-series-central-ducted-cfg-17",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-30wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-18",
-      slug: "kepler-azpn-series-central-ducted-cfg-18",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-b36wduid",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-19",
-      slug: "kepler-azpn-series-central-ducted-cfg-19",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-c36wduid",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-20",
-      slug: "kepler-azpn-series-central-ducted-cfg-20",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn48wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-21",
-      slug: "kepler-azpn-series-central-ducted-cfg-21",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-b36wduid",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 16.3,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-22",
-      slug: "kepler-azpn-series-central-ducted-cfg-22",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-b36wduid",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-23",
-      slug: "kepler-azpn-series-central-ducted-cfg-23",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-45wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-24",
-      slug: "kepler-azpn-series-central-ducted-cfg-24",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-18wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-25",
-      slug: "kepler-azpn-series-central-ducted-cfg-25",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-24wd",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 20000,
-      seer2: 16.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-azpn-series-central-ducted-cfg-26",
-      slug: "kepler-azpn-series-central-ducted-cfg-26",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-24000-cfg-6",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-6",
+      modelId: "kepler-azpn-series-central-ducted-24000",
       outdoorUnitId: "kepler-azpn-24wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -822,9 +1263,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-27",
-      slug: "kepler-azpn-series-central-ducted-cfg-27",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-24000-cfg-7",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-7",
+      modelId: "kepler-azpn-series-central-ducted-24000",
       outdoorUnitId: "kepler-azpn-24wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -836,13 +1277,83 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-28",
-      slug: "kepler-azpn-series-central-ducted-cfg-28",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-30wd",
+      id: "kepler-azpn-series-central-ducted-24000-cfg-8",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-8",
+      modelId: "kepler-azpn-series-central-ducted-24000",
+      outdoorUnitId: "kepler-azpns-24rod",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 15.7,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-24000-cfg-9",
+      slug: "kepler-azpn-series-central-ducted-24000-cfg-9",
+      modelId: "kepler-azpn-series-central-ducted-24000",
+      outdoorUnitId: "kepler-azpns-24rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 15.7,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-36000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-36000",
+      outdoorUnitId: "kepler-azpn-36wac",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-36000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-36000",
+      outdoorUnitId: "kepler-azpn-36wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-36000-cfg-3",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-3",
+      modelId: "kepler-azpn-series-central-ducted-36000",
+      outdoorUnitId: "kepler-azpn-36wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-36000-cfg-4",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-4",
+      modelId: "kepler-azpn-series-central-ducted-36000",
+      outdoorUnitId: "kepler-azpn-b36wduid",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
       seer2: 15.2,
       hspf2: 8.5,
       minHeatingTempC: -25,
@@ -850,23 +1361,51 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-29",
-      slug: "kepler-azpn-series-central-ducted-cfg-29",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-30wd",
+      id: "kepler-azpn-series-central-ducted-36000-cfg-5",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-5",
+      modelId: "kepler-azpn-series-central-ducted-36000",
+      outdoorUnitId: "kepler-azpn-c36wduid",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.5,
-      hspf2: 9.7,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 8.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-30",
-      slug: "kepler-azpn-series-central-ducted-cfg-30",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-36000-cfg-6",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-6",
+      modelId: "kepler-azpn-series-central-ducted-36000",
+      outdoorUnitId: "kepler-azpn-b36wduid",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 16.3,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-36000-cfg-7",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-7",
+      modelId: "kepler-azpn-series-central-ducted-36000",
+      outdoorUnitId: "kepler-azpn-b36wduid",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-36000-cfg-8",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-8",
+      modelId: "kepler-azpn-series-central-ducted-36000",
       outdoorUnitId: "kepler-azpn-36wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -878,9 +1417,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-31",
-      slug: "kepler-azpn-series-central-ducted-cfg-31",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-36000-cfg-9",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-9",
+      modelId: "kepler-azpn-series-central-ducted-36000",
       outdoorUnitId: "kepler-azpn-36wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -892,9 +1431,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-32",
-      slug: "kepler-azpn-series-central-ducted-cfg-32",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-36000-cfg-10",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-10",
+      modelId: "kepler-azpn-series-central-ducted-36000",
       outdoorUnitId: "kepler-azpn-b36wduid",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -906,9 +1445,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-33",
-      slug: "kepler-azpn-series-central-ducted-cfg-33",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-36000-cfg-11",
+      slug: "kepler-azpn-series-central-ducted-36000-cfg-11",
+      modelId: "kepler-azpn-series-central-ducted-36000",
       outdoorUnitId: "kepler-azpn-b36wduid",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -920,37 +1459,79 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-34",
-      slug: "kepler-azpn-series-central-ducted-cfg-34",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-48wd",
+      id: "kepler-azpn-series-central-ducted-30000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-30000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-30000",
+      outdoorUnitId: "kepler-azpn-30wd",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.5,
+      hspf2: 9.7,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-35",
-      slug: "kepler-azpn-series-central-ducted-cfg-35",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpn-45wd",
+      id: "kepler-azpn-series-central-ducted-30000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-30000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-30000",
+      outdoorUnitId: "kepler-azpn-30wd",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-30000-cfg-3",
+      slug: "kepler-azpn-series-central-ducted-30000-cfg-3",
+      modelId: "kepler-azpn-series-central-ducted-30000",
+      outdoorUnitId: "kepler-azpn-30wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
       seer2: 15.2,
-      hspf2: 9.2,
+      hspf2: 8.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-36",
-      slug: "kepler-azpn-series-central-ducted-cfg-36",
-      modelId: "kepler-azpn-series-central-ducted",
+      id: "kepler-azpn-series-central-ducted-30000-cfg-4",
+      slug: "kepler-azpn-series-central-ducted-30000-cfg-4",
+      modelId: "kepler-azpn-series-central-ducted-30000",
+      outdoorUnitId: "kepler-azpn-30wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 15.2,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-30000-cfg-5",
+      slug: "kepler-azpn-series-central-ducted-30000-cfg-5",
+      modelId: "kepler-azpn-series-central-ducted-30000",
+      outdoorUnitId: "kepler-azpn-30wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-60000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-60000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-60000",
       outdoorUnitId: "kepler-azpn-60wd",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -962,37 +1543,79 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-37",
-      slug: "kepler-azpn-series-central-ducted-cfg-37",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpns-24rod",
+      id: "kepler-azpn-series-central-ducted-60000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-60000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-60000",
+      outdoorUnitId: "kepler-azpn-60wd",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 15.7,
-      hspf2: 9.8,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-azpn-series-central-ducted-cfg-38",
-      slug: "kepler-azpn-series-central-ducted-cfg-38",
-      modelId: "kepler-azpn-series-central-ducted",
-      outdoorUnitId: "kepler-azpns-24rod",
+      id: "kepler-azpn-series-central-ducted-60000-cfg-3",
+      slug: "kepler-azpn-series-central-ducted-60000-cfg-3",
+      modelId: "kepler-azpn-series-central-ducted-60000",
+      outdoorUnitId: "kepler-azpn-60wd",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 15.7,
-      hspf2: 9.8,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-1",
-      slug: "kepler-standard-wall-single-cfg-1",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-azpn-series-central-ducted-48000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-48000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-48000",
+      outdoorUnitId: "kepler-azpn-48wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-48000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-48000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-48000",
+      outdoorUnitId: "kepler-azpn48wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-48000-cfg-3",
+      slug: "kepler-azpn-series-central-ducted-48000-cfg-3",
+      modelId: "kepler-azpn-series-central-ducted-48000",
+      outdoorUnitId: "kepler-azpn-48wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-18000-cfg-1",
+      slug: "kepler-standard-wall-single-18000-cfg-1",
+      modelId: "kepler-standard-wall-single-18000",
       outdoorUnitId: "kepler-azpns-18rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1004,9 +1627,51 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-2",
-      slug: "kepler-standard-wall-single-cfg-2",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-18000-cfg-2",
+      slug: "kepler-standard-wall-single-18000-cfg-2",
+      modelId: "kepler-standard-wall-single-18000",
+      outdoorUnitId: "kepler-azpns-18rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-18000-cfg-3",
+      slug: "kepler-standard-wall-single-18000-cfg-3",
+      modelId: "kepler-standard-wall-single-18000",
+      outdoorUnitId: "kepler-azpns-18rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-18000-cfg-4",
+      slug: "kepler-standard-wall-single-18000-cfg-4",
+      modelId: "kepler-standard-wall-single-18000",
+      outdoorUnitId: "kepler-azpns-18rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-30000-cfg-1",
+      slug: "kepler-standard-wall-single-30000-cfg-1",
+      modelId: "kepler-standard-wall-single-30000",
       outdoorUnitId: "kepler-azpns-30rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1018,9 +1683,23 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-3",
-      slug: "kepler-standard-wall-single-cfg-3",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-30000-cfg-2",
+      slug: "kepler-standard-wall-single-30000-cfg-2",
+      modelId: "kepler-standard-wall-single-30000",
+      outdoorUnitId: "kepler-azpns-30rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-36000-cfg-1",
+      slug: "kepler-standard-wall-single-36000-cfg-1",
+      modelId: "kepler-standard-wall-single-36000",
       outdoorUnitId: "kepler-azpn-36rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1032,51 +1711,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-4",
-      slug: "kepler-standard-wall-single-cfg-4",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-48rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-5",
-      slug: "kepler-standard-wall-single-cfg-5",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-60rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-6",
-      slug: "kepler-standard-wall-single-cfg-6",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-18rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-7",
-      slug: "kepler-standard-wall-single-cfg-7",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-36000-cfg-2",
+      slug: "kepler-standard-wall-single-36000-cfg-2",
+      modelId: "kepler-standard-wall-single-36000",
       outdoorUnitId: "kepler-azpns-36rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1088,37 +1725,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-8",
-      slug: "kepler-standard-wall-single-cfg-8",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-48rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-9",
-      slug: "kepler-standard-wall-single-cfg-9",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-60rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-10",
-      slug: "kepler-standard-wall-single-cfg-10",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-36000-cfg-3",
+      slug: "kepler-standard-wall-single-36000-cfg-3",
+      modelId: "kepler-standard-wall-single-36000",
       outdoorUnitId: "kepler-azpns-36rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1130,9 +1739,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-11",
-      slug: "kepler-standard-wall-single-cfg-11",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-36000-cfg-4",
+      slug: "kepler-standard-wall-single-36000-cfg-4",
+      modelId: "kepler-standard-wall-single-36000",
       outdoorUnitId: "kepler-odumod31-36hfn1-mp0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1144,93 +1753,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-12",
-      slug: "kepler-standard-wall-single-cfg-12",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-odumox230-12hfn1-bs8w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-13",
-      slug: "kepler-standard-wall-single-cfg-13",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-odumox230-12hfn1-ms8w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-14",
-      slug: "kepler-standard-wall-single-cfg-14",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-odumox430-24hfn1-mr0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-15",
-      slug: "kepler-standard-wall-single-cfg-15",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-18rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-16",
-      slug: "kepler-standard-wall-single-cfg-16",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-18rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-17",
-      slug: "kepler-standard-wall-single-cfg-17",
-      modelId: "kepler-standard-wall-single",
-      outdoorUnitId: "kepler-azpns-30rod",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-standard-wall-single-cfg-18",
-      slug: "kepler-standard-wall-single-cfg-18",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-36000-cfg-5",
+      slug: "kepler-standard-wall-single-36000-cfg-5",
+      modelId: "kepler-standard-wall-single-36000",
       outdoorUnitId: "kepler-azpns-36rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1242,9 +1767,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-19",
-      slug: "kepler-standard-wall-single-cfg-19",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-36000-cfg-6",
+      slug: "kepler-standard-wall-single-36000-cfg-6",
+      modelId: "kepler-standard-wall-single-36000",
       outdoorUnitId: "kepler-azpns-36rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1256,9 +1781,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-20",
-      slug: "kepler-standard-wall-single-cfg-20",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-48000-cfg-1",
+      slug: "kepler-standard-wall-single-48000-cfg-1",
+      modelId: "kepler-standard-wall-single-48000",
       outdoorUnitId: "kepler-azpns-48rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1270,9 +1795,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-21",
-      slug: "kepler-standard-wall-single-cfg-21",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-48000-cfg-2",
+      slug: "kepler-standard-wall-single-48000-cfg-2",
+      modelId: "kepler-standard-wall-single-48000",
       outdoorUnitId: "kepler-azpns-60rod",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -1284,9 +1809,65 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-22",
-      slug: "kepler-standard-wall-single-cfg-22",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-48000-cfg-3",
+      slug: "kepler-standard-wall-single-48000-cfg-3",
+      modelId: "kepler-standard-wall-single-48000",
+      outdoorUnitId: "kepler-azpns-48rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-48000-cfg-4",
+      slug: "kepler-standard-wall-single-48000-cfg-4",
+      modelId: "kepler-standard-wall-single-48000",
+      outdoorUnitId: "kepler-azpns-48rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-48000-cfg-5",
+      slug: "kepler-standard-wall-single-48000-cfg-5",
+      modelId: "kepler-standard-wall-single-48000",
+      outdoorUnitId: "kepler-azpns-60rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-60000-cfg-1",
+      slug: "kepler-standard-wall-single-60000-cfg-1",
+      modelId: "kepler-standard-wall-single-60000",
+      outdoorUnitId: "kepler-azpns-60rod",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-60000-cfg-2",
+      slug: "kepler-standard-wall-single-60000-cfg-2",
+      modelId: "kepler-standard-wall-single-60000",
       outdoorUnitId: "kepler-odum5oa-55hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1298,9 +1879,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-standard-wall-single-cfg-23",
-      slug: "kepler-standard-wall-single-cfg-23",
-      modelId: "kepler-standard-wall-single",
+      id: "kepler-standard-wall-single-60000-cfg-3",
+      slug: "kepler-standard-wall-single-60000-cfg-3",
+      modelId: "kepler-standard-wall-single-60000",
       outdoorUnitId: "kepler-odum5oa-55hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1312,9 +1893,37 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-1",
-      slug: "kepler-idu-series-wall-single-cfg-1",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-azpn-series-central-ducted-20000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-20000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-20000",
+      outdoorUnitId: "kepler-azpn-24wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      seer2: 16.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-20000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-20000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-20000",
+      outdoorUnitId: "kepler-azpn-24wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      seer2: 16.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-6000-cfg-1",
+      slug: "kepler-idu-series-wall-single-6000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-6000",
       outdoorUnitId: "kepler-odumox230-09hfn1mw5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -1326,9 +1935,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-2",
-      slug: "kepler-idu-series-wall-single-cfg-2",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-1",
+      slug: "kepler-idu-series-wall-single-9000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox330-09hfn1my5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1340,65 +1949,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-3",
-      slug: "kepler-idu-series-wall-single-cfg-3",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-4",
-      slug: "kepler-idu-series-wall-single-cfg-4",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox430-17hfn1mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-5",
-      slug: "kepler-idu-series-wall-single-cfg-5",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumod30-24hfn1mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-6",
-      slug: "kepler-idu-series-wall-single-cfg-6",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumod30-33hfn1msr0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-7",
-      slug: "kepler-idu-series-wall-single-cfg-7",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-2",
+      slug: "kepler-idu-series-wall-single-9000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-bs5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1410,9 +1963,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-8",
-      slug: "kepler-idu-series-wall-single-cfg-8",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-3",
+      slug: "kepler-idu-series-wall-single-9000-cfg-3",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1424,9 +1977,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-9",
-      slug: "kepler-idu-series-wall-single-cfg-9",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-4",
+      slug: "kepler-idu-series-wall-single-9000-cfg-4",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox330-09hfn1my5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1438,51 +1991,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-10",
-      slug: "kepler-idu-series-wall-single-cfg-10",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-11",
-      slug: "kepler-idu-series-wall-single-cfg-11",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox430-17hfn1mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-12",
-      slug: "kepler-idu-series-wall-single-cfg-12",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumod30-24hfn1mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-13",
-      slug: "kepler-idu-series-wall-single-cfg-13",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-5",
+      slug: "kepler-idu-series-wall-single-9000-cfg-5",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox330-09hfn1my5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1494,303 +2005,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-14",
-      slug: "kepler-idu-series-wall-single-cfg-14",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-15",
-      slug: "kepler-idu-series-wall-single-cfg-15",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox430-17hfn1mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-16",
-      slug: "kepler-idu-series-wall-single-cfg-16",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumod30-24hfn1mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-17",
-      slug: "kepler-idu-series-wall-single-cfg-17",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.2,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-18",
-      slug: "kepler-idu-series-wall-single-cfg-18",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum2oi-18hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 22,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-19",
-      slug: "kepler-idu-series-wall-single-cfg-19",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum2oi-18hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 19,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-20",
-      slug: "kepler-idu-series-wall-single-cfg-20",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum2oi-18hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20.5,
-      hspf2: 9.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-21",
-      slug: "kepler-idu-series-wall-single-cfg-21",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 21.8,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-22",
-      slug: "kepler-idu-series-wall-single-cfg-22",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-23",
-      slug: "kepler-idu-series-wall-single-cfg-23",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 20.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-24",
-      slug: "kepler-idu-series-wall-single-cfg-24",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum4oi-36hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.2,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-25",
-      slug: "kepler-idu-series-wall-single-cfg-25",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum4oi-36hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.6,
-      hspf2: 10.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-26",
-      slug: "kepler-idu-series-wall-single-cfg-26",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum4ox630-36hfn1-m1x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.4,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-27",
-      slug: "kepler-idu-series-wall-single-cfg-27",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum4ox630-36hfn1-m1x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-28",
-      slug: "kepler-idu-series-wall-single-cfg-28",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum4ox630-36hfn1-m1x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.9,
-      hspf2: 10.45,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-29",
-      slug: "kepler-idu-series-wall-single-cfg-29",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum5og-48hfn1-m-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.8,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-30",
-      slug: "kepler-idu-series-wall-single-cfg-30",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum5og-48hfn1-m-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-31",
-      slug: "kepler-idu-series-wall-single-cfg-31",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum5og-48hfn1-m-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.35,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-32",
-      slug: "kepler-idu-series-wall-single-cfg-32",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum5oa-55hfn1-m-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 22,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-33",
-      slug: "kepler-idu-series-wall-single-cfg-33",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum5oa-55hfn1-m-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 18.8,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-34",
-      slug: "kepler-idu-series-wall-single-cfg-34",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odum5oa-55hfn1-m-x",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 20.4,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-35",
-      slug: "kepler-idu-series-wall-single-cfg-35",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-6",
+      slug: "kepler-idu-series-wall-single-9000-cfg-6",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-bs5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1802,9 +2019,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-36",
-      slug: "kepler-idu-series-wall-single-cfg-36",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-7",
+      slug: "kepler-idu-series-wall-single-9000-cfg-7",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1816,9 +2033,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-37",
-      slug: "kepler-idu-series-wall-single-cfg-37",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-8",
+      slug: "kepler-idu-series-wall-single-9000-cfg-8",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-bw0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1830,23 +2047,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-38",
-      slug: "kepler-idu-series-wall-single-cfg-38",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox230-12hfn1-bw0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-39",
-      slug: "kepler-idu-series-wall-single-cfg-39",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-9",
+      slug: "kepler-idu-series-wall-single-9000-cfg-9",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-mw5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1858,51 +2061,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-40",
-      slug: "kepler-idu-series-wall-single-cfg-40",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox230-12hfn1-mv5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.6,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-41",
-      slug: "kepler-idu-series-wall-single-cfg-41",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox430-18hfn1-mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.5,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-42",
-      slug: "kepler-idu-series-wall-single-cfg-42",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumod33-24hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-43",
-      slug: "kepler-idu-series-wall-single-cfg-43",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-10",
+      slug: "kepler-idu-series-wall-single-9000-cfg-10",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-mw5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1914,51 +2075,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-44",
-      slug: "kepler-idu-series-wall-single-cfg-44",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox230-12hfn1-mv5w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: 19,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-45",
-      slug: "kepler-idu-series-wall-single-cfg-45",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox430-18hfn1-mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-46",
-      slug: "kepler-idu-series-wall-single-cfg-46",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumod33-24hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 19,
-      hspf2: 11.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-47",
-      slug: "kepler-idu-series-wall-single-cfg-47",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-9000-cfg-11",
+      slug: "kepler-idu-series-wall-single-9000-cfg-11",
+      modelId: "kepler-idu-series-wall-single-9000",
       outdoorUnitId: "kepler-odumox230-09hfn1-mw5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1970,9 +2089,107 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-48",
-      slug: "kepler-idu-series-wall-single-cfg-48",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-12000-cfg-1",
+      slug: "kepler-idu-series-wall-single-12000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-12000",
+      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000-cfg-2",
+      slug: "kepler-idu-series-wall-single-12000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-12000",
+      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000-cfg-3",
+      slug: "kepler-idu-series-wall-single-12000-cfg-3",
+      modelId: "kepler-idu-series-wall-single-12000",
+      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000-cfg-4",
+      slug: "kepler-idu-series-wall-single-12000-cfg-4",
+      modelId: "kepler-idu-series-wall-single-12000",
+      outdoorUnitId: "kepler-odumox330-12hfn1mw5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.2,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000-cfg-5",
+      slug: "kepler-idu-series-wall-single-12000-cfg-5",
+      modelId: "kepler-idu-series-wall-single-12000",
+      outdoorUnitId: "kepler-odumox230-12hfn1-bw0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000-cfg-6",
+      slug: "kepler-idu-series-wall-single-12000-cfg-6",
+      modelId: "kepler-idu-series-wall-single-12000",
+      outdoorUnitId: "kepler-odumox230-12hfn1-mv5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.6,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000-cfg-7",
+      slug: "kepler-idu-series-wall-single-12000-cfg-7",
+      modelId: "kepler-idu-series-wall-single-12000",
+      outdoorUnitId: "kepler-odumox230-12hfn1-mv5w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-12000-cfg-8",
+      slug: "kepler-idu-series-wall-single-12000-cfg-8",
+      modelId: "kepler-idu-series-wall-single-12000",
       outdoorUnitId: "kepler-odumox230-12hfn1-mv5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1984,37 +2201,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-idu-series-wall-single-cfg-49",
-      slug: "kepler-idu-series-wall-single-cfg-49",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumox430-18hfn1-mu0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-50",
-      slug: "kepler-idu-series-wall-single-cfg-50",
-      modelId: "kepler-idu-series-wall-single",
-      outdoorUnitId: "kepler-odumod33-24hfn1-mt0w",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-idu-series-wall-single-cfg-51",
-      slug: "kepler-idu-series-wall-single-cfg-51",
-      modelId: "kepler-idu-series-wall-single",
+      id: "kepler-idu-series-wall-single-12000-cfg-9",
+      slug: "kepler-idu-series-wall-single-12000-cfg-9",
+      modelId: "kepler-idu-series-wall-single-12000",
       outdoorUnitId: "kepler-odumox230-12hfn1-mv5w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2026,79 +2215,275 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-1",
-      slug: "kepler-odu-series-wall-single-cfg-1",
-      modelId: "kepler-odu-series-wall-single",
-      outdoorUnitId: "kepler-odumox330-18hfn1-ms0w",
+      id: "kepler-idu-series-wall-single-18000-cfg-1",
+      slug: "kepler-idu-series-wall-single-18000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odumox430-17hfn1mt0w",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
-      seer2: 19.5,
-      hspf2: 8.7,
+      seer2: 21.5,
+      hspf2: 11.3,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-2",
-      slug: "kepler-odu-series-wall-single-cfg-2",
-      modelId: "kepler-odu-series-wall-single",
-      outdoorUnitId: "kepler-odumox330-18hfn1-ms0w",
+      id: "kepler-idu-series-wall-single-18000-cfg-2",
+      slug: "kepler-idu-series-wall-single-18000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odumox430-17hfn1mt0w",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.5,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-odu-series-wall-single-cfg-3",
-      slug: "kepler-odu-series-wall-single-cfg-3",
-      modelId: "kepler-odu-series-wall-single",
-      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 23,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kepler-odu-series-wall-single-cfg-4",
-      slug: "kepler-odu-series-wall-single-cfg-4",
-      modelId: "kepler-odu-series-wall-single",
-      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 20,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
       hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-5",
-      slug: "kepler-odu-series-wall-single-cfg-5",
-      modelId: "kepler-odu-series-wall-single",
-      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
+      id: "kepler-idu-series-wall-single-18000-cfg-3",
+      slug: "kepler-idu-series-wall-single-18000-cfg-3",
+      modelId: "kepler-idu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odum2oi-18hfn1-m",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21.5,
-      hspf2: 10.05,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 22,
+      hspf2: 9.8,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-6",
-      slug: "kepler-odu-series-wall-single-cfg-6",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-idu-series-wall-single-18000-cfg-4",
+      slug: "kepler-idu-series-wall-single-18000-cfg-4",
+      modelId: "kepler-idu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odum2oi-18hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-18000-cfg-5",
+      slug: "kepler-idu-series-wall-single-18000-cfg-5",
+      modelId: "kepler-idu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odum2oi-18hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 9.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-18000-cfg-6",
+      slug: "kepler-idu-series-wall-single-18000-cfg-6",
+      modelId: "kepler-idu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odumox430-18hfn1-mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-18000-cfg-7",
+      slug: "kepler-idu-series-wall-single-18000-cfg-7",
+      modelId: "kepler-idu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odumox430-18hfn1-mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-1",
+      slug: "kepler-idu-series-wall-single-24000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odumod30-24hfn1mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-2",
+      slug: "kepler-idu-series-wall-single-24000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odumod30-24hfn1mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-3",
+      slug: "kepler-idu-series-wall-single-24000-cfg-3",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odumod30-24hfn1mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-4",
+      slug: "kepler-idu-series-wall-single-24000-cfg-4",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 21.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-5",
+      slug: "kepler-idu-series-wall-single-24000-cfg-5",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-6",
+      slug: "kepler-idu-series-wall-single-24000-cfg-6",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 20.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-7",
+      slug: "kepler-idu-series-wall-single-24000-cfg-7",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odumod33-24hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-8",
+      slug: "kepler-idu-series-wall-single-24000-cfg-8",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odumod33-24hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 19,
+      hspf2: 11.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-24000-cfg-9",
+      slug: "kepler-idu-series-wall-single-24000-cfg-9",
+      modelId: "kepler-idu-series-wall-single-24000",
+      outdoorUnitId: "kepler-odumod33-24hfn1-mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-30000-cfg-1",
+      slug: "kepler-idu-series-wall-single-30000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-30000",
+      outdoorUnitId: "kepler-odumod30-33hfn1msr0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-18000-cfg-1",
+      slug: "kepler-odu-series-wall-single-18000-cfg-1",
+      modelId: "kepler-odu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odumox330-18hfn1-ms0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-18000-cfg-2",
+      slug: "kepler-odu-series-wall-single-18000-cfg-2",
+      modelId: "kepler-odu-series-wall-single-18000",
+      outdoorUnitId: "kepler-odumox330-18hfn1-ms0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-18000-cfg-3",
+      slug: "kepler-odu-series-wall-single-18000-cfg-3",
+      modelId: "kepler-odu-series-wall-single-18000",
       outdoorUnitId: "kepler-odum2oa-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2110,9 +2495,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-7",
-      slug: "kepler-odu-series-wall-single-cfg-7",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-odu-series-wall-single-18000-cfg-4",
+      slug: "kepler-odu-series-wall-single-18000-cfg-4",
+      modelId: "kepler-odu-series-wall-single-18000",
       outdoorUnitId: "kepler-odum2oa-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2124,9 +2509,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-8",
-      slug: "kepler-odu-series-wall-single-cfg-8",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-odu-series-wall-single-18000-cfg-5",
+      slug: "kepler-odu-series-wall-single-18000-cfg-5",
+      modelId: "kepler-odu-series-wall-single-18000",
       outdoorUnitId: "kepler-odum2oa-18hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2138,9 +2523,303 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-9",
-      slug: "kepler-odu-series-wall-single-cfg-9",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-idu-series-wall-single-15000-cfg-1",
+      slug: "kepler-idu-series-wall-single-15000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-15000",
+      outdoorUnitId: "kepler-odumox430-17hfn1mt0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-15000-cfg-2",
+      slug: "kepler-idu-series-wall-single-15000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-15000",
+      outdoorUnitId: "kepler-odumox430-18hfn1-mu0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-36000-cfg-1",
+      slug: "kepler-idu-series-wall-single-36000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-36000",
+      outdoorUnitId: "kepler-odum4oi-36hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-36000-cfg-2",
+      slug: "kepler-idu-series-wall-single-36000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-36000",
+      outdoorUnitId: "kepler-odum4oi-36hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.6,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-36000-cfg-3",
+      slug: "kepler-idu-series-wall-single-36000-cfg-3",
+      modelId: "kepler-idu-series-wall-single-36000",
+      outdoorUnitId: "kepler-odum4ox630-36hfn1-m1x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.4,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-36000-cfg-4",
+      slug: "kepler-idu-series-wall-single-36000-cfg-4",
+      modelId: "kepler-idu-series-wall-single-36000",
+      outdoorUnitId: "kepler-odum4ox630-36hfn1-m1x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-36000-cfg-5",
+      slug: "kepler-idu-series-wall-single-36000-cfg-5",
+      modelId: "kepler-idu-series-wall-single-36000",
+      outdoorUnitId: "kepler-odum4ox630-36hfn1-m1x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.9,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-48000-cfg-1",
+      slug: "kepler-idu-series-wall-single-48000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-48000",
+      outdoorUnitId: "kepler-odum5og-48hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.8,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-48000-cfg-2",
+      slug: "kepler-idu-series-wall-single-48000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-48000",
+      outdoorUnitId: "kepler-odum5og-48hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-48000-cfg-3",
+      slug: "kepler-idu-series-wall-single-48000-cfg-3",
+      modelId: "kepler-idu-series-wall-single-48000",
+      outdoorUnitId: "kepler-odum5og-48hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.35,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-60000-cfg-1",
+      slug: "kepler-idu-series-wall-single-60000-cfg-1",
+      modelId: "kepler-idu-series-wall-single-60000",
+      outdoorUnitId: "kepler-odum5oa-55hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-60000-cfg-2",
+      slug: "kepler-idu-series-wall-single-60000-cfg-2",
+      modelId: "kepler-idu-series-wall-single-60000",
+      outdoorUnitId: "kepler-odum5oa-55hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-idu-series-wall-single-60000-cfg-3",
+      slug: "kepler-idu-series-wall-single-60000-cfg-3",
+      modelId: "kepler-idu-series-wall-single-60000",
+      outdoorUnitId: "kepler-odum5oa-55hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 20.4,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-42000-cfg-1",
+      slug: "kepler-azpn-series-central-ducted-42000-cfg-1",
+      modelId: "kepler-azpn-series-central-ducted-42000",
+      outdoorUnitId: "kepler-azpn-45wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-azpn-series-central-ducted-42000-cfg-2",
+      slug: "kepler-azpn-series-central-ducted-42000-cfg-2",
+      modelId: "kepler-azpn-series-central-ducted-42000",
+      outdoorUnitId: "kepler-azpn-45wd",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-12000-cfg-1",
+      slug: "kepler-standard-wall-single-12000-cfg-1",
+      modelId: "kepler-standard-wall-single-12000",
+      outdoorUnitId: "kepler-odumox230-12hfn1-bs8w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-12000-cfg-2",
+      slug: "kepler-standard-wall-single-12000-cfg-2",
+      modelId: "kepler-standard-wall-single-12000",
+      outdoorUnitId: "kepler-odumox230-12hfn1-ms8w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-standard-wall-single-24000-cfg-1",
+      slug: "kepler-standard-wall-single-24000-cfg-1",
+      modelId: "kepler-standard-wall-single-24000",
+      outdoorUnitId: "kepler-odumox430-24hfn1-mr0w",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-30000-cfg-1",
+      slug: "kepler-odu-series-wall-single-30000-cfg-1",
+      modelId: "kepler-odu-series-wall-single-30000",
+      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 23,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-30000-cfg-2",
+      slug: "kepler-odu-series-wall-single-30000-cfg-2",
+      modelId: "kepler-odu-series-wall-single-30000",
+      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-30000-cfg-3",
+      slug: "kepler-odu-series-wall-single-30000-cfg-3",
+      modelId: "kepler-odu-series-wall-single-30000",
+      outdoorUnitId: "kepler-odum3ok-27hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.5,
+      hspf2: 10.05,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kepler-odu-series-wall-single-30000-cfg-4",
+      slug: "kepler-odu-series-wall-single-30000-cfg-4",
+      modelId: "kepler-odu-series-wall-single-30000",
       outdoorUnitId: "kepler-odum3oj-27hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -2152,9 +2831,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-10",
-      slug: "kepler-odu-series-wall-single-cfg-10",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-odu-series-wall-single-30000-cfg-5",
+      slug: "kepler-odu-series-wall-single-30000-cfg-5",
+      modelId: "kepler-odu-series-wall-single-30000",
       outdoorUnitId: "kepler-odum3oj-27hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -2166,9 +2845,9 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-11",
-      slug: "kepler-odu-series-wall-single-cfg-11",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-odu-series-wall-single-30000-cfg-6",
+      slug: "kepler-odu-series-wall-single-30000-cfg-6",
+      modelId: "kepler-odu-series-wall-single-30000",
       outdoorUnitId: "kepler-odum3oj-27hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -2180,51 +2859,51 @@ export const keplerDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-12",
-      slug: "kepler-odu-series-wall-single-cfg-12",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-odu-series-wall-single-36000-cfg-1",
+      slug: "kepler-odu-series-wall-single-36000-cfg-1",
+      modelId: "kepler-odu-series-wall-single-36000",
       outdoorUnitId: "kepler-odum4og-36hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       seer2: 23.9,
       hspf2: 9.5,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-13",
-      slug: "kepler-odu-series-wall-single-cfg-13",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-odu-series-wall-single-48000-cfg-1",
+      slug: "kepler-odu-series-wall-single-48000-cfg-1",
+      modelId: "kepler-odu-series-wall-single-48000",
       outdoorUnitId: "kepler-odum5og-48hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       seer2: 23.4,
       hspf2: 8.7,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kepler-odu-series-wall-single-cfg-14",
-      slug: "kepler-odu-series-wall-single-cfg-14",
-      modelId: "kepler-odu-series-wall-single",
+      id: "kepler-odu-series-wall-single-48000-cfg-2",
+      slug: "kepler-odu-series-wall-single-48000-cfg-2",
+      modelId: "kepler-odu-series-wall-single-48000",
       outdoorUnitId: "kepler-odum5og-48hfn1-m",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       seer2: 21.95,
       hspf2: 9.2,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-1",
+      configurationId: "kepler-azpn-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2235,62 +2914,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-7",
+      configurationId: "kepler-azpn-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2301,183 +2925,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-24",
+      configurationId: "kepler-azpn-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2488,29 +2936,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-27",
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2521,7 +2947,238 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-28",
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-24000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-36000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2532,7 +3189,18 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-29",
+      configurationId: "kepler-azpn-series-central-ducted-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-30000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2543,73 +3211,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-36",
+      configurationId: "kepler-azpn-series-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2620,29 +3222,62 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-37",
+      configurationId: "kepler-azpn-series-central-ducted-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 2.2,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-azpn-series-central-ducted-cfg-38",
+      configurationId: "kepler-azpn-series-central-ducted-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2.2,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-1",
+      configurationId: "kepler-azpn-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2653,51 +3288,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-6",
+      configurationId: "kepler-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2708,95 +3299,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-standard-wall-single-cfg-15",
+      configurationId: "kepler-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2807,7 +3310,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-16",
+      configurationId: "kepler-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2818,7 +3321,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-17",
+      configurationId: "kepler-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2829,18 +3332,18 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-18",
+      configurationId: "kepler-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
+          heatingCapacityBtu: 22000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-19",
+      configurationId: "kepler-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2851,7 +3354,62 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-20",
+      configurationId: "kepler-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2862,7 +3420,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-21",
+      configurationId: "kepler-standard-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2873,7 +3431,51 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-22",
+      configurationId: "kepler-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2884,7 +3486,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-standard-wall-single-cfg-23",
+      configurationId: "kepler-standard-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2895,7 +3497,29 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-1",
+      configurationId: "kepler-azpn-series-central-ducted-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2906,7 +3530,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-2",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2917,51 +3541,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-7",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2972,7 +3552,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-8",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2983,7 +3563,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-9",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2994,40 +3574,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-13",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3038,238 +3585,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.99,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-35",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3280,7 +3596,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-36",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3291,7 +3607,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-37",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3302,18 +3618,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-39",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3324,40 +3629,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 2.02,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-43",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3368,40 +3640,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 2.26,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-47",
+      configurationId: "kepler-idu-series-wall-single-9000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3412,7 +3651,84 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-48",
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 2.26,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3423,29 +3739,7 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-idu-series-wall-single-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-50",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-idu-series-wall-single-cfg-51",
+      configurationId: "kepler-idu-series-wall-single-12000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3456,95 +3750,95 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-1",
+      configurationId: "kepler-idu-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 11500,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-odu-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-odu-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
+          heatingCapacityBtu: 15000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-4",
+      configurationId: "kepler-idu-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-5",
+      configurationId: "kepler-idu-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
+          heatingCapacityBtu: 15000,
+          cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-6",
+      configurationId: "kepler-idu-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14300,
-          cop: 2,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-7",
+      configurationId: "kepler-idu-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 2,
+          heatingCapacityBtu: 15500,
+          cop: 1.88,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-8",
+      configurationId: "kepler-idu-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 2,
+          heatingCapacityBtu: 14900,
+          cop: 2.02,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-9",
+      configurationId: "kepler-idu-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3555,40 +3849,183 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-10",
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
+          heatingCapacityBtu: 21000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-11",
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kepler-odu-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
+          heatingCapacityBtu: 23000,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-13",
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-24000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3599,7 +4036,249 @@ export const keplerDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kepler-odu-series-wall-single-cfg-14",
+      configurationId: "kepler-idu-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-idu-series-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-azpn-series-central-ducted-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kepler-odu-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

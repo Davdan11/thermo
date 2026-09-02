@@ -70,18 +70,154 @@ export const zephyrDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "zephyr-standard-wall-single",
-      slug: "zephyr-standard-wall-single",
-      name: "Standard",
+      id: "zephyr-standard-wall-single-18000",
+      slug: "zephyr-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
       seriesId: "zephyr-standard",
       brandId: "zephyr",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11600,
+      heatingCapacity5FMaxBtu: 11600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-12000",
+      slug: "zephyr-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "zephyr-standard",
+      brandId: "zephyr",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 9000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-9000",
+      slug: "zephyr-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "zephyr-standard",
+      brandId: "zephyr",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 5000,
+      heatingCapacity5FMaxBtu: 5000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-24000",
+      slug: "zephyr-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "zephyr-standard",
+      brandId: "zephyr",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 15300,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-36000",
+      slug: "zephyr-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "zephyr-standard",
+      brandId: "zephyr",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 25000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-60000",
+      slug: "zephyr-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "zephyr-standard",
+      brandId: "zephyr",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 32400,
       heatingCapacity5FMaxBtu: 40000,
       seer2Min: null,
       seer2Max: null,
@@ -96,24 +232,25 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single",
-      slug: "zephyr-hi-multi-xtreme-wall-single",
-      name: "Hi MULTI Xtreme",
+      id: "zephyr-hi-multi-xtreme-wall-single-18000",
+      slug: "zephyr-hi-multi-xtreme-wall-single-18000",
+      name: "Hi MULTI Xtreme 18 000 BTU",
       seriesId: "zephyr-hi-multi-xtreme",
       brandId: "zephyr",
-      modelNumber: "Hi MULTI Xtreme",
-      normalizedModelNumber: "hi-multi-xtreme",
+      modelNumber: "Hi MULTI Xtreme 18k",
+      normalizedModelNumber: "hi-multi-xtreme-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 11500,
-      heatingCapacity5FMaxBtu: 28200,
+      heatingCapacity5FMaxBtu: 12700,
       seer2Min: 17.5,
-      seer2Max: 23,
-      hspf2Min: 8.8,
+      seer2Max: 22,
+      hspf2Min: 9.4,
       hspf2Max: 10,
-      cop5FMin: 1.82,
+      cop5FMin: 1.84,
       cop5FMax: 1.99,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -122,24 +259,106 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-ultra-hd-central-ducted",
-      slug: "zephyr-hi-ultra-hd-central-ducted",
-      name: "Hi ULTRA HD",
-      seriesId: "zephyr-hi-ultra-hd",
+      id: "zephyr-hi-multi-xtreme-wall-single-24000",
+      slug: "zephyr-hi-multi-xtreme-wall-single-24000",
+      name: "Hi MULTI Xtreme 24 000 BTU",
+      seriesId: "zephyr-hi-multi-xtreme",
       brandId: "zephyr",
-      modelNumber: "Hi ULTRA HD",
-      normalizedModelNumber: "hi-ultra-hd",
+      modelNumber: "Hi MULTI Xtreme 24k",
+      normalizedModelNumber: "hi-multi-xtreme-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 16000,
-      heatingCapacity5FMaxBtu: 31000,
-      seer2Min: 16.5,
-      seer2Max: 18,
-      hspf2Min: 8.5,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 14800,
+      heatingCapacity5FMaxBtu: 18200,
+      seer2Min: 18,
+      seer2Max: 23,
+      hspf2Min: 8.8,
+      hspf2Max: 10,
+      cop5FMin: 1.82,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-42000",
+      slug: "zephyr-hi-multi-xtreme-wall-single-42000",
+      name: "Hi MULTI Xtreme 42 000 BTU",
+      seriesId: "zephyr-hi-multi-xtreme",
+      brandId: "zephyr",
+      modelNumber: "Hi MULTI Xtreme 42k",
+      normalizedModelNumber: "hi-multi-xtreme-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 41500,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18,
+      seer2Max: 22,
+      hspf2Min: 8.8,
       hspf2Max: 9.5,
-      cop5FMin: 1.9,
+      cop5FMin: 1.83,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-30000",
+      slug: "zephyr-hi-multi-xtreme-wall-single-30000",
+      name: "Hi MULTI Xtreme 30 000 BTU",
+      seriesId: "zephyr-hi-multi-xtreme",
+      brandId: "zephyr",
+      modelNumber: "Hi MULTI Xtreme 30k",
+      normalizedModelNumber: "hi-multi-xtreme-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      heatingCapacity5FMinBtu: 22400,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 20.25,
+      seer2Max: 21,
+      hspf2Min: 8.95,
+      hspf2Max: 9,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-ultra-hd-central-ducted-20000",
+      slug: "zephyr-hi-ultra-hd-central-ducted-20000",
+      name: "Hi ULTRA HD 20 000 BTU",
+      seriesId: "zephyr-hi-ultra-hd",
+      brandId: "zephyr",
+      modelNumber: "Hi ULTRA HD 20k",
+      normalizedModelNumber: "hi-ultra-hd-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.05,
       cop5FMax: 2.05,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -148,24 +367,133 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-ultra-central-ducted",
-      slug: "zephyr-ultra-central-ducted",
-      name: "Ultra",
-      seriesId: "zephyr-ultra",
+      id: "zephyr-hi-ultra-hd-central-ducted-36000",
+      slug: "zephyr-hi-ultra-hd-central-ducted-36000",
+      name: "Hi ULTRA HD 36 000 BTU",
+      seriesId: "zephyr-hi-ultra-hd",
       brandId: "zephyr",
-      modelNumber: "Ultra",
-      normalizedModelNumber: "ultra",
+      modelNumber: "Hi ULTRA HD 36k",
+      normalizedModelNumber: "hi-ultra-hd-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.05,
+      cop5FMax: 2.05,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-ultra-hd-central-ducted-48000",
+      slug: "zephyr-hi-ultra-hd-central-ducted-48000",
+      name: "Hi ULTRA HD 48 000 BTU",
+      seriesId: "zephyr-hi-ultra-hd",
+      brandId: "zephyr",
+      modelNumber: "Hi ULTRA HD 48k",
+      normalizedModelNumber: "hi-ultra-hd-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 31000,
+      heatingCapacity5FMaxBtu: 31000,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-ultra-central-ducted-24000",
+      slug: "zephyr-ultra-central-ducted-24000",
+      name: "Ultra 24 000 BTU",
+      seriesId: "zephyr-ultra",
+      brandId: "zephyr",
+      modelNumber: "Ultra 24k",
+      normalizedModelNumber: "ultra-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 57000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 20400,
-      heatingCapacity5FMaxBtu: 37000,
-      seer2Min: 19,
+      heatingCapacity5FMaxBtu: 20400,
+      seer2Min: 20,
       seer2Max: 20,
-      hspf2Min: 9,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.3,
+      cop5FMax: 2.3,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-ultra-central-ducted-30000",
+      slug: "zephyr-ultra-central-ducted-30000",
+      name: "Ultra 30 000 BTU",
+      seriesId: "zephyr-ultra",
+      brandId: "zephyr",
+      modelNumber: "Ultra 30k",
+      normalizedModelNumber: "ultra-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 32000,
+      seer2Min: 19.5,
+      seer2Max: 19.5,
+      hspf2Min: 10.5,
       hspf2Max: 10.5,
       cop5FMin: 2.15,
+      cop5FMax: 2.15,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-ultra-central-ducted-48000",
+      slug: "zephyr-ultra-central-ducted-48000",
+      name: "Ultra 48 000 BTU",
+      seriesId: "zephyr-ultra",
+      brandId: "zephyr",
+      modelNumber: "Ultra 48k",
+      normalizedModelNumber: "ultra-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36600,
+      heatingCapacity5FMaxBtu: 36600,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.52,
       cop5FMax: 2.52,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -174,25 +502,161 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hiultra-wall-single",
-      slug: "zephyr-hiultra-wall-single",
-      name: "HiULTRA",
-      seriesId: "zephyr-hiultra",
+      id: "zephyr-ultra-central-ducted-60000",
+      slug: "zephyr-ultra-central-ducted-60000",
+      name: "Ultra 60 000 BTU",
+      seriesId: "zephyr-ultra",
       brandId: "zephyr",
-      modelNumber: "HiULTRA",
-      normalizedModelNumber: "hiultra",
+      modelNumber: "Ultra 60k",
+      normalizedModelNumber: "ultra-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.46,
+      cop5FMax: 2.46,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-9000",
+      slug: "zephyr-hiultra-wall-single-9000",
+      name: "HiULTRA 9 000 BTU",
+      seriesId: "zephyr-hiultra",
+      brandId: "zephyr",
+      modelNumber: "HiULTRA 9k",
+      normalizedModelNumber: "hiultra-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6500,
-      heatingCapacity5FMaxBtu: 22000,
+      heatingCapacity5FMaxBtu: 9500,
       seer2Min: 20,
       seer2Max: 25,
       hspf2Min: 9,
       hspf2Max: 11,
-      cop5FMin: 1.8,
+      cop5FMin: 1.9,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-18000",
+      slug: "zephyr-hiultra-wall-single-18000",
+      name: "HiULTRA 18 000 BTU",
+      seriesId: "zephyr-hiultra",
+      brandId: "zephyr",
+      modelNumber: "HiULTRA 18k",
+      normalizedModelNumber: "hiultra-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14800,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.8,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
       cop5FMax: 2.5,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-12000",
+      slug: "zephyr-hiultra-wall-single-12000",
+      name: "HiULTRA 12 000 BTU",
+      seriesId: "zephyr-hiultra",
+      brandId: "zephyr",
+      modelNumber: "HiULTRA 12k",
+      normalizedModelNumber: "hiultra-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9300,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 22,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-24000",
+      slug: "zephyr-hiultra-wall-single-24000",
+      name: "HiULTRA 24 000 BTU",
+      seriesId: "zephyr-hiultra",
+      brandId: "zephyr",
+      modelNumber: "HiULTRA 24k",
+      normalizedModelNumber: "hiultra-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-36000",
+      slug: "zephyr-hi-multi-xtreme-wall-single-36000",
+      name: "Hi MULTI Xtreme 36 000 BTU",
+      seriesId: "zephyr-hi-multi-xtreme",
+      brandId: "zephyr",
+      modelNumber: "Hi MULTI Xtreme 36k",
+      normalizedModelNumber: "hi-multi-xtreme-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 19,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.83,
+      cop5FMax: 1.92,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -220,6 +684,18 @@ export const zephyrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "zephyr-ze-12cb22o",
+      modelNumber: "ZE-12CB22O",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
+      id: "zephyr-ze-12db22o",
+      modelNumber: "ZE-12DB22O",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
       id: "zephyr-ze-09da17ext",
       modelNumber: "ZE-09DA17EXT",
       brandId: "zephyr",
@@ -228,6 +704,12 @@ export const zephyrDataset: BrandDataset = {
     {
       id: "zephyr-ze-24hpa",
       modelNumber: "ZE-24HPA",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
+      id: "zephyr-ze-24cb22o",
+      modelNumber: "ZE-24CB22O",
       brandId: "zephyr",
       refrigerant: null as any,
     },
@@ -250,44 +732,8 @@ export const zephyrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "zephyr-ze-12cb22o",
-      modelNumber: "ZE-12CB22O",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
-      id: "zephyr-ze-24cb22o",
-      modelNumber: "ZE-24CB22O",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
-      id: "zephyr-ze-12db22o",
-      modelNumber: "ZE-12DB22O",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
       id: "zephyr-ze-18m222sco",
       modelNumber: "ZE-18M222SCO",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
-      id: "zephyr-ze-24m322sco",
-      modelNumber: "ZE-24M322SCO",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
-      id: "zephyr-ze-42m522sco",
-      modelNumber: "ZE-42M522SCO",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
-      id: "zephyr-ze-36m422sco",
-      modelNumber: "ZE-36M422SCO",
       brandId: "zephyr",
       refrigerant: null as any,
     },
@@ -298,8 +744,20 @@ export const zephyrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "zephyr-ze-24m322sco",
+      modelNumber: "ZE-24M322SCO",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
       id: "zephyr-ze-527m325",
       modelNumber: "ZE-527M325",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
+      id: "zephyr-ze-42m522sco",
+      modelNumber: "ZE-42M522SCO",
       brandId: "zephyr",
       refrigerant: null as any,
     },
@@ -310,8 +768,8 @@ export const zephyrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "zephyr-ze-536m425",
-      modelNumber: "ZE-536M425",
+      id: "zephyr-ze-36m422sco",
+      modelNumber: "ZE-36M422SCO",
       brandId: "zephyr",
       refrigerant: null as any,
     },
@@ -364,12 +822,6 @@ export const zephyrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "zephyr-ze-18cb22o",
-      modelNumber: "ZE-18CB22O",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
       id: "zephyr-ze-09db22o",
       modelNumber: "ZE-09DB22O",
       brandId: "zephyr",
@@ -382,8 +834,14 @@ export const zephyrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "zephyr-ze-12cb25o",
-      modelNumber: "ZE-12CB25O",
+      id: "zephyr-ze-09db25o",
+      modelNumber: "ZE-09DB25O",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
+      id: "zephyr-ze-18cb22o",
+      modelNumber: "ZE-18CB22O",
       brandId: "zephyr",
       refrigerant: null as any,
     },
@@ -394,20 +852,26 @@ export const zephyrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "zephyr-ze-24cb25o",
-      modelNumber: "ZE-24CB25O",
-      brandId: "zephyr",
-      refrigerant: null as any,
-    },
-    {
-      id: "zephyr-ze-09db25o",
-      modelNumber: "ZE-09DB25O",
+      id: "zephyr-ze-12cb25o",
+      modelNumber: "ZE-12CB25O",
       brandId: "zephyr",
       refrigerant: null as any,
     },
     {
       id: "zephyr-ze-12db25o",
       modelNumber: "ZE-12DB25O",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
+      id: "zephyr-ze-24cb25o",
+      modelNumber: "ZE-24CB25O",
+      brandId: "zephyr",
+      refrigerant: null as any,
+    },
+    {
+      id: "zephyr-ze-536m425",
+      modelNumber: "ZE-536M425",
       brandId: "zephyr",
       refrigerant: null as any,
     }
@@ -417,9 +881,9 @@ export const zephyrDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "zephyr-standard-wall-single-cfg-1",
-      slug: "zephyr-standard-wall-single-cfg-1",
-      modelId: "zephyr-standard-wall-single",
+      id: "zephyr-standard-wall-single-18000-cfg-1",
+      slug: "zephyr-standard-wall-single-18000-cfg-1",
+      modelId: "zephyr-standard-wall-single-18000",
       outdoorUnitId: "zephyr-ze-18ca17ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -431,9 +895,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-standard-wall-single-cfg-2",
-      slug: "zephyr-standard-wall-single-cfg-2",
-      modelId: "zephyr-standard-wall-single",
+      id: "zephyr-standard-wall-single-18000-cfg-2",
+      slug: "zephyr-standard-wall-single-18000-cfg-2",
+      modelId: "zephyr-standard-wall-single-18000",
       outdoorUnitId: "zephyr-ze-18ca22ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -445,9 +909,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-standard-wall-single-cfg-3",
-      slug: "zephyr-standard-wall-single-cfg-3",
-      modelId: "zephyr-standard-wall-single",
+      id: "zephyr-standard-wall-single-12000-cfg-1",
+      slug: "zephyr-standard-wall-single-12000-cfg-1",
+      modelId: "zephyr-standard-wall-single-12000",
       outdoorUnitId: "zephyr-ze-12ca22ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -459,79 +923,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-standard-wall-single-cfg-4",
-      slug: "zephyr-standard-wall-single-cfg-4",
-      modelId: "zephyr-standard-wall-single",
-      outdoorUnitId: "zephyr-ze-09da17ext",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-standard-wall-single-cfg-5",
-      slug: "zephyr-standard-wall-single-cfg-5",
-      modelId: "zephyr-standard-wall-single",
-      outdoorUnitId: "zephyr-ze-24hpa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-standard-wall-single-cfg-6",
-      slug: "zephyr-standard-wall-single-cfg-6",
-      modelId: "zephyr-standard-wall-single",
-      outdoorUnitId: "zephyr-ze-36hpa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-standard-wall-single-cfg-7",
-      slug: "zephyr-standard-wall-single-cfg-7",
-      modelId: "zephyr-standard-wall-single",
-      outdoorUnitId: "zephyr-ze-60hpa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 56000,
-      coolingCapacityMaxBtu: 56000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-standard-wall-single-cfg-8",
-      slug: "zephyr-standard-wall-single-cfg-8",
-      modelId: "zephyr-standard-wall-single",
-      outdoorUnitId: "zephyr-ze-60hpb",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 56000,
-      coolingCapacityMaxBtu: 56000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-standard-wall-single-cfg-9",
-      slug: "zephyr-standard-wall-single-cfg-9",
-      modelId: "zephyr-standard-wall-single",
+      id: "zephyr-standard-wall-single-12000-cfg-2",
+      slug: "zephyr-standard-wall-single-12000-cfg-2",
+      modelId: "zephyr-standard-wall-single-12000",
       outdoorUnitId: "zephyr-ze-12cb22o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -543,23 +937,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-standard-wall-single-cfg-10",
-      slug: "zephyr-standard-wall-single-cfg-10",
-      modelId: "zephyr-standard-wall-single",
-      outdoorUnitId: "zephyr-ze-24cb22o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-standard-wall-single-cfg-11",
-      slug: "zephyr-standard-wall-single-cfg-11",
-      modelId: "zephyr-standard-wall-single",
+      id: "zephyr-standard-wall-single-12000-cfg-3",
+      slug: "zephyr-standard-wall-single-12000-cfg-3",
+      modelId: "zephyr-standard-wall-single-12000",
       outdoorUnitId: "zephyr-ze-12db22o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -571,9 +951,93 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-1",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-1",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-standard-wall-single-9000-cfg-1",
+      slug: "zephyr-standard-wall-single-9000-cfg-1",
+      modelId: "zephyr-standard-wall-single-9000",
+      outdoorUnitId: "zephyr-ze-09da17ext",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-24000-cfg-1",
+      slug: "zephyr-standard-wall-single-24000-cfg-1",
+      modelId: "zephyr-standard-wall-single-24000",
+      outdoorUnitId: "zephyr-ze-24hpa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-24000-cfg-2",
+      slug: "zephyr-standard-wall-single-24000-cfg-2",
+      modelId: "zephyr-standard-wall-single-24000",
+      outdoorUnitId: "zephyr-ze-24cb22o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-36000-cfg-1",
+      slug: "zephyr-standard-wall-single-36000-cfg-1",
+      modelId: "zephyr-standard-wall-single-36000",
+      outdoorUnitId: "zephyr-ze-36hpa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-60000-cfg-1",
+      slug: "zephyr-standard-wall-single-60000-cfg-1",
+      modelId: "zephyr-standard-wall-single-60000",
+      outdoorUnitId: "zephyr-ze-60hpa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 56000,
+      coolingCapacityMaxBtu: 56000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-standard-wall-single-60000-cfg-2",
+      slug: "zephyr-standard-wall-single-60000-cfg-2",
+      modelId: "zephyr-standard-wall-single-60000",
+      outdoorUnitId: "zephyr-ze-60hpb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 56000,
+      coolingCapacityMaxBtu: 56000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-1",
+      slug: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-1",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-18000",
       outdoorUnitId: "zephyr-ze-18m222sco",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -585,9 +1049,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-2",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-2",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-2",
+      slug: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-2",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-18000",
       outdoorUnitId: "zephyr-ze-18m222sco",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -599,93 +1063,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-3",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-3",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-24m322sco",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 9.05,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-4",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-4",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-24m322sco",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 8.83,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-5",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-5",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-42m522sco",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 20,
-      hspf2: 8.95,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-6",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-6",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-42m522sco",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 41500,
-      coolingCapacityMaxBtu: 41500,
-      seer2: 19,
-      hspf2: 8.88,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-7",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-7",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-36m422sco",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: 21,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-8",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-8",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-36m422sco",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: 20.25,
-      hspf2: 8.95,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-9",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-9",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-3",
+      slug: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-3",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-18000",
       outdoorUnitId: "zephyr-ze-518m225",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -697,9 +1077,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-10",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-10",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-4",
+      slug: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-4",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-18000",
       outdoorUnitId: "zephyr-ze-518m225",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -711,9 +1091,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-11",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-11",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-5",
+      slug: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-5",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-18000",
       outdoorUnitId: "zephyr-ze-518m225",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -725,9 +1105,37 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-12",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-12",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-1",
+      slug: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-1",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-24000",
+      outdoorUnitId: "zephyr-ze-24m322sco",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 9.05,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-2",
+      slug: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-2",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-24000",
+      outdoorUnitId: "zephyr-ze-24m322sco",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 8.83,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-3",
+      slug: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-3",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-24000",
       outdoorUnitId: "zephyr-ze-527m325",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -739,9 +1147,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-13",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-13",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-4",
+      slug: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-4",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-24000",
       outdoorUnitId: "zephyr-ze-527m325",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -753,9 +1161,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-14",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-14",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-5",
+      slug: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-5",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-24000",
       outdoorUnitId: "zephyr-ze-527m325",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -767,9 +1175,37 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-15",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-15",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-1",
+      slug: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-1",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-42000",
+      outdoorUnitId: "zephyr-ze-42m522sco",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 20,
+      hspf2: 8.95,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-2",
+      slug: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-2",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-42000",
+      outdoorUnitId: "zephyr-ze-42m522sco",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 41500,
+      coolingCapacityMaxBtu: 41500,
+      seer2: 19,
+      hspf2: 8.88,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-3",
+      slug: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-3",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-42000",
       outdoorUnitId: "zephyr-ze-542m525",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -781,9 +1217,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-16",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-16",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-4",
+      slug: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-4",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-42000",
       outdoorUnitId: "zephyr-ze-542m525",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -795,9 +1231,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-17",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-17",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
+      id: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-5",
+      slug: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-5",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-42000",
       outdoorUnitId: "zephyr-ze-542m525",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -809,51 +1245,37 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-18",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-18",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-536m425",
+      id: "zephyr-hi-multi-xtreme-wall-single-30000-cfg-1",
+      slug: "zephyr-hi-multi-xtreme-wall-single-30000-cfg-1",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-30000",
+      outdoorUnitId: "zephyr-ze-36m422sco",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: 21,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-19",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-19",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-536m425",
+      id: "zephyr-hi-multi-xtreme-wall-single-30000-cfg-2",
+      slug: "zephyr-hi-multi-xtreme-wall-single-30000-cfg-2",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-30000",
+      outdoorUnitId: "zephyr-ze-36m422sco",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22,
-      hspf2: 10,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: 20.25,
+      hspf2: 8.95,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-multi-xtreme-wall-single-cfg-20",
-      slug: "zephyr-hi-multi-xtreme-wall-single-cfg-20",
-      modelId: "zephyr-hi-multi-xtreme-wall-single",
-      outdoorUnitId: "zephyr-ze-536m425",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hi-ultra-hd-central-ducted-cfg-1",
-      slug: "zephyr-hi-ultra-hd-central-ducted-cfg-1",
-      modelId: "zephyr-hi-ultra-hd-central-ducted",
+      id: "zephyr-hi-ultra-hd-central-ducted-20000-cfg-1",
+      slug: "zephyr-hi-ultra-hd-central-ducted-20000-cfg-1",
+      modelId: "zephyr-hi-ultra-hd-central-ducted-20000",
       outdoorUnitId: "zephyr-ze-24hpb",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -865,9 +1287,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-ultra-hd-central-ducted-cfg-2",
-      slug: "zephyr-hi-ultra-hd-central-ducted-cfg-2",
-      modelId: "zephyr-hi-ultra-hd-central-ducted",
+      id: "zephyr-hi-ultra-hd-central-ducted-36000-cfg-1",
+      slug: "zephyr-hi-ultra-hd-central-ducted-36000-cfg-1",
+      modelId: "zephyr-hi-ultra-hd-central-ducted-36000",
       outdoorUnitId: "zephyr-ze-36hpb",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -879,9 +1301,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hi-ultra-hd-central-ducted-cfg-3",
-      slug: "zephyr-hi-ultra-hd-central-ducted-cfg-3",
-      modelId: "zephyr-hi-ultra-hd-central-ducted",
+      id: "zephyr-hi-ultra-hd-central-ducted-48000-cfg-1",
+      slug: "zephyr-hi-ultra-hd-central-ducted-48000-cfg-1",
+      modelId: "zephyr-hi-ultra-hd-central-ducted-48000",
       outdoorUnitId: "zephyr-ze-48hpb",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -893,9 +1315,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-ultra-central-ducted-cfg-1",
-      slug: "zephyr-ultra-central-ducted-cfg-1",
-      modelId: "zephyr-ultra-central-ducted",
+      id: "zephyr-ultra-central-ducted-24000-cfg-1",
+      slug: "zephyr-ultra-central-ducted-24000-cfg-1",
+      modelId: "zephyr-ultra-central-ducted-24000",
       outdoorUnitId: "zephyr-ze-624hpa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -907,9 +1329,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-ultra-central-ducted-cfg-2",
-      slug: "zephyr-ultra-central-ducted-cfg-2",
-      modelId: "zephyr-ultra-central-ducted",
+      id: "zephyr-ultra-central-ducted-30000-cfg-1",
+      slug: "zephyr-ultra-central-ducted-30000-cfg-1",
+      modelId: "zephyr-ultra-central-ducted-30000",
       outdoorUnitId: "zephyr-ze-636hpa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -921,9 +1343,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-ultra-central-ducted-cfg-3",
-      slug: "zephyr-ultra-central-ducted-cfg-3",
-      modelId: "zephyr-ultra-central-ducted",
+      id: "zephyr-ultra-central-ducted-48000-cfg-1",
+      slug: "zephyr-ultra-central-ducted-48000-cfg-1",
+      modelId: "zephyr-ultra-central-ducted-48000",
       outdoorUnitId: "zephyr-ze-648hpa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -935,9 +1357,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-ultra-central-ducted-cfg-4",
-      slug: "zephyr-ultra-central-ducted-cfg-4",
-      modelId: "zephyr-ultra-central-ducted",
+      id: "zephyr-ultra-central-ducted-60000-cfg-1",
+      slug: "zephyr-ultra-central-ducted-60000-cfg-1",
+      modelId: "zephyr-ultra-central-ducted-60000",
       outdoorUnitId: "zephyr-ze-660hpa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 57000,
@@ -949,9 +1371,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hiultra-wall-single-cfg-1",
-      slug: "zephyr-hiultra-wall-single-cfg-1",
-      modelId: "zephyr-hiultra-wall-single",
+      id: "zephyr-hiultra-wall-single-9000-cfg-1",
+      slug: "zephyr-hiultra-wall-single-9000-cfg-1",
+      modelId: "zephyr-hiultra-wall-single-9000",
       outdoorUnitId: "zephyr-ze-09cb22o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -963,23 +1385,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hiultra-wall-single-cfg-2",
-      slug: "zephyr-hiultra-wall-single-cfg-2",
-      modelId: "zephyr-hiultra-wall-single",
-      outdoorUnitId: "zephyr-ze-18cb22o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hiultra-wall-single-cfg-3",
-      slug: "zephyr-hiultra-wall-single-cfg-3",
-      modelId: "zephyr-hiultra-wall-single",
+      id: "zephyr-hiultra-wall-single-9000-cfg-2",
+      slug: "zephyr-hiultra-wall-single-9000-cfg-2",
+      modelId: "zephyr-hiultra-wall-single-9000",
       outdoorUnitId: "zephyr-ze-09db22o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -991,9 +1399,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hiultra-wall-single-cfg-4",
-      slug: "zephyr-hiultra-wall-single-cfg-4",
-      modelId: "zephyr-hiultra-wall-single",
+      id: "zephyr-hiultra-wall-single-9000-cfg-3",
+      slug: "zephyr-hiultra-wall-single-9000-cfg-3",
+      modelId: "zephyr-hiultra-wall-single-9000",
       outdoorUnitId: "zephyr-ze-09cb25o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1005,51 +1413,9 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hiultra-wall-single-cfg-5",
-      slug: "zephyr-hiultra-wall-single-cfg-5",
-      modelId: "zephyr-hiultra-wall-single",
-      outdoorUnitId: "zephyr-ze-12cb25o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hiultra-wall-single-cfg-6",
-      slug: "zephyr-hiultra-wall-single-cfg-6",
-      modelId: "zephyr-hiultra-wall-single",
-      outdoorUnitId: "zephyr-ze-18cb25o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hiultra-wall-single-cfg-7",
-      slug: "zephyr-hiultra-wall-single-cfg-7",
-      modelId: "zephyr-hiultra-wall-single",
-      outdoorUnitId: "zephyr-ze-24cb25o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "zephyr-hiultra-wall-single-cfg-8",
-      slug: "zephyr-hiultra-wall-single-cfg-8",
-      modelId: "zephyr-hiultra-wall-single",
+      id: "zephyr-hiultra-wall-single-9000-cfg-4",
+      slug: "zephyr-hiultra-wall-single-9000-cfg-4",
+      modelId: "zephyr-hiultra-wall-single-9000",
       outdoorUnitId: "zephyr-ze-09db25o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1061,9 +1427,51 @@ export const zephyrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "zephyr-hiultra-wall-single-cfg-9",
-      slug: "zephyr-hiultra-wall-single-cfg-9",
-      modelId: "zephyr-hiultra-wall-single",
+      id: "zephyr-hiultra-wall-single-18000-cfg-1",
+      slug: "zephyr-hiultra-wall-single-18000-cfg-1",
+      modelId: "zephyr-hiultra-wall-single-18000",
+      outdoorUnitId: "zephyr-ze-18cb22o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-18000-cfg-2",
+      slug: "zephyr-hiultra-wall-single-18000-cfg-2",
+      modelId: "zephyr-hiultra-wall-single-18000",
+      outdoorUnitId: "zephyr-ze-18cb25o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-12000-cfg-1",
+      slug: "zephyr-hiultra-wall-single-12000-cfg-1",
+      modelId: "zephyr-hiultra-wall-single-12000",
+      outdoorUnitId: "zephyr-ze-12cb25o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-12000-cfg-2",
+      slug: "zephyr-hiultra-wall-single-12000-cfg-2",
+      modelId: "zephyr-hiultra-wall-single-12000",
       outdoorUnitId: "zephyr-ze-12db25o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1073,11 +1481,67 @@ export const zephyrDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hiultra-wall-single-24000-cfg-1",
+      slug: "zephyr-hiultra-wall-single-24000-cfg-1",
+      modelId: "zephyr-hiultra-wall-single-24000",
+      outdoorUnitId: "zephyr-ze-24cb25o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-1",
+      slug: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-1",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-36000",
+      outdoorUnitId: "zephyr-ze-536m425",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-2",
+      slug: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-2",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-36000",
+      outdoorUnitId: "zephyr-ze-536m425",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-3",
+      slug: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-3",
+      modelId: "zephyr-hi-multi-xtreme-wall-single-36000",
+      outdoorUnitId: "zephyr-ze-536m425",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "zephyr-standard-wall-single-cfg-1",
+      configurationId: "zephyr-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1088,7 +1552,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-standard-wall-single-cfg-2",
+      configurationId: "zephyr-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1099,7 +1563,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-standard-wall-single-cfg-3",
+      configurationId: "zephyr-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1110,62 +1574,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 5000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-standard-wall-single-cfg-9",
+      configurationId: "zephyr-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1176,18 +1585,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-standard-wall-single-cfg-11",
+      configurationId: "zephyr-standard-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1198,7 +1596,73 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-1",
+      configurationId: "zephyr-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-standard-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1209,7 +1673,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-2",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1220,73 +1684,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-9",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1297,7 +1695,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-10",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1308,7 +1706,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-11",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1319,7 +1717,29 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-12",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1330,7 +1750,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-13",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1341,7 +1761,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-14",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1352,7 +1772,29 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-15",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1363,7 +1805,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-16",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1374,7 +1816,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-17",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-42000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1385,40 +1827,29 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-18",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.83,
+          heatingCapacityBtu: 22400,
+          cop: 1.84,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-19",
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 22600,
-          cop: 1.92,
+          cop: 1.84,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "zephyr-hi-multi-xtreme-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21800,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hi-ultra-hd-central-ducted-cfg-1",
+      configurationId: "zephyr-hi-ultra-hd-central-ducted-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1429,7 +1860,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-ultra-hd-central-ducted-cfg-2",
+      configurationId: "zephyr-hi-ultra-hd-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1440,7 +1871,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hi-ultra-hd-central-ducted-cfg-3",
+      configurationId: "zephyr-hi-ultra-hd-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1451,7 +1882,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-ultra-central-ducted-cfg-1",
+      configurationId: "zephyr-ultra-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1462,7 +1893,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-ultra-central-ducted-cfg-2",
+      configurationId: "zephyr-ultra-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1473,7 +1904,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-ultra-central-ducted-cfg-3",
+      configurationId: "zephyr-ultra-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1484,7 +1915,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-ultra-central-ducted-cfg-4",
+      configurationId: "zephyr-ultra-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1495,7 +1926,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hiultra-wall-single-cfg-1",
+      configurationId: "zephyr-hiultra-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1506,18 +1937,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hiultra-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 2.5,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hiultra-wall-single-cfg-3",
+      configurationId: "zephyr-hiultra-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1528,7 +1948,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hiultra-wall-single-cfg-4",
+      configurationId: "zephyr-hiultra-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1539,40 +1959,7 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hiultra-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hiultra-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hiultra-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "zephyr-hiultra-wall-single-cfg-8",
+      configurationId: "zephyr-hiultra-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1583,12 +1970,89 @@ export const zephyrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "zephyr-hiultra-wall-single-cfg-9",
+      configurationId: "zephyr-hiultra-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2.5,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hiultra-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hiultra-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hiultra-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 9300,
           cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hiultra-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zephyr-hi-multi-xtreme-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21800,
+          cop: 1.87,
           confidence: "verified",
         }
       ]

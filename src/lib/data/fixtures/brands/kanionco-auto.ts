@@ -29,7 +29,7 @@ export const kanioncoDataset: BrandDataset = {
       name: "K series",
       brandId: "kanionco",
       systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -70,18 +70,154 @@ export const kanioncoDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "kanionco-standard-wall-single",
-      slug: "kanionco-standard-wall-single",
-      name: "Standard",
+      id: "kanionco-standard-wall-single-9000",
+      slug: "kanionco-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "kanionco-standard",
       brandId: "kanionco",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 8300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-18000",
+      slug: "kanionco-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "kanionco-standard",
+      brandId: "kanionco",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000",
+      slug: "kanionco-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "kanionco-standard",
+      brandId: "kanionco",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 8400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-24000",
+      slug: "kanionco-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "kanionco-standard",
+      brandId: "kanionco",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 13900,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-36000",
+      slug: "kanionco-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "kanionco-standard",
+      brandId: "kanionco",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 24600,
+      heatingCapacity5FMaxBtu: 27600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-48000",
+      slug: "kanionco-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "kanionco-standard",
+      brandId: "kanionco",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 33400,
       heatingCapacity5FMaxBtu: 36000,
       seer2Min: null,
       seer2Max: null,
@@ -96,24 +232,79 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single",
-      slug: "kanionco-k-series-wall-single",
-      name: "K series",
-      seriesId: "kanionco-k-series",
+      id: "kanionco-standard-wall-single-30000",
+      slug: "kanionco-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "kanionco-standard",
       brandId: "kanionco",
-      modelNumber: "K series",
-      normalizedModelNumber: "k-series",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 28000,
-      heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 19,
-      seer2Max: 24,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 17200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-24000",
+      slug: "kanionco-k-series-wall-single-24000",
+      name: "K series 24 000 BTU",
+      seriesId: "kanionco-k-series",
+      brandId: "kanionco",
+      modelNumber: "K series 24k",
+      normalizedModelNumber: "k-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 21,
+      seer2Max: 23.5,
       hspf2Min: 9,
-      hspf2Max: 11.4,
-      cop5FMin: 1.89,
+      hspf2Max: 9.2,
+      cop5FMin: 1.92,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-18000",
+      slug: "kanionco-k-series-wall-single-18000",
+      name: "K series 18 000 BTU",
+      seriesId: "kanionco-k-series",
+      brandId: "kanionco",
+      modelNumber: "K series 18k",
+      normalizedModelNumber: "k-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 14800,
+      seer2Min: 19,
+      seer2Max: 23.7,
+      hspf2Min: 9.8,
+      hspf2Max: 10.3,
+      cop5FMin: 2,
       cop5FMax: 2.39,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -122,25 +313,53 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kwsm-series-wall-single",
-      slug: "kanionco-kwsm-series-wall-single",
-      name: "KWSM series",
-      seriesId: "kanionco-kwsm-series",
+      id: "kanionco-k-series-wall-single-30000",
+      slug: "kanionco-k-series-wall-single-30000",
+      name: "K series 30 000 BTU",
+      seriesId: "kanionco-k-series",
       brandId: "kanionco",
-      modelNumber: "KWSM series",
-      normalizedModelNumber: "kwsm-series",
+      modelNumber: "K series 30k",
+      normalizedModelNumber: "k-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 6300,
-      heatingCapacity5FMaxBtu: 21200,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 21,
+      seer2Max: 22.25,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-9000",
+      slug: "kanionco-k-series-wall-single-9000",
+      name: "K series 9 000 BTU",
+      seriesId: "kanionco-k-series",
+      brandId: "kanionco",
+      modelNumber: "K series 9k",
+      normalizedModelNumber: "k-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 8300,
       seer2Min: 21.5,
-      seer2Max: 28.1,
-      hspf2Min: 9.1,
-      hspf2Max: 13.6,
-      cop5FMin: 1.8,
-      cop5FMax: 2.21,
+      seer2Max: 24,
+      hspf2Min: 9,
+      hspf2Max: 11.4,
+      cop5FMin: 1.89,
+      cop5FMax: 2.18,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -148,24 +367,133 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kd-series-wall-single",
-      slug: "kanionco-kd-series-wall-single",
-      name: "KD series",
-      seriesId: "kanionco-kd-series",
+      id: "kanionco-k-series-wall-single-12000",
+      slug: "kanionco-k-series-wall-single-12000",
+      name: "K series 12 000 BTU",
+      seriesId: "kanionco-k-series",
       brandId: "kanionco",
-      modelNumber: "KD series",
-      normalizedModelNumber: "kd-series",
+      modelNumber: "K series 12k",
+      normalizedModelNumber: "k-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8200,
+      heatingCapacity5FMaxBtu: 8400,
+      seer2Min: 22.7,
+      seer2Max: 23.1,
+      hspf2Min: 9.3,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2.24,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-9000",
+      slug: "kanionco-kwsm-series-wall-single-9000",
+      name: "KWSM series 9 000 BTU",
+      seriesId: "kanionco-kwsm-series",
+      brandId: "kanionco",
+      modelNumber: "KWSM series 9k",
+      normalizedModelNumber: "kwsm-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6300,
+      heatingCapacity5FMaxBtu: 9500,
+      seer2Min: 21.5,
+      seer2Max: 28.1,
+      hspf2Min: 9.1,
+      hspf2Max: 11.5,
+      cop5FMin: 2,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-60000",
+      slug: "kanionco-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "kanionco-standard",
+      brandId: "kanionco",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kd-series-wall-single-9000",
+      slug: "kanionco-kd-series-wall-single-9000",
+      name: "KD series 9 000 BTU",
+      seriesId: "kanionco-kd-series",
+      brandId: "kanionco",
+      modelNumber: "KD series 9k",
+      normalizedModelNumber: "kd-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 10100,
-      heatingCapacity5FMaxBtu: 21000,
-      seer2Min: 18,
+      heatingCapacity5FMaxBtu: 10100,
+      seer2Min: 20.2,
       seer2Max: 20.2,
-      hspf2Min: 9.5,
+      hspf2Min: 12,
       hspf2Max: 12,
-      cop5FMin: 1.85,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kd-series-wall-single-24000",
+      slug: "kanionco-kd-series-wall-single-24000",
+      name: "KD series 24 000 BTU",
+      seriesId: "kanionco-kd-series",
+      brandId: "kanionco",
+      modelNumber: "KD series 24k",
+      normalizedModelNumber: "kd-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 19.2,
+      seer2Max: 19.2,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -174,20 +502,210 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-premium-series-wall-single",
-      slug: "kanionco-premium-series-wall-single",
-      name: "PREMIUM SERIES",
-      seriesId: "kanionco-premium-series",
+      id: "kanionco-kd-series-wall-single-12000",
+      slug: "kanionco-kd-series-wall-single-12000",
+      name: "KD series 12 000 BTU",
+      seriesId: "kanionco-kd-series",
       brandId: "kanionco",
-      modelNumber: "PREMIUM SERIES",
-      normalizedModelNumber: "premium-series",
+      modelNumber: "KD series 12k",
+      normalizedModelNumber: "kd-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19.5,
+      seer2Max: 19.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
+      cop5FMax: 1.96,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kd-series-wall-single-18000",
+      slug: "kanionco-kd-series-wall-single-18000",
+      name: "KD series 18 000 BTU",
+      seriesId: "kanionco-kd-series",
+      brandId: "kanionco",
+      modelNumber: "KD series 18k",
+      normalizedModelNumber: "kd-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-6000",
+      slug: "kanionco-kwsm-series-wall-single-6000",
+      name: "KWSM series 6 000 BTU",
+      seriesId: "kanionco-kwsm-series",
+      brandId: "kanionco",
+      modelNumber: "KWSM series 6k",
+      normalizedModelNumber: "kwsm-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 26.5,
+      seer2Max: 26.5,
+      hspf2Min: 13.6,
+      hspf2Max: 13.6,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-12000",
+      slug: "kanionco-kwsm-series-wall-single-12000",
+      name: "KWSM series 12 000 BTU",
+      seriesId: "kanionco-kwsm-series",
+      brandId: "kanionco",
+      modelNumber: "KWSM series 12k",
+      normalizedModelNumber: "kwsm-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 25.5,
+      seer2Max: 25.5,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-18000",
+      slug: "kanionco-kwsm-series-wall-single-18000",
+      name: "KWSM series 18 000 BTU",
+      seriesId: "kanionco-kwsm-series",
+      brandId: "kanionco",
+      modelNumber: "KWSM series 18k",
+      normalizedModelNumber: "kwsm-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 11.3,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-24000",
+      slug: "kanionco-kwsm-series-wall-single-24000",
+      name: "KWSM series 24 000 BTU",
+      seriesId: "kanionco-kwsm-series",
+      brandId: "kanionco",
+      modelNumber: "KWSM series 24k",
+      normalizedModelNumber: "kwsm-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 33000,
-      heatingCapacity5FMinBtu: 18100,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21200,
       heatingCapacity5FMaxBtu: 21200,
       seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 11.4,
+      hspf2Max: 11.4,
+      cop5FMin: 2.21,
+      cop5FMax: 2.21,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-premium-series-wall-single-30000",
+      slug: "kanionco-premium-series-wall-single-30000",
+      name: "PREMIUM SERIES 30 000 BTU",
+      seriesId: "kanionco-premium-series",
+      brandId: "kanionco",
+      modelNumber: "PREMIUM SERIES 30k",
+      normalizedModelNumber: "premium-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 21200,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-premium-series-wall-single-24000",
+      slug: "kanionco-premium-series-wall-single-24000",
+      name: "PREMIUM SERIES 24 000 BTU",
+      seriesId: "kanionco-premium-series",
+      brandId: "kanionco",
+      modelNumber: "PREMIUM SERIES 24k",
+      normalizedModelNumber: "premium-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 18100,
+      heatingCapacity5FMaxBtu: 18100,
+      seer2Min: 22,
       seer2Max: 22,
       hspf2Min: 9,
       hspf2Max: 9,
@@ -208,26 +726,8 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-18ir410ahs19",
-      modelNumber: "KWSM-18IR410AHS19",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-12ir410ahs21l",
-      modelNumber: "KWSM-12IR410AHS21L",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
       id: "kanionco-kwsm-09ir410ahs21",
       modelNumber: "KWSM-09IR410AHS21",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-18ir410ahs21",
-      modelNumber: "KWSM-18IR410AHS21",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -238,86 +738,14 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kd-18r410ah",
-      modelNumber: "KD-18R410AH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kd-24r410ah",
-      modelNumber: "KD-24R410AH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kd-36r410ah",
-      modelNumber: "KD-36R410AH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kd-48r410ah",
-      modelNumber: "KD-48R410AH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-12ir410ahs25",
-      modelNumber: "KWSM-12IR410AHS25",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsmo-18r410aih",
-      modelNumber: "KWSMO-18R410AIH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsmo-30r410aih",
-      modelNumber: "KWSMO-30R410AIH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsmo-36r410aih",
-      modelNumber: "KWSMO-36R410AIH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
       id: "kanionco-kwsm-09ir410ahs25",
       modelNumber: "KWSM-09IR410AHS25",
       brandId: "kanionco",
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-09ir410ahs26mvl",
-      modelNumber: "KWSM-09IR410AHS26MVL",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-12ir410ahs21-7mvl",
-      modelNumber: "KWSM-12IR410AHS21.7MVL",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
       id: "kanionco-kwsm-09ir410ahs26mv",
       modelNumber: "KWSM-09IR410AHS26MV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-12ir410ahs24mv",
-      modelNumber: "KWSM-12IR410AHS24MV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-18ir410ahs23-7mv",
-      modelNumber: "KWSM-18IR410AHS23.7MV",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -334,38 +762,8 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-18ir410ahs21mv",
-      modelNumber: "KWSM-18IR410AHS21MV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsmo-48r410aihmv",
-      modelNumber: "KWSMO-48R410AIHMV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsmo-36r410aihmv",
-      modelNumber: "KWSMO-36R410AIHMV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-18ir410ahs19mv",
-      modelNumber: "KWSM-18IR410AHS19MV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
       id: "kanionco-kwsm-09ir410ahs22l",
       modelNumber: "KWSM-09IR410AHS22L",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-12ir410ahs22l",
-      modelNumber: "KWSM-12IR410AHS22L",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -376,8 +774,44 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-12ir410ahs23",
-      modelNumber: "KWSM-12IR410AHS23",
+      id: "kanionco-kwsm-18ir410ahs19",
+      modelNumber: "KWSM-18IR410AHS19",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-18ir410ahs21",
+      modelNumber: "KWSM-18IR410AHS21",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kd-18r410ah",
+      modelNumber: "KD-18R410AH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsmo-18r410aih",
+      modelNumber: "KWSMO-18R410AIH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-18ir410ahs23-7mv",
+      modelNumber: "KWSM-18IR410AHS23.7MV",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-18ir410ahs21mv",
+      modelNumber: "KWSM-18IR410AHS21MV",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-18ir410ahs19mv",
+      modelNumber: "KWSM-18IR410AHS19MV",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -388,8 +822,56 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-24ir410ahs20",
-      modelNumber: "KWSM-24IR410AHS20",
+      id: "kanionco-kwsm-18ir410ahs19-5mvodu",
+      modelNumber: "KWSM-18IR410AHS19.5MVODU",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsmo-18ir410ahsp",
+      modelNumber: "KWSMO-18IR410AHSP",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-12ir410ahs21l",
+      modelNumber: "KWSM-12IR410AHS21L",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-12ir410ahs25",
+      modelNumber: "KWSM-12IR410AHS25",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-09ir410ahs26mvl",
+      modelNumber: "KWSM-09IR410AHS26MVL",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-12ir410ahs21-7mvl",
+      modelNumber: "KWSM-12IR410AHS21.7MVL",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-12ir410ahs24mv",
+      modelNumber: "KWSM-12IR410AHS24MV",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-12ir410ahs22l",
+      modelNumber: "KWSM-12IR410AHS22L",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-12ir410ahs23",
+      modelNumber: "KWSM-12IR410AHS23",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -406,8 +888,14 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-18ir410ahs19-5mvodu",
-      modelNumber: "KWSM-18IR410AHS19.5MVODU",
+      id: "kanionco-kd-24r410ah",
+      modelNumber: "KD-24R410AH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-24ir410ahs20",
+      modelNumber: "KWSM-24IR410AHS20",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -418,20 +906,26 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kanionco-kd-36r410ah",
+      modelNumber: "KD-36R410AH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsmo-36r410aih",
+      modelNumber: "KWSMO-36R410AIH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsmo-36r410aihmv",
+      modelNumber: "KWSMO-36R410AIHMV",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
       id: "kanionco-kwsmo-36r410aihh",
       modelNumber: "KWSMO-36R410AIHH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsmo-48r410aihh",
-      modelNumber: "KWSMO-48R410AIHH",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kd-60ir410ahsodu",
-      modelNumber: "KD-60IR410AHSODU",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -442,14 +936,32 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kanionco-kd-48r410ah",
+      modelNumber: "KD-48R410AH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsmo-48r410aihmv",
+      modelNumber: "KWSMO-48R410AIHMV",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsmo-48r410aihh",
+      modelNumber: "KWSMO-48R410AIHH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
       id: "kanionco-kd-48ir410ahsodu",
       modelNumber: "KD-48IR410AHSODU",
       brandId: "kanionco",
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsmo-18ir410ahsp",
-      modelNumber: "KWSMO-18IR410AHSP",
+      id: "kanionco-kwsmo-30r410aih",
+      modelNumber: "KWSMO-30R410AIH",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -460,38 +972,26 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsmo-18r410aihmv",
-      modelNumber: "KWSMO-18R410AIHMV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
       id: "kanionco-kwsmo-30r410aihmv",
       modelNumber: "KWSMO-30R410AIHMV",
       brandId: "kanionco",
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-09ir410ahs24mvl",
-      modelNumber: "KWSM-09IR410AHS24MVL",
+      id: "kanionco-kwsm-24ir410ahs21mv",
+      modelNumber: "KWSM-24IR410AHS21MV",
       brandId: "kanionco",
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-12ir410ahs21-5mvl",
-      modelNumber: "KWSM-12IR410AHS21.5MVL",
+      id: "kanionco-kwsmo-27r410aihh",
+      modelNumber: "KWSMO-27R410AIHH",
       brandId: "kanionco",
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-09ir410ahs24mv",
-      modelNumber: "KWSM-09IR410AHS24MV",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-12ir410ahs22mv",
-      modelNumber: "KWSM-12IR410AHS22MV",
+      id: "kanionco-kwsmo-18r410aihmv",
+      modelNumber: "KWSMO-18R410AIHMV",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -502,8 +1002,20 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-24ir410ahs21mv",
-      modelNumber: "KWSM-24IR410AHS21MV",
+      id: "kanionco-kwsmo-18r410aihh",
+      modelNumber: "KWSMO-18R410AIHH",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-09ir410ahs24mvl",
+      modelNumber: "KWSM-09IR410AHS24MVL",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-09ir410ahs24mv",
+      modelNumber: "KWSM-09IR410AHS24MV",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -526,14 +1038,14 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsmo-18r410aihh",
-      modelNumber: "KWSMO-18R410AIHH",
+      id: "kanionco-kwsm-12ir410ahs21-5mvl",
+      modelNumber: "KWSM-12IR410AHS21.5MVL",
       brandId: "kanionco",
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsmo-27r410aihh",
-      modelNumber: "KWSMO-27R410AIHH",
+      id: "kanionco-kwsm-12ir410ahs22mv",
+      modelNumber: "KWSM-12IR410AHS22MV",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -544,32 +1056,14 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-06ir410ahs26-5odu",
-      modelNumber: "KWSM-06IR410AHS26.5ODU",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
       id: "kanionco-kwsm-09ir410ahs28-1odu",
       modelNumber: "KWSM-09IR410AHS28.1ODU",
       brandId: "kanionco",
       refrigerant: null as any,
     },
     {
-      id: "kanionco-kwsm-12ir410ahs25-5odu",
-      modelNumber: "KWSM-12IR410AHS25.5ODU",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-18ir410ahs21-5odu",
-      modelNumber: "KWSM-18IR410AHS21.5ODU",
-      brandId: "kanionco",
-      refrigerant: null as any,
-    },
-    {
-      id: "kanionco-kwsm-24ir410ahs21-5odu",
-      modelNumber: "KWSM-24IR410AHS21.5ODU",
+      id: "kanionco-kd-60ir410ahsodu",
+      modelNumber: "KD-60IR410AHSODU",
       brandId: "kanionco",
       refrigerant: null as any,
     },
@@ -598,6 +1092,30 @@ export const kanioncoDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kanionco-kwsm-06ir410ahs26-5odu",
+      modelNumber: "KWSM-06IR410AHS26.5ODU",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-12ir410ahs25-5odu",
+      modelNumber: "KWSM-12IR410AHS25.5ODU",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-18ir410ahs21-5odu",
+      modelNumber: "KWSM-18IR410AHS21.5ODU",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
+      id: "kanionco-kwsm-24ir410ahs21-5odu",
+      modelNumber: "KWSM-24IR410AHS21.5ODU",
+      brandId: "kanionco",
+      refrigerant: null as any,
+    },
+    {
       id: "kanionco-kwsmo-36ir410ahsp",
       modelNumber: "KWSMO-36IR410AHSP",
       brandId: "kanionco",
@@ -615,9 +1133,9 @@ export const kanioncoDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "kanionco-standard-wall-single-cfg-1",
-      slug: "kanionco-standard-wall-single-cfg-1",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-1",
+      slug: "kanionco-standard-wall-single-9000-cfg-1",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs19l",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -629,37 +1147,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-2",
-      slug: "kanionco-standard-wall-single-cfg-2",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-18ir410ahs19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-3",
-      slug: "kanionco-standard-wall-single-cfg-3",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs21l",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-4",
-      slug: "kanionco-standard-wall-single-cfg-4",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-2",
+      slug: "kanionco-standard-wall-single-9000-cfg-2",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs21",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -671,23 +1161,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-5",
-      slug: "kanionco-standard-wall-single-cfg-5",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-18ir410ahs21",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-6",
-      slug: "kanionco-standard-wall-single-cfg-6",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-3",
+      slug: "kanionco-standard-wall-single-9000-cfg-3",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kd-09r410ah",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -699,121 +1175,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-7",
-      slug: "kanionco-standard-wall-single-cfg-7",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kd-18r410ah",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-8",
-      slug: "kanionco-standard-wall-single-cfg-8",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kd-24r410ah",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-9",
-      slug: "kanionco-standard-wall-single-cfg-9",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kd-36r410ah",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-10",
-      slug: "kanionco-standard-wall-single-cfg-10",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kd-48r410ah",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-11",
-      slug: "kanionco-standard-wall-single-cfg-11",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs25",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-12",
-      slug: "kanionco-standard-wall-single-cfg-12",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-18r410aih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-13",
-      slug: "kanionco-standard-wall-single-cfg-13",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-30r410aih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-14",
-      slug: "kanionco-standard-wall-single-cfg-14",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-36r410aih",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-15",
-      slug: "kanionco-standard-wall-single-cfg-15",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-4",
+      slug: "kanionco-standard-wall-single-9000-cfg-4",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs25",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -825,37 +1189,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-16",
-      slug: "kanionco-standard-wall-single-cfg-16",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-09ir410ahs26mvl",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-17",
-      slug: "kanionco-standard-wall-single-cfg-17",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs21-7mvl",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-18",
-      slug: "kanionco-standard-wall-single-cfg-18",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-5",
+      slug: "kanionco-standard-wall-single-9000-cfg-5",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs26mv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -867,37 +1203,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-19",
-      slug: "kanionco-standard-wall-single-cfg-19",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs24mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-20",
-      slug: "kanionco-standard-wall-single-cfg-20",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-18ir410ahs23-7mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-21",
-      slug: "kanionco-standard-wall-single-cfg-21",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-6",
+      slug: "kanionco-standard-wall-single-9000-cfg-6",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs20-7mvl",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -909,9 +1217,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-22",
-      slug: "kanionco-standard-wall-single-cfg-22",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-7",
+      slug: "kanionco-standard-wall-single-9000-cfg-7",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs21-7mv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -923,79 +1231,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-23",
-      slug: "kanionco-standard-wall-single-cfg-23",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-18ir410ahs21mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-24",
-      slug: "kanionco-standard-wall-single-cfg-24",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-48r410aihmv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-25",
-      slug: "kanionco-standard-wall-single-cfg-25",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-48r410aihmv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-26",
-      slug: "kanionco-standard-wall-single-cfg-26",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-36r410aihmv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-27",
-      slug: "kanionco-standard-wall-single-cfg-27",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-18ir410ahs19mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-28",
-      slug: "kanionco-standard-wall-single-cfg-28",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-8",
+      slug: "kanionco-standard-wall-single-9000-cfg-8",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs22l",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1007,23 +1245,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-29",
-      slug: "kanionco-standard-wall-single-cfg-29",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs22l",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-30",
-      slug: "kanionco-standard-wall-single-cfg-30",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-9000-cfg-9",
+      slug: "kanionco-standard-wall-single-9000-cfg-9",
+      modelId: "kanionco-standard-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs23",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1035,13 +1259,13 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-31",
-      slug: "kanionco-standard-wall-single-cfg-31",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs23",
+      id: "kanionco-standard-wall-single-18000-cfg-1",
+      slug: "kanionco-standard-wall-single-18000-cfg-1",
+      modelId: "kanionco-standard-wall-single-18000",
+      outdoorUnitId: "kanionco-kwsm-18ir410ahs19",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1049,9 +1273,93 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-32",
-      slug: "kanionco-standard-wall-single-cfg-32",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-18000-cfg-2",
+      slug: "kanionco-standard-wall-single-18000-cfg-2",
+      modelId: "kanionco-standard-wall-single-18000",
+      outdoorUnitId: "kanionco-kwsm-18ir410ahs21",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-18000-cfg-3",
+      slug: "kanionco-standard-wall-single-18000-cfg-3",
+      modelId: "kanionco-standard-wall-single-18000",
+      outdoorUnitId: "kanionco-kd-18r410ah",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-18000-cfg-4",
+      slug: "kanionco-standard-wall-single-18000-cfg-4",
+      modelId: "kanionco-standard-wall-single-18000",
+      outdoorUnitId: "kanionco-kwsmo-18r410aih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-18000-cfg-5",
+      slug: "kanionco-standard-wall-single-18000-cfg-5",
+      modelId: "kanionco-standard-wall-single-18000",
+      outdoorUnitId: "kanionco-kwsm-18ir410ahs23-7mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-18000-cfg-6",
+      slug: "kanionco-standard-wall-single-18000-cfg-6",
+      modelId: "kanionco-standard-wall-single-18000",
+      outdoorUnitId: "kanionco-kwsm-18ir410ahs21mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-18000-cfg-7",
+      slug: "kanionco-standard-wall-single-18000-cfg-7",
+      modelId: "kanionco-standard-wall-single-18000",
+      outdoorUnitId: "kanionco-kwsm-18ir410ahs19mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-18000-cfg-8",
+      slug: "kanionco-standard-wall-single-18000-cfg-8",
+      modelId: "kanionco-standard-wall-single-18000",
       outdoorUnitId: "kanionco-kwsm-18ir410ahs21-5",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1063,51 +1371,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-33",
-      slug: "kanionco-standard-wall-single-cfg-33",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-24ir410ahs20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-34",
-      slug: "kanionco-standard-wall-single-cfg-34",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs20mvlodu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-35",
-      slug: "kanionco-standard-wall-single-cfg-35",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs20-5mvodu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-36",
-      slug: "kanionco-standard-wall-single-cfg-36",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-18000-cfg-9",
+      slug: "kanionco-standard-wall-single-18000-cfg-9",
+      modelId: "kanionco-standard-wall-single-18000",
       outdoorUnitId: "kanionco-kwsm-18ir410ahs19-5mvodu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1119,107 +1385,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-standard-wall-single-cfg-37",
-      slug: "kanionco-standard-wall-single-cfg-37",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsm-24ir410ahs18-5mvodu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-38",
-      slug: "kanionco-standard-wall-single-cfg-38",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-36r410aihh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-39",
-      slug: "kanionco-standard-wall-single-cfg-39",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-48r410aihh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-40",
-      slug: "kanionco-standard-wall-single-cfg-40",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-48r410aihh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-41",
-      slug: "kanionco-standard-wall-single-cfg-41",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kd-60ir410ahsodu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 59000,
-      coolingCapacityMaxBtu: 59000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-42",
-      slug: "kanionco-standard-wall-single-cfg-42",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kd-36ir410ahsodu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-43",
-      slug: "kanionco-standard-wall-single-cfg-43",
-      modelId: "kanionco-standard-wall-single",
-      outdoorUnitId: "kanionco-kd-48ir410ahsodu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-standard-wall-single-cfg-44",
-      slug: "kanionco-standard-wall-single-cfg-44",
-      modelId: "kanionco-standard-wall-single",
+      id: "kanionco-standard-wall-single-18000-cfg-10",
+      slug: "kanionco-standard-wall-single-18000-cfg-10",
+      modelId: "kanionco-standard-wall-single-18000",
       outdoorUnitId: "kanionco-kwsmo-18ir410ahsp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1231,23 +1399,401 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-1",
-      slug: "kanionco-k-series-wall-single-cfg-1",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-standard-wall-single-12000-cfg-1",
+      slug: "kanionco-standard-wall-single-12000-cfg-1",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs21l",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-2",
+      slug: "kanionco-standard-wall-single-12000-cfg-2",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-3",
+      slug: "kanionco-standard-wall-single-12000-cfg-3",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-09ir410ahs26mvl",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-4",
+      slug: "kanionco-standard-wall-single-12000-cfg-4",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs21-7mvl",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-5",
+      slug: "kanionco-standard-wall-single-12000-cfg-5",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs24mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-6",
+      slug: "kanionco-standard-wall-single-12000-cfg-6",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs22l",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-7",
+      slug: "kanionco-standard-wall-single-12000-cfg-7",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs23",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-8",
+      slug: "kanionco-standard-wall-single-12000-cfg-8",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs20mvlodu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-12000-cfg-9",
+      slug: "kanionco-standard-wall-single-12000-cfg-9",
+      modelId: "kanionco-standard-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs20-5mvodu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-24000-cfg-1",
+      slug: "kanionco-standard-wall-single-24000-cfg-1",
+      modelId: "kanionco-standard-wall-single-24000",
+      outdoorUnitId: "kanionco-kd-24r410ah",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-24000-cfg-2",
+      slug: "kanionco-standard-wall-single-24000-cfg-2",
+      modelId: "kanionco-standard-wall-single-24000",
+      outdoorUnitId: "kanionco-kwsm-24ir410ahs20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-24000-cfg-3",
+      slug: "kanionco-standard-wall-single-24000-cfg-3",
+      modelId: "kanionco-standard-wall-single-24000",
+      outdoorUnitId: "kanionco-kwsm-24ir410ahs18-5mvodu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-36000-cfg-1",
+      slug: "kanionco-standard-wall-single-36000-cfg-1",
+      modelId: "kanionco-standard-wall-single-36000",
+      outdoorUnitId: "kanionco-kd-36r410ah",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-36000-cfg-2",
+      slug: "kanionco-standard-wall-single-36000-cfg-2",
+      modelId: "kanionco-standard-wall-single-36000",
+      outdoorUnitId: "kanionco-kwsmo-36r410aih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-36000-cfg-3",
+      slug: "kanionco-standard-wall-single-36000-cfg-3",
+      modelId: "kanionco-standard-wall-single-36000",
+      outdoorUnitId: "kanionco-kwsmo-36r410aihmv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-36000-cfg-4",
+      slug: "kanionco-standard-wall-single-36000-cfg-4",
+      modelId: "kanionco-standard-wall-single-36000",
+      outdoorUnitId: "kanionco-kwsmo-36r410aihh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-36000-cfg-5",
+      slug: "kanionco-standard-wall-single-36000-cfg-5",
+      modelId: "kanionco-standard-wall-single-36000",
+      outdoorUnitId: "kanionco-kd-36ir410ahsodu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-48000-cfg-1",
+      slug: "kanionco-standard-wall-single-48000-cfg-1",
+      modelId: "kanionco-standard-wall-single-48000",
+      outdoorUnitId: "kanionco-kd-48r410ah",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-48000-cfg-2",
+      slug: "kanionco-standard-wall-single-48000-cfg-2",
+      modelId: "kanionco-standard-wall-single-48000",
+      outdoorUnitId: "kanionco-kwsmo-48r410aihmv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-48000-cfg-3",
+      slug: "kanionco-standard-wall-single-48000-cfg-3",
+      modelId: "kanionco-standard-wall-single-48000",
+      outdoorUnitId: "kanionco-kwsmo-48r410aihmv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-48000-cfg-4",
+      slug: "kanionco-standard-wall-single-48000-cfg-4",
+      modelId: "kanionco-standard-wall-single-48000",
+      outdoorUnitId: "kanionco-kwsmo-48r410aihh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-48000-cfg-5",
+      slug: "kanionco-standard-wall-single-48000-cfg-5",
+      modelId: "kanionco-standard-wall-single-48000",
+      outdoorUnitId: "kanionco-kwsmo-48r410aihh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-48000-cfg-6",
+      slug: "kanionco-standard-wall-single-48000-cfg-6",
+      modelId: "kanionco-standard-wall-single-48000",
+      outdoorUnitId: "kanionco-kd-48ir410ahsodu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-standard-wall-single-30000-cfg-1",
+      slug: "kanionco-standard-wall-single-30000-cfg-1",
+      modelId: "kanionco-standard-wall-single-30000",
+      outdoorUnitId: "kanionco-kwsmo-30r410aih",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-24000-cfg-1",
+      slug: "kanionco-k-series-wall-single-24000-cfg-1",
+      modelId: "kanionco-k-series-wall-single-24000",
       outdoorUnitId: "kanionco-kwsm-24ir410ahs23mv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: 21,
       hspf2: 9,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-2",
-      slug: "kanionco-k-series-wall-single-cfg-2",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-24000-cfg-2",
+      slug: "kanionco-k-series-wall-single-24000-cfg-2",
+      modelId: "kanionco-k-series-wall-single-24000",
+      outdoorUnitId: "kanionco-kwsmo-30r410aihmv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-24000-cfg-3",
+      slug: "kanionco-k-series-wall-single-24000-cfg-3",
+      modelId: "kanionco-k-series-wall-single-24000",
+      outdoorUnitId: "kanionco-kwsm-24ir410ahs21mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-24000-cfg-4",
+      slug: "kanionco-k-series-wall-single-24000-cfg-4",
+      modelId: "kanionco-k-series-wall-single-24000",
+      outdoorUnitId: "kanionco-kwsmo-27r410aihh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-18000-cfg-1",
+      slug: "kanionco-k-series-wall-single-18000-cfg-1",
+      modelId: "kanionco-k-series-wall-single-18000",
       outdoorUnitId: "kanionco-kwsmo-18r410aihmv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1259,107 +1805,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-3",
-      slug: "kanionco-k-series-wall-single-cfg-3",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-30r410aihmv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-4",
-      slug: "kanionco-k-series-wall-single-cfg-4",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-30r410aihmv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-5",
-      slug: "kanionco-k-series-wall-single-cfg-5",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-30r410aihmv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 22.25,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-6",
-      slug: "kanionco-k-series-wall-single-cfg-6",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-09ir410ahs24mvl",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-7",
-      slug: "kanionco-k-series-wall-single-cfg-7",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs21-5mvl",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.7,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-8",
-      slug: "kanionco-k-series-wall-single-cfg-8",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-09ir410ahs24mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-9",
-      slug: "kanionco-k-series-wall-single-cfg-9",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs22mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-10",
-      slug: "kanionco-k-series-wall-single-cfg-10",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-18000-cfg-2",
+      slug: "kanionco-k-series-wall-single-18000-cfg-2",
+      modelId: "kanionco-k-series-wall-single-18000",
       outdoorUnitId: "kanionco-kwsm-18ir410ahs23-5mv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1371,51 +1819,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-11",
-      slug: "kanionco-k-series-wall-single-cfg-11",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-24ir410ahs21mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-12",
-      slug: "kanionco-k-series-wall-single-cfg-12",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-09ir410ahs20-5mvl",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-13",
-      slug: "kanionco-k-series-wall-single-cfg-13",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-09ir410ahs21-5mv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.7,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-14",
-      slug: "kanionco-k-series-wall-single-cfg-14",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-18000-cfg-3",
+      slug: "kanionco-k-series-wall-single-18000-cfg-3",
+      modelId: "kanionco-k-series-wall-single-18000",
       outdoorUnitId: "kanionco-kwsmo-18r410aihmv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1427,9 +1833,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-15",
-      slug: "kanionco-k-series-wall-single-cfg-15",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-18000-cfg-4",
+      slug: "kanionco-k-series-wall-single-18000-cfg-4",
+      modelId: "kanionco-k-series-wall-single-18000",
       outdoorUnitId: "kanionco-kwsmo-18r410aihmv",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1441,23 +1847,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-16",
-      slug: "kanionco-k-series-wall-single-cfg-16",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-09ir410ahs21-5mvodu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.7,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-k-series-wall-single-cfg-17",
-      slug: "kanionco-k-series-wall-single-cfg-17",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-18000-cfg-5",
+      slug: "kanionco-k-series-wall-single-18000-cfg-5",
+      modelId: "kanionco-k-series-wall-single-18000",
       outdoorUnitId: "kanionco-kwsmo-18r410aihh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1469,9 +1861,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-18",
-      slug: "kanionco-k-series-wall-single-cfg-18",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-18000-cfg-6",
+      slug: "kanionco-k-series-wall-single-18000-cfg-6",
+      modelId: "kanionco-k-series-wall-single-18000",
       outdoorUnitId: "kanionco-kwsmo-18r410aihh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1483,9 +1875,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-19",
-      slug: "kanionco-k-series-wall-single-cfg-19",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-18000-cfg-7",
+      slug: "kanionco-k-series-wall-single-18000-cfg-7",
+      modelId: "kanionco-k-series-wall-single-18000",
       outdoorUnitId: "kanionco-kwsmo-18r410aihh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1497,51 +1889,163 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-20",
-      slug: "kanionco-k-series-wall-single-cfg-20",
-      modelId: "kanionco-k-series-wall-single",
-      outdoorUnitId: "kanionco-kwsmo-27r410aihh",
+      id: "kanionco-k-series-wall-single-30000-cfg-1",
+      slug: "kanionco-k-series-wall-single-30000-cfg-1",
+      modelId: "kanionco-k-series-wall-single-30000",
+      outdoorUnitId: "kanionco-kwsmo-30r410aihmv",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23.5,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
       hspf2: 9.2,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-21",
-      slug: "kanionco-k-series-wall-single-cfg-21",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-30000-cfg-2",
+      slug: "kanionco-k-series-wall-single-30000-cfg-2",
+      modelId: "kanionco-k-series-wall-single-30000",
+      outdoorUnitId: "kanionco-kwsmo-30r410aihmv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-30000-cfg-3",
+      slug: "kanionco-k-series-wall-single-30000-cfg-3",
+      modelId: "kanionco-k-series-wall-single-30000",
       outdoorUnitId: "kanionco-kwsmo-27r410aihh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
       coolingCapacityMaxBtu: 28000,
       seer2: 21,
       hspf2: 9.2,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-k-series-wall-single-cfg-22",
-      slug: "kanionco-k-series-wall-single-cfg-22",
-      modelId: "kanionco-k-series-wall-single",
+      id: "kanionco-k-series-wall-single-30000-cfg-4",
+      slug: "kanionco-k-series-wall-single-30000-cfg-4",
+      modelId: "kanionco-k-series-wall-single-30000",
       outdoorUnitId: "kanionco-kwsmo-27r410aihh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
       coolingCapacityMaxBtu: 27400,
       seer2: 22.25,
       hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-9000-cfg-1",
+      slug: "kanionco-k-series-wall-single-9000-cfg-1",
+      modelId: "kanionco-k-series-wall-single-9000",
+      outdoorUnitId: "kanionco-kwsm-09ir410ahs24mvl",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 9.6,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kwsm-series-wall-single-cfg-1",
-      slug: "kanionco-kwsm-series-wall-single-cfg-1",
-      modelId: "kanionco-kwsm-series-wall-single",
+      id: "kanionco-k-series-wall-single-9000-cfg-2",
+      slug: "kanionco-k-series-wall-single-9000-cfg-2",
+      modelId: "kanionco-k-series-wall-single-9000",
+      outdoorUnitId: "kanionco-kwsm-09ir410ahs24mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-9000-cfg-3",
+      slug: "kanionco-k-series-wall-single-9000-cfg-3",
+      modelId: "kanionco-k-series-wall-single-9000",
+      outdoorUnitId: "kanionco-kwsm-09ir410ahs20-5mvl",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-9000-cfg-4",
+      slug: "kanionco-k-series-wall-single-9000-cfg-4",
+      modelId: "kanionco-k-series-wall-single-9000",
+      outdoorUnitId: "kanionco-kwsm-09ir410ahs21-5mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-9000-cfg-5",
+      slug: "kanionco-k-series-wall-single-9000-cfg-5",
+      modelId: "kanionco-k-series-wall-single-9000",
+      outdoorUnitId: "kanionco-kwsm-09ir410ahs21-5mvodu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-12000-cfg-1",
+      slug: "kanionco-k-series-wall-single-12000-cfg-1",
+      modelId: "kanionco-k-series-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs21-5mvl",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.7,
+      hspf2: 10,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-k-series-wall-single-12000-cfg-2",
+      slug: "kanionco-k-series-wall-single-12000-cfg-2",
+      modelId: "kanionco-k-series-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs22mv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 9.3,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-9000-cfg-1",
+      slug: "kanionco-kwsm-series-wall-single-9000-cfg-1",
+      modelId: "kanionco-kwsm-series-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs20mvlodu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1553,23 +2057,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kwsm-series-wall-single-cfg-2",
-      slug: "kanionco-kwsm-series-wall-single-cfg-2",
-      modelId: "kanionco-kwsm-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-06ir410ahs26-5odu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 26.5,
-      hspf2: 13.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-kwsm-series-wall-single-cfg-3",
-      slug: "kanionco-kwsm-series-wall-single-cfg-3",
-      modelId: "kanionco-kwsm-series-wall-single",
+      id: "kanionco-kwsm-series-wall-single-9000-cfg-2",
+      slug: "kanionco-kwsm-series-wall-single-9000-cfg-2",
+      modelId: "kanionco-kwsm-series-wall-single-9000",
       outdoorUnitId: "kanionco-kwsm-09ir410ahs28-1odu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1581,51 +2071,23 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kwsm-series-wall-single-cfg-4",
-      slug: "kanionco-kwsm-series-wall-single-cfg-4",
-      modelId: "kanionco-kwsm-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-12ir410ahs25-5odu",
+      id: "kanionco-standard-wall-single-60000-cfg-1",
+      slug: "kanionco-standard-wall-single-60000-cfg-1",
+      modelId: "kanionco-standard-wall-single-60000",
+      outdoorUnitId: "kanionco-kd-60ir410ahsodu",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 59000,
+      coolingCapacityMaxBtu: 59000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kwsm-series-wall-single-cfg-5",
-      slug: "kanionco-kwsm-series-wall-single-cfg-5",
-      modelId: "kanionco-kwsm-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-18ir410ahs21-5odu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-kwsm-series-wall-single-cfg-6",
-      slug: "kanionco-kwsm-series-wall-single-cfg-6",
-      modelId: "kanionco-kwsm-series-wall-single",
-      outdoorUnitId: "kanionco-kwsm-24ir410ahs21-5odu",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kanionco-kd-series-wall-single-cfg-1",
-      slug: "kanionco-kd-series-wall-single-cfg-1",
-      modelId: "kanionco-kd-series-wall-single",
+      id: "kanionco-kd-series-wall-single-9000-cfg-1",
+      slug: "kanionco-kd-series-wall-single-9000-cfg-1",
+      modelId: "kanionco-kd-series-wall-single-9000",
       outdoorUnitId: "kanionco-kd-09ir410ahsodu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1637,9 +2099,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kd-series-wall-single-cfg-2",
-      slug: "kanionco-kd-series-wall-single-cfg-2",
-      modelId: "kanionco-kd-series-wall-single",
+      id: "kanionco-kd-series-wall-single-24000-cfg-1",
+      slug: "kanionco-kd-series-wall-single-24000-cfg-1",
+      modelId: "kanionco-kd-series-wall-single-24000",
       outdoorUnitId: "kanionco-kd-24ir410ahsodu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1651,9 +2113,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kd-series-wall-single-cfg-3",
-      slug: "kanionco-kd-series-wall-single-cfg-3",
-      modelId: "kanionco-kd-series-wall-single",
+      id: "kanionco-kd-series-wall-single-12000-cfg-1",
+      slug: "kanionco-kd-series-wall-single-12000-cfg-1",
+      modelId: "kanionco-kd-series-wall-single-12000",
       outdoorUnitId: "kanionco-kd-12ir410ahsodu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1665,9 +2127,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-kd-series-wall-single-cfg-4",
-      slug: "kanionco-kd-series-wall-single-cfg-4",
-      modelId: "kanionco-kd-series-wall-single",
+      id: "kanionco-kd-series-wall-single-18000-cfg-1",
+      slug: "kanionco-kd-series-wall-single-18000-cfg-1",
+      modelId: "kanionco-kd-series-wall-single-18000",
       outdoorUnitId: "kanionco-kd-18ir410ahsodu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1679,9 +2141,65 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-premium-series-wall-single-cfg-1",
-      slug: "kanionco-premium-series-wall-single-cfg-1",
-      modelId: "kanionco-premium-series-wall-single",
+      id: "kanionco-kwsm-series-wall-single-6000-cfg-1",
+      slug: "kanionco-kwsm-series-wall-single-6000-cfg-1",
+      modelId: "kanionco-kwsm-series-wall-single-6000",
+      outdoorUnitId: "kanionco-kwsm-06ir410ahs26-5odu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 26.5,
+      hspf2: 13.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-12000-cfg-1",
+      slug: "kanionco-kwsm-series-wall-single-12000-cfg-1",
+      modelId: "kanionco-kwsm-series-wall-single-12000",
+      outdoorUnitId: "kanionco-kwsm-12ir410ahs25-5odu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-18000-cfg-1",
+      slug: "kanionco-kwsm-series-wall-single-18000-cfg-1",
+      modelId: "kanionco-kwsm-series-wall-single-18000",
+      outdoorUnitId: "kanionco-kwsm-18ir410ahs21-5odu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-kwsm-series-wall-single-24000-cfg-1",
+      slug: "kanionco-kwsm-series-wall-single-24000-cfg-1",
+      modelId: "kanionco-kwsm-series-wall-single-24000",
+      outdoorUnitId: "kanionco-kwsm-24ir410ahs21-5odu",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kanionco-premium-series-wall-single-30000-cfg-1",
+      slug: "kanionco-premium-series-wall-single-30000-cfg-1",
+      modelId: "kanionco-premium-series-wall-single-30000",
       outdoorUnitId: "kanionco-kwsmo-36ir410ahsp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -1693,9 +2211,9 @@ export const kanioncoDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kanionco-premium-series-wall-single-cfg-2",
-      slug: "kanionco-premium-series-wall-single-cfg-2",
-      modelId: "kanionco-premium-series-wall-single",
+      id: "kanionco-premium-series-wall-single-24000-cfg-1",
+      slug: "kanionco-premium-series-wall-single-24000-cfg-1",
+      modelId: "kanionco-premium-series-wall-single-24000",
       outdoorUnitId: "kanionco-kwsmo-27ir410ahsp",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1709,7 +2227,7 @@ export const kanioncoDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "kanionco-standard-wall-single-cfg-1",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1720,29 +2238,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-4",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1753,18 +2249,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-6",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1775,95 +2260,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-15",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1874,29 +2271,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-18",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1907,29 +2282,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-21",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1940,7 +2293,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-22",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1951,62 +2304,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-28",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2017,18 +2315,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-30",
+      configurationId: "kanionco-standard-wall-single-9000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2039,18 +2326,84 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-31",
+      configurationId: "kanionco-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 7600,
+          heatingCapacityBtu: 11000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-32",
+      configurationId: "kanionco-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2061,40 +2414,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-36",
+      configurationId: "kanionco-standard-wall-single-18000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2105,84 +2425,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-standard-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-standard-wall-single-cfg-44",
+      configurationId: "kanionco-standard-wall-single-18000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2193,7 +2436,271 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-1",
+      configurationId: "kanionco-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2204,18 +2711,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-3",
+      configurationId: "kanionco-k-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2226,73 +2722,40 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-4",
+      configurationId: "kanionco-k-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
+          heatingCapacityBtu: 18000,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-5",
+      configurationId: "kanionco-k-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
+          heatingCapacityBtu: 14800,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8300,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8200,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-10",
+      configurationId: "kanionco-k-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2303,40 +2766,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6800,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6900,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-14",
+      configurationId: "kanionco-k-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2347,7 +2777,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-15",
+      configurationId: "kanionco-k-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2358,18 +2788,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-17",
+      configurationId: "kanionco-k-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2380,7 +2799,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-18",
+      configurationId: "kanionco-k-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2391,7 +2810,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-19",
+      configurationId: "kanionco-k-series-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2402,18 +2821,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-k-series-wall-single-cfg-21",
+      configurationId: "kanionco-k-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2424,7 +2832,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-k-series-wall-single-cfg-22",
+      configurationId: "kanionco-k-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2435,7 +2843,106 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-kwsm-series-wall-single-cfg-1",
+      configurationId: "kanionco-k-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8300,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-k-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8200,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-kwsm-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2446,18 +2953,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-kwsm-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-kwsm-series-wall-single-cfg-3",
+      configurationId: "kanionco-kwsm-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2468,40 +2964,18 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-kwsm-series-wall-single-cfg-4",
+      configurationId: "kanionco-standard-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
+          heatingCapacityBtu: 34400,
+          cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kanionco-kwsm-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-kwsm-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kanionco-kd-series-wall-single-cfg-1",
+      configurationId: "kanionco-kd-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2512,7 +2986,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-kd-series-wall-single-cfg-2",
+      configurationId: "kanionco-kd-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2523,7 +2997,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-kd-series-wall-single-cfg-3",
+      configurationId: "kanionco-kd-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2534,7 +3008,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-kd-series-wall-single-cfg-4",
+      configurationId: "kanionco-kd-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2545,7 +3019,51 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-premium-series-wall-single-cfg-1",
+      configurationId: "kanionco-kwsm-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-kwsm-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-kwsm-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-kwsm-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kanionco-premium-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2556,7 +3074,7 @@ export const kanioncoDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kanionco-premium-series-wall-single-cfg-2",
+      configurationId: "kanionco-premium-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

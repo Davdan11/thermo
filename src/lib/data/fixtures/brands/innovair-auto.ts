@@ -51,7 +51,7 @@ export const innovairDataset: BrandDataset = {
       name: "SEV Series",
       brandId: "innovair",
       systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
+      categories: ["conventional", "ducted"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -235,18 +235,397 @@ export const innovairDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "innovair-standard-wall-single",
-      slug: "innovair-standard-wall-single",
-      name: "Standard",
+      id: "innovair-standard-wall-single-9000",
+      slug: "innovair-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "innovair-standard",
       brandId: "innovair",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 6900,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-18000",
+      slug: "innovair-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "innovair-standard",
+      brandId: "innovair",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-innovair-elite-wall-single-9000",
+      slug: "innovair-innovair-elite-wall-single-9000",
+      name: "Innovair Elite 9 000 BTU",
+      seriesId: "innovair-innovair-elite",
+      brandId: "innovair",
+      modelNumber: "Innovair Elite 9k",
+      normalizedModelNumber: "innovair-elite-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 5600,
+      heatingCapacity5FMaxBtu: 5600,
+      seer2Min: 27,
+      seer2Max: 27,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-innovair-elite-wall-single-12000",
+      slug: "innovair-innovair-elite-wall-single-12000",
+      name: "Innovair Elite 12 000 BTU",
+      seriesId: "innovair-innovair-elite",
+      brandId: "innovair",
+      modelNumber: "Innovair Elite 12k",
+      normalizedModelNumber: "innovair-elite-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8100,
+      heatingCapacity5FMaxBtu: 8100,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-innovair-elite-wall-single-18000",
+      slug: "innovair-innovair-elite-wall-single-18000",
+      name: "Innovair Elite 18 000 BTU",
+      seriesId: "innovair-innovair-elite",
+      brandId: "innovair",
+      modelNumber: "Innovair Elite 18k",
+      normalizedModelNumber: "innovair-elite-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14200,
+      heatingCapacity5FMaxBtu: 14200,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000",
+      slug: "innovair-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "innovair-standard",
+      brandId: "innovair",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 24600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-multi-hyper-wall-single-18000",
+      slug: "innovair-multi-hyper-wall-single-18000",
+      name: "Multi Hyper 18 000 BTU",
+      seriesId: "innovair-multi-hyper",
+      brandId: "innovair",
+      modelNumber: "Multi Hyper 18k",
+      normalizedModelNumber: "multi-hyper-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12700,
+      heatingCapacity5FMaxBtu: 12700,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.4,
+      hspf2Max: 9.5,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-multi-hyper-wall-single-24000",
+      slug: "innovair-multi-hyper-wall-single-24000",
+      name: "Multi Hyper 24 000 BTU",
+      seriesId: "innovair-multi-hyper",
+      brandId: "innovair",
+      modelNumber: "Multi Hyper 24k",
+      normalizedModelNumber: "multi-hyper-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21,
+      seer2Max: 22,
+      hspf2Min: 8.6,
+      hspf2Max: 9.05,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-multi-hyper-wall-single-30000",
+      slug: "innovair-multi-hyper-wall-single-30000",
+      name: "Multi Hyper 30 000 BTU",
+      seriesId: "innovair-multi-hyper",
+      brandId: "innovair",
+      modelNumber: "Multi Hyper 30k",
+      normalizedModelNumber: "multi-hyper-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      heatingCapacity5FMinBtu: 22400,
+      heatingCapacity5FMaxBtu: 23000,
+      seer2Min: 19.5,
+      seer2Max: 21,
+      hspf2Min: 8.9,
+      hspf2Max: 9,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-multi-hyper-wall-single-42000",
+      slug: "innovair-multi-hyper-wall-single-42000",
+      name: "Multi Hyper 42 000 BTU",
+      seriesId: "innovair-multi-hyper",
+      brandId: "innovair",
+      modelNumber: "Multi Hyper 42k",
+      normalizedModelNumber: "multi-hyper-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 41000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 28400,
+      seer2Min: 18,
+      seer2Max: 20,
+      hspf2Min: 8.8,
+      hspf2Max: 8.95,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sev-series-central-ducted-18000",
+      slug: "innovair-sev-series-central-ducted-18000",
+      name: "SEV Series 18 000 BTU",
+      seriesId: "innovair-sev-series",
+      brandId: "innovair",
+      modelNumber: "SEV Series 18k",
+      normalizedModelNumber: "sev-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11500,
+      heatingCapacity5FMaxBtu: 13000,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.93,
+      cop5FMax: 1.93,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-24000",
+      slug: "innovair-dev-series-central-ducted-24000",
+      name: "DEV series 24 000 BTU",
+      seriesId: "innovair-dev-series",
+      brandId: "innovair",
+      modelNumber: "DEV series 24k",
+      normalizedModelNumber: "dev-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 17,
+      seer2Max: 17.4,
+      hspf2Min: 9.2,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-30000",
+      slug: "innovair-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "innovair-standard",
+      brandId: "innovair",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-48000",
+      slug: "innovair-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "innovair-standard",
+      brandId: "innovair",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000",
+      slug: "innovair-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "innovair-standard",
+      brandId: "innovair",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 37000,
       heatingCapacity5FMaxBtu: 42000,
       seer2Min: null,
       seer2Max: null,
@@ -261,128 +640,25 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-innovair-elite-wall-single",
-      slug: "innovair-innovair-elite-wall-single",
-      name: "Innovair Elite",
-      seriesId: "innovair-innovair-elite",
-      brandId: "innovair",
-      modelNumber: "Innovair Elite",
-      normalizedModelNumber: "innovair-elite",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 5600,
-      heatingCapacity5FMaxBtu: 14200,
-      seer2Min: 22,
-      seer2Max: 27,
-      hspf2Min: 8.5,
-      hspf2Max: 11,
-      cop5FMin: 1.8,
-      cop5FMax: 1.91,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-multi-hyper-wall-single",
-      slug: "innovair-multi-hyper-wall-single",
-      name: "Multi Hyper",
-      seriesId: "innovair-multi-hyper",
-      brandId: "innovair",
-      modelNumber: "Multi Hyper",
-      normalizedModelNumber: "multi-hyper",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
-      heatingCapacity5FMinBtu: 12700,
-      heatingCapacity5FMaxBtu: 28400,
-      seer2Min: 18,
-      seer2Max: 22,
-      hspf2Min: 8.6,
-      hspf2Max: 9.5,
-      cop5FMin: 1.84,
-      cop5FMax: 1.84,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sev-series-central-ducted",
-      slug: "innovair-sev-series-central-ducted",
-      name: "SEV Series",
-      seriesId: "innovair-sev-series",
-      brandId: "innovair",
-      modelNumber: "SEV Series",
-      normalizedModelNumber: "sev-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 36000,
-      heatingCapacity5FMinBtu: 11500,
-      heatingCapacity5FMaxBtu: 32800,
-      seer2Min: 15.7,
-      seer2Max: 17,
-      hspf2Min: 8.6,
-      hspf2Max: 9.9,
-      cop5FMin: 1.9,
-      cop5FMax: 2.2,
-      systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-dev-series-central-ducted",
-      slug: "innovair-dev-series-central-ducted",
-      name: "DEV series",
-      seriesId: "innovair-dev-series",
-      brandId: "innovair",
-      modelNumber: "DEV series",
-      normalizedModelNumber: "dev-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 19200,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.3,
-      seer2Max: 17.4,
-      hspf2Min: 9.2,
-      hspf2Max: 10,
-      cop5FMin: 1.9,
-      cop5FMax: 2.1,
-      systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-quantum-hyper-heat-wall-single",
-      slug: "innovair-quantum-hyper-heat-wall-single",
-      name: "Quantum Hyper Heat",
+      id: "innovair-quantum-hyper-heat-wall-single-9000",
+      slug: "innovair-quantum-hyper-heat-wall-single-9000",
+      name: "Quantum Hyper Heat 9 000 BTU",
       seriesId: "innovair-quantum-hyper-heat",
       brandId: "innovair",
-      modelNumber: "Quantum Hyper Heat",
-      normalizedModelNumber: "quantum-hyper-heat",
+      modelNumber: "Quantum Hyper Heat 9k",
+      normalizedModelNumber: "quantum-hyper-heat-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 5500,
-      heatingCapacity5FMaxBtu: 15500,
-      seer2Min: 20.5,
+      heatingCapacity5FMaxBtu: 5500,
+      seer2Min: 25.5,
       seer2Max: 25.5,
-      hspf2Min: 9.5,
+      hspf2Min: 10.5,
       hspf2Max: 10.5,
-      cop5FMin: 1.75,
+      cop5FMin: 2.05,
       cop5FMax: 2.05,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -391,24 +667,187 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhd-series-central-ducted",
-      slug: "innovair-mhd-series-central-ducted",
-      name: "MHD series",
-      seriesId: "innovair-mhd-series",
+      id: "innovair-quantum-hyper-heat-wall-single-12000",
+      slug: "innovair-quantum-hyper-heat-wall-single-12000",
+      name: "Quantum Hyper Heat 12 000 BTU",
+      seriesId: "innovair-quantum-hyper-heat",
       brandId: "innovair",
-      modelNumber: "MHD series",
-      normalizedModelNumber: "mhd-series",
+      modelNumber: "Quantum Hyper Heat 12k",
+      normalizedModelNumber: "quantum-hyper-heat-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 6800,
+      heatingCapacity5FMaxBtu: 6800,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.05,
+      cop5FMax: 2.05,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-quantum-hyper-heat-wall-single-18000",
+      slug: "innovair-quantum-hyper-heat-wall-single-18000",
+      name: "Quantum Hyper Heat 18 000 BTU",
+      seriesId: "innovair-quantum-hyper-heat",
+      brandId: "innovair",
+      modelNumber: "Quantum Hyper Heat 18k",
+      normalizedModelNumber: "quantum-hyper-heat-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 23000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10500,
+      heatingCapacity5FMaxBtu: 10500,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-quantum-hyper-heat-wall-single-24000",
+      slug: "innovair-quantum-hyper-heat-wall-single-24000",
+      name: "Quantum Hyper Heat 24 000 BTU",
+      seriesId: "innovair-quantum-hyper-heat",
+      brandId: "innovair",
+      modelNumber: "Quantum Hyper Heat 24k",
+      normalizedModelNumber: "quantum-hyper-heat-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 15500,
+      heatingCapacity5FMaxBtu: 15500,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-36000",
+      slug: "innovair-dev-series-central-ducted-36000",
+      name: "DEV series 36 000 BTU",
+      seriesId: "innovair-dev-series",
+      brandId: "innovair",
+      modelNumber: "DEV series 36k",
+      normalizedModelNumber: "dev-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 30400,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.97,
+      cop5FMax: 1.97,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-48000",
+      slug: "innovair-dev-series-central-ducted-48000",
+      name: "DEV series 48 000 BTU",
+      seriesId: "innovair-dev-series",
+      brandId: "innovair",
+      modelNumber: "DEV series 48k",
+      normalizedModelNumber: "dev-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-60000",
+      slug: "innovair-dev-series-central-ducted-60000",
+      name: "DEV series 60 000 BTU",
+      seriesId: "innovair-dev-series",
+      brandId: "innovair",
+      modelNumber: "DEV series 60k",
+      normalizedModelNumber: "dev-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhd-series-central-ducted-18000",
+      slug: "innovair-mhd-series-central-ducted-18000",
+      name: "MHD series 18 000 BTU",
+      seriesId: "innovair-mhd-series",
+      brandId: "innovair",
+      modelNumber: "MHD series 18k",
+      normalizedModelNumber: "mhd-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13000,
-      heatingCapacity5FMaxBtu: 22000,
+      heatingCapacity5FMaxBtu: 13000,
       seer2Min: 15.2,
       seer2Max: 15.2,
       hspf2Min: 9.5,
-      hspf2Max: 9.8,
-      cop5FMin: 2.08,
+      hspf2Max: 9.5,
+      cop5FMin: 2.2,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -417,24 +856,79 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted",
-      slug: "innovair-shv-series-central-ducted",
-      name: "SHV series",
-      seriesId: "innovair-shv-series",
+      id: "innovair-mhd-series-central-ducted-24000",
+      slug: "innovair-mhd-series-central-ducted-24000",
+      name: "MHD series 24 000 BTU",
+      seriesId: "innovair-mhd-series",
       brandId: "innovair",
-      modelNumber: "SHV series",
-      normalizedModelNumber: "shv-series",
+      modelNumber: "MHD series 24k",
+      normalizedModelNumber: "mhd-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 52000,
-      heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 38000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
       seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 9.8,
+      hspf2Max: 9.8,
+      cop5FMin: 2.08,
+      cop5FMax: 2.08,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sev-series-central-ducted-24000",
+      slug: "innovair-sev-series-central-ducted-24000",
+      name: "SEV series 24 000 BTU",
+      seriesId: "innovair-sev-series",
+      brandId: "innovair",
+      modelNumber: "SEV series 24k",
+      normalizedModelNumber: "sev-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 15.7,
+      seer2Max: 15.7,
+      hspf2Min: 9.8,
+      hspf2Max: 9.8,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-18000",
+      slug: "innovair-shv-series-central-ducted-18000",
+      name: "SHV series 18 000 BTU",
+      seriesId: "innovair-shv-series",
+      brandId: "innovair",
+      modelNumber: "SHV series 18k",
+      normalizedModelNumber: "shv-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 15800,
+      seer2Min: 16.1,
       seer2Max: 19.3,
-      hspf2Min: 8.1,
+      hspf2Min: 9.5,
       hspf2Max: 10.8,
-      cop5FMin: 1.8,
+      cop5FMin: 2,
       cop5FMax: 2.3,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -443,49 +937,24 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sh-series-central-ducted",
-      slug: "innovair-sh-series-central-ducted",
-      name: "SH series",
-      seriesId: "innovair-sh-series",
+      id: "innovair-shv-series-central-ducted-24000",
+      slug: "innovair-shv-series-central-ducted-24000",
+      name: "SHV series 24 000 BTU",
+      seriesId: "innovair-shv-series",
       brandId: "innovair",
-      modelNumber: "SH series",
-      normalizedModelNumber: "sh-series",
+      modelNumber: "SHV series 24k",
+      normalizedModelNumber: "shv-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 35000,
-      heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 27000,
-      seer2Min: 15.2,
-      seer2Max: 18,
-      hspf2Min: 8.5,
-      hspf2Max: 10.2,
-      cop5FMin: 1.8,
-      cop5FMax: 2.33,
-      systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted",
-      slug: "innovair-sav-series-central-ducted",
-      name: "SAV Series",
-      seriesId: "innovair-sav-series",
-      brandId: "innovair",
-      modelNumber: "SAV Series",
-      normalizedModelNumber: "sav-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 54000,
-      heatingCapacity5FMinBtu: 12600,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.2,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 16,
       seer2Max: 19,
-      hspf2Min: 8.2,
-      hspf2Max: 10.3,
+      hspf2Min: 9.3,
+      hspf2Max: 10.5,
       cop5FMin: 1.8,
       cop5FMax: 2,
       systemType: "central-ducted",
@@ -495,25 +964,26 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted",
-      slug: "innovair-sov-series-central-ducted",
-      name: "SOV Series",
-      seriesId: "innovair-sov-series",
+      id: "innovair-shv-series-central-ducted-36000",
+      slug: "innovair-shv-series-central-ducted-36000",
+      name: "SHV series 36 000 BTU",
+      seriesId: "innovair-shv-series",
       brandId: "innovair",
-      modelNumber: "SOV Series",
-      normalizedModelNumber: "sov-series",
+      modelNumber: "SHV series 36k",
+      normalizedModelNumber: "shv-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 45000,
-      heatingCapacity5FMinBtu: 11800,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27400,
       heatingCapacity5FMaxBtu: 33000,
       seer2Min: 15.2,
-      seer2Max: 18.6,
-      hspf2Min: 8.7,
-      hspf2Max: 10.5,
+      seer2Max: 17.6,
+      hspf2Min: 8.6,
+      hspf2Max: 10,
       cop5FMin: 1.8,
-      cop5FMax: 2.1,
+      cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -521,24 +991,457 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q32-wall-single",
-      slug: "innovair-q32-wall-single",
-      name: "Q32",
-      seriesId: "innovair-q32",
+      id: "innovair-shv-series-central-ducted-30000",
+      slug: "innovair-shv-series-central-ducted-30000",
+      name: "SHV series 30 000 BTU",
+      seriesId: "innovair-shv-series",
       brandId: "innovair",
-      modelNumber: "Q32",
-      normalizedModelNumber: "q32",
+      modelNumber: "SHV series 30k",
+      normalizedModelNumber: "shv-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.3,
+      seer2Max: 18.2,
+      hspf2Min: 8.8,
+      hspf2Max: 9.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sev-series-central-ducted-36000",
+      slug: "innovair-sev-series-central-ducted-36000",
+      name: "SEV series 36 000 BTU",
+      seriesId: "innovair-sev-series",
+      brandId: "innovair",
+      modelNumber: "SEV series 36k",
+      normalizedModelNumber: "sev-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 32800,
+      heatingCapacity5FMaxBtu: 32800,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9.9,
+      hspf2Max: 9.9,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sh-series-central-ducted-18000",
+      slug: "innovair-sh-series-central-ducted-18000",
+      name: "SH series 18 000 BTU",
+      seriesId: "innovair-sh-series",
+      brandId: "innovair",
+      modelNumber: "SH series 18k",
+      normalizedModelNumber: "sh-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 6500,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 13500,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 2.04,
+      cop5FMax: 2.04,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sh-series-central-ducted-30000",
+      slug: "innovair-sh-series-central-ducted-30000",
+      name: "SH series 30 000 BTU",
+      seriesId: "innovair-sh-series",
+      brandId: "innovair",
+      modelNumber: "SH series 30k",
+      normalizedModelNumber: "sh-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.2,
+      seer2Max: 16.2,
+      hspf2Min: 8.9,
+      hspf2Max: 8.9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sh-series-central-ducted-36000",
+      slug: "innovair-sh-series-central-ducted-36000",
+      name: "SH series 36 000 BTU",
+      seriesId: "innovair-sh-series",
+      brandId: "innovair",
+      modelNumber: "SH series 36k",
+      normalizedModelNumber: "sh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sh-series-central-ducted-24000",
+      slug: "innovair-sh-series-central-ducted-24000",
+      name: "SH series 24 000 BTU",
+      seriesId: "innovair-sh-series",
+      brandId: "innovair",
+      modelNumber: "SH series 24k",
+      normalizedModelNumber: "sh-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19500,
+      heatingCapacity5FMaxBtu: 19500,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2.33,
+      cop5FMax: 2.33,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-20000",
+      slug: "innovair-shv-series-central-ducted-20000",
+      name: "SHV series 20 000 BTU",
+      seriesId: "innovair-shv-series",
+      brandId: "innovair",
+      modelNumber: "SHV series 20k",
+      normalizedModelNumber: "shv-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      heatingCapacity5FMinBtu: 22400,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 16.3,
+      seer2Max: 16.3,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-24000",
+      slug: "innovair-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "innovair-standard",
+      brandId: "innovair",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-18000",
+      slug: "innovair-sav-series-central-ducted-18000",
+      name: "SAV Series 18 000 BTU",
+      seriesId: "innovair-sav-series",
+      brandId: "innovair",
+      modelNumber: "SAV Series 18k",
+      normalizedModelNumber: "sav-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12600,
       heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18.8,
+      seer2Max: 19,
+      hspf2Min: 9.1,
+      hspf2Max: 9.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-24000",
+      slug: "innovair-sav-series-central-ducted-24000",
+      name: "SAV Series 24 000 BTU",
+      seriesId: "innovair-sav-series",
+      brandId: "innovair",
+      modelNumber: "SAV Series 24k",
+      normalizedModelNumber: "sav-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 18.1,
+      seer2Max: 18.3,
+      hspf2Min: 9.7,
+      hspf2Max: 10,
+      cop5FMin: 1.87,
+      cop5FMax: 1.87,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-30000",
+      slug: "innovair-sov-series-central-ducted-30000",
+      name: "SOV Series 30 000 BTU",
+      seriesId: "innovair-sov-series",
+      brandId: "innovair",
+      modelNumber: "SOV Series 30k",
+      normalizedModelNumber: "sov-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 18200,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 16.3,
+      seer2Max: 18.6,
+      hspf2Min: 8.7,
+      hspf2Max: 9.5,
+      cop5FMin: 1.86,
+      cop5FMax: 1.99,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-36000",
+      slug: "innovair-sav-series-central-ducted-36000",
+      name: "SAV Series 36 000 BTU",
+      seriesId: "innovair-sav-series",
+      brandId: "innovair",
+      modelNumber: "SAV Series 36k",
+      normalizedModelNumber: "sav-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23200,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 16.1,
+      seer2Max: 17.4,
+      hspf2Min: 8.2,
+      hspf2Max: 10.3,
+      cop5FMin: 1.85,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000",
+      slug: "innovair-sav-series-central-ducted-48000",
+      name: "SAV Series 48 000 BTU",
+      seriesId: "innovair-sav-series",
+      brandId: "innovair",
+      modelNumber: "SAV Series 48k",
+      normalizedModelNumber: "sav-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32400,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 16.5,
+      hspf2Min: 8.4,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-30000",
+      slug: "innovair-sav-series-central-ducted-30000",
+      name: "SAV Series 30 000 BTU",
+      seriesId: "innovair-sav-series",
+      brandId: "innovair",
+      modelNumber: "SAV Series 30k",
+      normalizedModelNumber: "sav-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 23800,
+      seer2Min: 16.8,
+      seer2Max: 16.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
+      cop5FMax: 1.96,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q32-wall-single-9000",
+      slug: "innovair-q32-wall-single-9000",
+      name: "Q32 9 000 BTU",
+      seriesId: "innovair-q32",
+      brandId: "innovair",
+      modelNumber: "Q32 9k",
+      normalizedModelNumber: "q32-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6500,
+      heatingCapacity5FMaxBtu: 6800,
       seer2Min: 20,
       seer2Max: 23,
       hspf2Min: 9,
-      hspf2Max: 9.8,
+      hspf2Max: 9.5,
       cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-12000",
+      slug: "innovair-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "innovair-standard",
+      brandId: "innovair",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7700,
+      heatingCapacity5FMaxBtu: 9000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q32-wall-single-18000",
+      slug: "innovair-q32-wall-single-18000",
+      name: "Q32 18 000 BTU",
+      seriesId: "innovair-q32",
+      brandId: "innovair",
+      modelNumber: "Q32 18k",
+      normalizedModelNumber: "q32-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.8,
+      hspf2Max: 9.8,
+      cop5FMin: 2.5,
       cop5FMax: 2.5,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
@@ -547,24 +1450,25 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-wall-single",
-      slug: "innovair-q4-wall-single",
-      name: "Q4",
+      id: "innovair-q4-wall-single-9000",
+      slug: "innovair-q4-wall-single-9000",
+      name: "Q4 9 000 BTU",
       seriesId: "innovair-q4",
       brandId: "innovair",
-      modelNumber: "Q4",
-      normalizedModelNumber: "q4",
+      modelNumber: "Q4 9k",
+      normalizedModelNumber: "q4-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 9000,
-      heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 21,
+      heatingCapacity5FMaxBtu: 9500,
+      seer2Min: 23,
       seer2Max: 25,
-      hspf2Min: 9.5,
+      hspf2Min: 10,
       hspf2Max: 11,
-      cop5FMin: 1.8,
+      cop5FMin: 1.9,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -573,24 +1477,133 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single",
-      slug: "innovair-mhw-series-wall-single",
-      name: "MHW Series",
-      seriesId: "innovair-mhw-series",
+      id: "innovair-q4-wall-single-12000",
+      slug: "innovair-q4-wall-single-12000",
+      name: "Q4 12 000 BTU",
+      seriesId: "innovair-q4",
       brandId: "innovair",
-      modelNumber: "MHW Series",
-      normalizedModelNumber: "mhw-series",
+      modelNumber: "Q4 12k",
+      normalizedModelNumber: "q4-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9300,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 22,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-18000",
+      slug: "innovair-q4-wall-single-18000",
+      name: "Q4 18 000 BTU",
+      seriesId: "innovair-q4",
+      brandId: "innovair",
+      modelNumber: "Q4 18k",
+      normalizedModelNumber: "q4-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-24000",
+      slug: "innovair-q4-wall-single-24000",
+      name: "Q4 24 000 BTU",
+      seriesId: "innovair-q4",
+      brandId: "innovair",
+      modelNumber: "Q4 24k",
+      normalizedModelNumber: "q4-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 7900,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-9000",
+      slug: "innovair-mhw-series-wall-single-9000",
+      name: "MHW Series 9 000 BTU",
+      seriesId: "innovair-mhw-series",
+      brandId: "innovair",
+      modelNumber: "MHW Series 9k",
+      normalizedModelNumber: "mhw-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8000,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 19,
+      seer2Max: 27.4,
+      hspf2Min: 9.7,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.36,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-24000",
+      slug: "innovair-mhw-series-wall-single-24000",
+      name: "MHW Series 24 000 BTU",
+      seriesId: "innovair-mhw-series",
+      brandId: "innovair",
+      modelNumber: "MHW Series 24k",
+      normalizedModelNumber: "mhw-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17100,
       heatingCapacity5FMaxBtu: 21000,
       seer2Min: 17,
-      seer2Max: 27.4,
+      seer2Max: 23,
       hspf2Min: 8.5,
-      hspf2Max: 14.8,
-      cop5FMin: 1.8,
+      hspf2Max: 13.5,
+      cop5FMin: 2.01,
       cop5FMax: 2.54,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -599,25 +1612,26 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mos-series-wall-single",
-      slug: "innovair-mos-series-wall-single",
-      name: "MOS Series",
+      id: "innovair-mos-series-wall-single-30000",
+      slug: "innovair-mos-series-wall-single-30000",
+      name: "MOS Series 30 000 BTU",
       seriesId: "innovair-mos-series",
       brandId: "innovair",
-      modelNumber: "MOS Series",
-      normalizedModelNumber: "mos-series",
+      modelNumber: "MOS Series 30k",
+      normalizedModelNumber: "mos-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 54000,
-      heatingCapacity5FMinBtu: 7900,
-      heatingCapacity5FMaxBtu: 44000,
-      seer2Min: 18,
-      seer2Max: 25,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19.5,
+      seer2Max: 20,
       hspf2Min: 9.2,
-      hspf2Max: 13.5,
-      cop5FMin: 1.83,
-      cop5FMax: 2.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.88,
+      cop5FMax: 1.98,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -625,22 +1639,104 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdl-series-wall-single",
-      slug: "innovair-mdl-series-wall-single",
-      name: "MDL Series",
-      seriesId: "innovair-mdl-series",
+      id: "innovair-mhw-series-wall-single-12000",
+      slug: "innovair-mhw-series-wall-single-12000",
+      name: "MHW Series 12 000 BTU",
+      seriesId: "innovair-mhw-series",
       brandId: "innovair",
-      modelNumber: "MDL Series",
-      normalizedModelNumber: "mdl-series",
+      modelNumber: "MHW Series 12k",
+      normalizedModelNumber: "mhw-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8700,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 23.4,
+      seer2Max: 25.5,
+      hspf2Min: 9.5,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2.33,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-18000",
+      slug: "innovair-mhw-series-wall-single-18000",
+      name: "MHW Series 18 000 BTU",
+      seriesId: "innovair-mhw-series",
+      brandId: "innovair",
+      modelNumber: "MHW Series 18k",
+      normalizedModelNumber: "mhw-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13600,
+      heatingCapacity5FMaxBtu: 16600,
+      seer2Min: 21.4,
+      seer2Max: 23.5,
+      hspf2Min: 10.8,
+      hspf2Max: 11,
+      cop5FMin: 1.92,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-6000",
+      slug: "innovair-mhw-series-wall-single-6000",
+      name: "MHW Series 6 000 BTU",
+      seriesId: "innovair-mhw-series",
+      brandId: "innovair",
+      modelNumber: "MHW Series 6k",
+      normalizedModelNumber: "mhw-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 7900,
+      heatingCapacity5FMaxBtu: 7900,
+      seer2Min: 25.5,
+      seer2Max: 25.5,
+      hspf2Min: 14.8,
+      hspf2Max: 14.8,
+      cop5FMin: 2.39,
+      cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdl-series-wall-single-9000",
+      slug: "innovair-mdl-series-wall-single-9000",
+      name: "MDL Series 9 000 BTU",
+      seriesId: "innovair-mdl-series",
+      brandId: "innovair",
+      modelNumber: "MDL Series 9k",
+      normalizedModelNumber: "mdl-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 17000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 8900,
-      heatingCapacity5FMaxBtu: 15000,
-      seer2Min: 18,
+      heatingCapacity5FMaxBtu: 9600,
+      seer2Min: 19.5,
       seer2Max: 21.4,
-      hspf2Min: 10,
+      hspf2Min: 11,
       hspf2Max: 12.5,
       cop5FMin: 1.89,
       cop5FMax: 2.25,
@@ -651,24 +1747,106 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single",
-      slug: "innovair-mdh-series-wall-single",
-      name: "MDH Series",
-      seriesId: "innovair-mdh-series",
+      id: "innovair-mdl-series-wall-single-12000",
+      slug: "innovair-mdl-series-wall-single-12000",
+      name: "MDL Series 12 000 BTU",
+      seriesId: "innovair-mdl-series",
       brandId: "innovair",
-      modelNumber: "MDH Series",
-      normalizedModelNumber: "mdh-series",
+      modelNumber: "MDL Series 12k",
+      normalizedModelNumber: "mdl-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9500,
+      heatingCapacity5FMaxBtu: 9600,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 10,
+      hspf2Max: 10.2,
+      cop5FMin: 1.9,
+      cop5FMax: 2.25,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdl-series-wall-single-18000",
+      slug: "innovair-mdl-series-wall-single-18000",
+      name: "MDL Series 18 000 BTU",
+      seriesId: "innovair-mdl-series",
+      brandId: "innovair",
+      modelNumber: "MDL Series 18k",
+      normalizedModelNumber: "mdl-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 20,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-9000",
+      slug: "innovair-mdh-series-wall-single-9000",
+      name: "MDH Series 9 000 BTU",
+      seriesId: "innovair-mdh-series",
+      brandId: "innovair",
+      modelNumber: "MDH Series 9k",
+      normalizedModelNumber: "mdh-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 9100,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.8,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9300,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 19.7,
       seer2Max: 20.5,
-      hspf2Min: 9.8,
+      hspf2Min: 11.5,
       hspf2Max: 13.8,
       cop5FMin: 1.85,
+      cop5FMax: 2.31,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-12000",
+      slug: "innovair-mdh-series-wall-single-12000",
+      name: "MDH Series 12 000 BTU",
+      seriesId: "innovair-mdh-series",
+      brandId: "innovair",
+      modelNumber: "MDH Series 12k",
+      normalizedModelNumber: "mdh-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9100,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 19.5,
+      seer2Max: 20,
+      hspf2Min: 10.5,
+      hspf2Max: 10.6,
+      cop5FMin: 1.95,
       cop5FMax: 2.44,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -677,23 +1855,132 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single",
-      slug: "innovair-mom-series-wall-single",
-      name: "MOM Series",
-      seriesId: "innovair-mom-series",
+      id: "innovair-mdh-series-wall-single-18000",
+      slug: "innovair-mdh-series-wall-single-18000",
+      name: "MDH Series 18 000 BTU",
+      seriesId: "innovair-mdh-series",
       brandId: "innovair",
-      modelNumber: "MOM Series",
-      normalizedModelNumber: "mom-series",
+      modelNumber: "MDH Series 18k",
+      normalizedModelNumber: "mdh-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 53000,
-      heatingCapacity5FMinBtu: 13600,
-      heatingCapacity5FMaxBtu: 45000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      heatingCapacity5FMinBtu: 14900,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18.4,
+      seer2Max: 20,
+      hspf2Min: 11.1,
+      hspf2Max: 11.3,
+      cop5FMin: 2.1,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-24000",
+      slug: "innovair-mdh-series-wall-single-24000",
+      name: "MDH Series 24 000 BTU",
+      seriesId: "innovair-mdh-series",
+      brandId: "innovair",
+      modelNumber: "MDH Series 24k",
+      normalizedModelNumber: "mdh-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21200,
+      heatingCapacity5FMaxBtu: 21600,
       seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 11,
+      hspf2Max: 11.7,
+      cop5FMin: 2.18,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-36000",
+      slug: "innovair-mos-series-wall-single-36000",
+      name: "MOS Series 36 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 36k",
+      normalizedModelNumber: "mos-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36600,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 30600,
+      seer2Min: 20,
+      seer2Max: 21.2,
+      hspf2Min: 10.3,
+      hspf2Max: 10.8,
+      cop5FMin: 1.95,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-48000",
+      slug: "innovair-mdh-series-wall-single-48000",
+      name: "MDH Series 48 000 BTU",
+      seriesId: "innovair-mdh-series",
+      brandId: "innovair",
+      modelNumber: "MDH Series 48k",
+      normalizedModelNumber: "mdh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 39000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 16.7,
+      seer2Max: 17.1,
+      hspf2Min: 9.8,
+      hspf2Max: 10.8,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-18000",
+      slug: "innovair-mom-series-wall-single-18000",
+      name: "MOM Series 18 000 BTU",
+      seriesId: "innovair-mom-series",
+      brandId: "innovair",
+      modelNumber: "MOM Series 18k",
+      normalizedModelNumber: "mom-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 13600,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 20,
       seer2Max: 25.1,
-      hspf2Min: 9,
-      hspf2Max: 11,
+      hspf2Min: 9.8,
+      hspf2Max: 10.4,
       cop5FMin: 2,
       cop5FMax: 2.3,
       systemType: "wall-single",
@@ -703,24 +1990,214 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single",
-      slug: "innovair-q4-multi-wall-single",
-      name: "Q4 Multi",
-      seriesId: "innovair-q4-multi",
+      id: "innovair-mom-series-wall-single-24000",
+      slug: "innovair-mom-series-wall-single-24000",
+      name: "MOM Series 24 000 BTU",
+      seriesId: "innovair-mom-series",
       brandId: "innovair",
-      modelNumber: "Q4 Multi",
-      normalizedModelNumber: "q4-multi",
+      modelNumber: "MOM Series 24k",
+      normalizedModelNumber: "mom-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
-      heatingCapacity5FMinBtu: 11500,
-      heatingCapacity5FMaxBtu: 28200,
-      seer2Min: 17.5,
-      seer2Max: 23,
-      hspf2Min: 8.8,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 18400,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 21,
+      seer2Max: 25,
+      hspf2Min: 9,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000",
+      slug: "innovair-mom-series-wall-single-36000",
+      name: "MOM Series 36 000 BTU",
+      seriesId: "innovair-mom-series",
+      brandId: "innovair",
+      modelNumber: "MOM Series 36k",
+      normalizedModelNumber: "mom-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.4,
+      seer2Max: 24,
+      hspf2Min: 9.2,
+      hspf2Max: 10.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000",
+      slug: "innovair-mom-series-wall-single-48000",
+      name: "MOM Series 48 000 BTU",
+      seriesId: "innovair-mom-series",
+      brandId: "innovair",
+      modelNumber: "MOM Series 48k",
+      normalizedModelNumber: "mom-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 37400,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 24,
+      hspf2Min: 10.3,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-42000",
+      slug: "innovair-mom-series-wall-single-42000",
+      name: "MOM Series 42 000 BTU",
+      seriesId: "innovair-mom-series",
+      brandId: "innovair",
+      modelNumber: "MOM Series 42k",
+      normalizedModelNumber: "mom-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 20.4,
+      seer2Max: 20.4,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-30000",
+      slug: "innovair-mom-series-wall-single-30000",
+      name: "MOM Series 30 000 BTU",
+      seriesId: "innovair-mom-series",
+      brandId: "innovair",
+      modelNumber: "MOM Series 30k",
+      normalizedModelNumber: "mom-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.5,
       hspf2Max: 10,
-      cop5FMin: 1.82,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-36000",
+      slug: "innovair-mdh-series-wall-single-36000",
+      name: "MDH Series 36 000 BTU",
+      seriesId: "innovair-mdh-series",
+      brandId: "innovair",
+      modelNumber: "MDH Series 36k",
+      normalizedModelNumber: "mdh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 31600,
+      heatingCapacity5FMaxBtu: 31600,
+      seer2Min: 17.7,
+      seer2Max: 17.7,
+      hspf2Min: 11.1,
+      hspf2Max: 11.1,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-60000",
+      slug: "innovair-mdh-series-wall-single-60000",
+      name: "MDH Series 60 000 BTU",
+      seriesId: "innovair-mdh-series",
+      brandId: "innovair",
+      modelNumber: "MDH Series 60k",
+      normalizedModelNumber: "mdh-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 45000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-multi-wall-single-18000",
+      slug: "innovair-q4-multi-wall-single-18000",
+      name: "Q4 Multi 18 000 BTU",
+      seriesId: "innovair-q4-multi",
+      brandId: "innovair",
+      modelNumber: "Q4 Multi 18k",
+      normalizedModelNumber: "q4-multi-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11500,
+      heatingCapacity5FMaxBtu: 11900,
+      seer2Min: 17.5,
+      seer2Max: 22,
+      hspf2Min: 9.4,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
       cop5FMax: 1.99,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -729,25 +2206,539 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-swv-series-central-ducted",
-      slug: "innovair-swv-series-central-ducted",
-      name: "SWV Series",
-      seriesId: "innovair-swv-series",
+      id: "innovair-q4-multi-wall-single-24000",
+      slug: "innovair-q4-multi-wall-single-24000",
+      name: "Q4 Multi 24 000 BTU",
+      seriesId: "innovair-q4-multi",
       brandId: "innovair",
-      modelNumber: "SWV Series",
-      normalizedModelNumber: "swv-series",
+      modelNumber: "Q4 Multi 24k",
+      normalizedModelNumber: "q4-multi-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 17600,
+      heatingCapacity5FMaxBtu: 18200,
+      seer2Min: 18,
+      seer2Max: 23,
+      hspf2Min: 8.8,
+      hspf2Max: 10,
+      cop5FMin: 1.82,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-multi-wall-single-42000",
+      slug: "innovair-q4-multi-wall-single-42000",
+      name: "Q4 Multi 42 000 BTU",
+      seriesId: "innovair-q4-multi",
+      brandId: "innovair",
+      modelNumber: "Q4 Multi 42k",
+      normalizedModelNumber: "q4-multi-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18,
+      seer2Max: 22,
+      hspf2Min: 8.8,
+      hspf2Max: 9.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-multi-wall-single-36000",
+      slug: "innovair-q4-multi-wall-single-36000",
+      name: "Q4 Multi 36 000 BTU",
+      seriesId: "innovair-q4-multi",
+      brandId: "innovair",
+      modelNumber: "Q4 Multi 36k",
+      normalizedModelNumber: "q4-multi-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
-      heatingCapacity5FMinBtu: 15300,
-      heatingCapacity5FMaxBtu: 30200,
-      seer2Min: 16.7,
-      seer2Max: 19.3,
-      hspf2Min: 9.3,
-      hspf2Max: 10.8,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 19,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.83,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-18000",
+      slug: "innovair-sov-series-central-ducted-18000",
+      name: "SOV Series 18 000 BTU",
+      seriesId: "innovair-sov-series",
+      brandId: "innovair",
+      modelNumber: "SOV Series 18k",
+      normalizedModelNumber: "sov-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11800,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 16.8,
+      seer2Max: 18.5,
+      hspf2Min: 8.8,
+      hspf2Max: 10.5,
       cop5FMin: 1.8,
       cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-24000",
+      slug: "innovair-swv-series-central-ducted-24000",
+      name: "SWV Series 24 000 BTU",
+      seriesId: "innovair-swv-series",
+      brandId: "innovair",
+      modelNumber: "SWV Series 24k",
+      normalizedModelNumber: "swv-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 20800,
+      heatingCapacity5FMaxBtu: 20800,
+      seer2Min: 17.4,
+      seer2Max: 17.5,
+      hspf2Min: 10.4,
+      hspf2Max: 10.5,
+      cop5FMin: 1.96,
+      cop5FMax: 1.96,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-36000",
+      slug: "innovair-swv-series-central-ducted-36000",
+      name: "SWV Series 36 000 BTU",
+      seriesId: "innovair-swv-series",
+      brandId: "innovair",
+      modelNumber: "SWV Series 36k",
+      normalizedModelNumber: "swv-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 24800,
+      heatingCapacity5FMaxBtu: 30200,
+      seer2Min: 16.7,
+      seer2Max: 16.8,
+      hspf2Min: 9.3,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.99,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-18000",
+      slug: "innovair-swv-series-central-ducted-18000",
+      name: "SWV Series 18 000 BTU",
+      seriesId: "innovair-swv-series",
+      brandId: "innovair",
+      modelNumber: "SWV Series 18k",
+      normalizedModelNumber: "swv-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15300,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: 19.3,
+      seer2Max: 19.3,
+      hspf2Min: 10.8,
+      hspf2Max: 10.8,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-30000",
+      slug: "innovair-swv-series-central-ducted-30000",
+      name: "SWV Series 30 000 BTU",
+      seriesId: "innovair-swv-series",
+      brandId: "innovair",
+      modelNumber: "SWV Series 30k",
+      normalizedModelNumber: "swv-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23200,
+      heatingCapacity5FMaxBtu: 23200,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-24000",
+      slug: "innovair-sov-series-central-ducted-24000",
+      name: "SOV Series 24 000 BTU",
+      seriesId: "innovair-sov-series",
+      brandId: "innovair",
+      modelNumber: "SOV Series 24k",
+      normalizedModelNumber: "sov-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19700,
+      heatingCapacity5FMaxBtu: 19800,
+      seer2Min: 16,
+      seer2Max: 17.5,
+      hspf2Min: 9,
+      hspf2Max: 9.2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-48000",
+      slug: "innovair-shv-series-central-ducted-48000",
+      name: "SHV Series 48 000 BTU",
+      seriesId: "innovair-shv-series",
+      brandId: "innovair",
+      modelNumber: "SHV Series 48k",
+      normalizedModelNumber: "shv-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 52000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 38000,
+      seer2Min: 15.2,
+      seer2Max: 16,
+      hspf2Min: 8.1,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.83,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-42000",
+      slug: "innovair-shv-series-central-ducted-42000",
+      name: "SHV Series 42 000 BTU",
+      seriesId: "innovair-shv-series",
+      brandId: "innovair",
+      modelNumber: "SHV Series 42k",
+      normalizedModelNumber: "shv-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-36000",
+      slug: "innovair-sov-series-central-ducted-36000",
+      name: "SOV Series 36 000 BTU",
+      seriesId: "innovair-sov-series",
+      brandId: "innovair",
+      modelNumber: "SOV Series 36k",
+      normalizedModelNumber: "sov-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 24600,
+      heatingCapacity5FMaxBtu: 31200,
+      seer2Min: 15.4,
+      seer2Max: 15.8,
+      hspf2Min: 8.7,
+      hspf2Max: 9.8,
+      cop5FMin: 1.86,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-9000",
+      slug: "innovair-mos-series-wall-single-9000",
+      name: "MOS Series 9 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 9k",
+      normalizedModelNumber: "mos-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 7900,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: 21.6,
+      seer2Max: 24,
+      hspf2Min: 11.3,
+      hspf2Max: 12.1,
+      cop5FMin: 1.83,
+      cop5FMax: 2.18,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-12000",
+      slug: "innovair-mos-series-wall-single-12000",
+      name: "MOS Series 12 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 12k",
+      normalizedModelNumber: "mos-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 21.1,
+      seer2Max: 25,
+      hspf2Min: 10.4,
+      hspf2Max: 11.6,
+      cop5FMin: 1.88,
+      cop5FMax: 2.5,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-18000",
+      slug: "innovair-mos-series-wall-single-18000",
+      name: "MOS Series 18 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 18k",
+      normalizedModelNumber: "mos-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13700,
+      heatingCapacity5FMaxBtu: 14500,
+      seer2Min: 20.4,
+      seer2Max: 22.3,
+      hspf2Min: 10.3,
+      hspf2Max: 12.2,
+      cop5FMin: 1.86,
+      cop5FMax: 2.24,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-24000",
+      slug: "innovair-mos-series-wall-single-24000",
+      name: "MOS Series 24 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 24k",
+      normalizedModelNumber: "mos-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20400,
+      seer2Min: 20.7,
+      seer2Max: 22,
+      hspf2Min: 10.5,
+      hspf2Max: 11.6,
+      cop5FMin: 2.23,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-48000",
+      slug: "innovair-mos-series-wall-single-48000",
+      name: "MOS Series 48 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 48k",
+      normalizedModelNumber: "mos-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 36600,
+      heatingCapacity5FMaxBtu: 44000,
+      seer2Min: 18,
+      seer2Max: 19.8,
+      hspf2Min: 9.9,
+      hspf2Max: 11,
+      cop5FMin: 1.83,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-15000",
+      slug: "innovair-mos-series-wall-single-15000",
+      name: "MOS Series 15 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 15k",
+      normalizedModelNumber: "mos-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14100,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 23.8,
+      hspf2Min: 10.3,
+      hspf2Max: 13.5,
+      cop5FMin: 1.9,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-20000",
+      slug: "innovair-mos-series-wall-single-20000",
+      name: "MOS Series 20 000 BTU",
+      seriesId: "innovair-mos-series",
+      brandId: "innovair",
+      modelNumber: "MOS Series 20k",
+      normalizedModelNumber: "mos-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 20.4,
+      seer2Max: 20.4,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-42000",
+      slug: "innovair-sov-series-central-ducted-42000",
+      name: "SOV Series 42 000 BTU",
+      seriesId: "innovair-sov-series",
+      brandId: "innovair",
+      modelNumber: "SOV Series 42k",
+      normalizedModelNumber: "sov-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 28000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -763,116 +2754,20 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-vin520h2v51-o",
-      modelNumber: "VIN520H2V51(O)",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-vin1439h2v32-o",
-      modelNumber: "VIN1439H2V32(O)",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-sev30h2r19",
-      modelNumber: "SEV30H2R19",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-sev36h2r19",
-      modelNumber: "SEV36H2R19",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-sev48h2r19",
-      modelNumber: "SEV48H2R19",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-sev60h2r19",
-      modelNumber: "SEV60H2R19",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-gov36h2ba",
-      modelNumber: "GOV36H2BA",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-gov60h2ba",
-      modelNumber: "GOV60H2BA",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos12h1xe5a",
-      modelNumber: "QOS12H1XE5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos12h2xe5a",
-      modelNumber: "QOS12H2XE5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos24h2xe5a",
-      modelNumber: "QOS24H2XE5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
       id: "innovair-mos09h1be5a",
       modelNumber: "MOS09H1BE5A",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos12h1be5a",
-      modelNumber: "MOS12H1BE5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos12h2be5a",
-      modelNumber: "MOS12H2BE5A",
+      id: "innovair-vin520h2v51-o",
+      modelNumber: "VIN520H2V51(O)",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
       id: "innovair-mos18h2be5a",
       modelNumber: "MOS18H2BE5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos36h2be5a",
-      modelNumber: "MOS36H2BE5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos60h2bm0a",
-      modelNumber: "MOS60H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom60h2bm6a",
-      modelNumber: "MOM60H2BM6A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom60h2bm6b",
-      modelNumber: "MOM60H2BM6B",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -891,6 +2786,30 @@ export const innovairDataset: BrandDataset = {
     {
       id: "innovair-ein18h2v32-o",
       modelNumber: "EIN18H2V32(O)",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-vin1439h2v32-o",
+      modelNumber: "VIN1439H2V32(O)",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-sev36h2r19",
+      modelNumber: "SEV36H2R19",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-gov36h2ba",
+      modelNumber: "GOV36H2BA",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos36h2be5a",
+      modelNumber: "MOS36H2BE5A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -931,26 +2850,50 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-shv36h2r20",
-      modelNumber: "SHV36H2R20",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-shv48h2r20",
-      modelNumber: "SHV48H2R20",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
       id: "innovair-shv24h2r20",
       modelNumber: "SHV24H2R20",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
-      id: "innovair-shv60h2r20",
-      modelNumber: "SHV60H2R20",
+      id: "innovair-sev30h2r19",
+      modelNumber: "SEV30H2R19",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-sev48h2r19",
+      modelNumber: "SEV48H2R19",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-sev60h2r19",
+      modelNumber: "SEV60H2R19",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-gov60h2ba",
+      modelNumber: "GOV60H2BA",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos60h2bm0a",
+      modelNumber: "MOS60H2BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom60h2bm6a",
+      modelNumber: "MOM60H2BM6A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom60h2bm6b",
+      modelNumber: "MOM60H2BM6B",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -979,6 +2922,24 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "innovair-shv36h2r20",
+      modelNumber: "SHV36H2R20",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-shv48h2r20",
+      modelNumber: "SHV48H2R20",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-shv60h2r20",
+      modelNumber: "SHV60H2R20",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
       id: "innovair-mhd-18",
       modelNumber: "MHD-18",
       brandId: "innovair",
@@ -997,18 +2958,6 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-shv30h2r20",
-      modelNumber: "SHV30H2R20",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-shv36h2r20-s",
-      modelNumber: "SHV36H2R20-S",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
       id: "innovair-shv18h2ba",
       modelNumber: "SHV18H2BA",
       brandId: "innovair",
@@ -1021,8 +2970,8 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-shv30h2ba",
-      modelNumber: "SHV30H2BA",
+      id: "innovair-shv36h2r20-s",
+      modelNumber: "SHV36H2R20-S",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1033,14 +2982,20 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-shv60h2ba",
-      modelNumber: "SHV60H2BA",
+      id: "innovair-shv30h2r20",
+      modelNumber: "SHV30H2R20",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
-      id: "innovair-shv48h2ba",
-      modelNumber: "SHV48H2BA",
+      id: "innovair-shv30h2ba",
+      modelNumber: "SHV30H2BA",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-qos24h2xe5a",
+      modelNumber: "QOS24H2XE5A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1057,8 +3012,20 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "innovair-sov30h2ba",
+      modelNumber: "SOV30H2BA",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
       id: "innovair-sov36h2ba",
       modelNumber: "SOV36H2BA",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-shv36h2ba",
+      modelNumber: "SHV36H2BA",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1075,14 +3042,14 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-shv36h2ba",
-      modelNumber: "SHV36H2BA",
+      id: "innovair-shv48h2ba",
+      modelNumber: "SHV48H2BA",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
-      id: "innovair-sov30h2ba",
-      modelNumber: "SOV30H2BA",
+      id: "innovair-shv60h2ba",
+      modelNumber: "SHV60H2BA",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1099,6 +3066,30 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "innovair-qos12h1xe5a",
+      modelNumber: "QOS12H1XE5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-qos12h2xe5a",
+      modelNumber: "QOS12H2XE5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos12h1be5a",
+      modelNumber: "MOS12H1BE5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos12h2be5a",
+      modelNumber: "MOS12H2BE5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
       id: "innovair-qos18h2xe5a",
       modelNumber: "QOS18H2XE5A",
       brandId: "innovair",
@@ -1111,32 +3102,8 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-qos12h1bm5a",
-      modelNumber: "QOS12H1BM5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
       id: "innovair-qos09h2bm5a",
       modelNumber: "QOS09H2BM5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos12h2bm5a",
-      modelNumber: "QOS12H2BM5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos18h2bm5a",
-      modelNumber: "QOS18H2BM5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos24h2bm5a",
-      modelNumber: "QOS24H2BM5A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1147,26 +3114,26 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-qos12h2bm0a",
-      modelNumber: "QOS12H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos18h2bm0a",
-      modelNumber: "QOS18H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-qos24h2bm0a",
-      modelNumber: "QOS24H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
       id: "innovair-qos09h1bm0a",
       modelNumber: "QOS09H1BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-qos12h1bm5a",
+      modelNumber: "QOS12H1BM5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-qos12h2bm5a",
+      modelNumber: "QOS12H2BM5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-qos12h2bm0a",
+      modelNumber: "QOS12H2BM0A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1177,14 +3144,32 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos09h2be5a",
-      modelNumber: "MOS09H2BE5A",
+      id: "innovair-qos18h2bm5a",
+      modelNumber: "QOS18H2BM5A",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos24h2be5a",
-      modelNumber: "MOS24H2BE5A",
+      id: "innovair-qos18h2bm0a",
+      modelNumber: "QOS18H2BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-qos24h2bm5a",
+      modelNumber: "QOS24H2BM5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-qos24h2bm0a",
+      modelNumber: "QOS24H2BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos09h2be5a",
+      modelNumber: "MOS09H2BE5A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1195,38 +3180,8 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos12h1bm0a",
-      modelNumber: "MOS12H1BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
       id: "innovair-mos09h2bm0a",
       modelNumber: "MOS09H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos12h2bm0a",
-      modelNumber: "MOS12H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos18h2bm0a",
-      modelNumber: "MOS18H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos24h2bm0a",
-      modelNumber: "MOS24H2BM0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos06h2bh0a",
-      modelNumber: "MOS06H2BH0A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1237,14 +3192,14 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos12h2bh0a",
-      modelNumber: "MOS12H2BH0A",
+      id: "innovair-mos24h2be5a",
+      modelNumber: "MOS24H2BE5A",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos18h2bh0a",
-      modelNumber: "MOS18H2BH0A",
+      id: "innovair-mos24h2bm0a",
+      modelNumber: "MOS24H2BM0A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1261,14 +3216,50 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos36h2bm0a",
-      modelNumber: "MOS36H2BM0A",
+      id: "innovair-mos33h2bh0a",
+      modelNumber: "MOS33H2BH0A",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
-      id: "innovair-mos48h2bm0a",
-      modelNumber: "MOS48H2BM0A",
+      id: "innovair-mos12h1bm0a",
+      modelNumber: "MOS12H1BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos12h2bm0a",
+      modelNumber: "MOS12H2BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos12h2bh0a",
+      modelNumber: "MOS12H2BH0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos18h2bm0a",
+      modelNumber: "MOS18H2BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos18h2bh0a",
+      modelNumber: "MOS18H2BH0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos06h2bh0a",
+      modelNumber: "MOS06H2BH0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos36h2bm0a",
+      modelNumber: "MOS36H2BM0A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1279,20 +3270,14 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "innovair-mos48h2bm0a",
+      modelNumber: "MOS48H2BM0A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
       id: "innovair-mos48h2bh0a",
       modelNumber: "MOS48H2BH0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos60h2bh0a",
-      modelNumber: "MOS60H2BH0A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mos33h2bh0a",
-      modelNumber: "MOS33H2BH0A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1303,62 +3288,8 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "innovair-mom27h2bm4a",
-      modelNumber: "MOM27H2BM4A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom36h2bm5a",
-      modelNumber: "MOM36H2BM5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom48h2bm6a",
-      modelNumber: "MOM48H2BM6A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom27h2bm4b",
-      modelNumber: "MOM27H2BM4B",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom36h2bm5b",
-      modelNumber: "MOM36H2BM5B",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom48h2bm6b",
-      modelNumber: "MOM48H2BM6B",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
       id: "innovair-mom18h2bh3a",
       modelNumber: "MOM18H2BH3A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom27h2bh4a",
-      modelNumber: "MOM27H2BH4A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom36h2bh5a",
-      modelNumber: "MOM36H2BH5A",
-      brandId: "innovair",
-      refrigerant: null as any,
-    },
-    {
-      id: "innovair-mom48h2bh6a",
-      modelNumber: "MOM48H2BH6A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1369,14 +3300,68 @@ export const innovairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "innovair-mom27h2bm4a",
+      modelNumber: "MOM27H2BM4A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom27h2bm4b",
+      modelNumber: "MOM27H2BM4B",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom27h2bh4a",
+      modelNumber: "MOM27H2BH4A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
       id: "innovair-mom27h2bh4b",
       modelNumber: "MOM27H2BH4B",
       brandId: "innovair",
       refrigerant: null as any,
     },
     {
+      id: "innovair-mom36h2bm5a",
+      modelNumber: "MOM36H2BM5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom36h2bm5b",
+      modelNumber: "MOM36H2BM5B",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom36h2bh5a",
+      modelNumber: "MOM36H2BH5A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
       id: "innovair-mom36h2bh5b",
       modelNumber: "MOM36H2BH5B",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom48h2bm6a",
+      modelNumber: "MOM48H2BM6A",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom48h2bm6b",
+      modelNumber: "MOM48H2BM6B",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mom48h2bh6a",
+      modelNumber: "MOM48H2BH6A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1395,6 +3380,12 @@ export const innovairDataset: BrandDataset = {
     {
       id: "innovair-mom60h2bh6b",
       modelNumber: "MOM60H2BH6B",
+      brandId: "innovair",
+      refrigerant: null as any,
+    },
+    {
+      id: "innovair-mos60h2bh0a",
+      modelNumber: "MOS60H2BH0A",
       brandId: "innovair",
       refrigerant: null as any,
     },
@@ -1428,9 +3419,9 @@ export const innovairDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "innovair-standard-wall-single-cfg-1",
-      slug: "innovair-standard-wall-single-cfg-1",
-      modelId: "innovair-standard-wall-single",
+      id: "innovair-standard-wall-single-9000-cfg-1",
+      slug: "innovair-standard-wall-single-9000-cfg-1",
+      modelId: "innovair-standard-wall-single-9000",
       outdoorUnitId: "innovair-vin310h1v51-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1442,303 +3433,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-standard-wall-single-cfg-2",
-      slug: "innovair-standard-wall-single-cfg-2",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-vin520h2v51-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-3",
-      slug: "innovair-standard-wall-single-cfg-3",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-vin1439h2v32-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-4",
-      slug: "innovair-standard-wall-single-cfg-4",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev30h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-5",
-      slug: "innovair-standard-wall-single-cfg-5",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev36h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-6",
-      slug: "innovair-standard-wall-single-cfg-6",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev48h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-7",
-      slug: "innovair-standard-wall-single-cfg-7",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev60h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-8",
-      slug: "innovair-standard-wall-single-cfg-8",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev30h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-9",
-      slug: "innovair-standard-wall-single-cfg-9",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev36h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-10",
-      slug: "innovair-standard-wall-single-cfg-10",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev48h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-11",
-      slug: "innovair-standard-wall-single-cfg-11",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev60h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-12",
-      slug: "innovair-standard-wall-single-cfg-12",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev36h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-13",
-      slug: "innovair-standard-wall-single-cfg-13",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev36h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-14",
-      slug: "innovair-standard-wall-single-cfg-14",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev36h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-15",
-      slug: "innovair-standard-wall-single-cfg-15",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-sev30h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-16",
-      slug: "innovair-standard-wall-single-cfg-16",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-gov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-17",
-      slug: "innovair-standard-wall-single-cfg-17",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-gov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-18",
-      slug: "innovair-standard-wall-single-cfg-18",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-gov60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-19",
-      slug: "innovair-standard-wall-single-cfg-19",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-gov60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55500,
-      coolingCapacityMaxBtu: 55500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-20",
-      slug: "innovair-standard-wall-single-cfg-20",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-qos12h1xe5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-21",
-      slug: "innovair-standard-wall-single-cfg-21",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-qos12h2xe5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-22",
-      slug: "innovair-standard-wall-single-cfg-22",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-qos24h2xe5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-23",
-      slug: "innovair-standard-wall-single-cfg-23",
-      modelId: "innovair-standard-wall-single",
+      id: "innovair-standard-wall-single-9000-cfg-2",
+      slug: "innovair-standard-wall-single-9000-cfg-2",
+      modelId: "innovair-standard-wall-single-9000",
       outdoorUnitId: "innovair-mos09h1be5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1750,13 +3447,13 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-standard-wall-single-cfg-24",
-      slug: "innovair-standard-wall-single-cfg-24",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mos12h1be5a",
+      id: "innovair-standard-wall-single-18000-cfg-1",
+      slug: "innovair-standard-wall-single-18000-cfg-1",
+      modelId: "innovair-standard-wall-single-18000",
+      outdoorUnitId: "innovair-vin520h2v51-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1764,23 +3461,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-standard-wall-single-cfg-25",
-      slug: "innovair-standard-wall-single-cfg-25",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mos12h2be5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-26",
-      slug: "innovair-standard-wall-single-cfg-26",
-      modelId: "innovair-standard-wall-single",
+      id: "innovair-standard-wall-single-18000-cfg-2",
+      slug: "innovair-standard-wall-single-18000-cfg-2",
+      modelId: "innovair-standard-wall-single-18000",
       outdoorUnitId: "innovair-mos18h2be5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1792,149 +3475,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-standard-wall-single-cfg-27",
-      slug: "innovair-standard-wall-single-cfg-27",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mos36h2be5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-28",
-      slug: "innovair-standard-wall-single-cfg-28",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mos60h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 58000,
-      coolingCapacityMaxBtu: 58000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-29",
-      slug: "innovair-standard-wall-single-cfg-29",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mom60h2bm6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-30",
-      slug: "innovair-standard-wall-single-cfg-30",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mom60h2bm6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-31",
-      slug: "innovair-standard-wall-single-cfg-31",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mom60h2bm6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-32",
-      slug: "innovair-standard-wall-single-cfg-32",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mom60h2bm6b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-33",
-      slug: "innovair-standard-wall-single-cfg-33",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mom60h2bm6b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-34",
-      slug: "innovair-standard-wall-single-cfg-34",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mom60h2bm6b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-35",
-      slug: "innovair-standard-wall-single-cfg-35",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mos60h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-standard-wall-single-cfg-36",
-      slug: "innovair-standard-wall-single-cfg-36",
-      modelId: "innovair-standard-wall-single",
-      outdoorUnitId: "innovair-mos36h2be5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-innovair-elite-wall-single-cfg-1",
-      slug: "innovair-innovair-elite-wall-single-cfg-1",
-      modelId: "innovair-innovair-elite-wall-single",
+      id: "innovair-innovair-elite-wall-single-9000-cfg-1",
+      slug: "innovair-innovair-elite-wall-single-9000-cfg-1",
+      modelId: "innovair-innovair-elite-wall-single-9000",
       outdoorUnitId: "innovair-ein10h2v32-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1946,9 +3489,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-innovair-elite-wall-single-cfg-2",
-      slug: "innovair-innovair-elite-wall-single-cfg-2",
-      modelId: "innovair-innovair-elite-wall-single",
+      id: "innovair-innovair-elite-wall-single-12000-cfg-1",
+      slug: "innovair-innovair-elite-wall-single-12000-cfg-1",
+      modelId: "innovair-innovair-elite-wall-single-12000",
       outdoorUnitId: "innovair-ein13h2v32-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1960,9 +3503,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-innovair-elite-wall-single-cfg-3",
-      slug: "innovair-innovair-elite-wall-single-cfg-3",
-      modelId: "innovair-innovair-elite-wall-single",
+      id: "innovair-innovair-elite-wall-single-18000-cfg-1",
+      slug: "innovair-innovair-elite-wall-single-18000-cfg-1",
+      modelId: "innovair-innovair-elite-wall-single-18000",
       outdoorUnitId: "innovair-ein18h2v32-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1974,9 +3517,135 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-1",
-      slug: "innovair-multi-hyper-wall-single-cfg-1",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-standard-wall-single-36000-cfg-1",
+      slug: "innovair-standard-wall-single-36000-cfg-1",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-vin1439h2v32-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-2",
+      slug: "innovair-standard-wall-single-36000-cfg-2",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-sev36h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-3",
+      slug: "innovair-standard-wall-single-36000-cfg-3",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-sev36h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-4",
+      slug: "innovair-standard-wall-single-36000-cfg-4",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-sev36h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-5",
+      slug: "innovair-standard-wall-single-36000-cfg-5",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-sev36h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-6",
+      slug: "innovair-standard-wall-single-36000-cfg-6",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-sev36h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-7",
+      slug: "innovair-standard-wall-single-36000-cfg-7",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-gov36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-8",
+      slug: "innovair-standard-wall-single-36000-cfg-8",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2be5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-36000-cfg-9",
+      slug: "innovair-standard-wall-single-36000-cfg-9",
+      modelId: "innovair-standard-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2be5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-multi-hyper-wall-single-18000-cfg-1",
+      slug: "innovair-multi-hyper-wall-single-18000-cfg-1",
+      modelId: "innovair-multi-hyper-wall-single-18000",
       outdoorUnitId: "innovair-vom18h7r2p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1988,9 +3657,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-2",
-      slug: "innovair-multi-hyper-wall-single-cfg-2",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-18000-cfg-2",
+      slug: "innovair-multi-hyper-wall-single-18000-cfg-2",
+      modelId: "innovair-multi-hyper-wall-single-18000",
       outdoorUnitId: "innovair-vom18h7r2p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2002,9 +3671,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-3",
-      slug: "innovair-multi-hyper-wall-single-cfg-3",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-18000-cfg-3",
+      slug: "innovair-multi-hyper-wall-single-18000-cfg-3",
+      modelId: "innovair-multi-hyper-wall-single-18000",
       outdoorUnitId: "innovair-vom18h7r2p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2016,9 +3685,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-4",
-      slug: "innovair-multi-hyper-wall-single-cfg-4",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-24000-cfg-1",
+      slug: "innovair-multi-hyper-wall-single-24000-cfg-1",
+      modelId: "innovair-multi-hyper-wall-single-24000",
       outdoorUnitId: "innovair-vom24h7r3p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2030,9 +3699,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-5",
-      slug: "innovair-multi-hyper-wall-single-cfg-5",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-24000-cfg-2",
+      slug: "innovair-multi-hyper-wall-single-24000-cfg-2",
+      modelId: "innovair-multi-hyper-wall-single-24000",
       outdoorUnitId: "innovair-vom24h7r3p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2044,9 +3713,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-6",
-      slug: "innovair-multi-hyper-wall-single-cfg-6",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-24000-cfg-3",
+      slug: "innovair-multi-hyper-wall-single-24000-cfg-3",
+      modelId: "innovair-multi-hyper-wall-single-24000",
       outdoorUnitId: "innovair-vom24h7r3p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2058,9 +3727,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-7",
-      slug: "innovair-multi-hyper-wall-single-cfg-7",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-30000-cfg-1",
+      slug: "innovair-multi-hyper-wall-single-30000-cfg-1",
+      modelId: "innovair-multi-hyper-wall-single-30000",
       outdoorUnitId: "innovair-vom36h7r4p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -2072,9 +3741,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-8",
-      slug: "innovair-multi-hyper-wall-single-cfg-8",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-30000-cfg-2",
+      slug: "innovair-multi-hyper-wall-single-30000-cfg-2",
+      modelId: "innovair-multi-hyper-wall-single-30000",
       outdoorUnitId: "innovair-vom36h7r4p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -2086,9 +3755,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-9",
-      slug: "innovair-multi-hyper-wall-single-cfg-9",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-30000-cfg-3",
+      slug: "innovair-multi-hyper-wall-single-30000-cfg-3",
+      modelId: "innovair-multi-hyper-wall-single-30000",
       outdoorUnitId: "innovair-vom36h7r4p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -2100,9 +3769,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-10",
-      slug: "innovair-multi-hyper-wall-single-cfg-10",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-42000-cfg-1",
+      slug: "innovair-multi-hyper-wall-single-42000-cfg-1",
+      modelId: "innovair-multi-hyper-wall-single-42000",
       outdoorUnitId: "innovair-vom42h7r5p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 41000,
@@ -2114,9 +3783,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-11",
-      slug: "innovair-multi-hyper-wall-single-cfg-11",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-42000-cfg-2",
+      slug: "innovair-multi-hyper-wall-single-42000-cfg-2",
+      modelId: "innovair-multi-hyper-wall-single-42000",
       outdoorUnitId: "innovair-vom42h7r5p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -2128,9 +3797,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-multi-hyper-wall-single-cfg-12",
-      slug: "innovair-multi-hyper-wall-single-cfg-12",
-      modelId: "innovair-multi-hyper-wall-single",
+      id: "innovair-multi-hyper-wall-single-42000-cfg-3",
+      slug: "innovair-multi-hyper-wall-single-42000-cfg-3",
+      modelId: "innovair-multi-hyper-wall-single-42000",
       outdoorUnitId: "innovair-vom42h7r5p7",
       indoorUnitId: null,
       coolingCapacityMinBtu: 41500,
@@ -2142,107 +3811,79 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sev-series-central-ducted-cfg-1",
-      slug: "innovair-sev-series-central-ducted-cfg-1",
-      modelId: "innovair-sev-series-central-ducted",
+      id: "innovair-sev-series-central-ducted-18000-cfg-1",
+      slug: "innovair-sev-series-central-ducted-18000-cfg-1",
+      modelId: "innovair-sev-series-central-ducted-18000",
       outdoorUnitId: "innovair-sev18h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 16.5,
       hspf2: 8.6,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sev-series-central-ducted-cfg-2",
-      slug: "innovair-sev-series-central-ducted-cfg-2",
-      modelId: "innovair-sev-series-central-ducted",
-      outdoorUnitId: "innovair-sev24h2r19",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 15.7,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sev-series-central-ducted-cfg-3",
-      slug: "innovair-sev-series-central-ducted-cfg-3",
-      modelId: "innovair-sev-series-central-ducted",
+      id: "innovair-sev-series-central-ducted-18000-cfg-2",
+      slug: "innovair-sev-series-central-ducted-18000-cfg-2",
+      modelId: "innovair-sev-series-central-ducted-18000",
       outdoorUnitId: "innovair-sev18h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 16.5,
       hspf2: 8.6,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sev-series-central-ducted-cfg-4",
-      slug: "innovair-sev-series-central-ducted-cfg-4",
-      modelId: "innovair-sev-series-central-ducted",
-      outdoorUnitId: "innovair-shv36h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17,
-      hspf2: 9.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sev-series-central-ducted-cfg-5",
-      slug: "innovair-sev-series-central-ducted-cfg-5",
-      modelId: "innovair-sev-series-central-ducted",
+      id: "innovair-sev-series-central-ducted-18000-cfg-3",
+      slug: "innovair-sev-series-central-ducted-18000-cfg-3",
+      modelId: "innovair-sev-series-central-ducted-18000",
       outdoorUnitId: "innovair-sev18h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 16.5,
       hspf2: 8.6,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sev-series-central-ducted-cfg-6",
-      slug: "innovair-sev-series-central-ducted-cfg-6",
-      modelId: "innovair-sev-series-central-ducted",
+      id: "innovair-sev-series-central-ducted-18000-cfg-4",
+      slug: "innovair-sev-series-central-ducted-18000-cfg-4",
+      modelId: "innovair-sev-series-central-ducted-18000",
       outdoorUnitId: "innovair-sev18h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 16.5,
       hspf2: 8.6,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sev-series-central-ducted-cfg-7",
-      slug: "innovair-sev-series-central-ducted-cfg-7",
-      modelId: "innovair-sev-series-central-ducted",
+      id: "innovair-sev-series-central-ducted-18000-cfg-5",
+      slug: "innovair-sev-series-central-ducted-18000-cfg-5",
+      modelId: "innovair-sev-series-central-ducted-18000",
       outdoorUnitId: "innovair-sev18h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 16.5,
       hspf2: 8.6,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-dev-series-central-ducted-cfg-1",
-      slug: "innovair-dev-series-central-ducted-cfg-1",
-      modelId: "innovair-dev-series-central-ducted",
+      id: "innovair-dev-series-central-ducted-24000-cfg-1",
+      slug: "innovair-dev-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-dev-series-central-ducted-24000",
       outdoorUnitId: "innovair-sev24h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2254,37 +3895,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-dev-series-central-ducted-cfg-2",
-      slug: "innovair-dev-series-central-ducted-cfg-2",
-      modelId: "innovair-dev-series-central-ducted",
-      outdoorUnitId: "innovair-shv36h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-dev-series-central-ducted-cfg-3",
-      slug: "innovair-dev-series-central-ducted-cfg-3",
-      modelId: "innovair-dev-series-central-ducted",
-      outdoorUnitId: "innovair-shv48h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-dev-series-central-ducted-cfg-4",
-      slug: "innovair-dev-series-central-ducted-cfg-4",
-      modelId: "innovair-dev-series-central-ducted",
+      id: "innovair-dev-series-central-ducted-24000-cfg-2",
+      slug: "innovair-dev-series-central-ducted-24000-cfg-2",
+      modelId: "innovair-dev-series-central-ducted-24000",
       outdoorUnitId: "innovair-shv24h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2296,79 +3909,275 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-dev-series-central-ducted-cfg-5",
-      slug: "innovair-dev-series-central-ducted-cfg-5",
-      modelId: "innovair-dev-series-central-ducted",
-      outdoorUnitId: "innovair-shv60h2r20",
+      id: "innovair-dev-series-central-ducted-24000-cfg-3",
+      slug: "innovair-dev-series-central-ducted-24000-cfg-3",
+      modelId: "innovair-dev-series-central-ducted-24000",
+      outdoorUnitId: "innovair-sev24h2r19",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9.2,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-dev-series-central-ducted-cfg-6",
-      slug: "innovair-dev-series-central-ducted-cfg-6",
-      modelId: "innovair-dev-series-central-ducted",
-      outdoorUnitId: "innovair-shv48h2r20",
+      id: "innovair-dev-series-central-ducted-24000-cfg-4",
+      slug: "innovair-dev-series-central-ducted-24000-cfg-4",
+      modelId: "innovair-dev-series-central-ducted-24000",
+      outdoorUnitId: "innovair-sev24h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-30000-cfg-1",
+      slug: "innovair-standard-wall-single-30000-cfg-1",
+      modelId: "innovair-standard-wall-single-30000",
+      outdoorUnitId: "innovair-sev30h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-30000-cfg-2",
+      slug: "innovair-standard-wall-single-30000-cfg-2",
+      modelId: "innovair-standard-wall-single-30000",
+      outdoorUnitId: "innovair-sev30h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-30000-cfg-3",
+      slug: "innovair-standard-wall-single-30000-cfg-3",
+      modelId: "innovair-standard-wall-single-30000",
+      outdoorUnitId: "innovair-sev30h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-48000-cfg-1",
+      slug: "innovair-standard-wall-single-48000-cfg-1",
+      modelId: "innovair-standard-wall-single-48000",
+      outdoorUnitId: "innovair-sev48h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
       coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-dev-series-central-ducted-cfg-7",
-      slug: "innovair-dev-series-central-ducted-cfg-7",
-      modelId: "innovair-dev-series-central-ducted",
-      outdoorUnitId: "innovair-shv60h2r20",
+      id: "innovair-standard-wall-single-48000-cfg-2",
+      slug: "innovair-standard-wall-single-48000-cfg-2",
+      modelId: "innovair-standard-wall-single-48000",
+      outdoorUnitId: "innovair-sev48h2r19",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-dev-series-central-ducted-cfg-8",
-      slug: "innovair-dev-series-central-ducted-cfg-8",
-      modelId: "innovair-dev-series-central-ducted",
-      outdoorUnitId: "innovair-sev24h2r19",
+      id: "innovair-standard-wall-single-48000-cfg-3",
+      slug: "innovair-standard-wall-single-48000-cfg-3",
+      modelId: "innovair-standard-wall-single-48000",
+      outdoorUnitId: "innovair-sev60h2r19",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-dev-series-central-ducted-cfg-9",
-      slug: "innovair-dev-series-central-ducted-cfg-9",
-      modelId: "innovair-dev-series-central-ducted",
-      outdoorUnitId: "innovair-sev24h2r19",
+      id: "innovair-standard-wall-single-48000-cfg-4",
+      slug: "innovair-standard-wall-single-48000-cfg-4",
+      modelId: "innovair-standard-wall-single-48000",
+      outdoorUnitId: "innovair-gov60h2ba",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-quantum-hyper-heat-wall-single-cfg-1",
-      slug: "innovair-quantum-hyper-heat-wall-single-cfg-1",
-      modelId: "innovair-quantum-hyper-heat-wall-single",
+      id: "innovair-standard-wall-single-48000-cfg-5",
+      slug: "innovair-standard-wall-single-48000-cfg-5",
+      modelId: "innovair-standard-wall-single-48000",
+      outdoorUnitId: "innovair-mos60h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-1",
+      slug: "innovair-standard-wall-single-60000-cfg-1",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-sev60h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-2",
+      slug: "innovair-standard-wall-single-60000-cfg-2",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-gov60h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55500,
+      coolingCapacityMaxBtu: 55500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-3",
+      slug: "innovair-standard-wall-single-60000-cfg-3",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-mos60h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 58000,
+      coolingCapacityMaxBtu: 58000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-4",
+      slug: "innovair-standard-wall-single-60000-cfg-4",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-mom60h2bm6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-5",
+      slug: "innovair-standard-wall-single-60000-cfg-5",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-mom60h2bm6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-6",
+      slug: "innovair-standard-wall-single-60000-cfg-6",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-mom60h2bm6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-7",
+      slug: "innovair-standard-wall-single-60000-cfg-7",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-mom60h2bm6b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-8",
+      slug: "innovair-standard-wall-single-60000-cfg-8",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-mom60h2bm6b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-60000-cfg-9",
+      slug: "innovair-standard-wall-single-60000-cfg-9",
+      modelId: "innovair-standard-wall-single-60000",
+      outdoorUnitId: "innovair-mom60h2bm6b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-quantum-hyper-heat-wall-single-9000-cfg-1",
+      slug: "innovair-quantum-hyper-heat-wall-single-9000-cfg-1",
+      modelId: "innovair-quantum-hyper-heat-wall-single-9000",
       outdoorUnitId: "innovair-win09h7h51-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2380,9 +4189,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-quantum-hyper-heat-wall-single-cfg-2",
-      slug: "innovair-quantum-hyper-heat-wall-single-cfg-2",
-      modelId: "innovair-quantum-hyper-heat-wall-single",
+      id: "innovair-quantum-hyper-heat-wall-single-12000-cfg-1",
+      slug: "innovair-quantum-hyper-heat-wall-single-12000-cfg-1",
+      modelId: "innovair-quantum-hyper-heat-wall-single-12000",
       outdoorUnitId: "innovair-win12h7h51-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2394,9 +4203,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-quantum-hyper-heat-wall-single-cfg-3",
-      slug: "innovair-quantum-hyper-heat-wall-single-cfg-3",
-      modelId: "innovair-quantum-hyper-heat-wall-single",
+      id: "innovair-quantum-hyper-heat-wall-single-18000-cfg-1",
+      slug: "innovair-quantum-hyper-heat-wall-single-18000-cfg-1",
+      modelId: "innovair-quantum-hyper-heat-wall-single-18000",
       outdoorUnitId: "innovair-win18h7h51-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2408,9 +4217,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-quantum-hyper-heat-wall-single-cfg-4",
-      slug: "innovair-quantum-hyper-heat-wall-single-cfg-4",
-      modelId: "innovair-quantum-hyper-heat-wall-single",
+      id: "innovair-quantum-hyper-heat-wall-single-24000-cfg-1",
+      slug: "innovair-quantum-hyper-heat-wall-single-24000-cfg-1",
+      modelId: "innovair-quantum-hyper-heat-wall-single-24000",
       outdoorUnitId: "innovair-win24h7h51-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2422,9 +4231,79 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhd-series-central-ducted-cfg-1",
-      slug: "innovair-mhd-series-central-ducted-cfg-1",
-      modelId: "innovair-mhd-series-central-ducted",
+      id: "innovair-dev-series-central-ducted-36000-cfg-1",
+      slug: "innovair-dev-series-central-ducted-36000-cfg-1",
+      modelId: "innovair-dev-series-central-ducted-36000",
+      outdoorUnitId: "innovair-shv36h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-48000-cfg-1",
+      slug: "innovair-dev-series-central-ducted-48000-cfg-1",
+      modelId: "innovair-dev-series-central-ducted-48000",
+      outdoorUnitId: "innovair-shv48h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-48000-cfg-2",
+      slug: "innovair-dev-series-central-ducted-48000-cfg-2",
+      modelId: "innovair-dev-series-central-ducted-48000",
+      outdoorUnitId: "innovair-shv48h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-60000-cfg-1",
+      slug: "innovair-dev-series-central-ducted-60000-cfg-1",
+      modelId: "innovair-dev-series-central-ducted-60000",
+      outdoorUnitId: "innovair-shv60h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-dev-series-central-ducted-60000-cfg-2",
+      slug: "innovair-dev-series-central-ducted-60000-cfg-2",
+      modelId: "innovair-dev-series-central-ducted-60000",
+      outdoorUnitId: "innovair-shv60h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhd-series-central-ducted-18000-cfg-1",
+      slug: "innovair-mhd-series-central-ducted-18000-cfg-1",
+      modelId: "innovair-mhd-series-central-ducted-18000",
       outdoorUnitId: "innovair-mhd-18",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2436,9 +4315,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhd-series-central-ducted-cfg-2",
-      slug: "innovair-mhd-series-central-ducted-cfg-2",
-      modelId: "innovair-mhd-series-central-ducted",
+      id: "innovair-mhd-series-central-ducted-24000-cfg-1",
+      slug: "innovair-mhd-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-mhd-series-central-ducted-24000",
       outdoorUnitId: "innovair-mhd-24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2450,9 +4329,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-1",
-      slug: "innovair-shv-series-central-ducted-cfg-1",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-sev-series-central-ducted-24000-cfg-1",
+      slug: "innovair-sev-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-sev-series-central-ducted-24000",
+      outdoorUnitId: "innovair-sev24h2r19",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 15.7,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-18000-cfg-1",
+      slug: "innovair-shv-series-central-ducted-18000-cfg-1",
+      modelId: "innovair-shv-series-central-ducted-18000",
       outdoorUnitId: "innovair-shv18h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2464,9 +4357,65 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-2",
-      slug: "innovair-shv-series-central-ducted-cfg-2",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-18000-cfg-2",
+      slug: "innovair-shv-series-central-ducted-18000-cfg-2",
+      modelId: "innovair-shv-series-central-ducted-18000",
+      outdoorUnitId: "innovair-shv18h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.3,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-18000-cfg-3",
+      slug: "innovair-shv-series-central-ducted-18000-cfg-3",
+      modelId: "innovair-shv-series-central-ducted-18000",
+      outdoorUnitId: "innovair-shv18h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 17,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-18000-cfg-4",
+      slug: "innovair-shv-series-central-ducted-18000-cfg-4",
+      modelId: "innovair-shv-series-central-ducted-18000",
+      outdoorUnitId: "innovair-shv18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-18000-cfg-5",
+      slug: "innovair-shv-series-central-ducted-18000-cfg-5",
+      modelId: "innovair-shv-series-central-ducted-18000",
+      outdoorUnitId: "innovair-shv18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-24000-cfg-1",
+      slug: "innovair-shv-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-shv-series-central-ducted-24000",
       outdoorUnitId: "innovair-shv24h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2478,9 +4427,79 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-3",
-      slug: "innovair-shv-series-central-ducted-cfg-3",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-24000-cfg-2",
+      slug: "innovair-shv-series-central-ducted-24000-cfg-2",
+      modelId: "innovair-shv-series-central-ducted-24000",
+      outdoorUnitId: "innovair-shv24h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-24000-cfg-3",
+      slug: "innovair-shv-series-central-ducted-24000-cfg-3",
+      modelId: "innovair-shv-series-central-ducted-24000",
+      outdoorUnitId: "innovair-shv24h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-24000-cfg-4",
+      slug: "innovair-shv-series-central-ducted-24000-cfg-4",
+      modelId: "innovair-shv-series-central-ducted-24000",
+      outdoorUnitId: "innovair-shv24h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.1,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-24000-cfg-5",
+      slug: "innovair-shv-series-central-ducted-24000-cfg-5",
+      modelId: "innovair-shv-series-central-ducted-24000",
+      outdoorUnitId: "innovair-shv24h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-24000-cfg-6",
+      slug: "innovair-shv-series-central-ducted-24000-cfg-6",
+      modelId: "innovair-shv-series-central-ducted-24000",
+      outdoorUnitId: "innovair-shv24h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-36000-cfg-1",
+      slug: "innovair-shv-series-central-ducted-36000-cfg-1",
+      modelId: "innovair-shv-series-central-ducted-36000",
       outdoorUnitId: "innovair-shv36h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2492,23 +4511,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-4",
-      slug: "innovair-shv-series-central-ducted-cfg-4",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv30h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-5",
-      slug: "innovair-shv-series-central-ducted-cfg-5",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-36000-cfg-2",
+      slug: "innovair-shv-series-central-ducted-36000-cfg-2",
+      modelId: "innovair-shv-series-central-ducted-36000",
       outdoorUnitId: "innovair-shv36h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2520,51 +4525,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-6",
-      slug: "innovair-shv-series-central-ducted-cfg-6",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv18h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.3,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-7",
-      slug: "innovair-shv-series-central-ducted-cfg-7",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv24h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-8",
-      slug: "innovair-shv-series-central-ducted-cfg-8",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv30h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-9",
-      slug: "innovair-shv-series-central-ducted-cfg-9",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-36000-cfg-3",
+      slug: "innovair-shv-series-central-ducted-36000-cfg-3",
+      modelId: "innovair-shv-series-central-ducted-36000",
       outdoorUnitId: "innovair-shv36h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2576,37 +4539,65 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-10",
-      slug: "innovair-shv-series-central-ducted-cfg-10",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv18h2r20",
+      id: "innovair-shv-series-central-ducted-36000-cfg-4",
+      slug: "innovair-shv-series-central-ducted-36000-cfg-4",
+      modelId: "innovair-shv-series-central-ducted-36000",
+      outdoorUnitId: "innovair-shv36h2r20-s",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 17,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 16.3,
       hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-11",
-      slug: "innovair-shv-series-central-ducted-cfg-11",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv24h2r20",
+      id: "innovair-shv-series-central-ducted-36000-cfg-5",
+      slug: "innovair-shv-series-central-ducted-36000-cfg-5",
+      modelId: "innovair-shv-series-central-ducted-36000",
+      outdoorUnitId: "innovair-shv36h2bb",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 9.3,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-12",
-      slug: "innovair-shv-series-central-ducted-cfg-12",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-30000-cfg-1",
+      slug: "innovair-shv-series-central-ducted-30000-cfg-1",
+      modelId: "innovair-shv-series-central-ducted-30000",
+      outdoorUnitId: "innovair-shv30h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-30000-cfg-2",
+      slug: "innovair-shv-series-central-ducted-30000-cfg-2",
+      modelId: "innovair-shv-series-central-ducted-30000",
+      outdoorUnitId: "innovair-shv30h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-30000-cfg-3",
+      slug: "innovair-shv-series-central-ducted-30000-cfg-3",
+      modelId: "innovair-shv-series-central-ducted-30000",
       outdoorUnitId: "innovair-shv30h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -2618,107 +4609,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-13",
-      slug: "innovair-shv-series-central-ducted-cfg-13",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv24h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 20000,
-      seer2: 16.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-14",
-      slug: "innovair-shv-series-central-ducted-cfg-14",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv24h2r20",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.1,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-15",
-      slug: "innovair-shv-series-central-ducted-cfg-15",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv36h2r20-s",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 16.3,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-16",
-      slug: "innovair-shv-series-central-ducted-cfg-16",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-17",
-      slug: "innovair-shv-series-central-ducted-cfg-17",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-18",
-      slug: "innovair-shv-series-central-ducted-cfg-18",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv24h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-19",
-      slug: "innovair-shv-series-central-ducted-cfg-19",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv24h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-20",
-      slug: "innovair-shv-series-central-ducted-cfg-20",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-30000-cfg-4",
+      slug: "innovair-shv-series-central-ducted-30000-cfg-4",
+      modelId: "innovair-shv-series-central-ducted-30000",
       outdoorUnitId: "innovair-shv30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2730,9 +4623,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-21",
-      slug: "innovair-shv-series-central-ducted-cfg-21",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-30000-cfg-5",
+      slug: "innovair-shv-series-central-ducted-30000-cfg-5",
+      modelId: "innovair-shv-series-central-ducted-30000",
       outdoorUnitId: "innovair-shv30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -2744,9 +4637,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-22",
-      slug: "innovair-shv-series-central-ducted-cfg-22",
-      modelId: "innovair-shv-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-30000-cfg-6",
+      slug: "innovair-shv-series-central-ducted-30000-cfg-6",
+      modelId: "innovair-shv-series-central-ducted-30000",
       outdoorUnitId: "innovair-shv30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -2758,65 +4651,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-23",
-      slug: "innovair-shv-series-central-ducted-cfg-23",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv36h2bb",
+      id: "innovair-sev-series-central-ducted-36000-cfg-1",
+      slug: "innovair-sev-series-central-ducted-36000-cfg-1",
+      modelId: "innovair-sev-series-central-ducted-36000",
+      outdoorUnitId: "innovair-shv36h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
+      seer2: 17,
+      hspf2: 9.9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-shv-series-central-ducted-cfg-24",
-      slug: "innovair-shv-series-central-ducted-cfg-24",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 16,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-25",
-      slug: "innovair-shv-series-central-ducted-cfg-25",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-shv-series-central-ducted-cfg-26",
-      slug: "innovair-shv-series-central-ducted-cfg-26",
-      modelId: "innovair-shv-series-central-ducted",
-      outdoorUnitId: "innovair-shv48h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sh-series-central-ducted-cfg-1",
-      slug: "innovair-sh-series-central-ducted-cfg-1",
-      modelId: "innovair-sh-series-central-ducted",
+      id: "innovair-sh-series-central-ducted-18000-cfg-1",
+      slug: "innovair-sh-series-central-ducted-18000-cfg-1",
+      modelId: "innovair-sh-series-central-ducted-18000",
       outdoorUnitId: "innovair-shv18h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2828,9 +4679,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sh-series-central-ducted-cfg-2",
-      slug: "innovair-sh-series-central-ducted-cfg-2",
-      modelId: "innovair-sh-series-central-ducted",
+      id: "innovair-sh-series-central-ducted-30000-cfg-1",
+      slug: "innovair-sh-series-central-ducted-30000-cfg-1",
+      modelId: "innovair-sh-series-central-ducted-30000",
       outdoorUnitId: "innovair-shv30h2r20",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2842,9 +4693,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sh-series-central-ducted-cfg-3",
-      slug: "innovair-sh-series-central-ducted-cfg-3",
-      modelId: "innovair-sh-series-central-ducted",
+      id: "innovair-sh-series-central-ducted-36000-cfg-1",
+      slug: "innovair-sh-series-central-ducted-36000-cfg-1",
+      modelId: "innovair-sh-series-central-ducted-36000",
       outdoorUnitId: "innovair-shv36h2r20-s",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2856,9 +4707,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sh-series-central-ducted-cfg-4",
-      slug: "innovair-sh-series-central-ducted-cfg-4",
-      modelId: "innovair-sh-series-central-ducted",
+      id: "innovair-sh-series-central-ducted-36000-cfg-2",
+      slug: "innovair-sh-series-central-ducted-36000-cfg-2",
+      modelId: "innovair-sh-series-central-ducted-36000",
       outdoorUnitId: "innovair-shv36h2r20-s",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2870,9 +4721,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sh-series-central-ducted-cfg-5",
-      slug: "innovair-sh-series-central-ducted-cfg-5",
-      modelId: "innovair-sh-series-central-ducted",
+      id: "innovair-sh-series-central-ducted-24000-cfg-1",
+      slug: "innovair-sh-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-sh-series-central-ducted-24000",
       outdoorUnitId: "innovair-sev24h2r19",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2884,9 +4735,51 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sav-series-central-ducted-cfg-1",
-      slug: "innovair-sav-series-central-ducted-cfg-1",
-      modelId: "innovair-sav-series-central-ducted",
+      id: "innovair-shv-series-central-ducted-20000-cfg-1",
+      slug: "innovair-shv-series-central-ducted-20000-cfg-1",
+      modelId: "innovair-shv-series-central-ducted-20000",
+      outdoorUnitId: "innovair-shv24h2r20",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      seer2: 16.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-24000-cfg-1",
+      slug: "innovair-standard-wall-single-24000-cfg-1",
+      modelId: "innovair-standard-wall-single-24000",
+      outdoorUnitId: "innovair-gov36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-24000-cfg-2",
+      slug: "innovair-standard-wall-single-24000-cfg-2",
+      modelId: "innovair-standard-wall-single-24000",
+      outdoorUnitId: "innovair-qos24h2xe5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-18000-cfg-1",
+      slug: "innovair-sav-series-central-ducted-18000-cfg-1",
+      modelId: "innovair-sav-series-central-ducted-18000",
       outdoorUnitId: "innovair-sov18h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2898,9 +4791,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sav-series-central-ducted-cfg-2",
-      slug: "innovair-sav-series-central-ducted-cfg-2",
-      modelId: "innovair-sav-series-central-ducted",
+      id: "innovair-sav-series-central-ducted-18000-cfg-2",
+      slug: "innovair-sav-series-central-ducted-18000-cfg-2",
+      modelId: "innovair-sav-series-central-ducted-18000",
+      outdoorUnitId: "innovair-shv18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-24000-cfg-1",
+      slug: "innovair-sav-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-sav-series-central-ducted-24000",
       outdoorUnitId: "innovair-sov24h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2912,65 +4819,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sav-series-central-ducted-cfg-3",
-      slug: "innovair-sav-series-central-ducted-cfg-3",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-4",
-      slug: "innovair-sav-series-central-ducted-cfg-4",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov48h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-5",
-      slug: "innovair-sav-series-central-ducted-cfg-5",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-6",
-      slug: "innovair-sav-series-central-ducted-cfg-6",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-shv18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-7",
-      slug: "innovair-sav-series-central-ducted-cfg-7",
-      modelId: "innovair-sav-series-central-ducted",
+      id: "innovair-sav-series-central-ducted-24000-cfg-2",
+      slug: "innovair-sav-series-central-ducted-24000-cfg-2",
+      modelId: "innovair-sav-series-central-ducted-24000",
       outdoorUnitId: "innovair-shv24h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2982,163 +4833,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sav-series-central-ducted-cfg-8",
-      slug: "innovair-sav-series-central-ducted-cfg-8",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-shv30h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.8,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-9",
-      slug: "innovair-sav-series-central-ducted-cfg-9",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-shv36h2bb",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-10",
-      slug: "innovair-sav-series-central-ducted-cfg-10",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-shv48h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-11",
-      slug: "innovair-sav-series-central-ducted-cfg-11",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-shv60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-12",
-      slug: "innovair-sav-series-central-ducted-cfg-12",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-shv36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.5,
-      hspf2: 8.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-13",
-      slug: "innovair-sav-series-central-ducted-cfg-13",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-14",
-      slug: "innovair-sav-series-central-ducted-cfg-14",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-15",
-      slug: "innovair-sav-series-central-ducted-cfg-15",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.1,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-16",
-      slug: "innovair-sav-series-central-ducted-cfg-16",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-17",
-      slug: "innovair-sav-series-central-ducted-cfg-17",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-sov60h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sav-series-central-ducted-cfg-18",
-      slug: "innovair-sav-series-central-ducted-cfg-18",
-      modelId: "innovair-sav-series-central-ducted",
-      outdoorUnitId: "innovair-shv48h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-1",
-      slug: "innovair-sov-series-central-ducted-cfg-1",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-30000-cfg-1",
+      slug: "innovair-sov-series-central-ducted-30000-cfg-1",
+      modelId: "innovair-sov-series-central-ducted-30000",
       outdoorUnitId: "innovair-sov30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3150,23 +4847,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-2",
-      slug: "innovair-sov-series-central-ducted-cfg-2",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18.5,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-3",
-      slug: "innovair-sov-series-central-ducted-cfg-3",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-30000-cfg-2",
+      slug: "innovair-sov-series-central-ducted-30000-cfg-2",
+      modelId: "innovair-sov-series-central-ducted-30000",
       outdoorUnitId: "innovair-sov30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3178,65 +4861,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-4",
-      slug: "innovair-sov-series-central-ducted-cfg-4",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.8,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-5",
-      slug: "innovair-sov-series-central-ducted-cfg-5",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.8,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-6",
-      slug: "innovair-sov-series-central-ducted-cfg-6",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov24h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-7",
-      slug: "innovair-sov-series-central-ducted-cfg-7",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov24h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-8",
-      slug: "innovair-sov-series-central-ducted-cfg-8",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-30000-cfg-3",
+      slug: "innovair-sov-series-central-ducted-30000-cfg-3",
+      modelId: "innovair-sov-series-central-ducted-30000",
       outdoorUnitId: "innovair-sov30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3248,9 +4875,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-9",
-      slug: "innovair-sov-series-central-ducted-cfg-9",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-30000-cfg-4",
+      slug: "innovair-sov-series-central-ducted-30000-cfg-4",
+      modelId: "innovair-sov-series-central-ducted-30000",
       outdoorUnitId: "innovair-sov30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3262,37 +4889,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-10",
-      slug: "innovair-sov-series-central-ducted-cfg-10",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.8,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-11",
-      slug: "innovair-sov-series-central-ducted-cfg-11",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov24h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-12",
-      slug: "innovair-sov-series-central-ducted-cfg-12",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-30000-cfg-5",
+      slug: "innovair-sov-series-central-ducted-30000-cfg-5",
+      modelId: "innovair-sov-series-central-ducted-30000",
       outdoorUnitId: "innovair-sov30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3304,51 +4903,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-13",
-      slug: "innovair-sov-series-central-ducted-cfg-13",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.4,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-14",
-      slug: "innovair-sov-series-central-ducted-cfg-14",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-shv18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.8,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-15",
-      slug: "innovair-sov-series-central-ducted-cfg-15",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-shv24h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-16",
-      slug: "innovair-sov-series-central-ducted-cfg-16",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-30000-cfg-6",
+      slug: "innovair-sov-series-central-ducted-30000-cfg-6",
+      modelId: "innovair-sov-series-central-ducted-30000",
       outdoorUnitId: "innovair-shv30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3360,23 +4917,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-17",
-      slug: "innovair-sov-series-central-ducted-cfg-17",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-shv36h2bb",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.4,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-18",
-      slug: "innovair-sov-series-central-ducted-cfg-18",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-30000-cfg-7",
+      slug: "innovair-sov-series-central-ducted-30000-cfg-7",
+      modelId: "innovair-sov-series-central-ducted-30000",
       outdoorUnitId: "innovair-sov30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3388,51 +4931,205 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-19",
-      slug: "innovair-sov-series-central-ducted-cfg-19",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov48h2ba",
+      id: "innovair-sav-series-central-ducted-36000-cfg-1",
+      slug: "innovair-sav-series-central-ducted-36000-cfg-1",
+      modelId: "innovair-sav-series-central-ducted-36000",
+      outdoorUnitId: "innovair-sov36h2ba",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 9,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-sov-series-central-ducted-cfg-20",
-      slug: "innovair-sov-series-central-ducted-cfg-20",
-      modelId: "innovair-sov-series-central-ducted",
-      outdoorUnitId: "innovair-sov48h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-sov-series-central-ducted-cfg-21",
-      slug: "innovair-sov-series-central-ducted-cfg-21",
-      modelId: "innovair-sov-series-central-ducted",
+      id: "innovair-sav-series-central-ducted-36000-cfg-2",
+      slug: "innovair-sav-series-central-ducted-36000-cfg-2",
+      modelId: "innovair-sav-series-central-ducted-36000",
       outdoorUnitId: "innovair-shv36h2bb",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
+      seer2: 17.4,
+      hspf2: 10.3,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q32-wall-single-cfg-1",
-      slug: "innovair-q32-wall-single-cfg-1",
-      modelId: "innovair-q32-wall-single",
+      id: "innovair-sav-series-central-ducted-36000-cfg-3",
+      slug: "innovair-sav-series-central-ducted-36000-cfg-3",
+      modelId: "innovair-sav-series-central-ducted-36000",
+      outdoorUnitId: "innovair-shv36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.5,
+      hspf2: 8.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-36000-cfg-4",
+      slug: "innovair-sav-series-central-ducted-36000-cfg-4",
+      modelId: "innovair-sav-series-central-ducted-36000",
+      outdoorUnitId: "innovair-sov36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-36000-cfg-5",
+      slug: "innovair-sav-series-central-ducted-36000-cfg-5",
+      modelId: "innovair-sav-series-central-ducted-36000",
+      outdoorUnitId: "innovair-sov36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-36000-cfg-6",
+      slug: "innovair-sav-series-central-ducted-36000-cfg-6",
+      modelId: "innovair-sav-series-central-ducted-36000",
+      outdoorUnitId: "innovair-sov36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000-cfg-1",
+      slug: "innovair-sav-series-central-ducted-48000-cfg-1",
+      modelId: "innovair-sav-series-central-ducted-48000",
+      outdoorUnitId: "innovair-sov48h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000-cfg-2",
+      slug: "innovair-sav-series-central-ducted-48000-cfg-2",
+      modelId: "innovair-sav-series-central-ducted-48000",
+      outdoorUnitId: "innovair-sov60h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000-cfg-3",
+      slug: "innovair-sav-series-central-ducted-48000-cfg-3",
+      modelId: "innovair-sav-series-central-ducted-48000",
+      outdoorUnitId: "innovair-shv48h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000-cfg-4",
+      slug: "innovair-sav-series-central-ducted-48000-cfg-4",
+      modelId: "innovair-sav-series-central-ducted-48000",
+      outdoorUnitId: "innovair-shv60h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000-cfg-5",
+      slug: "innovair-sav-series-central-ducted-48000-cfg-5",
+      modelId: "innovair-sav-series-central-ducted-48000",
+      outdoorUnitId: "innovair-sov60h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000-cfg-6",
+      slug: "innovair-sav-series-central-ducted-48000-cfg-6",
+      modelId: "innovair-sav-series-central-ducted-48000",
+      outdoorUnitId: "innovair-sov60h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-48000-cfg-7",
+      slug: "innovair-sav-series-central-ducted-48000-cfg-7",
+      modelId: "innovair-sav-series-central-ducted-48000",
+      outdoorUnitId: "innovair-shv48h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sav-series-central-ducted-30000-cfg-1",
+      slug: "innovair-sav-series-central-ducted-30000-cfg-1",
+      modelId: "innovair-sav-series-central-ducted-30000",
+      outdoorUnitId: "innovair-shv30h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q32-wall-single-9000-cfg-1",
+      slug: "innovair-q32-wall-single-9000-cfg-1",
+      modelId: "innovair-q32-wall-single-9000",
       outdoorUnitId: "innovair-qos09h1xe5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3444,9 +5141,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q32-wall-single-cfg-2",
-      slug: "innovair-q32-wall-single-cfg-2",
-      modelId: "innovair-q32-wall-single",
+      id: "innovair-q32-wall-single-9000-cfg-2",
+      slug: "innovair-q32-wall-single-9000-cfg-2",
+      modelId: "innovair-q32-wall-single-9000",
       outdoorUnitId: "innovair-qos09h2xe5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3458,9 +5155,65 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q32-wall-single-cfg-3",
-      slug: "innovair-q32-wall-single-cfg-3",
-      modelId: "innovair-q32-wall-single",
+      id: "innovair-standard-wall-single-12000-cfg-1",
+      slug: "innovair-standard-wall-single-12000-cfg-1",
+      modelId: "innovair-standard-wall-single-12000",
+      outdoorUnitId: "innovair-qos12h1xe5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-12000-cfg-2",
+      slug: "innovair-standard-wall-single-12000-cfg-2",
+      modelId: "innovair-standard-wall-single-12000",
+      outdoorUnitId: "innovair-qos12h2xe5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-12000-cfg-3",
+      slug: "innovair-standard-wall-single-12000-cfg-3",
+      modelId: "innovair-standard-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h1be5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-standard-wall-single-12000-cfg-4",
+      slug: "innovair-standard-wall-single-12000-cfg-4",
+      modelId: "innovair-standard-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2be5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q32-wall-single-18000-cfg-1",
+      slug: "innovair-q32-wall-single-18000-cfg-1",
+      modelId: "innovair-q32-wall-single-18000",
       outdoorUnitId: "innovair-qos18h2xe5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3472,9 +5225,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-wall-single-cfg-1",
-      slug: "innovair-q4-wall-single-cfg-1",
-      modelId: "innovair-q4-wall-single",
+      id: "innovair-q4-wall-single-9000-cfg-1",
+      slug: "innovair-q4-wall-single-9000-cfg-1",
+      modelId: "innovair-q4-wall-single-9000",
       outdoorUnitId: "innovair-qos09h1bm5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3486,23 +5239,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-wall-single-cfg-2",
-      slug: "innovair-q4-wall-single-cfg-2",
-      modelId: "innovair-q4-wall-single",
-      outdoorUnitId: "innovair-qos12h1bm5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-q4-wall-single-cfg-3",
-      slug: "innovair-q4-wall-single-cfg-3",
-      modelId: "innovair-q4-wall-single",
+      id: "innovair-q4-wall-single-9000-cfg-2",
+      slug: "innovair-q4-wall-single-9000-cfg-2",
+      modelId: "innovair-q4-wall-single-9000",
       outdoorUnitId: "innovair-qos09h2bm5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3514,51 +5253,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-wall-single-cfg-4",
-      slug: "innovair-q4-wall-single-cfg-4",
-      modelId: "innovair-q4-wall-single",
-      outdoorUnitId: "innovair-qos12h2bm5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-q4-wall-single-cfg-5",
-      slug: "innovair-q4-wall-single-cfg-5",
-      modelId: "innovair-q4-wall-single",
-      outdoorUnitId: "innovair-qos18h2bm5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-q4-wall-single-cfg-6",
-      slug: "innovair-q4-wall-single-cfg-6",
-      modelId: "innovair-q4-wall-single",
-      outdoorUnitId: "innovair-qos24h2bm5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-q4-wall-single-cfg-7",
-      slug: "innovair-q4-wall-single-cfg-7",
-      modelId: "innovair-q4-wall-single",
+      id: "innovair-q4-wall-single-9000-cfg-3",
+      slug: "innovair-q4-wall-single-9000-cfg-3",
+      modelId: "innovair-q4-wall-single-9000",
       outdoorUnitId: "innovair-qos09h2bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3570,51 +5267,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-wall-single-cfg-8",
-      slug: "innovair-q4-wall-single-cfg-8",
-      modelId: "innovair-q4-wall-single",
-      outdoorUnitId: "innovair-qos12h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-q4-wall-single-cfg-9",
-      slug: "innovair-q4-wall-single-cfg-9",
-      modelId: "innovair-q4-wall-single",
-      outdoorUnitId: "innovair-qos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-q4-wall-single-cfg-10",
-      slug: "innovair-q4-wall-single-cfg-10",
-      modelId: "innovair-q4-wall-single",
-      outdoorUnitId: "innovair-qos24h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-q4-wall-single-cfg-11",
-      slug: "innovair-q4-wall-single-cfg-11",
-      modelId: "innovair-q4-wall-single",
+      id: "innovair-q4-wall-single-9000-cfg-4",
+      slug: "innovair-q4-wall-single-9000-cfg-4",
+      modelId: "innovair-q4-wall-single-9000",
       outdoorUnitId: "innovair-qos09h1bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3626,9 +5281,51 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-wall-single-cfg-12",
-      slug: "innovair-q4-wall-single-cfg-12",
-      modelId: "innovair-q4-wall-single",
+      id: "innovair-q4-wall-single-12000-cfg-1",
+      slug: "innovair-q4-wall-single-12000-cfg-1",
+      modelId: "innovair-q4-wall-single-12000",
+      outdoorUnitId: "innovair-qos12h1bm5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-12000-cfg-2",
+      slug: "innovair-q4-wall-single-12000-cfg-2",
+      modelId: "innovair-q4-wall-single-12000",
+      outdoorUnitId: "innovair-qos12h2bm5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-12000-cfg-3",
+      slug: "innovair-q4-wall-single-12000-cfg-3",
+      modelId: "innovair-q4-wall-single-12000",
+      outdoorUnitId: "innovair-qos12h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-12000-cfg-4",
+      slug: "innovair-q4-wall-single-12000-cfg-4",
+      modelId: "innovair-q4-wall-single-12000",
       outdoorUnitId: "innovair-qos12h1bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3640,9 +5337,65 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single-cfg-1",
-      slug: "innovair-mhw-series-wall-single-cfg-1",
-      modelId: "innovair-mhw-series-wall-single",
+      id: "innovair-q4-wall-single-18000-cfg-1",
+      slug: "innovair-q4-wall-single-18000-cfg-1",
+      modelId: "innovair-q4-wall-single-18000",
+      outdoorUnitId: "innovair-qos18h2bm5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-18000-cfg-2",
+      slug: "innovair-q4-wall-single-18000-cfg-2",
+      modelId: "innovair-q4-wall-single-18000",
+      outdoorUnitId: "innovair-qos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-24000-cfg-1",
+      slug: "innovair-q4-wall-single-24000-cfg-1",
+      modelId: "innovair-q4-wall-single-24000",
+      outdoorUnitId: "innovair-qos24h2bm5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-wall-single-24000-cfg-2",
+      slug: "innovair-q4-wall-single-24000-cfg-2",
+      modelId: "innovair-q4-wall-single-24000",
+      outdoorUnitId: "innovair-qos24h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-9000-cfg-1",
+      slug: "innovair-mhw-series-wall-single-9000-cfg-1",
+      modelId: "innovair-mhw-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h2be5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3654,23 +5407,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single-cfg-2",
-      slug: "innovair-mhw-series-wall-single-cfg-2",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos24h2be5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mhw-series-wall-single-cfg-3",
-      slug: "innovair-mhw-series-wall-single-cfg-3",
-      modelId: "innovair-mhw-series-wall-single",
+      id: "innovair-mhw-series-wall-single-9000-cfg-2",
+      slug: "innovair-mhw-series-wall-single-9000-cfg-2",
+      modelId: "innovair-mhw-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h1bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3682,23 +5421,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single-cfg-4",
-      slug: "innovair-mhw-series-wall-single-cfg-4",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos12h1bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.4,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mhw-series-wall-single-cfg-5",
-      slug: "innovair-mhw-series-wall-single-cfg-5",
-      modelId: "innovair-mhw-series-wall-single",
+      id: "innovair-mhw-series-wall-single-9000-cfg-3",
+      slug: "innovair-mhw-series-wall-single-9000-cfg-3",
+      modelId: "innovair-mhw-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h2bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3710,65 +5435,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single-cfg-6",
-      slug: "innovair-mhw-series-wall-single-cfg-6",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mhw-series-wall-single-cfg-7",
-      slug: "innovair-mhw-series-wall-single-cfg-7",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.5,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mhw-series-wall-single-cfg-8",
-      slug: "innovair-mhw-series-wall-single-cfg-8",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos24h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 23,
-      hspf2: 11.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mhw-series-wall-single-cfg-9",
-      slug: "innovair-mhw-series-wall-single-cfg-9",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos06h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 25.5,
-      hspf2: 14.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mhw-series-wall-single-cfg-10",
-      slug: "innovair-mhw-series-wall-single-cfg-10",
-      modelId: "innovair-mhw-series-wall-single",
+      id: "innovair-mhw-series-wall-single-9000-cfg-4",
+      slug: "innovair-mhw-series-wall-single-9000-cfg-4",
+      modelId: "innovair-mhw-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3780,37 +5449,37 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single-cfg-11",
-      slug: "innovair-mhw-series-wall-single-cfg-11",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bh0a",
+      id: "innovair-mhw-series-wall-single-24000-cfg-1",
+      slug: "innovair-mhw-series-wall-single-24000-cfg-1",
+      modelId: "innovair-mhw-series-wall-single-24000",
+      outdoorUnitId: "innovair-mos24h2be5a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.4,
-      hspf2: 10.5,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 8.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single-cfg-12",
-      slug: "innovair-mhw-series-wall-single-cfg-12",
-      modelId: "innovair-mhw-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bh0a",
+      id: "innovair-mhw-series-wall-single-24000-cfg-2",
+      slug: "innovair-mhw-series-wall-single-24000-cfg-2",
+      modelId: "innovair-mhw-series-wall-single-24000",
+      outdoorUnitId: "innovair-mos24h2bm0a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.4,
-      hspf2: 11,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23,
+      hspf2: 11.7,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mhw-series-wall-single-cfg-13",
-      slug: "innovair-mhw-series-wall-single-cfg-13",
-      modelId: "innovair-mhw-series-wall-single",
+      id: "innovair-mhw-series-wall-single-24000-cfg-3",
+      slug: "innovair-mhw-series-wall-single-24000-cfg-3",
+      modelId: "innovair-mhw-series-wall-single-24000",
       outdoorUnitId: "innovair-mos24h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3822,9 +5491,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mos-series-wall-single-cfg-1",
-      slug: "innovair-mos-series-wall-single-cfg-1",
-      modelId: "innovair-mos-series-wall-single",
+      id: "innovair-mos-series-wall-single-30000-cfg-1",
+      slug: "innovair-mos-series-wall-single-30000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-30000",
       outdoorUnitId: "innovair-mos30h2be5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3836,429 +5505,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mos-series-wall-single-cfg-2",
-      slug: "innovair-mos-series-wall-single-cfg-2",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos36h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-3",
-      slug: "innovair-mos-series-wall-single-cfg-3",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos09h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.6,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-4",
-      slug: "innovair-mos-series-wall-single-cfg-4",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 21.1,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-5",
-      slug: "innovair-mos-series-wall-single-cfg-5",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16800,
-      coolingCapacityMaxBtu: 16800,
-      seer2: 20.7,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-6",
-      slug: "innovair-mos-series-wall-single-cfg-6",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos24h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-7",
-      slug: "innovair-mos-series-wall-single-cfg-7",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos36h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-8",
-      slug: "innovair-mos-series-wall-single-cfg-8",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos48h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 9.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-9",
-      slug: "innovair-mos-series-wall-single-cfg-9",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos09h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.6,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-10",
-      slug: "innovair-mos-series-wall-single-cfg-10",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.2,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-11",
-      slug: "innovair-mos-series-wall-single-cfg-11",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-12",
-      slug: "innovair-mos-series-wall-single-cfg-12",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos24h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23400,
-      coolingCapacityMaxBtu: 23400,
-      seer2: 20.7,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-13",
-      slug: "innovair-mos-series-wall-single-cfg-13",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos36h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36600,
-      coolingCapacityMaxBtu: 36600,
-      seer2: 21.2,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-14",
-      slug: "innovair-mos-series-wall-single-cfg-14",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos48h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-15",
-      slug: "innovair-mos-series-wall-single-cfg-15",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.6,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-16",
-      slug: "innovair-mos-series-wall-single-cfg-16",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 23.8,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-17",
-      slug: "innovair-mos-series-wall-single-cfg-17",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-18",
-      slug: "innovair-mos-series-wall-single-cfg-18",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-19",
-      slug: "innovair-mos-series-wall-single-cfg-19",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.3,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-20",
-      slug: "innovair-mos-series-wall-single-cfg-20",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos24h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.1,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-21",
-      slug: "innovair-mos-series-wall-single-cfg-21",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos36h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-22",
-      slug: "innovair-mos-series-wall-single-cfg-22",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos48h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19.8,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-23",
-      slug: "innovair-mos-series-wall-single-cfg-23",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-24",
-      slug: "innovair-mos-series-wall-single-cfg-24",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos24h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.4,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-25",
-      slug: "innovair-mos-series-wall-single-cfg-25",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos36h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36400,
-      coolingCapacityMaxBtu: 36400,
-      seer2: 20,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-26",
-      slug: "innovair-mos-series-wall-single-cfg-26",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos48h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18.5,
-      hspf2: 10.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-27",
-      slug: "innovair-mos-series-wall-single-cfg-27",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos60h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 18,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-28",
-      slug: "innovair-mos-series-wall-single-cfg-28",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos09h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.1,
-      hspf2: 11.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-29",
-      slug: "innovair-mos-series-wall-single-cfg-29",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.2,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-30",
-      slug: "innovair-mos-series-wall-single-cfg-30",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos09h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-31",
-      slug: "innovair-mos-series-wall-single-cfg-31",
-      modelId: "innovair-mos-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16700,
-      coolingCapacityMaxBtu: 16700,
-      seer2: 20.6,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mos-series-wall-single-cfg-32",
-      slug: "innovair-mos-series-wall-single-cfg-32",
-      modelId: "innovair-mos-series-wall-single",
+      id: "innovair-mos-series-wall-single-30000-cfg-2",
+      slug: "innovair-mos-series-wall-single-30000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-30000",
       outdoorUnitId: "innovair-mos30h2be5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4270,9 +5519,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mos-series-wall-single-cfg-33",
-      slug: "innovair-mos-series-wall-single-cfg-33",
-      modelId: "innovair-mos-series-wall-single",
+      id: "innovair-mos-series-wall-single-30000-cfg-3",
+      slug: "innovair-mos-series-wall-single-30000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-30000",
       outdoorUnitId: "innovair-mos33h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -4284,9 +5533,93 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdl-series-wall-single-cfg-1",
-      slug: "innovair-mdl-series-wall-single-cfg-1",
-      modelId: "innovair-mdl-series-wall-single",
+      id: "innovair-mhw-series-wall-single-12000-cfg-1",
+      slug: "innovair-mhw-series-wall-single-12000-cfg-1",
+      modelId: "innovair-mhw-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h1bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.4,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-12000-cfg-2",
+      slug: "innovair-mhw-series-wall-single-12000-cfg-2",
+      modelId: "innovair-mhw-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-12000-cfg-3",
+      slug: "innovair-mhw-series-wall-single-12000-cfg-3",
+      modelId: "innovair-mhw-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.4,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-18000-cfg-1",
+      slug: "innovair-mhw-series-wall-single-18000-cfg-1",
+      modelId: "innovair-mhw-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-18000-cfg-2",
+      slug: "innovair-mhw-series-wall-single-18000-cfg-2",
+      modelId: "innovair-mhw-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mhw-series-wall-single-6000-cfg-1",
+      slug: "innovair-mhw-series-wall-single-6000-cfg-1",
+      modelId: "innovair-mhw-series-wall-single-6000",
+      outdoorUnitId: "innovair-mos06h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 25.5,
+      hspf2: 14.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdl-series-wall-single-9000-cfg-1",
+      slug: "innovair-mdl-series-wall-single-9000-cfg-1",
+      modelId: "innovair-mdl-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h2bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -4298,37 +5631,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdl-series-wall-single-cfg-2",
-      slug: "innovair-mdl-series-wall-single-cfg-2",
-      modelId: "innovair-mdl-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: 19,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mdl-series-wall-single-cfg-3",
-      slug: "innovair-mdl-series-wall-single-cfg-3",
-      modelId: "innovair-mdl-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mdl-series-wall-single-cfg-4",
-      slug: "innovair-mdl-series-wall-single-cfg-4",
-      modelId: "innovair-mdl-series-wall-single",
+      id: "innovair-mdl-series-wall-single-9000-cfg-2",
+      slug: "innovair-mdl-series-wall-single-9000-cfg-2",
+      modelId: "innovair-mdl-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -4340,9 +5645,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdl-series-wall-single-cfg-5",
-      slug: "innovair-mdl-series-wall-single-cfg-5",
-      modelId: "innovair-mdl-series-wall-single",
+      id: "innovair-mdl-series-wall-single-12000-cfg-1",
+      slug: "innovair-mdl-series-wall-single-12000-cfg-1",
+      modelId: "innovair-mdl-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdl-series-wall-single-12000-cfg-2",
+      slug: "innovair-mdl-series-wall-single-12000-cfg-2",
+      modelId: "innovair-mdl-series-wall-single-12000",
       outdoorUnitId: "innovair-mos12h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -4354,9 +5673,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdl-series-wall-single-cfg-6",
-      slug: "innovair-mdl-series-wall-single-cfg-6",
-      modelId: "innovair-mdl-series-wall-single",
+      id: "innovair-mdl-series-wall-single-18000-cfg-1",
+      slug: "innovair-mdl-series-wall-single-18000-cfg-1",
+      modelId: "innovair-mdl-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdl-series-wall-single-18000-cfg-2",
+      slug: "innovair-mdl-series-wall-single-18000-cfg-2",
+      modelId: "innovair-mdl-series-wall-single-18000",
       outdoorUnitId: "innovair-mos18h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -4368,9 +5701,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-1",
-      slug: "innovair-mdh-series-wall-single-cfg-1",
-      modelId: "innovair-mdh-series-wall-single",
+      id: "innovair-mdh-series-wall-single-9000-cfg-1",
+      slug: "innovair-mdh-series-wall-single-9000-cfg-1",
+      modelId: "innovair-mdh-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h2bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -4382,65 +5715,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-2",
-      slug: "innovair-mdh-series-wall-single-cfg-2",
-      modelId: "innovair-mdh-series-wall-single",
-      outdoorUnitId: "innovair-mos12h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mdh-series-wall-single-cfg-3",
-      slug: "innovair-mdh-series-wall-single-cfg-3",
-      modelId: "innovair-mdh-series-wall-single",
-      outdoorUnitId: "innovair-mos18h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 20,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mdh-series-wall-single-cfg-4",
-      slug: "innovair-mdh-series-wall-single-cfg-4",
-      modelId: "innovair-mdh-series-wall-single",
-      outdoorUnitId: "innovair-mos24h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mdh-series-wall-single-cfg-5",
-      slug: "innovair-mdh-series-wall-single-cfg-5",
-      modelId: "innovair-mdh-series-wall-single",
-      outdoorUnitId: "innovair-mos48h2bm0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17.1,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mdh-series-wall-single-cfg-6",
-      slug: "innovair-mdh-series-wall-single-cfg-6",
-      modelId: "innovair-mdh-series-wall-single",
+      id: "innovair-mdh-series-wall-single-9000-cfg-2",
+      slug: "innovair-mdh-series-wall-single-9000-cfg-2",
+      modelId: "innovair-mdh-series-wall-single-9000",
       outdoorUnitId: "innovair-mos09h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -4452,9 +5729,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-7",
-      slug: "innovair-mdh-series-wall-single-cfg-7",
-      modelId: "innovair-mdh-series-wall-single",
+      id: "innovair-mdh-series-wall-single-12000-cfg-1",
+      slug: "innovair-mdh-series-wall-single-12000-cfg-1",
+      modelId: "innovair-mdh-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-12000-cfg-2",
+      slug: "innovair-mdh-series-wall-single-12000-cfg-2",
+      modelId: "innovair-mdh-series-wall-single-12000",
       outdoorUnitId: "innovair-mos12h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -4466,9 +5757,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-8",
-      slug: "innovair-mdh-series-wall-single-cfg-8",
-      modelId: "innovair-mdh-series-wall-single",
+      id: "innovair-mdh-series-wall-single-18000-cfg-1",
+      slug: "innovair-mdh-series-wall-single-18000-cfg-1",
+      modelId: "innovair-mdh-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 20,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-18000-cfg-2",
+      slug: "innovair-mdh-series-wall-single-18000-cfg-2",
+      modelId: "innovair-mdh-series-wall-single-18000",
       outdoorUnitId: "innovair-mos18h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -4480,9 +5785,23 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-9",
-      slug: "innovair-mdh-series-wall-single-cfg-9",
-      modelId: "innovair-mdh-series-wall-single",
+      id: "innovair-mdh-series-wall-single-24000-cfg-1",
+      slug: "innovair-mdh-series-wall-single-24000-cfg-1",
+      modelId: "innovair-mdh-series-wall-single-24000",
+      outdoorUnitId: "innovair-mos24h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-24000-cfg-2",
+      slug: "innovair-mdh-series-wall-single-24000-cfg-2",
+      modelId: "innovair-mdh-series-wall-single-24000",
       outdoorUnitId: "innovair-mos24h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4494,23 +5813,93 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-10",
-      slug: "innovair-mdh-series-wall-single-cfg-10",
-      modelId: "innovair-mdh-series-wall-single",
-      outdoorUnitId: "innovair-mos36h2bh0a",
+      id: "innovair-mos-series-wall-single-36000-cfg-1",
+      slug: "innovair-mos-series-wall-single-36000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2bm0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
-      seer2: 17.7,
-      hspf2: 11.1,
+      seer2: 20,
+      hspf2: 10.3,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-11",
-      slug: "innovair-mdh-series-wall-single-cfg-11",
-      modelId: "innovair-mdh-series-wall-single",
+      id: "innovair-mos-series-wall-single-36000-cfg-2",
+      slug: "innovair-mos-series-wall-single-36000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-36000-cfg-3",
+      slug: "innovair-mos-series-wall-single-36000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36600,
+      coolingCapacityMaxBtu: 36600,
+      seer2: 21.2,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-36000-cfg-4",
+      slug: "innovair-mos-series-wall-single-36000-cfg-4",
+      modelId: "innovair-mos-series-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-36000-cfg-5",
+      slug: "innovair-mos-series-wall-single-36000-cfg-5",
+      modelId: "innovair-mos-series-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36400,
+      coolingCapacityMaxBtu: 36400,
+      seer2: 20,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-48000-cfg-1",
+      slug: "innovair-mdh-series-wall-single-48000-cfg-1",
+      modelId: "innovair-mdh-series-wall-single-48000",
+      outdoorUnitId: "innovair-mos48h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17.1,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-48000-cfg-2",
+      slug: "innovair-mdh-series-wall-single-48000-cfg-2",
+      modelId: "innovair-mdh-series-wall-single-48000",
       outdoorUnitId: "innovair-mos48h2bh0a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -4522,23 +5911,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mdh-series-wall-single-cfg-12",
-      slug: "innovair-mdh-series-wall-single-cfg-12",
-      modelId: "innovair-mdh-series-wall-single",
-      outdoorUnitId: "innovair-mos60h2bh0a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.8,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-1",
-      slug: "innovair-mom-series-wall-single-cfg-1",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-1",
+      slug: "innovair-mom-series-wall-single-18000-cfg-1",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bm3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4550,9 +5925,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-2",
-      slug: "innovair-mom-series-wall-single-cfg-2",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-2",
+      slug: "innovair-mom-series-wall-single-18000-cfg-2",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bm3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4564,9 +5939,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-3",
-      slug: "innovair-mom-series-wall-single-cfg-3",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-3",
+      slug: "innovair-mom-series-wall-single-18000-cfg-3",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bm3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4578,261 +5953,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-4",
-      slug: "innovair-mom-series-wall-single-cfg-4",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bm4a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 25,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-5",
-      slug: "innovair-mom-series-wall-single-cfg-5",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bm4a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26600,
-      coolingCapacityMaxBtu: 26600,
-      seer2: 21,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-6",
-      slug: "innovair-mom-series-wall-single-cfg-6",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bm4a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26800,
-      coolingCapacityMaxBtu: 26800,
-      seer2: 23,
-      hspf2: 9.25,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-7",
-      slug: "innovair-mom-series-wall-single-cfg-7",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bm5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 24,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-8",
-      slug: "innovair-mom-series-wall-single-cfg-8",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bm5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 20,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-9",
-      slug: "innovair-mom-series-wall-single-cfg-9",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bm5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35400,
-      coolingCapacityMaxBtu: 35400,
-      seer2: 22,
-      hspf2: 9.35,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-10",
-      slug: "innovair-mom-series-wall-single-cfg-10",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bm6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 24,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-11",
-      slug: "innovair-mom-series-wall-single-cfg-11",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bm6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 20.4,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-12",
-      slug: "innovair-mom-series-wall-single-cfg-12",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bm6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: 22.2,
-      hspf2: 10.45,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-13",
-      slug: "innovair-mom-series-wall-single-cfg-13",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bm4b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 25,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-14",
-      slug: "innovair-mom-series-wall-single-cfg-14",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bm4b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26600,
-      coolingCapacityMaxBtu: 26600,
-      seer2: 21,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-15",
-      slug: "innovair-mom-series-wall-single-cfg-15",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bm4b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26800,
-      coolingCapacityMaxBtu: 26800,
-      seer2: 23,
-      hspf2: 9.25,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-16",
-      slug: "innovair-mom-series-wall-single-cfg-16",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bm5b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 24,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-17",
-      slug: "innovair-mom-series-wall-single-cfg-17",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bm5b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 20,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-18",
-      slug: "innovair-mom-series-wall-single-cfg-18",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bm5b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35400,
-      coolingCapacityMaxBtu: 35400,
-      seer2: 22,
-      hspf2: 9.35,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-19",
-      slug: "innovair-mom-series-wall-single-cfg-19",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bm6b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 24,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-20",
-      slug: "innovair-mom-series-wall-single-cfg-20",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bm6b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 20.4,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-21",
-      slug: "innovair-mom-series-wall-single-cfg-21",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bm6b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: 22.2,
-      hspf2: 10.45,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-22",
-      slug: "innovair-mom-series-wall-single-cfg-22",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-4",
+      slug: "innovair-mom-series-wall-single-18000-cfg-4",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bh3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -4844,9 +5967,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-23",
-      slug: "innovair-mom-series-wall-single-cfg-23",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-5",
+      slug: "innovair-mom-series-wall-single-18000-cfg-5",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bh3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -4858,9 +5981,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-24",
-      slug: "innovair-mom-series-wall-single-cfg-24",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-6",
+      slug: "innovair-mom-series-wall-single-18000-cfg-6",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bh3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -4872,135 +5995,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-25",
-      slug: "innovair-mom-series-wall-single-cfg-25",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bh4a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-26",
-      slug: "innovair-mom-series-wall-single-cfg-26",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bh4a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-27",
-      slug: "innovair-mom-series-wall-single-cfg-27",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bh4a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-28",
-      slug: "innovair-mom-series-wall-single-cfg-28",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bh5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-29",
-      slug: "innovair-mom-series-wall-single-cfg-29",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bh5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-30",
-      slug: "innovair-mom-series-wall-single-cfg-30",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom36h2bh5a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.2,
-      hspf2: 10.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-31",
-      slug: "innovair-mom-series-wall-single-cfg-31",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bh6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-32",
-      slug: "innovair-mom-series-wall-single-cfg-32",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bh6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-33",
-      slug: "innovair-mom-series-wall-single-cfg-33",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom48h2bh6a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-mom-series-wall-single-cfg-34",
-      slug: "innovair-mom-series-wall-single-cfg-34",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-7",
+      slug: "innovair-mom-series-wall-single-18000-cfg-7",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bh3b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -5012,9 +6009,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-35",
-      slug: "innovair-mom-series-wall-single-cfg-35",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-8",
+      slug: "innovair-mom-series-wall-single-18000-cfg-8",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bh3b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -5026,9 +6023,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-36",
-      slug: "innovair-mom-series-wall-single-cfg-36",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-18000-cfg-9",
+      slug: "innovair-mom-series-wall-single-18000-cfg-9",
+      modelId: "innovair-mom-series-wall-single-18000",
       outdoorUnitId: "innovair-mom18h2bh3b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -5040,9 +6037,107 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-37",
-      slug: "innovair-mom-series-wall-single-cfg-37",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-24000-cfg-1",
+      slug: "innovair-mom-series-wall-single-24000-cfg-1",
+      modelId: "innovair-mom-series-wall-single-24000",
+      outdoorUnitId: "innovair-mom27h2bm4a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 25,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-24000-cfg-2",
+      slug: "innovair-mom-series-wall-single-24000-cfg-2",
+      modelId: "innovair-mom-series-wall-single-24000",
+      outdoorUnitId: "innovair-mom27h2bm4a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-24000-cfg-3",
+      slug: "innovair-mom-series-wall-single-24000-cfg-3",
+      modelId: "innovair-mom-series-wall-single-24000",
+      outdoorUnitId: "innovair-mom27h2bm4a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26800,
+      coolingCapacityMaxBtu: 26800,
+      seer2: 23,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-24000-cfg-4",
+      slug: "innovair-mom-series-wall-single-24000-cfg-4",
+      modelId: "innovair-mom-series-wall-single-24000",
+      outdoorUnitId: "innovair-mom27h2bm4b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 25,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-24000-cfg-5",
+      slug: "innovair-mom-series-wall-single-24000-cfg-5",
+      modelId: "innovair-mom-series-wall-single-24000",
+      outdoorUnitId: "innovair-mom27h2bm4b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-24000-cfg-6",
+      slug: "innovair-mom-series-wall-single-24000-cfg-6",
+      modelId: "innovair-mom-series-wall-single-24000",
+      outdoorUnitId: "innovair-mom27h2bm4b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26800,
+      coolingCapacityMaxBtu: 26800,
+      seer2: 23,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-24000-cfg-7",
+      slug: "innovair-mom-series-wall-single-24000-cfg-7",
+      modelId: "innovair-mom-series-wall-single-24000",
+      outdoorUnitId: "innovair-mom27h2bh4a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-24000-cfg-8",
+      slug: "innovair-mom-series-wall-single-24000-cfg-8",
+      modelId: "innovair-mom-series-wall-single-24000",
       outdoorUnitId: "innovair-mom27h2bh4b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -5054,37 +6149,135 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-38",
-      slug: "innovair-mom-series-wall-single-cfg-38",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bh4b",
+      id: "innovair-mom-series-wall-single-36000-cfg-1",
+      slug: "innovair-mom-series-wall-single-36000-cfg-1",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bm5a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 24,
       hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-39",
-      slug: "innovair-mom-series-wall-single-cfg-39",
-      modelId: "innovair-mom-series-wall-single",
-      outdoorUnitId: "innovair-mom27h2bh4b",
+      id: "innovair-mom-series-wall-single-36000-cfg-2",
+      slug: "innovair-mom-series-wall-single-36000-cfg-2",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bm5a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 21,
-      hspf2: 10,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 20,
+      hspf2: 9.2,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-40",
-      slug: "innovair-mom-series-wall-single-cfg-40",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-36000-cfg-3",
+      slug: "innovair-mom-series-wall-single-36000-cfg-3",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bm5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35400,
+      coolingCapacityMaxBtu: 35400,
+      seer2: 22,
+      hspf2: 9.35,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000-cfg-4",
+      slug: "innovair-mom-series-wall-single-36000-cfg-4",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bm5b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 24,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000-cfg-5",
+      slug: "innovair-mom-series-wall-single-36000-cfg-5",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bm5b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000-cfg-6",
+      slug: "innovair-mom-series-wall-single-36000-cfg-6",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bm5b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35400,
+      coolingCapacityMaxBtu: 35400,
+      seer2: 22,
+      hspf2: 9.35,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000-cfg-7",
+      slug: "innovair-mom-series-wall-single-36000-cfg-7",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bh5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000-cfg-8",
+      slug: "innovair-mom-series-wall-single-36000-cfg-8",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bh5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000-cfg-9",
+      slug: "innovair-mom-series-wall-single-36000-cfg-9",
+      modelId: "innovair-mom-series-wall-single-36000",
+      outdoorUnitId: "innovair-mom36h2bh5a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.2,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-36000-cfg-10",
+      slug: "innovair-mom-series-wall-single-36000-cfg-10",
+      modelId: "innovair-mom-series-wall-single-36000",
       outdoorUnitId: "innovair-mom36h2bh5b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5096,9 +6289,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-41",
-      slug: "innovair-mom-series-wall-single-cfg-41",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-36000-cfg-11",
+      slug: "innovair-mom-series-wall-single-36000-cfg-11",
+      modelId: "innovair-mom-series-wall-single-36000",
       outdoorUnitId: "innovair-mom36h2bh5b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5110,9 +6303,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-42",
-      slug: "innovair-mom-series-wall-single-cfg-42",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-36000-cfg-12",
+      slug: "innovair-mom-series-wall-single-36000-cfg-12",
+      modelId: "innovair-mom-series-wall-single-36000",
       outdoorUnitId: "innovair-mom36h2bh5b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5124,9 +6317,107 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-43",
-      slug: "innovair-mom-series-wall-single-cfg-43",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-1",
+      slug: "innovair-mom-series-wall-single-48000-cfg-1",
+      modelId: "innovair-mom-series-wall-single-48000",
+      outdoorUnitId: "innovair-mom48h2bm6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 24,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000-cfg-2",
+      slug: "innovair-mom-series-wall-single-48000-cfg-2",
+      modelId: "innovair-mom-series-wall-single-48000",
+      outdoorUnitId: "innovair-mom48h2bm6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: 22.2,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000-cfg-3",
+      slug: "innovair-mom-series-wall-single-48000-cfg-3",
+      modelId: "innovair-mom-series-wall-single-48000",
+      outdoorUnitId: "innovair-mom48h2bm6b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 24,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000-cfg-4",
+      slug: "innovair-mom-series-wall-single-48000-cfg-4",
+      modelId: "innovair-mom-series-wall-single-48000",
+      outdoorUnitId: "innovair-mom48h2bm6b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: 22.2,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000-cfg-5",
+      slug: "innovair-mom-series-wall-single-48000-cfg-5",
+      modelId: "innovair-mom-series-wall-single-48000",
+      outdoorUnitId: "innovair-mom48h2bh6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000-cfg-6",
+      slug: "innovair-mom-series-wall-single-48000-cfg-6",
+      modelId: "innovair-mom-series-wall-single-48000",
+      outdoorUnitId: "innovair-mom48h2bh6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000-cfg-7",
+      slug: "innovair-mom-series-wall-single-48000-cfg-7",
+      modelId: "innovair-mom-series-wall-single-48000",
+      outdoorUnitId: "innovair-mom48h2bh6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.7,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-48000-cfg-8",
+      slug: "innovair-mom-series-wall-single-48000-cfg-8",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom48h2bh6b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -5138,9 +6429,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-44",
-      slug: "innovair-mom-series-wall-single-cfg-44",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-9",
+      slug: "innovair-mom-series-wall-single-48000-cfg-9",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom48h2bh6b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -5152,9 +6443,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-45",
-      slug: "innovair-mom-series-wall-single-cfg-45",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-10",
+      slug: "innovair-mom-series-wall-single-48000-cfg-10",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom48h2bh6b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -5166,9 +6457,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-46",
-      slug: "innovair-mom-series-wall-single-cfg-46",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-11",
+      slug: "innovair-mom-series-wall-single-48000-cfg-11",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom60h2bh6a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -5180,9 +6471,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-47",
-      slug: "innovair-mom-series-wall-single-cfg-47",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-12",
+      slug: "innovair-mom-series-wall-single-48000-cfg-12",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom60h2bh6a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -5194,9 +6485,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-48",
-      slug: "innovair-mom-series-wall-single-cfg-48",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-13",
+      slug: "innovair-mom-series-wall-single-48000-cfg-13",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom60h2bh6a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -5208,9 +6499,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-49",
-      slug: "innovair-mom-series-wall-single-cfg-49",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-14",
+      slug: "innovair-mom-series-wall-single-48000-cfg-14",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom60h2bh6b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -5222,9 +6513,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-50",
-      slug: "innovair-mom-series-wall-single-cfg-50",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-15",
+      slug: "innovair-mom-series-wall-single-48000-cfg-15",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom60h2bh6b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -5236,9 +6527,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-mom-series-wall-single-cfg-51",
-      slug: "innovair-mom-series-wall-single-cfg-51",
-      modelId: "innovair-mom-series-wall-single",
+      id: "innovair-mom-series-wall-single-48000-cfg-16",
+      slug: "innovair-mom-series-wall-single-48000-cfg-16",
+      modelId: "innovair-mom-series-wall-single-48000",
       outdoorUnitId: "innovair-mom60h2bh6b",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -5250,9 +6541,121 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-1",
-      slug: "innovair-q4-multi-wall-single-cfg-1",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-mom-series-wall-single-42000-cfg-1",
+      slug: "innovair-mom-series-wall-single-42000-cfg-1",
+      modelId: "innovair-mom-series-wall-single-42000",
+      outdoorUnitId: "innovair-mom48h2bm6a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-42000-cfg-2",
+      slug: "innovair-mom-series-wall-single-42000-cfg-2",
+      modelId: "innovair-mom-series-wall-single-42000",
+      outdoorUnitId: "innovair-mom48h2bm6b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-30000-cfg-1",
+      slug: "innovair-mom-series-wall-single-30000-cfg-1",
+      modelId: "innovair-mom-series-wall-single-30000",
+      outdoorUnitId: "innovair-mom27h2bh4a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-30000-cfg-2",
+      slug: "innovair-mom-series-wall-single-30000-cfg-2",
+      modelId: "innovair-mom-series-wall-single-30000",
+      outdoorUnitId: "innovair-mom27h2bh4a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-30000-cfg-3",
+      slug: "innovair-mom-series-wall-single-30000-cfg-3",
+      modelId: "innovair-mom-series-wall-single-30000",
+      outdoorUnitId: "innovair-mom27h2bh4b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mom-series-wall-single-30000-cfg-4",
+      slug: "innovair-mom-series-wall-single-30000-cfg-4",
+      modelId: "innovair-mom-series-wall-single-30000",
+      outdoorUnitId: "innovair-mom27h2bh4b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-36000-cfg-1",
+      slug: "innovair-mdh-series-wall-single-36000-cfg-1",
+      modelId: "innovair-mdh-series-wall-single-36000",
+      outdoorUnitId: "innovair-mos36h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.7,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mdh-series-wall-single-60000-cfg-1",
+      slug: "innovair-mdh-series-wall-single-60000-cfg-1",
+      modelId: "innovair-mdh-series-wall-single-60000",
+      outdoorUnitId: "innovair-mos60h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.8,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-q4-multi-wall-single-18000-cfg-1",
+      slug: "innovair-q4-multi-wall-single-18000-cfg-1",
+      modelId: "innovair-q4-multi-wall-single-18000",
       outdoorUnitId: "innovair-qom18h2bm2a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5264,9 +6667,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-2",
-      slug: "innovair-q4-multi-wall-single-cfg-2",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-18000-cfg-2",
+      slug: "innovair-q4-multi-wall-single-18000-cfg-2",
+      modelId: "innovair-q4-multi-wall-single-18000",
       outdoorUnitId: "innovair-qom18h2bm2a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5278,9 +6681,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-3",
-      slug: "innovair-q4-multi-wall-single-cfg-3",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-18000-cfg-3",
+      slug: "innovair-q4-multi-wall-single-18000-cfg-3",
+      modelId: "innovair-q4-multi-wall-single-18000",
       outdoorUnitId: "innovair-qom18h2bm2a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -5292,9 +6695,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-4",
-      slug: "innovair-q4-multi-wall-single-cfg-4",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-24000-cfg-1",
+      slug: "innovair-q4-multi-wall-single-24000-cfg-1",
+      modelId: "innovair-q4-multi-wall-single-24000",
       outdoorUnitId: "innovair-qom27h2bm3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -5306,9 +6709,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-5",
-      slug: "innovair-q4-multi-wall-single-cfg-5",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-24000-cfg-2",
+      slug: "innovair-q4-multi-wall-single-24000-cfg-2",
+      modelId: "innovair-q4-multi-wall-single-24000",
       outdoorUnitId: "innovair-qom27h2bm3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -5320,9 +6723,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-6",
-      slug: "innovair-q4-multi-wall-single-cfg-6",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-24000-cfg-3",
+      slug: "innovair-q4-multi-wall-single-24000-cfg-3",
+      modelId: "innovair-q4-multi-wall-single-24000",
       outdoorUnitId: "innovair-qom27h2bm3a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -5334,9 +6737,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-7",
-      slug: "innovair-q4-multi-wall-single-cfg-7",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-42000-cfg-1",
+      slug: "innovair-q4-multi-wall-single-42000-cfg-1",
+      modelId: "innovair-q4-multi-wall-single-42000",
       outdoorUnitId: "innovair-qom42h2bm5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5348,9 +6751,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-8",
-      slug: "innovair-q4-multi-wall-single-cfg-8",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-42000-cfg-2",
+      slug: "innovair-q4-multi-wall-single-42000-cfg-2",
+      modelId: "innovair-q4-multi-wall-single-42000",
       outdoorUnitId: "innovair-qom42h2bm5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5362,9 +6765,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-9",
-      slug: "innovair-q4-multi-wall-single-cfg-9",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-42000-cfg-3",
+      slug: "innovair-q4-multi-wall-single-42000-cfg-3",
+      modelId: "innovair-q4-multi-wall-single-42000",
       outdoorUnitId: "innovair-qom42h2bm5a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -5376,9 +6779,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-10",
-      slug: "innovair-q4-multi-wall-single-cfg-10",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-36000-cfg-1",
+      slug: "innovair-q4-multi-wall-single-36000-cfg-1",
+      modelId: "innovair-q4-multi-wall-single-36000",
       outdoorUnitId: "innovair-qom36h2bm4a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5390,9 +6793,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-11",
-      slug: "innovair-q4-multi-wall-single-cfg-11",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-36000-cfg-2",
+      slug: "innovair-q4-multi-wall-single-36000-cfg-2",
+      modelId: "innovair-q4-multi-wall-single-36000",
       outdoorUnitId: "innovair-qom36h2bm4a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5404,9 +6807,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-q4-multi-wall-single-cfg-12",
-      slug: "innovair-q4-multi-wall-single-cfg-12",
-      modelId: "innovair-q4-multi-wall-single",
+      id: "innovair-q4-multi-wall-single-36000-cfg-3",
+      slug: "innovair-q4-multi-wall-single-36000-cfg-3",
+      modelId: "innovair-q4-multi-wall-single-36000",
       outdoorUnitId: "innovair-qom36h2bm4a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -5418,9 +6821,79 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-swv-series-central-ducted-cfg-1",
-      slug: "innovair-swv-series-central-ducted-cfg-1",
-      modelId: "innovair-swv-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-18000-cfg-1",
+      slug: "innovair-sov-series-central-ducted-18000-cfg-1",
+      modelId: "innovair-sov-series-central-ducted-18000",
+      outdoorUnitId: "innovair-sov18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.5,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-18000-cfg-2",
+      slug: "innovair-sov-series-central-ducted-18000-cfg-2",
+      modelId: "innovair-sov-series-central-ducted-18000",
+      outdoorUnitId: "innovair-sov18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-18000-cfg-3",
+      slug: "innovair-sov-series-central-ducted-18000-cfg-3",
+      modelId: "innovair-sov-series-central-ducted-18000",
+      outdoorUnitId: "innovair-sov18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-18000-cfg-4",
+      slug: "innovair-sov-series-central-ducted-18000-cfg-4",
+      modelId: "innovair-sov-series-central-ducted-18000",
+      outdoorUnitId: "innovair-sov18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-18000-cfg-5",
+      slug: "innovair-sov-series-central-ducted-18000-cfg-5",
+      modelId: "innovair-sov-series-central-ducted-18000",
+      outdoorUnitId: "innovair-shv18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-24000-cfg-1",
+      slug: "innovair-swv-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-swv-series-central-ducted-24000",
       outdoorUnitId: "innovair-sov24h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -5432,37 +6905,9 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-swv-series-central-ducted-cfg-2",
-      slug: "innovair-swv-series-central-ducted-cfg-2",
-      modelId: "innovair-swv-series-central-ducted",
-      outdoorUnitId: "innovair-sov36h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16.7,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-swv-series-central-ducted-cfg-3",
-      slug: "innovair-swv-series-central-ducted-cfg-3",
-      modelId: "innovair-swv-series-central-ducted",
-      outdoorUnitId: "innovair-shv18h2ba",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.3,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "innovair-swv-series-central-ducted-cfg-4",
-      slug: "innovair-swv-series-central-ducted-cfg-4",
-      modelId: "innovair-swv-series-central-ducted",
+      id: "innovair-swv-series-central-ducted-24000-cfg-2",
+      slug: "innovair-swv-series-central-ducted-24000-cfg-2",
+      modelId: "innovair-swv-series-central-ducted-24000",
       outdoorUnitId: "innovair-shv24h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -5474,9 +6919,51 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-swv-series-central-ducted-cfg-5",
-      slug: "innovair-swv-series-central-ducted-cfg-5",
-      modelId: "innovair-swv-series-central-ducted",
+      id: "innovair-swv-series-central-ducted-36000-cfg-1",
+      slug: "innovair-swv-series-central-ducted-36000-cfg-1",
+      modelId: "innovair-swv-series-central-ducted-36000",
+      outdoorUnitId: "innovair-sov36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.7,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-36000-cfg-2",
+      slug: "innovair-swv-series-central-ducted-36000-cfg-2",
+      modelId: "innovair-swv-series-central-ducted-36000",
+      outdoorUnitId: "innovair-shv36h2bb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.8,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-18000-cfg-1",
+      slug: "innovair-swv-series-central-ducted-18000-cfg-1",
+      modelId: "innovair-swv-series-central-ducted-18000",
+      outdoorUnitId: "innovair-shv18h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.3,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-swv-series-central-ducted-30000-cfg-1",
+      slug: "innovair-swv-series-central-ducted-30000-cfg-1",
+      modelId: "innovair-swv-series-central-ducted-30000",
       outdoorUnitId: "innovair-shv30h2ba",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -5488,15 +6975,519 @@ export const innovairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "innovair-swv-series-central-ducted-cfg-6",
-      slug: "innovair-swv-series-central-ducted-cfg-6",
-      modelId: "innovair-swv-series-central-ducted",
+      id: "innovair-sov-series-central-ducted-24000-cfg-1",
+      slug: "innovair-sov-series-central-ducted-24000-cfg-1",
+      modelId: "innovair-sov-series-central-ducted-24000",
+      outdoorUnitId: "innovair-sov24h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-24000-cfg-2",
+      slug: "innovair-sov-series-central-ducted-24000-cfg-2",
+      modelId: "innovair-sov-series-central-ducted-24000",
+      outdoorUnitId: "innovair-sov24h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-24000-cfg-3",
+      slug: "innovair-sov-series-central-ducted-24000-cfg-3",
+      modelId: "innovair-sov-series-central-ducted-24000",
+      outdoorUnitId: "innovair-sov24h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-24000-cfg-4",
+      slug: "innovair-sov-series-central-ducted-24000-cfg-4",
+      modelId: "innovair-sov-series-central-ducted-24000",
+      outdoorUnitId: "innovair-shv24h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-48000-cfg-1",
+      slug: "innovair-shv-series-central-ducted-48000-cfg-1",
+      modelId: "innovair-shv-series-central-ducted-48000",
+      outdoorUnitId: "innovair-shv60h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-48000-cfg-2",
+      slug: "innovair-shv-series-central-ducted-48000-cfg-2",
+      modelId: "innovair-shv-series-central-ducted-48000",
+      outdoorUnitId: "innovair-shv60h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-shv-series-central-ducted-42000-cfg-1",
+      slug: "innovair-shv-series-central-ducted-42000-cfg-1",
+      modelId: "innovair-shv-series-central-ducted-42000",
+      outdoorUnitId: "innovair-shv48h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-36000-cfg-1",
+      slug: "innovair-sov-series-central-ducted-36000-cfg-1",
+      modelId: "innovair-sov-series-central-ducted-36000",
+      outdoorUnitId: "innovair-sov36h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.4,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-36000-cfg-2",
+      slug: "innovair-sov-series-central-ducted-36000-cfg-2",
+      modelId: "innovair-sov-series-central-ducted-36000",
       outdoorUnitId: "innovair-shv36h2bb",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
-      seer2: 16.8,
-      hspf2: 9.6,
+      seer2: 15.4,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-36000-cfg-3",
+      slug: "innovair-sov-series-central-ducted-36000-cfg-3",
+      modelId: "innovair-sov-series-central-ducted-36000",
+      outdoorUnitId: "innovair-shv36h2bb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-9000-cfg-1",
+      slug: "innovair-mos-series-wall-single-9000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-9000",
+      outdoorUnitId: "innovair-mos09h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.6,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-9000-cfg-2",
+      slug: "innovair-mos-series-wall-single-9000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-9000",
+      outdoorUnitId: "innovair-mos09h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-9000-cfg-3",
+      slug: "innovair-mos-series-wall-single-9000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-9000",
+      outdoorUnitId: "innovair-mos09h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.1,
+      hspf2: 11.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-9000-cfg-4",
+      slug: "innovair-mos-series-wall-single-9000-cfg-4",
+      modelId: "innovair-mos-series-wall-single-9000",
+      outdoorUnitId: "innovair-mos09h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-12000-cfg-1",
+      slug: "innovair-mos-series-wall-single-12000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21.1,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-12000-cfg-2",
+      slug: "innovair-mos-series-wall-single-12000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-12000-cfg-3",
+      slug: "innovair-mos-series-wall-single-12000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.6,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-12000-cfg-4",
+      slug: "innovair-mos-series-wall-single-12000-cfg-4",
+      modelId: "innovair-mos-series-wall-single-12000",
+      outdoorUnitId: "innovair-mos12h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-18000-cfg-1",
+      slug: "innovair-mos-series-wall-single-18000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 16800,
+      seer2: 20.7,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-18000-cfg-2",
+      slug: "innovair-mos-series-wall-single-18000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.3,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-18000-cfg-3",
+      slug: "innovair-mos-series-wall-single-18000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-18000-cfg-4",
+      slug: "innovair-mos-series-wall-single-18000-cfg-4",
+      modelId: "innovair-mos-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.2,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-18000-cfg-5",
+      slug: "innovair-mos-series-wall-single-18000-cfg-5",
+      modelId: "innovair-mos-series-wall-single-18000",
+      outdoorUnitId: "innovair-mos18h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 16700,
+      seer2: 20.6,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-24000-cfg-1",
+      slug: "innovair-mos-series-wall-single-24000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-24000",
+      outdoorUnitId: "innovair-mos24h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-24000-cfg-2",
+      slug: "innovair-mos-series-wall-single-24000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-24000",
+      outdoorUnitId: "innovair-mos24h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: 20.7,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-24000-cfg-3",
+      slug: "innovair-mos-series-wall-single-24000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-24000",
+      outdoorUnitId: "innovair-mos24h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.1,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-48000-cfg-1",
+      slug: "innovair-mos-series-wall-single-48000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-48000",
+      outdoorUnitId: "innovair-mos48h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-48000-cfg-2",
+      slug: "innovair-mos-series-wall-single-48000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-48000",
+      outdoorUnitId: "innovair-mos48h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-48000-cfg-3",
+      slug: "innovair-mos-series-wall-single-48000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-48000",
+      outdoorUnitId: "innovair-mos48h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19.8,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-48000-cfg-4",
+      slug: "innovair-mos-series-wall-single-48000-cfg-4",
+      modelId: "innovair-mos-series-wall-single-48000",
+      outdoorUnitId: "innovair-mos48h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.5,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-48000-cfg-5",
+      slug: "innovair-mos-series-wall-single-48000-cfg-5",
+      modelId: "innovair-mos-series-wall-single-48000",
+      outdoorUnitId: "innovair-mos60h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 18,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-15000-cfg-1",
+      slug: "innovair-mos-series-wall-single-15000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-15000",
+      outdoorUnitId: "innovair-mos18h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-15000-cfg-2",
+      slug: "innovair-mos-series-wall-single-15000-cfg-2",
+      modelId: "innovair-mos-series-wall-single-15000",
+      outdoorUnitId: "innovair-mos18h2bm0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 23.8,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-15000-cfg-3",
+      slug: "innovair-mos-series-wall-single-15000-cfg-3",
+      modelId: "innovair-mos-series-wall-single-15000",
+      outdoorUnitId: "innovair-mos18h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-mos-series-wall-single-20000-cfg-1",
+      slug: "innovair-mos-series-wall-single-20000-cfg-1",
+      modelId: "innovair-mos-series-wall-single-20000",
+      outdoorUnitId: "innovair-mos24h2bh0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.4,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-42000-cfg-1",
+      slug: "innovair-sov-series-central-ducted-42000-cfg-1",
+      modelId: "innovair-sov-series-central-ducted-42000",
+      outdoorUnitId: "innovair-sov48h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "innovair-sov-series-central-ducted-42000-cfg-2",
+      slug: "innovair-sov-series-central-ducted-42000-cfg-2",
+      modelId: "innovair-sov-series-central-ducted-42000",
+      outdoorUnitId: "innovair-sov48h2ba",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -5504,7 +7495,7 @@ export const innovairDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "innovair-standard-wall-single-cfg-1",
+      configurationId: "innovair-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5515,238 +7506,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-23",
+      configurationId: "innovair-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5757,29 +7517,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-standard-wall-single-cfg-24",
+      configurationId: "innovair-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
+          heatingCapacityBtu: 11000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-standard-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-26",
+      configurationId: "innovair-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5790,117 +7539,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-standard-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-innovair-elite-wall-single-cfg-1",
+      configurationId: "innovair-innovair-elite-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5911,7 +7550,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-innovair-elite-wall-single-cfg-2",
+      configurationId: "innovair-innovair-elite-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5922,7 +7561,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-innovair-elite-wall-single-cfg-3",
+      configurationId: "innovair-innovair-elite-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5933,7 +7572,106 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-1",
+      configurationId: "innovair-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-36000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-multi-hyper-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5944,7 +7682,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-2",
+      configurationId: "innovair-multi-hyper-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5955,7 +7693,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-3",
+      configurationId: "innovair-multi-hyper-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5966,7 +7704,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-4",
+      configurationId: "innovair-multi-hyper-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5977,7 +7715,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-5",
+      configurationId: "innovair-multi-hyper-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5988,7 +7726,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-6",
+      configurationId: "innovair-multi-hyper-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5999,7 +7737,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-7",
+      configurationId: "innovair-multi-hyper-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6010,7 +7748,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-8",
+      configurationId: "innovair-multi-hyper-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6021,7 +7759,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-9",
+      configurationId: "innovair-multi-hyper-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6032,7 +7770,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-10",
+      configurationId: "innovair-multi-hyper-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6043,7 +7781,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-11",
+      configurationId: "innovair-multi-hyper-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6054,7 +7792,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-multi-hyper-wall-single-cfg-12",
+      configurationId: "innovair-multi-hyper-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6065,7 +7803,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sev-series-central-ducted-cfg-1",
+      configurationId: "innovair-sev-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6076,18 +7814,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sev-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sev-series-central-ducted-cfg-3",
+      configurationId: "innovair-sev-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6098,18 +7825,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sev-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sev-series-central-ducted-cfg-5",
+      configurationId: "innovair-sev-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6120,7 +7836,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sev-series-central-ducted-cfg-6",
+      configurationId: "innovair-sev-series-central-ducted-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6131,7 +7847,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sev-series-central-ducted-cfg-7",
+      configurationId: "innovair-sev-series-central-ducted-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6142,7 +7858,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-dev-series-central-ducted-cfg-1",
+      configurationId: "innovair-dev-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6153,29 +7869,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-dev-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-dev-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-dev-series-central-ducted-cfg-4",
+      configurationId: "innovair-dev-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6186,40 +7880,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-dev-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-dev-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-dev-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-dev-series-central-ducted-cfg-8",
+      configurationId: "innovair-dev-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6230,7 +7891,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-dev-series-central-ducted-cfg-9",
+      configurationId: "innovair-dev-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6241,7 +7902,194 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-quantum-hyper-heat-wall-single-cfg-1",
+      configurationId: "innovair-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-60000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-quantum-hyper-heat-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6252,7 +8100,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-quantum-hyper-heat-wall-single-cfg-2",
+      configurationId: "innovair-quantum-hyper-heat-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6263,7 +8111,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-quantum-hyper-heat-wall-single-cfg-3",
+      configurationId: "innovair-quantum-hyper-heat-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6274,7 +8122,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-quantum-hyper-heat-wall-single-cfg-4",
+      configurationId: "innovair-quantum-hyper-heat-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6285,7 +8133,62 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mhd-series-central-ducted-cfg-1",
+      configurationId: "innovair-dev-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-dev-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-dev-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-dev-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-dev-series-central-ducted-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mhd-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6296,7 +8199,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mhd-series-central-ducted-cfg-2",
+      configurationId: "innovair-mhd-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6307,7 +8210,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-1",
+      configurationId: "innovair-sev-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6318,51 +8232,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-6",
+      configurationId: "innovair-shv-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6373,40 +8243,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-10",
+      configurationId: "innovair-shv-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6417,7 +8254,51 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-11",
+      configurationId: "innovair-shv-series-central-ducted-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6428,40 +8309,73 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-12",
+      configurationId: "innovair-shv-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-13",
+      configurationId: "innovair-shv-series-central-ducted-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-14",
+      configurationId: "innovair-shv-series-central-ducted-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 2,
+          heatingCapacityBtu: 28600,
+          cop: 1.81,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-15",
+      configurationId: "innovair-shv-series-central-ducted-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6472,84 +8386,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-23",
+      configurationId: "innovair-shv-series-central-ducted-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6560,40 +8397,84 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-shv-series-central-ducted-cfg-24",
+      configurationId: "innovair-shv-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-shv-series-central-ducted-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
+          heatingCapacityBtu: 22600,
           cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-sh-series-central-ducted-cfg-1",
+      configurationId: "innovair-shv-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sev-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sh-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6604,7 +8485,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sh-series-central-ducted-cfg-2",
+      configurationId: "innovair-sh-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6615,7 +8496,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sh-series-central-ducted-cfg-3",
+      configurationId: "innovair-sh-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6626,7 +8507,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sh-series-central-ducted-cfg-4",
+      configurationId: "innovair-sh-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6637,7 +8518,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sh-series-central-ducted-cfg-5",
+      configurationId: "innovair-sh-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6648,7 +8529,40 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sav-series-central-ducted-cfg-1",
+      configurationId: "innovair-shv-series-central-ducted-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6659,51 +8573,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sav-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-6",
+      configurationId: "innovair-sav-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6714,7 +8584,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sav-series-central-ducted-cfg-7",
+      configurationId: "innovair-sav-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6725,128 +8595,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sav-series-central-ducted-cfg-8",
+      configurationId: "innovair-sav-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: 1.96,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-sav-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sav-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-1",
+      configurationId: "innovair-sov-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6857,18 +8617,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-3",
+      configurationId: "innovair-sov-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6879,51 +8628,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-8",
+      configurationId: "innovair-sov-series-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6934,7 +8639,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-9",
+      configurationId: "innovair-sov-series-central-ducted-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6945,29 +8650,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-12",
+      configurationId: "innovair-sov-series-central-ducted-30000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6978,40 +8661,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-16",
+      configurationId: "innovair-sov-series-central-ducted-30000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7022,18 +8672,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-18",
+      configurationId: "innovair-sov-series-central-ducted-30000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7044,40 +8683,161 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-19",
+      configurationId: "innovair-sav-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.85,
+          heatingCapacityBtu: 25600,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-sov-series-central-ducted-cfg-20",
+      configurationId: "innovair-sav-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-sov-series-central-ducted-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
+          heatingCapacityBtu: 31800,
           cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-q32-wall-single-cfg-1",
+      configurationId: "innovair-sav-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sav-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q32-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7088,7 +8848,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q32-wall-single-cfg-2",
+      configurationId: "innovair-q32-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7099,7 +8859,51 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q32-wall-single-cfg-3",
+      configurationId: "innovair-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q32-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7110,7 +8914,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-wall-single-cfg-1",
+      configurationId: "innovair-q4-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7121,18 +8925,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-q4-wall-single-cfg-3",
+      configurationId: "innovair-q4-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7143,40 +8936,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-q4-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-q4-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-q4-wall-single-cfg-7",
+      configurationId: "innovair-q4-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7187,40 +8947,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-q4-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-q4-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-q4-wall-single-cfg-11",
+      configurationId: "innovair-q4-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7231,7 +8958,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-wall-single-cfg-12",
+      configurationId: "innovair-q4-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7242,7 +8969,84 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mhw-series-wall-single-cfg-1",
+      configurationId: "innovair-q4-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q4-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q4-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q4-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q4-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q4-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q4-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mhw-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7253,18 +9057,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mhw-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17100,
-          cop: 2.01,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mhw-series-wall-single-cfg-3",
+      configurationId: "innovair-mhw-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7275,18 +9068,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mhw-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8700,
-          cop: 2.33,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mhw-series-wall-single-cfg-5",
+      configurationId: "innovair-mhw-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7297,29 +9079,29 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mhw-series-wall-single-cfg-6",
+      configurationId: "innovair-mhw-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 2.3,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-mhw-series-wall-single-cfg-7",
+      configurationId: "innovair-mhw-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 13600,
-          cop: 2.1,
+          heatingCapacityBtu: 17100,
+          cop: 2.01,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-mhw-series-wall-single-cfg-8",
+      configurationId: "innovair-mhw-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7330,51 +9112,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mhw-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7900,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mhw-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mhw-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mhw-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mhw-series-wall-single-cfg-13",
+      configurationId: "innovair-mhw-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7385,7 +9123,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mos-series-wall-single-cfg-1",
+      configurationId: "innovair-mos-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7396,337 +9134,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mos-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.17,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13900,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36600,
-          cop: 2.11,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.23,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30600,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 2.5,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13700,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30200,
-          cop: 2.02,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38500,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7900,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mos-series-wall-single-cfg-32",
+      configurationId: "innovair-mos-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7737,7 +9145,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mos-series-wall-single-cfg-33",
+      configurationId: "innovair-mos-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7748,7 +9156,73 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdl-series-wall-single-cfg-1",
+      configurationId: "innovair-mhw-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: 2.33,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mhw-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mhw-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mhw-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mhw-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mhw-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7900,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdl-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7759,29 +9233,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdl-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2.25,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mdl-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mdl-series-wall-single-cfg-4",
+      configurationId: "innovair-mdl-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7792,7 +9244,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdl-series-wall-single-cfg-5",
+      configurationId: "innovair-mdl-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdl-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7803,7 +9266,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdl-series-wall-single-cfg-6",
+      configurationId: "innovair-mdl-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdl-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7814,7 +9288,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-1",
+      configurationId: "innovair-mdh-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7825,51 +9299,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9100,
-          cop: 2.44,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mdh-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mdh-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mdh-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mdh-series-wall-single-cfg-6",
+      configurationId: "innovair-mdh-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7880,7 +9310,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-7",
+      configurationId: "innovair-mdh-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdh-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7891,7 +9332,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-8",
+      configurationId: "innovair-mdh-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdh-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7902,7 +9354,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-9",
+      configurationId: "innovair-mdh-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdh-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7913,18 +9376,73 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-10",
+      configurationId: "innovair-mos-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 31600,
-          cop: 2.1,
+          heatingCapacityBtu: 27400,
+          cop: 2.2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-11",
+      configurationId: "innovair-mos-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30200,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdh-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdh-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7935,18 +9453,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mdh-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-1",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7957,7 +9464,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-2",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7968,7 +9475,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-3",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7979,205 +9486,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37400,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37400,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-22",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8188,7 +9497,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-23",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8199,7 +9508,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-24",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8210,106 +9519,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-mom-series-wall-single-cfg-34",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8320,7 +9530,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-35",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8331,7 +9541,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-36",
+      configurationId: "innovair-mom-series-wall-single-18000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8342,7 +9552,73 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-37",
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8353,29 +9629,84 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-38",
+      configurationId: "innovair-mom-series-wall-single-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
+          heatingCapacityBtu: 25000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-39",
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
+          heatingCapacityBtu: 26600,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-40",
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8386,7 +9717,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-41",
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8397,7 +9728,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-42",
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8408,7 +9739,84 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-43",
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-36000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37400,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37400,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8419,7 +9827,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-44",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8430,7 +9838,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-45",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8441,7 +9849,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-46",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8452,7 +9860,40 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-47",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8463,7 +9904,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-48",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8474,7 +9915,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-49",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8485,7 +9926,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-50",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-15",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8496,7 +9937,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-mom-series-wall-single-cfg-51",
+      configurationId: "innovair-mom-series-wall-single-48000-cfg-16",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8507,7 +9948,95 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-1",
+      configurationId: "innovair-mom-series-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mom-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdh-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mdh-series-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-q4-multi-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8518,7 +10047,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-2",
+      configurationId: "innovair-q4-multi-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8529,7 +10058,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-3",
+      configurationId: "innovair-q4-multi-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8540,7 +10069,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-4",
+      configurationId: "innovair-q4-multi-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8551,7 +10080,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-5",
+      configurationId: "innovair-q4-multi-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8562,7 +10091,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-6",
+      configurationId: "innovair-q4-multi-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8573,7 +10102,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-7",
+      configurationId: "innovair-q4-multi-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8584,7 +10113,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-8",
+      configurationId: "innovair-q4-multi-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8595,7 +10124,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-9",
+      configurationId: "innovair-q4-multi-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8606,7 +10135,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-10",
+      configurationId: "innovair-q4-multi-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8617,7 +10146,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-11",
+      configurationId: "innovair-q4-multi-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8628,7 +10157,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-q4-multi-wall-single-cfg-12",
+      configurationId: "innovair-q4-multi-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8639,7 +10168,62 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-swv-series-central-ducted-cfg-1",
+      configurationId: "innovair-sov-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-swv-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8650,7 +10234,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-swv-series-central-ducted-cfg-2",
+      configurationId: "innovair-swv-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-swv-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8661,7 +10256,18 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-swv-series-central-ducted-cfg-3",
+      configurationId: "innovair-swv-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-swv-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8672,18 +10278,7 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-swv-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20800,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "innovair-swv-series-central-ducted-cfg-5",
+      configurationId: "innovair-swv-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -8694,12 +10289,408 @@ export const innovairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "innovair-swv-series-central-ducted-cfg-6",
+      configurationId: "innovair-sov-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 30200,
+          heatingCapacityBtu: 19700,
           cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-shv-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.17,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7900,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.5,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13700,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.23,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36600,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38500,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-15000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-mos-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "innovair-sov-series-central-ducted-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 1.85,
           confidence: "verified",
         }
       ]

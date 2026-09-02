@@ -125,19 +125,20 @@ export const toshibacarrierDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "toshiba-carrier-standard-wall-single",
-      slug: "toshiba-carrier-standard-wall-single",
-      name: "Standard",
+      id: "toshiba-carrier-standard-wall-single-18000",
+      slug: "toshiba-carrier-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
       seriesId: "toshiba-carrier-standard",
       brandId: "toshiba-carrier",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 8400,
-      heatingCapacity5FMaxBtu: 35400,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 13000,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -151,15 +152,124 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0367hs-ul-wall-single",
-      slug: "toshiba-carrier-mcy-map0367hs-ul-wall-single",
-      name: "MCY-MAP0367HS-UL",
-      seriesId: "toshiba-carrier-mcy-map0367hs-ul",
+      id: "toshiba-carrier-standard-wall-single-24000",
+      slug: "toshiba-carrier-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "toshiba-carrier-standard",
       brandId: "toshiba-carrier",
-      modelNumber: "MCY-MAP0367HS-UL",
-      normalizedModelNumber: "mcy-map0367hs-ul",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 19800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-30000",
+      slug: "toshiba-carrier-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "toshiba-carrier-standard",
+      brandId: "toshiba-carrier",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19500,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-36000",
+      slug: "toshiba-carrier-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "toshiba-carrier-standard",
+      brandId: "toshiba-carrier",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 26000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-42000",
+      slug: "toshiba-carrier-standard-wall-single-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "toshiba-carrier-standard",
+      brandId: "toshiba-carrier",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 24800,
+      heatingCapacity5FMaxBtu: 32200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-mcy-map0367hs-ul-wall-single-36000",
+      slug: "toshiba-carrier-mcy-map0367hs-ul-wall-single-36000",
+      name: "MCY-MAP0367HS-UL 36 000 BTU",
+      seriesId: "toshiba-carrier-mcy-map0367hs-ul",
+      brandId: "toshiba-carrier",
+      modelNumber: "MCY-MAP0367HS-UL 36k",
+      normalizedModelNumber: "mcy-map0367hs-ul-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 25000,
@@ -177,15 +287,16 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single",
-      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single",
-      name: "MCY-MAP0487HS-UL*",
+      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000",
+      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000",
+      name: "MCY-MAP0487HS-UL* 48 000 BTU",
       seriesId: "toshiba-carrier-mcy-map0487hs-ul",
       brandId: "toshiba-carrier",
-      modelNumber: "MCY-MAP0487HS-UL*",
-      normalizedModelNumber: "mcy-map0487hs-ul",
+      modelNumber: "MCY-MAP0487HS-UL* 48k",
+      normalizedModelNumber: "mcy-map0487hs-ul-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 32000,
@@ -203,15 +314,16 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single",
-      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single",
-      name: "MCY-MAP0607HS-UL*",
+      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000",
+      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000",
+      name: "MCY-MAP0607HS-UL* 60 000 BTU",
       seriesId: "toshiba-carrier-mcy-map0607hs-ul",
       brandId: "toshiba-carrier",
-      modelNumber: "MCY-MAP0607HS-UL*",
-      normalizedModelNumber: "mcy-map0607hs-ul",
+      modelNumber: "MCY-MAP0607HS-UL* 60k",
+      normalizedModelNumber: "mcy-map0607hs-ul-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: 60000,
       coolingCapacityMaxBtu: 60000,
       heatingCapacity5FMinBtu: 40000,
@@ -229,15 +341,70 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single",
-      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single",
-      name: "RAV-BP121AT2P-UL",
-      seriesId: "toshiba-carrier-rav-bp121at2p-ul",
+      id: "toshiba-carrier-standard-wall-single-12000",
+      slug: "toshiba-carrier-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "toshiba-carrier-standard",
       brandId: "toshiba-carrier",
-      modelNumber: "RAV-BP121AT2P-UL",
-      normalizedModelNumber: "rav-bp121at2p-ul",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-48000",
+      slug: "toshiba-carrier-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "toshiba-carrier-standard",
+      brandId: "toshiba-carrier",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 35400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000",
+      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000",
+      name: "RAV-BP121AT2P-UL 12 000 BTU",
+      seriesId: "toshiba-carrier-rav-bp121at2p-ul",
+      brandId: "toshiba-carrier",
+      modelNumber: "RAV-BP121AT2P-UL 12k",
+      normalizedModelNumber: "rav-bp121at2p-ul-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8500,
@@ -255,15 +422,16 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single",
-      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single",
-      name: "RAV-BP181AT2P-UL",
+      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000",
+      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000",
+      name: "RAV-BP181AT2P-UL 18 000 BTU",
       seriesId: "toshiba-carrier-rav-bp181at2p-ul",
       brandId: "toshiba-carrier",
-      modelNumber: "RAV-BP181AT2P-UL",
-      normalizedModelNumber: "rav-bp181at2p-ul",
+      modelNumber: "RAV-BP181AT2P-UL 18k",
+      normalizedModelNumber: "rav-bp181at2p-ul-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12300,
@@ -281,15 +449,16 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single",
-      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single",
-      name: "RAV-BP241AT2P-UL",
+      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000",
+      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000",
+      name: "RAV-BP241AT2P-UL 24 000 BTU",
       seriesId: "toshiba-carrier-rav-bp241at2p-ul",
       brandId: "toshiba-carrier",
-      modelNumber: "RAV-BP241AT2P-UL",
-      normalizedModelNumber: "rav-bp241at2p-ul",
+      modelNumber: "RAV-BP241AT2P-UL 24k",
+      normalizedModelNumber: "rav-bp241at2p-ul-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 16900,
@@ -307,15 +476,16 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single",
-      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single",
-      name: "RAV-BP301AT2P-UL",
+      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000",
+      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000",
+      name: "RAV-BP301AT2P-UL 30 000 BTU",
       seriesId: "toshiba-carrier-rav-bp301at2p-ul",
       brandId: "toshiba-carrier",
-      modelNumber: "RAV-BP301AT2P-UL",
-      normalizedModelNumber: "rav-bp301at2p-ul",
+      modelNumber: "RAV-BP301AT2P-UL 30k",
+      normalizedModelNumber: "rav-bp301at2p-ul-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 21000,
@@ -333,19 +503,47 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single",
-      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single",
-      name: "RAV-BP361AT2P-UL",
+      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-30000",
+      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-30000",
+      name: "RAV-BP361AT2P-UL 30 000 BTU",
       seriesId: "toshiba-carrier-rav-bp361at2p-ul",
       brandId: "toshiba-carrier",
-      modelNumber: "RAV-BP361AT2P-UL",
-      normalizedModelNumber: "rav-bp361at2p-ul",
+      modelNumber: "RAV-BP361AT2P-UL 30k",
+      normalizedModelNumber: "rav-bp361at2p-ul-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 22.4,
+      seer2Max: 22.4,
+      hspf2Min: 11.3,
+      hspf2Max: 11.3,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000",
+      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000",
+      name: "RAV-BP361AT2P-UL 36 000 BTU",
+      seriesId: "toshiba-carrier-rav-bp361at2p-ul",
+      brandId: "toshiba-carrier",
+      modelNumber: "RAV-BP361AT2P-UL 36k",
+      normalizedModelNumber: "rav-bp361at2p-ul-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 25000,
-      heatingCapacity5FMaxBtu: 27000,
+      heatingCapacity5FMaxBtu: 25200,
       seer2Min: 18.1,
       seer2Max: 24.8,
       hspf2Min: 10.1,
@@ -359,15 +557,16 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single",
-      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single",
-      name: "RAV-BP421AT2P-UL",
+      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000",
+      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000",
+      name: "RAV-BP421AT2P-UL 42 000 BTU",
       seriesId: "toshiba-carrier-rav-bp421at2p-ul",
       brandId: "toshiba-carrier",
-      modelNumber: "RAV-BP421AT2P-UL",
-      normalizedModelNumber: "rav-bp421at2p-ul",
+      modelNumber: "RAV-BP421AT2P-UL 42k",
+      normalizedModelNumber: "rav-bp421at2p-ul-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: 42000,
       coolingCapacityMaxBtu: 42000,
       heatingCapacity5FMinBtu: 29800,
@@ -393,38 +592,14 @@ export const toshibacarrierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "toshiba-carrier-rav-sp240at2-ul",
-      modelNumber: "RAV-SP240AT2-UL",
-      brandId: "toshiba-carrier",
-      refrigerant: null as any,
-    },
-    {
-      id: "toshiba-carrier-rav-sp300at2-ul",
-      modelNumber: "RAV-SP300AT2-UL",
-      brandId: "toshiba-carrier",
-      refrigerant: null as any,
-    },
-    {
-      id: "toshiba-carrier-rav-sp360at2-ul",
-      modelNumber: "RAV-SP360AT2-UL",
-      brandId: "toshiba-carrier",
-      refrigerant: null as any,
-    },
-    {
-      id: "toshiba-carrier-rav-sp420at2-ul",
-      modelNumber: "RAV-SP420AT2-UL",
-      brandId: "toshiba-carrier",
-      refrigerant: null as any,
-    },
-    {
-      id: "toshiba-carrier-rav-sp122at2p-ul",
-      modelNumber: "RAV-SP122AT2P-UL",
-      brandId: "toshiba-carrier",
-      refrigerant: null as any,
-    },
-    {
       id: "toshiba-carrier-rav-sp182at2p-ul",
       modelNumber: "RAV-SP182AT2P-UL",
+      brandId: "toshiba-carrier",
+      refrigerant: null as any,
+    },
+    {
+      id: "toshiba-carrier-rav-sp240at2-ul",
+      modelNumber: "RAV-SP240AT2-UL",
       brandId: "toshiba-carrier",
       refrigerant: null as any,
     },
@@ -435,8 +610,20 @@ export const toshibacarrierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "toshiba-carrier-rav-sp300at2-ul",
+      modelNumber: "RAV-SP300AT2-UL",
+      brandId: "toshiba-carrier",
+      refrigerant: null as any,
+    },
+    {
       id: "toshiba-carrier-rav-sp302at2p-ul",
       modelNumber: "RAV-SP302AT2P-UL",
+      brandId: "toshiba-carrier",
+      refrigerant: null as any,
+    },
+    {
+      id: "toshiba-carrier-rav-sp360at2-ul",
+      modelNumber: "RAV-SP360AT2-UL",
       brandId: "toshiba-carrier",
       refrigerant: null as any,
     },
@@ -447,20 +634,14 @@ export const toshibacarrierDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "toshiba-carrier-rav-sp420at2-ul",
+      modelNumber: "RAV-SP420AT2-UL",
+      brandId: "toshiba-carrier",
+      refrigerant: null as any,
+    },
+    {
       id: "toshiba-carrier-rav-sp422at2p-ul",
       modelNumber: "RAV-SP422AT2P-UL",
-      brandId: "toshiba-carrier",
-      refrigerant: null as any,
-    },
-    {
-      id: "toshiba-carrier-rav-sp482at2p-ul",
-      modelNumber: "RAV-SP482AT2P-UL",
-      brandId: "toshiba-carrier",
-      refrigerant: null as any,
-    },
-    {
-      id: "toshiba-carrier-rav-bp481at2p-ul",
-      modelNumber: "RAV-BP481AT2P-UL",
       brandId: "toshiba-carrier",
       refrigerant: null as any,
     },
@@ -479,6 +660,24 @@ export const toshibacarrierDataset: BrandDataset = {
     {
       id: "toshiba-carrier-mcy-map0607hs-ul",
       modelNumber: "MCY-MAP0607HS-UL",
+      brandId: "toshiba-carrier",
+      refrigerant: null as any,
+    },
+    {
+      id: "toshiba-carrier-rav-sp122at2p-ul",
+      modelNumber: "RAV-SP122AT2P-UL",
+      brandId: "toshiba-carrier",
+      refrigerant: null as any,
+    },
+    {
+      id: "toshiba-carrier-rav-sp482at2p-ul",
+      modelNumber: "RAV-SP482AT2P-UL",
+      brandId: "toshiba-carrier",
+      refrigerant: null as any,
+    },
+    {
+      id: "toshiba-carrier-rav-bp481at2p-ul",
+      modelNumber: "RAV-BP481AT2P-UL",
       brandId: "toshiba-carrier",
       refrigerant: null as any,
     },
@@ -524,9 +723,9 @@ export const toshibacarrierDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-1",
-      slug: "toshiba-carrier-standard-wall-single-cfg-1",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-1",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-1",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-sp180at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -538,9 +737,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-2",
-      slug: "toshiba-carrier-standard-wall-single-cfg-2",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-2",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-2",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-sp180at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -552,9 +751,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-3",
-      slug: "toshiba-carrier-standard-wall-single-cfg-3",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-3",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-3",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-sp180at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -566,93 +765,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-4",
-      slug: "toshiba-carrier-standard-wall-single-cfg-4",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp240at2-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23600,
-      coolingCapacityMaxBtu: 23600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-5",
-      slug: "toshiba-carrier-standard-wall-single-cfg-5",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp300at2-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-6",
-      slug: "toshiba-carrier-standard-wall-single-cfg-6",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp360at2-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36400,
-      coolingCapacityMaxBtu: 36400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-7",
-      slug: "toshiba-carrier-standard-wall-single-cfg-7",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp360at2-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-8",
-      slug: "toshiba-carrier-standard-wall-single-cfg-8",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp420at2-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 40500,
-      coolingCapacityMaxBtu: 40500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-9",
-      slug: "toshiba-carrier-standard-wall-single-cfg-9",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp420at2-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 41000,
-      coolingCapacityMaxBtu: 41000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-10",
-      slug: "toshiba-carrier-standard-wall-single-cfg-10",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-4",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-4",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-sp180at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -664,9 +779,79 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-11",
-      slug: "toshiba-carrier-standard-wall-single-cfg-11",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-5",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-5",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
+      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-6",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-6",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
+      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-7",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-7",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
+      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-18000-cfg-8",
+      slug: "toshiba-carrier-standard-wall-single-18000-cfg-8",
+      modelId: "toshiba-carrier-standard-wall-single-18000",
+      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-24000-cfg-1",
+      slug: "toshiba-carrier-standard-wall-single-24000-cfg-1",
+      modelId: "toshiba-carrier-standard-wall-single-24000",
+      outdoorUnitId: "toshiba-carrier-rav-sp240at2-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23600,
+      coolingCapacityMaxBtu: 23600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-24000-cfg-2",
+      slug: "toshiba-carrier-standard-wall-single-24000-cfg-2",
+      modelId: "toshiba-carrier-standard-wall-single-24000",
       outdoorUnitId: "toshiba-carrier-rav-sp240at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -678,9 +863,79 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-12",
-      slug: "toshiba-carrier-standard-wall-single-cfg-12",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-24000-cfg-3",
+      slug: "toshiba-carrier-standard-wall-single-24000-cfg-3",
+      modelId: "toshiba-carrier-standard-wall-single-24000",
+      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-24000-cfg-4",
+      slug: "toshiba-carrier-standard-wall-single-24000-cfg-4",
+      modelId: "toshiba-carrier-standard-wall-single-24000",
+      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-24000-cfg-5",
+      slug: "toshiba-carrier-standard-wall-single-24000-cfg-5",
+      modelId: "toshiba-carrier-standard-wall-single-24000",
+      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-24000-cfg-6",
+      slug: "toshiba-carrier-standard-wall-single-24000-cfg-6",
+      modelId: "toshiba-carrier-standard-wall-single-24000",
+      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-30000-cfg-1",
+      slug: "toshiba-carrier-standard-wall-single-30000-cfg-1",
+      modelId: "toshiba-carrier-standard-wall-single-30000",
+      outdoorUnitId: "toshiba-carrier-rav-sp300at2-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-30000-cfg-2",
+      slug: "toshiba-carrier-standard-wall-single-30000-cfg-2",
+      modelId: "toshiba-carrier-standard-wall-single-30000",
       outdoorUnitId: "toshiba-carrier-rav-sp300at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -692,9 +947,79 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-13",
-      slug: "toshiba-carrier-standard-wall-single-cfg-13",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-30000-cfg-3",
+      slug: "toshiba-carrier-standard-wall-single-30000-cfg-3",
+      modelId: "toshiba-carrier-standard-wall-single-30000",
+      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-30000-cfg-4",
+      slug: "toshiba-carrier-standard-wall-single-30000-cfg-4",
+      modelId: "toshiba-carrier-standard-wall-single-30000",
+      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-30000-cfg-5",
+      slug: "toshiba-carrier-standard-wall-single-30000-cfg-5",
+      modelId: "toshiba-carrier-standard-wall-single-30000",
+      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-30000-cfg-6",
+      slug: "toshiba-carrier-standard-wall-single-30000-cfg-6",
+      modelId: "toshiba-carrier-standard-wall-single-30000",
+      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-36000-cfg-1",
+      slug: "toshiba-carrier-standard-wall-single-36000-cfg-1",
+      modelId: "toshiba-carrier-standard-wall-single-36000",
+      outdoorUnitId: "toshiba-carrier-rav-sp360at2-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36400,
+      coolingCapacityMaxBtu: 36400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-36000-cfg-2",
+      slug: "toshiba-carrier-standard-wall-single-36000-cfg-2",
+      modelId: "toshiba-carrier-standard-wall-single-36000",
       outdoorUnitId: "toshiba-carrier-rav-sp360at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -706,9 +1031,107 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-14",
-      slug: "toshiba-carrier-standard-wall-single-cfg-14",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-36000-cfg-3",
+      slug: "toshiba-carrier-standard-wall-single-36000-cfg-3",
+      modelId: "toshiba-carrier-standard-wall-single-36000",
+      outdoorUnitId: "toshiba-carrier-rav-sp360at2-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-36000-cfg-4",
+      slug: "toshiba-carrier-standard-wall-single-36000-cfg-4",
+      modelId: "toshiba-carrier-standard-wall-single-36000",
+      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-36000-cfg-5",
+      slug: "toshiba-carrier-standard-wall-single-36000-cfg-5",
+      modelId: "toshiba-carrier-standard-wall-single-36000",
+      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-36000-cfg-6",
+      slug: "toshiba-carrier-standard-wall-single-36000-cfg-6",
+      modelId: "toshiba-carrier-standard-wall-single-36000",
+      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-36000-cfg-7",
+      slug: "toshiba-carrier-standard-wall-single-36000-cfg-7",
+      modelId: "toshiba-carrier-standard-wall-single-36000",
+      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-42000-cfg-1",
+      slug: "toshiba-carrier-standard-wall-single-42000-cfg-1",
+      modelId: "toshiba-carrier-standard-wall-single-42000",
+      outdoorUnitId: "toshiba-carrier-rav-sp420at2-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 40500,
+      coolingCapacityMaxBtu: 40500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-42000-cfg-2",
+      slug: "toshiba-carrier-standard-wall-single-42000-cfg-2",
+      modelId: "toshiba-carrier-standard-wall-single-42000",
+      outdoorUnitId: "toshiba-carrier-rav-sp420at2-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 41000,
+      coolingCapacityMaxBtu: 41000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-42000-cfg-3",
+      slug: "toshiba-carrier-standard-wall-single-42000-cfg-3",
+      modelId: "toshiba-carrier-standard-wall-single-42000",
       outdoorUnitId: "toshiba-carrier-rav-sp420at2-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -720,79 +1143,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-15",
-      slug: "toshiba-carrier-standard-wall-single-cfg-15",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp122at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-16",
-      slug: "toshiba-carrier-standard-wall-single-cfg-16",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-17",
-      slug: "toshiba-carrier-standard-wall-single-cfg-17",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-18",
-      slug: "toshiba-carrier-standard-wall-single-cfg-18",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-19",
-      slug: "toshiba-carrier-standard-wall-single-cfg-19",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-20",
-      slug: "toshiba-carrier-standard-wall-single-cfg-20",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-42000-cfg-4",
+      slug: "toshiba-carrier-standard-wall-single-42000-cfg-4",
+      modelId: "toshiba-carrier-standard-wall-single-42000",
       outdoorUnitId: "toshiba-carrier-rav-sp422at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -804,191 +1157,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-21",
-      slug: "toshiba-carrier-standard-wall-single-cfg-21",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp482at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-22",
-      slug: "toshiba-carrier-standard-wall-single-cfg-22",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp122at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-23",
-      slug: "toshiba-carrier-standard-wall-single-cfg-23",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-24",
-      slug: "toshiba-carrier-standard-wall-single-cfg-24",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-25",
-      slug: "toshiba-carrier-standard-wall-single-cfg-25",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp182at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-26",
-      slug: "toshiba-carrier-standard-wall-single-cfg-26",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-27",
-      slug: "toshiba-carrier-standard-wall-single-cfg-27",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-28",
-      slug: "toshiba-carrier-standard-wall-single-cfg-28",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-29",
-      slug: "toshiba-carrier-standard-wall-single-cfg-29",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-30",
-      slug: "toshiba-carrier-standard-wall-single-cfg-30",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp302at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-31",
-      slug: "toshiba-carrier-standard-wall-single-cfg-31",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-32",
-      slug: "toshiba-carrier-standard-wall-single-cfg-32",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-33",
-      slug: "toshiba-carrier-standard-wall-single-cfg-33",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp362at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-34",
-      slug: "toshiba-carrier-standard-wall-single-cfg-34",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-42000-cfg-5",
+      slug: "toshiba-carrier-standard-wall-single-42000-cfg-5",
+      modelId: "toshiba-carrier-standard-wall-single-42000",
       outdoorUnitId: "toshiba-carrier-rav-sp422at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -1000,9 +1171,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-35",
-      slug: "toshiba-carrier-standard-wall-single-cfg-35",
-      modelId: "toshiba-carrier-standard-wall-single",
+      id: "toshiba-carrier-standard-wall-single-42000-cfg-6",
+      slug: "toshiba-carrier-standard-wall-single-42000-cfg-6",
+      modelId: "toshiba-carrier-standard-wall-single-42000",
       outdoorUnitId: "toshiba-carrier-rav-sp422at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -1014,93 +1185,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-standard-wall-single-cfg-36",
-      slug: "toshiba-carrier-standard-wall-single-cfg-36",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp482at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-37",
-      slug: "toshiba-carrier-standard-wall-single-cfg-37",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp242at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-38",
-      slug: "toshiba-carrier-standard-wall-single-cfg-38",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-sp482at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-39",
-      slug: "toshiba-carrier-standard-wall-single-cfg-39",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-bp481at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-40",
-      slug: "toshiba-carrier-standard-wall-single-cfg-40",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-bp481at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-standard-wall-single-cfg-41",
-      slug: "toshiba-carrier-standard-wall-single-cfg-41",
-      modelId: "toshiba-carrier-standard-wall-single",
-      outdoorUnitId: "toshiba-carrier-rav-bp481at2p-ul",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "toshiba-carrier-mcy-map0367hs-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-mcy-map0367hs-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-mcy-map0367hs-ul-wall-single",
+      id: "toshiba-carrier-mcy-map0367hs-ul-wall-single-36000-cfg-1",
+      slug: "toshiba-carrier-mcy-map0367hs-ul-wall-single-36000-cfg-1",
+      modelId: "toshiba-carrier-mcy-map0367hs-ul-wall-single-36000",
       outdoorUnitId: "toshiba-carrier-mcy-map0367hs-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1112,9 +1199,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-mcy-map0487hs-ul-wall-single",
+      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-1",
+      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-1",
+      modelId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000",
       outdoorUnitId: "toshiba-carrier-mcy-map0487hs-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1126,9 +1213,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-mcy-map0487hs-ul-wall-single",
+      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-2",
+      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-2",
+      modelId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000",
       outdoorUnitId: "toshiba-carrier-mcy-map0487hs-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1140,9 +1227,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-mcy-map0487hs-ul-wall-single",
+      id: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-3",
+      slug: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-3",
+      modelId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000",
       outdoorUnitId: "toshiba-carrier-mcy-map0487hs-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1154,9 +1241,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-mcy-map0607hs-ul-wall-single",
+      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-1",
+      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-1",
+      modelId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000",
       outdoorUnitId: "toshiba-carrier-mcy-map0607hs-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1168,9 +1255,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-mcy-map0607hs-ul-wall-single",
+      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-2",
+      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-2",
+      modelId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000",
       outdoorUnitId: "toshiba-carrier-mcy-map0607hs-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1182,9 +1269,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-mcy-map0607hs-ul-wall-single",
+      id: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-3",
+      slug: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-3",
+      modelId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000",
       outdoorUnitId: "toshiba-carrier-mcy-map0607hs-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1196,9 +1283,121 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-rav-bp121at2p-ul-wall-single",
+      id: "toshiba-carrier-standard-wall-single-12000-cfg-1",
+      slug: "toshiba-carrier-standard-wall-single-12000-cfg-1",
+      modelId: "toshiba-carrier-standard-wall-single-12000",
+      outdoorUnitId: "toshiba-carrier-rav-sp122at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-12000-cfg-2",
+      slug: "toshiba-carrier-standard-wall-single-12000-cfg-2",
+      modelId: "toshiba-carrier-standard-wall-single-12000",
+      outdoorUnitId: "toshiba-carrier-rav-sp122at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-48000-cfg-1",
+      slug: "toshiba-carrier-standard-wall-single-48000-cfg-1",
+      modelId: "toshiba-carrier-standard-wall-single-48000",
+      outdoorUnitId: "toshiba-carrier-rav-sp482at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-48000-cfg-2",
+      slug: "toshiba-carrier-standard-wall-single-48000-cfg-2",
+      modelId: "toshiba-carrier-standard-wall-single-48000",
+      outdoorUnitId: "toshiba-carrier-rav-sp482at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-48000-cfg-3",
+      slug: "toshiba-carrier-standard-wall-single-48000-cfg-3",
+      modelId: "toshiba-carrier-standard-wall-single-48000",
+      outdoorUnitId: "toshiba-carrier-rav-sp482at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-48000-cfg-4",
+      slug: "toshiba-carrier-standard-wall-single-48000-cfg-4",
+      modelId: "toshiba-carrier-standard-wall-single-48000",
+      outdoorUnitId: "toshiba-carrier-rav-bp481at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-48000-cfg-5",
+      slug: "toshiba-carrier-standard-wall-single-48000-cfg-5",
+      modelId: "toshiba-carrier-standard-wall-single-48000",
+      outdoorUnitId: "toshiba-carrier-rav-bp481at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-standard-wall-single-48000-cfg-6",
+      slug: "toshiba-carrier-standard-wall-single-48000-cfg-6",
+      modelId: "toshiba-carrier-standard-wall-single-48000",
+      outdoorUnitId: "toshiba-carrier-rav-bp481at2p-ul",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-1",
+      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-1",
+      modelId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000",
       outdoorUnitId: "toshiba-carrier-rav-bp121at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1210,9 +1409,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-rav-bp121at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-2",
+      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-2",
+      modelId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000",
       outdoorUnitId: "toshiba-carrier-rav-bp121at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1224,9 +1423,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-rav-bp121at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-3",
+      slug: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-3",
+      modelId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000",
       outdoorUnitId: "toshiba-carrier-rav-bp121at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1238,9 +1437,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-1",
+      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-1",
+      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-bp181at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1252,9 +1451,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-2",
+      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-2",
+      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-bp181at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1266,9 +1465,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-3",
+      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-3",
+      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-bp181at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1280,9 +1479,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-4",
-      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-4",
-      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-4",
+      slug: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-4",
+      modelId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000",
       outdoorUnitId: "toshiba-carrier-rav-bp181at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1294,9 +1493,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-1",
+      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-1",
+      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000",
       outdoorUnitId: "toshiba-carrier-rav-bp241at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1308,9 +1507,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-2",
+      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-2",
+      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000",
       outdoorUnitId: "toshiba-carrier-rav-bp241at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1322,9 +1521,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-3",
+      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-3",
+      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000",
       outdoorUnitId: "toshiba-carrier-rav-bp241at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1336,9 +1535,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-4",
-      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-4",
-      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-4",
+      slug: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-4",
+      modelId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000",
       outdoorUnitId: "toshiba-carrier-rav-bp241at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1350,9 +1549,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-1",
+      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-1",
+      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000",
       outdoorUnitId: "toshiba-carrier-rav-bp301at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1364,9 +1563,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-2",
+      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-2",
+      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000",
       outdoorUnitId: "toshiba-carrier-rav-bp301at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1378,9 +1577,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-3",
+      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-3",
+      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000",
       outdoorUnitId: "toshiba-carrier-rav-bp301at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1392,9 +1591,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-4",
-      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-4",
-      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-4",
+      slug: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-4",
+      modelId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000",
       outdoorUnitId: "toshiba-carrier-rav-bp301at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1406,9 +1605,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-30000-cfg-1",
+      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-30000-cfg-1",
+      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-30000",
       outdoorUnitId: "toshiba-carrier-rav-bp361at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -1420,9 +1619,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-1",
+      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-1",
+      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000",
       outdoorUnitId: "toshiba-carrier-rav-bp361at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1434,9 +1633,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-2",
+      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-2",
+      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000",
       outdoorUnitId: "toshiba-carrier-rav-bp361at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1448,9 +1647,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-4",
-      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-4",
-      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-3",
+      slug: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-3",
+      modelId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000",
       outdoorUnitId: "toshiba-carrier-rav-bp361at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1462,9 +1661,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-1",
-      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-1",
-      modelId: "toshiba-carrier-rav-bp421at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-1",
+      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-1",
+      modelId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000",
       outdoorUnitId: "toshiba-carrier-rav-bp421at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -1476,9 +1675,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-2",
-      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-2",
-      modelId: "toshiba-carrier-rav-bp421at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-2",
+      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-2",
+      modelId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000",
       outdoorUnitId: "toshiba-carrier-rav-bp421at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -1490,9 +1689,9 @@ export const toshibacarrierDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-3",
-      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-3",
-      modelId: "toshiba-carrier-rav-bp421at2p-ul-wall-single",
+      id: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-3",
+      slug: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-3",
+      modelId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000",
       outdoorUnitId: "toshiba-carrier-rav-bp421at2p-ul",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -1506,7 +1705,7 @@ export const toshibacarrierDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1517,7 +1716,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1528,7 +1727,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1539,73 +1738,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-10",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1616,62 +1749,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-16",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1682,73 +1760,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-23",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1759,7 +1771,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-24",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1770,7 +1782,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-25",
+      configurationId: "toshiba-carrier-standard-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1781,128 +1793,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-37",
+      configurationId: "toshiba-carrier-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1913,51 +1804,271 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-38",
+      configurationId: "toshiba-carrier-standard-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
+          heatingCapacityBtu: 19800,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-39",
+      configurationId: "toshiba-carrier-standard-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
+          heatingCapacityBtu: 18300,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-40",
+      configurationId: "toshiba-carrier-standard-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
+          heatingCapacityBtu: 17000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "toshiba-carrier-standard-wall-single-cfg-41",
+      configurationId: "toshiba-carrier-standard-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
+          heatingCapacityBtu: 17300,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "toshiba-carrier-mcy-map0367hs-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-standard-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-36000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-42000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-42000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-42000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-mcy-map0367hs-ul-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1968,7 +2079,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1979,7 +2090,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1990,7 +2101,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-mcy-map0487hs-ul-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2001,7 +2112,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2012,7 +2123,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2023,7 +2134,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-mcy-map0607hs-ul-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2034,7 +2145,95 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-standard-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2045,7 +2244,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2056,7 +2255,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-rav-bp121at2p-ul-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2067,7 +2266,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2078,7 +2277,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2089,7 +2288,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2100,7 +2299,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-cfg-4",
+      configurationId: "toshiba-carrier-rav-bp181at2p-ul-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2111,7 +2310,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2122,7 +2321,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2133,7 +2332,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2144,7 +2343,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-cfg-4",
+      configurationId: "toshiba-carrier-rav-bp241at2p-ul-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2155,7 +2354,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2166,7 +2365,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2177,7 +2376,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2188,7 +2387,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-cfg-4",
+      configurationId: "toshiba-carrier-rav-bp301at2p-ul-wall-single-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2199,7 +2398,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2210,7 +2409,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2221,7 +2420,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2232,7 +2431,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-cfg-4",
+      configurationId: "toshiba-carrier-rav-bp361at2p-ul-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2243,7 +2442,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-1",
+      configurationId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2254,7 +2453,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-2",
+      configurationId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2265,7 +2464,7 @@ export const toshibacarrierDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-cfg-3",
+      configurationId: "toshiba-carrier-rav-bp421at2p-ul-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,

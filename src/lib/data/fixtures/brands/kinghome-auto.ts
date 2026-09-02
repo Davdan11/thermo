@@ -246,18 +246,451 @@ export const kinghomeDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "kinghome-standard-wall-single",
-      slug: "kinghome-standard-wall-single",
-      name: "Standard",
+      id: "kinghome-standard-wall-single-20000",
+      slug: "kinghome-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
       seriesId: "kinghome-standard",
       brandId: "kinghome",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-9000",
+      slug: "kinghome-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6100,
+      heatingCapacity5FMaxBtu: 7300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-12000",
+      slug: "kinghome-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6800,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-18000",
+      slug: "kinghome-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 12400,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-24000",
+      slug: "kinghome-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 19600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-30000",
+      slug: "kinghome-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-36000",
+      slug: "kinghome-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 28500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-42000",
+      slug: "kinghome-standard-wall-single-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 32800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-jasmine-wall-single-9000",
+      slug: "kinghome-jasmine-wall-single-9000",
+      name: "Jasmine 9 000 BTU",
+      seriesId: "kinghome-jasmine",
+      brandId: "kinghome",
+      modelNumber: "Jasmine 9k",
+      normalizedModelNumber: "jasmine-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8200,
+      heatingCapacity5FMaxBtu: 8200,
+      seer2Min: 27,
+      seer2Max: 27,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-jasmine-wall-single-12000",
+      slug: "kinghome-jasmine-wall-single-12000",
+      name: "Jasmine 12 000 BTU",
+      seriesId: "kinghome-jasmine",
+      brandId: "kinghome",
+      modelNumber: "Jasmine 12k",
+      normalizedModelNumber: "jasmine-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10300,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-jasmine-wall-single-18000",
+      slug: "kinghome-jasmine-wall-single-18000",
+      name: "Jasmine 18 000 BTU",
+      seriesId: "kinghome-jasmine",
+      brandId: "kinghome",
+      modelNumber: "Jasmine 18k",
+      normalizedModelNumber: "jasmine-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15100,
+      heatingCapacity5FMaxBtu: 15100,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-jasmine-wall-single-20000",
+      slug: "kinghome-jasmine-wall-single-20000",
+      name: "Jasmine 20 000 BTU",
+      seriesId: "kinghome-jasmine",
+      brandId: "kinghome",
+      modelNumber: "Jasmine 20k",
+      normalizedModelNumber: "jasmine-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-j-series-wall-single-18000",
+      slug: "kinghome-j-series-wall-single-18000",
+      name: "J-Series 18 000 BTU",
+      seriesId: "kinghome-j-series",
+      brandId: "kinghome",
+      modelNumber: "J-Series 18k",
+      normalizedModelNumber: "j-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-j-series-wall-single-20000",
+      slug: "kinghome-j-series-wall-single-20000",
+      name: "J-Series 20 000 BTU",
+      seriesId: "kinghome-j-series",
+      brandId: "kinghome",
+      modelNumber: "J-Series 20k",
+      normalizedModelNumber: "j-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 17900,
+      heatingCapacity5FMaxBtu: 17900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-j-series-wall-single-36000",
+      slug: "kinghome-j-series-wall-single-36000",
+      name: "J-Series 36 000 BTU",
+      seriesId: "kinghome-j-series",
+      brandId: "kinghome",
+      modelNumber: "J-Series 36k",
+      normalizedModelNumber: "j-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.82,
+      cop5FMax: 1.82,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-j-series-wall-single-42000",
+      slug: "kinghome-j-series-wall-single-42000",
+      name: "J-Series 42 000 BTU",
+      seriesId: "kinghome-j-series",
+      brandId: "kinghome",
+      modelNumber: "J-Series 42k",
+      normalizedModelNumber: "j-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.82,
+      cop5FMax: 1.82,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-48000",
+      slug: "kinghome-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "kinghome-standard",
+      brandId: "kinghome",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 36800,
       heatingCapacity5FMaxBtu: 43500,
       seer2Min: null,
       seer2Max: null,
@@ -272,70 +705,46 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-jasmine-wall-single",
-      slug: "kinghome-jasmine-wall-single",
-      name: "Jasmine",
-      seriesId: "kinghome-jasmine",
-      brandId: "kinghome",
-      modelNumber: "Jasmine",
-      normalizedModelNumber: "jasmine",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 8200,
-      heatingCapacity5FMaxBtu: 20000,
-      seer2Min: 21.5,
-      seer2Max: 27,
-      hspf2Min: 8.5,
-      hspf2Max: 11,
-      cop5FMin: 1.8,
-      cop5FMax: 1.91,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-j-series-wall-single",
-      slug: "kinghome-j-series-wall-single",
-      name: "J-Series",
-      seriesId: "kinghome-j-series",
-      brandId: "kinghome",
-      modelNumber: "J-Series",
-      normalizedModelNumber: "j-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
-      heatingCapacity5FMinBtu: 17000,
-      heatingCapacity5FMaxBtu: 30000,
-      seer2Min: 16,
-      seer2Max: 20,
-      hspf2Min: 8.6,
-      hspf2Max: 10,
-      cop5FMin: 1.8,
-      cop5FMax: 1.82,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted",
-      slug: "kinghome-ultranixx-central-ducted",
-      name: "ULTRANIXX",
+      id: "kinghome-ultranixx-central-ducted-24000",
+      slug: "kinghome-ultranixx-central-ducted-24000",
+      name: "ULTRANIXX 24 000 BTU",
       seriesId: "kinghome-ultranixx",
       brandId: "kinghome",
-      modelNumber: "ULTRANIXX",
-      normalizedModelNumber: "ultranixx",
+      modelNumber: "ULTRANIXX 24k",
+      normalizedModelNumber: "ultranixx-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 14800,
+      heatingCapacity5FMaxBtu: 24400,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-48000",
+      slug: "kinghome-ultranixx-central-ducted-48000",
+      name: "ULTRANIXX 48 000 BTU",
+      seriesId: "kinghome-ultranixx",
+      brandId: "kinghome",
+      modelNumber: "ULTRANIXX 48k",
+      normalizedModelNumber: "ultranixx-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32800,
       heatingCapacity5FMaxBtu: 44500,
       seer2Min: 16,
       seer2Max: 17,
@@ -350,24 +759,133 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single",
-      slug: "kinghome-sunflower-wall-single",
-      name: "Sunflower",
-      seriesId: "kinghome-sunflower",
+      id: "kinghome-ultranixx-central-ducted-36000",
+      slug: "kinghome-ultranixx-central-ducted-36000",
+      name: "ULTRANIXX 36 000 BTU",
+      seriesId: "kinghome-ultranixx",
       brandId: "kinghome",
-      modelNumber: "Sunflower",
-      normalizedModelNumber: "sunflower",
+      modelNumber: "ULTRANIXX 36k",
+      normalizedModelNumber: "ultranixx-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-12000",
+      slug: "kinghome-sunflower-wall-single-12000",
+      name: "Sunflower 12 000 BTU",
+      seriesId: "kinghome-sunflower",
+      brandId: "kinghome",
+      modelNumber: "Sunflower 12k",
+      normalizedModelNumber: "sunflower-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-9000",
+      slug: "kinghome-sunflower-wall-single-9000",
+      name: "Sunflower 9 000 BTU",
+      seriesId: "kinghome-sunflower",
+      brandId: "kinghome",
+      modelNumber: "Sunflower 9k",
+      normalizedModelNumber: "sunflower-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
+      coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8400,
-      heatingCapacity5FMaxBtu: 19400,
-      seer2Min: 23,
+      heatingCapacity5FMaxBtu: 8600,
+      seer2Min: 25.5,
       seer2Max: 27,
-      hspf2Min: 8.5,
+      hspf2Min: 10,
       hspf2Max: 10.2,
+      cop5FMin: 1.86,
+      cop5FMax: 1.87,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-20000",
+      slug: "kinghome-sunflower-wall-single-20000",
+      name: "Sunflower 20 000 BTU",
+      seriesId: "kinghome-sunflower",
+      brandId: "kinghome",
+      modelNumber: "Sunflower 20k",
+      normalizedModelNumber: "sunflower-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 19400,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
       cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-18000",
+      slug: "kinghome-sunflower-wall-single-18000",
+      name: "Sunflower 18 000 BTU",
+      seriesId: "kinghome-sunflower",
+      brandId: "kinghome",
+      modelNumber: "Sunflower 18k",
+      normalizedModelNumber: "sunflower-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 14600,
+      seer2Min: 23,
+      seer2Max: 23.5,
+      hspf2Min: 8.5,
+      hspf2Max: 9,
+      cop5FMin: 1.85,
       cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -376,19 +894,20 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single",
-      slug: "kinghome-m-series-wall-single",
-      name: "M-Series",
+      id: "kinghome-m-series-wall-single-18000",
+      slug: "kinghome-m-series-wall-single-18000",
+      name: "M-Series 18 000 BTU",
       seriesId: "kinghome-m-series",
       brandId: "kinghome",
-      modelNumber: "M-Series",
-      normalizedModelNumber: "m-series",
+      modelNumber: "M-Series 18k",
+      normalizedModelNumber: "m-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 14300,
-      heatingCapacity5FMaxBtu: 40000,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 16,
       seer2Max: 21,
       hspf2Min: 8.1,
@@ -402,24 +921,106 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-charmo-wall-single",
-      slug: "kinghome-charmo-wall-single",
-      name: "Charmo",
-      seriesId: "kinghome-charmo",
+      id: "kinghome-m-series-wall-single-24000",
+      slug: "kinghome-m-series-wall-single-24000",
+      name: "M-Series 24 000 BTU",
+      seriesId: "kinghome-m-series",
       brandId: "kinghome",
-      modelNumber: "Charmo",
-      normalizedModelNumber: "charmo",
+      modelNumber: "M-Series 24k",
+      normalizedModelNumber: "m-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 33600,
-      heatingCapacity5FMinBtu: 8000,
-      heatingCapacity5FMaxBtu: 27400,
-      seer2Min: 19,
-      seer2Max: 22,
-      hspf2Min: 8.5,
-      hspf2Max: 9,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 16,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-30000",
+      slug: "kinghome-m-series-wall-single-30000",
+      name: "M-Series 30 000 BTU",
+      seriesId: "kinghome-m-series",
+      brandId: "kinghome",
+      modelNumber: "M-Series 30k",
+      normalizedModelNumber: "m-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 26800,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: 16,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000",
+      slug: "kinghome-m-series-wall-single-36000",
+      name: "M-Series 36 000 BTU",
+      seriesId: "kinghome-m-series",
+      brandId: "kinghome",
+      modelNumber: "M-Series 36k",
+      normalizedModelNumber: "m-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 16,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-9000",
+      slug: "kinghome-charmo-wall-single-9000",
+      name: "Charmo 9 000 BTU",
+      seriesId: "kinghome-charmo",
+      brandId: "kinghome",
+      modelNumber: "Charmo 9k",
+      normalizedModelNumber: "charmo-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8000,
+      heatingCapacity5FMaxBtu: 8200,
+      seer2Min: 19.5,
+      seer2Max: 20.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.8,
+      cop5FMin: 1.81,
       cop5FMax: 1.94,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -428,15 +1029,16 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-cosmo-wall-single",
-      slug: "kinghome-cosmo-wall-single",
-      name: "Cosmo",
+      id: "kinghome-cosmo-wall-single-12000",
+      slug: "kinghome-cosmo-wall-single-12000",
+      name: "Cosmo 12 000 BTU",
       seriesId: "kinghome-cosmo",
       brandId: "kinghome",
-      modelNumber: "Cosmo",
-      normalizedModelNumber: "cosmo",
+      modelNumber: "Cosmo 12k",
+      normalizedModelNumber: "cosmo-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 9700,
@@ -454,24 +1056,25 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted",
-      name: "17 SEER DC inverter rooftop unit",
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-60000",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-60000",
+      name: "17 SEER DC inverter rooftop unit 60 000 BTU",
       seriesId: "kinghome-17-seer-dc-inverter-rooftop-unit",
       brandId: "kinghome",
-      modelNumber: "17 SEER DC inverter rooftop unit",
-      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit",
+      modelNumber: "17 SEER DC inverter rooftop unit 60k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-60000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 56000,
       coolingCapacityMaxBtu: 56000,
-      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMinBtu: 37000,
       heatingCapacity5FMaxBtu: 37000,
       seer2Min: 17,
-      seer2Max: 17.8,
+      seer2Max: 17,
       hspf2Min: 8.3,
-      hspf2Max: 8.8,
-      cop5FMin: 1.75,
+      hspf2Max: 8.3,
+      cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -480,24 +1083,160 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-airy-wall-single",
-      slug: "kinghome-airy-wall-single",
-      name: "Airy",
-      seriesId: "kinghome-airy",
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-48000",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-48000",
+      name: "17 SEER DC inverter rooftop unit 48 000 BTU",
+      seriesId: "kinghome-17-seer-dc-inverter-rooftop-unit",
       brandId: "kinghome",
-      modelNumber: "Airy",
-      normalizedModelNumber: "airy",
+      modelNumber: "17 SEER DC inverter rooftop unit 48k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-48000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 8900,
-      heatingCapacity5FMaxBtu: 20000,
-      seer2Min: 27,
-      seer2Max: 30,
-      hspf2Min: 10,
-      hspf2Max: 11.2,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 17.8,
+      seer2Max: 17.8,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-36000",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-36000",
+      name: "17 SEER DC inverter rooftop unit 36 000 BTU",
+      seriesId: "kinghome-17-seer-dc-inverter-rooftop-unit",
+      brandId: "kinghome",
+      modelNumber: "17 SEER DC inverter rooftop unit 36k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34400,
+      coolingCapacityMaxBtu: 34400,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 23400,
+      seer2Min: 17.8,
+      seer2Max: 17.8,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-24000",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-24000",
+      name: "17 SEER DC inverter rooftop unit 24 000 BTU",
+      seriesId: "kinghome-17-seer-dc-inverter-rooftop-unit",
+      brandId: "kinghome",
+      modelNumber: "17 SEER DC inverter rooftop unit 24k",
+      normalizedModelNumber: "17-seer-dc-inverter-rooftop-unit-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 23400,
+      seer2Min: 17.8,
+      seer2Max: 17.8,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-42000",
+      slug: "kinghome-m-series-wall-single-42000",
+      name: "M-Series 42 000 BTU",
+      seriesId: "kinghome-m-series",
+      brandId: "kinghome",
+      modelNumber: "M-Series 42k",
+      normalizedModelNumber: "m-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-36000",
+      slug: "kinghome-charmo-wall-single-36000",
+      name: "Charmo 36 000 BTU",
+      seriesId: "kinghome-charmo",
+      brandId: "kinghome",
+      modelNumber: "Charmo 36k",
+      normalizedModelNumber: "charmo-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-9000",
+      slug: "kinghome-airy-wall-single-9000",
+      name: "Airy 9 000 BTU",
+      seriesId: "kinghome-airy",
+      brandId: "kinghome",
+      modelNumber: "Airy 9k",
+      normalizedModelNumber: "airy-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8900,
+      heatingCapacity5FMaxBtu: 8900,
+      seer2Min: 30,
+      seer2Max: 30,
+      hspf2Min: 11.2,
+      hspf2Max: 11.2,
+      cop5FMin: 2.11,
       cop5FMax: 2.11,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -506,25 +1245,26 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-pular-wall-single",
-      slug: "kinghome-pular-wall-single",
-      name: "Pular",
-      seriesId: "kinghome-pular",
+      id: "kinghome-airy-wall-single-12000",
+      slug: "kinghome-airy-wall-single-12000",
+      name: "Airy 12 000 BTU",
+      seriesId: "kinghome-airy",
       brandId: "kinghome",
-      modelNumber: "Pular",
-      normalizedModelNumber: "pular",
+      modelNumber: "Airy 12k",
+      normalizedModelNumber: "airy-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 8400,
-      heatingCapacity5FMaxBtu: 20000,
-      seer2Min: 24.5,
-      seer2Max: 27,
-      hspf2Min: 9,
-      hspf2Max: 10.5,
-      cop5FMin: 1.8,
-      cop5FMax: 1.9,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10300,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 29.5,
+      seer2Max: 29.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -532,24 +1272,106 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single",
-      slug: "kinghome-clivia-wall-single",
-      name: "Clivia",
-      seriesId: "kinghome-clivia",
+      id: "kinghome-airy-wall-single-20000",
+      slug: "kinghome-airy-wall-single-20000",
+      name: "Airy 20 000 BTU",
+      seriesId: "kinghome-airy",
       brandId: "kinghome",
-      modelNumber: "Clivia",
-      normalizedModelNumber: "clivia",
+      modelNumber: "Airy 20k",
+      normalizedModelNumber: "airy-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMinBtu: 20000,
       heatingCapacity5FMaxBtu: 20000,
-      seer2Min: 23.5,
+      seer2Min: 27,
       seer2Max: 27,
-      hspf2Min: 9,
-      hspf2Max: 10.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-18000",
+      slug: "kinghome-airy-wall-single-18000",
+      name: "Airy 18 000 BTU",
+      seriesId: "kinghome-airy",
+      brandId: "kinghome",
+      modelNumber: "Airy 18k",
+      normalizedModelNumber: "airy-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 15500,
+      seer2Min: 27.5,
+      seer2Max: 27.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-pular-wall-single-9000",
+      slug: "kinghome-pular-wall-single-9000",
+      name: "Pular 9 000 BTU",
+      seriesId: "kinghome-pular",
+      brandId: "kinghome",
+      modelNumber: "Pular 9k",
+      normalizedModelNumber: "pular-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 26,
+      seer2Max: 27,
+      hspf2Min: 10.4,
+      hspf2Max: 10.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-12000",
+      slug: "kinghome-clivia-wall-single-12000",
+      name: "Clivia 12 000 BTU",
+      seriesId: "kinghome-clivia",
+      brandId: "kinghome",
+      modelNumber: "Clivia 12k",
+      normalizedModelNumber: "clivia-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.95,
       cop5FMax: 1.95,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -558,24 +1380,187 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-cee-ultranixx-central-ducted",
-      slug: "kinghome-cee-ultranixx-central-ducted",
-      name: "CEE Ultranixx",
-      seriesId: "kinghome-cee-ultranixx",
+      id: "kinghome-pular-wall-single-20000",
+      slug: "kinghome-pular-wall-single-20000",
+      name: "Pular 20 000 BTU",
+      seriesId: "kinghome-pular",
       brandId: "kinghome",
-      modelNumber: "CEE Ultranixx",
-      normalizedModelNumber: "cee-ultranixx",
+      modelNumber: "Pular 20k",
+      normalizedModelNumber: "pular-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 26,
+      seer2Max: 26,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-pular-wall-single-18000",
+      slug: "kinghome-pular-wall-single-18000",
+      name: "Pular 18 000 BTU",
+      seriesId: "kinghome-pular",
+      brandId: "kinghome",
+      modelNumber: "Pular 18k",
+      normalizedModelNumber: "pular-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-9000",
+      slug: "kinghome-clivia-wall-single-9000",
+      name: "Clivia 9 000 BTU",
+      seriesId: "kinghome-clivia",
+      brandId: "kinghome",
+      modelNumber: "Clivia 9k",
+      normalizedModelNumber: "clivia-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 8400,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 26,
+      seer2Max: 27,
+      hspf2Min: 10.4,
+      hspf2Max: 10.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-18000",
+      slug: "kinghome-clivia-wall-single-18000",
+      name: "Clivia 18 000 BTU",
+      seriesId: "kinghome-clivia",
+      brandId: "kinghome",
+      modelNumber: "Clivia 18k",
+      normalizedModelNumber: "clivia-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14700,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 24.5,
+      seer2Max: 24.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-cee-ultranixx-central-ducted-24000",
+      slug: "kinghome-cee-ultranixx-central-ducted-24000",
+      name: "CEE Ultranixx 24 000 BTU",
+      seriesId: "kinghome-cee-ultranixx",
+      brandId: "kinghome",
+      modelNumber: "CEE Ultranixx 24k",
+      normalizedModelNumber: "cee-ultranixx-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 53500,
+      coolingCapacityMaxBtu: 27000,
       heatingCapacity5FMinBtu: 19600,
-      heatingCapacity5FMaxBtu: 43000,
+      heatingCapacity5FMaxBtu: 23000,
       seer2Min: 18,
-      seer2Max: 20,
+      seer2Max: 18.5,
       hspf2Min: 8.3,
-      hspf2Max: 9.5,
+      hspf2Max: 8.3,
       cop5FMin: 1.75,
+      cop5FMax: 2.14,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-cee-ultranixx-central-ducted-36000",
+      slug: "kinghome-cee-ultranixx-central-ducted-36000",
+      name: "CEE Ultranixx 36 000 BTU",
+      seriesId: "kinghome-cee-ultranixx",
+      brandId: "kinghome",
+      modelNumber: "CEE Ultranixx 36k",
+      normalizedModelNumber: "cee-ultranixx-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 8.3,
+      hspf2Max: 8.3,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-cee-ultranixx-central-ducted-48000",
+      slug: "kinghome-cee-ultranixx-central-ducted-48000",
+      name: "CEE Ultranixx 48 000 BTU",
+      seriesId: "kinghome-cee-ultranixx",
+      brandId: "kinghome",
+      modelNumber: "CEE Ultranixx 48k",
+      normalizedModelNumber: "cee-ultranixx-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 53500,
+      heatingCapacity5FMinBtu: 38500,
+      heatingCapacity5FMaxBtu: 43000,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.18,
       cop5FMax: 2.24,
       systemType: "central-ducted",
       categories: ["conventional", "ducted"],
@@ -584,24 +1569,133 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-g-series-central-ducted",
-      slug: "kinghome-g-series-central-ducted",
-      name: "G Series",
-      seriesId: "kinghome-g-series",
+      id: "kinghome-charmo-wall-single-30000",
+      slug: "kinghome-charmo-wall-single-30000",
+      name: "Charmo 30 000 BTU",
+      seriesId: "kinghome-charmo",
       brandId: "kinghome",
-      modelNumber: "G Series",
-      normalizedModelNumber: "g-series",
+      modelNumber: "Charmo 30k",
+      normalizedModelNumber: "charmo-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-12000",
+      slug: "kinghome-charmo-wall-single-12000",
+      name: "Charmo 12 000 BTU",
+      seriesId: "kinghome-charmo",
+      brandId: "kinghome",
+      modelNumber: "Charmo 12k",
+      normalizedModelNumber: "charmo-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9700,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-48000",
+      slug: "kinghome-m-series-wall-single-48000",
+      name: "M-Series 48 000 BTU",
+      seriesId: "kinghome-m-series",
+      brandId: "kinghome",
+      modelNumber: "M-Series 48k",
+      normalizedModelNumber: "m-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: 18,
+      seer2Max: 21,
+      hspf2Min: 8.1,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-20000",
+      slug: "kinghome-clivia-wall-single-20000",
+      name: "Clivia 20 000 BTU",
+      seriesId: "kinghome-clivia",
+      brandId: "kinghome",
+      modelNumber: "Clivia 20k",
+      normalizedModelNumber: "clivia-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-g-series-central-ducted-48000",
+      slug: "kinghome-g-series-central-ducted-48000",
+      name: "G Series 48 000 BTU",
+      seriesId: "kinghome-g-series",
+      brandId: "kinghome",
+      modelNumber: "G Series 48k",
+      normalizedModelNumber: "g-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 38500,
       heatingCapacity5FMaxBtu: 38500,
-      seer2Min: 18.5,
+      seer2Min: 20,
       seer2Max: 20,
-      hspf2Min: 8.3,
+      hspf2Min: 9.5,
       hspf2Max: 9.5,
-      cop5FMin: 1.75,
+      cop5FMin: 2.18,
       cop5FMax: 2.18,
       systemType: "central-ducted",
       categories: ["conventional", "ducted"],
@@ -610,15 +1704,43 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-360-air-discharge-cassette-unit-wall-single",
-      slug: "kinghome-360-air-discharge-cassette-unit-wall-single",
-      name: "360°air discharge cassette unit",
-      seriesId: "kinghome-360-air-discharge-cassette-unit",
+      id: "kinghome-g-series-central-ducted-24000",
+      slug: "kinghome-g-series-central-ducted-24000",
+      name: "G Series 24 000 BTU",
+      seriesId: "kinghome-g-series",
       brandId: "kinghome",
-      modelNumber: "360°air discharge cassette unit",
-      normalizedModelNumber: "360-air-discharge-cassette-unit",
+      modelNumber: "G Series 24k",
+      normalizedModelNumber: "g-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 19600,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 8.3,
+      hspf2Max: 8.3,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-360-air-discharge-cassette-unit-wall-single-9000",
+      slug: "kinghome-360-air-discharge-cassette-unit-wall-single-9000",
+      name: "360°air discharge cassette unit 9 000 BTU",
+      seriesId: "kinghome-360-air-discharge-cassette-unit",
+      brandId: "kinghome",
+      modelNumber: "360°air discharge cassette unit 9k",
+      normalizedModelNumber: "360-air-discharge-cassette-unit-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8800,
@@ -636,15 +1758,16 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-one-way-air-discharge-cassette-unit-wall-single",
-      slug: "kinghome-one-way-air-discharge-cassette-unit-wall-single",
-      name: "One-way air discharge cassette unit",
+      id: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000",
+      slug: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000",
+      name: "One-way air discharge cassette unit 9 000 BTU",
       seriesId: "kinghome-one-way-air-discharge-cassette-unit",
       brandId: "kinghome",
-      modelNumber: "One-way air discharge cassette unit",
-      normalizedModelNumber: "one-way-air-discharge-cassette-unit",
+      modelNumber: "One-way air discharge cassette unit 9k",
+      normalizedModelNumber: "one-way-air-discharge-cassette-unit-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8800,
@@ -662,15 +1785,16 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-floor-ceiling-wall-single",
-      slug: "kinghome-floor-ceiling-wall-single",
-      name: "Floor ceiling",
+      id: "kinghome-floor-ceiling-wall-single-9000",
+      slug: "kinghome-floor-ceiling-wall-single-9000",
+      name: "Floor ceiling 9 000 BTU",
       seriesId: "kinghome-floor-ceiling",
       brandId: "kinghome",
-      modelNumber: "Floor ceiling",
-      normalizedModelNumber: "floor-ceiling",
+      modelNumber: "Floor ceiling 9k",
+      normalizedModelNumber: "floor-ceiling-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8800,
@@ -688,15 +1812,16 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-console-wall-single",
-      slug: "kinghome-console-wall-single",
-      name: "Console",
+      id: "kinghome-console-wall-single-9000",
+      slug: "kinghome-console-wall-single-9000",
+      name: "Console 9 000 BTU",
       seriesId: "kinghome-console",
       brandId: "kinghome",
-      modelNumber: "Console",
-      normalizedModelNumber: "console",
+      modelNumber: "Console 9k",
+      normalizedModelNumber: "console-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8800,
@@ -714,15 +1839,16 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ducted-wall-single",
-      slug: "kinghome-ducted-wall-single",
-      name: "Ducted",
+      id: "kinghome-ducted-wall-single-9000",
+      slug: "kinghome-ducted-wall-single-9000",
+      name: "Ducted 9 000 BTU",
       seriesId: "kinghome-ducted",
       brandId: "kinghome",
-      modelNumber: "Ducted",
-      normalizedModelNumber: "ducted",
+      modelNumber: "Ducted 9k",
+      normalizedModelNumber: "ducted-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9100,
       coolingCapacityMaxBtu: 9100,
       heatingCapacity5FMinBtu: 8800,
@@ -740,24 +1866,52 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single",
-      slug: "kinghome-all-match-wall-single",
-      name: "All MATCH",
+      id: "kinghome-all-match-wall-single-12000",
+      slug: "kinghome-all-match-wall-single-12000",
+      name: "All MATCH 12 000 BTU",
       seriesId: "kinghome-all-match",
       brandId: "kinghome",
-      modelNumber: "All MATCH",
-      normalizedModelNumber: "all-match",
+      modelNumber: "All MATCH 12k",
+      normalizedModelNumber: "all-match-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 33600,
+      coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 10000,
-      heatingCapacity5FMaxBtu: 27200,
-      seer2Min: 18.5,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 21,
       seer2Max: 23,
-      hspf2Min: 8.5,
+      hspf2Min: 9,
       hspf2Max: 9.5,
-      cop5FMin: 1.8,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-all-match-wall-single-36000",
+      slug: "kinghome-all-match-wall-single-36000",
+      name: "ALL MATCH 36 000 BTU",
+      seriesId: "kinghome-all-match",
+      brandId: "kinghome",
+      modelNumber: "ALL MATCH 36k",
+      normalizedModelNumber: "all-match-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 27200,
+      seer2Min: 20,
+      seer2Max: 21,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.9,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -766,25 +1920,107 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-e-series-central-ducted",
-      slug: "kinghome-e-series-central-ducted",
-      name: "E Series",
-      seriesId: "kinghome-e-series",
+      id: "kinghome-all-match-wall-single-30000",
+      slug: "kinghome-all-match-wall-single-30000",
+      name: "All MATCH 30 000 BTU",
+      seriesId: "kinghome-all-match",
       brandId: "kinghome",
-      modelNumber: "E Series",
-      normalizedModelNumber: "e-series",
+      modelNumber: "All MATCH 30k",
+      normalizedModelNumber: "all-match-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 18.5,
+      seer2Max: 22.5,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-e-series-central-ducted-24000",
+      slug: "kinghome-e-series-central-ducted-24000",
+      name: "E Series 24 000 BTU",
+      seriesId: "kinghome-e-series",
+      brandId: "kinghome",
+      modelNumber: "E Series 24k",
+      normalizedModelNumber: "e-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 15000,
-      heatingCapacity5FMaxBtu: 45000,
+      heatingCapacity5FMaxBtu: 22000,
       seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-e-series-central-ducted-48000",
+      slug: "kinghome-e-series-central-ducted-48000",
+      name: "E Series 48 000 BTU",
+      seriesId: "kinghome-e-series",
+      brandId: "kinghome",
+      modelNumber: "E Series 48k",
+      normalizedModelNumber: "e-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 31200,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 18.5,
       seer2Max: 19,
       hspf2Min: 10,
       hspf2Max: 10.5,
       cop5FMin: 2,
       cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-e-series-central-ducted-36000",
+      slug: "kinghome-e-series-central-ducted-36000",
+      name: "E Series 36 000 BTU",
+      seriesId: "kinghome-e-series",
+      brandId: "kinghome",
+      modelNumber: "E Series 36k",
+      normalizedModelNumber: "e-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 28200,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -800,134 +2036,8 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw09hq2b8do",
-      modelNumber: "KW09HQ2B8DO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw12hq2b8do",
-      modelNumber: "KW12HQ2B8DO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw18hq2b8do",
-      modelNumber: "KW18HQ2B8DO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw24hq2b8do",
-      modelNumber: "KW24HQ2B8DO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km18h4o",
-      modelNumber: "KM18H4O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km24h4o",
-      modelNumber: "KM24H4O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km30h4o",
-      modelNumber: "KM30H4O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km36h4o",
-      modelNumber: "KM36H4O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km42h4o",
-      modelNumber: "KM42H4O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km48uh5o",
-      modelNumber: "KM48UH5O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw09hq2b8ao",
-      modelNumber: "KW09HQ2B8AO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw12hq2b8ao",
-      modelNumber: "KW12HQ2B8AO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
       id: "kinghome-kw24hq17sdo",
       modelNumber: "KW24HQ17SDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw30hq20sdo",
-      modelNumber: "KW30HQ20SDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw36hq20sdo",
-      modelNumber: "KW36HQ20SDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kd24uho",
-      modelNumber: "KD24UHO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kd30uho",
-      modelNumber: "KD30UHO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kd36uho",
-      modelNumber: "KD36UHO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kd42uho",
-      modelNumber: "KD42UHO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kd48uho",
-      modelNumber: "KD48UHO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kd60uho",
-      modelNumber: "KD60UHO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw18hq19sdo",
-      modelNumber: "KW18HQ19SDO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -938,20 +2048,50 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kinghome-ku24uho",
-      modelNumber: "KU24UHO",
+      id: "kinghome-kw09hq2b8do",
+      modelNumber: "KW09HQ2B8DO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw30xq21sdo",
-      modelNumber: "KW30XQ21SDO",
+      id: "kinghome-kw09hq2b8ao",
+      modelNumber: "KW09HQ2B8AO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw24xq19cdo",
-      modelNumber: "KW24XQ19CDO",
+      id: "kinghome-kw12hq2b8do",
+      modelNumber: "KW12HQ2B8DO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw12hq2b8ao",
+      modelNumber: "KW12HQ2B8AO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw12xq19cao",
+      modelNumber: "KW12XQ19CAO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw18hq2b8do",
+      modelNumber: "KW18HQ2B8DO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km18h4o",
+      modelNumber: "KM18H4O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw18hq19sdo",
+      modelNumber: "KW18HQ19SDO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -962,8 +2102,86 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw12xq19cao",
-      modelNumber: "KW12XQ19CAO",
+      id: "kinghome-kw24hq2b8do",
+      modelNumber: "KW24HQ2B8DO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km24h4o",
+      modelNumber: "KM24H4O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kd24uho",
+      modelNumber: "KD24UHO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-ku24uho",
+      modelNumber: "KU24UHO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw24xq19cdo",
+      modelNumber: "KW24XQ19CDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km30h4o",
+      modelNumber: "KM30H4O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw30hq20sdo",
+      modelNumber: "KW30HQ20SDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kd30uho",
+      modelNumber: "KD30UHO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw30xq21sdo",
+      modelNumber: "KW30XQ21SDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km36h4o",
+      modelNumber: "KM36H4O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw36hq20sdo",
+      modelNumber: "KW36HQ20SDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kd36uho",
+      modelNumber: "KD36UHO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km42h4o",
+      modelNumber: "KM42H4O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kd42uho",
+      modelNumber: "KD42UHO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1012,6 +2230,24 @@ export const kinghomeDataset: BrandDataset = {
     {
       id: "kinghome-km42uh5o",
       modelNumber: "KM42UH5O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km48uh5o",
+      modelNumber: "KM48UH5O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kd48uho",
+      modelNumber: "KD48UHO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kd60uho",
+      modelNumber: "KD60UHO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1076,14 +2312,38 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kinghome-km18h5o3",
+      modelNumber: "KM18H5O3",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km18x6o",
+      modelNumber: "KM18X6O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
       id: "kinghome-km24h5o",
       modelNumber: "KM24H5O",
       brandId: "kinghome",
       refrigerant: null as any,
     },
     {
+      id: "kinghome-km24x6o",
+      modelNumber: "KM24X6O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
       id: "kinghome-km30h5o",
       modelNumber: "KM30H5O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km30x6o",
+      modelNumber: "KM30X6O",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1100,44 +2360,8 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kinghome-km18h5o3",
-      modelNumber: "KM18H5O3",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km18x6o",
-      modelNumber: "KM18X6O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km24x6o",
-      modelNumber: "KM24X6O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km30x6o",
-      modelNumber: "KM30X6O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
       id: "kinghome-km36x6o",
       modelNumber: "KM36X6O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km42x6o",
-      modelNumber: "KM42X6O",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-km48x6o",
-      modelNumber: "KM48X6O",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1154,32 +2378,8 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw36xq21sdo",
-      modelNumber: "KW36XQ21SDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw36xq21cdo",
-      modelNumber: "KW36XQ21CDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw30xq21cdo",
-      modelNumber: "KW30XQ21CDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
       id: "kinghome-kw09xq19cdo",
       modelNumber: "KW09XQ19CDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw12xq19cdo",
-      modelNumber: "KW12XQ19CDO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1226,6 +2426,24 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kinghome-km42x6o",
+      modelNumber: "KM42X6O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw36xq21sdo",
+      modelNumber: "KW36XQ21SDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw36xq21cdo",
+      modelNumber: "KW36XQ21CDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
       id: "kinghome-kw09xq29sdo",
       modelNumber: "KW09XQ29SDO",
       brandId: "kinghome",
@@ -1262,18 +2480,6 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw24xq25pdo",
-      modelNumber: "KW24XQ25PDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw18xq25pdo",
-      modelNumber: "KW18XQ25PDO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
       id: "kinghome-kw12xq25pdo",
       modelNumber: "KW12XQ25PDO",
       brandId: "kinghome",
@@ -1282,18 +2488,6 @@ export const kinghomeDataset: BrandDataset = {
     {
       id: "kinghome-kw12xq25pao",
       modelNumber: "KW12XQ25PAO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw09xq25sao",
-      modelNumber: "KW09XQ25SAO",
-      brandId: "kinghome",
-      refrigerant: null as any,
-    },
-    {
-      id: "kinghome-kw09xq25sdo",
-      modelNumber: "KW09XQ25SDO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1310,14 +2504,32 @@ export const kinghomeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw18xq25sdo",
-      modelNumber: "KW18XQ25SDO",
+      id: "kinghome-kw24xq25pdo",
+      modelNumber: "KW24XQ25PDO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
     {
-      id: "kinghome-kw24xq25sdo",
-      modelNumber: "KW24XQ25SDO",
+      id: "kinghome-kw18xq25pdo",
+      modelNumber: "KW18XQ25PDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw09xq25sao",
+      modelNumber: "KW09XQ25SAO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw09xq25sdo",
+      modelNumber: "KW09XQ25SDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw18xq25sdo",
+      modelNumber: "KW18XQ25SDO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1336,6 +2548,30 @@ export const kinghomeDataset: BrandDataset = {
     {
       id: "kinghome-kd60uxo",
       modelNumber: "KD60UXO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw30xq21cdo",
+      modelNumber: "KW30XQ21CDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw12xq19cdo",
+      modelNumber: "KW12XQ19CDO",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-km48x6o",
+      modelNumber: "KM48X6O",
+      brandId: "kinghome",
+      refrigerant: null as any,
+    },
+    {
+      id: "kinghome-kw24xq25sdo",
+      modelNumber: "KW24XQ25SDO",
       brandId: "kinghome",
       refrigerant: null as any,
     },
@@ -1369,9 +2605,9 @@ export const kinghomeDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "kinghome-standard-wall-single-cfg-1",
-      slug: "kinghome-standard-wall-single-cfg-1",
-      modelId: "kinghome-standard-wall-single",
+      id: "kinghome-standard-wall-single-20000-cfg-1",
+      slug: "kinghome-standard-wall-single-20000-cfg-1",
+      modelId: "kinghome-standard-wall-single-20000",
       outdoorUnitId: "kinghome-kw24hq3b8do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1383,177 +2619,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-standard-wall-single-cfg-2",
-      slug: "kinghome-standard-wall-single-cfg-2",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw09hq2b8do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-3",
-      slug: "kinghome-standard-wall-single-cfg-3",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw12hq2b8do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-4",
-      slug: "kinghome-standard-wall-single-cfg-4",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw18hq2b8do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-5",
-      slug: "kinghome-standard-wall-single-cfg-5",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw24hq2b8do",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22389,
-      coolingCapacityMaxBtu: 22389,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-6",
-      slug: "kinghome-standard-wall-single-cfg-6",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-km18h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-7",
-      slug: "kinghome-standard-wall-single-cfg-7",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-km24h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-8",
-      slug: "kinghome-standard-wall-single-cfg-8",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-km30h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-9",
-      slug: "kinghome-standard-wall-single-cfg-9",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-km36h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-10",
-      slug: "kinghome-standard-wall-single-cfg-10",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-km42h4o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 40060,
-      coolingCapacityMaxBtu: 40060,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-11",
-      slug: "kinghome-standard-wall-single-cfg-11",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-km48uh5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-12",
-      slug: "kinghome-standard-wall-single-cfg-12",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw09hq2b8ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-13",
-      slug: "kinghome-standard-wall-single-cfg-13",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw12hq2b8ao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-14",
-      slug: "kinghome-standard-wall-single-cfg-14",
-      modelId: "kinghome-standard-wall-single",
+      id: "kinghome-standard-wall-single-20000-cfg-2",
+      slug: "kinghome-standard-wall-single-20000-cfg-2",
+      modelId: "kinghome-standard-wall-single-20000",
       outdoorUnitId: "kinghome-kw24hq17sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1565,135 +2633,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-standard-wall-single-cfg-15",
-      slug: "kinghome-standard-wall-single-cfg-15",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw30hq20sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-16",
-      slug: "kinghome-standard-wall-single-cfg-16",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw36hq20sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-17",
-      slug: "kinghome-standard-wall-single-cfg-17",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kd24uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-18",
-      slug: "kinghome-standard-wall-single-cfg-18",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kd30uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28600,
-      coolingCapacityMaxBtu: 28600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-19",
-      slug: "kinghome-standard-wall-single-cfg-19",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kd36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-20",
-      slug: "kinghome-standard-wall-single-cfg-20",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kd42uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 40000,
-      coolingCapacityMaxBtu: 40000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-21",
-      slug: "kinghome-standard-wall-single-cfg-21",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kd48uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-22",
-      slug: "kinghome-standard-wall-single-cfg-22",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kd60uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-23",
-      slug: "kinghome-standard-wall-single-cfg-23",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw18hq19sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17600,
-      coolingCapacityMaxBtu: 17600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-standard-wall-single-cfg-24",
-      slug: "kinghome-standard-wall-single-cfg-24",
-      modelId: "kinghome-standard-wall-single",
+      id: "kinghome-standard-wall-single-20000-cfg-3",
+      slug: "kinghome-standard-wall-single-20000-cfg-3",
+      modelId: "kinghome-standard-wall-single-20000",
       outdoorUnitId: "kinghome-kw24hq19sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1705,13 +2647,13 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-standard-wall-single-cfg-25",
-      slug: "kinghome-standard-wall-single-cfg-25",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-ku24uho",
+      id: "kinghome-standard-wall-single-9000-cfg-1",
+      slug: "kinghome-standard-wall-single-9000-cfg-1",
+      modelId: "kinghome-standard-wall-single-9000",
+      outdoorUnitId: "kinghome-kw09hq2b8do",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1719,13 +2661,13 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-standard-wall-single-cfg-26",
-      slug: "kinghome-standard-wall-single-cfg-26",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw30xq21sdo",
+      id: "kinghome-standard-wall-single-9000-cfg-2",
+      slug: "kinghome-standard-wall-single-9000-cfg-2",
+      modelId: "kinghome-standard-wall-single-9000",
+      outdoorUnitId: "kinghome-kw09hq2b8ao",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1733,13 +2675,13 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-standard-wall-single-cfg-27",
-      slug: "kinghome-standard-wall-single-cfg-27",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw24xq19cdo",
+      id: "kinghome-standard-wall-single-12000-cfg-1",
+      slug: "kinghome-standard-wall-single-12000-cfg-1",
+      modelId: "kinghome-standard-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12hq2b8do",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1747,13 +2689,13 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-standard-wall-single-cfg-28",
-      slug: "kinghome-standard-wall-single-cfg-28",
-      modelId: "kinghome-standard-wall-single",
-      outdoorUnitId: "kinghome-kw18xq19cdo",
+      id: "kinghome-standard-wall-single-12000-cfg-2",
+      slug: "kinghome-standard-wall-single-12000-cfg-2",
+      modelId: "kinghome-standard-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12hq2b8ao",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1761,9 +2703,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-standard-wall-single-cfg-29",
-      slug: "kinghome-standard-wall-single-cfg-29",
-      modelId: "kinghome-standard-wall-single",
+      id: "kinghome-standard-wall-single-12000-cfg-3",
+      slug: "kinghome-standard-wall-single-12000-cfg-3",
+      modelId: "kinghome-standard-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq19cao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1775,9 +2717,261 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-jasmine-wall-single-cfg-1",
-      slug: "kinghome-jasmine-wall-single-cfg-1",
-      modelId: "kinghome-jasmine-wall-single",
+      id: "kinghome-standard-wall-single-18000-cfg-1",
+      slug: "kinghome-standard-wall-single-18000-cfg-1",
+      modelId: "kinghome-standard-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18hq2b8do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-18000-cfg-2",
+      slug: "kinghome-standard-wall-single-18000-cfg-2",
+      modelId: "kinghome-standard-wall-single-18000",
+      outdoorUnitId: "kinghome-km18h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-18000-cfg-3",
+      slug: "kinghome-standard-wall-single-18000-cfg-3",
+      modelId: "kinghome-standard-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18hq19sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17600,
+      coolingCapacityMaxBtu: 17600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-18000-cfg-4",
+      slug: "kinghome-standard-wall-single-18000-cfg-4",
+      modelId: "kinghome-standard-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq19cdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-24000-cfg-1",
+      slug: "kinghome-standard-wall-single-24000-cfg-1",
+      modelId: "kinghome-standard-wall-single-24000",
+      outdoorUnitId: "kinghome-kw24hq2b8do",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22389,
+      coolingCapacityMaxBtu: 22389,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-24000-cfg-2",
+      slug: "kinghome-standard-wall-single-24000-cfg-2",
+      modelId: "kinghome-standard-wall-single-24000",
+      outdoorUnitId: "kinghome-km24h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-24000-cfg-3",
+      slug: "kinghome-standard-wall-single-24000-cfg-3",
+      modelId: "kinghome-standard-wall-single-24000",
+      outdoorUnitId: "kinghome-kd24uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-24000-cfg-4",
+      slug: "kinghome-standard-wall-single-24000-cfg-4",
+      modelId: "kinghome-standard-wall-single-24000",
+      outdoorUnitId: "kinghome-ku24uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-24000-cfg-5",
+      slug: "kinghome-standard-wall-single-24000-cfg-5",
+      modelId: "kinghome-standard-wall-single-24000",
+      outdoorUnitId: "kinghome-kw24xq19cdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-30000-cfg-1",
+      slug: "kinghome-standard-wall-single-30000-cfg-1",
+      modelId: "kinghome-standard-wall-single-30000",
+      outdoorUnitId: "kinghome-km30h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-30000-cfg-2",
+      slug: "kinghome-standard-wall-single-30000-cfg-2",
+      modelId: "kinghome-standard-wall-single-30000",
+      outdoorUnitId: "kinghome-kw30hq20sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-30000-cfg-3",
+      slug: "kinghome-standard-wall-single-30000-cfg-3",
+      modelId: "kinghome-standard-wall-single-30000",
+      outdoorUnitId: "kinghome-kd30uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28600,
+      coolingCapacityMaxBtu: 28600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-30000-cfg-4",
+      slug: "kinghome-standard-wall-single-30000-cfg-4",
+      modelId: "kinghome-standard-wall-single-30000",
+      outdoorUnitId: "kinghome-kw30xq21sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-36000-cfg-1",
+      slug: "kinghome-standard-wall-single-36000-cfg-1",
+      modelId: "kinghome-standard-wall-single-36000",
+      outdoorUnitId: "kinghome-km36h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-36000-cfg-2",
+      slug: "kinghome-standard-wall-single-36000-cfg-2",
+      modelId: "kinghome-standard-wall-single-36000",
+      outdoorUnitId: "kinghome-kw36hq20sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-36000-cfg-3",
+      slug: "kinghome-standard-wall-single-36000-cfg-3",
+      modelId: "kinghome-standard-wall-single-36000",
+      outdoorUnitId: "kinghome-kd36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-42000-cfg-1",
+      slug: "kinghome-standard-wall-single-42000-cfg-1",
+      modelId: "kinghome-standard-wall-single-42000",
+      outdoorUnitId: "kinghome-km42h4o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 40060,
+      coolingCapacityMaxBtu: 40060,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-42000-cfg-2",
+      slug: "kinghome-standard-wall-single-42000-cfg-2",
+      modelId: "kinghome-standard-wall-single-42000",
+      outdoorUnitId: "kinghome-kd42uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 40000,
+      coolingCapacityMaxBtu: 40000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-jasmine-wall-single-9000-cfg-1",
+      slug: "kinghome-jasmine-wall-single-9000-cfg-1",
+      modelId: "kinghome-jasmine-wall-single-9000",
       outdoorUnitId: "kinghome-kw09hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1789,9 +2983,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-jasmine-wall-single-cfg-2",
-      slug: "kinghome-jasmine-wall-single-cfg-2",
-      modelId: "kinghome-jasmine-wall-single",
+      id: "kinghome-jasmine-wall-single-12000-cfg-1",
+      slug: "kinghome-jasmine-wall-single-12000-cfg-1",
+      modelId: "kinghome-jasmine-wall-single-12000",
       outdoorUnitId: "kinghome-kw12hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1803,9 +2997,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-jasmine-wall-single-cfg-3",
-      slug: "kinghome-jasmine-wall-single-cfg-3",
-      modelId: "kinghome-jasmine-wall-single",
+      id: "kinghome-jasmine-wall-single-18000-cfg-1",
+      slug: "kinghome-jasmine-wall-single-18000-cfg-1",
+      modelId: "kinghome-jasmine-wall-single-18000",
       outdoorUnitId: "kinghome-kw18hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1817,9 +3011,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-jasmine-wall-single-cfg-4",
-      slug: "kinghome-jasmine-wall-single-cfg-4",
-      modelId: "kinghome-jasmine-wall-single",
+      id: "kinghome-jasmine-wall-single-20000-cfg-1",
+      slug: "kinghome-jasmine-wall-single-20000-cfg-1",
+      modelId: "kinghome-jasmine-wall-single-20000",
       outdoorUnitId: "kinghome-kw24hq3d6do",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1831,9 +3025,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-j-series-wall-single-cfg-1",
-      slug: "kinghome-j-series-wall-single-cfg-1",
-      modelId: "kinghome-j-series-wall-single",
+      id: "kinghome-j-series-wall-single-18000-cfg-1",
+      slug: "kinghome-j-series-wall-single-18000-cfg-1",
+      modelId: "kinghome-j-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18uh5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1845,9 +3039,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-j-series-wall-single-cfg-2",
-      slug: "kinghome-j-series-wall-single-cfg-2",
-      modelId: "kinghome-j-series-wall-single",
+      id: "kinghome-j-series-wall-single-20000-cfg-1",
+      slug: "kinghome-j-series-wall-single-20000-cfg-1",
+      modelId: "kinghome-j-series-wall-single-20000",
       outdoorUnitId: "kinghome-km24uh5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1859,9 +3053,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-j-series-wall-single-cfg-3",
-      slug: "kinghome-j-series-wall-single-cfg-3",
-      modelId: "kinghome-j-series-wall-single",
+      id: "kinghome-j-series-wall-single-36000-cfg-1",
+      slug: "kinghome-j-series-wall-single-36000-cfg-1",
+      modelId: "kinghome-j-series-wall-single-36000",
       outdoorUnitId: "kinghome-km36uh5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1873,9 +3067,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-j-series-wall-single-cfg-4",
-      slug: "kinghome-j-series-wall-single-cfg-4",
-      modelId: "kinghome-j-series-wall-single",
+      id: "kinghome-j-series-wall-single-42000-cfg-1",
+      slug: "kinghome-j-series-wall-single-42000-cfg-1",
+      modelId: "kinghome-j-series-wall-single-42000",
       outdoorUnitId: "kinghome-km42uh5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -1887,9 +3081,51 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-1",
-      slug: "kinghome-ultranixx-central-ducted-cfg-1",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-standard-wall-single-48000-cfg-1",
+      slug: "kinghome-standard-wall-single-48000-cfg-1",
+      modelId: "kinghome-standard-wall-single-48000",
+      outdoorUnitId: "kinghome-km48uh5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-48000-cfg-2",
+      slug: "kinghome-standard-wall-single-48000-cfg-2",
+      modelId: "kinghome-standard-wall-single-48000",
+      outdoorUnitId: "kinghome-kd48uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-standard-wall-single-48000-cfg-3",
+      slug: "kinghome-standard-wall-single-48000-cfg-3",
+      modelId: "kinghome-standard-wall-single-48000",
+      outdoorUnitId: "kinghome-kd60uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-1",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-1",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
       outdoorUnitId: "kinghome-ku36uho",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1901,23 +3137,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-2",
-      slug: "kinghome-ultranixx-central-ducted-cfg-2",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku60uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-3",
-      slug: "kinghome-ultranixx-central-ducted-cfg-3",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-2",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-2",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
       outdoorUnitId: "kinghome-ku36uho",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1929,23 +3151,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-4",
-      slug: "kinghome-ultranixx-central-ducted-cfg-4",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku60uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-5",
-      slug: "kinghome-ultranixx-central-ducted-cfg-5",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-3",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-3",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
       outdoorUnitId: "kinghome-ku36uho",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1957,23 +3165,177 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-6",
-      slug: "kinghome-ultranixx-central-ducted-cfg-6",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-4",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-4",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
       outdoorUnitId: "kinghome-ku36uho",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-7",
-      slug: "kinghome-ultranixx-central-ducted-cfg-7",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-5",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-5",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-6",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-6",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-7",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-7",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-8",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-8",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-9",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-9",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-10",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-10",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-11",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-11",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-12",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-12",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-13",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-13",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-14",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-14",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-24000-cfg-15",
+      slug: "kinghome-ultranixx-central-ducted-24000-cfg-15",
+      modelId: "kinghome-ultranixx-central-ducted-24000",
+      outdoorUnitId: "kinghome-ku36uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-48000-cfg-1",
+      slug: "kinghome-ultranixx-central-ducted-48000-cfg-1",
+      modelId: "kinghome-ultranixx-central-ducted-48000",
       outdoorUnitId: "kinghome-ku60uho",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1985,9 +3347,37 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-8",
-      slug: "kinghome-ultranixx-central-ducted-cfg-8",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-48000-cfg-2",
+      slug: "kinghome-ultranixx-central-ducted-48000-cfg-2",
+      modelId: "kinghome-ultranixx-central-ducted-48000",
+      outdoorUnitId: "kinghome-ku60uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-48000-cfg-3",
+      slug: "kinghome-ultranixx-central-ducted-48000-cfg-3",
+      modelId: "kinghome-ultranixx-central-ducted-48000",
+      outdoorUnitId: "kinghome-ku60uho",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-ultranixx-central-ducted-48000-cfg-4",
+      slug: "kinghome-ultranixx-central-ducted-48000-cfg-4",
+      modelId: "kinghome-ultranixx-central-ducted-48000",
       outdoorUnitId: "kinghome-ku60uho",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1999,65 +3389,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-9",
-      slug: "kinghome-ultranixx-central-ducted-cfg-9",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-10",
-      slug: "kinghome-ultranixx-central-ducted-cfg-10",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-11",
-      slug: "kinghome-ultranixx-central-ducted-cfg-11",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-12",
-      slug: "kinghome-ultranixx-central-ducted-cfg-12",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-13",
-      slug: "kinghome-ultranixx-central-ducted-cfg-13",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-48000-cfg-5",
+      slug: "kinghome-ultranixx-central-ducted-48000-cfg-5",
+      modelId: "kinghome-ultranixx-central-ducted-48000",
       outdoorUnitId: "kinghome-ku60uho",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2069,9 +3403,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-14",
-      slug: "kinghome-ultranixx-central-ducted-cfg-14",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-48000-cfg-6",
+      slug: "kinghome-ultranixx-central-ducted-48000-cfg-6",
+      modelId: "kinghome-ultranixx-central-ducted-48000",
       outdoorUnitId: "kinghome-ku60uho",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2083,121 +3417,23 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-15",
-      slug: "kinghome-ultranixx-central-ducted-cfg-15",
-      modelId: "kinghome-ultranixx-central-ducted",
+      id: "kinghome-ultranixx-central-ducted-36000-cfg-1",
+      slug: "kinghome-ultranixx-central-ducted-36000-cfg-1",
+      modelId: "kinghome-ultranixx-central-ducted-36000",
       outdoorUnitId: "kinghome-ku36uho",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ultranixx-central-ducted-cfg-16",
-      slug: "kinghome-ultranixx-central-ducted-cfg-16",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-17",
-      slug: "kinghome-ultranixx-central-ducted-cfg-17",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-18",
-      slug: "kinghome-ultranixx-central-ducted-cfg-18",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-19",
-      slug: "kinghome-ultranixx-central-ducted-cfg-19",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-20",
-      slug: "kinghome-ultranixx-central-ducted-cfg-20",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-21",
-      slug: "kinghome-ultranixx-central-ducted-cfg-21",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-ultranixx-central-ducted-cfg-22",
-      slug: "kinghome-ultranixx-central-ducted-cfg-22",
-      modelId: "kinghome-ultranixx-central-ducted",
-      outdoorUnitId: "kinghome-ku36uho",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-1",
-      slug: "kinghome-sunflower-wall-single-cfg-1",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-12000-cfg-1",
+      slug: "kinghome-sunflower-wall-single-12000-cfg-1",
+      modelId: "kinghome-sunflower-wall-single-12000",
       outdoorUnitId: "kinghome-kw12hq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2209,9 +3445,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-2",
-      slug: "kinghome-sunflower-wall-single-cfg-2",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-12000-cfg-2",
+      slug: "kinghome-sunflower-wall-single-12000-cfg-2",
+      modelId: "kinghome-sunflower-wall-single-12000",
       outdoorUnitId: "kinghome-kw12hq25sao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2223,9 +3459,51 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-3",
-      slug: "kinghome-sunflower-wall-single-cfg-3",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-12000-cfg-3",
+      slug: "kinghome-sunflower-wall-single-12000-cfg-3",
+      modelId: "kinghome-sunflower-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-12000-cfg-4",
+      slug: "kinghome-sunflower-wall-single-12000-cfg-4",
+      modelId: "kinghome-sunflower-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-12000-cfg-5",
+      slug: "kinghome-sunflower-wall-single-12000-cfg-5",
+      modelId: "kinghome-sunflower-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-9000-cfg-1",
+      slug: "kinghome-sunflower-wall-single-9000-cfg-1",
+      modelId: "kinghome-sunflower-wall-single-9000",
       outdoorUnitId: "kinghome-kw09hq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -2237,9 +3515,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-4",
-      slug: "kinghome-sunflower-wall-single-cfg-4",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-9000-cfg-2",
+      slug: "kinghome-sunflower-wall-single-9000-cfg-2",
+      modelId: "kinghome-sunflower-wall-single-9000",
       outdoorUnitId: "kinghome-kw09hq25sao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -2251,9 +3529,37 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-5",
-      slug: "kinghome-sunflower-wall-single-cfg-5",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-9000-cfg-3",
+      slug: "kinghome-sunflower-wall-single-9000-cfg-3",
+      modelId: "kinghome-sunflower-wall-single-9000",
+      outdoorUnitId: "kinghome-kw09hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 25.5,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-9000-cfg-4",
+      slug: "kinghome-sunflower-wall-single-9000-cfg-4",
+      modelId: "kinghome-sunflower-wall-single-9000",
+      outdoorUnitId: "kinghome-kw09hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 25.5,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-20000-cfg-1",
+      slug: "kinghome-sunflower-wall-single-20000-cfg-1",
+      modelId: "kinghome-sunflower-wall-single-20000",
       outdoorUnitId: "kinghome-kw24hq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2265,9 +3571,51 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-6",
-      slug: "kinghome-sunflower-wall-single-cfg-6",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-20000-cfg-2",
+      slug: "kinghome-sunflower-wall-single-20000-cfg-2",
+      modelId: "kinghome-sunflower-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-20000-cfg-3",
+      slug: "kinghome-sunflower-wall-single-20000-cfg-3",
+      modelId: "kinghome-sunflower-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-20000-cfg-4",
+      slug: "kinghome-sunflower-wall-single-20000-cfg-4",
+      modelId: "kinghome-sunflower-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24hq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 24.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-sunflower-wall-single-18000-cfg-1",
+      slug: "kinghome-sunflower-wall-single-18000-cfg-1",
+      modelId: "kinghome-sunflower-wall-single-18000",
       outdoorUnitId: "kinghome-kw18hq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2279,9 +3627,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-7",
-      slug: "kinghome-sunflower-wall-single-cfg-7",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-18000-cfg-2",
+      slug: "kinghome-sunflower-wall-single-18000-cfg-2",
+      modelId: "kinghome-sunflower-wall-single-18000",
       outdoorUnitId: "kinghome-kw18hp25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2293,79 +3641,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-8",
-      slug: "kinghome-sunflower-wall-single-cfg-8",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw09hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 25.5,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-9",
-      slug: "kinghome-sunflower-wall-single-cfg-9",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw09hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 25.5,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-10",
-      slug: "kinghome-sunflower-wall-single-cfg-10",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw12hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-11",
-      slug: "kinghome-sunflower-wall-single-cfg-11",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw12hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-12",
-      slug: "kinghome-sunflower-wall-single-cfg-12",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw12hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-13",
-      slug: "kinghome-sunflower-wall-single-cfg-13",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-18000-cfg-3",
+      slug: "kinghome-sunflower-wall-single-18000-cfg-3",
+      modelId: "kinghome-sunflower-wall-single-18000",
       outdoorUnitId: "kinghome-kw18hq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2377,9 +3655,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-14",
-      slug: "kinghome-sunflower-wall-single-cfg-14",
-      modelId: "kinghome-sunflower-wall-single",
+      id: "kinghome-sunflower-wall-single-18000-cfg-4",
+      slug: "kinghome-sunflower-wall-single-18000-cfg-4",
+      modelId: "kinghome-sunflower-wall-single-18000",
       outdoorUnitId: "kinghome-kw18hq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2391,51 +3669,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-sunflower-wall-single-cfg-15",
-      slug: "kinghome-sunflower-wall-single-cfg-15",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw24hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-16",
-      slug: "kinghome-sunflower-wall-single-cfg-16",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw24hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-sunflower-wall-single-cfg-17",
-      slug: "kinghome-sunflower-wall-single-cfg-17",
-      modelId: "kinghome-sunflower-wall-single",
-      outdoorUnitId: "kinghome-kw24hq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 24.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-1",
-      slug: "kinghome-m-series-wall-single-cfg-1",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-18000-cfg-1",
+      slug: "kinghome-m-series-wall-single-18000-cfg-1",
+      modelId: "kinghome-m-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18h5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2447,65 +3683,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-2",
-      slug: "kinghome-m-series-wall-single-cfg-2",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km24h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-3",
-      slug: "kinghome-m-series-wall-single-cfg-3",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km30h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-4",
-      slug: "kinghome-m-series-wall-single-cfg-4",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km36h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-5",
-      slug: "kinghome-m-series-wall-single-cfg-5",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km42h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-6",
-      slug: "kinghome-m-series-wall-single-cfg-6",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-18000-cfg-2",
+      slug: "kinghome-m-series-wall-single-18000-cfg-2",
+      modelId: "kinghome-m-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18h5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2517,65 +3697,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-7",
-      slug: "kinghome-m-series-wall-single-cfg-7",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km24h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-8",
-      slug: "kinghome-m-series-wall-single-cfg-8",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km30h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-9",
-      slug: "kinghome-m-series-wall-single-cfg-9",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km36h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-10",
-      slug: "kinghome-m-series-wall-single-cfg-10",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km42h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-11",
-      slug: "kinghome-m-series-wall-single-cfg-11",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-18000-cfg-3",
+      slug: "kinghome-m-series-wall-single-18000-cfg-3",
+      modelId: "kinghome-m-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18h5o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2587,65 +3711,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-12",
-      slug: "kinghome-m-series-wall-single-cfg-12",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km24h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23200,
-      coolingCapacityMaxBtu: 23200,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-13",
-      slug: "kinghome-m-series-wall-single-cfg-13",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km30h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-14",
-      slug: "kinghome-m-series-wall-single-cfg-14",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km36h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-15",
-      slug: "kinghome-m-series-wall-single-cfg-15",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km42h5o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-16",
-      slug: "kinghome-m-series-wall-single-cfg-16",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-18000-cfg-4",
+      slug: "kinghome-m-series-wall-single-18000-cfg-4",
+      modelId: "kinghome-m-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18h5o3",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2657,9 +3725,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-17",
-      slug: "kinghome-m-series-wall-single-cfg-17",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-18000-cfg-5",
+      slug: "kinghome-m-series-wall-single-18000-cfg-5",
+      modelId: "kinghome-m-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18x6o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2671,65 +3739,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-18",
-      slug: "kinghome-m-series-wall-single-cfg-18",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km24x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-19",
-      slug: "kinghome-m-series-wall-single-cfg-19",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km30x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-20",
-      slug: "kinghome-m-series-wall-single-cfg-20",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km36x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-21",
-      slug: "kinghome-m-series-wall-single-cfg-21",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km42x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-22",
-      slug: "kinghome-m-series-wall-single-cfg-22",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-18000-cfg-6",
+      slug: "kinghome-m-series-wall-single-18000-cfg-6",
+      modelId: "kinghome-m-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18x6o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2741,65 +3753,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-23",
-      slug: "kinghome-m-series-wall-single-cfg-23",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km24x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-24",
-      slug: "kinghome-m-series-wall-single-cfg-24",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km30x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-25",
-      slug: "kinghome-m-series-wall-single-cfg-25",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km36x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-26",
-      slug: "kinghome-m-series-wall-single-cfg-26",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km42x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-27",
-      slug: "kinghome-m-series-wall-single-cfg-27",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-18000-cfg-7",
+      slug: "kinghome-m-series-wall-single-18000-cfg-7",
+      modelId: "kinghome-m-series-wall-single-18000",
       outdoorUnitId: "kinghome-km18x6o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2811,9 +3767,79 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-28",
-      slug: "kinghome-m-series-wall-single-cfg-28",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-24000-cfg-1",
+      slug: "kinghome-m-series-wall-single-24000-cfg-1",
+      modelId: "kinghome-m-series-wall-single-24000",
+      outdoorUnitId: "kinghome-km24h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-24000-cfg-2",
+      slug: "kinghome-m-series-wall-single-24000-cfg-2",
+      modelId: "kinghome-m-series-wall-single-24000",
+      outdoorUnitId: "kinghome-km24h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-24000-cfg-3",
+      slug: "kinghome-m-series-wall-single-24000-cfg-3",
+      modelId: "kinghome-m-series-wall-single-24000",
+      outdoorUnitId: "kinghome-km24h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-24000-cfg-4",
+      slug: "kinghome-m-series-wall-single-24000-cfg-4",
+      modelId: "kinghome-m-series-wall-single-24000",
+      outdoorUnitId: "kinghome-km24x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-24000-cfg-5",
+      slug: "kinghome-m-series-wall-single-24000-cfg-5",
+      modelId: "kinghome-m-series-wall-single-24000",
+      outdoorUnitId: "kinghome-km24x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-24000-cfg-6",
+      slug: "kinghome-m-series-wall-single-24000-cfg-6",
+      modelId: "kinghome-m-series-wall-single-24000",
       outdoorUnitId: "kinghome-km24x6o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2825,9 +3851,79 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-29",
-      slug: "kinghome-m-series-wall-single-cfg-29",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-30000-cfg-1",
+      slug: "kinghome-m-series-wall-single-30000-cfg-1",
+      modelId: "kinghome-m-series-wall-single-30000",
+      outdoorUnitId: "kinghome-km30h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-30000-cfg-2",
+      slug: "kinghome-m-series-wall-single-30000-cfg-2",
+      modelId: "kinghome-m-series-wall-single-30000",
+      outdoorUnitId: "kinghome-km30h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-30000-cfg-3",
+      slug: "kinghome-m-series-wall-single-30000-cfg-3",
+      modelId: "kinghome-m-series-wall-single-30000",
+      outdoorUnitId: "kinghome-km30h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-30000-cfg-4",
+      slug: "kinghome-m-series-wall-single-30000-cfg-4",
+      modelId: "kinghome-m-series-wall-single-30000",
+      outdoorUnitId: "kinghome-km30x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-30000-cfg-5",
+      slug: "kinghome-m-series-wall-single-30000-cfg-5",
+      modelId: "kinghome-m-series-wall-single-30000",
+      outdoorUnitId: "kinghome-km30x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-30000-cfg-6",
+      slug: "kinghome-m-series-wall-single-30000-cfg-6",
+      modelId: "kinghome-m-series-wall-single-30000",
       outdoorUnitId: "kinghome-km30x6o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -2839,9 +3935,121 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-30",
-      slug: "kinghome-m-series-wall-single-cfg-30",
-      modelId: "kinghome-m-series-wall-single",
+      id: "kinghome-m-series-wall-single-36000-cfg-1",
+      slug: "kinghome-m-series-wall-single-36000-cfg-1",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km36h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-2",
+      slug: "kinghome-m-series-wall-single-36000-cfg-2",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km42h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-3",
+      slug: "kinghome-m-series-wall-single-36000-cfg-3",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km36h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-4",
+      slug: "kinghome-m-series-wall-single-36000-cfg-4",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km42h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-5",
+      slug: "kinghome-m-series-wall-single-36000-cfg-5",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km36h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-6",
+      slug: "kinghome-m-series-wall-single-36000-cfg-6",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km42h5o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-7",
+      slug: "kinghome-m-series-wall-single-36000-cfg-7",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km36x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-8",
+      slug: "kinghome-m-series-wall-single-36000-cfg-8",
+      modelId: "kinghome-m-series-wall-single-36000",
+      outdoorUnitId: "kinghome-km36x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-36000-cfg-9",
+      slug: "kinghome-m-series-wall-single-36000-cfg-9",
+      modelId: "kinghome-m-series-wall-single-36000",
       outdoorUnitId: "kinghome-km36x6o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2853,65 +4061,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-m-series-wall-single-cfg-31",
-      slug: "kinghome-m-series-wall-single-cfg-31",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km42x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-32",
-      slug: "kinghome-m-series-wall-single-cfg-32",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km48x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-33",
-      slug: "kinghome-m-series-wall-single-cfg-33",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km48x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 18,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-m-series-wall-single-cfg-34",
-      slug: "kinghome-m-series-wall-single-cfg-34",
-      modelId: "kinghome-m-series-wall-single",
-      outdoorUnitId: "kinghome-km48x6o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-charmo-wall-single-cfg-1",
-      slug: "kinghome-charmo-wall-single-cfg-1",
-      modelId: "kinghome-charmo-wall-single",
+      id: "kinghome-charmo-wall-single-9000-cfg-1",
+      slug: "kinghome-charmo-wall-single-9000-cfg-1",
+      modelId: "kinghome-charmo-wall-single-9000",
       outdoorUnitId: "kinghome-kw09hq19sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -2923,9 +4075,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-charmo-wall-single-cfg-2",
-      slug: "kinghome-charmo-wall-single-cfg-2",
-      modelId: "kinghome-charmo-wall-single",
+      id: "kinghome-charmo-wall-single-9000-cfg-2",
+      slug: "kinghome-charmo-wall-single-9000-cfg-2",
+      modelId: "kinghome-charmo-wall-single-9000",
       outdoorUnitId: "kinghome-kw09hq19sao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -2937,51 +4089,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-charmo-wall-single-cfg-3",
-      slug: "kinghome-charmo-wall-single-cfg-3",
-      modelId: "kinghome-charmo-wall-single",
-      outdoorUnitId: "kinghome-kw36xq21sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-charmo-wall-single-cfg-4",
-      slug: "kinghome-charmo-wall-single-cfg-4",
-      modelId: "kinghome-charmo-wall-single",
-      outdoorUnitId: "kinghome-kw36xq21cdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-charmo-wall-single-cfg-5",
-      slug: "kinghome-charmo-wall-single-cfg-5",
-      modelId: "kinghome-charmo-wall-single",
-      outdoorUnitId: "kinghome-kw30xq21cdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-charmo-wall-single-cfg-6",
-      slug: "kinghome-charmo-wall-single-cfg-6",
-      modelId: "kinghome-charmo-wall-single",
+      id: "kinghome-charmo-wall-single-9000-cfg-3",
+      slug: "kinghome-charmo-wall-single-9000-cfg-3",
+      modelId: "kinghome-charmo-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq19cdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -2993,23 +4103,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-charmo-wall-single-cfg-7",
-      slug: "kinghome-charmo-wall-single-cfg-7",
-      modelId: "kinghome-charmo-wall-single",
-      outdoorUnitId: "kinghome-kw12xq19cdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-charmo-wall-single-cfg-8",
-      slug: "kinghome-charmo-wall-single-cfg-8",
-      modelId: "kinghome-charmo-wall-single",
+      id: "kinghome-charmo-wall-single-9000-cfg-4",
+      slug: "kinghome-charmo-wall-single-9000-cfg-4",
+      modelId: "kinghome-charmo-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq19cao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3021,37 +4117,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-charmo-wall-single-cfg-9",
-      slug: "kinghome-charmo-wall-single-cfg-9",
-      modelId: "kinghome-charmo-wall-single",
-      outdoorUnitId: "kinghome-kw36xq21cdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33600,
-      coolingCapacityMaxBtu: 33600,
-      seer2: 21,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-charmo-wall-single-cfg-10",
-      slug: "kinghome-charmo-wall-single-cfg-10",
-      modelId: "kinghome-charmo-wall-single",
-      outdoorUnitId: "kinghome-kw30xq21cdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-cosmo-wall-single-cfg-1",
-      slug: "kinghome-cosmo-wall-single-cfg-1",
-      modelId: "kinghome-cosmo-wall-single",
+      id: "kinghome-cosmo-wall-single-12000-cfg-1",
+      slug: "kinghome-cosmo-wall-single-12000-cfg-1",
+      modelId: "kinghome-cosmo-wall-single-12000",
       outdoorUnitId: "kinghome-kw12hq19sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3063,9 +4131,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-cosmo-wall-single-cfg-2",
-      slug: "kinghome-cosmo-wall-single-cfg-2",
-      modelId: "kinghome-cosmo-wall-single",
+      id: "kinghome-cosmo-wall-single-12000-cfg-2",
+      slug: "kinghome-cosmo-wall-single-12000-cfg-2",
+      modelId: "kinghome-cosmo-wall-single-12000",
       outdoorUnitId: "kinghome-kw12hq19sao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3077,9 +4145,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-1",
-      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-1",
-      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted",
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-60000-cfg-1",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-60000-cfg-1",
+      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-60000",
       outdoorUnitId: "kinghome-krh05tcu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 56000,
@@ -3091,9 +4159,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-2",
-      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-2",
-      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted",
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-48000-cfg-1",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-48000-cfg-1",
+      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-48000",
       outdoorUnitId: "kinghome-krh04tcu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -3105,9 +4173,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-3",
-      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-3",
-      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted",
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-36000-cfg-1",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-36000-cfg-1",
+      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-36000",
       outdoorUnitId: "kinghome-krh03tcu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34400,
@@ -3119,9 +4187,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-4",
-      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-4",
-      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted",
+      id: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-24000-cfg-1",
+      slug: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-24000-cfg-1",
+      modelId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-24000",
       outdoorUnitId: "kinghome-krh02tcu",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3133,9 +4201,93 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-airy-wall-single-cfg-1",
-      slug: "kinghome-airy-wall-single-cfg-1",
-      modelId: "kinghome-airy-wall-single",
+      id: "kinghome-m-series-wall-single-42000-cfg-1",
+      slug: "kinghome-m-series-wall-single-42000-cfg-1",
+      modelId: "kinghome-m-series-wall-single-42000",
+      outdoorUnitId: "kinghome-km42x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-42000-cfg-2",
+      slug: "kinghome-m-series-wall-single-42000-cfg-2",
+      modelId: "kinghome-m-series-wall-single-42000",
+      outdoorUnitId: "kinghome-km42x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-42000-cfg-3",
+      slug: "kinghome-m-series-wall-single-42000-cfg-3",
+      modelId: "kinghome-m-series-wall-single-42000",
+      outdoorUnitId: "kinghome-km42x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-36000-cfg-1",
+      slug: "kinghome-charmo-wall-single-36000-cfg-1",
+      modelId: "kinghome-charmo-wall-single-36000",
+      outdoorUnitId: "kinghome-kw36xq21sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-36000-cfg-2",
+      slug: "kinghome-charmo-wall-single-36000-cfg-2",
+      modelId: "kinghome-charmo-wall-single-36000",
+      outdoorUnitId: "kinghome-kw36xq21cdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-36000-cfg-3",
+      slug: "kinghome-charmo-wall-single-36000-cfg-3",
+      modelId: "kinghome-charmo-wall-single-36000",
+      outdoorUnitId: "kinghome-kw36xq21cdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33600,
+      coolingCapacityMaxBtu: 33600,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-9000-cfg-1",
+      slug: "kinghome-airy-wall-single-9000-cfg-1",
+      modelId: "kinghome-airy-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3147,9 +4299,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-airy-wall-single-cfg-2",
-      slug: "kinghome-airy-wall-single-cfg-2",
-      modelId: "kinghome-airy-wall-single",
+      id: "kinghome-airy-wall-single-12000-cfg-1",
+      slug: "kinghome-airy-wall-single-12000-cfg-1",
+      modelId: "kinghome-airy-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3161,9 +4313,79 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-airy-wall-single-cfg-3",
-      slug: "kinghome-airy-wall-single-cfg-3",
-      modelId: "kinghome-airy-wall-single",
+      id: "kinghome-airy-wall-single-12000-cfg-2",
+      slug: "kinghome-airy-wall-single-12000-cfg-2",
+      modelId: "kinghome-airy-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-12000-cfg-3",
+      slug: "kinghome-airy-wall-single-12000-cfg-3",
+      modelId: "kinghome-airy-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-12000-cfg-4",
+      slug: "kinghome-airy-wall-single-12000-cfg-4",
+      modelId: "kinghome-airy-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-12000-cfg-5",
+      slug: "kinghome-airy-wall-single-12000-cfg-5",
+      modelId: "kinghome-airy-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-12000-cfg-6",
+      slug: "kinghome-airy-wall-single-12000-cfg-6",
+      modelId: "kinghome-airy-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-20000-cfg-1",
+      slug: "kinghome-airy-wall-single-20000-cfg-1",
+      modelId: "kinghome-airy-wall-single-20000",
       outdoorUnitId: "kinghome-kw24xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -3175,177 +4397,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-airy-wall-single-cfg-4",
-      slug: "kinghome-airy-wall-single-cfg-4",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw18xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-5",
-      slug: "kinghome-airy-wall-single-cfg-5",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw12xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 29.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-6",
-      slug: "kinghome-airy-wall-single-cfg-6",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw12xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 29.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-7",
-      slug: "kinghome-airy-wall-single-cfg-7",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw12xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 29.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-8",
-      slug: "kinghome-airy-wall-single-cfg-8",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw12xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 29.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-9",
-      slug: "kinghome-airy-wall-single-cfg-9",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw12xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 29.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-10",
-      slug: "kinghome-airy-wall-single-cfg-10",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw18xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-11",
-      slug: "kinghome-airy-wall-single-cfg-11",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw18xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-12",
-      slug: "kinghome-airy-wall-single-cfg-12",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw18xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-13",
-      slug: "kinghome-airy-wall-single-cfg-13",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw18xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-14",
-      slug: "kinghome-airy-wall-single-cfg-14",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw18xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-15",
-      slug: "kinghome-airy-wall-single-cfg-15",
-      modelId: "kinghome-airy-wall-single",
-      outdoorUnitId: "kinghome-kw18xq29sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 27.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-airy-wall-single-cfg-16",
-      slug: "kinghome-airy-wall-single-cfg-16",
-      modelId: "kinghome-airy-wall-single",
+      id: "kinghome-airy-wall-single-20000-cfg-2",
+      slug: "kinghome-airy-wall-single-20000-cfg-2",
+      modelId: "kinghome-airy-wall-single-20000",
       outdoorUnitId: "kinghome-kw24xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -3357,9 +4411,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-airy-wall-single-cfg-17",
-      slug: "kinghome-airy-wall-single-cfg-17",
-      modelId: "kinghome-airy-wall-single",
+      id: "kinghome-airy-wall-single-20000-cfg-3",
+      slug: "kinghome-airy-wall-single-20000-cfg-3",
+      modelId: "kinghome-airy-wall-single-20000",
       outdoorUnitId: "kinghome-kw24xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -3371,9 +4425,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-airy-wall-single-cfg-18",
-      slug: "kinghome-airy-wall-single-cfg-18",
-      modelId: "kinghome-airy-wall-single",
+      id: "kinghome-airy-wall-single-20000-cfg-4",
+      slug: "kinghome-airy-wall-single-20000-cfg-4",
+      modelId: "kinghome-airy-wall-single-20000",
       outdoorUnitId: "kinghome-kw24xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -3385,9 +4439,107 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-pular-wall-single-cfg-1",
-      slug: "kinghome-pular-wall-single-cfg-1",
-      modelId: "kinghome-pular-wall-single",
+      id: "kinghome-airy-wall-single-18000-cfg-1",
+      slug: "kinghome-airy-wall-single-18000-cfg-1",
+      modelId: "kinghome-airy-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-18000-cfg-2",
+      slug: "kinghome-airy-wall-single-18000-cfg-2",
+      modelId: "kinghome-airy-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-18000-cfg-3",
+      slug: "kinghome-airy-wall-single-18000-cfg-3",
+      modelId: "kinghome-airy-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-18000-cfg-4",
+      slug: "kinghome-airy-wall-single-18000-cfg-4",
+      modelId: "kinghome-airy-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-18000-cfg-5",
+      slug: "kinghome-airy-wall-single-18000-cfg-5",
+      modelId: "kinghome-airy-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-18000-cfg-6",
+      slug: "kinghome-airy-wall-single-18000-cfg-6",
+      modelId: "kinghome-airy-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-airy-wall-single-18000-cfg-7",
+      slug: "kinghome-airy-wall-single-18000-cfg-7",
+      modelId: "kinghome-airy-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq29sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 27.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-pular-wall-single-9000-cfg-1",
+      slug: "kinghome-pular-wall-single-9000-cfg-1",
+      modelId: "kinghome-pular-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq25pao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3399,9 +4551,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-pular-wall-single-cfg-2",
-      slug: "kinghome-pular-wall-single-cfg-2",
-      modelId: "kinghome-pular-wall-single",
+      id: "kinghome-pular-wall-single-9000-cfg-2",
+      slug: "kinghome-pular-wall-single-9000-cfg-2",
+      modelId: "kinghome-pular-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq25pdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3413,37 +4565,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-pular-wall-single-cfg-3",
-      slug: "kinghome-pular-wall-single-cfg-3",
-      modelId: "kinghome-pular-wall-single",
-      outdoorUnitId: "kinghome-kw24xq25pdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 26,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-pular-wall-single-cfg-4",
-      slug: "kinghome-pular-wall-single-cfg-4",
-      modelId: "kinghome-pular-wall-single",
-      outdoorUnitId: "kinghome-kw18xq25pdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-clivia-wall-single-cfg-1",
-      slug: "kinghome-clivia-wall-single-cfg-1",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-12000-cfg-1",
+      slug: "kinghome-clivia-wall-single-12000-cfg-1",
+      modelId: "kinghome-clivia-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25pdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3455,9 +4579,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-2",
-      slug: "kinghome-clivia-wall-single-cfg-2",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-12000-cfg-2",
+      slug: "kinghome-clivia-wall-single-12000-cfg-2",
+      modelId: "kinghome-clivia-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25pao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3469,37 +4593,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-3",
-      slug: "kinghome-clivia-wall-single-cfg-3",
-      modelId: "kinghome-clivia-wall-single",
-      outdoorUnitId: "kinghome-kw09xq25sao",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 27,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-clivia-wall-single-cfg-4",
-      slug: "kinghome-clivia-wall-single-cfg-4",
-      modelId: "kinghome-clivia-wall-single",
-      outdoorUnitId: "kinghome-kw09xq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 26,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-clivia-wall-single-cfg-5",
-      slug: "kinghome-clivia-wall-single-cfg-5",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-12000-cfg-3",
+      slug: "kinghome-clivia-wall-single-12000-cfg-3",
+      modelId: "kinghome-clivia-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25sao",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3511,9 +4607,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-6",
-      slug: "kinghome-clivia-wall-single-cfg-6",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-12000-cfg-4",
+      slug: "kinghome-clivia-wall-single-12000-cfg-4",
+      modelId: "kinghome-clivia-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3525,37 +4621,65 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-7",
-      slug: "kinghome-clivia-wall-single-cfg-7",
-      modelId: "kinghome-clivia-wall-single",
-      outdoorUnitId: "kinghome-kw18xq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-clivia-wall-single-cfg-8",
-      slug: "kinghome-clivia-wall-single-cfg-8",
-      modelId: "kinghome-clivia-wall-single",
-      outdoorUnitId: "kinghome-kw24xq25sdo",
+      id: "kinghome-pular-wall-single-20000-cfg-1",
+      slug: "kinghome-pular-wall-single-20000-cfg-1",
+      modelId: "kinghome-pular-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24xq25pdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
-      seer2: 23.5,
+      seer2: 26,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-pular-wall-single-18000-cfg-1",
+      slug: "kinghome-pular-wall-single-18000-cfg-1",
+      modelId: "kinghome-pular-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq25pdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-9",
-      slug: "kinghome-clivia-wall-single-cfg-9",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-9000-cfg-1",
+      slug: "kinghome-clivia-wall-single-9000-cfg-1",
+      modelId: "kinghome-clivia-wall-single-9000",
+      outdoorUnitId: "kinghome-kw09xq25sao",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 27,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-9000-cfg-2",
+      slug: "kinghome-clivia-wall-single-9000-cfg-2",
+      modelId: "kinghome-clivia-wall-single-9000",
+      outdoorUnitId: "kinghome-kw09xq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 26,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-18000-cfg-1",
+      slug: "kinghome-clivia-wall-single-18000-cfg-1",
+      modelId: "kinghome-clivia-wall-single-18000",
       outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3567,9 +4691,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-10",
-      slug: "kinghome-clivia-wall-single-cfg-10",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-18000-cfg-2",
+      slug: "kinghome-clivia-wall-single-18000-cfg-2",
+      modelId: "kinghome-clivia-wall-single-18000",
       outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3581,9 +4705,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-11",
-      slug: "kinghome-clivia-wall-single-cfg-11",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-18000-cfg-3",
+      slug: "kinghome-clivia-wall-single-18000-cfg-3",
+      modelId: "kinghome-clivia-wall-single-18000",
       outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3595,9 +4719,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-12",
-      slug: "kinghome-clivia-wall-single-cfg-12",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-18000-cfg-4",
+      slug: "kinghome-clivia-wall-single-18000-cfg-4",
+      modelId: "kinghome-clivia-wall-single-18000",
       outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3609,9 +4733,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-13",
-      slug: "kinghome-clivia-wall-single-cfg-13",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-18000-cfg-5",
+      slug: "kinghome-clivia-wall-single-18000-cfg-5",
+      modelId: "kinghome-clivia-wall-single-18000",
       outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3623,9 +4747,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-14",
-      slug: "kinghome-clivia-wall-single-cfg-14",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-18000-cfg-6",
+      slug: "kinghome-clivia-wall-single-18000-cfg-6",
+      modelId: "kinghome-clivia-wall-single-18000",
       outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3637,9 +4761,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-15",
-      slug: "kinghome-clivia-wall-single-cfg-15",
-      modelId: "kinghome-clivia-wall-single",
+      id: "kinghome-clivia-wall-single-18000-cfg-7",
+      slug: "kinghome-clivia-wall-single-18000-cfg-7",
+      modelId: "kinghome-clivia-wall-single-18000",
       outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3651,51 +4775,23 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-16",
-      slug: "kinghome-clivia-wall-single-cfg-16",
-      modelId: "kinghome-clivia-wall-single",
-      outdoorUnitId: "kinghome-kw24xq25sdo",
+      id: "kinghome-clivia-wall-single-18000-cfg-8",
+      slug: "kinghome-clivia-wall-single-18000-cfg-8",
+      modelId: "kinghome-clivia-wall-single-18000",
+      outdoorUnitId: "kinghome-kw18xq25sdo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 23.5,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24.5,
       hspf2: 9,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-clivia-wall-single-cfg-17",
-      slug: "kinghome-clivia-wall-single-cfg-17",
-      modelId: "kinghome-clivia-wall-single",
-      outdoorUnitId: "kinghome-kw24xq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-clivia-wall-single-cfg-18",
-      slug: "kinghome-clivia-wall-single-cfg-18",
-      modelId: "kinghome-clivia-wall-single",
-      outdoorUnitId: "kinghome-kw24xq25sdo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 23.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-cee-ultranixx-central-ducted-cfg-1",
-      slug: "kinghome-cee-ultranixx-central-ducted-cfg-1",
-      modelId: "kinghome-cee-ultranixx-central-ducted",
+      id: "kinghome-cee-ultranixx-central-ducted-24000-cfg-1",
+      slug: "kinghome-cee-ultranixx-central-ducted-24000-cfg-1",
+      modelId: "kinghome-cee-ultranixx-central-ducted-24000",
       outdoorUnitId: "kinghome-kd30uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3707,9 +4803,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-cee-ultranixx-central-ducted-cfg-2",
-      slug: "kinghome-cee-ultranixx-central-ducted-cfg-2",
-      modelId: "kinghome-cee-ultranixx-central-ducted",
+      id: "kinghome-cee-ultranixx-central-ducted-24000-cfg-2",
+      slug: "kinghome-cee-ultranixx-central-ducted-24000-cfg-2",
+      modelId: "kinghome-cee-ultranixx-central-ducted-24000",
       outdoorUnitId: "kinghome-kd30uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -3721,9 +4817,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-cee-ultranixx-central-ducted-cfg-3",
-      slug: "kinghome-cee-ultranixx-central-ducted-cfg-3",
-      modelId: "kinghome-cee-ultranixx-central-ducted",
+      id: "kinghome-cee-ultranixx-central-ducted-36000-cfg-1",
+      slug: "kinghome-cee-ultranixx-central-ducted-36000-cfg-1",
+      modelId: "kinghome-cee-ultranixx-central-ducted-36000",
       outdoorUnitId: "kinghome-kd36uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -3735,9 +4831,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-cee-ultranixx-central-ducted-cfg-4",
-      slug: "kinghome-cee-ultranixx-central-ducted-cfg-4",
-      modelId: "kinghome-cee-ultranixx-central-ducted",
+      id: "kinghome-cee-ultranixx-central-ducted-48000-cfg-1",
+      slug: "kinghome-cee-ultranixx-central-ducted-48000-cfg-1",
+      modelId: "kinghome-cee-ultranixx-central-ducted-48000",
       outdoorUnitId: "kinghome-kd60uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -3749,9 +4845,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-cee-ultranixx-central-ducted-cfg-5",
-      slug: "kinghome-cee-ultranixx-central-ducted-cfg-5",
-      modelId: "kinghome-cee-ultranixx-central-ducted",
+      id: "kinghome-cee-ultranixx-central-ducted-48000-cfg-2",
+      slug: "kinghome-cee-ultranixx-central-ducted-48000-cfg-2",
+      modelId: "kinghome-cee-ultranixx-central-ducted-48000",
       outdoorUnitId: "kinghome-kd60uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53500,
@@ -3763,9 +4859,149 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-g-series-central-ducted-cfg-1",
-      slug: "kinghome-g-series-central-ducted-cfg-1",
-      modelId: "kinghome-g-series-central-ducted",
+      id: "kinghome-charmo-wall-single-30000-cfg-1",
+      slug: "kinghome-charmo-wall-single-30000-cfg-1",
+      modelId: "kinghome-charmo-wall-single-30000",
+      outdoorUnitId: "kinghome-kw30xq21cdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-30000-cfg-2",
+      slug: "kinghome-charmo-wall-single-30000-cfg-2",
+      modelId: "kinghome-charmo-wall-single-30000",
+      outdoorUnitId: "kinghome-kw30xq21cdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-charmo-wall-single-12000-cfg-1",
+      slug: "kinghome-charmo-wall-single-12000-cfg-1",
+      modelId: "kinghome-charmo-wall-single-12000",
+      outdoorUnitId: "kinghome-kw12xq19cdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-48000-cfg-1",
+      slug: "kinghome-m-series-wall-single-48000-cfg-1",
+      modelId: "kinghome-m-series-wall-single-48000",
+      outdoorUnitId: "kinghome-km48x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-48000-cfg-2",
+      slug: "kinghome-m-series-wall-single-48000-cfg-2",
+      modelId: "kinghome-m-series-wall-single-48000",
+      outdoorUnitId: "kinghome-km48x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-m-series-wall-single-48000-cfg-3",
+      slug: "kinghome-m-series-wall-single-48000-cfg-3",
+      modelId: "kinghome-m-series-wall-single-48000",
+      outdoorUnitId: "kinghome-km48x6o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-20000-cfg-1",
+      slug: "kinghome-clivia-wall-single-20000-cfg-1",
+      modelId: "kinghome-clivia-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24xq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 23.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-20000-cfg-2",
+      slug: "kinghome-clivia-wall-single-20000-cfg-2",
+      modelId: "kinghome-clivia-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24xq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 23.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-20000-cfg-3",
+      slug: "kinghome-clivia-wall-single-20000-cfg-3",
+      modelId: "kinghome-clivia-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24xq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 23.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-clivia-wall-single-20000-cfg-4",
+      slug: "kinghome-clivia-wall-single-20000-cfg-4",
+      modelId: "kinghome-clivia-wall-single-20000",
+      outdoorUnitId: "kinghome-kw24xq25sdo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 23.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-g-series-central-ducted-48000-cfg-1",
+      slug: "kinghome-g-series-central-ducted-48000-cfg-1",
+      modelId: "kinghome-g-series-central-ducted-48000",
       outdoorUnitId: "kinghome-kd48uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -3777,9 +5013,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-g-series-central-ducted-cfg-2",
-      slug: "kinghome-g-series-central-ducted-cfg-2",
-      modelId: "kinghome-g-series-central-ducted",
+      id: "kinghome-g-series-central-ducted-24000-cfg-1",
+      slug: "kinghome-g-series-central-ducted-24000-cfg-1",
+      modelId: "kinghome-g-series-central-ducted-24000",
       outdoorUnitId: "kinghome-kd24uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3791,9 +5027,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-360-air-discharge-cassette-unit-wall-single-cfg-1",
-      slug: "kinghome-360-air-discharge-cassette-unit-wall-single-cfg-1",
-      modelId: "kinghome-360-air-discharge-cassette-unit-wall-single",
+      id: "kinghome-360-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      slug: "kinghome-360-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      modelId: "kinghome-360-air-discharge-cassette-unit-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3805,9 +5041,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-360-air-discharge-cassette-unit-wall-single-cfg-2",
-      slug: "kinghome-360-air-discharge-cassette-unit-wall-single-cfg-2",
-      modelId: "kinghome-360-air-discharge-cassette-unit-wall-single",
+      id: "kinghome-360-air-discharge-cassette-unit-wall-single-9000-cfg-2",
+      slug: "kinghome-360-air-discharge-cassette-unit-wall-single-9000-cfg-2",
+      modelId: "kinghome-360-air-discharge-cassette-unit-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3819,9 +5055,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-one-way-air-discharge-cassette-unit-wall-single-cfg-1",
-      slug: "kinghome-one-way-air-discharge-cassette-unit-wall-single-cfg-1",
-      modelId: "kinghome-one-way-air-discharge-cassette-unit-wall-single",
+      id: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      slug: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-1",
+      modelId: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3833,9 +5069,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-one-way-air-discharge-cassette-unit-wall-single-cfg-2",
-      slug: "kinghome-one-way-air-discharge-cassette-unit-wall-single-cfg-2",
-      modelId: "kinghome-one-way-air-discharge-cassette-unit-wall-single",
+      id: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-2",
+      slug: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-2",
+      modelId: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3847,9 +5083,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-floor-ceiling-wall-single-cfg-1",
-      slug: "kinghome-floor-ceiling-wall-single-cfg-1",
-      modelId: "kinghome-floor-ceiling-wall-single",
+      id: "kinghome-floor-ceiling-wall-single-9000-cfg-1",
+      slug: "kinghome-floor-ceiling-wall-single-9000-cfg-1",
+      modelId: "kinghome-floor-ceiling-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3861,9 +5097,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-floor-ceiling-wall-single-cfg-2",
-      slug: "kinghome-floor-ceiling-wall-single-cfg-2",
-      modelId: "kinghome-floor-ceiling-wall-single",
+      id: "kinghome-floor-ceiling-wall-single-9000-cfg-2",
+      slug: "kinghome-floor-ceiling-wall-single-9000-cfg-2",
+      modelId: "kinghome-floor-ceiling-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3875,9 +5111,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-console-wall-single-cfg-1",
-      slug: "kinghome-console-wall-single-cfg-1",
-      modelId: "kinghome-console-wall-single",
+      id: "kinghome-console-wall-single-9000-cfg-1",
+      slug: "kinghome-console-wall-single-9000-cfg-1",
+      modelId: "kinghome-console-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3889,9 +5125,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-console-wall-single-cfg-2",
-      slug: "kinghome-console-wall-single-cfg-2",
-      modelId: "kinghome-console-wall-single",
+      id: "kinghome-console-wall-single-9000-cfg-2",
+      slug: "kinghome-console-wall-single-9000-cfg-2",
+      modelId: "kinghome-console-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3903,9 +5139,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ducted-wall-single-cfg-1",
-      slug: "kinghome-ducted-wall-single-cfg-1",
-      modelId: "kinghome-ducted-wall-single",
+      id: "kinghome-ducted-wall-single-9000-cfg-1",
+      slug: "kinghome-ducted-wall-single-9000-cfg-1",
+      modelId: "kinghome-ducted-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3917,9 +5153,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-ducted-wall-single-cfg-2",
-      slug: "kinghome-ducted-wall-single-cfg-2",
-      modelId: "kinghome-ducted-wall-single",
+      id: "kinghome-ducted-wall-single-9000-cfg-2",
+      slug: "kinghome-ducted-wall-single-9000-cfg-2",
+      modelId: "kinghome-ducted-wall-single-9000",
       outdoorUnitId: "kinghome-kw09xq29sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -3931,9 +5167,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-1",
-      slug: "kinghome-all-match-wall-single-cfg-1",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-12000-cfg-1",
+      slug: "kinghome-all-match-wall-single-12000-cfg-1",
+      modelId: "kinghome-all-match-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3945,9 +5181,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-2",
-      slug: "kinghome-all-match-wall-single-cfg-2",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-12000-cfg-2",
+      slug: "kinghome-all-match-wall-single-12000-cfg-2",
+      modelId: "kinghome-all-match-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3959,9 +5195,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-3",
-      slug: "kinghome-all-match-wall-single-cfg-3",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-12000-cfg-3",
+      slug: "kinghome-all-match-wall-single-12000-cfg-3",
+      modelId: "kinghome-all-match-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3973,9 +5209,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-4",
-      slug: "kinghome-all-match-wall-single-cfg-4",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-12000-cfg-4",
+      slug: "kinghome-all-match-wall-single-12000-cfg-4",
+      modelId: "kinghome-all-match-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3987,9 +5223,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-5",
-      slug: "kinghome-all-match-wall-single-cfg-5",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-12000-cfg-5",
+      slug: "kinghome-all-match-wall-single-12000-cfg-5",
+      modelId: "kinghome-all-match-wall-single-12000",
       outdoorUnitId: "kinghome-kw12xq25sdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -4001,9 +5237,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-6",
-      slug: "kinghome-all-match-wall-single-cfg-6",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-36000-cfg-1",
+      slug: "kinghome-all-match-wall-single-36000-cfg-1",
+      modelId: "kinghome-all-match-wall-single-36000",
       outdoorUnitId: "kinghome-kw36xq21cdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33600,
@@ -4015,9 +5251,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-7",
-      slug: "kinghome-all-match-wall-single-cfg-7",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-36000-cfg-2",
+      slug: "kinghome-all-match-wall-single-36000-cfg-2",
+      modelId: "kinghome-all-match-wall-single-36000",
       outdoorUnitId: "kinghome-kw36xq21cdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33600,
@@ -4029,9 +5265,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-8",
-      slug: "kinghome-all-match-wall-single-cfg-8",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-36000-cfg-3",
+      slug: "kinghome-all-match-wall-single-36000-cfg-3",
+      modelId: "kinghome-all-match-wall-single-36000",
       outdoorUnitId: "kinghome-kw36xq21cdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33600,
@@ -4043,9 +5279,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-9",
-      slug: "kinghome-all-match-wall-single-cfg-9",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-30000-cfg-1",
+      slug: "kinghome-all-match-wall-single-30000-cfg-1",
+      modelId: "kinghome-all-match-wall-single-30000",
       outdoorUnitId: "kinghome-kw30xq21cdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4057,9 +5293,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-all-match-wall-single-cfg-10",
-      slug: "kinghome-all-match-wall-single-cfg-10",
-      modelId: "kinghome-all-match-wall-single",
+      id: "kinghome-all-match-wall-single-30000-cfg-2",
+      slug: "kinghome-all-match-wall-single-30000-cfg-2",
+      modelId: "kinghome-all-match-wall-single-30000",
       outdoorUnitId: "kinghome-kw30xq21cdo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4071,9 +5307,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-e-series-central-ducted-cfg-1",
-      slug: "kinghome-e-series-central-ducted-cfg-1",
-      modelId: "kinghome-e-series-central-ducted",
+      id: "kinghome-e-series-central-ducted-24000-cfg-1",
+      slug: "kinghome-e-series-central-ducted-24000-cfg-1",
+      modelId: "kinghome-e-series-central-ducted-24000",
       outdoorUnitId: "kinghome-ku36uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4085,9 +5321,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-e-series-central-ducted-cfg-2",
-      slug: "kinghome-e-series-central-ducted-cfg-2",
-      modelId: "kinghome-e-series-central-ducted",
+      id: "kinghome-e-series-central-ducted-24000-cfg-2",
+      slug: "kinghome-e-series-central-ducted-24000-cfg-2",
+      modelId: "kinghome-e-series-central-ducted-24000",
       outdoorUnitId: "kinghome-ku36uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4099,37 +5335,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-e-series-central-ducted-cfg-3",
-      slug: "kinghome-e-series-central-ducted-cfg-3",
-      modelId: "kinghome-e-series-central-ducted",
-      outdoorUnitId: "kinghome-ku60uxo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-e-series-central-ducted-cfg-4",
-      slug: "kinghome-e-series-central-ducted-cfg-4",
-      modelId: "kinghome-e-series-central-ducted",
-      outdoorUnitId: "kinghome-ku60uxo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-e-series-central-ducted-cfg-5",
-      slug: "kinghome-e-series-central-ducted-cfg-5",
-      modelId: "kinghome-e-series-central-ducted",
+      id: "kinghome-e-series-central-ducted-24000-cfg-3",
+      slug: "kinghome-e-series-central-ducted-24000-cfg-3",
+      modelId: "kinghome-e-series-central-ducted-24000",
       outdoorUnitId: "kinghome-ku36uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4141,23 +5349,9 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-e-series-central-ducted-cfg-6",
-      slug: "kinghome-e-series-central-ducted-cfg-6",
-      modelId: "kinghome-e-series-central-ducted",
-      outdoorUnitId: "kinghome-ku36uxo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 18,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kinghome-e-series-central-ducted-cfg-7",
-      slug: "kinghome-e-series-central-ducted-cfg-7",
-      modelId: "kinghome-e-series-central-ducted",
+      id: "kinghome-e-series-central-ducted-48000-cfg-1",
+      slug: "kinghome-e-series-central-ducted-48000-cfg-1",
+      modelId: "kinghome-e-series-central-ducted-48000",
       outdoorUnitId: "kinghome-ku60uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -4169,9 +5363,37 @@ export const kinghomeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kinghome-e-series-central-ducted-cfg-8",
-      slug: "kinghome-e-series-central-ducted-cfg-8",
-      modelId: "kinghome-e-series-central-ducted",
+      id: "kinghome-e-series-central-ducted-48000-cfg-2",
+      slug: "kinghome-e-series-central-ducted-48000-cfg-2",
+      modelId: "kinghome-e-series-central-ducted-48000",
+      outdoorUnitId: "kinghome-ku60uxo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-e-series-central-ducted-48000-cfg-3",
+      slug: "kinghome-e-series-central-ducted-48000-cfg-3",
+      modelId: "kinghome-e-series-central-ducted-48000",
+      outdoorUnitId: "kinghome-ku60uxo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-e-series-central-ducted-48000-cfg-4",
+      slug: "kinghome-e-series-central-ducted-48000-cfg-4",
+      modelId: "kinghome-e-series-central-ducted-48000",
       outdoorUnitId: "kinghome-ku60uxo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -4181,11 +5403,25 @@ export const kinghomeDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kinghome-e-series-central-ducted-36000-cfg-1",
+      slug: "kinghome-e-series-central-ducted-36000-cfg-1",
+      modelId: "kinghome-e-series-central-ducted-36000",
+      outdoorUnitId: "kinghome-ku36uxo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "kinghome-standard-wall-single-cfg-1",
+      configurationId: "kinghome-standard-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4196,7 +5432,29 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-2",
+      configurationId: "kinghome-standard-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4207,106 +5465,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-12",
+      configurationId: "kinghome-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4317,7 +5476,18 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-13",
+      configurationId: "kinghome-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4328,40 +5498,84 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-14",
+      configurationId: "kinghome-standard-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
+          heatingCapacityBtu: 9700,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-15",
+      configurationId: "kinghome-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
+          heatingCapacityBtu: 12400,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-16",
+      configurationId: "kinghome-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27800,
+          heatingCapacityBtu: 12800,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-17",
+      configurationId: "kinghome-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4372,7 +5586,51 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-18",
+      configurationId: "kinghome-standard-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4383,7 +5641,40 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-19",
+      configurationId: "kinghome-standard-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4394,7 +5685,18 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-20",
+      configurationId: "kinghome-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4405,106 +5707,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-standard-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-standard-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-jasmine-wall-single-cfg-1",
+      configurationId: "kinghome-jasmine-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4515,7 +5718,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-jasmine-wall-single-cfg-2",
+      configurationId: "kinghome-jasmine-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4526,7 +5729,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-jasmine-wall-single-cfg-3",
+      configurationId: "kinghome-jasmine-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4537,7 +5740,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-jasmine-wall-single-cfg-4",
+      configurationId: "kinghome-jasmine-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4548,7 +5751,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-j-series-wall-single-cfg-1",
+      configurationId: "kinghome-j-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4559,7 +5762,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-j-series-wall-single-cfg-2",
+      configurationId: "kinghome-j-series-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4570,7 +5773,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-j-series-wall-single-cfg-3",
+      configurationId: "kinghome-j-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4581,7 +5784,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-j-series-wall-single-cfg-4",
+      configurationId: "kinghome-j-series-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4592,7 +5795,40 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-1",
+      configurationId: "kinghome-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4603,18 +5839,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-3",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4625,18 +5850,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-5",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4647,40 +5861,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-9",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4691,7 +5872,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-10",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4702,7 +5883,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-11",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4713,7 +5894,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-12",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4724,29 +5905,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-15",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4757,7 +5916,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-16",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4768,7 +5927,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-17",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4779,7 +5938,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-18",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4790,7 +5949,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-19",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4801,7 +5960,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-20",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4812,7 +5971,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-21",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4823,7 +5982,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ultranixx-central-ducted-cfg-22",
+      configurationId: "kinghome-ultranixx-central-ducted-24000-cfg-15",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4834,7 +5993,84 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-1",
+      configurationId: "kinghome-ultranixx-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-ultranixx-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-ultranixx-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-ultranixx-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-ultranixx-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-ultranixx-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-ultranixx-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4845,7 +6081,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-2",
+      configurationId: "kinghome-sunflower-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4856,7 +6092,40 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-3",
+      configurationId: "kinghome-sunflower-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4867,7 +6136,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-4",
+      configurationId: "kinghome-sunflower-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4878,7 +6147,29 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-5",
+      configurationId: "kinghome-sunflower-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4889,7 +6180,40 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-6",
+      configurationId: "kinghome-sunflower-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-sunflower-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4900,7 +6224,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-7",
+      configurationId: "kinghome-sunflower-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4911,62 +6235,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-sunflower-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-sunflower-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-sunflower-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-sunflower-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-sunflower-wall-single-cfg-13",
+      configurationId: "kinghome-sunflower-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4977,7 +6246,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-14",
+      configurationId: "kinghome-sunflower-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4988,40 +6257,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-sunflower-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-sunflower-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-sunflower-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-1",
+      configurationId: "kinghome-m-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5032,51 +6268,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30800,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-6",
+      configurationId: "kinghome-m-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5087,51 +6279,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32400,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-11",
+      configurationId: "kinghome-m-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5142,51 +6290,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-16",
+      configurationId: "kinghome-m-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5197,7 +6301,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-17",
+      configurationId: "kinghome-m-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5208,51 +6312,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: 2.07,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-22",
+      configurationId: "kinghome-m-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5263,51 +6323,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-27",
+      configurationId: "kinghome-m-series-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5318,7 +6334,62 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-28",
+      configurationId: "kinghome-m-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5329,7 +6400,62 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-29",
+      configurationId: "kinghome-m-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-30000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5340,7 +6466,95 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-30",
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30800,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-36000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5351,51 +6565,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-m-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-m-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-charmo-wall-single-cfg-1",
+      configurationId: "kinghome-charmo-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5406,7 +6576,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-charmo-wall-single-cfg-2",
+      configurationId: "kinghome-charmo-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5417,40 +6587,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-charmo-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-charmo-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-charmo-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-charmo-wall-single-cfg-6",
+      configurationId: "kinghome-charmo-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5461,18 +6598,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-charmo-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-charmo-wall-single-cfg-8",
+      configurationId: "kinghome-charmo-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5483,29 +6609,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-charmo-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-charmo-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-cosmo-wall-single-cfg-1",
+      configurationId: "kinghome-cosmo-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5516,7 +6620,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-cosmo-wall-single-cfg-2",
+      configurationId: "kinghome-cosmo-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5527,7 +6631,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-1",
+      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5538,7 +6642,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-2",
+      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5549,7 +6653,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-3",
+      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5560,7 +6664,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-cfg-4",
+      configurationId: "kinghome-17-seer-dc-inverter-rooftop-unit-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5571,7 +6675,73 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-1",
+      configurationId: "kinghome-m-series-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-charmo-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-charmo-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-charmo-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5582,7 +6752,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-2",
+      configurationId: "kinghome-airy-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5593,7 +6763,62 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-3",
+      configurationId: "kinghome-airy-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5604,7 +6829,40 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-4",
+      configurationId: "kinghome-airy-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-airy-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5615,62 +6873,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-airy-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-airy-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-airy-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-airy-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-airy-wall-single-cfg-10",
+      configurationId: "kinghome-airy-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5681,7 +6884,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-11",
+      configurationId: "kinghome-airy-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5692,7 +6895,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-12",
+      configurationId: "kinghome-airy-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5703,7 +6906,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-13",
+      configurationId: "kinghome-airy-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5714,7 +6917,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-14",
+      configurationId: "kinghome-airy-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5725,7 +6928,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-15",
+      configurationId: "kinghome-airy-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5736,40 +6939,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-airy-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-airy-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-airy-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-pular-wall-single-cfg-1",
+      configurationId: "kinghome-pular-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5780,7 +6950,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-pular-wall-single-cfg-2",
+      configurationId: "kinghome-pular-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5791,7 +6961,51 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-pular-wall-single-cfg-3",
+      configurationId: "kinghome-clivia-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-clivia-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-clivia-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-clivia-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-pular-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5802,7 +7016,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-pular-wall-single-cfg-4",
+      configurationId: "kinghome-pular-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5813,29 +7027,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-clivia-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-clivia-wall-single-cfg-3",
+      configurationId: "kinghome-clivia-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5846,7 +7038,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-4",
+      configurationId: "kinghome-clivia-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5857,29 +7049,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-clivia-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-clivia-wall-single-cfg-7",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5890,18 +7060,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-clivia-wall-single-cfg-9",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5912,7 +7071,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-10",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5923,7 +7082,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-11",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5934,7 +7093,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-12",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5945,7 +7104,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-13",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5956,7 +7115,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-14",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5967,7 +7126,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-15",
+      configurationId: "kinghome-clivia-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5978,40 +7137,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-clivia-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-clivia-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-clivia-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-cee-ultranixx-central-ducted-cfg-1",
+      configurationId: "kinghome-cee-ultranixx-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6022,7 +7148,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-cee-ultranixx-central-ducted-cfg-2",
+      configurationId: "kinghome-cee-ultranixx-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6033,7 +7159,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-cee-ultranixx-central-ducted-cfg-3",
+      configurationId: "kinghome-cee-ultranixx-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6044,7 +7170,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-cee-ultranixx-central-ducted-cfg-4",
+      configurationId: "kinghome-cee-ultranixx-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6055,7 +7181,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-cee-ultranixx-central-ducted-cfg-5",
+      configurationId: "kinghome-cee-ultranixx-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6066,7 +7192,117 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-g-series-central-ducted-cfg-1",
+      configurationId: "kinghome-charmo-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-charmo-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-charmo-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-m-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-clivia-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-clivia-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-clivia-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-clivia-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-g-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6077,7 +7313,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-g-series-central-ducted-cfg-2",
+      configurationId: "kinghome-g-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6088,7 +7324,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-360-air-discharge-cassette-unit-wall-single-cfg-1",
+      configurationId: "kinghome-360-air-discharge-cassette-unit-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6099,7 +7335,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-360-air-discharge-cassette-unit-wall-single-cfg-2",
+      configurationId: "kinghome-360-air-discharge-cassette-unit-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6110,7 +7346,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-one-way-air-discharge-cassette-unit-wall-single-cfg-1",
+      configurationId: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6121,7 +7357,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-one-way-air-discharge-cassette-unit-wall-single-cfg-2",
+      configurationId: "kinghome-one-way-air-discharge-cassette-unit-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6132,7 +7368,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-floor-ceiling-wall-single-cfg-1",
+      configurationId: "kinghome-floor-ceiling-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6143,7 +7379,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-floor-ceiling-wall-single-cfg-2",
+      configurationId: "kinghome-floor-ceiling-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6154,7 +7390,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-console-wall-single-cfg-1",
+      configurationId: "kinghome-console-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6165,7 +7401,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-console-wall-single-cfg-2",
+      configurationId: "kinghome-console-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6176,7 +7412,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ducted-wall-single-cfg-1",
+      configurationId: "kinghome-ducted-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6187,7 +7423,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-ducted-wall-single-cfg-2",
+      configurationId: "kinghome-ducted-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6198,7 +7434,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-1",
+      configurationId: "kinghome-all-match-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6209,7 +7445,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-2",
+      configurationId: "kinghome-all-match-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6220,7 +7456,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-3",
+      configurationId: "kinghome-all-match-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6231,7 +7467,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-4",
+      configurationId: "kinghome-all-match-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6242,7 +7478,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-5",
+      configurationId: "kinghome-all-match-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6253,7 +7489,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-6",
+      configurationId: "kinghome-all-match-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6264,7 +7500,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-7",
+      configurationId: "kinghome-all-match-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6275,7 +7511,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-8",
+      configurationId: "kinghome-all-match-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6286,7 +7522,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-9",
+      configurationId: "kinghome-all-match-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6297,7 +7533,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-all-match-wall-single-cfg-10",
+      configurationId: "kinghome-all-match-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6308,7 +7544,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-e-series-central-ducted-cfg-1",
+      configurationId: "kinghome-e-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6319,7 +7555,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-e-series-central-ducted-cfg-2",
+      configurationId: "kinghome-e-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6330,29 +7566,7 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-e-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-e-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kinghome-e-series-central-ducted-cfg-5",
+      configurationId: "kinghome-e-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6363,18 +7577,29 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-e-series-central-ducted-cfg-6",
+      configurationId: "kinghome-e-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
+          heatingCapacityBtu: 31200,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kinghome-e-series-central-ducted-cfg-7",
+      configurationId: "kinghome-e-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-e-series-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6385,12 +7610,23 @@ export const kinghomeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kinghome-e-series-central-ducted-cfg-8",
+      configurationId: "kinghome-e-series-central-ducted-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 45000,
           cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kinghome-e-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 2,
           confidence: "verified",
         }
       ]

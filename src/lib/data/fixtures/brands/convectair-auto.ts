@@ -37,18 +37,154 @@ export const convectairDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "convectair-standard-wall-single",
-      slug: "convectair-standard-wall-single",
-      name: "Standard",
+      id: "convectair-standard-wall-single-9000",
+      slug: "convectair-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "convectair-standard",
       brandId: "convectair",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7100,
+      heatingCapacity5FMaxBtu: 9500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-12000",
+      slug: "convectair-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "convectair-standard",
+      brandId: "convectair",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-18000",
+      slug: "convectair-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "convectair-standard",
+      brandId: "convectair",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10900,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-24000",
+      slug: "convectair-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "convectair-standard",
+      brandId: "convectair",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-30000",
+      slug: "convectair-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "convectair-standard",
+      brandId: "convectair",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 26600,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-48000",
+      slug: "convectair-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "convectair-standard",
+      brandId: "convectair",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 36000,
       seer2Min: null,
       seer2Max: null,
@@ -63,24 +199,133 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-500-series-wall-single",
-      slug: "convectair-500-series-wall-single",
-      name: "500 Series",
-      seriesId: "convectair-500-series",
+      id: "convectair-standard-wall-single-36000",
+      slug: "convectair-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "convectair-standard",
       brandId: "convectair",
-      modelNumber: "500 Series",
-      normalizedModelNumber: "500-series",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-500-series-wall-single-9000",
+      slug: "convectair-500-series-wall-single-9000",
+      name: "500 Series 9 000 BTU",
+      seriesId: "convectair-500-series",
+      brandId: "convectair",
+      modelNumber: "500 Series 9k",
+      normalizedModelNumber: "500-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 23000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 10000,
-      heatingCapacity5FMaxBtu: 21600,
-      seer2Min: 21.7,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 26,
       seer2Max: 26,
-      hspf2Min: 10.5,
-      hspf2Max: 13.3,
+      hspf2Min: 12.5,
+      hspf2Max: 12.5,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-500-series-wall-single-12000",
+      slug: "convectair-500-series-wall-single-12000",
+      name: "500 Series 12 000 BTU",
+      seriesId: "convectair-500-series",
+      brandId: "convectair",
+      modelNumber: "500 Series 12k",
+      normalizedModelNumber: "500-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-500-series-wall-single-18000",
+      slug: "convectair-500-series-wall-single-18000",
+      name: "500 Series 18 000 BTU",
+      seriesId: "convectair-500-series",
+      brandId: "convectair",
+      modelNumber: "500 Series 18k",
+      normalizedModelNumber: "500-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14400,
+      heatingCapacity5FMaxBtu: 14400,
+      seer2Min: 21.7,
+      seer2Max: 21.7,
+      hspf2Min: 10.8,
+      hspf2Max: 10.8,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-500-series-wall-single-24000",
+      slug: "convectair-500-series-wall-single-24000",
+      name: "500 Series 24 000 BTU",
+      seriesId: "convectair-500-series",
+      brandId: "convectair",
+      modelNumber: "500 Series 24k",
+      normalizedModelNumber: "500-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 21600,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 22.3,
+      seer2Max: 22.3,
+      hspf2Min: 13.3,
+      hspf2Max: 13.3,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -97,8 +342,20 @@ export const convectairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "convectair-8028-c09-o",
+      modelNumber: "8028-C09-O",
+      brandId: "convectair",
+      refrigerant: null as any,
+    },
+    {
       id: "convectair-8120-o",
       modelNumber: "8120-O",
+      brandId: "convectair",
+      refrigerant: null as any,
+    },
+    {
+      id: "convectair-8028-c12-o",
+      modelNumber: "8028-C12-O",
       brandId: "convectair",
       refrigerant: null as any,
     },
@@ -109,14 +366,26 @@ export const convectairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "convectair-8222-c18-o",
+      modelNumber: "8222-C18-O",
+      brandId: "convectair",
+      refrigerant: null as any,
+    },
+    {
+      id: "convectair-8028-c18-o",
+      modelNumber: "8028-C18-O",
+      brandId: "convectair",
+      refrigerant: null as any,
+    },
+    {
       id: "convectair-8240-o",
       modelNumber: "8240-O",
       brandId: "convectair",
       refrigerant: null as any,
     },
     {
-      id: "convectair-8222-c18-o",
-      modelNumber: "8222-C18-O",
+      id: "convectair-8028-c24-o",
+      modelNumber: "8028-C24-O",
       brandId: "convectair",
       refrigerant: null as any,
     },
@@ -135,30 +404,6 @@ export const convectairDataset: BrandDataset = {
     {
       id: "convectair-8422-c36-o",
       modelNumber: "8422-C36-O",
-      brandId: "convectair",
-      refrigerant: null as any,
-    },
-    {
-      id: "convectair-8028-c09-o",
-      modelNumber: "8028-C09-O",
-      brandId: "convectair",
-      refrigerant: null as any,
-    },
-    {
-      id: "convectair-8028-c12-o",
-      modelNumber: "8028-C12-O",
-      brandId: "convectair",
-      refrigerant: null as any,
-    },
-    {
-      id: "convectair-8028-c18-o",
-      modelNumber: "8028-C18-O",
-      brandId: "convectair",
-      refrigerant: null as any,
-    },
-    {
-      id: "convectair-8028-c24-o",
-      modelNumber: "8028-C24-O",
       brandId: "convectair",
       refrigerant: null as any,
     },
@@ -192,9 +437,9 @@ export const convectairDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "convectair-standard-wall-single-cfg-1",
-      slug: "convectair-standard-wall-single-cfg-1",
-      modelId: "convectair-standard-wall-single",
+      id: "convectair-standard-wall-single-9000-cfg-1",
+      slug: "convectair-standard-wall-single-9000-cfg-1",
+      modelId: "convectair-standard-wall-single-9000",
       outdoorUnitId: "convectair-8090-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -206,219 +451,9 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-standard-wall-single-cfg-2",
-      slug: "convectair-standard-wall-single-cfg-2",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8120-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-3",
-      slug: "convectair-standard-wall-single-cfg-3",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8180-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-4",
-      slug: "convectair-standard-wall-single-cfg-4",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8240-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26000,
-      coolingCapacityMaxBtu: 26000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-5",
-      slug: "convectair-standard-wall-single-cfg-5",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8222-c18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-6",
-      slug: "convectair-standard-wall-single-cfg-6",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8222-c18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-7",
-      slug: "convectair-standard-wall-single-cfg-7",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8222-c18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-8",
-      slug: "convectair-standard-wall-single-cfg-8",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8322-c27-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-9",
-      slug: "convectair-standard-wall-single-cfg-9",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8322-c27-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-10",
-      slug: "convectair-standard-wall-single-cfg-10",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8322-c27-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-11",
-      slug: "convectair-standard-wall-single-cfg-11",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8522-c48-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-12",
-      slug: "convectair-standard-wall-single-cfg-12",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8522-c48-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-13",
-      slug: "convectair-standard-wall-single-cfg-13",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8522-c48-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-14",
-      slug: "convectair-standard-wall-single-cfg-14",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8422-c36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-15",
-      slug: "convectair-standard-wall-single-cfg-15",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8422-c36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-16",
-      slug: "convectair-standard-wall-single-cfg-16",
-      modelId: "convectair-standard-wall-single",
-      outdoorUnitId: "convectair-8422-c36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "convectair-standard-wall-single-cfg-17",
-      slug: "convectair-standard-wall-single-cfg-17",
-      modelId: "convectair-standard-wall-single",
+      id: "convectair-standard-wall-single-9000-cfg-2",
+      slug: "convectair-standard-wall-single-9000-cfg-2",
+      modelId: "convectair-standard-wall-single-9000",
       outdoorUnitId: "convectair-8028-c09-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -430,9 +465,23 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-standard-wall-single-cfg-18",
-      slug: "convectair-standard-wall-single-cfg-18",
-      modelId: "convectair-standard-wall-single",
+      id: "convectair-standard-wall-single-12000-cfg-1",
+      slug: "convectair-standard-wall-single-12000-cfg-1",
+      modelId: "convectair-standard-wall-single-12000",
+      outdoorUnitId: "convectair-8120-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-12000-cfg-2",
+      slug: "convectair-standard-wall-single-12000-cfg-2",
+      modelId: "convectair-standard-wall-single-12000",
       outdoorUnitId: "convectair-8028-c12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -444,9 +493,65 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-standard-wall-single-cfg-19",
-      slug: "convectair-standard-wall-single-cfg-19",
-      modelId: "convectair-standard-wall-single",
+      id: "convectair-standard-wall-single-18000-cfg-1",
+      slug: "convectair-standard-wall-single-18000-cfg-1",
+      modelId: "convectair-standard-wall-single-18000",
+      outdoorUnitId: "convectair-8180-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-18000-cfg-2",
+      slug: "convectair-standard-wall-single-18000-cfg-2",
+      modelId: "convectair-standard-wall-single-18000",
+      outdoorUnitId: "convectair-8222-c18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-18000-cfg-3",
+      slug: "convectair-standard-wall-single-18000-cfg-3",
+      modelId: "convectair-standard-wall-single-18000",
+      outdoorUnitId: "convectair-8222-c18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-18000-cfg-4",
+      slug: "convectair-standard-wall-single-18000-cfg-4",
+      modelId: "convectair-standard-wall-single-18000",
+      outdoorUnitId: "convectair-8222-c18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-18000-cfg-5",
+      slug: "convectair-standard-wall-single-18000-cfg-5",
+      modelId: "convectair-standard-wall-single-18000",
       outdoorUnitId: "convectair-8028-c18-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -458,9 +563,23 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-standard-wall-single-cfg-20",
-      slug: "convectair-standard-wall-single-cfg-20",
-      modelId: "convectair-standard-wall-single",
+      id: "convectair-standard-wall-single-24000-cfg-1",
+      slug: "convectair-standard-wall-single-24000-cfg-1",
+      modelId: "convectair-standard-wall-single-24000",
+      outdoorUnitId: "convectair-8240-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-24000-cfg-2",
+      slug: "convectair-standard-wall-single-24000-cfg-2",
+      modelId: "convectair-standard-wall-single-24000",
       outdoorUnitId: "convectair-8028-c24-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -472,9 +591,135 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-500-series-wall-single-cfg-1",
-      slug: "convectair-500-series-wall-single-cfg-1",
-      modelId: "convectair-500-series-wall-single",
+      id: "convectair-standard-wall-single-30000-cfg-1",
+      slug: "convectair-standard-wall-single-30000-cfg-1",
+      modelId: "convectair-standard-wall-single-30000",
+      outdoorUnitId: "convectair-8322-c27-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-30000-cfg-2",
+      slug: "convectair-standard-wall-single-30000-cfg-2",
+      modelId: "convectair-standard-wall-single-30000",
+      outdoorUnitId: "convectair-8322-c27-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-30000-cfg-3",
+      slug: "convectair-standard-wall-single-30000-cfg-3",
+      modelId: "convectair-standard-wall-single-30000",
+      outdoorUnitId: "convectair-8322-c27-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-48000-cfg-1",
+      slug: "convectair-standard-wall-single-48000-cfg-1",
+      modelId: "convectair-standard-wall-single-48000",
+      outdoorUnitId: "convectair-8522-c48-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-48000-cfg-2",
+      slug: "convectair-standard-wall-single-48000-cfg-2",
+      modelId: "convectair-standard-wall-single-48000",
+      outdoorUnitId: "convectair-8522-c48-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-48000-cfg-3",
+      slug: "convectair-standard-wall-single-48000-cfg-3",
+      modelId: "convectair-standard-wall-single-48000",
+      outdoorUnitId: "convectair-8522-c48-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-36000-cfg-1",
+      slug: "convectair-standard-wall-single-36000-cfg-1",
+      modelId: "convectair-standard-wall-single-36000",
+      outdoorUnitId: "convectair-8422-c36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-36000-cfg-2",
+      slug: "convectair-standard-wall-single-36000-cfg-2",
+      modelId: "convectair-standard-wall-single-36000",
+      outdoorUnitId: "convectair-8422-c36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-standard-wall-single-36000-cfg-3",
+      slug: "convectair-standard-wall-single-36000-cfg-3",
+      modelId: "convectair-standard-wall-single-36000",
+      outdoorUnitId: "convectair-8422-c36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "convectair-500-series-wall-single-9000-cfg-1",
+      slug: "convectair-500-series-wall-single-9000-cfg-1",
+      modelId: "convectair-500-series-wall-single-9000",
       outdoorUnitId: "convectair-500004490",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -486,9 +731,9 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-500-series-wall-single-cfg-2",
-      slug: "convectair-500-series-wall-single-cfg-2",
-      modelId: "convectair-500-series-wall-single",
+      id: "convectair-500-series-wall-single-12000-cfg-1",
+      slug: "convectair-500-series-wall-single-12000-cfg-1",
+      modelId: "convectair-500-series-wall-single-12000",
       outdoorUnitId: "convectair-500004492",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -500,9 +745,9 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-500-series-wall-single-cfg-3",
-      slug: "convectair-500-series-wall-single-cfg-3",
-      modelId: "convectair-500-series-wall-single",
+      id: "convectair-500-series-wall-single-18000-cfg-1",
+      slug: "convectair-500-series-wall-single-18000-cfg-1",
+      modelId: "convectair-500-series-wall-single-18000",
       outdoorUnitId: "convectair-500004494",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -514,9 +759,9 @@ export const convectairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "convectair-500-series-wall-single-cfg-4",
-      slug: "convectair-500-series-wall-single-cfg-4",
-      modelId: "convectair-500-series-wall-single",
+      id: "convectair-500-series-wall-single-24000-cfg-1",
+      slug: "convectair-500-series-wall-single-24000-cfg-1",
+      modelId: "convectair-500-series-wall-single-24000",
       outdoorUnitId: "convectair-500004496",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -530,7 +775,7 @@ export const convectairDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "convectair-standard-wall-single-cfg-1",
+      configurationId: "convectair-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -541,172 +786,7 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "convectair-standard-wall-single-cfg-17",
+      configurationId: "convectair-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -717,7 +797,18 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-standard-wall-single-cfg-18",
+      configurationId: "convectair-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -728,7 +819,18 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-standard-wall-single-cfg-19",
+      configurationId: "convectair-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -739,7 +841,51 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-standard-wall-single-cfg-20",
+      configurationId: "convectair-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -750,7 +896,106 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-500-series-wall-single-cfg-1",
+      configurationId: "convectair-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "convectair-500-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -761,7 +1006,7 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-500-series-wall-single-cfg-2",
+      configurationId: "convectair-500-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -772,7 +1017,7 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-500-series-wall-single-cfg-3",
+      configurationId: "convectair-500-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -783,7 +1028,7 @@ export const convectairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "convectair-500-series-wall-single-cfg-4",
+      configurationId: "convectair-500-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

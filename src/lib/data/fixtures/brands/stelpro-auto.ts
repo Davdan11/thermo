@@ -125,24 +125,52 @@ export const stelproDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "stelpro-sahb-series-central-ducted",
-      slug: "stelpro-sahb-series-central-ducted",
-      name: "SAHB Series",
+      id: "stelpro-sahb-series-central-ducted-24000",
+      slug: "stelpro-sahb-series-central-ducted-24000",
+      name: "SAHB Series 24 000 BTU",
       seriesId: "stelpro-sahb-series",
       brandId: "stelpro",
-      modelNumber: "SAHB Series",
-      normalizedModelNumber: "sahb-series",
+      modelNumber: "SAHB Series 24k",
+      normalizedModelNumber: "sahb-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 23000,
       heatingCapacity5FMinBtu: 20000,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 16,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 18.3,
       seer2Max: 18.3,
-      hspf2Min: 9,
-      hspf2Max: 10.3,
-      cop5FMin: 1.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.87,
+      cop5FMax: 1.87,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sahb-series-central-ducted-30000",
+      slug: "stelpro-sahb-series-central-ducted-30000",
+      name: "SAHB Series 30 000 BTU",
+      seriesId: "stelpro-sahb-series",
+      brandId: "stelpro",
+      modelNumber: "SAHB Series 30k",
+      normalizedModelNumber: "sahb-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 23800,
+      seer2Min: 16.8,
+      seer2Max: 16.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
       cop5FMax: 1.96,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -151,25 +179,80 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sinb-series-wall-single",
-      slug: "stelpro-sinb-series-wall-single",
-      name: "SINB Series",
-      seriesId: "stelpro-sinb-series",
+      id: "stelpro-sahb-series-central-ducted-36000",
+      slug: "stelpro-sahb-series-central-ducted-36000",
+      name: "SAHB Series 36 000 BTU",
+      seriesId: "stelpro-sahb-series",
       brandId: "stelpro",
-      modelNumber: "SINB Series",
-      normalizedModelNumber: "sinb-series",
+      modelNumber: "SAHB Series 36k",
+      normalizedModelNumber: "sahb-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 6600,
-      heatingCapacity5FMaxBtu: 17200,
-      seer2Min: 18.5,
-      seer2Max: 21.6,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 31800,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sahb-series-central-ducted-48000",
+      slug: "stelpro-sahb-series-central-ducted-48000",
+      name: "SAHB Series 48 000 BTU",
+      seriesId: "stelpro-sahb-series",
+      brandId: "stelpro",
+      modelNumber: "SAHB Series 48k",
+      normalizedModelNumber: "sahb-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 16,
+      seer2Max: 16.5,
       hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sinb-series-wall-single-9000",
+      slug: "stelpro-sinb-series-wall-single-9000",
+      name: "SINB Series 9 000 BTU",
+      seriesId: "stelpro-sinb-series",
+      brandId: "stelpro",
+      modelNumber: "SINB Series 9k",
+      normalizedModelNumber: "sinb-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMaxBtu: 6600,
+      seer2Min: 21.6,
+      seer2Max: 21.6,
+      hspf2Min: 9.4,
       hspf2Max: 9.4,
       cop5FMin: 2,
-      cop5FMax: 2.11,
+      cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -177,15 +260,16 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-standard-wall-single",
-      slug: "stelpro-standard-wall-single",
-      name: "Standard",
+      id: "stelpro-standard-wall-single-12000",
+      slug: "stelpro-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "stelpro-standard",
       brandId: "stelpro",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 8300,
@@ -203,24 +287,160 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sepb-series-wall-single",
-      slug: "stelpro-sepb-series-wall-single",
-      name: "SEPB Series",
-      seriesId: "stelpro-sepb-series",
+      id: "stelpro-sinb-series-wall-single-18000",
+      slug: "stelpro-sinb-series-wall-single-18000",
+      name: "SINB Series 18 000 BTU",
+      seriesId: "stelpro-sinb-series",
       brandId: "stelpro",
-      modelNumber: "SEPB Series",
-      normalizedModelNumber: "sepb-series",
+      modelNumber: "SINB Series 18k",
+      normalizedModelNumber: "sinb-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11700,
+      heatingCapacity5FMaxBtu: 11700,
+      seer2Min: 20.2,
+      seer2Max: 20.2,
+      hspf2Min: 9.1,
+      hspf2Max: 9.1,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sinb-series-wall-single-24000",
+      slug: "stelpro-sinb-series-wall-single-24000",
+      name: "SINB Series 24 000 BTU",
+      seriesId: "stelpro-sinb-series",
+      brandId: "stelpro",
+      modelNumber: "SINB Series 24k",
+      normalizedModelNumber: "sinb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 17200,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.11,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sepb-series-wall-single-9000",
+      slug: "stelpro-sepb-series-wall-single-9000",
+      name: "SEPB Series 9 000 BTU",
+      seriesId: "stelpro-sepb-series",
+      brandId: "stelpro",
+      modelNumber: "SEPB Series 9k",
+      normalizedModelNumber: "sepb-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 27.4,
+      seer2Max: 27.4,
+      hspf2Min: 12.5,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sepb-series-wall-single-12000",
+      slug: "stelpro-sepb-series-wall-single-12000",
+      name: "SEPB Series 12 000 BTU",
+      seriesId: "stelpro-sepb-series",
+      brandId: "stelpro",
+      modelNumber: "SEPB Series 12k",
+      normalizedModelNumber: "sepb-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 25.4,
+      seer2Max: 25.4,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sepb-series-wall-single-18000",
+      slug: "stelpro-sepb-series-wall-single-18000",
+      name: "SEPB Series 18 000 BTU",
+      seriesId: "stelpro-sepb-series",
+      brandId: "stelpro",
+      modelNumber: "SEPB Series 18k",
+      normalizedModelNumber: "sepb-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 16600,
+      heatingCapacity5FMaxBtu: 16600,
+      seer2Min: 21.4,
+      seer2Max: 21.4,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 1.92,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sepb-series-wall-single-24000",
+      slug: "stelpro-sepb-series-wall-single-24000",
+      name: "SEPB Series 24 000 BTU",
+      seriesId: "stelpro-sepb-series",
+      brandId: "stelpro",
+      modelNumber: "SEPB Series 24k",
+      normalizedModelNumber: "sepb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
       heatingCapacity5FMaxBtu: 21000,
       seer2Min: 21,
-      seer2Max: 27.4,
-      hspf2Min: 10.5,
+      seer2Max: 21,
+      hspf2Min: 13.5,
       hspf2Max: 13.5,
-      cop5FMin: 1.8,
+      cop5FMin: 2.34,
       cop5FMax: 2.34,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -229,24 +449,106 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sicb1-series-wall-single",
-      slug: "stelpro-sicb1-series-wall-single",
-      name: "SICB1 Series",
+      id: "stelpro-sicb1-series-wall-single-9000",
+      slug: "stelpro-sicb1-series-wall-single-9000",
+      name: "SICB1 Series 9 000 BTU",
       seriesId: "stelpro-sicb1-series",
       brandId: "stelpro",
-      modelNumber: "SICB1 Series",
-      normalizedModelNumber: "sicb1-series",
+      modelNumber: "SICB1 Series 9k",
+      normalizedModelNumber: "sicb1-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 23400,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 9700,
-      heatingCapacity5FMaxBtu: 20400,
-      seer2Min: 20,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: 22.6,
       seer2Max: 22.6,
-      hspf2Min: 11.6,
-      hspf2Max: 12.3,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
       cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sicb1-series-wall-single-12000",
+      slug: "stelpro-sicb1-series-wall-single-12000",
+      name: "SICB1 Series 12 000 BTU",
+      seriesId: "stelpro-sicb1-series",
+      brandId: "stelpro",
+      modelNumber: "SICB1 Series 12k",
+      normalizedModelNumber: "sicb1-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 22.2,
+      seer2Max: 22.2,
+      hspf2Min: 11.6,
+      hspf2Max: 11.6,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sicb1-series-wall-single-15000",
+      slug: "stelpro-sicb1-series-wall-single-15000",
+      name: "SICB1 Series 15 000 BTU",
+      seriesId: "stelpro-sicb1-series",
+      brandId: "stelpro",
+      modelNumber: "SICB1 Series 15k",
+      normalizedModelNumber: "sicb1-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14900,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 12.3,
+      hspf2Max: 12.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sicb1-series-wall-single-24000",
+      slug: "stelpro-sicb1-series-wall-single-24000",
+      name: "SICB1 Series 24 000 BTU",
+      seriesId: "stelpro-sicb1-series",
+      brandId: "stelpro",
+      modelNumber: "SICB1 Series 24k",
+      normalizedModelNumber: "sicb1-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      heatingCapacity5FMinBtu: 20400,
+      heatingCapacity5FMaxBtu: 20400,
+      seer2Min: 20.7,
+      seer2Max: 20.7,
+      hspf2Min: 11.6,
+      hspf2Max: 11.6,
+      cop5FMin: 2.23,
       cop5FMax: 2.23,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -255,25 +557,26 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sfcb1-series-wall-single",
-      slug: "stelpro-sfcb1-series-wall-single",
-      name: "SFCB1 Series",
+      id: "stelpro-sfcb1-series-wall-single-9000",
+      slug: "stelpro-sfcb1-series-wall-single-9000",
+      name: "SFCB1 Series 9 000 BTU",
       seriesId: "stelpro-sfcb1-series",
       brandId: "stelpro",
-      modelNumber: "SFCB1 Series",
-      normalizedModelNumber: "sfcb1-series",
+      modelNumber: "SFCB1 Series 9k",
+      normalizedModelNumber: "sfcb1-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 10200,
-      heatingCapacity5FMaxBtu: 21600,
-      seer2Min: 18.4,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20.5,
       seer2Max: 20.5,
-      hspf2Min: 10.6,
+      hspf2Min: 13.8,
       hspf2Max: 13.8,
       cop5FMin: 1.85,
-      cop5FMax: 2.18,
+      cop5FMax: 1.85,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -281,24 +584,52 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-elite-b-wall-single",
-      slug: "stelpro-elite-b-wall-single",
-      name: "Elite B",
-      seriesId: "stelpro-elite-b",
+      id: "stelpro-sfcb1-series-wall-single-12000",
+      slug: "stelpro-sfcb1-series-wall-single-12000",
+      name: "SFCB1 Series 12 000 BTU",
+      seriesId: "stelpro-sfcb1-series",
       brandId: "stelpro",
-      modelNumber: "Elite B",
-      normalizedModelNumber: "elite-b",
+      modelNumber: "SFCB1 Series 12k",
+      normalizedModelNumber: "sfcb1-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 9000,
-      heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 21,
-      seer2Max: 25,
-      hspf2Min: 9.5,
-      hspf2Max: 11,
-      cop5FMin: 1.8,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10200,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
+      cop5FMin: 1.95,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sfcb1-series-wall-single-18000",
+      slug: "stelpro-sfcb1-series-wall-single-18000",
+      name: "SFCB1 Series 18 000 BTU",
+      seriesId: "stelpro-sfcb1-series",
+      brandId: "stelpro",
+      modelNumber: "SFCB1 Series 18k",
+      normalizedModelNumber: "sfcb1-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18.4,
+      seer2Max: 18.4,
+      hspf2Min: 11.1,
+      hspf2Max: 11.1,
+      cop5FMin: 2.1,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -307,22 +638,266 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single",
-      slug: "stelpro-smz-series-wall-single",
-      name: "SMZ Series",
-      seriesId: "stelpro-smz-series",
+      id: "stelpro-sfcb1-series-wall-single-24000",
+      slug: "stelpro-sfcb1-series-wall-single-24000",
+      name: "SFCB1 Series 24 000 BTU",
+      seriesId: "stelpro-sfcb1-series",
       brandId: "stelpro",
-      modelNumber: "SMZ Series",
-      normalizedModelNumber: "smz-series",
+      modelNumber: "SFCB1 Series 24k",
+      normalizedModelNumber: "sfcb1-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 53000,
-      heatingCapacity5FMinBtu: 17000,
-      heatingCapacity5FMaxBtu: 45000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21600,
+      heatingCapacity5FMaxBtu: 21600,
       seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 11.7,
+      hspf2Max: 11.7,
+      cop5FMin: 2.18,
+      cop5FMax: 2.18,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-elite-b-wall-single-9000",
+      slug: "stelpro-elite-b-wall-single-9000",
+      name: "Elite B 9 000 BTU",
+      seriesId: "stelpro-elite-b",
+      brandId: "stelpro",
+      modelNumber: "Elite B 9k",
+      normalizedModelNumber: "elite-b-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 9000,
+      seer2Min: 25,
       seer2Max: 25,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-elite-b-wall-single-12000",
+      slug: "stelpro-elite-b-wall-single-12000",
+      name: "Elite B 12 000 BTU",
+      seriesId: "stelpro-elite-b",
+      brandId: "stelpro",
+      modelNumber: "Elite B 12k",
+      normalizedModelNumber: "elite-b-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10800,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-elite-b-wall-single-18000",
+      slug: "stelpro-elite-b-wall-single-18000",
+      name: "Elite B 18 000 BTU",
+      seriesId: "stelpro-elite-b",
+      brandId: "stelpro",
+      modelNumber: "Elite B 18k",
+      normalizedModelNumber: "elite-b-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-elite-b-wall-single-24000",
+      slug: "stelpro-elite-b-wall-single-24000",
+      name: "Elite B 24 000 BTU",
+      seriesId: "stelpro-elite-b",
+      brandId: "stelpro",
+      modelNumber: "Elite B 24k",
+      normalizedModelNumber: "elite-b-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
       hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-18000",
+      slug: "stelpro-smz-series-wall-single-18000",
+      name: "SMZ Series 18 000 BTU",
+      seriesId: "stelpro-smz-series",
+      brandId: "stelpro",
+      modelNumber: "SMZ Series 18k",
+      normalizedModelNumber: "smz-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 20,
+      seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 10.4,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-24000",
+      slug: "stelpro-smz-series-wall-single-24000",
+      name: "SMZ Series 24 000 BTU",
+      seriesId: "stelpro-smz-series",
+      brandId: "stelpro",
+      modelNumber: "SMZ Series 24k",
+      normalizedModelNumber: "smz-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 25000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-30000",
+      slug: "stelpro-smz-series-wall-single-30000",
+      name: "SMZ Series 30 000 BTU",
+      seriesId: "stelpro-smz-series",
+      brandId: "stelpro",
+      modelNumber: "SMZ Series 30k",
+      normalizedModelNumber: "smz-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-36000",
+      slug: "stelpro-smz-series-wall-single-36000",
+      name: "SMZ Series 36 000 BTU",
+      seriesId: "stelpro-smz-series",
+      brandId: "stelpro",
+      modelNumber: "SMZ Series 36k",
+      normalizedModelNumber: "smz-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.4,
+      seer2Max: 23,
+      hspf2Min: 10.4,
+      hspf2Max: 10.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-48000",
+      slug: "stelpro-smz-series-wall-single-48000",
+      name: "SMZ Series 48 000 BTU",
+      seriesId: "stelpro-smz-series",
+      brandId: "stelpro",
+      modelNumber: "SMZ Series 48k",
+      normalizedModelNumber: "smz-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 44000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 10.5,
       hspf2Max: 11,
       cop5FMin: 2,
       cop5FMax: 2.1,
@@ -333,24 +908,52 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted",
-      slug: "stelpro-cahb-series-central-ducted",
-      name: "CAHB Series",
+      id: "stelpro-cahb-series-central-ducted-24000",
+      slug: "stelpro-cahb-series-central-ducted-24000",
+      name: "CAHB Series 24 000 BTU",
       seriesId: "stelpro-cahb-series",
       brandId: "stelpro",
-      modelNumber: "CAHB Series",
-      normalizedModelNumber: "cahb-series",
+      modelNumber: "CAHB Series 24k",
+      normalizedModelNumber: "cahb-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 23000,
       heatingCapacity5FMinBtu: 19700,
-      heatingCapacity5FMaxBtu: 38000,
-      seer2Min: 16,
+      heatingCapacity5FMaxBtu: 19700,
+      seer2Min: 18.3,
       seer2Max: 18.3,
-      hspf2Min: 9,
-      hspf2Max: 10.3,
-      cop5FMin: 1.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.87,
+      cop5FMax: 1.87,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-cahb-series-central-ducted-30000",
+      slug: "stelpro-cahb-series-central-ducted-30000",
+      name: "CAHB Series 30 000 BTU",
+      seriesId: "stelpro-cahb-series",
+      brandId: "stelpro",
+      modelNumber: "CAHB Series 30k",
+      normalizedModelNumber: "cahb-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 16.8,
+      seer2Max: 16.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
       cop5FMax: 1.96,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -359,25 +962,188 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted",
-      slug: "stelpro-sdb-series-central-ducted",
-      name: "SDB Series",
-      seriesId: "stelpro-sdb-series",
+      id: "stelpro-cahb-series-central-ducted-36000",
+      slug: "stelpro-cahb-series-central-ducted-36000",
+      name: "CAHB Series 36 000 BTU",
+      seriesId: "stelpro-cahb-series",
       brandId: "stelpro",
-      modelNumber: "SDB Series",
-      normalizedModelNumber: "sdb-series",
+      modelNumber: "CAHB Series 36k",
+      normalizedModelNumber: "cahb-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 29200,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-cahb-series-central-ducted-48000",
+      slug: "stelpro-cahb-series-central-ducted-48000",
+      name: "CAHB Series 48 000 BTU",
+      seriesId: "stelpro-cahb-series",
+      brandId: "stelpro",
+      modelNumber: "CAHB Series 48k",
+      normalizedModelNumber: "cahb-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 38000,
+      seer2Min: 16,
+      seer2Max: 16.5,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sdb-series-central-ducted-24000",
+      slug: "stelpro-sdb-series-central-ducted-24000",
+      name: "SDB Series 24 000 BTU",
+      seriesId: "stelpro-sdb-series",
+      brandId: "stelpro",
+      modelNumber: "SDB Series 24k",
+      normalizedModelNumber: "sdb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 52000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 19700,
+      heatingCapacity5FMaxBtu: 19700,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sdb-series-central-ducted-30000",
+      slug: "stelpro-sdb-series-central-ducted-30000",
+      name: "SDB Series 30 000 BTU",
+      seriesId: "stelpro-sdb-series",
+      brandId: "stelpro",
+      modelNumber: "SDB Series 30k",
+      normalizedModelNumber: "sdb-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.3,
+      seer2Max: 16,
+      hspf2Min: 9.3,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sdb-series-central-ducted-36000",
+      slug: "stelpro-sdb-series-central-ducted-36000",
+      name: "SDB Series 36 000 BTU",
+      seriesId: "stelpro-sdb-series",
+      brandId: "stelpro",
+      modelNumber: "SDB Series 36k",
+      normalizedModelNumber: "sdb-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 29200,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sdb-series-central-ducted-42000",
+      slug: "stelpro-sdb-series-central-ducted-42000",
+      name: "SDB Series 42 000 BTU",
+      seriesId: "stelpro-sdb-series",
+      brandId: "stelpro",
+      modelNumber: "SDB Series 42k",
+      normalizedModelNumber: "sdb-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sdb-series-central-ducted-48000",
+      slug: "stelpro-sdb-series-central-ducted-48000",
+      name: "SDB Series 48 000 BTU",
+      seriesId: "stelpro-sdb-series",
+      brandId: "stelpro",
+      modelNumber: "SDB Series 48k",
+      normalizedModelNumber: "sdb-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 52000,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 37800,
       seer2Min: 15.2,
       seer2Max: 16,
       hspf2Min: 8.1,
-      hspf2Max: 9.6,
+      hspf2Max: 8.5,
       cop5FMin: 1.8,
-      cop5FMax: 1.9,
+      cop5FMax: 1.83,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -423,6 +1189,12 @@ export const stelproDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "stelpro-sinb-h12a-o",
+      modelNumber: "SINB-H12A-O",
+      brandId: "stelpro",
+      refrigerant: null as any,
+    },
+    {
       id: "stelpro-sinb-h18a-o",
       modelNumber: "SINB-H18A-O",
       brandId: "stelpro",
@@ -431,12 +1203,6 @@ export const stelproDataset: BrandDataset = {
     {
       id: "stelpro-sinb-h24a-o",
       modelNumber: "SINB-H24A-O",
-      brandId: "stelpro",
-      refrigerant: null as any,
-    },
-    {
-      id: "stelpro-sinb-h12a-o",
-      modelNumber: "SINB-H12A-O",
       brandId: "stelpro",
       refrigerant: null as any,
     },
@@ -495,14 +1261,32 @@ export const stelproDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "stelpro-smz2b1v-h18a-o",
+      modelNumber: "SMZ2B1V-H18A-O",
+      brandId: "stelpro",
+      refrigerant: null as any,
+    },
+    {
       id: "stelpro-smz3b1-h27a-o",
       modelNumber: "SMZ3B1-H27A-O",
       brandId: "stelpro",
       refrigerant: null as any,
     },
     {
+      id: "stelpro-smz3b1v-h27a-o",
+      modelNumber: "SMZ3B1V-H27A-O",
+      brandId: "stelpro",
+      refrigerant: null as any,
+    },
+    {
       id: "stelpro-smz4b1-h36a-o",
       modelNumber: "SMZ4B1-H36A-O",
+      brandId: "stelpro",
+      refrigerant: null as any,
+    },
+    {
+      id: "stelpro-smz4b1v-h36a-o",
+      modelNumber: "SMZ4B1V-H36A-O",
       brandId: "stelpro",
       refrigerant: null as any,
     },
@@ -515,24 +1299,6 @@ export const stelproDataset: BrandDataset = {
     {
       id: "stelpro-smz5b1-h55a-o",
       modelNumber: "SMZ5B1-H55A-O",
-      brandId: "stelpro",
-      refrigerant: null as any,
-    },
-    {
-      id: "stelpro-smz2b1v-h18a-o",
-      modelNumber: "SMZ2B1V-H18A-O",
-      brandId: "stelpro",
-      refrigerant: null as any,
-    },
-    {
-      id: "stelpro-smz3b1v-h27a-o",
-      modelNumber: "SMZ3B1V-H27A-O",
-      brandId: "stelpro",
-      refrigerant: null as any,
-    },
-    {
-      id: "stelpro-smz4b1v-h36a-o",
-      modelNumber: "SMZ4B1V-H36A-O",
       brandId: "stelpro",
       refrigerant: null as any,
     },
@@ -584,9 +1350,9 @@ export const stelproDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "stelpro-sahb-series-central-ducted-cfg-1",
-      slug: "stelpro-sahb-series-central-ducted-cfg-1",
-      modelId: "stelpro-sahb-series-central-ducted",
+      id: "stelpro-sahb-series-central-ducted-24000-cfg-1",
+      slug: "stelpro-sahb-series-central-ducted-24000-cfg-1",
+      modelId: "stelpro-sahb-series-central-ducted-24000",
       outdoorUnitId: "stelpro-sdb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -598,9 +1364,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sahb-series-central-ducted-cfg-2",
-      slug: "stelpro-sahb-series-central-ducted-cfg-2",
-      modelId: "stelpro-sahb-series-central-ducted",
+      id: "stelpro-sahb-series-central-ducted-30000-cfg-1",
+      slug: "stelpro-sahb-series-central-ducted-30000-cfg-1",
+      modelId: "stelpro-sahb-series-central-ducted-30000",
       outdoorUnitId: "stelpro-sdb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -612,9 +1378,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sahb-series-central-ducted-cfg-3",
-      slug: "stelpro-sahb-series-central-ducted-cfg-3",
-      modelId: "stelpro-sahb-series-central-ducted",
+      id: "stelpro-sahb-series-central-ducted-36000-cfg-1",
+      slug: "stelpro-sahb-series-central-ducted-36000-cfg-1",
+      modelId: "stelpro-sahb-series-central-ducted-36000",
       outdoorUnitId: "stelpro-sdb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -626,9 +1392,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sahb-series-central-ducted-cfg-4",
-      slug: "stelpro-sahb-series-central-ducted-cfg-4",
-      modelId: "stelpro-sahb-series-central-ducted",
+      id: "stelpro-sahb-series-central-ducted-48000-cfg-1",
+      slug: "stelpro-sahb-series-central-ducted-48000-cfg-1",
+      modelId: "stelpro-sahb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-sdb1-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -640,9 +1406,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sahb-series-central-ducted-cfg-5",
-      slug: "stelpro-sahb-series-central-ducted-cfg-5",
-      modelId: "stelpro-sahb-series-central-ducted",
+      id: "stelpro-sahb-series-central-ducted-48000-cfg-2",
+      slug: "stelpro-sahb-series-central-ducted-48000-cfg-2",
+      modelId: "stelpro-sahb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-sdb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -654,9 +1420,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sahb-series-central-ducted-cfg-6",
-      slug: "stelpro-sahb-series-central-ducted-cfg-6",
-      modelId: "stelpro-sahb-series-central-ducted",
+      id: "stelpro-sahb-series-central-ducted-48000-cfg-3",
+      slug: "stelpro-sahb-series-central-ducted-48000-cfg-3",
+      modelId: "stelpro-sahb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-sdb1-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -668,9 +1434,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sinb-series-wall-single-cfg-1",
-      slug: "stelpro-sinb-series-wall-single-cfg-1",
-      modelId: "stelpro-sinb-series-wall-single",
+      id: "stelpro-sinb-series-wall-single-9000-cfg-1",
+      slug: "stelpro-sinb-series-wall-single-9000-cfg-1",
+      modelId: "stelpro-sinb-series-wall-single-9000",
       outdoorUnitId: "stelpro-sinb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -682,37 +1448,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sinb-series-wall-single-cfg-2",
-      slug: "stelpro-sinb-series-wall-single-cfg-2",
-      modelId: "stelpro-sinb-series-wall-single",
-      outdoorUnitId: "stelpro-sinb-h18a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20.2,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-sinb-series-wall-single-cfg-3",
-      slug: "stelpro-sinb-series-wall-single-cfg-3",
-      modelId: "stelpro-sinb-series-wall-single",
-      outdoorUnitId: "stelpro-sinb-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-standard-wall-single-cfg-1",
-      slug: "stelpro-standard-wall-single-cfg-1",
-      modelId: "stelpro-standard-wall-single",
+      id: "stelpro-standard-wall-single-12000-cfg-1",
+      slug: "stelpro-standard-wall-single-12000-cfg-1",
+      modelId: "stelpro-standard-wall-single-12000",
       outdoorUnitId: "stelpro-sinb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -724,9 +1462,37 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sepb-series-wall-single-cfg-1",
-      slug: "stelpro-sepb-series-wall-single-cfg-1",
-      modelId: "stelpro-sepb-series-wall-single",
+      id: "stelpro-sinb-series-wall-single-18000-cfg-1",
+      slug: "stelpro-sinb-series-wall-single-18000-cfg-1",
+      modelId: "stelpro-sinb-series-wall-single-18000",
+      outdoorUnitId: "stelpro-sinb-h18a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.2,
+      hspf2: 9.1,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sinb-series-wall-single-24000-cfg-1",
+      slug: "stelpro-sinb-series-wall-single-24000-cfg-1",
+      modelId: "stelpro-sinb-series-wall-single-24000",
+      outdoorUnitId: "stelpro-sinb-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-sepb-series-wall-single-9000-cfg-1",
+      slug: "stelpro-sepb-series-wall-single-9000-cfg-1",
+      modelId: "stelpro-sepb-series-wall-single-9000",
       outdoorUnitId: "stelpro-sepb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -738,9 +1504,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sepb-series-wall-single-cfg-2",
-      slug: "stelpro-sepb-series-wall-single-cfg-2",
-      modelId: "stelpro-sepb-series-wall-single",
+      id: "stelpro-sepb-series-wall-single-12000-cfg-1",
+      slug: "stelpro-sepb-series-wall-single-12000-cfg-1",
+      modelId: "stelpro-sepb-series-wall-single-12000",
       outdoorUnitId: "stelpro-sepb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -752,9 +1518,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sepb-series-wall-single-cfg-3",
-      slug: "stelpro-sepb-series-wall-single-cfg-3",
-      modelId: "stelpro-sepb-series-wall-single",
+      id: "stelpro-sepb-series-wall-single-18000-cfg-1",
+      slug: "stelpro-sepb-series-wall-single-18000-cfg-1",
+      modelId: "stelpro-sepb-series-wall-single-18000",
       outdoorUnitId: "stelpro-sepb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -766,9 +1532,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sepb-series-wall-single-cfg-4",
-      slug: "stelpro-sepb-series-wall-single-cfg-4",
-      modelId: "stelpro-sepb-series-wall-single",
+      id: "stelpro-sepb-series-wall-single-24000-cfg-1",
+      slug: "stelpro-sepb-series-wall-single-24000-cfg-1",
+      modelId: "stelpro-sepb-series-wall-single-24000",
       outdoorUnitId: "stelpro-sepb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -780,9 +1546,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sicb1-series-wall-single-cfg-1",
-      slug: "stelpro-sicb1-series-wall-single-cfg-1",
-      modelId: "stelpro-sicb1-series-wall-single",
+      id: "stelpro-sicb1-series-wall-single-9000-cfg-1",
+      slug: "stelpro-sicb1-series-wall-single-9000-cfg-1",
+      modelId: "stelpro-sicb1-series-wall-single-9000",
       outdoorUnitId: "stelpro-sepb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -794,9 +1560,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sicb1-series-wall-single-cfg-2",
-      slug: "stelpro-sicb1-series-wall-single-cfg-2",
-      modelId: "stelpro-sicb1-series-wall-single",
+      id: "stelpro-sicb1-series-wall-single-12000-cfg-1",
+      slug: "stelpro-sicb1-series-wall-single-12000-cfg-1",
+      modelId: "stelpro-sicb1-series-wall-single-12000",
       outdoorUnitId: "stelpro-sepb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -808,9 +1574,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sicb1-series-wall-single-cfg-3",
-      slug: "stelpro-sicb1-series-wall-single-cfg-3",
-      modelId: "stelpro-sicb1-series-wall-single",
+      id: "stelpro-sicb1-series-wall-single-15000-cfg-1",
+      slug: "stelpro-sicb1-series-wall-single-15000-cfg-1",
+      modelId: "stelpro-sicb1-series-wall-single-15000",
       outdoorUnitId: "stelpro-sepb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16000,
@@ -822,9 +1588,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sicb1-series-wall-single-cfg-4",
-      slug: "stelpro-sicb1-series-wall-single-cfg-4",
-      modelId: "stelpro-sicb1-series-wall-single",
+      id: "stelpro-sicb1-series-wall-single-24000-cfg-1",
+      slug: "stelpro-sicb1-series-wall-single-24000-cfg-1",
+      modelId: "stelpro-sicb1-series-wall-single-24000",
       outdoorUnitId: "stelpro-sepb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23400,
@@ -836,9 +1602,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sfcb1-series-wall-single-cfg-1",
-      slug: "stelpro-sfcb1-series-wall-single-cfg-1",
-      modelId: "stelpro-sfcb1-series-wall-single",
+      id: "stelpro-sfcb1-series-wall-single-9000-cfg-1",
+      slug: "stelpro-sfcb1-series-wall-single-9000-cfg-1",
+      modelId: "stelpro-sfcb1-series-wall-single-9000",
       outdoorUnitId: "stelpro-sepb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -850,9 +1616,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sfcb1-series-wall-single-cfg-2",
-      slug: "stelpro-sfcb1-series-wall-single-cfg-2",
-      modelId: "stelpro-sfcb1-series-wall-single",
+      id: "stelpro-sfcb1-series-wall-single-12000-cfg-1",
+      slug: "stelpro-sfcb1-series-wall-single-12000-cfg-1",
+      modelId: "stelpro-sfcb1-series-wall-single-12000",
       outdoorUnitId: "stelpro-sepb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -864,9 +1630,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sfcb1-series-wall-single-cfg-3",
-      slug: "stelpro-sfcb1-series-wall-single-cfg-3",
-      modelId: "stelpro-sfcb1-series-wall-single",
+      id: "stelpro-sfcb1-series-wall-single-18000-cfg-1",
+      slug: "stelpro-sfcb1-series-wall-single-18000-cfg-1",
+      modelId: "stelpro-sfcb1-series-wall-single-18000",
       outdoorUnitId: "stelpro-sepb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -878,9 +1644,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sfcb1-series-wall-single-cfg-4",
-      slug: "stelpro-sfcb1-series-wall-single-cfg-4",
-      modelId: "stelpro-sfcb1-series-wall-single",
+      id: "stelpro-sfcb1-series-wall-single-24000-cfg-1",
+      slug: "stelpro-sfcb1-series-wall-single-24000-cfg-1",
+      modelId: "stelpro-sfcb1-series-wall-single-24000",
       outdoorUnitId: "stelpro-sepb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -892,9 +1658,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-elite-b-wall-single-cfg-1",
-      slug: "stelpro-elite-b-wall-single-cfg-1",
-      modelId: "stelpro-elite-b-wall-single",
+      id: "stelpro-elite-b-wall-single-9000-cfg-1",
+      slug: "stelpro-elite-b-wall-single-9000-cfg-1",
+      modelId: "stelpro-elite-b-wall-single-9000",
       outdoorUnitId: "stelpro-selb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -906,9 +1672,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-elite-b-wall-single-cfg-2",
-      slug: "stelpro-elite-b-wall-single-cfg-2",
-      modelId: "stelpro-elite-b-wall-single",
+      id: "stelpro-elite-b-wall-single-12000-cfg-1",
+      slug: "stelpro-elite-b-wall-single-12000-cfg-1",
+      modelId: "stelpro-elite-b-wall-single-12000",
       outdoorUnitId: "stelpro-selb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -920,9 +1686,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-elite-b-wall-single-cfg-3",
-      slug: "stelpro-elite-b-wall-single-cfg-3",
-      modelId: "stelpro-elite-b-wall-single",
+      id: "stelpro-elite-b-wall-single-18000-cfg-1",
+      slug: "stelpro-elite-b-wall-single-18000-cfg-1",
+      modelId: "stelpro-elite-b-wall-single-18000",
       outdoorUnitId: "stelpro-selb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -934,9 +1700,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-elite-b-wall-single-cfg-4",
-      slug: "stelpro-elite-b-wall-single-cfg-4",
-      modelId: "stelpro-elite-b-wall-single",
+      id: "stelpro-elite-b-wall-single-24000-cfg-1",
+      slug: "stelpro-elite-b-wall-single-24000-cfg-1",
+      modelId: "stelpro-elite-b-wall-single-24000",
       outdoorUnitId: "stelpro-selb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -948,9 +1714,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-1",
-      slug: "stelpro-smz-series-wall-single-cfg-1",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-18000-cfg-1",
+      slug: "stelpro-smz-series-wall-single-18000-cfg-1",
+      modelId: "stelpro-smz-series-wall-single-18000",
       outdoorUnitId: "stelpro-smz2b1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -962,9 +1728,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-2",
-      slug: "stelpro-smz-series-wall-single-cfg-2",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-18000-cfg-2",
+      slug: "stelpro-smz-series-wall-single-18000-cfg-2",
+      modelId: "stelpro-smz-series-wall-single-18000",
       outdoorUnitId: "stelpro-smz2b1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -976,9 +1742,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-3",
-      slug: "stelpro-smz-series-wall-single-cfg-3",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-18000-cfg-3",
+      slug: "stelpro-smz-series-wall-single-18000-cfg-3",
+      modelId: "stelpro-smz-series-wall-single-18000",
       outdoorUnitId: "stelpro-smz2b1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -990,177 +1756,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-4",
-      slug: "stelpro-smz-series-wall-single-cfg-4",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz3b1-h27a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-5",
-      slug: "stelpro-smz-series-wall-single-cfg-5",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz3b1-h27a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-6",
-      slug: "stelpro-smz-series-wall-single-cfg-6",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz3b1-h27a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-7",
-      slug: "stelpro-smz-series-wall-single-cfg-7",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz4b1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-8",
-      slug: "stelpro-smz-series-wall-single-cfg-8",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz4b1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-9",
-      slug: "stelpro-smz-series-wall-single-cfg-9",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz4b1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.2,
-      hspf2: 10.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-10",
-      slug: "stelpro-smz-series-wall-single-cfg-10",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz5b1-h48a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-11",
-      slug: "stelpro-smz-series-wall-single-cfg-11",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz5b1-h48a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-12",
-      slug: "stelpro-smz-series-wall-single-cfg-12",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz5b1-h48a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-13",
-      slug: "stelpro-smz-series-wall-single-cfg-13",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz5b1-h55a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
-      seer2: 22.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-14",
-      slug: "stelpro-smz-series-wall-single-cfg-14",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz5b1-h55a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 20,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-15",
-      slug: "stelpro-smz-series-wall-single-cfg-15",
-      modelId: "stelpro-smz-series-wall-single",
-      outdoorUnitId: "stelpro-smz5b1-h55a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 21.1,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "stelpro-smz-series-wall-single-cfg-16",
-      slug: "stelpro-smz-series-wall-single-cfg-16",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-18000-cfg-4",
+      slug: "stelpro-smz-series-wall-single-18000-cfg-4",
+      modelId: "stelpro-smz-series-wall-single-18000",
       outdoorUnitId: "stelpro-smz2b1v-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1172,9 +1770,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-17",
-      slug: "stelpro-smz-series-wall-single-cfg-17",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-18000-cfg-5",
+      slug: "stelpro-smz-series-wall-single-18000-cfg-5",
+      modelId: "stelpro-smz-series-wall-single-18000",
       outdoorUnitId: "stelpro-smz2b1v-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1186,9 +1784,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-18",
-      slug: "stelpro-smz-series-wall-single-cfg-18",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-18000-cfg-6",
+      slug: "stelpro-smz-series-wall-single-18000-cfg-6",
+      modelId: "stelpro-smz-series-wall-single-18000",
       outdoorUnitId: "stelpro-smz2b1v-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1200,9 +1798,23 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-19",
-      slug: "stelpro-smz-series-wall-single-cfg-19",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-24000-cfg-1",
+      slug: "stelpro-smz-series-wall-single-24000-cfg-1",
+      modelId: "stelpro-smz-series-wall-single-24000",
+      outdoorUnitId: "stelpro-smz3b1-h27a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-24000-cfg-2",
+      slug: "stelpro-smz-series-wall-single-24000-cfg-2",
+      modelId: "stelpro-smz-series-wall-single-24000",
       outdoorUnitId: "stelpro-smz3b1v-h27a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -1214,9 +1826,37 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-20",
-      slug: "stelpro-smz-series-wall-single-cfg-20",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-30000-cfg-1",
+      slug: "stelpro-smz-series-wall-single-30000-cfg-1",
+      modelId: "stelpro-smz-series-wall-single-30000",
+      outdoorUnitId: "stelpro-smz3b1-h27a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-30000-cfg-2",
+      slug: "stelpro-smz-series-wall-single-30000-cfg-2",
+      modelId: "stelpro-smz-series-wall-single-30000",
+      outdoorUnitId: "stelpro-smz3b1-h27a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-30000-cfg-3",
+      slug: "stelpro-smz-series-wall-single-30000-cfg-3",
+      modelId: "stelpro-smz-series-wall-single-30000",
       outdoorUnitId: "stelpro-smz3b1v-h27a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1228,9 +1868,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-21",
-      slug: "stelpro-smz-series-wall-single-cfg-21",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-30000-cfg-4",
+      slug: "stelpro-smz-series-wall-single-30000-cfg-4",
+      modelId: "stelpro-smz-series-wall-single-30000",
       outdoorUnitId: "stelpro-smz3b1v-h27a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -1242,9 +1882,51 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-22",
-      slug: "stelpro-smz-series-wall-single-cfg-22",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-36000-cfg-1",
+      slug: "stelpro-smz-series-wall-single-36000-cfg-1",
+      modelId: "stelpro-smz-series-wall-single-36000",
+      outdoorUnitId: "stelpro-smz4b1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-36000-cfg-2",
+      slug: "stelpro-smz-series-wall-single-36000-cfg-2",
+      modelId: "stelpro-smz-series-wall-single-36000",
+      outdoorUnitId: "stelpro-smz4b1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-36000-cfg-3",
+      slug: "stelpro-smz-series-wall-single-36000-cfg-3",
+      modelId: "stelpro-smz-series-wall-single-36000",
+      outdoorUnitId: "stelpro-smz4b1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.2,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-36000-cfg-4",
+      slug: "stelpro-smz-series-wall-single-36000-cfg-4",
+      modelId: "stelpro-smz-series-wall-single-36000",
       outdoorUnitId: "stelpro-smz4b1v-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1256,9 +1938,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-23",
-      slug: "stelpro-smz-series-wall-single-cfg-23",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-36000-cfg-5",
+      slug: "stelpro-smz-series-wall-single-36000-cfg-5",
+      modelId: "stelpro-smz-series-wall-single-36000",
       outdoorUnitId: "stelpro-smz4b1v-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1270,9 +1952,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-24",
-      slug: "stelpro-smz-series-wall-single-cfg-24",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-36000-cfg-6",
+      slug: "stelpro-smz-series-wall-single-36000-cfg-6",
+      modelId: "stelpro-smz-series-wall-single-36000",
       outdoorUnitId: "stelpro-smz4b1v-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1284,9 +1966,93 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-25",
-      slug: "stelpro-smz-series-wall-single-cfg-25",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-48000-cfg-1",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-1",
+      modelId: "stelpro-smz-series-wall-single-48000",
+      outdoorUnitId: "stelpro-smz5b1-h48a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-48000-cfg-2",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-2",
+      modelId: "stelpro-smz-series-wall-single-48000",
+      outdoorUnitId: "stelpro-smz5b1-h48a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-48000-cfg-3",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-3",
+      modelId: "stelpro-smz-series-wall-single-48000",
+      outdoorUnitId: "stelpro-smz5b1-h48a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.7,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-48000-cfg-4",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-4",
+      modelId: "stelpro-smz-series-wall-single-48000",
+      outdoorUnitId: "stelpro-smz5b1-h55a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 22.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-48000-cfg-5",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-5",
+      modelId: "stelpro-smz-series-wall-single-48000",
+      outdoorUnitId: "stelpro-smz5b1-h55a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-48000-cfg-6",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-6",
+      modelId: "stelpro-smz-series-wall-single-48000",
+      outdoorUnitId: "stelpro-smz5b1-h55a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 21.1,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "stelpro-smz-series-wall-single-48000-cfg-7",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-7",
+      modelId: "stelpro-smz-series-wall-single-48000",
       outdoorUnitId: "stelpro-smz5b1v-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1298,9 +2064,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-26",
-      slug: "stelpro-smz-series-wall-single-cfg-26",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-48000-cfg-8",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-8",
+      modelId: "stelpro-smz-series-wall-single-48000",
       outdoorUnitId: "stelpro-smz5b1v-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1312,9 +2078,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-27",
-      slug: "stelpro-smz-series-wall-single-cfg-27",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-48000-cfg-9",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-9",
+      modelId: "stelpro-smz-series-wall-single-48000",
       outdoorUnitId: "stelpro-smz5b1v-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1326,9 +2092,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-28",
-      slug: "stelpro-smz-series-wall-single-cfg-28",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-48000-cfg-10",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-10",
+      modelId: "stelpro-smz-series-wall-single-48000",
       outdoorUnitId: "stelpro-smz5b1v-h55a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -1340,9 +2106,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-29",
-      slug: "stelpro-smz-series-wall-single-cfg-29",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-48000-cfg-11",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-11",
+      modelId: "stelpro-smz-series-wall-single-48000",
       outdoorUnitId: "stelpro-smz5b1v-h55a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -1354,9 +2120,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-smz-series-wall-single-cfg-30",
-      slug: "stelpro-smz-series-wall-single-cfg-30",
-      modelId: "stelpro-smz-series-wall-single",
+      id: "stelpro-smz-series-wall-single-48000-cfg-12",
+      slug: "stelpro-smz-series-wall-single-48000-cfg-12",
+      modelId: "stelpro-smz-series-wall-single-48000",
       outdoorUnitId: "stelpro-smz5b1v-h55a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -1368,9 +2134,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-1",
-      slug: "stelpro-cahb-series-central-ducted-cfg-1",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-24000-cfg-1",
+      slug: "stelpro-cahb-series-central-ducted-24000-cfg-1",
+      modelId: "stelpro-cahb-series-central-ducted-24000",
       outdoorUnitId: "stelpro-ccb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1382,9 +2148,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-2",
-      slug: "stelpro-cahb-series-central-ducted-cfg-2",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-24000-cfg-2",
+      slug: "stelpro-cahb-series-central-ducted-24000-cfg-2",
+      modelId: "stelpro-cahb-series-central-ducted-24000",
       outdoorUnitId: "stelpro-ccb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1396,9 +2162,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-3",
-      slug: "stelpro-cahb-series-central-ducted-cfg-3",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-30000-cfg-1",
+      slug: "stelpro-cahb-series-central-ducted-30000-cfg-1",
+      modelId: "stelpro-cahb-series-central-ducted-30000",
       outdoorUnitId: "stelpro-ccb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1410,9 +2176,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-4",
-      slug: "stelpro-cahb-series-central-ducted-cfg-4",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-30000-cfg-2",
+      slug: "stelpro-cahb-series-central-ducted-30000-cfg-2",
+      modelId: "stelpro-cahb-series-central-ducted-30000",
       outdoorUnitId: "stelpro-ccb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1424,9 +2190,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-5",
-      slug: "stelpro-cahb-series-central-ducted-cfg-5",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-30000-cfg-3",
+      slug: "stelpro-cahb-series-central-ducted-30000-cfg-3",
+      modelId: "stelpro-cahb-series-central-ducted-30000",
       outdoorUnitId: "stelpro-ccb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1438,9 +2204,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-6",
-      slug: "stelpro-cahb-series-central-ducted-cfg-6",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-36000-cfg-1",
+      slug: "stelpro-cahb-series-central-ducted-36000-cfg-1",
+      modelId: "stelpro-cahb-series-central-ducted-36000",
       outdoorUnitId: "stelpro-ccb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1452,9 +2218,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-7",
-      slug: "stelpro-cahb-series-central-ducted-cfg-7",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-36000-cfg-2",
+      slug: "stelpro-cahb-series-central-ducted-36000-cfg-2",
+      modelId: "stelpro-cahb-series-central-ducted-36000",
       outdoorUnitId: "stelpro-ccb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1466,9 +2232,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-8",
-      slug: "stelpro-cahb-series-central-ducted-cfg-8",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-48000-cfg-1",
+      slug: "stelpro-cahb-series-central-ducted-48000-cfg-1",
+      modelId: "stelpro-cahb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-ccb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1480,9 +2246,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-9",
-      slug: "stelpro-cahb-series-central-ducted-cfg-9",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-48000-cfg-2",
+      slug: "stelpro-cahb-series-central-ducted-48000-cfg-2",
+      modelId: "stelpro-cahb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-ccb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1494,9 +2260,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-cahb-series-central-ducted-cfg-10",
-      slug: "stelpro-cahb-series-central-ducted-cfg-10",
-      modelId: "stelpro-cahb-series-central-ducted",
+      id: "stelpro-cahb-series-central-ducted-48000-cfg-3",
+      slug: "stelpro-cahb-series-central-ducted-48000-cfg-3",
+      modelId: "stelpro-cahb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-ccb1-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1508,9 +2274,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-1",
-      slug: "stelpro-sdb-series-central-ducted-cfg-1",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-24000-cfg-1",
+      slug: "stelpro-sdb-series-central-ducted-24000-cfg-1",
+      modelId: "stelpro-sdb-series-central-ducted-24000",
       outdoorUnitId: "stelpro-sdb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1522,9 +2288,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-2",
-      slug: "stelpro-sdb-series-central-ducted-cfg-2",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-24000-cfg-2",
+      slug: "stelpro-sdb-series-central-ducted-24000-cfg-2",
+      modelId: "stelpro-sdb-series-central-ducted-24000",
       outdoorUnitId: "stelpro-sdb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1536,9 +2302,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-3",
-      slug: "stelpro-sdb-series-central-ducted-cfg-3",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-30000-cfg-1",
+      slug: "stelpro-sdb-series-central-ducted-30000-cfg-1",
+      modelId: "stelpro-sdb-series-central-ducted-30000",
       outdoorUnitId: "stelpro-sdb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1550,9 +2316,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-4",
-      slug: "stelpro-sdb-series-central-ducted-cfg-4",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-30000-cfg-2",
+      slug: "stelpro-sdb-series-central-ducted-30000-cfg-2",
+      modelId: "stelpro-sdb-series-central-ducted-30000",
       outdoorUnitId: "stelpro-sdb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -1564,9 +2330,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-5",
-      slug: "stelpro-sdb-series-central-ducted-cfg-5",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-30000-cfg-3",
+      slug: "stelpro-sdb-series-central-ducted-30000-cfg-3",
+      modelId: "stelpro-sdb-series-central-ducted-30000",
       outdoorUnitId: "stelpro-sdb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -1578,9 +2344,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-6",
-      slug: "stelpro-sdb-series-central-ducted-cfg-6",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-36000-cfg-1",
+      slug: "stelpro-sdb-series-central-ducted-36000-cfg-1",
+      modelId: "stelpro-sdb-series-central-ducted-36000",
       outdoorUnitId: "stelpro-sdb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1592,9 +2358,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-7",
-      slug: "stelpro-sdb-series-central-ducted-cfg-7",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-36000-cfg-2",
+      slug: "stelpro-sdb-series-central-ducted-36000-cfg-2",
+      modelId: "stelpro-sdb-series-central-ducted-36000",
       outdoorUnitId: "stelpro-sdb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1606,9 +2372,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-8",
-      slug: "stelpro-sdb-series-central-ducted-cfg-8",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-42000-cfg-1",
+      slug: "stelpro-sdb-series-central-ducted-42000-cfg-1",
+      modelId: "stelpro-sdb-series-central-ducted-42000",
       outdoorUnitId: "stelpro-sdb1-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -1620,9 +2386,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-9",
-      slug: "stelpro-sdb-series-central-ducted-cfg-9",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-48000-cfg-1",
+      slug: "stelpro-sdb-series-central-ducted-48000-cfg-1",
+      modelId: "stelpro-sdb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-sdb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -1634,9 +2400,9 @@ export const stelproDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "stelpro-sdb-series-central-ducted-cfg-10",
-      slug: "stelpro-sdb-series-central-ducted-cfg-10",
-      modelId: "stelpro-sdb-series-central-ducted",
+      id: "stelpro-sdb-series-central-ducted-48000-cfg-2",
+      slug: "stelpro-sdb-series-central-ducted-48000-cfg-2",
+      modelId: "stelpro-sdb-series-central-ducted-48000",
       outdoorUnitId: "stelpro-sdb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1650,7 +2416,7 @@ export const stelproDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "stelpro-sahb-series-central-ducted-cfg-1",
+      configurationId: "stelpro-sahb-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1661,7 +2427,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sahb-series-central-ducted-cfg-2",
+      configurationId: "stelpro-sahb-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1672,7 +2438,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sahb-series-central-ducted-cfg-3",
+      configurationId: "stelpro-sahb-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1683,7 +2449,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sahb-series-central-ducted-cfg-4",
+      configurationId: "stelpro-sahb-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1694,7 +2460,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sahb-series-central-ducted-cfg-5",
+      configurationId: "stelpro-sahb-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1705,7 +2471,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sahb-series-central-ducted-cfg-6",
+      configurationId: "stelpro-sahb-series-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1716,7 +2482,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sinb-series-wall-single-cfg-1",
+      configurationId: "stelpro-sinb-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1727,29 +2493,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sinb-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11700,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-sinb-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: 2.11,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-standard-wall-single-cfg-1",
+      configurationId: "stelpro-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1760,7 +2504,29 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sepb-series-wall-single-cfg-1",
+      configurationId: "stelpro-sinb-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-sinb-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-sepb-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1771,7 +2537,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sepb-series-wall-single-cfg-2",
+      configurationId: "stelpro-sepb-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1782,7 +2548,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sepb-series-wall-single-cfg-3",
+      configurationId: "stelpro-sepb-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1793,7 +2559,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sepb-series-wall-single-cfg-4",
+      configurationId: "stelpro-sepb-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1804,7 +2570,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sicb1-series-wall-single-cfg-1",
+      configurationId: "stelpro-sicb1-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1815,7 +2581,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sicb1-series-wall-single-cfg-2",
+      configurationId: "stelpro-sicb1-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1826,7 +2592,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sicb1-series-wall-single-cfg-3",
+      configurationId: "stelpro-sicb1-series-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1837,7 +2603,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sicb1-series-wall-single-cfg-4",
+      configurationId: "stelpro-sicb1-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1848,7 +2614,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sfcb1-series-wall-single-cfg-1",
+      configurationId: "stelpro-sfcb1-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1859,7 +2625,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sfcb1-series-wall-single-cfg-2",
+      configurationId: "stelpro-sfcb1-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1870,7 +2636,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sfcb1-series-wall-single-cfg-3",
+      configurationId: "stelpro-sfcb1-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1881,7 +2647,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sfcb1-series-wall-single-cfg-4",
+      configurationId: "stelpro-sfcb1-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1892,7 +2658,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-elite-b-wall-single-cfg-1",
+      configurationId: "stelpro-elite-b-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1903,7 +2669,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-elite-b-wall-single-cfg-2",
+      configurationId: "stelpro-elite-b-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1914,7 +2680,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-elite-b-wall-single-cfg-3",
+      configurationId: "stelpro-elite-b-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1925,7 +2691,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-elite-b-wall-single-cfg-4",
+      configurationId: "stelpro-elite-b-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1936,7 +2702,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-1",
+      configurationId: "stelpro-smz-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1947,7 +2713,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-2",
+      configurationId: "stelpro-smz-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1958,7 +2724,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-3",
+      configurationId: "stelpro-smz-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1969,139 +2735,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "stelpro-smz-series-wall-single-cfg-16",
+      configurationId: "stelpro-smz-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2112,7 +2746,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-17",
+      configurationId: "stelpro-smz-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2123,7 +2757,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-18",
+      configurationId: "stelpro-smz-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2134,7 +2768,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-19",
+      configurationId: "stelpro-smz-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2145,7 +2779,18 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-20",
+      configurationId: "stelpro-smz-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2156,7 +2801,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-21",
+      configurationId: "stelpro-smz-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2167,7 +2812,29 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-22",
+      configurationId: "stelpro-smz-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2178,7 +2845,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-23",
+      configurationId: "stelpro-smz-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2189,7 +2856,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-24",
+      configurationId: "stelpro-smz-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2200,7 +2867,40 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-25",
+      configurationId: "stelpro-smz-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2211,7 +2911,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-26",
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2222,7 +2922,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-27",
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2233,7 +2933,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-28",
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2244,7 +2944,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-29",
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2255,7 +2955,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-smz-series-wall-single-cfg-30",
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2266,7 +2966,73 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-1",
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-smz-series-wall-single-48000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "stelpro-cahb-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2277,7 +3043,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-2",
+      configurationId: "stelpro-cahb-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2288,7 +3054,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-3",
+      configurationId: "stelpro-cahb-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2299,7 +3065,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-4",
+      configurationId: "stelpro-cahb-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2310,7 +3076,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-5",
+      configurationId: "stelpro-cahb-series-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2321,7 +3087,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-6",
+      configurationId: "stelpro-cahb-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2332,7 +3098,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-7",
+      configurationId: "stelpro-cahb-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2343,7 +3109,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-8",
+      configurationId: "stelpro-cahb-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2354,7 +3120,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-9",
+      configurationId: "stelpro-cahb-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2365,7 +3131,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-cahb-series-central-ducted-cfg-10",
+      configurationId: "stelpro-cahb-series-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2376,7 +3142,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-1",
+      configurationId: "stelpro-sdb-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2387,7 +3153,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-2",
+      configurationId: "stelpro-sdb-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2398,7 +3164,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-3",
+      configurationId: "stelpro-sdb-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2409,7 +3175,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-4",
+      configurationId: "stelpro-sdb-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2420,7 +3186,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-5",
+      configurationId: "stelpro-sdb-series-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2431,7 +3197,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-6",
+      configurationId: "stelpro-sdb-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2442,7 +3208,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-7",
+      configurationId: "stelpro-sdb-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2453,7 +3219,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-8",
+      configurationId: "stelpro-sdb-series-central-ducted-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2464,7 +3230,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-9",
+      configurationId: "stelpro-sdb-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2475,7 +3241,7 @@ export const stelproDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "stelpro-sdb-series-central-ducted-cfg-10",
+      configurationId: "stelpro-sdb-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

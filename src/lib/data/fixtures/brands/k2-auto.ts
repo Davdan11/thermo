@@ -26,15 +26,16 @@ export const k2Dataset: BrandDataset = {
   ],
   models: [
     {
-      id: "k2-standard-wall-single",
-      slug: "k2-standard-wall-single",
-      name: "Standard",
+      id: "k2-standard-wall-single-30000",
+      slug: "k2-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
       seriesId: "k2-standard",
       brandId: "k2",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 24000,
@@ -77,9 +78,9 @@ export const k2Dataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "k2-standard-wall-single-cfg-1",
-      slug: "k2-standard-wall-single-cfg-1",
-      modelId: "k2-standard-wall-single",
+      id: "k2-standard-wall-single-30000-cfg-1",
+      slug: "k2-standard-wall-single-30000-cfg-1",
+      modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-thtu-heatpump24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27600,
@@ -91,9 +92,9 @@ export const k2Dataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "k2-standard-wall-single-cfg-2",
-      slug: "k2-standard-wall-single-cfg-2",
-      modelId: "k2-standard-wall-single",
+      id: "k2-standard-wall-single-30000-cfg-2",
+      slug: "k2-standard-wall-single-30000-cfg-2",
+      modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-hp36r410a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27600,
@@ -105,9 +106,9 @@ export const k2Dataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "k2-standard-wall-single-cfg-3",
-      slug: "k2-standard-wall-single-cfg-3",
-      modelId: "k2-standard-wall-single",
+      id: "k2-standard-wall-single-30000-cfg-3",
+      slug: "k2-standard-wall-single-30000-cfg-3",
+      modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-hp36r",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27600,
@@ -121,7 +122,7 @@ export const k2Dataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "k2-standard-wall-single-cfg-1",
+      configurationId: "k2-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -132,7 +133,7 @@ export const k2Dataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "k2-standard-wall-single-cfg-2",
+      configurationId: "k2-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -143,7 +144,7 @@ export const k2Dataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "k2-standard-wall-single-cfg-3",
+      configurationId: "k2-standard-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,

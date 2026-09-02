@@ -70,18 +70,424 @@ export const runtruDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "runtru-standard-wall-single",
-      slug: "runtru-standard-wall-single",
-      name: "Standard",
+      id: "runtru-standard-wall-single-9000",
+      slug: "runtru-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "runtru-standard",
       brandId: "runtru",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 5400,
+      heatingCapacity5FMaxBtu: 7300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-12000",
+      slug: "runtru-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMaxBtu: 8100,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-24000",
+      slug: "runtru-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-18000",
+      slug: "runtru-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 12400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-20000",
+      slug: "runtru-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 14600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-central-ducted-20000",
+      slug: "runtru-standard-central-ducted-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 15500,
+      heatingCapacity5FMaxBtu: 15500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-central-ducted-18000",
+      slug: "runtru-standard-central-ducted-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11400,
+      heatingCapacity5FMaxBtu: 11400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-n-series-wall-single-18000",
+      slug: "runtru-n-series-wall-single-18000",
+      name: "N-Series 18 000 BTU",
+      seriesId: "runtru-n-series",
+      brandId: "runtru",
+      modelNumber: "N-Series 18k",
+      normalizedModelNumber: "n-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.22,
+      cop5FMax: 2.22,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-n-series-wall-single-24000",
+      slug: "runtru-n-series-wall-single-24000",
+      name: "N-Series 24 000 BTU",
+      seriesId: "runtru-n-series",
+      brandId: "runtru",
+      modelNumber: "N-Series 24k",
+      normalizedModelNumber: "n-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      heatingCapacity5FMinBtu: 23600,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-n-series-wall-single-30000",
+      slug: "runtru-n-series-wall-single-30000",
+      name: "N-Series 30 000 BTU",
+      seriesId: "runtru-n-series",
+      brandId: "runtru",
+      modelNumber: "N-Series 30k",
+      normalizedModelNumber: "n-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 27200,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-n-series-wall-single-36000",
+      slug: "runtru-n-series-wall-single-36000",
+      name: "N-Series 36 000 BTU",
+      seriesId: "runtru-n-series",
+      brandId: "runtru",
+      modelNumber: "N-Series 36k",
+      normalizedModelNumber: "n-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30800,
+      heatingCapacity5FMaxBtu: 35600,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.82,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-20000",
+      slug: "runtru-e4hl5-central-ducted-20000",
+      name: "E4HL5 20 000 BTU",
+      seriesId: "runtru-e4hl5",
+      brandId: "runtru",
+      modelNumber: "E4HL5 20k",
+      normalizedModelNumber: "e4hl5-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-24000",
+      slug: "runtru-e4hl5-central-ducted-24000",
+      name: "E4HL5 24 000 BTU",
+      seriesId: "runtru-e4hl5",
+      brandId: "runtru",
+      modelNumber: "E4HL5 24k",
+      normalizedModelNumber: "e4hl5-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19100,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000",
+      slug: "runtru-e4hl5-central-ducted-30000",
+      name: "E4HL5 30 000 BTU",
+      seriesId: "runtru-e4hl5",
+      brandId: "runtru",
+      modelNumber: "E4HL5 30k",
+      normalizedModelNumber: "e4hl5-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-42000",
+      slug: "runtru-standard-wall-single-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-48000",
+      slug: "runtru-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 46000,
       seer2Min: null,
       seer2Max: null,
@@ -96,18 +502,46 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-central-ducted",
-      slug: "runtru-standard-central-ducted",
-      name: "Standard",
-      seriesId: "runtru-standard",
+      id: "runtru-e4hl5-central-ducted-48000",
+      slug: "runtru-e4hl5-central-ducted-48000",
+      name: "E4HL5 48 000 BTU",
+      seriesId: "runtru-e4hl5",
       brandId: "runtru",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "E4HL5 48k",
+      normalizedModelNumber: "e4hl5-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      heatingCapacity5FMinBtu: 29400,
+      heatingCapacity5FMaxBtu: 39000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-central-ducted-42000",
+      slug: "runtru-standard-central-ducted-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "runtru-standard",
+      brandId: "runtru",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 11400,
+      heatingCapacity5FMinBtu: 30000,
       heatingCapacity5FMaxBtu: 30000,
       seer2Min: null,
       seer2Max: null,
@@ -122,25 +556,53 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-n-series-wall-single",
-      slug: "runtru-n-series-wall-single",
-      name: "N-Series",
-      seriesId: "runtru-n-series",
+      id: "runtru-standard-wall-single-36000",
+      slug: "runtru-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "runtru-standard",
       brandId: "runtru",
-      modelNumber: "N-Series",
-      normalizedModelNumber: "n-series",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 36000,
-      heatingCapacity5FMinBtu: 15000,
-      heatingCapacity5FMaxBtu: 35600,
-      seer2Min: 19,
-      seer2Max: 19,
-      hspf2Min: 10,
-      hspf2Max: 10,
-      cop5FMin: 1.82,
-      cop5FMax: 2.22,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 21800,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-23u-series-wall-single-9000",
+      slug: "runtru-23u-series-wall-single-9000",
+      name: "23U Series 9 000 BTU",
+      seriesId: "runtru-23u-series",
+      brandId: "runtru",
+      modelNumber: "23U Series 9k",
+      normalizedModelNumber: "23u-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 5800,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -148,50 +610,25 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted",
-      slug: "runtru-e4hl5-central-ducted",
-      name: "E4HL5",
-      seriesId: "runtru-e4hl5",
-      brandId: "runtru",
-      modelNumber: "E4HL5",
-      normalizedModelNumber: "e4hl5",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 47500,
-      heatingCapacity5FMinBtu: 14000,
-      heatingCapacity5FMaxBtu: 39000,
-      seer2Min: 15.2,
-      seer2Max: 15.2,
-      hspf2Min: 8.1,
-      hspf2Max: 8.5,
-      cop5FMin: 1.75,
-      cop5FMax: 1.85,
-      systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-23u-series-wall-single",
-      slug: "runtru-23u-series-wall-single",
-      name: "23U Series",
+      id: "runtru-23u-series-wall-single-12000",
+      slug: "runtru-23u-series-wall-single-12000",
+      name: "23U Series 12 000 BTU",
       seriesId: "runtru-23u-series",
       brandId: "runtru",
-      modelNumber: "23U Series",
-      normalizedModelNumber: "23u-series",
+      modelNumber: "23U Series 12k",
+      normalizedModelNumber: "23u-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 23000,
-      heatingCapacity5FMinBtu: 5800,
-      heatingCapacity5FMaxBtu: 14000,
-      seer2Min: 23,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8100,
+      heatingCapacity5FMaxBtu: 8100,
+      seer2Min: 24,
       seer2Max: 24,
-      hspf2Min: 9.5,
+      hspf2Min: 10,
       hspf2Max: 10,
-      cop5FMin: 1.8,
+      cop5FMin: 2.1,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -200,18 +637,127 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-a5hl5-central-ducted",
-      slug: "runtru-a5hl5-central-ducted",
-      name: "A5HL5",
-      seriesId: "runtru-a5hl5",
+      id: "runtru-23u-series-wall-single-18000",
+      slug: "runtru-23u-series-wall-single-18000",
+      name: "23U Series 18 000 BTU",
+      seriesId: "runtru-23u-series",
       brandId: "runtru",
-      modelNumber: "A5HL5",
-      normalizedModelNumber: "a5hl5",
+      modelNumber: "23U Series 18k",
+      normalizedModelNumber: "23u-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-23u-series-wall-single-24000",
+      slug: "runtru-23u-series-wall-single-24000",
+      name: "23U Series 24 000 BTU",
+      seriesId: "runtru-23u-series",
+      brandId: "runtru",
+      modelNumber: "23U Series 24k",
+      normalizedModelNumber: "23u-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 46000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-a5hl5-central-ducted-24000",
+      slug: "runtru-a5hl5-central-ducted-24000",
+      name: "A5HL5 24 000 BTU",
+      seriesId: "runtru-a5hl5",
+      brandId: "runtru",
+      modelNumber: "A5HL5 24k",
+      normalizedModelNumber: "a5hl5-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
       heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-a5hl5-central-ducted-36000",
+      slug: "runtru-a5hl5-central-ducted-36000",
+      name: "A5HL5 36 000 BTU",
+      seriesId: "runtru-a5hl5",
+      brandId: "runtru",
+      modelNumber: "A5HL5 36k",
+      normalizedModelNumber: "a5hl5-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-a5hl5-central-ducted-48000",
+      slug: "runtru-a5hl5-central-ducted-48000",
+      name: "A5HL5 48 000 BTU",
+      seriesId: "runtru-a5hl5",
+      brandId: "runtru",
+      modelNumber: "A5HL5 48k",
+      normalizedModelNumber: "a5hl5-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      heatingCapacity5FMinBtu: 42000,
       heatingCapacity5FMaxBtu: 42000,
       seer2Min: 16,
       seer2Max: 16,
@@ -234,32 +780,8 @@ export const runtruDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "runtru-m4ths1812a11n",
-      modelNumber: "M4THS1812A11N**",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
       id: "runtru-m4tls1809a11n",
       modelNumber: "M4TLS1809A11N**",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-m4tls1824a11n",
-      modelNumber: "M4TLS1824A11N**",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-m4ths1818a11n",
-      modelNumber: "M4THS1818A11N**",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-m4ths1824a11n",
-      modelNumber: "M4THS1824A11N**",
       brandId: "runtru",
       refrigerant: null as any,
     },
@@ -270,44 +792,8 @@ export const runtruDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "runtru-m4ths2312a11n",
-      modelNumber: "M4THS2312A11N**",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-e4hl5042a1000a",
-      modelNumber: "E4HL5042A1000A",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-e4hl5048a1000a",
-      modelNumber: "E4HL5048A1000A",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
       id: "runtru-m4tvs1709a11na",
       modelNumber: "M4TVS1709A11NA",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-m4tvs1712a11na",
-      modelNumber: "M4TVS1712A11NA",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-m4tvs1718a11na",
-      modelNumber: "M4TVS1718A11NA",
-      brandId: "runtru",
-      refrigerant: null as any,
-    },
-    {
-      id: "runtru-m4tvs1724a11na",
-      modelNumber: "M4TVS1724A11NA",
       brandId: "runtru",
       refrigerant: null as any,
     },
@@ -318,14 +804,38 @@ export const runtruDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "runtru-m4ths1812a11n",
+      modelNumber: "M4THS1812A11N**",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-m4ths2312a11n",
+      modelNumber: "M4THS2312A11N**",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-m4tvs1712a11na",
+      modelNumber: "M4TVS1712A11NA",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
       id: "runtru-m5ths1912a11naa",
       modelNumber: "M5THS1912A11NAA",
       brandId: "runtru",
       refrigerant: null as any,
     },
     {
-      id: "runtru-m5ths1918a11naa",
-      modelNumber: "M5THS1918A11NAA",
+      id: "runtru-m4tls1824a11n",
+      modelNumber: "M4TLS1824A11N**",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-m4tvs1724a11na",
+      modelNumber: "M4TVS1724A11NA",
       brandId: "runtru",
       refrigerant: null as any,
     },
@@ -336,14 +846,26 @@ export const runtruDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "runtru-m5ths1936a11naa",
-      modelNumber: "M5THS1936A11NAA",
+      id: "runtru-m4ths1818a11n",
+      modelNumber: "M4THS1818A11N**",
       brandId: "runtru",
       refrigerant: null as any,
     },
     {
-      id: "runtru-a5hl5060a1",
-      modelNumber: "A5HL5060A1",
+      id: "runtru-m4tvs1718a11na",
+      modelNumber: "M4TVS1718A11NA",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-m5ths1918a11naa",
+      modelNumber: "M5THS1918A11NAA",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-m4ths1824a11n",
+      modelNumber: "M4THS1824A11N**",
       brandId: "runtru",
       refrigerant: null as any,
     },
@@ -414,8 +936,32 @@ export const runtruDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "runtru-e4hl5042a1000a",
+      modelNumber: "E4HL5042A1000A",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-e4hl5048a1000a",
+      modelNumber: "E4HL5048A1000A",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-a5hl5060a1",
+      modelNumber: "A5HL5060A1",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
       id: "runtru-e4hl5060a1000a",
       modelNumber: "E4HL5060A1000A",
+      brandId: "runtru",
+      refrigerant: null as any,
+    },
+    {
+      id: "runtru-m5ths1936a11naa",
+      modelNumber: "M5THS1936A11NAA",
       brandId: "runtru",
       refrigerant: null as any,
     },
@@ -467,9 +1013,9 @@ export const runtruDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "runtru-standard-wall-single-cfg-1",
-      slug: "runtru-standard-wall-single-cfg-1",
-      modelId: "runtru-standard-wall-single",
+      id: "runtru-standard-wall-single-9000-cfg-1",
+      slug: "runtru-standard-wall-single-9000-cfg-1",
+      modelId: "runtru-standard-wall-single-9000",
       outdoorUnitId: "runtru-m4ths1809a11n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -481,23 +1027,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-2",
-      slug: "runtru-standard-wall-single-cfg-2",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4ths1812a11n",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-3",
-      slug: "runtru-standard-wall-single-cfg-3",
-      modelId: "runtru-standard-wall-single",
+      id: "runtru-standard-wall-single-9000-cfg-2",
+      slug: "runtru-standard-wall-single-9000-cfg-2",
+      modelId: "runtru-standard-wall-single-9000",
       outdoorUnitId: "runtru-m4tls1809a11n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9200,
@@ -509,51 +1041,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-4",
-      slug: "runtru-standard-wall-single-cfg-4",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4tls1824a11n",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22800,
-      coolingCapacityMaxBtu: 22800,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-5",
-      slug: "runtru-standard-wall-single-cfg-5",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4ths1818a11n",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-6",
-      slug: "runtru-standard-wall-single-cfg-6",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4ths1824a11n",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-7",
-      slug: "runtru-standard-wall-single-cfg-7",
-      modelId: "runtru-standard-wall-single",
+      id: "runtru-standard-wall-single-9000-cfg-3",
+      slug: "runtru-standard-wall-single-9000-cfg-3",
+      modelId: "runtru-standard-wall-single-9000",
       outdoorUnitId: "runtru-m4ths2309a11n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -565,51 +1055,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-8",
-      slug: "runtru-standard-wall-single-cfg-8",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4ths2312a11n",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-9",
-      slug: "runtru-standard-wall-single-cfg-9",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-e4hl5042a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-10",
-      slug: "runtru-standard-wall-single-cfg-10",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-e4hl5048a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-11",
-      slug: "runtru-standard-wall-single-cfg-11",
-      modelId: "runtru-standard-wall-single",
+      id: "runtru-standard-wall-single-9000-cfg-4",
+      slug: "runtru-standard-wall-single-9000-cfg-4",
+      modelId: "runtru-standard-wall-single-9000",
       outdoorUnitId: "runtru-m4tvs1709a11na",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -621,121 +1069,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-12",
-      slug: "runtru-standard-wall-single-cfg-12",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4tvs1712a11na",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-13",
-      slug: "runtru-standard-wall-single-cfg-13",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4tvs1718a11na",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-14",
-      slug: "runtru-standard-wall-single-cfg-14",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m4tvs1724a11na",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-15",
-      slug: "runtru-standard-wall-single-cfg-15",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-e4hl5042a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-16",
-      slug: "runtru-standard-wall-single-cfg-16",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-e4hl5048a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-17",
-      slug: "runtru-standard-wall-single-cfg-17",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-e4hl5042a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-18",
-      slug: "runtru-standard-wall-single-cfg-18",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-e4hl5042a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-19",
-      slug: "runtru-standard-wall-single-cfg-19",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-e4hl5048a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-standard-wall-single-cfg-20",
-      slug: "runtru-standard-wall-single-cfg-20",
-      modelId: "runtru-standard-wall-single",
+      id: "runtru-standard-wall-single-9000-cfg-5",
+      slug: "runtru-standard-wall-single-9000-cfg-5",
+      modelId: "runtru-standard-wall-single-9000",
       outdoorUnitId: "runtru-m5ths1909a11naa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -747,9 +1083,51 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-21",
-      slug: "runtru-standard-wall-single-cfg-21",
-      modelId: "runtru-standard-wall-single",
+      id: "runtru-standard-wall-single-12000-cfg-1",
+      slug: "runtru-standard-wall-single-12000-cfg-1",
+      modelId: "runtru-standard-wall-single-12000",
+      outdoorUnitId: "runtru-m4ths1812a11n",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-12000-cfg-2",
+      slug: "runtru-standard-wall-single-12000-cfg-2",
+      modelId: "runtru-standard-wall-single-12000",
+      outdoorUnitId: "runtru-m4ths2312a11n",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-12000-cfg-3",
+      slug: "runtru-standard-wall-single-12000-cfg-3",
+      modelId: "runtru-standard-wall-single-12000",
+      outdoorUnitId: "runtru-m4tvs1712a11na",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-12000-cfg-4",
+      slug: "runtru-standard-wall-single-12000-cfg-4",
+      modelId: "runtru-standard-wall-single-12000",
       outdoorUnitId: "runtru-m5ths1912a11naa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -761,13 +1139,13 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-22",
-      slug: "runtru-standard-wall-single-cfg-22",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m5ths1918a11naa",
+      id: "runtru-standard-wall-single-24000-cfg-1",
+      slug: "runtru-standard-wall-single-24000-cfg-1",
+      modelId: "runtru-standard-wall-single-24000",
+      outdoorUnitId: "runtru-m4tls1824a11n",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMinBtu: 22800,
+      coolingCapacityMaxBtu: 22800,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -775,9 +1153,23 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-23",
-      slug: "runtru-standard-wall-single-cfg-23",
-      modelId: "runtru-standard-wall-single",
+      id: "runtru-standard-wall-single-24000-cfg-2",
+      slug: "runtru-standard-wall-single-24000-cfg-2",
+      modelId: "runtru-standard-wall-single-24000",
+      outdoorUnitId: "runtru-m4tvs1724a11na",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-24000-cfg-3",
+      slug: "runtru-standard-wall-single-24000-cfg-3",
+      modelId: "runtru-standard-wall-single-24000",
       outdoorUnitId: "runtru-m5ths1924a11naa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -789,13 +1181,13 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-24",
-      slug: "runtru-standard-wall-single-cfg-24",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-m5ths1936a11naa",
+      id: "runtru-standard-wall-single-18000-cfg-1",
+      slug: "runtru-standard-wall-single-18000-cfg-1",
+      modelId: "runtru-standard-wall-single-18000",
+      outdoorUnitId: "runtru-m4ths1818a11n",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -803,13 +1195,13 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-wall-single-cfg-25",
-      slug: "runtru-standard-wall-single-cfg-25",
-      modelId: "runtru-standard-wall-single",
-      outdoorUnitId: "runtru-a5hl5060a1",
+      id: "runtru-standard-wall-single-18000-cfg-2",
+      slug: "runtru-standard-wall-single-18000-cfg-2",
+      modelId: "runtru-standard-wall-single-18000",
+      outdoorUnitId: "runtru-m4tvs1718a11na",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -817,9 +1209,37 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-central-ducted-cfg-1",
-      slug: "runtru-standard-central-ducted-cfg-1",
-      modelId: "runtru-standard-central-ducted",
+      id: "runtru-standard-wall-single-18000-cfg-3",
+      slug: "runtru-standard-wall-single-18000-cfg-3",
+      modelId: "runtru-standard-wall-single-18000",
+      outdoorUnitId: "runtru-m5ths1918a11naa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-20000-cfg-1",
+      slug: "runtru-standard-wall-single-20000-cfg-1",
+      modelId: "runtru-standard-wall-single-20000",
+      outdoorUnitId: "runtru-m4ths1824a11n",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-central-ducted-20000-cfg-1",
+      slug: "runtru-standard-central-ducted-20000-cfg-1",
+      modelId: "runtru-standard-central-ducted-20000",
       outdoorUnitId: "runtru-m4ths2324a11n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -831,9 +1251,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-central-ducted-cfg-2",
-      slug: "runtru-standard-central-ducted-cfg-2",
-      modelId: "runtru-standard-central-ducted",
+      id: "runtru-standard-central-ducted-18000-cfg-1",
+      slug: "runtru-standard-central-ducted-18000-cfg-1",
+      modelId: "runtru-standard-central-ducted-18000",
       outdoorUnitId: "runtru-m4ths2318a11n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -845,23 +1265,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-standard-central-ducted-cfg-3",
-      slug: "runtru-standard-central-ducted-cfg-3",
-      modelId: "runtru-standard-central-ducted",
-      outdoorUnitId: "runtru-e4hl5042a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-n-series-wall-single-cfg-1",
-      slug: "runtru-n-series-wall-single-cfg-1",
-      modelId: "runtru-n-series-wall-single",
+      id: "runtru-n-series-wall-single-18000-cfg-1",
+      slug: "runtru-n-series-wall-single-18000-cfg-1",
+      modelId: "runtru-n-series-wall-single-18000",
       outdoorUnitId: "runtru-m4thm1918a12n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -873,9 +1279,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-n-series-wall-single-cfg-2",
-      slug: "runtru-n-series-wall-single-cfg-2",
-      modelId: "runtru-n-series-wall-single",
+      id: "runtru-n-series-wall-single-24000-cfg-1",
+      slug: "runtru-n-series-wall-single-24000-cfg-1",
+      modelId: "runtru-n-series-wall-single-24000",
       outdoorUnitId: "runtru-m4thm1924a13n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23200,
@@ -887,9 +1293,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-n-series-wall-single-cfg-3",
-      slug: "runtru-n-series-wall-single-cfg-3",
-      modelId: "runtru-n-series-wall-single",
+      id: "runtru-n-series-wall-single-30000-cfg-1",
+      slug: "runtru-n-series-wall-single-30000-cfg-1",
+      modelId: "runtru-n-series-wall-single-30000",
       outdoorUnitId: "runtru-m4thm1930a14n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -901,9 +1307,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-n-series-wall-single-cfg-4",
-      slug: "runtru-n-series-wall-single-cfg-4",
-      modelId: "runtru-n-series-wall-single",
+      id: "runtru-n-series-wall-single-36000-cfg-1",
+      slug: "runtru-n-series-wall-single-36000-cfg-1",
+      modelId: "runtru-n-series-wall-single-36000",
       outdoorUnitId: "runtru-m4thm1936a14n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -915,9 +1321,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-n-series-wall-single-cfg-5",
-      slug: "runtru-n-series-wall-single-cfg-5",
-      modelId: "runtru-n-series-wall-single",
+      id: "runtru-n-series-wall-single-36000-cfg-2",
+      slug: "runtru-n-series-wall-single-36000-cfg-2",
+      modelId: "runtru-n-series-wall-single-36000",
       outdoorUnitId: "runtru-m4thm1942a15n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -929,9 +1335,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-1",
-      slug: "runtru-e4hl5-central-ducted-cfg-1",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-20000-cfg-1",
+      slug: "runtru-e4hl5-central-ducted-20000-cfg-1",
+      modelId: "runtru-e4hl5-central-ducted-20000",
       outdoorUnitId: "runtru-e4hl5018a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 20000,
@@ -943,191 +1349,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-2",
-      slug: "runtru-e4hl5-central-ducted-cfg-2",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5024a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-3",
-      slug: "runtru-e4hl5-central-ducted-cfg-3",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5030a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-4",
-      slug: "runtru-e4hl5-central-ducted-cfg-4",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-5",
-      slug: "runtru-e4hl5-central-ducted-cfg-5",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5060a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-6",
-      slug: "runtru-e4hl5-central-ducted-cfg-6",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-7",
-      slug: "runtru-e4hl5-central-ducted-cfg-7",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5060a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-8",
-      slug: "runtru-e4hl5-central-ducted-cfg-8",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-9",
-      slug: "runtru-e4hl5-central-ducted-cfg-9",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-10",
-      slug: "runtru-e4hl5-central-ducted-cfg-10",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5030a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-11",
-      slug: "runtru-e4hl5-central-ducted-cfg-11",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5024a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-12",
-      slug: "runtru-e4hl5-central-ducted-cfg-12",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5024a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-13",
-      slug: "runtru-e4hl5-central-ducted-cfg-13",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5060a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-14",
-      slug: "runtru-e4hl5-central-ducted-cfg-14",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5060a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-15",
-      slug: "runtru-e4hl5-central-ducted-cfg-15",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-20000-cfg-2",
+      slug: "runtru-e4hl5-central-ducted-20000-cfg-2",
+      modelId: "runtru-e4hl5-central-ducted-20000",
       outdoorUnitId: "runtru-e4hl5018a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 20000,
@@ -1139,9 +1363,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-16",
-      slug: "runtru-e4hl5-central-ducted-cfg-16",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-20000-cfg-3",
+      slug: "runtru-e4hl5-central-ducted-20000-cfg-3",
+      modelId: "runtru-e4hl5-central-ducted-20000",
       outdoorUnitId: "runtru-e4hl5018a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 20000,
@@ -1153,9 +1377,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-17",
-      slug: "runtru-e4hl5-central-ducted-cfg-17",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-20000-cfg-4",
+      slug: "runtru-e4hl5-central-ducted-20000-cfg-4",
+      modelId: "runtru-e4hl5-central-ducted-20000",
       outdoorUnitId: "runtru-e4hl5018a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 20000,
@@ -1167,9 +1391,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-18",
-      slug: "runtru-e4hl5-central-ducted-cfg-18",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-20000-cfg-5",
+      slug: "runtru-e4hl5-central-ducted-20000-cfg-5",
+      modelId: "runtru-e4hl5-central-ducted-20000",
       outdoorUnitId: "runtru-e4hl5018a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 20000,
@@ -1181,9 +1405,23 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-19",
-      slug: "runtru-e4hl5-central-ducted-cfg-19",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-20000-cfg-6",
+      slug: "runtru-e4hl5-central-ducted-20000-cfg-6",
+      modelId: "runtru-e4hl5-central-ducted-20000",
+      outdoorUnitId: "runtru-e4hl5018a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 20000,
+      coolingCapacityMaxBtu: 20000,
+      seer2: 15.2,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-24000-cfg-1",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-1",
+      modelId: "runtru-e4hl5-central-ducted-24000",
       outdoorUnitId: "runtru-e4hl5024a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1195,9 +1433,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-20",
-      slug: "runtru-e4hl5-central-ducted-cfg-20",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-24000-cfg-2",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-2",
+      modelId: "runtru-e4hl5-central-ducted-24000",
       outdoorUnitId: "runtru-e4hl5024a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1209,9 +1447,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-21",
-      slug: "runtru-e4hl5-central-ducted-cfg-21",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-24000-cfg-3",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-3",
+      modelId: "runtru-e4hl5-central-ducted-24000",
       outdoorUnitId: "runtru-e4hl5024a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1223,9 +1461,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-22",
-      slug: "runtru-e4hl5-central-ducted-cfg-22",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-24000-cfg-4",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-4",
+      modelId: "runtru-e4hl5-central-ducted-24000",
       outdoorUnitId: "runtru-e4hl5024a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1237,9 +1475,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-23",
-      slug: "runtru-e4hl5-central-ducted-cfg-23",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-24000-cfg-5",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-5",
+      modelId: "runtru-e4hl5-central-ducted-24000",
       outdoorUnitId: "runtru-e4hl5024a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1251,9 +1489,65 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-24",
-      slug: "runtru-e4hl5-central-ducted-cfg-24",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-24000-cfg-6",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-6",
+      modelId: "runtru-e4hl5-central-ducted-24000",
+      outdoorUnitId: "runtru-e4hl5024a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-24000-cfg-7",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-7",
+      modelId: "runtru-e4hl5-central-ducted-24000",
+      outdoorUnitId: "runtru-e4hl5024a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-24000-cfg-8",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-8",
+      modelId: "runtru-e4hl5-central-ducted-24000",
+      outdoorUnitId: "runtru-e4hl5024a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-24000-cfg-9",
+      slug: "runtru-e4hl5-central-ducted-24000-cfg-9",
+      modelId: "runtru-e4hl5-central-ducted-24000",
+      outdoorUnitId: "runtru-e4hl5024a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-1",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-1",
+      modelId: "runtru-e4hl5-central-ducted-30000",
       outdoorUnitId: "runtru-e4hl5030a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1265,9 +1559,65 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-25",
-      slug: "runtru-e4hl5-central-ducted-cfg-25",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-30000-cfg-2",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-2",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-3",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-3",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-4",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-4",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-5",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-5",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-6",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-6",
+      modelId: "runtru-e4hl5-central-ducted-30000",
       outdoorUnitId: "runtru-e4hl5030a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1279,9 +1629,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-26",
-      slug: "runtru-e4hl5-central-ducted-cfg-26",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-30000-cfg-7",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-7",
+      modelId: "runtru-e4hl5-central-ducted-30000",
       outdoorUnitId: "runtru-e4hl5030a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1293,135 +1643,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-27",
-      slug: "runtru-e4hl5-central-ducted-cfg-27",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-28",
-      slug: "runtru-e4hl5-central-ducted-cfg-28",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-29",
-      slug: "runtru-e4hl5-central-ducted-cfg-29",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-30",
-      slug: "runtru-e4hl5-central-ducted-cfg-30",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-31",
-      slug: "runtru-e4hl5-central-ducted-cfg-31",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-32",
-      slug: "runtru-e4hl5-central-ducted-cfg-32",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-33",
-      slug: "runtru-e4hl5-central-ducted-cfg-33",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-34",
-      slug: "runtru-e4hl5-central-ducted-cfg-34",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-35",
-      slug: "runtru-e4hl5-central-ducted-cfg-35",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-36",
-      slug: "runtru-e4hl5-central-ducted-cfg-36",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-30000-cfg-8",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-8",
+      modelId: "runtru-e4hl5-central-ducted-30000",
       outdoorUnitId: "runtru-e4hl5030a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1433,9 +1657,23 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-37",
-      slug: "runtru-e4hl5-central-ducted-cfg-37",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-30000-cfg-9",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-9",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5030a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-10",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-10",
+      modelId: "runtru-e4hl5-central-ducted-30000",
       outdoorUnitId: "runtru-e4hl5036a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1447,9 +1685,261 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-38",
-      slug: "runtru-e4hl5-central-ducted-cfg-38",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-30000-cfg-11",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-11",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-12",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-12",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-13",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-13",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-14",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-14",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-15",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-15",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-16",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-16",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-17",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-17",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-18",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-18",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-19",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-19",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5030a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-20",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-20",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-21",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-21",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5030a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-30000-cfg-22",
+      slug: "runtru-e4hl5-central-ducted-30000-cfg-22",
+      modelId: "runtru-e4hl5-central-ducted-30000",
+      outdoorUnitId: "runtru-e4hl5036a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-42000-cfg-1",
+      slug: "runtru-standard-wall-single-42000-cfg-1",
+      modelId: "runtru-standard-wall-single-42000",
+      outdoorUnitId: "runtru-e4hl5042a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-42000-cfg-2",
+      slug: "runtru-standard-wall-single-42000-cfg-2",
+      modelId: "runtru-standard-wall-single-42000",
+      outdoorUnitId: "runtru-e4hl5042a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-42000-cfg-3",
+      slug: "runtru-standard-wall-single-42000-cfg-3",
+      modelId: "runtru-standard-wall-single-42000",
+      outdoorUnitId: "runtru-e4hl5042a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-48000-cfg-1",
+      slug: "runtru-standard-wall-single-48000-cfg-1",
+      modelId: "runtru-standard-wall-single-48000",
+      outdoorUnitId: "runtru-e4hl5048a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-48000-cfg-2",
+      slug: "runtru-standard-wall-single-48000-cfg-2",
+      modelId: "runtru-standard-wall-single-48000",
+      outdoorUnitId: "runtru-e4hl5048a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-48000-cfg-3",
+      slug: "runtru-standard-wall-single-48000-cfg-3",
+      modelId: "runtru-standard-wall-single-48000",
+      outdoorUnitId: "runtru-a5hl5060a1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-e4hl5-central-ducted-48000-cfg-1",
+      slug: "runtru-e4hl5-central-ducted-48000-cfg-1",
+      modelId: "runtru-e4hl5-central-ducted-48000",
       outdoorUnitId: "runtru-e4hl5060a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47500,
@@ -1461,9 +1951,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-39",
-      slug: "runtru-e4hl5-central-ducted-cfg-39",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-48000-cfg-2",
+      slug: "runtru-e4hl5-central-ducted-48000-cfg-2",
+      modelId: "runtru-e4hl5-central-ducted-48000",
       outdoorUnitId: "runtru-e4hl5060a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47500,
@@ -1475,9 +1965,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-40",
-      slug: "runtru-e4hl5-central-ducted-cfg-40",
-      modelId: "runtru-e4hl5-central-ducted",
+      id: "runtru-e4hl5-central-ducted-48000-cfg-3",
+      slug: "runtru-e4hl5-central-ducted-48000-cfg-3",
+      modelId: "runtru-e4hl5-central-ducted-48000",
       outdoorUnitId: "runtru-e4hl5060a1000a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47500,
@@ -1489,27 +1979,13 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-41",
-      slug: "runtru-e4hl5-central-ducted-cfg-41",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5018a1000a",
+      id: "runtru-e4hl5-central-ducted-48000-cfg-4",
+      slug: "runtru-e4hl5-central-ducted-48000-cfg-4",
+      modelId: "runtru-e4hl5-central-ducted-48000",
+      outdoorUnitId: "runtru-e4hl5060a1000a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 20000,
-      coolingCapacityMaxBtu: 20000,
-      seer2: 15.2,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "runtru-e4hl5-central-ducted-cfg-42",
-      slug: "runtru-e4hl5-central-ducted-cfg-42",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5024a1000a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
       seer2: 15.2,
       hspf2: 8.1,
       minHeatingTempC: -25,
@@ -1517,13 +1993,13 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-43",
-      slug: "runtru-e4hl5-central-ducted-cfg-43",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5030a1000a",
+      id: "runtru-e4hl5-central-ducted-48000-cfg-5",
+      slug: "runtru-e4hl5-central-ducted-48000-cfg-5",
+      modelId: "runtru-e4hl5-central-ducted-48000",
+      outdoorUnitId: "runtru-e4hl5060a1000a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
       seer2: 15.2,
       hspf2: 8.1,
       minHeatingTempC: -25,
@@ -1531,13 +2007,13 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-e4hl5-central-ducted-cfg-44",
-      slug: "runtru-e4hl5-central-ducted-cfg-44",
-      modelId: "runtru-e4hl5-central-ducted",
-      outdoorUnitId: "runtru-e4hl5036a1000a",
+      id: "runtru-e4hl5-central-ducted-48000-cfg-6",
+      slug: "runtru-e4hl5-central-ducted-48000-cfg-6",
+      modelId: "runtru-e4hl5-central-ducted-48000",
+      outdoorUnitId: "runtru-e4hl5060a1000a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
       seer2: 15.2,
       hspf2: 8.1,
       minHeatingTempC: -25,
@@ -1545,9 +2021,79 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-23u-series-wall-single-cfg-1",
-      slug: "runtru-23u-series-wall-single-cfg-1",
-      modelId: "runtru-23u-series-wall-single",
+      id: "runtru-e4hl5-central-ducted-48000-cfg-7",
+      slug: "runtru-e4hl5-central-ducted-48000-cfg-7",
+      modelId: "runtru-e4hl5-central-ducted-48000",
+      outdoorUnitId: "runtru-e4hl5060a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-central-ducted-42000-cfg-1",
+      slug: "runtru-standard-central-ducted-42000-cfg-1",
+      modelId: "runtru-standard-central-ducted-42000",
+      outdoorUnitId: "runtru-e4hl5042a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-36000-cfg-1",
+      slug: "runtru-standard-wall-single-36000-cfg-1",
+      modelId: "runtru-standard-wall-single-36000",
+      outdoorUnitId: "runtru-e4hl5048a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-36000-cfg-2",
+      slug: "runtru-standard-wall-single-36000-cfg-2",
+      modelId: "runtru-standard-wall-single-36000",
+      outdoorUnitId: "runtru-e4hl5042a1000a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-standard-wall-single-36000-cfg-3",
+      slug: "runtru-standard-wall-single-36000-cfg-3",
+      modelId: "runtru-standard-wall-single-36000",
+      outdoorUnitId: "runtru-m5ths1936a11naa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "runtru-23u-series-wall-single-9000-cfg-1",
+      slug: "runtru-23u-series-wall-single-9000-cfg-1",
+      modelId: "runtru-23u-series-wall-single-9000",
       outdoorUnitId: "runtru-m5ths2309a11naa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1559,9 +2105,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-23u-series-wall-single-cfg-2",
-      slug: "runtru-23u-series-wall-single-cfg-2",
-      modelId: "runtru-23u-series-wall-single",
+      id: "runtru-23u-series-wall-single-12000-cfg-1",
+      slug: "runtru-23u-series-wall-single-12000-cfg-1",
+      modelId: "runtru-23u-series-wall-single-12000",
       outdoorUnitId: "runtru-m5ths2312a11naa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1573,9 +2119,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-23u-series-wall-single-cfg-3",
-      slug: "runtru-23u-series-wall-single-cfg-3",
-      modelId: "runtru-23u-series-wall-single",
+      id: "runtru-23u-series-wall-single-18000-cfg-1",
+      slug: "runtru-23u-series-wall-single-18000-cfg-1",
+      modelId: "runtru-23u-series-wall-single-18000",
       outdoorUnitId: "runtru-m5ths2318a11naa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1587,9 +2133,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-23u-series-wall-single-cfg-4",
-      slug: "runtru-23u-series-wall-single-cfg-4",
-      modelId: "runtru-23u-series-wall-single",
+      id: "runtru-23u-series-wall-single-24000-cfg-1",
+      slug: "runtru-23u-series-wall-single-24000-cfg-1",
+      modelId: "runtru-23u-series-wall-single-24000",
       outdoorUnitId: "runtru-m5ths2324a11naa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1601,9 +2147,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-a5hl5-central-ducted-cfg-1",
-      slug: "runtru-a5hl5-central-ducted-cfg-1",
-      modelId: "runtru-a5hl5-central-ducted",
+      id: "runtru-a5hl5-central-ducted-24000-cfg-1",
+      slug: "runtru-a5hl5-central-ducted-24000-cfg-1",
+      modelId: "runtru-a5hl5-central-ducted-24000",
       outdoorUnitId: "runtru-a5hl5024a1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1615,9 +2161,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-a5hl5-central-ducted-cfg-2",
-      slug: "runtru-a5hl5-central-ducted-cfg-2",
-      modelId: "runtru-a5hl5-central-ducted",
+      id: "runtru-a5hl5-central-ducted-36000-cfg-1",
+      slug: "runtru-a5hl5-central-ducted-36000-cfg-1",
+      modelId: "runtru-a5hl5-central-ducted-36000",
       outdoorUnitId: "runtru-a5hl5036a1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -1629,9 +2175,9 @@ export const runtruDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "runtru-a5hl5-central-ducted-cfg-3",
-      slug: "runtru-a5hl5-central-ducted-cfg-3",
-      modelId: "runtru-a5hl5-central-ducted",
+      id: "runtru-a5hl5-central-ducted-48000-cfg-1",
+      slug: "runtru-a5hl5-central-ducted-48000-cfg-1",
+      modelId: "runtru-a5hl5-central-ducted-48000",
       outdoorUnitId: "runtru-a5hl5048a1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -1645,7 +2191,7 @@ export const runtruDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "runtru-standard-wall-single-cfg-1",
+      configurationId: "runtru-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1656,18 +2202,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-3",
+      configurationId: "runtru-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1678,40 +2213,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-7",
+      configurationId: "runtru-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1722,40 +2224,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-11",
+      configurationId: "runtru-standard-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1766,7 +2235,40 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-12",
+      configurationId: "runtru-standard-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1777,18 +2279,29 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-13",
+      configurationId: "runtru-standard-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
+          heatingCapacityBtu: 8100,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-14",
+      configurationId: "runtru-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1799,95 +2312,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 5800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-standard-wall-single-cfg-23",
+      configurationId: "runtru-standard-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1898,29 +2323,51 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-24",
+      configurationId: "runtru-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21800,
+          heatingCapacityBtu: 12400,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "runtru-standard-wall-single-cfg-25",
+      configurationId: "runtru-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 46000,
+          heatingCapacityBtu: 12000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "runtru-standard-central-ducted-cfg-1",
+      configurationId: "runtru-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-central-ducted-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1931,7 +2378,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-central-ducted-cfg-2",
+      configurationId: "runtru-standard-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1942,18 +2389,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-standard-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-n-series-wall-single-cfg-1",
+      configurationId: "runtru-n-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1964,7 +2400,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-n-series-wall-single-cfg-2",
+      configurationId: "runtru-n-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1975,7 +2411,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-n-series-wall-single-cfg-3",
+      configurationId: "runtru-n-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1986,7 +2422,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-n-series-wall-single-cfg-4",
+      configurationId: "runtru-n-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1997,7 +2433,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-n-series-wall-single-cfg-5",
+      configurationId: "runtru-n-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2008,7 +2444,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-1",
+      configurationId: "runtru-e4hl5-central-ducted-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2019,7 +2455,62 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-2",
+      configurationId: "runtru-e4hl5-central-ducted-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-20000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-20000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2030,7 +2521,95 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-3",
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-24000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19100,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2041,7 +2620,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-4",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2052,18 +2631,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-6",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2074,18 +2642,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-8",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2096,7 +2653,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-9",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2107,7 +2664,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-10",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2118,150 +2675,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-24",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2272,7 +2686,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-25",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2283,7 +2697,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-26",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2294,7 +2708,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-27",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2305,7 +2719,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-28",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2316,7 +2730,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-29",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2327,7 +2741,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-30",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2338,7 +2752,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-31",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2349,7 +2763,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-32",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-15",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2360,7 +2774,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-33",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-16",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2371,7 +2785,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-34",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-17",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2382,7 +2796,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-35",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-18",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2393,7 +2807,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-36",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-19",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2404,7 +2818,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-37",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-20",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2415,62 +2829,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29400,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19100,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-43",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-21",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2481,7 +2840,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-e4hl5-central-ducted-cfg-44",
+      configurationId: "runtru-e4hl5-central-ducted-30000-cfg-22",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2492,7 +2851,194 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-23u-series-wall-single-cfg-1",
+      configurationId: "runtru-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 46000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-e4hl5-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29400,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "runtru-23u-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2503,7 +3049,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-23u-series-wall-single-cfg-2",
+      configurationId: "runtru-23u-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2514,7 +3060,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-23u-series-wall-single-cfg-3",
+      configurationId: "runtru-23u-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2525,7 +3071,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-23u-series-wall-single-cfg-4",
+      configurationId: "runtru-23u-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2536,7 +3082,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-a5hl5-central-ducted-cfg-1",
+      configurationId: "runtru-a5hl5-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2547,7 +3093,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-a5hl5-central-ducted-cfg-2",
+      configurationId: "runtru-a5hl5-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2558,7 +3104,7 @@ export const runtruDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "runtru-a5hl5-central-ducted-cfg-3",
+      configurationId: "runtru-a5hl5-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

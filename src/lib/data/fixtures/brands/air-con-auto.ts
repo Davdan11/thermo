@@ -92,24 +92,25 @@ export const airconDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "air-con-blizzard-wall-single",
-      slug: "air-con-blizzard-wall-single",
-      name: "Blizzard",
+      id: "air-con-blizzard-wall-single-9000",
+      slug: "air-con-blizzard-wall-single-9000",
+      name: "Blizzard 9 000 BTU",
       seriesId: "air-con-blizzard",
       brandId: "air-con",
-      modelNumber: "Blizzard",
-      normalizedModelNumber: "blizzard",
+      modelNumber: "Blizzard 9k",
+      normalizedModelNumber: "blizzard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 12000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 7000,
-      seer2Min: 23.5,
+      heatingCapacity5FMaxBtu: 6000,
+      seer2Min: 27.5,
       seer2Max: 27.5,
-      hspf2Min: 9.8,
+      hspf2Min: 10.5,
       hspf2Max: 10.5,
-      cop5FMin: 1.75,
+      cop5FMin: 2.1,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -118,24 +119,52 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-iii-wall-single",
-      slug: "air-con-blue-series-iii-wall-single",
-      name: "Blue Series III",
-      seriesId: "air-con-blue-series-iii",
+      id: "air-con-blizzard-wall-single-12000",
+      slug: "air-con-blizzard-wall-single-12000",
+      name: "Blizzard 12 000 BTU",
+      seriesId: "air-con-blizzard",
       brandId: "air-con",
-      modelNumber: "Blue Series III",
-      normalizedModelNumber: "blue-series-iii",
+      modelNumber: "Blizzard 12k",
+      normalizedModelNumber: "blizzard-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 23000,
-      heatingCapacity5FMinBtu: 5000,
-      heatingCapacity5FMaxBtu: 12500,
-      seer2Min: 20.5,
-      seer2Max: 22.5,
-      hspf2Min: 8.6,
-      hspf2Max: 9,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 7000,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 9.8,
+      hspf2Max: 9.8,
       cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-blue-series-iii-wall-single-9000",
+      slug: "air-con-blue-series-iii-wall-single-9000",
+      name: "Blue Series III 9 000 BTU",
+      seriesId: "air-con-blue-series-iii",
+      brandId: "air-con",
+      modelNumber: "Blue Series III 9k",
+      normalizedModelNumber: "blue-series-iii-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 5000,
+      heatingCapacity5FMaxBtu: 5000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -144,19 +173,20 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-standard-wall-single",
-      slug: "air-con-standard-wall-single",
-      name: "Standard",
+      id: "air-con-standard-wall-single-12000",
+      slug: "air-con-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "air-con-standard",
       brandId: "air-con",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 5500,
-      heatingCapacity5FMaxBtu: 40000,
+      heatingCapacity5FMinBtu: 6800,
+      heatingCapacity5FMaxBtu: 7500,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -170,22 +200,293 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-multi-split-wall-single",
-      slug: "air-con-multi-split-wall-single",
-      name: "Multi Split",
-      seriesId: "air-con-multi-split",
+      id: "air-con-blue-series-iii-wall-single-18000",
+      slug: "air-con-blue-series-iii-wall-single-18000",
+      name: "Blue Series III 18 000 BTU",
+      seriesId: "air-con-blue-series-iii",
       brandId: "air-con",
-      modelNumber: "Multi Split",
-      normalizedModelNumber: "multi-split",
+      modelNumber: "Blue Series III 18k",
+      normalizedModelNumber: "blue-series-iii-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-blue-series-iii-wall-single-24000",
+      slug: "air-con-blue-series-iii-wall-single-24000",
+      name: "Blue Series III 24 000 BTU",
+      seriesId: "air-con-blue-series-iii",
+      brandId: "air-con",
+      modelNumber: "Blue Series III 24k",
+      normalizedModelNumber: "blue-series-iii-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 12500,
+      heatingCapacity5FMaxBtu: 12500,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.75,
+      cop5FMax: 1.75,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-24000",
+      slug: "air-con-multi-split-wall-single-24000",
+      name: "Multi Split 24 000 BTU",
+      seriesId: "air-con-multi-split",
+      brandId: "air-con",
+      modelNumber: "Multi Split 24k",
+      normalizedModelNumber: "multi-split-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 14800,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21.5,
+      seer2Max: 22,
+      hspf2Min: 8.83,
+      hspf2Max: 9.05,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-30000",
+      slug: "air-con-multi-split-wall-single-30000",
+      name: "Multi Split 30 000 BTU",
+      seriesId: "air-con-multi-split",
+      brandId: "air-con",
+      modelNumber: "Multi Split 30k",
+      normalizedModelNumber: "multi-split-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      heatingCapacity5FMinBtu: 22400,
+      heatingCapacity5FMaxBtu: 23000,
+      seer2Min: 19.5,
+      seer2Max: 21,
+      hspf2Min: 8.9,
+      hspf2Max: 9,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-sky-pro-wall-single-9000",
+      slug: "air-con-sky-pro-wall-single-9000",
+      name: "Sky Pro 9 000 BTU",
+      seriesId: "air-con-sky-pro",
+      brandId: "air-con",
+      modelNumber: "Sky Pro 9k",
+      normalizedModelNumber: "sky-pro-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6500,
+      heatingCapacity5FMaxBtu: 7200,
+      seer2Min: 18,
+      seer2Max: 20.5,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 2.1,
+      cop5FMax: 2.26,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-sky-pro-wall-single-12000",
+      slug: "air-con-sky-pro-wall-single-12000",
+      name: "Sky Pro 12 000 BTU",
+      seriesId: "air-con-sky-pro",
+      brandId: "air-con",
+      modelNumber: "Sky Pro 12k",
+      normalizedModelNumber: "sky-pro-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7600,
+      heatingCapacity5FMaxBtu: 7600,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.3,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-sky-pro-wall-single-18000",
+      slug: "air-con-sky-pro-wall-single-18000",
+      name: "Sky Pro 18 000 BTU",
+      seriesId: "air-con-sky-pro",
+      brandId: "air-con",
+      modelNumber: "Sky Pro 18k",
+      normalizedModelNumber: "sky-pro-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: 20.5,
+      seer2Max: 20.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.36,
+      cop5FMax: 2.36,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-sky-pro-wall-single-24000",
+      slug: "air-con-sky-pro-wall-single-24000",
+      name: "Sky Pro 24 000 BTU",
+      seriesId: "air-con-sky-pro",
+      brandId: "air-con",
+      modelNumber: "Sky Pro 24k",
+      normalizedModelNumber: "sky-pro-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 19000,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-36000",
+      slug: "air-con-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "air-con-standard",
+      brandId: "air-con",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 26800,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-42000",
+      slug: "air-con-multi-split-wall-single-42000",
+      name: "Multi Split 42 000 BTU",
+      seriesId: "air-con-multi-split",
+      brandId: "air-con",
+      modelNumber: "Multi Split 42k",
+      normalizedModelNumber: "multi-split-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 41000,
       coolingCapacityMaxBtu: 42000,
-      heatingCapacity5FMinBtu: 12700,
+      heatingCapacity5FMinBtu: 27000,
       heatingCapacity5FMaxBtu: 28400,
       seer2Min: 18,
-      seer2Max: 22,
+      seer2Max: 20,
       hspf2Min: 8.8,
+      hspf2Max: 8.95,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-18000",
+      slug: "air-con-multi-split-wall-single-18000",
+      name: "Multi Split 18 000 BTU",
+      seriesId: "air-con-multi-split",
+      brandId: "air-con",
+      modelNumber: "Multi Split 18k",
+      normalizedModelNumber: "multi-split-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12700,
+      heatingCapacity5FMaxBtu: 12700,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.4,
       hspf2Max: 9.5,
       cop5FMin: 1.84,
       cop5FMax: 1.84,
@@ -196,50 +497,25 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-sky-pro-wall-single",
-      slug: "air-con-sky-pro-wall-single",
-      name: "Sky Pro",
-      seriesId: "air-con-sky-pro",
-      brandId: "air-con",
-      modelNumber: "Sky Pro",
-      normalizedModelNumber: "sky-pro",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 6500,
-      heatingCapacity5FMaxBtu: 19000,
-      seer2Min: 18,
-      seer2Max: 20.5,
-      hspf2Min: 9,
-      hspf2Max: 10,
-      cop5FMin: 2.1,
-      cop5FMax: 2.36,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-sd-premium-central-ducted",
-      slug: "air-con-sd-premium-central-ducted",
-      name: "SD Premium",
+      id: "air-con-sd-premium-central-ducted-20000",
+      slug: "air-con-sd-premium-central-ducted-20000",
+      name: "SD Premium 20 000 BTU",
       seriesId: "air-con-sd-premium",
       brandId: "air-con",
-      modelNumber: "SD Premium",
-      normalizedModelNumber: "sd-premium",
+      modelNumber: "SD Premium 20k",
+      normalizedModelNumber: "sd-premium-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
       coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 22000,
       heatingCapacity5FMinBtu: 16000,
-      heatingCapacity5FMaxBtu: 31000,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 16.5,
-      seer2Max: 17.5,
-      hspf2Min: 8.5,
+      seer2Max: 16.5,
+      hspf2Min: 9,
       hspf2Max: 9,
-      cop5FMin: 1.9,
+      cop5FMin: 2.05,
       cop5FMax: 2.05,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -248,27 +524,271 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-4-wall-single",
-      slug: "air-con-blue-series-4-wall-single",
-      name: "Blue Series 4",
-      seriesId: "air-con-blue-series-4",
+      id: "air-con-sd-premium-central-ducted-48000",
+      slug: "air-con-sd-premium-central-ducted-48000",
+      name: "SD Premium 48 000 BTU",
+      seriesId: "air-con-sd-premium",
       brandId: "air-con",
-      modelNumber: "Blue Series 4",
-      normalizedModelNumber: "blue-series-4",
+      modelNumber: "SD Premium 48k",
+      normalizedModelNumber: "sd-premium-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 31000,
+      heatingCapacity5FMaxBtu: 31000,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-18000",
+      slug: "air-con-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "air-con-standard",
+      brandId: "air-con",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10500,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-24000",
+      slug: "air-con-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "air-con-standard",
+      brandId: "air-con",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 15500,
+      heatingCapacity5FMaxBtu: 20400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-9000",
+      slug: "air-con-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "air-con-standard",
+      brandId: "air-con",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 5500,
+      heatingCapacity5FMaxBtu: 5500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-blue-series-4-wall-single-9000",
+      slug: "air-con-blue-series-4-wall-single-9000",
+      name: "Blue Series 4 9 000 BTU",
+      seriesId: "air-con-blue-series-4",
+      brandId: "air-con",
+      modelNumber: "Blue Series 4 9k",
+      normalizedModelNumber: "blue-series-4-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 23000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 5900,
-      heatingCapacity5FMaxBtu: 13900,
-      seer2Min: 20,
+      heatingCapacity5FMaxBtu: 5900,
+      seer2Min: 23.5,
       seer2Max: 23.5,
-      hspf2Min: 9,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-blue-series-4-wall-single-12000",
+      slug: "air-con-blue-series-4-wall-single-12000",
+      name: "Blue Series 4 12 000 BTU",
+      seriesId: "air-con-blue-series-4",
+      brandId: "air-con",
+      modelNumber: "Blue Series 4 12k",
+      normalizedModelNumber: "blue-series-4-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7600,
+      heatingCapacity5FMaxBtu: 7600,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 9.5,
       hspf2Max: 9.5,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-blue-series-4-wall-single-18000",
+      slug: "air-con-blue-series-4-wall-single-18000",
+      name: "Blue Series 4 18 000 BTU",
+      seriesId: "air-con-blue-series-4",
+      brandId: "air-con",
+      modelNumber: "Blue Series 4 18k",
+      normalizedModelNumber: "blue-series-4-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-blue-series-4-wall-single-24000",
+      slug: "air-con-blue-series-4-wall-single-24000",
+      name: "Blue Series 4 24 000 BTU",
+      seriesId: "air-con-blue-series-4",
+      brandId: "air-con",
+      modelNumber: "Blue Series 4 24k",
+      normalizedModelNumber: "blue-series-4-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 13900,
+      heatingCapacity5FMaxBtu: 13900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-48000",
+      slug: "air-con-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "air-con-standard",
+      brandId: "air-con",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 36600,
+      heatingCapacity5FMaxBtu: 39500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-60000",
+      slug: "air-con-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
+      seriesId: "air-con-standard",
+      brandId: "air-con",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 40000,
+      heatingCapacity5FMaxBtu: 40000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -294,6 +814,18 @@ export const airconDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "air-con-abxci4h4s12",
+      modelNumber: "ABXCI4H4S12",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-abhci4h4s12",
+      modelNumber: "ABHCI4H4S12",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
       id: "air-con-abxci4h4s18",
       modelNumber: "ABXCI4H4S18",
       brandId: "air-con",
@@ -306,72 +838,6 @@ export const airconDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "air-con-abxci4h4s12",
-      modelNumber: "ABXCI4H4S12",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-aslci4h4s36",
-      modelNumber: "ASLCI4H4S36",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-abhci4h4s18",
-      modelNumber: "ABHCI4H4S18",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-abhci4h4s24",
-      modelNumber: "ABHCI4H4S24",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-abhci4h4s09",
-      modelNumber: "ABHCI4H4S09",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-abhci4h4s12",
-      modelNumber: "ABHCI4H4S12",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-asgci8h4m18",
-      modelNumber: "ASGCI8H4M18",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-asgci8h4m24",
-      modelNumber: "ASGCI8H4M24",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-asgci8h4m36",
-      modelNumber: "ASGCI8H4M36",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-asgci8h4m48",
-      modelNumber: "ASGCI8H4M48",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-asgci8h4m60",
-      modelNumber: "ASGCI8H4M60",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
       id: "air-con-amsci4h4s24",
       modelNumber: "AMSCI4H4S24",
       brandId: "air-con",
@@ -380,18 +846,6 @@ export const airconDataset: BrandDataset = {
     {
       id: "air-con-amsci4h4s36",
       modelNumber: "AMSCI4H4S36",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-amsci4h4s42",
-      modelNumber: "AMSCI4H4S42",
-      brandId: "air-con",
-      refrigerant: null as any,
-    },
-    {
-      id: "air-con-amsci4h4s18",
-      modelNumber: "AMSCI4H4S18",
       brandId: "air-con",
       refrigerant: null as any,
     },
@@ -420,6 +874,30 @@ export const airconDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "air-con-aslci4h4s36",
+      modelNumber: "ASLCI4H4S36",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-asgci8h4m36",
+      modelNumber: "ASGCI8H4M36",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-amsci4h4s42",
+      modelNumber: "AMSCI4H4S42",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-amsci4h4s18",
+      modelNumber: "AMSCI4H4S18",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
       id: "air-con-asddi4h4s24",
       modelNumber: "ASDDI4H4S24",
       brandId: "air-con",
@@ -428,6 +906,36 @@ export const airconDataset: BrandDataset = {
     {
       id: "air-con-asddi4h4s48",
       modelNumber: "ASDDI4H4S48",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-abhci4h4s18",
+      modelNumber: "ABHCI4H4S18",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-asgci8h4m18",
+      modelNumber: "ASGCI8H4M18",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-abhci4h4s24",
+      modelNumber: "ABHCI4H4S24",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-asgci8h4m24",
+      modelNumber: "ASGCI8H4M24",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-abhci4h4s09",
+      modelNumber: "ABHCI4H4S09",
       brandId: "air-con",
       refrigerant: null as any,
     },
@@ -454,6 +962,18 @@ export const airconDataset: BrandDataset = {
       modelNumber: "ALPCI4H4E24",
       brandId: "air-con",
       refrigerant: null as any,
+    },
+    {
+      id: "air-con-asgci8h4m48",
+      modelNumber: "ASGCI8H4M48",
+      brandId: "air-con",
+      refrigerant: null as any,
+    },
+    {
+      id: "air-con-asgci8h4m60",
+      modelNumber: "ASGCI8H4M60",
+      brandId: "air-con",
+      refrigerant: null as any,
     }
   ],
   indoorUnits: [
@@ -461,9 +981,9 @@ export const airconDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "air-con-blizzard-wall-single-cfg-1",
-      slug: "air-con-blizzard-wall-single-cfg-1",
-      modelId: "air-con-blizzard-wall-single",
+      id: "air-con-blizzard-wall-single-9000-cfg-1",
+      slug: "air-con-blizzard-wall-single-9000-cfg-1",
+      modelId: "air-con-blizzard-wall-single-9000",
       outdoorUnitId: "air-con-abzci4h4s09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -475,9 +995,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blizzard-wall-single-cfg-2",
-      slug: "air-con-blizzard-wall-single-cfg-2",
-      modelId: "air-con-blizzard-wall-single",
+      id: "air-con-blizzard-wall-single-12000-cfg-1",
+      slug: "air-con-blizzard-wall-single-12000-cfg-1",
+      modelId: "air-con-blizzard-wall-single-12000",
       outdoorUnitId: "air-con-abzci4h4s12",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -489,9 +1009,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-iii-wall-single-cfg-1",
-      slug: "air-con-blue-series-iii-wall-single-cfg-1",
-      modelId: "air-con-blue-series-iii-wall-single",
+      id: "air-con-blue-series-iii-wall-single-9000-cfg-1",
+      slug: "air-con-blue-series-iii-wall-single-9000-cfg-1",
+      modelId: "air-con-blue-series-iii-wall-single-9000",
       outdoorUnitId: "air-con-abxci4h4s09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -503,37 +1023,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-iii-wall-single-cfg-2",
-      slug: "air-con-blue-series-iii-wall-single-cfg-2",
-      modelId: "air-con-blue-series-iii-wall-single",
-      outdoorUnitId: "air-con-abxci4h4s18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-blue-series-iii-wall-single-cfg-3",
-      slug: "air-con-blue-series-iii-wall-single-cfg-3",
-      modelId: "air-con-blue-series-iii-wall-single",
-      outdoorUnitId: "air-con-abxci4h4s24",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 20.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-1",
-      slug: "air-con-standard-wall-single-cfg-1",
-      modelId: "air-con-standard-wall-single",
+      id: "air-con-standard-wall-single-12000-cfg-1",
+      slug: "air-con-standard-wall-single-12000-cfg-1",
+      modelId: "air-con-standard-wall-single-12000",
       outdoorUnitId: "air-con-abxci4h4s12",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -545,65 +1037,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-standard-wall-single-cfg-2",
-      slug: "air-con-standard-wall-single-cfg-2",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-aslci4h4s36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-3",
-      slug: "air-con-standard-wall-single-cfg-3",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-abhci4h4s18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-4",
-      slug: "air-con-standard-wall-single-cfg-4",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-abhci4h4s24",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-5",
-      slug: "air-con-standard-wall-single-cfg-5",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-abhci4h4s09",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-6",
-      slug: "air-con-standard-wall-single-cfg-6",
-      modelId: "air-con-standard-wall-single",
+      id: "air-con-standard-wall-single-12000-cfg-2",
+      slug: "air-con-standard-wall-single-12000-cfg-2",
+      modelId: "air-con-standard-wall-single-12000",
       outdoorUnitId: "air-con-abhci4h4s12",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -615,177 +1051,37 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-standard-wall-single-cfg-7",
-      slug: "air-con-standard-wall-single-cfg-7",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16800,
-      coolingCapacityMaxBtu: 16800,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-8",
-      slug: "air-con-standard-wall-single-cfg-8",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-9",
-      slug: "air-con-standard-wall-single-cfg-9",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m18",
+      id: "air-con-blue-series-iii-wall-single-18000-cfg-1",
+      slug: "air-con-blue-series-iii-wall-single-18000-cfg-1",
+      modelId: "air-con-blue-series-iii-wall-single-18000",
+      outdoorUnitId: "air-con-abxci4h4s18",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
+      seer2: 22.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-standard-wall-single-cfg-10",
-      slug: "air-con-standard-wall-single-cfg-10",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m24",
+      id: "air-con-blue-series-iii-wall-single-24000-cfg-1",
+      slug: "air-con-blue-series-iii-wall-single-24000-cfg-1",
+      modelId: "air-con-blue-series-iii-wall-single-24000",
+      outdoorUnitId: "air-con-abxci4h4s24",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 20.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-standard-wall-single-cfg-11",
-      slug: "air-con-standard-wall-single-cfg-11",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m24",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-12",
-      slug: "air-con-standard-wall-single-cfg-12",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-13",
-      slug: "air-con-standard-wall-single-cfg-13",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-14",
-      slug: "air-con-standard-wall-single-cfg-14",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m48",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-15",
-      slug: "air-con-standard-wall-single-cfg-15",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m48",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-16",
-      slug: "air-con-standard-wall-single-cfg-16",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m48",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-17",
-      slug: "air-con-standard-wall-single-cfg-17",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m60",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 58000,
-      coolingCapacityMaxBtu: 58000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-standard-wall-single-cfg-18",
-      slug: "air-con-standard-wall-single-cfg-18",
-      modelId: "air-con-standard-wall-single",
-      outdoorUnitId: "air-con-asgci8h4m60",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-multi-split-wall-single-cfg-1",
-      slug: "air-con-multi-split-wall-single-cfg-1",
-      modelId: "air-con-multi-split-wall-single",
+      id: "air-con-multi-split-wall-single-24000-cfg-1",
+      slug: "air-con-multi-split-wall-single-24000-cfg-1",
+      modelId: "air-con-multi-split-wall-single-24000",
       outdoorUnitId: "air-con-amsci4h4s24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -797,23 +1093,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-multi-split-wall-single-cfg-2",
-      slug: "air-con-multi-split-wall-single-cfg-2",
-      modelId: "air-con-multi-split-wall-single",
-      outdoorUnitId: "air-con-amsci4h4s36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: 21,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-multi-split-wall-single-cfg-3",
-      slug: "air-con-multi-split-wall-single-cfg-3",
-      modelId: "air-con-multi-split-wall-single",
+      id: "air-con-multi-split-wall-single-24000-cfg-2",
+      slug: "air-con-multi-split-wall-single-24000-cfg-2",
+      modelId: "air-con-multi-split-wall-single-24000",
       outdoorUnitId: "air-con-amsci4h4s24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -825,9 +1107,23 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-multi-split-wall-single-cfg-4",
-      slug: "air-con-multi-split-wall-single-cfg-4",
-      modelId: "air-con-multi-split-wall-single",
+      id: "air-con-multi-split-wall-single-30000-cfg-1",
+      slug: "air-con-multi-split-wall-single-30000-cfg-1",
+      modelId: "air-con-multi-split-wall-single-30000",
+      outdoorUnitId: "air-con-amsci4h4s36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-30000-cfg-2",
+      slug: "air-con-multi-split-wall-single-30000-cfg-2",
+      modelId: "air-con-multi-split-wall-single-30000",
       outdoorUnitId: "air-con-amsci4h4s36",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -839,9 +1135,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-multi-split-wall-single-cfg-5",
-      slug: "air-con-multi-split-wall-single-cfg-5",
-      modelId: "air-con-multi-split-wall-single",
+      id: "air-con-multi-split-wall-single-30000-cfg-3",
+      slug: "air-con-multi-split-wall-single-30000-cfg-3",
+      modelId: "air-con-multi-split-wall-single-30000",
       outdoorUnitId: "air-con-amsci4h4s36",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -853,93 +1149,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-multi-split-wall-single-cfg-6",
-      slug: "air-con-multi-split-wall-single-cfg-6",
-      modelId: "air-con-multi-split-wall-single",
-      outdoorUnitId: "air-con-amsci4h4s42",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 41000,
-      coolingCapacityMaxBtu: 41000,
-      seer2: 18,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-multi-split-wall-single-cfg-7",
-      slug: "air-con-multi-split-wall-single-cfg-7",
-      modelId: "air-con-multi-split-wall-single",
-      outdoorUnitId: "air-con-amsci4h4s42",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: 20,
-      hspf2: 8.95,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-multi-split-wall-single-cfg-8",
-      slug: "air-con-multi-split-wall-single-cfg-8",
-      modelId: "air-con-multi-split-wall-single",
-      outdoorUnitId: "air-con-amsci4h4s42",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 41500,
-      coolingCapacityMaxBtu: 41500,
-      seer2: 19,
-      hspf2: 8.88,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-multi-split-wall-single-cfg-9",
-      slug: "air-con-multi-split-wall-single-cfg-9",
-      modelId: "air-con-multi-split-wall-single",
-      outdoorUnitId: "air-con-amsci4h4s18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-multi-split-wall-single-cfg-10",
-      slug: "air-con-multi-split-wall-single-cfg-10",
-      modelId: "air-con-multi-split-wall-single",
-      outdoorUnitId: "air-con-amsci4h4s18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-multi-split-wall-single-cfg-11",
-      slug: "air-con-multi-split-wall-single-cfg-11",
-      modelId: "air-con-multi-split-wall-single",
-      outdoorUnitId: "air-con-amsci4h4s18",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 9.45,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "air-con-sky-pro-wall-single-cfg-1",
-      slug: "air-con-sky-pro-wall-single-cfg-1",
-      modelId: "air-con-sky-pro-wall-single",
+      id: "air-con-sky-pro-wall-single-9000-cfg-1",
+      slug: "air-con-sky-pro-wall-single-9000-cfg-1",
+      modelId: "air-con-sky-pro-wall-single-9000",
       outdoorUnitId: "air-con-aslci4h4s09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -951,9 +1163,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-sky-pro-wall-single-cfg-2",
-      slug: "air-con-sky-pro-wall-single-cfg-2",
-      modelId: "air-con-sky-pro-wall-single",
+      id: "air-con-sky-pro-wall-single-9000-cfg-2",
+      slug: "air-con-sky-pro-wall-single-9000-cfg-2",
+      modelId: "air-con-sky-pro-wall-single-9000",
       outdoorUnitId: "air-con-aslci4h4s09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -965,9 +1177,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-sky-pro-wall-single-cfg-3",
-      slug: "air-con-sky-pro-wall-single-cfg-3",
-      modelId: "air-con-sky-pro-wall-single",
+      id: "air-con-sky-pro-wall-single-12000-cfg-1",
+      slug: "air-con-sky-pro-wall-single-12000-cfg-1",
+      modelId: "air-con-sky-pro-wall-single-12000",
       outdoorUnitId: "air-con-aslci4h4s12",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -979,9 +1191,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-sky-pro-wall-single-cfg-4",
-      slug: "air-con-sky-pro-wall-single-cfg-4",
-      modelId: "air-con-sky-pro-wall-single",
+      id: "air-con-sky-pro-wall-single-18000-cfg-1",
+      slug: "air-con-sky-pro-wall-single-18000-cfg-1",
+      modelId: "air-con-sky-pro-wall-single-18000",
       outdoorUnitId: "air-con-aslci4h4s18",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -993,9 +1205,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-sky-pro-wall-single-cfg-5",
-      slug: "air-con-sky-pro-wall-single-cfg-5",
-      modelId: "air-con-sky-pro-wall-single",
+      id: "air-con-sky-pro-wall-single-24000-cfg-1",
+      slug: "air-con-sky-pro-wall-single-24000-cfg-1",
+      modelId: "air-con-sky-pro-wall-single-24000",
       outdoorUnitId: "air-con-aslci4h4s24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1007,9 +1219,135 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-sd-premium-central-ducted-cfg-1",
-      slug: "air-con-sd-premium-central-ducted-cfg-1",
-      modelId: "air-con-sd-premium-central-ducted",
+      id: "air-con-standard-wall-single-36000-cfg-1",
+      slug: "air-con-standard-wall-single-36000-cfg-1",
+      modelId: "air-con-standard-wall-single-36000",
+      outdoorUnitId: "air-con-aslci4h4s36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-36000-cfg-2",
+      slug: "air-con-standard-wall-single-36000-cfg-2",
+      modelId: "air-con-standard-wall-single-36000",
+      outdoorUnitId: "air-con-asgci8h4m36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-36000-cfg-3",
+      slug: "air-con-standard-wall-single-36000-cfg-3",
+      modelId: "air-con-standard-wall-single-36000",
+      outdoorUnitId: "air-con-asgci8h4m36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-42000-cfg-1",
+      slug: "air-con-multi-split-wall-single-42000-cfg-1",
+      modelId: "air-con-multi-split-wall-single-42000",
+      outdoorUnitId: "air-con-amsci4h4s42",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 41000,
+      coolingCapacityMaxBtu: 41000,
+      seer2: 18,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-42000-cfg-2",
+      slug: "air-con-multi-split-wall-single-42000-cfg-2",
+      modelId: "air-con-multi-split-wall-single-42000",
+      outdoorUnitId: "air-con-amsci4h4s42",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 20,
+      hspf2: 8.95,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-42000-cfg-3",
+      slug: "air-con-multi-split-wall-single-42000-cfg-3",
+      modelId: "air-con-multi-split-wall-single-42000",
+      outdoorUnitId: "air-con-amsci4h4s42",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 41500,
+      coolingCapacityMaxBtu: 41500,
+      seer2: 19,
+      hspf2: 8.88,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-18000-cfg-1",
+      slug: "air-con-multi-split-wall-single-18000-cfg-1",
+      modelId: "air-con-multi-split-wall-single-18000",
+      outdoorUnitId: "air-con-amsci4h4s18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-18000-cfg-2",
+      slug: "air-con-multi-split-wall-single-18000-cfg-2",
+      modelId: "air-con-multi-split-wall-single-18000",
+      outdoorUnitId: "air-con-amsci4h4s18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-multi-split-wall-single-18000-cfg-3",
+      slug: "air-con-multi-split-wall-single-18000-cfg-3",
+      modelId: "air-con-multi-split-wall-single-18000",
+      outdoorUnitId: "air-con-amsci4h4s18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 9.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-sd-premium-central-ducted-20000-cfg-1",
+      slug: "air-con-sd-premium-central-ducted-20000-cfg-1",
+      modelId: "air-con-sd-premium-central-ducted-20000",
       outdoorUnitId: "air-con-asddi4h4s24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -1021,9 +1359,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-sd-premium-central-ducted-cfg-2",
-      slug: "air-con-sd-premium-central-ducted-cfg-2",
-      modelId: "air-con-sd-premium-central-ducted",
+      id: "air-con-sd-premium-central-ducted-48000-cfg-1",
+      slug: "air-con-sd-premium-central-ducted-48000-cfg-1",
+      modelId: "air-con-sd-premium-central-ducted-48000",
       outdoorUnitId: "air-con-asddi4h4s48",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1035,9 +1373,121 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-4-wall-single-cfg-1",
-      slug: "air-con-blue-series-4-wall-single-cfg-1",
-      modelId: "air-con-blue-series-4-wall-single",
+      id: "air-con-standard-wall-single-18000-cfg-1",
+      slug: "air-con-standard-wall-single-18000-cfg-1",
+      modelId: "air-con-standard-wall-single-18000",
+      outdoorUnitId: "air-con-abhci4h4s18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-18000-cfg-2",
+      slug: "air-con-standard-wall-single-18000-cfg-2",
+      modelId: "air-con-standard-wall-single-18000",
+      outdoorUnitId: "air-con-asgci8h4m18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 16800,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-18000-cfg-3",
+      slug: "air-con-standard-wall-single-18000-cfg-3",
+      modelId: "air-con-standard-wall-single-18000",
+      outdoorUnitId: "air-con-asgci8h4m18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-18000-cfg-4",
+      slug: "air-con-standard-wall-single-18000-cfg-4",
+      modelId: "air-con-standard-wall-single-18000",
+      outdoorUnitId: "air-con-asgci8h4m18",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-24000-cfg-1",
+      slug: "air-con-standard-wall-single-24000-cfg-1",
+      modelId: "air-con-standard-wall-single-24000",
+      outdoorUnitId: "air-con-abhci4h4s24",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-24000-cfg-2",
+      slug: "air-con-standard-wall-single-24000-cfg-2",
+      modelId: "air-con-standard-wall-single-24000",
+      outdoorUnitId: "air-con-asgci8h4m24",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-24000-cfg-3",
+      slug: "air-con-standard-wall-single-24000-cfg-3",
+      modelId: "air-con-standard-wall-single-24000",
+      outdoorUnitId: "air-con-asgci8h4m24",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-9000-cfg-1",
+      slug: "air-con-standard-wall-single-9000-cfg-1",
+      modelId: "air-con-standard-wall-single-9000",
+      outdoorUnitId: "air-con-abhci4h4s09",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-blue-series-4-wall-single-9000-cfg-1",
+      slug: "air-con-blue-series-4-wall-single-9000-cfg-1",
+      modelId: "air-con-blue-series-4-wall-single-9000",
       outdoorUnitId: "air-con-alpci4h4e09",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1049,9 +1499,9 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-4-wall-single-cfg-2",
-      slug: "air-con-blue-series-4-wall-single-cfg-2",
-      modelId: "air-con-blue-series-4-wall-single",
+      id: "air-con-blue-series-4-wall-single-12000-cfg-1",
+      slug: "air-con-blue-series-4-wall-single-12000-cfg-1",
+      modelId: "air-con-blue-series-4-wall-single-12000",
       outdoorUnitId: "air-con-alpci4h4e12",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1063,37 +1513,107 @@ export const airconDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-4-wall-single-cfg-3",
-      slug: "air-con-blue-series-4-wall-single-cfg-3",
-      modelId: "air-con-blue-series-4-wall-single",
+      id: "air-con-blue-series-4-wall-single-18000-cfg-1",
+      slug: "air-con-blue-series-4-wall-single-18000-cfg-1",
+      modelId: "air-con-blue-series-4-wall-single-18000",
       outdoorUnitId: "air-con-alpci4h4e18",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 22,
       hspf2: 9,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "air-con-blue-series-4-wall-single-cfg-4",
-      slug: "air-con-blue-series-4-wall-single-cfg-4",
-      modelId: "air-con-blue-series-4-wall-single",
+      id: "air-con-blue-series-4-wall-single-24000-cfg-1",
+      slug: "air-con-blue-series-4-wall-single-24000-cfg-1",
+      modelId: "air-con-blue-series-4-wall-single-24000",
       outdoorUnitId: "air-con-alpci4h4e24",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 23000,
       seer2: 20,
       hspf2: 9,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-48000-cfg-1",
+      slug: "air-con-standard-wall-single-48000-cfg-1",
+      modelId: "air-con-standard-wall-single-48000",
+      outdoorUnitId: "air-con-asgci8h4m48",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-48000-cfg-2",
+      slug: "air-con-standard-wall-single-48000-cfg-2",
+      modelId: "air-con-standard-wall-single-48000",
+      outdoorUnitId: "air-con-asgci8h4m48",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-48000-cfg-3",
+      slug: "air-con-standard-wall-single-48000-cfg-3",
+      modelId: "air-con-standard-wall-single-48000",
+      outdoorUnitId: "air-con-asgci8h4m48",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-48000-cfg-4",
+      slug: "air-con-standard-wall-single-48000-cfg-4",
+      modelId: "air-con-standard-wall-single-48000",
+      outdoorUnitId: "air-con-asgci8h4m60",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "air-con-standard-wall-single-60000-cfg-1",
+      slug: "air-con-standard-wall-single-60000-cfg-1",
+      modelId: "air-con-standard-wall-single-60000",
+      outdoorUnitId: "air-con-asgci8h4m60",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 58000,
+      coolingCapacityMaxBtu: 58000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "air-con-blizzard-wall-single-cfg-1",
+      configurationId: "air-con-blizzard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1104,7 +1624,7 @@ export const airconDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "air-con-blizzard-wall-single-cfg-2",
+      configurationId: "air-con-blizzard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1115,7 +1635,7 @@ export const airconDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "air-con-blue-series-iii-wall-single-cfg-1",
+      configurationId: "air-con-blue-series-iii-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1126,29 +1646,7 @@ export const airconDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "air-con-blue-series-iii-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-blue-series-iii-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12500,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-1",
+      configurationId: "air-con-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1159,51 +1657,7 @@ export const airconDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "air-con-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 5500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-6",
+      configurationId: "air-con-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1214,359 +1668,7 @@ export const airconDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "air-con-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28400,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-multi-split-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-sky-pro-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7200,
-          cop: 2.26,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-sky-pro-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6500,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-sky-pro-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7600,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-sky-pro-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 2.36,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-sky-pro-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-sd-premium-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-sd-premium-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-blue-series-4-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 5900,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-blue-series-4-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "air-con-blue-series-4-wall-single-cfg-3",
+      configurationId: "air-con-blue-series-iii-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1577,12 +1679,430 @@ export const airconDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "air-con-blue-series-4-wall-single-cfg-4",
+      configurationId: "air-con-blue-series-iii-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12500,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-sky-pro-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7200,
+          cop: 2.26,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-sky-pro-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6500,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-sky-pro-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-sky-pro-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 2.36,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-sky-pro-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28400,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-multi-split-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-sd-premium-central-ducted-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-sd-premium-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-blue-series-4-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-blue-series-4-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-blue-series-4-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-blue-series-4-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 13900,
           cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "air-con-standard-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: null,
           confidence: "verified",
         }
       ]

@@ -92,18 +92,235 @@ export const acdDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "acd-standard-wall-single",
-      slug: "acd-standard-wall-single",
-      name: "Standard",
+      id: "acd-standard-wall-single-9000",
+      slug: "acd-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "acd-standard",
       brandId: "acd",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 5600,
+      heatingCapacity5FMaxBtu: 7300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-12000",
+      slug: "acd-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "acd-standard",
+      brandId: "acd",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6800,
+      heatingCapacity5FMaxBtu: 7700,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-18000",
+      slug: "acd-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "acd-standard",
+      brandId: "acd",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11200,
+      heatingCapacity5FMaxBtu: 12800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-20000",
+      slug: "acd-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "acd-standard",
+      brandId: "acd",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 13900,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-lomo-38seer-wall-single-12000",
+      slug: "acd-lomo-38seer-wall-single-12000",
+      name: "LOMO 38SEER 12 000 BTU",
+      seriesId: "acd-lomo-38seer",
+      brandId: "acd",
+      modelNumber: "LOMO 38SEER 12k",
+      normalizedModelNumber: "lomo-38seer-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8100,
+      heatingCapacity5FMaxBtu: 8100,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-lomo-38seer-wall-single-18000",
+      slug: "acd-lomo-38seer-wall-single-18000",
+      name: "LOMO 38SEER 18 000 BTU",
+      seriesId: "acd-lomo-38seer",
+      brandId: "acd",
+      modelNumber: "LOMO 38SEER 18k",
+      normalizedModelNumber: "lomo-38seer-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14200,
+      heatingCapacity5FMaxBtu: 14200,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-24000",
+      slug: "acd-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "acd-standard",
+      brandId: "acd",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16600,
+      heatingCapacity5FMaxBtu: 16600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-30000",
+      slug: "acd-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "acd-standard",
+      brandId: "acd",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17500,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-36000",
+      slug: "acd-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "acd-standard",
+      brandId: "acd",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 22000,
       heatingCapacity5FMaxBtu: 29000,
       seer2Min: null,
       seer2Max: null,
@@ -118,24 +335,52 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-lomo-38seer-wall-single",
-      slug: "acd-lomo-38seer-wall-single",
-      name: "LOMO 38SEER",
+      id: "acd-lomo-38seer-wall-single-20000",
+      slug: "acd-lomo-38seer-wall-single-20000",
+      name: "LOMO 38SEER 20 000 BTU",
       seriesId: "acd-lomo-38seer",
       brandId: "acd",
-      modelNumber: "LOMO 38SEER",
-      normalizedModelNumber: "lomo-38seer",
+      modelNumber: "LOMO 38SEER 20k",
+      normalizedModelNumber: "lomo-38seer-20000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
       coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 8000,
+      heatingCapacity5FMinBtu: 15500,
       heatingCapacity5FMaxBtu: 15500,
       seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-lomo-38seer-wall-single-9000",
+      slug: "acd-lomo-38seer-wall-single-9000",
+      name: "LOMO 38SEER 9 000 BTU",
+      seriesId: "acd-lomo-38seer",
+      brandId: "acd",
+      modelNumber: "LOMO 38SEER 9k",
+      normalizedModelNumber: "lomo-38seer-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8000,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 27,
       seer2Max: 27,
-      hspf2Min: 8.5,
+      hspf2Min: 11,
       hspf2Max: 11,
-      cop5FMin: 1.8,
+      cop5FMin: 1.91,
       cop5FMax: 1.91,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -144,24 +389,79 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-ultra-heat-free-match-wall-single",
-      slug: "acd-ultra-heat-free-match-wall-single",
-      name: "Ultra heat free match",
+      id: "acd-ultra-heat-free-match-wall-single-18000",
+      slug: "acd-ultra-heat-free-match-wall-single-18000",
+      name: "Ultra heat free match 18 000 BTU",
       seriesId: "acd-ultra-heat-free-match",
       brandId: "acd",
-      modelNumber: "Ultra heat free match",
-      normalizedModelNumber: "ultra-heat-free-match",
+      modelNumber: "Ultra heat free match 18k",
+      normalizedModelNumber: "ultra-heat-free-match-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 42000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 17000,
-      heatingCapacity5FMaxBtu: 30000,
-      seer2Min: 16,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 20,
       seer2Max: 20,
-      hspf2Min: 8.6,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-ultra-heat-free-match-wall-single-20000",
+      slug: "acd-ultra-heat-free-match-wall-single-20000",
+      name: "Ultra heat free match 20 000 BTU",
+      seriesId: "acd-ultra-heat-free-match",
+      brandId: "acd",
+      modelNumber: "Ultra heat free match 20k",
+      normalizedModelNumber: "ultra-heat-free-match-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 17900,
+      heatingCapacity5FMaxBtu: 17900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10,
       hspf2Max: 10,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-ultra-heat-free-match-wall-single-36000",
+      slug: "acd-ultra-heat-free-match-wall-single-36000",
+      name: "Ultra heat free match 36 000 BTU",
+      seriesId: "acd-ultra-heat-free-match",
+      brandId: "acd",
+      modelNumber: "Ultra heat free match 36k",
+      normalizedModelNumber: "ultra-heat-free-match-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.82,
       cop5FMax: 1.82,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -170,18 +470,127 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted",
-      slug: "acd-flexx-central-ducted",
-      name: "Flexx",
-      seriesId: "acd-flexx",
+      id: "acd-ultra-heat-free-match-wall-single-42000",
+      slug: "acd-ultra-heat-free-match-wall-single-42000",
+      name: "Ultra heat free match 42 000 BTU",
+      seriesId: "acd-ultra-heat-free-match",
       brandId: "acd",
-      modelNumber: "Flexx",
-      normalizedModelNumber: "flexx",
+      modelNumber: "Ultra heat free match 42k",
+      normalizedModelNumber: "ultra-heat-free-match-42000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.82,
+      cop5FMax: 1.82,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-15000",
+      slug: "acd-standard-wall-single-15000",
+      name: "Standard 15 000 BTU",
+      seriesId: "acd-standard",
+      brandId: "acd",
+      modelNumber: "Standard 15k",
+      normalizedModelNumber: "standard-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10100,
+      heatingCapacity5FMaxBtu: 10100,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-24000",
+      slug: "acd-flexx-central-ducted-24000",
+      name: "Flexx 24 000 BTU",
+      seriesId: "acd-flexx",
+      brandId: "acd",
+      modelNumber: "Flexx 24k",
+      normalizedModelNumber: "flexx-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-36000",
+      slug: "acd-flexx-central-ducted-36000",
+      name: "Flexx 36 000 BTU",
+      seriesId: "acd-flexx",
+      brandId: "acd",
+      modelNumber: "Flexx 36k",
+      normalizedModelNumber: "flexx-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
       heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-48000",
+      slug: "acd-flexx-central-ducted-48000",
+      name: "Flexx 48 000 BTU",
+      seriesId: "acd-flexx",
+      brandId: "acd",
+      modelNumber: "Flexx 48k",
+      normalizedModelNumber: "flexx-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 31200,
       heatingCapacity5FMaxBtu: 36000,
       seer2Min: 16,
       seer2Max: 17,
@@ -196,24 +605,25 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-free-match-wall-single",
-      slug: "acd-free-match-wall-single",
-      name: "Free Match",
+      id: "acd-free-match-wall-single-18000",
+      slug: "acd-free-match-wall-single-18000",
+      name: "Free Match 18 000 BTU",
       seriesId: "acd-free-match",
       brandId: "acd",
-      modelNumber: "Free Match",
-      normalizedModelNumber: "free-match",
+      modelNumber: "Free Match 18k",
+      normalizedModelNumber: "free-match-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMaxBtu: 17000,
       heatingCapacity5FMinBtu: 14700,
-      heatingCapacity5FMaxBtu: 35600,
+      heatingCapacity5FMaxBtu: 14700,
       seer2Min: 21,
       seer2Max: 21,
       hspf2Min: 10,
       hspf2Max: 10,
-      cop5FMin: 1.82,
+      cop5FMin: 2.22,
       cop5FMax: 2.22,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -222,22 +632,104 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-pular-wall-single",
-      slug: "acd-pular-wall-single",
-      name: "Pular",
-      seriesId: "acd-pular",
+      id: "acd-free-match-wall-single-24000",
+      slug: "acd-free-match-wall-single-24000",
+      name: "Free Match 24 000 BTU",
+      seriesId: "acd-free-match",
       brandId: "acd",
-      modelNumber: "Pular",
-      normalizedModelNumber: "pular",
+      modelNumber: "Free Match 24k",
+      normalizedModelNumber: "free-match-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23200,
+      coolingCapacityMaxBtu: 23200,
+      heatingCapacity5FMinBtu: 23600,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-free-match-wall-single-30000",
+      slug: "acd-free-match-wall-single-30000",
+      name: "Free Match 30 000 BTU",
+      seriesId: "acd-free-match",
+      brandId: "acd",
+      modelNumber: "Free Match 30k",
+      normalizedModelNumber: "free-match-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 27200,
+      heatingCapacity5FMaxBtu: 27200,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-free-match-wall-single-36000",
+      slug: "acd-free-match-wall-single-36000",
+      name: "Free Match 36 000 BTU",
+      seriesId: "acd-free-match",
+      brandId: "acd",
+      modelNumber: "Free Match 36k",
+      normalizedModelNumber: "free-match-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30800,
+      heatingCapacity5FMaxBtu: 35600,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.82,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-pular-wall-single-12000",
+      slug: "acd-pular-wall-single-12000",
+      name: "Pular 12 000 BTU",
+      seriesId: "acd-pular",
+      brandId: "acd",
+      modelNumber: "Pular 12k",
+      normalizedModelNumber: "pular-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 7000,
-      heatingCapacity5FMaxBtu: 10800,
-      seer2Min: 23,
+      heatingCapacity5FMaxBtu: 7000,
+      seer2Min: 24,
       seer2Max: 24,
-      hspf2Min: 8.5,
+      hspf2Min: 9,
       hspf2Max: 9,
       cop5FMin: 1.85,
       cop5FMax: 1.85,
@@ -248,15 +740,16 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-new-multi-zone-odu-wall-single",
-      slug: "acd-new-multi-zone-odu-wall-single",
-      name: "New Multi-zone ODU",
+      id: "acd-new-multi-zone-odu-wall-single-18000",
+      slug: "acd-new-multi-zone-odu-wall-single-18000",
+      name: "New Multi-zone ODU 18 000 BTU",
       seriesId: "acd-new-multi-zone-odu",
       brandId: "acd",
-      modelNumber: "New Multi-zone ODU",
-      normalizedModelNumber: "new-multi-zone-odu",
+      modelNumber: "New Multi-zone ODU 18k",
+      normalizedModelNumber: "new-multi-zone-odu-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 17000,
       coolingCapacityMaxBtu: 17000,
       heatingCapacity5FMinBtu: 15000,
@@ -272,6 +765,33 @@ export const acdDataset: BrandDataset = {
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-pular-wall-single-18000",
+      slug: "acd-pular-wall-single-18000",
+      name: "Pular 18 000 BTU",
+      seriesId: "acd-pular",
+      brandId: "acd",
+      modelNumber: "Pular 18k",
+      normalizedModelNumber: "pular-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10800,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 8.5,
+      hspf2Max: 9,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   outdoorUnits: [
@@ -282,8 +802,32 @@ export const acdDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "acd-uhd09kch38s-o",
+      modelNumber: "UHD09KCH38S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
+      id: "acd-chd09kch19s-o",
+      modelNumber: "CHD09KCH19S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
+      id: "acd-pud09kch25s-o",
+      modelNumber: "PUD09KCH25S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
       id: "acd-ocd12kch22s-o",
       modelNumber: "OCD12KCH22S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
+      id: "acd-chd12kch17s-o",
+      modelNumber: "CHD12KCH17S-O",
       brandId: "acd",
       refrigerant: null as any,
     },
@@ -294,20 +838,44 @@ export const acdDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "acd-mpd18kch22s-o",
+      modelNumber: "MPD18KCH22S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
+      id: "acd-chd18kch17s-o",
+      modelNumber: "CHD18KCH17S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
       id: "acd-ocd24kch20s-o",
       modelNumber: "OCD24KCH20S-O",
       brandId: "acd",
       refrigerant: null as any,
     },
     {
-      id: "acd-uhd09kch38s-o",
-      modelNumber: "UHD09KCH38S-O",
+      id: "acd-chd24kch18s-o",
+      modelNumber: "CHD24KCH18S-O",
       brandId: "acd",
       refrigerant: null as any,
     },
     {
-      id: "acd-mpd18kch22s-o",
-      modelNumber: "MPD18KCH22S-O",
+      id: "acd-pud24kch24s-o",
+      modelNumber: "PUD24KCH24S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
+      id: "acd-uhd12kch31s-o",
+      modelNumber: "UHD12KCH31S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
+      id: "acd-uhd18kch25s-o",
+      modelNumber: "UHD18KCH25S-O",
       brandId: "acd",
       refrigerant: null as any,
     },
@@ -324,6 +892,12 @@ export const acdDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "acd-pud30kch20s-o",
+      modelNumber: "PUD30KCH20S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
       id: "acd-mpd36kch21s-o",
       modelNumber: "MPD36KCH21S-O",
       brandId: "acd",
@@ -336,68 +910,8 @@ export const acdDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "acd-ocd15kch20s-o",
-      modelNumber: "OCD15KCH20S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-chd09kch19s-o",
-      modelNumber: "CHD09KCH19S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-chd12kch17s-o",
-      modelNumber: "CHD12KCH17S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-chd18kch17s-o",
-      modelNumber: "CHD18KCH17S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-chd24kch18s-o",
-      modelNumber: "CHD24KCH18S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-pud09kch25s-o",
-      modelNumber: "PUD09KCH25S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-pud24kch24s-o",
-      modelNumber: "PUD24KCH24S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-pud30kch20s-o",
-      modelNumber: "PUD30KCH20S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
       id: "acd-pud36kch20s-o",
       modelNumber: "PUD36KCH20S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-uhd12kch31s-o",
-      modelNumber: "UHD12KCH31S-O",
-      brandId: "acd",
-      refrigerant: null as any,
-    },
-    {
-      id: "acd-uhd18kch25s-o",
-      modelNumber: "UHD18KCH25S-O",
       brandId: "acd",
       refrigerant: null as any,
     },
@@ -434,6 +948,12 @@ export const acdDataset: BrandDataset = {
     {
       id: "acd-mud42kch23s-o",
       modelNumber: "MUD42KCH23S-O",
+      brandId: "acd",
+      refrigerant: null as any,
+    },
+    {
+      id: "acd-ocd15kch20s-o",
+      modelNumber: "OCD15KCH20S-O",
       brandId: "acd",
       refrigerant: null as any,
     },
@@ -497,9 +1017,9 @@ export const acdDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "acd-standard-wall-single-cfg-1",
-      slug: "acd-standard-wall-single-cfg-1",
-      modelId: "acd-standard-wall-single",
+      id: "acd-standard-wall-single-9000-cfg-1",
+      slug: "acd-standard-wall-single-9000-cfg-1",
+      modelId: "acd-standard-wall-single-9000",
       outdoorUnitId: "acd-ocd09kch23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -511,51 +1031,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-standard-wall-single-cfg-2",
-      slug: "acd-standard-wall-single-cfg-2",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-ocd12kch22s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-3",
-      slug: "acd-standard-wall-single-cfg-3",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-ocd18kch20s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-4",
-      slug: "acd-standard-wall-single-cfg-4",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-ocd24kch20s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-5",
-      slug: "acd-standard-wall-single-cfg-5",
-      modelId: "acd-standard-wall-single",
+      id: "acd-standard-wall-single-9000-cfg-2",
+      slug: "acd-standard-wall-single-9000-cfg-2",
+      modelId: "acd-standard-wall-single-9000",
       outdoorUnitId: "acd-uhd09kch38s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -567,93 +1045,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-standard-wall-single-cfg-6",
-      slug: "acd-standard-wall-single-cfg-6",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-mpd18kch22s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-7",
-      slug: "acd-standard-wall-single-cfg-7",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-mpd24kch21s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-8",
-      slug: "acd-standard-wall-single-cfg-8",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-mpd30kch21s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-9",
-      slug: "acd-standard-wall-single-cfg-9",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-mpd36kch21s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-10",
-      slug: "acd-standard-wall-single-cfg-10",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-mpd42kch21s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 39000,
-      coolingCapacityMaxBtu: 39000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-11",
-      slug: "acd-standard-wall-single-cfg-11",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-ocd15kch20s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-12",
-      slug: "acd-standard-wall-single-cfg-12",
-      modelId: "acd-standard-wall-single",
+      id: "acd-standard-wall-single-9000-cfg-3",
+      slug: "acd-standard-wall-single-9000-cfg-3",
+      modelId: "acd-standard-wall-single-9000",
       outdoorUnitId: "acd-chd09kch19s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -665,51 +1059,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-standard-wall-single-cfg-13",
-      slug: "acd-standard-wall-single-cfg-13",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-chd12kch17s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-14",
-      slug: "acd-standard-wall-single-cfg-14",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-chd18kch17s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17600,
-      coolingCapacityMaxBtu: 17600,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-15",
-      slug: "acd-standard-wall-single-cfg-15",
-      modelId: "acd-standard-wall-single",
-      outdoorUnitId: "acd-chd24kch18s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-standard-wall-single-cfg-16",
-      slug: "acd-standard-wall-single-cfg-16",
-      modelId: "acd-standard-wall-single",
+      id: "acd-standard-wall-single-9000-cfg-4",
+      slug: "acd-standard-wall-single-9000-cfg-4",
+      modelId: "acd-standard-wall-single-9000",
       outdoorUnitId: "acd-pud09kch25s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9100,
@@ -721,9 +1073,107 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-standard-wall-single-cfg-17",
-      slug: "acd-standard-wall-single-cfg-17",
-      modelId: "acd-standard-wall-single",
+      id: "acd-standard-wall-single-12000-cfg-1",
+      slug: "acd-standard-wall-single-12000-cfg-1",
+      modelId: "acd-standard-wall-single-12000",
+      outdoorUnitId: "acd-ocd12kch22s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-12000-cfg-2",
+      slug: "acd-standard-wall-single-12000-cfg-2",
+      modelId: "acd-standard-wall-single-12000",
+      outdoorUnitId: "acd-chd12kch17s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-18000-cfg-1",
+      slug: "acd-standard-wall-single-18000-cfg-1",
+      modelId: "acd-standard-wall-single-18000",
+      outdoorUnitId: "acd-ocd18kch20s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-18000-cfg-2",
+      slug: "acd-standard-wall-single-18000-cfg-2",
+      modelId: "acd-standard-wall-single-18000",
+      outdoorUnitId: "acd-mpd18kch22s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-18000-cfg-3",
+      slug: "acd-standard-wall-single-18000-cfg-3",
+      modelId: "acd-standard-wall-single-18000",
+      outdoorUnitId: "acd-chd18kch17s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17600,
+      coolingCapacityMaxBtu: 17600,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-20000-cfg-1",
+      slug: "acd-standard-wall-single-20000-cfg-1",
+      modelId: "acd-standard-wall-single-20000",
+      outdoorUnitId: "acd-ocd24kch20s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-20000-cfg-2",
+      slug: "acd-standard-wall-single-20000-cfg-2",
+      modelId: "acd-standard-wall-single-20000",
+      outdoorUnitId: "acd-chd24kch18s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-20000-cfg-3",
+      slug: "acd-standard-wall-single-20000-cfg-3",
+      modelId: "acd-standard-wall-single-20000",
       outdoorUnitId: "acd-pud24kch24s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -735,9 +1185,93 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-standard-wall-single-cfg-18",
-      slug: "acd-standard-wall-single-cfg-18",
-      modelId: "acd-standard-wall-single",
+      id: "acd-lomo-38seer-wall-single-12000-cfg-1",
+      slug: "acd-lomo-38seer-wall-single-12000-cfg-1",
+      modelId: "acd-lomo-38seer-wall-single-12000",
+      outdoorUnitId: "acd-uhd12kch31s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-lomo-38seer-wall-single-12000-cfg-2",
+      slug: "acd-lomo-38seer-wall-single-12000-cfg-2",
+      modelId: "acd-lomo-38seer-wall-single-12000",
+      outdoorUnitId: "acd-uhd12kch31s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-lomo-38seer-wall-single-18000-cfg-1",
+      slug: "acd-lomo-38seer-wall-single-18000-cfg-1",
+      modelId: "acd-lomo-38seer-wall-single-18000",
+      outdoorUnitId: "acd-uhd18kch25s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-lomo-38seer-wall-single-18000-cfg-2",
+      slug: "acd-lomo-38seer-wall-single-18000-cfg-2",
+      modelId: "acd-lomo-38seer-wall-single-18000",
+      outdoorUnitId: "acd-uhd18kch25s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-24000-cfg-1",
+      slug: "acd-standard-wall-single-24000-cfg-1",
+      modelId: "acd-standard-wall-single-24000",
+      outdoorUnitId: "acd-mpd24kch21s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-30000-cfg-1",
+      slug: "acd-standard-wall-single-30000-cfg-1",
+      modelId: "acd-standard-wall-single-30000",
+      outdoorUnitId: "acd-mpd30kch21s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-30000-cfg-2",
+      slug: "acd-standard-wall-single-30000-cfg-2",
+      modelId: "acd-standard-wall-single-30000",
       outdoorUnitId: "acd-pud30kch20s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -749,9 +1283,37 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-standard-wall-single-cfg-19",
-      slug: "acd-standard-wall-single-cfg-19",
-      modelId: "acd-standard-wall-single",
+      id: "acd-standard-wall-single-36000-cfg-1",
+      slug: "acd-standard-wall-single-36000-cfg-1",
+      modelId: "acd-standard-wall-single-36000",
+      outdoorUnitId: "acd-mpd36kch21s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-36000-cfg-2",
+      slug: "acd-standard-wall-single-36000-cfg-2",
+      modelId: "acd-standard-wall-single-36000",
+      outdoorUnitId: "acd-mpd42kch21s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 39000,
+      coolingCapacityMaxBtu: 39000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-standard-wall-single-36000-cfg-3",
+      slug: "acd-standard-wall-single-36000-cfg-3",
+      modelId: "acd-standard-wall-single-36000",
       outdoorUnitId: "acd-pud36kch20s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33600,
@@ -763,37 +1325,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-lomo-38seer-wall-single-cfg-1",
-      slug: "acd-lomo-38seer-wall-single-cfg-1",
-      modelId: "acd-lomo-38seer-wall-single",
-      outdoorUnitId: "acd-uhd12kch31s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-lomo-38seer-wall-single-cfg-2",
-      slug: "acd-lomo-38seer-wall-single-cfg-2",
-      modelId: "acd-lomo-38seer-wall-single",
-      outdoorUnitId: "acd-uhd18kch25s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-lomo-38seer-wall-single-cfg-3",
-      slug: "acd-lomo-38seer-wall-single-cfg-3",
-      modelId: "acd-lomo-38seer-wall-single",
+      id: "acd-lomo-38seer-wall-single-20000-cfg-1",
+      slug: "acd-lomo-38seer-wall-single-20000-cfg-1",
+      modelId: "acd-lomo-38seer-wall-single-20000",
       outdoorUnitId: "acd-uhd24kch22s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -805,65 +1339,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-lomo-38seer-wall-single-cfg-4",
-      slug: "acd-lomo-38seer-wall-single-cfg-4",
-      modelId: "acd-lomo-38seer-wall-single",
-      outdoorUnitId: "acd-uhd09kch38sb-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-lomo-38seer-wall-single-cfg-5",
-      slug: "acd-lomo-38seer-wall-single-cfg-5",
-      modelId: "acd-lomo-38seer-wall-single",
-      outdoorUnitId: "acd-uhd09kch38sb-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-lomo-38seer-wall-single-cfg-6",
-      slug: "acd-lomo-38seer-wall-single-cfg-6",
-      modelId: "acd-lomo-38seer-wall-single",
-      outdoorUnitId: "acd-uhd12kch31s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-lomo-38seer-wall-single-cfg-7",
-      slug: "acd-lomo-38seer-wall-single-cfg-7",
-      modelId: "acd-lomo-38seer-wall-single",
-      outdoorUnitId: "acd-uhd18kch25s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-lomo-38seer-wall-single-cfg-8",
-      slug: "acd-lomo-38seer-wall-single-cfg-8",
-      modelId: "acd-lomo-38seer-wall-single",
+      id: "acd-lomo-38seer-wall-single-20000-cfg-2",
+      slug: "acd-lomo-38seer-wall-single-20000-cfg-2",
+      modelId: "acd-lomo-38seer-wall-single-20000",
       outdoorUnitId: "acd-uhd24kch22s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -875,9 +1353,37 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-ultra-heat-free-match-wall-single-cfg-1",
-      slug: "acd-ultra-heat-free-match-wall-single-cfg-1",
-      modelId: "acd-ultra-heat-free-match-wall-single",
+      id: "acd-lomo-38seer-wall-single-9000-cfg-1",
+      slug: "acd-lomo-38seer-wall-single-9000-cfg-1",
+      modelId: "acd-lomo-38seer-wall-single-9000",
+      outdoorUnitId: "acd-uhd09kch38sb-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-lomo-38seer-wall-single-9000-cfg-2",
+      slug: "acd-lomo-38seer-wall-single-9000-cfg-2",
+      modelId: "acd-lomo-38seer-wall-single-9000",
+      outdoorUnitId: "acd-uhd09kch38sb-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-ultra-heat-free-match-wall-single-18000-cfg-1",
+      slug: "acd-ultra-heat-free-match-wall-single-18000-cfg-1",
+      modelId: "acd-ultra-heat-free-match-wall-single-18000",
       outdoorUnitId: "acd-mud18kch23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -889,9 +1395,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-ultra-heat-free-match-wall-single-cfg-2",
-      slug: "acd-ultra-heat-free-match-wall-single-cfg-2",
-      modelId: "acd-ultra-heat-free-match-wall-single",
+      id: "acd-ultra-heat-free-match-wall-single-20000-cfg-1",
+      slug: "acd-ultra-heat-free-match-wall-single-20000-cfg-1",
+      modelId: "acd-ultra-heat-free-match-wall-single-20000",
       outdoorUnitId: "acd-mud24kch23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -903,9 +1409,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-ultra-heat-free-match-wall-single-cfg-3",
-      slug: "acd-ultra-heat-free-match-wall-single-cfg-3",
-      modelId: "acd-ultra-heat-free-match-wall-single",
+      id: "acd-ultra-heat-free-match-wall-single-36000-cfg-1",
+      slug: "acd-ultra-heat-free-match-wall-single-36000-cfg-1",
+      modelId: "acd-ultra-heat-free-match-wall-single-36000",
       outdoorUnitId: "acd-mud36kch23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -917,9 +1423,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-ultra-heat-free-match-wall-single-cfg-4",
-      slug: "acd-ultra-heat-free-match-wall-single-cfg-4",
-      modelId: "acd-ultra-heat-free-match-wall-single",
+      id: "acd-ultra-heat-free-match-wall-single-42000-cfg-1",
+      slug: "acd-ultra-heat-free-match-wall-single-42000-cfg-1",
+      modelId: "acd-ultra-heat-free-match-wall-single-42000",
       outdoorUnitId: "acd-mud42kch23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 42000,
@@ -931,9 +1437,23 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-1",
-      slug: "acd-flexx-central-ducted-cfg-1",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-standard-wall-single-15000-cfg-1",
+      slug: "acd-standard-wall-single-15000-cfg-1",
+      modelId: "acd-standard-wall-single-15000",
+      outdoorUnitId: "acd-ocd15kch20s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-24000-cfg-1",
+      slug: "acd-flexx-central-ducted-24000-cfg-1",
+      modelId: "acd-flexx-central-ducted-24000",
       outdoorUnitId: "acd-fxd-acd36",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -945,9 +1465,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-2",
-      slug: "acd-flexx-central-ducted-cfg-2",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-flexx-central-ducted-36000-cfg-1",
+      slug: "acd-flexx-central-ducted-36000-cfg-1",
+      modelId: "acd-flexx-central-ducted-36000",
       outdoorUnitId: "acd-fxd-acd36",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -959,9 +1479,79 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-3",
-      slug: "acd-flexx-central-ducted-cfg-3",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-flexx-central-ducted-36000-cfg-2",
+      slug: "acd-flexx-central-ducted-36000-cfg-2",
+      modelId: "acd-flexx-central-ducted-36000",
+      outdoorUnitId: "acd-fxd-acd36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-36000-cfg-3",
+      slug: "acd-flexx-central-ducted-36000-cfg-3",
+      modelId: "acd-flexx-central-ducted-36000",
+      outdoorUnitId: "acd-fxd-acd36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-36000-cfg-4",
+      slug: "acd-flexx-central-ducted-36000-cfg-4",
+      modelId: "acd-flexx-central-ducted-36000",
+      outdoorUnitId: "acd-fxd-acd36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-36000-cfg-5",
+      slug: "acd-flexx-central-ducted-36000-cfg-5",
+      modelId: "acd-flexx-central-ducted-36000",
+      outdoorUnitId: "acd-fxd-acd36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-36000-cfg-6",
+      slug: "acd-flexx-central-ducted-36000-cfg-6",
+      modelId: "acd-flexx-central-ducted-36000",
+      outdoorUnitId: "acd-fxd-acd36",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-flexx-central-ducted-48000-cfg-1",
+      slug: "acd-flexx-central-ducted-48000-cfg-1",
+      modelId: "acd-flexx-central-ducted-48000",
       outdoorUnitId: "acd-fxd-acd60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -973,9 +1563,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-4",
-      slug: "acd-flexx-central-ducted-cfg-4",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-flexx-central-ducted-48000-cfg-2",
+      slug: "acd-flexx-central-ducted-48000-cfg-2",
+      modelId: "acd-flexx-central-ducted-48000",
       outdoorUnitId: "acd-fxd-acd60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -987,37 +1577,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-5",
-      slug: "acd-flexx-central-ducted-cfg-5",
-      modelId: "acd-flexx-central-ducted",
-      outdoorUnitId: "acd-fxd-acd36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-flexx-central-ducted-cfg-6",
-      slug: "acd-flexx-central-ducted-cfg-6",
-      modelId: "acd-flexx-central-ducted",
-      outdoorUnitId: "acd-fxd-acd36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-flexx-central-ducted-cfg-7",
-      slug: "acd-flexx-central-ducted-cfg-7",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-flexx-central-ducted-48000-cfg-3",
+      slug: "acd-flexx-central-ducted-48000-cfg-3",
+      modelId: "acd-flexx-central-ducted-48000",
       outdoorUnitId: "acd-fxd-acd60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1029,9 +1591,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-8",
-      slug: "acd-flexx-central-ducted-cfg-8",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-flexx-central-ducted-48000-cfg-4",
+      slug: "acd-flexx-central-ducted-48000-cfg-4",
+      modelId: "acd-flexx-central-ducted-48000",
       outdoorUnitId: "acd-fxd-acd60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1043,37 +1605,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-9",
-      slug: "acd-flexx-central-ducted-cfg-9",
-      modelId: "acd-flexx-central-ducted",
-      outdoorUnitId: "acd-fxd-acd36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-flexx-central-ducted-cfg-10",
-      slug: "acd-flexx-central-ducted-cfg-10",
-      modelId: "acd-flexx-central-ducted",
-      outdoorUnitId: "acd-fxd-acd36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-flexx-central-ducted-cfg-11",
-      slug: "acd-flexx-central-ducted-cfg-11",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-flexx-central-ducted-48000-cfg-5",
+      slug: "acd-flexx-central-ducted-48000-cfg-5",
+      modelId: "acd-flexx-central-ducted-48000",
       outdoorUnitId: "acd-fxd-acd60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1085,9 +1619,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-12",
-      slug: "acd-flexx-central-ducted-cfg-12",
-      modelId: "acd-flexx-central-ducted",
+      id: "acd-flexx-central-ducted-48000-cfg-6",
+      slug: "acd-flexx-central-ducted-48000-cfg-6",
+      modelId: "acd-flexx-central-ducted-48000",
       outdoorUnitId: "acd-fxd-acd60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1099,23 +1633,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-flexx-central-ducted-cfg-13",
-      slug: "acd-flexx-central-ducted-cfg-13",
-      modelId: "acd-flexx-central-ducted",
-      outdoorUnitId: "acd-fxd-acd36",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-free-match-wall-single-cfg-1",
-      slug: "acd-free-match-wall-single-cfg-1",
-      modelId: "acd-free-match-wall-single",
+      id: "acd-free-match-wall-single-18000-cfg-1",
+      slug: "acd-free-match-wall-single-18000-cfg-1",
+      modelId: "acd-free-match-wall-single-18000",
       outdoorUnitId: "acd-mpd18kch21sb-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1127,9 +1647,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-free-match-wall-single-cfg-2",
-      slug: "acd-free-match-wall-single-cfg-2",
-      modelId: "acd-free-match-wall-single",
+      id: "acd-free-match-wall-single-24000-cfg-1",
+      slug: "acd-free-match-wall-single-24000-cfg-1",
+      modelId: "acd-free-match-wall-single-24000",
       outdoorUnitId: "acd-mpd24kch21sb-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23200,
@@ -1141,9 +1661,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-free-match-wall-single-cfg-3",
-      slug: "acd-free-match-wall-single-cfg-3",
-      modelId: "acd-free-match-wall-single",
+      id: "acd-free-match-wall-single-30000-cfg-1",
+      slug: "acd-free-match-wall-single-30000-cfg-1",
+      modelId: "acd-free-match-wall-single-30000",
       outdoorUnitId: "acd-mpd30kch21sb-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -1155,9 +1675,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-free-match-wall-single-cfg-4",
-      slug: "acd-free-match-wall-single-cfg-4",
-      modelId: "acd-free-match-wall-single",
+      id: "acd-free-match-wall-single-36000-cfg-1",
+      slug: "acd-free-match-wall-single-36000-cfg-1",
+      modelId: "acd-free-match-wall-single-36000",
       outdoorUnitId: "acd-mpd36kch21sb-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -1169,9 +1689,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-free-match-wall-single-cfg-5",
-      slug: "acd-free-match-wall-single-cfg-5",
-      modelId: "acd-free-match-wall-single",
+      id: "acd-free-match-wall-single-36000-cfg-2",
+      slug: "acd-free-match-wall-single-36000-cfg-2",
+      modelId: "acd-free-match-wall-single-36000",
       outdoorUnitId: "acd-mpd42kch21sb-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1183,9 +1703,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-pular-wall-single-cfg-1",
-      slug: "acd-pular-wall-single-cfg-1",
-      modelId: "acd-pular-wall-single",
+      id: "acd-pular-wall-single-12000-cfg-1",
+      slug: "acd-pular-wall-single-12000-cfg-1",
+      modelId: "acd-pular-wall-single-12000",
       outdoorUnitId: "acd-pud12kch24s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1197,9 +1717,23 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-pular-wall-single-cfg-2",
-      slug: "acd-pular-wall-single-cfg-2",
-      modelId: "acd-pular-wall-single",
+      id: "acd-new-multi-zone-odu-wall-single-18000-cfg-1",
+      slug: "acd-new-multi-zone-odu-wall-single-18000-cfg-1",
+      modelId: "acd-new-multi-zone-odu-wall-single-18000",
+      outdoorUnitId: "acd-pud24kch24s-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "acd-pular-wall-single-18000-cfg-1",
+      slug: "acd-pular-wall-single-18000-cfg-1",
+      modelId: "acd-pular-wall-single-18000",
       outdoorUnitId: "acd-pud18kch23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1211,9 +1745,9 @@ export const acdDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "acd-pular-wall-single-cfg-3",
-      slug: "acd-pular-wall-single-cfg-3",
-      modelId: "acd-pular-wall-single",
+      id: "acd-pular-wall-single-18000-cfg-2",
+      slug: "acd-pular-wall-single-18000-cfg-2",
+      modelId: "acd-pular-wall-single-18000",
       outdoorUnitId: "acd-pud18kch23s-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1223,25 +1757,11 @@ export const acdDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "acd-new-multi-zone-odu-wall-single-cfg-1",
-      slug: "acd-new-multi-zone-odu-wall-single-cfg-1",
-      modelId: "acd-new-multi-zone-odu-wall-single",
-      outdoorUnitId: "acd-pud24kch24s-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "acd-standard-wall-single-cfg-1",
+      configurationId: "acd-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1252,40 +1772,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-5",
+      configurationId: "acd-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1296,73 +1783,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-12",
+      configurationId: "acd-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1373,7 +1794,29 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-13",
+      configurationId: "acd-standard-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1384,7 +1827,29 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-14",
+      configurationId: "acd-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1395,7 +1860,18 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-15",
+      configurationId: "acd-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-20000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1406,18 +1882,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-standard-wall-single-cfg-17",
+      configurationId: "acd-standard-wall-single-20000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1428,7 +1893,73 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-18",
+      configurationId: "acd-lomo-38seer-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-lomo-38seer-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-lomo-38seer-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-lomo-38seer-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1439,7 +1970,29 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-standard-wall-single-cfg-19",
+      configurationId: "acd-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-standard-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1450,29 +2003,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-3",
+      configurationId: "acd-lomo-38seer-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1483,51 +2014,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-lomo-38seer-wall-single-cfg-8",
+      configurationId: "acd-lomo-38seer-wall-single-20000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1538,7 +2025,29 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-ultra-heat-free-match-wall-single-cfg-1",
+      configurationId: "acd-lomo-38seer-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-lomo-38seer-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-ultra-heat-free-match-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1549,7 +2058,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-ultra-heat-free-match-wall-single-cfg-2",
+      configurationId: "acd-ultra-heat-free-match-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1560,7 +2069,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-ultra-heat-free-match-wall-single-cfg-3",
+      configurationId: "acd-ultra-heat-free-match-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1571,7 +2080,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-ultra-heat-free-match-wall-single-cfg-4",
+      configurationId: "acd-ultra-heat-free-match-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1582,7 +2091,18 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-1",
+      configurationId: "acd-standard-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-flexx-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1593,7 +2113,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-2",
+      configurationId: "acd-flexx-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1604,29 +2124,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-flexx-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-flexx-central-ducted-cfg-5",
+      configurationId: "acd-flexx-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1637,7 +2135,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-6",
+      configurationId: "acd-flexx-central-ducted-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1648,7 +2146,62 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-7",
+      configurationId: "acd-flexx-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-flexx-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-flexx-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-flexx-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-flexx-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-flexx-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1659,7 +2212,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-8",
+      configurationId: "acd-flexx-central-ducted-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1670,29 +2223,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-flexx-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-flexx-central-ducted-cfg-11",
+      configurationId: "acd-flexx-central-ducted-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1703,7 +2234,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-12",
+      configurationId: "acd-flexx-central-ducted-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1714,18 +2245,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-flexx-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-free-match-wall-single-cfg-1",
+      configurationId: "acd-free-match-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1736,7 +2256,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-free-match-wall-single-cfg-2",
+      configurationId: "acd-free-match-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1747,7 +2267,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-free-match-wall-single-cfg-3",
+      configurationId: "acd-free-match-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1758,7 +2278,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-free-match-wall-single-cfg-4",
+      configurationId: "acd-free-match-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1769,7 +2289,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-free-match-wall-single-cfg-5",
+      configurationId: "acd-free-match-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1780,7 +2300,7 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-pular-wall-single-cfg-1",
+      configurationId: "acd-pular-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1791,34 +2311,34 @@ export const acdDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "acd-pular-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-pular-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "acd-new-multi-zone-odu-wall-single-cfg-1",
+      configurationId: "acd-new-multi-zone-odu-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 15000,
           cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-pular-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "acd-pular-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 1.85,
           confidence: "verified",
         }
       ]

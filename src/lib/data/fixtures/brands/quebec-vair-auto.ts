@@ -37,22 +37,23 @@ export const quebecvairDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "quebec-vair-ne-t52-series-wall-single",
-      slug: "quebec-vair-ne-t52-series-wall-single",
-      name: "NE-T52 series",
+      id: "quebec-vair-ne-t52-series-wall-single-18000",
+      slug: "quebec-vair-ne-t52-series-wall-single-18000",
+      name: "NE-T52 series 18 000 BTU",
       seriesId: "quebec-vair-ne-t52-series",
       brandId: "quebec-vair",
-      modelNumber: "NE-T52 series",
-      normalizedModelNumber: "ne-t52-series",
+      modelNumber: "NE-T52 series 18k",
+      normalizedModelNumber: "ne-t52-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 12000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 8200,
+      heatingCapacity5FMinBtu: 14000,
       heatingCapacity5FMaxBtu: 15000,
       seer2Min: 21.5,
-      seer2Max: 25.5,
-      hspf2Min: 9.3,
+      seer2Max: 23.7,
+      hspf2Min: 10.3,
       hspf2Max: 11.3,
       cop5FMin: 1.8,
       cop5FMax: 2.39,
@@ -63,25 +64,134 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single",
-      slug: "quebec-vair-ne-series-wall-single",
-      name: "NE series",
-      seriesId: "quebec-vair-ne-series",
+      id: "quebec-vair-ne-t52-series-wall-single-12000",
+      slug: "quebec-vair-ne-t52-series-wall-single-12000",
+      name: "NE-T52 series 12 000 BTU",
+      seriesId: "quebec-vair-ne-t52-series",
       brandId: "quebec-vair",
-      modelNumber: "NE series",
-      normalizedModelNumber: "ne-series",
+      modelNumber: "NE-T52 series 12k",
+      normalizedModelNumber: "ne-t52-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8200,
-      heatingCapacity5FMaxBtu: 34000,
-      seer2Min: 21.5,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 23.1,
       seer2Max: 25.5,
       hspf2Min: 9.3,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2.24,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "quebec-vair-ne-series-wall-single-12000",
+      slug: "quebec-vair-ne-series-wall-single-12000",
+      name: "NE series 12 000 BTU",
+      seriesId: "quebec-vair-ne-series",
+      brandId: "quebec-vair",
+      modelNumber: "NE series 12k",
+      normalizedModelNumber: "ne-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8200,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 23.1,
+      seer2Max: 25.5,
+      hspf2Min: 9.3,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2.24,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "quebec-vair-ne-series-wall-single-18000",
+      slug: "quebec-vair-ne-series-wall-single-18000",
+      name: "NE series 18 000 BTU",
+      seriesId: "quebec-vair-ne-series",
+      brandId: "quebec-vair",
+      modelNumber: "NE series 18k",
+      normalizedModelNumber: "ne-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21.5,
+      seer2Max: 23.7,
+      hspf2Min: 10.3,
       hspf2Max: 11.3,
       cop5FMin: 1.8,
       cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "quebec-vair-ne-series-wall-single-30000",
+      slug: "quebec-vair-ne-series-wall-single-30000",
+      name: "NE series 30 000 BTU",
+      seriesId: "quebec-vair-ne-series",
+      brandId: "quebec-vair",
+      modelNumber: "NE series 30k",
+      normalizedModelNumber: "ne-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 26600,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "quebec-vair-ne-series-wall-single-36000",
+      slug: "quebec-vair-ne-series-wall-single-36000",
+      name: "NE series 36 000 BTU",
+      seriesId: "quebec-vair-ne-series",
+      brandId: "quebec-vair",
+      modelNumber: "NE series 36k",
+      normalizedModelNumber: "ne-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 22.2,
+      seer2Max: 22.2,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -93,6 +203,12 @@ export const quebecvairDataset: BrandDataset = {
     {
       id: "quebec-vair-ne-t52-pla18ext",
       modelNumber: "NE-T52-PLA18EXT",
+      brandId: "quebec-vair",
+      refrigerant: null as any,
+    },
+    {
+      id: "quebec-vair-ne-t52-qvair3018e",
+      modelNumber: "NE-T52-QVAIR3018E",
       brandId: "quebec-vair",
       refrigerant: null as any,
     },
@@ -109,26 +225,20 @@ export const quebecvairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "quebec-vair-ne-t52-qvair3018e",
-      modelNumber: "NE-T52-QVAIR3018E",
-      brandId: "quebec-vair",
-      refrigerant: null as any,
-    },
-    {
       id: "quebec-vair-ne-t52-qvair12e",
       modelNumber: "NE-T52-QVAIR12E",
       brandId: "quebec-vair",
       refrigerant: null as any,
     },
     {
-      id: "quebec-vair-ne-t52-qvair18e",
-      modelNumber: "NE-T52-QVAIR18E",
+      id: "quebec-vair-ne-t53-aeg12ext",
+      modelNumber: "NE-T53-AEG12EXT",
       brandId: "quebec-vair",
       refrigerant: null as any,
     },
     {
-      id: "quebec-vair-ne-t53-aeg12ext",
-      modelNumber: "NE-T53-AEG12EXT",
+      id: "quebec-vair-ne-t52-qvair18e",
+      modelNumber: "NE-T52-QVAIR18E",
       brandId: "quebec-vair",
       refrigerant: null as any,
     },
@@ -156,9 +266,9 @@ export const quebecvairDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "quebec-vair-ne-t52-series-wall-single-cfg-1",
-      slug: "quebec-vair-ne-t52-series-wall-single-cfg-1",
-      modelId: "quebec-vair-ne-t52-series-wall-single",
+      id: "quebec-vair-ne-t52-series-wall-single-18000-cfg-1",
+      slug: "quebec-vair-ne-t52-series-wall-single-18000-cfg-1",
+      modelId: "quebec-vair-ne-t52-series-wall-single-18000",
       outdoorUnitId: "quebec-vair-ne-t52-pla18ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -170,37 +280,9 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-t52-series-wall-single-cfg-2",
-      slug: "quebec-vair-ne-t52-series-wall-single-cfg-2",
-      modelId: "quebec-vair-ne-t52-series-wall-single",
-      outdoorUnitId: "quebec-vair-ne-t52-pla12ext",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "quebec-vair-ne-t52-series-wall-single-cfg-3",
-      slug: "quebec-vair-ne-t52-series-wall-single-cfg-3",
-      modelId: "quebec-vair-ne-t52-series-wall-single",
-      outdoorUnitId: "quebec-vair-ne-t52-qvair3012e",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "quebec-vair-ne-t52-series-wall-single-cfg-4",
-      slug: "quebec-vair-ne-t52-series-wall-single-cfg-4",
-      modelId: "quebec-vair-ne-t52-series-wall-single",
+      id: "quebec-vair-ne-t52-series-wall-single-18000-cfg-2",
+      slug: "quebec-vair-ne-t52-series-wall-single-18000-cfg-2",
+      modelId: "quebec-vair-ne-t52-series-wall-single-18000",
       outdoorUnitId: "quebec-vair-ne-t52-qvair3018e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -212,9 +294,37 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-1",
-      slug: "quebec-vair-ne-series-wall-single-cfg-1",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-t52-series-wall-single-12000-cfg-1",
+      slug: "quebec-vair-ne-t52-series-wall-single-12000-cfg-1",
+      modelId: "quebec-vair-ne-t52-series-wall-single-12000",
+      outdoorUnitId: "quebec-vair-ne-t52-pla12ext",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "quebec-vair-ne-t52-series-wall-single-12000-cfg-2",
+      slug: "quebec-vair-ne-t52-series-wall-single-12000-cfg-2",
+      modelId: "quebec-vair-ne-t52-series-wall-single-12000",
+      outdoorUnitId: "quebec-vair-ne-t52-qvair3012e",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "quebec-vair-ne-series-wall-single-12000-cfg-1",
+      slug: "quebec-vair-ne-series-wall-single-12000-cfg-1",
+      modelId: "quebec-vair-ne-series-wall-single-12000",
       outdoorUnitId: "quebec-vair-ne-t52-qvair12e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -226,23 +336,9 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-2",
-      slug: "quebec-vair-ne-series-wall-single-cfg-2",
-      modelId: "quebec-vair-ne-series-wall-single",
-      outdoorUnitId: "quebec-vair-ne-t52-qvair18e",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.7,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "quebec-vair-ne-series-wall-single-cfg-3",
-      slug: "quebec-vair-ne-series-wall-single-cfg-3",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-series-wall-single-12000-cfg-2",
+      slug: "quebec-vair-ne-series-wall-single-12000-cfg-2",
+      modelId: "quebec-vair-ne-series-wall-single-12000",
       outdoorUnitId: "quebec-vair-ne-t53-aeg12ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -254,9 +350,23 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-4",
-      slug: "quebec-vair-ne-series-wall-single-cfg-4",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-series-wall-single-18000-cfg-1",
+      slug: "quebec-vair-ne-series-wall-single-18000-cfg-1",
+      modelId: "quebec-vair-ne-series-wall-single-18000",
+      outdoorUnitId: "quebec-vair-ne-t52-qvair18e",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.7,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "quebec-vair-ne-series-wall-single-18000-cfg-2",
+      slug: "quebec-vair-ne-series-wall-single-18000-cfg-2",
+      modelId: "quebec-vair-ne-series-wall-single-18000",
       outdoorUnitId: "quebec-vair-ne-t53-aeg18ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -268,9 +378,9 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-5",
-      slug: "quebec-vair-ne-series-wall-single-cfg-5",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-series-wall-single-30000-cfg-1",
+      slug: "quebec-vair-ne-series-wall-single-30000-cfg-1",
+      modelId: "quebec-vair-ne-series-wall-single-30000",
       outdoorUnitId: "quebec-vair-ne-t53-multi28e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -282,9 +392,9 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-6",
-      slug: "quebec-vair-ne-series-wall-single-cfg-6",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-series-wall-single-30000-cfg-2",
+      slug: "quebec-vair-ne-series-wall-single-30000-cfg-2",
+      modelId: "quebec-vair-ne-series-wall-single-30000",
       outdoorUnitId: "quebec-vair-ne-t53-multi28e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -296,9 +406,9 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-7",
-      slug: "quebec-vair-ne-series-wall-single-cfg-7",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-series-wall-single-30000-cfg-3",
+      slug: "quebec-vair-ne-series-wall-single-30000-cfg-3",
+      modelId: "quebec-vair-ne-series-wall-single-30000",
       outdoorUnitId: "quebec-vair-ne-t53-multi28e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -310,9 +420,9 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-8",
-      slug: "quebec-vair-ne-series-wall-single-cfg-8",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-series-wall-single-36000-cfg-1",
+      slug: "quebec-vair-ne-series-wall-single-36000-cfg-1",
+      modelId: "quebec-vair-ne-series-wall-single-36000",
       outdoorUnitId: "quebec-vair-ne-t53-multi36e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -324,9 +434,9 @@ export const quebecvairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "quebec-vair-ne-series-wall-single-cfg-9",
-      slug: "quebec-vair-ne-series-wall-single-cfg-9",
-      modelId: "quebec-vair-ne-series-wall-single",
+      id: "quebec-vair-ne-series-wall-single-36000-cfg-2",
+      slug: "quebec-vair-ne-series-wall-single-36000-cfg-2",
+      modelId: "quebec-vair-ne-series-wall-single-36000",
       outdoorUnitId: "quebec-vair-ne-t53-multi36e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -340,7 +450,7 @@ export const quebecvairDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "quebec-vair-ne-t52-series-wall-single-cfg-1",
+      configurationId: "quebec-vair-ne-t52-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -351,29 +461,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-t52-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8200,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "quebec-vair-ne-t52-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "quebec-vair-ne-t52-series-wall-single-cfg-4",
+      configurationId: "quebec-vair-ne-t52-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -384,7 +472,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-1",
+      configurationId: "quebec-vair-ne-t52-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -395,7 +483,40 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-2",
+      configurationId: "quebec-vair-ne-t52-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "quebec-vair-ne-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8200,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "quebec-vair-ne-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "quebec-vair-ne-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -406,18 +527,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-4",
+      configurationId: "quebec-vair-ne-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -428,7 +538,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-5",
+      configurationId: "quebec-vair-ne-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -439,7 +549,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-6",
+      configurationId: "quebec-vair-ne-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -450,7 +560,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-7",
+      configurationId: "quebec-vair-ne-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -461,7 +571,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-8",
+      configurationId: "quebec-vair-ne-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -472,7 +582,7 @@ export const quebecvairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "quebec-vair-ne-series-wall-single-cfg-9",
+      configurationId: "quebec-vair-ne-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

@@ -103,24 +103,25 @@ export const comfortaireDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "comfort-aire-a-series-wall-single",
-      slug: "comfort-aire-a-series-wall-single",
-      name: "A-series",
+      id: "comfort-aire-a-series-wall-single-6000",
+      slug: "comfort-aire-a-series-wall-single-6000",
+      name: "A-series 6 000 BTU",
       seriesId: "comfort-aire-a-series",
       brandId: "comfort-aire",
-      modelNumber: "A-series",
-      normalizedModelNumber: "a-series",
+      modelNumber: "A-series 6k",
+      normalizedModelNumber: "a-series-6000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 6800,
-      heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 18,
-      seer2Max: 28.1,
-      hspf2Min: 9,
-      hspf2Max: 13.8,
-      cop5FMin: 1.75,
+      coolingCapacityMaxBtu: 6500,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 22,
+      seer2Max: 26.5,
+      hspf2Min: 12,
+      hspf2Max: 13.6,
+      cop5FMin: 2.1,
       cop5FMax: 2.4,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -129,18 +130,208 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-standard-wall-single",
-      slug: "comfort-aire-standard-wall-single",
-      name: "Standard",
-      seriesId: "comfort-aire-standard",
+      id: "comfort-aire-a-series-wall-single-9000",
+      slug: "comfort-aire-a-series-wall-single-9000",
+      name: "A-series 9 000 BTU",
+      seriesId: "comfort-aire-a-series",
       brandId: "comfort-aire",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "A-series 9k",
+      normalizedModelNumber: "a-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 6800,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20.2,
+      seer2Max: 28.1,
+      hspf2Min: 9,
+      hspf2Max: 13.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-12000",
+      slug: "comfort-aire-a-series-wall-single-12000",
+      name: "A-series 12 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-series 12k",
+      normalizedModelNumber: "a-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19.5,
+      seer2Max: 25.5,
+      hspf2Min: 10,
+      hspf2Max: 11.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000",
+      slug: "comfort-aire-a-series-wall-single-18000",
+      name: "A-series 18 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-series 18k",
+      normalizedModelNumber: "a-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 18,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 12.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-24000",
+      slug: "comfort-aire-a-series-wall-single-24000",
+      name: "A-series 24 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-series 24k",
+      normalizedModelNumber: "a-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 19,
+      seer2Max: 21.5,
+      hspf2Min: 10.5,
+      hspf2Max: 11.7,
+      cop5FMin: 2,
+      cop5FMax: 2.23,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-30000",
+      slug: "comfort-aire-a-series-wall-single-30000",
+      name: "A-series 30 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-series 30k",
+      normalizedModelNumber: "a-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 26600,
+      heatingCapacity5FMaxBtu: 28800,
+      seer2Min: 19.5,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-36000",
+      slug: "comfort-aire-a-series-wall-single-36000",
+      name: "A-series 36 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-series 36k",
+      normalizedModelNumber: "a-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 19.4,
+      seer2Max: 22.4,
+      hspf2Min: 10,
+      hspf2Max: 10.9,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-48000",
+      slug: "comfort-aire-a-series-wall-single-48000",
+      name: "A-series 48 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-series 48k",
+      normalizedModelNumber: "a-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 20.9,
+      seer2Max: 21.8,
+      hspf2Min: 9,
+      hspf2Max: 9.8,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-standard-wall-single-18000",
+      slug: "comfort-aire-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "comfort-aire-standard",
+      brandId: "comfort-aire",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMinBtu: 11200,
       heatingCapacity5FMaxBtu: 11500,
       seer2Min: null,
       seer2Max: null,
@@ -155,24 +346,133 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-ssp-series-wall-single",
-      slug: "comfort-aire-a-ssp-series-wall-single",
-      name: "A-SSP Series",
-      seriesId: "comfort-aire-a-ssp-series",
+      id: "comfort-aire-a-series-wall-single-15000",
+      slug: "comfort-aire-a-series-wall-single-15000",
+      name: "A-series 15 000 BTU",
+      seriesId: "comfort-aire-a-series",
       brandId: "comfort-aire",
-      modelNumber: "A-SSP Series",
-      normalizedModelNumber: "a-ssp-series",
+      modelNumber: "A-series 15k",
+      normalizedModelNumber: "a-series-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14200,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 12.3,
+      cop5FMin: 1.75,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-60000",
+      slug: "comfort-aire-a-series-wall-single-60000",
+      name: "A-series 60 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-series 60k",
+      normalizedModelNumber: "a-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 35200,
+      seer2Min: 18.8,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-standard-wall-single-9000",
+      slug: "comfort-aire-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "comfort-aire-standard",
+      brandId: "comfort-aire",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMaxBtu: 6900,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-standard-wall-single-12000",
+      slug: "comfort-aire-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "comfort-aire-standard",
+      brandId: "comfort-aire",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7700,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-ssp-series-wall-single-9000",
+      slug: "comfort-aire-a-ssp-series-wall-single-9000",
+      name: "A-SSP Series 9 000 BTU",
+      seriesId: "comfort-aire-a-ssp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-SSP Series 9k",
+      normalizedModelNumber: "a-ssp-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 8000,
-      heatingCapacity5FMaxBtu: 17100,
-      seer2Min: 17,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 19,
       seer2Max: 19,
-      hspf2Min: 8.5,
+      hspf2Min: 9.7,
       hspf2Max: 9.7,
-      cop5FMin: 2.01,
+      cop5FMin: 2.15,
       cop5FMax: 2.15,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -181,24 +481,52 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single",
-      slug: "comfort-aire-a-vhp-series-wall-single",
-      name: "A-VHP Series",
-      seriesId: "comfort-aire-a-vhp-series",
+      id: "comfort-aire-a-ssp-series-wall-single-24000",
+      slug: "comfort-aire-a-ssp-series-wall-single-24000",
+      name: "A-SSP Series 24 000 BTU",
+      seriesId: "comfort-aire-a-ssp-series",
       brandId: "comfort-aire",
-      modelNumber: "A-VHP Series",
-      normalizedModelNumber: "a-vhp-series",
+      modelNumber: "A-SSP Series 24k",
+      normalizedModelNumber: "a-ssp-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17100,
+      heatingCapacity5FMaxBtu: 17100,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 2.01,
+      cop5FMax: 2.01,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-6000",
+      slug: "comfort-aire-a-vhp-series-wall-single-6000",
+      name: "A-VHP Series 6 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP Series 6k",
+      normalizedModelNumber: "a-vhp-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 6000,
       heatingCapacity5FMinBtu: 7900,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 19,
-      seer2Max: 27.4,
-      hspf2Min: 9.5,
+      heatingCapacity5FMaxBtu: 7900,
+      seer2Min: 25.5,
+      seer2Max: 25.5,
+      hspf2Min: 14.8,
       hspf2Max: 14.8,
-      cop5FMin: 1.8,
+      cop5FMin: 2.39,
       cop5FMax: 2.39,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -207,23 +535,105 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-zhp-series-wall-single",
-      slug: "comfort-aire-a-zhp-series-wall-single",
-      name: "A-ZHP Series",
-      seriesId: "comfort-aire-a-zhp-series",
+      id: "comfort-aire-a-vhp-series-wall-single-9000",
+      slug: "comfort-aire-a-vhp-series-wall-single-9000",
+      name: "A-VHP Series 9 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
       brandId: "comfort-aire",
-      modelNumber: "A-ZHP Series",
-      normalizedModelNumber: "a-zhp-series",
+      modelNumber: "A-VHP Series 9k",
+      normalizedModelNumber: "a-vhp-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 11000,
-      heatingCapacity5FMaxBtu: 19300,
-      seer2Min: 25.6,
-      seer2Max: 35,
-      hspf2Min: 12.7,
-      hspf2Max: 16.2,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 27.4,
+      seer2Max: 27.4,
+      hspf2Min: 12.5,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-12000",
+      slug: "comfort-aire-a-vhp-series-wall-single-12000",
+      name: "A-VHP Series 12 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP Series 12k",
+      normalizedModelNumber: "a-vhp-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 25.4,
+      seer2Max: 25.4,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-18000",
+      slug: "comfort-aire-a-vhp-series-wall-single-18000",
+      name: "A-VHP Series 18 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP Series 18k",
+      normalizedModelNumber: "a-vhp-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 20,
+      seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 1.92,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-24000",
+      slug: "comfort-aire-a-vhp-series-wall-single-24000",
+      name: "A-VHP Series 24 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP Series 24k",
+      normalizedModelNumber: "a-vhp-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 21,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 13.5,
       cop5FMin: 2,
       cop5FMax: 2.34,
       systemType: "wall-single",
@@ -233,24 +643,214 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted",
-      slug: "comfort-aire-a-series-central-ducted",
-      name: "A series",
-      seriesId: "comfort-aire-a-series",
+      id: "comfort-aire-a-vhp-series-wall-single-30000",
+      slug: "comfort-aire-a-vhp-series-wall-single-30000",
+      name: "A-VHP Series 30 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
       brandId: "comfort-aire",
-      modelNumber: "A series",
-      normalizedModelNumber: "a-series",
+      modelNumber: "A-VHP Series 30k",
+      normalizedModelNumber: "a-vhp-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.98,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-zhp-series-wall-single-6000",
+      slug: "comfort-aire-a-zhp-series-wall-single-6000",
+      name: "A-ZHP Series 6 000 BTU",
+      seriesId: "comfort-aire-a-zhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-ZHP Series 6k",
+      normalizedModelNumber: "a-zhp-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 35,
+      seer2Max: 35,
+      hspf2Min: 15.6,
+      hspf2Max: 15.6,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-zhp-series-wall-single-9000",
+      slug: "comfort-aire-a-zhp-series-wall-single-9000",
+      name: "A-ZHP Series 9 000 BTU",
+      seriesId: "comfort-aire-a-zhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-ZHP Series 9k",
+      normalizedModelNumber: "a-zhp-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 33.3,
+      seer2Max: 33.3,
+      hspf2Min: 14.6,
+      hspf2Max: 14.6,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-zhp-series-wall-single-12000",
+      slug: "comfort-aire-a-zhp-series-wall-single-12000",
+      name: "A-ZHP Series 12 000 BTU",
+      seriesId: "comfort-aire-a-zhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-ZHP Series 12k",
+      normalizedModelNumber: "a-zhp-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 29.4,
+      seer2Max: 29.4,
+      hspf2Min: 12.7,
+      hspf2Max: 12.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-zhp-series-wall-single-18000",
+      slug: "comfort-aire-a-zhp-series-wall-single-18000",
+      name: "A-ZHP Series 18 000 BTU",
+      seriesId: "comfort-aire-a-zhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-ZHP Series 18k",
+      normalizedModelNumber: "a-zhp-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 13500,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 19300,
+      heatingCapacity5FMaxBtu: 19300,
+      seer2Min: 25.6,
+      seer2Max: 25.6,
+      hspf2Min: 16.2,
+      hspf2Max: 16.2,
+      cop5FMin: 2.34,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-36000",
+      slug: "comfort-aire-a-vhp-series-wall-single-36000",
+      name: "A-VHP Series 36 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP Series 36k",
+      normalizedModelNumber: "a-vhp-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.4,
+      seer2Max: 23,
+      hspf2Min: 10.4,
+      hspf2Max: 10.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-48000",
+      slug: "comfort-aire-a-vhp-series-wall-single-48000",
+      name: "A-VHP Series 48 000 BTU",
+      seriesId: "comfort-aire-a-vhp-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP Series 48k",
+      normalizedModelNumber: "a-vhp-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 44000,
       heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.2,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-18000",
+      slug: "comfort-aire-a-series-central-ducted-18000",
+      name: "A series 18 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A series 18k",
+      normalizedModelNumber: "a-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 15400,
+      seer2Min: 16.1,
       seer2Max: 19.3,
-      hspf2Min: 8.1,
+      hspf2Min: 9.3,
       hspf2Max: 10.8,
-      cop5FMin: 1.8,
+      cop5FMin: 2,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -259,15 +859,151 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vcd-series-central-ducted",
-      slug: "comfort-aire-a-vcd-series-central-ducted",
-      name: "A-VCD series",
-      seriesId: "comfort-aire-a-vcd-series",
+      id: "comfort-aire-a-series-central-ducted-24000",
+      slug: "comfort-aire-a-series-central-ducted-24000",
+      name: "A series 24 000 BTU",
+      seriesId: "comfort-aire-a-series",
       brandId: "comfort-aire",
-      modelNumber: "A-VCD series",
-      normalizedModelNumber: "a-vcd-series",
+      modelNumber: "A series 24k",
+      normalizedModelNumber: "a-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16900,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16,
+      seer2Max: 18.4,
+      hspf2Min: 9.3,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.96,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000",
+      slug: "comfort-aire-a-series-central-ducted-30000",
+      name: "A series 30 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A series 30k",
+      normalizedModelNumber: "a-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.3,
+      seer2Max: 17.5,
+      hspf2Min: 8.9,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-36000",
+      slug: "comfort-aire-a-series-central-ducted-36000",
+      name: "A series 36 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A series 36k",
+      normalizedModelNumber: "a-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 17.4,
+      hspf2Min: 9.4,
+      hspf2Max: 10.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-60000",
+      slug: "comfort-aire-a-series-central-ducted-60000",
+      name: "A series 60 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A series 60k",
+      normalizedModelNumber: "a-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000",
+      slug: "comfort-aire-a-series-central-ducted-48000",
+      name: "A series 48 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A series 48k",
+      normalizedModelNumber: "a-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 16.5,
+      hspf2Min: 8.1,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vcd-series-central-ducted-30000",
+      slug: "comfort-aire-a-vcd-series-central-ducted-30000",
+      name: "A-VCD series 30 000 BTU",
+      seriesId: "comfort-aire-a-vcd-series",
+      brandId: "comfort-aire",
+      modelNumber: "A-VCD series 30k",
+      normalizedModelNumber: "a-vcd-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 29000,
       coolingCapacityMaxBtu: 29000,
       heatingCapacity5FMinBtu: 19600,
@@ -285,15 +1021,16 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-mcd-series-central-ducted",
-      slug: "comfort-aire-mcd-series-central-ducted",
-      name: "MCD series",
+      id: "comfort-aire-mcd-series-central-ducted-36000",
+      slug: "comfort-aire-mcd-series-central-ducted-36000",
+      name: "MCD series 36 000 BTU",
       seriesId: "comfort-aire-mcd-series",
       brandId: "comfort-aire",
-      modelNumber: "MCD series",
-      normalizedModelNumber: "mcd-series",
+      modelNumber: "MCD series 36k",
+      normalizedModelNumber: "mcd-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 35000,
       coolingCapacityMaxBtu: 35000,
       heatingCapacity5FMinBtu: 27400,
@@ -311,27 +1048,136 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-central-ducted",
-      slug: "comfort-aire-a-vhp-central-ducted",
-      name: "A-VHP",
+      id: "comfort-aire-a-vhp-central-ducted-18000",
+      slug: "comfort-aire-a-vhp-central-ducted-18000",
+      name: "A-VHP 18 000 BTU",
       seriesId: "comfort-aire-a-vhp",
       brandId: "comfort-aire",
-      modelNumber: "A-VHP",
-      normalizedModelNumber: "a-vhp",
+      modelNumber: "A-VHP 18k",
+      normalizedModelNumber: "a-vhp-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 33000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 14000,
-      heatingCapacity5FMaxBtu: 27400,
-      seer2Min: 16.5,
-      seer2Max: 18.7,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 18,
+      seer2Max: 18,
       hspf2Min: 10,
       hspf2Max: 10,
-      cop5FMin: 2,
+      cop5FMin: 2.2,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-central-ducted-24000",
+      slug: "comfort-aire-a-vhp-central-ducted-24000",
+      name: "A-VHP 24 000 BTU",
+      seriesId: "comfort-aire-a-vhp",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP 24k",
+      normalizedModelNumber: "a-vhp-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 16900,
+      heatingCapacity5FMaxBtu: 16900,
+      seer2Min: 18.7,
+      seer2Max: 18.7,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-central-ducted-30000",
+      slug: "comfort-aire-a-vhp-central-ducted-30000",
+      name: "A-VHP 30 000 BTU",
+      seriesId: "comfort-aire-a-vhp",
+      brandId: "comfort-aire",
+      modelNumber: "A-VHP 30k",
+      normalizedModelNumber: "a-vhp-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-42000",
+      slug: "comfort-aire-a-series-central-ducted-42000",
+      name: "A Series 42 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A Series 42k",
+      normalizedModelNumber: "a-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-20000",
+      slug: "comfort-aire-a-series-wall-single-20000",
+      name: "A Series 20 000 BTU",
+      seriesId: "comfort-aire-a-series",
+      brandId: "comfort-aire",
+      modelNumber: "A Series 20k",
+      normalizedModelNumber: "a-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 20.4,
+      seer2Max: 20.4,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -345,50 +1191,14 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "comfort-aire-a-vhp06sa-1",
+      modelNumber: "A-VHP06SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
       id: "comfort-aire-a-vmh09sv-1",
       modelNumber: "A-VMH09SV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh12sv-1",
-      modelNumber: "A-VMH12SV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh18sv-1",
-      modelNumber: "A-VMH18SV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh24sv-1",
-      modelNumber: "A-VMH24SV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh18dv-1",
-      modelNumber: "A-VMH18DV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh28tv-1",
-      modelNumber: "A-VMH28TV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh36qv-1",
-      modelNumber: "A-VMH36QV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh48pv-1",
-      modelNumber: "A-VMH48PV-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -405,56 +1215,14 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-vmh18su-1a",
-      modelNumber: "A-VMH18SU-1A",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh24su-1",
-      modelNumber: "A-VMH24SU-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-kmh18su-1",
-      modelNumber: "A-KMH18SU-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-kmh24su-1",
-      modelNumber: "A-KMH24SU-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh55pv-1",
-      modelNumber: "A-VMH55PV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh33sv-1",
-      modelNumber: "A-VMH33SV-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vmh36qv-1a",
-      modelNumber: "A-VMH36QV-1A",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vhp06sa-1",
-      modelNumber: "A-VHP06SA-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
       id: "comfort-aire-a-vhp09sa-1",
       modelNumber: "A-VHP09SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh12sv-1",
+      modelNumber: "A-VMH12SV-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -465,8 +1233,50 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "comfort-aire-a-vmh18sv-1",
+      modelNumber: "A-VMH18SV-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh18dv-1",
+      modelNumber: "A-VMH18DV-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh18su-1a",
+      modelNumber: "A-VMH18SU-1A",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-kmh18su-1",
+      modelNumber: "A-KMH18SU-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
       id: "comfort-aire-a-vhp18sa-1",
       modelNumber: "A-VHP18SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh24sv-1",
+      modelNumber: "A-VMH24SV-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh24su-1",
+      modelNumber: "A-VMH24SU-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-kmh24su-1",
+      modelNumber: "A-KMH24SU-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -477,8 +1287,50 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "comfort-aire-a-vmh28tv-1",
+      modelNumber: "A-VMH28TV-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh33sv-1",
+      modelNumber: "A-VMH33SV-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh36qv-1",
+      modelNumber: "A-VMH36QV-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh36qv-1a",
+      modelNumber: "A-VMH36QV-1A",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh48pv-1",
+      modelNumber: "A-VMH48PV-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
       id: "comfort-aire-a-dvh18sh-1",
       modelNumber: "A-DVH18SH-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-ssp18sa-1",
+      modelNumber: "A-SSP18SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vmh55pv-1",
+      modelNumber: "A-VMH55PV-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -501,12 +1353,6 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-ssp18sa-1",
-      modelNumber: "A-SSP18SA-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
       id: "comfort-aire-a-ssp09sa-1",
       modelNumber: "A-SSP09SA-1",
       brandId: "comfort-aire",
@@ -515,12 +1361,6 @@ export const comfortaireDataset: BrandDataset = {
     {
       id: "comfort-aire-a-ssp24sa-1",
       modelNumber: "A-SSP24SA-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vhp33sa-1",
-      modelNumber: "A-VHP33SA-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -537,20 +1377,8 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-vhp365a-1",
-      modelNumber: "A-VHP365A-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vhp486a-1",
-      modelNumber: "A-VHP486A-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vhp556a-1",
-      modelNumber: "A-VHP556A-1",
+      id: "comfort-aire-a-vhp33sa-1",
+      modelNumber: "A-VHP33SA-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -579,26 +1407,20 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-vcd30sa-1",
-      modelNumber: "A-VCD30SA-1",
+      id: "comfort-aire-a-vhp365a-1",
+      modelNumber: "A-VHP365A-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-vcd36sa-1",
-      modelNumber: "A-VCD36SA-1",
+      id: "comfort-aire-a-vhp486a-1",
+      modelNumber: "A-VHP486A-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-vcd60sa-1",
-      modelNumber: "A-VCD60SA-1",
-      brandId: "comfort-aire",
-      refrigerant: null as any,
-    },
-    {
-      id: "comfort-aire-a-vcd24sa-1",
-      modelNumber: "A-VCD24SA-1",
+      id: "comfort-aire-a-vhp556a-1",
+      modelNumber: "A-VHP556A-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -609,14 +1431,14 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-vcd48sa-1",
-      modelNumber: "A-VCD48SA-1",
+      id: "comfort-aire-a-vxp18sa-1",
+      modelNumber: "A-VXP18SA-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
     {
-      id: "comfort-aire-a-vxp18sa-1",
-      modelNumber: "A-VXP18SA-1",
+      id: "comfort-aire-a-vcd24sa-1",
+      modelNumber: "A-VCD24SA-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -627,14 +1449,38 @@ export const comfortaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "comfort-aire-a-vcd30sa-1",
+      modelNumber: "A-VCD30SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
       id: "comfort-aire-a-vxp30sa-1",
       modelNumber: "A-VXP30SA-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
     {
+      id: "comfort-aire-a-vcd36sa-1",
+      modelNumber: "A-VCD36SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
       id: "comfort-aire-a-vxp36sa-1",
       modelNumber: "A-VXP36SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vcd60sa-1",
+      modelNumber: "A-VCD60SA-1",
+      brandId: "comfort-aire",
+      refrigerant: null as any,
+    },
+    {
+      id: "comfort-aire-a-vcd48sa-1",
+      modelNumber: "A-VCD48SA-1",
       brandId: "comfort-aire",
       refrigerant: null as any,
     },
@@ -656,9 +1502,9 @@ export const comfortaireDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "comfort-aire-a-series-wall-single-cfg-1",
-      slug: "comfort-aire-a-series-wall-single-cfg-1",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-6000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-6000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-6000",
       outdoorUnitId: "comfort-aire-a-vmh06sv-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -670,569 +1516,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-2",
-      slug: "comfort-aire-a-series-wall-single-cfg-2",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh09sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 28.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-3",
-      slug: "comfort-aire-a-series-wall-single-cfg-3",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-4",
-      slug: "comfort-aire-a-series-wall-single-cfg-4",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-5",
-      slug: "comfort-aire-a-series-wall-single-cfg-5",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-6",
-      slug: "comfort-aire-a-series-wall-single-cfg-6",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-7",
-      slug: "comfort-aire-a-series-wall-single-cfg-7",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18dv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 19,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-8",
-      slug: "comfort-aire-a-series-wall-single-cfg-8",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18dv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 22,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-9",
-      slug: "comfort-aire-a-series-wall-single-cfg-9",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18dv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20.5,
-      hspf2: 9.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-10",
-      slug: "comfort-aire-a-series-wall-single-cfg-10",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh28tv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 23,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-11",
-      slug: "comfort-aire-a-series-wall-single-cfg-11",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh28tv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-12",
-      slug: "comfort-aire-a-series-wall-single-cfg-12",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh36qv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.2,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-13",
-      slug: "comfort-aire-a-series-wall-single-cfg-13",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh48pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.8,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-14",
-      slug: "comfort-aire-a-series-wall-single-cfg-14",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh48pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-15",
-      slug: "comfort-aire-a-series-wall-single-cfg-15",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-dvh09sh-0",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-16",
-      slug: "comfort-aire-a-series-wall-single-cfg-16",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-dvh09sh-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.7,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-17",
-      slug: "comfort-aire-a-series-wall-single-cfg-17",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-18",
-      slug: "comfort-aire-a-series-wall-single-cfg-18",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh24su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-19",
-      slug: "comfort-aire-a-series-wall-single-cfg-19",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-kmh18su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-20",
-      slug: "comfort-aire-a-series-wall-single-cfg-20",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-kmh24su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-21",
-      slug: "comfort-aire-a-series-wall-single-cfg-21",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-22",
-      slug: "comfort-aire-a-series-wall-single-cfg-22",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-23",
-      slug: "comfort-aire-a-series-wall-single-cfg-23",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-24",
-      slug: "comfort-aire-a-series-wall-single-cfg-24",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-25",
-      slug: "comfort-aire-a-series-wall-single-cfg-25",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh09sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-26",
-      slug: "comfort-aire-a-series-wall-single-cfg-26",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.6,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-27",
-      slug: "comfort-aire-a-series-wall-single-cfg-27",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-28",
-      slug: "comfort-aire-a-series-wall-single-cfg-28",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 20.5,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-29",
-      slug: "comfort-aire-a-series-wall-single-cfg-29",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh09sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.2,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-30",
-      slug: "comfort-aire-a-series-wall-single-cfg-30",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-31",
-      slug: "comfort-aire-a-series-wall-single-cfg-31",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.2,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-32",
-      slug: "comfort-aire-a-series-wall-single-cfg-32",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh55pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 22,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-33",
-      slug: "comfort-aire-a-series-wall-single-cfg-33",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh55pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 18.8,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-34",
-      slug: "comfort-aire-a-series-wall-single-cfg-34",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh55pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 20.4,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-35",
-      slug: "comfort-aire-a-series-wall-single-cfg-35",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh33sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-36",
-      slug: "comfort-aire-a-series-wall-single-cfg-36",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh36qv-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.4,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-37",
-      slug: "comfort-aire-a-series-wall-single-cfg-37",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh36qv-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-38",
-      slug: "comfort-aire-a-series-wall-single-cfg-38",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh36qv-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.9,
-      hspf2: 10.45,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-39",
-      slug: "comfort-aire-a-series-wall-single-cfg-39",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh28tv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21.5,
-      hspf2: 10.05,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-40",
-      slug: "comfort-aire-a-series-wall-single-cfg-40",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh48pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.35,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-41",
-      slug: "comfort-aire-a-series-wall-single-cfg-41",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vmh36qv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.6,
-      hspf2: 10.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-42",
-      slug: "comfort-aire-a-series-wall-single-cfg-42",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-6000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-6000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-6000",
       outdoorUnitId: "comfort-aire-a-vhp06sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6500,
@@ -1244,9 +1530,79 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-43",
-      slug: "comfort-aire-a-series-wall-single-cfg-43",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-9000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-9000",
+      outdoorUnitId: "comfort-aire-a-vmh09sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-9000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-9000",
+      outdoorUnitId: "comfort-aire-a-dvh09sh-0",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-9000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-9000",
+      outdoorUnitId: "comfort-aire-a-dvh09sh-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-9000-cfg-4",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-4",
+      modelId: "comfort-aire-a-series-wall-single-9000",
+      outdoorUnitId: "comfort-aire-a-vmh09sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-9000-cfg-5",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-5",
+      modelId: "comfort-aire-a-series-wall-single-9000",
+      outdoorUnitId: "comfort-aire-a-vmh09sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.2,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-9000-cfg-6",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-6",
+      modelId: "comfort-aire-a-series-wall-single-9000",
       outdoorUnitId: "comfort-aire-a-vhp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1258,9 +1614,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-44",
-      slug: "comfort-aire-a-series-wall-single-cfg-44",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-9000-cfg-7",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-7",
+      modelId: "comfort-aire-a-series-wall-single-9000",
       outdoorUnitId: "comfort-aire-a-vhp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1272,9 +1628,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-45",
-      slug: "comfort-aire-a-series-wall-single-cfg-45",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-9000-cfg-8",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-8",
+      modelId: "comfort-aire-a-series-wall-single-9000",
       outdoorUnitId: "comfort-aire-a-vhp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1286,9 +1642,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-46",
-      slug: "comfort-aire-a-series-wall-single-cfg-46",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-9000-cfg-9",
+      slug: "comfort-aire-a-series-wall-single-9000-cfg-9",
+      modelId: "comfort-aire-a-series-wall-single-9000",
       outdoorUnitId: "comfort-aire-a-vhp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1300,9 +1656,79 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-47",
-      slug: "comfort-aire-a-series-wall-single-cfg-47",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-12000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-12000",
+      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-12000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-12000",
+      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-12000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-12000",
+      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.6,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-12000-cfg-4",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-4",
+      modelId: "comfort-aire-a-series-wall-single-12000",
+      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-12000-cfg-5",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-5",
+      modelId: "comfort-aire-a-series-wall-single-12000",
+      outdoorUnitId: "comfort-aire-a-vmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.2,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-12000-cfg-6",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-6",
+      modelId: "comfort-aire-a-series-wall-single-12000",
       outdoorUnitId: "comfort-aire-a-vhp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1314,9 +1740,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-48",
-      slug: "comfort-aire-a-series-wall-single-cfg-48",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-12000-cfg-7",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-7",
+      modelId: "comfort-aire-a-series-wall-single-12000",
       outdoorUnitId: "comfort-aire-a-vhp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1328,9 +1754,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-49",
-      slug: "comfort-aire-a-series-wall-single-cfg-49",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-12000-cfg-8",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-8",
+      modelId: "comfort-aire-a-series-wall-single-12000",
       outdoorUnitId: "comfort-aire-a-vhp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1342,9 +1768,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-50",
-      slug: "comfort-aire-a-series-wall-single-cfg-50",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-12000-cfg-9",
+      slug: "comfort-aire-a-series-wall-single-12000-cfg-9",
+      modelId: "comfort-aire-a-series-wall-single-12000",
       outdoorUnitId: "comfort-aire-a-vhp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1356,9 +1782,121 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-51",
-      slug: "comfort-aire-a-series-wall-single-cfg-51",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-18000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-vmh18dv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-vmh18dv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 22,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-4",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-4",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-vmh18dv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 9.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-5",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-5",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-vmh18su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-6",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-6",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-kmh18su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-7",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-7",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-8",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-8",
+      modelId: "comfort-aire-a-series-wall-single-18000",
+      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-18000-cfg-9",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-9",
+      modelId: "comfort-aire-a-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-vhp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16700,
@@ -1370,37 +1908,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-52",
-      slug: "comfort-aire-a-series-wall-single-cfg-52",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-53",
-      slug: "comfort-aire-a-series-wall-single-cfg-53",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-54",
-      slug: "comfort-aire-a-series-wall-single-cfg-54",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-18000-cfg-10",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-10",
+      modelId: "comfort-aire-a-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-vhp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1412,9 +1922,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-55",
-      slug: "comfort-aire-a-series-wall-single-cfg-55",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-18000-cfg-11",
+      slug: "comfort-aire-a-series-wall-single-18000-cfg-11",
+      modelId: "comfort-aire-a-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-vhp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -1426,9 +1936,93 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-56",
-      slug: "comfort-aire-a-series-wall-single-cfg-56",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-24000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-24000",
+      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-24000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-24000",
+      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-24000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-24000",
+      outdoorUnitId: "comfort-aire-a-vmh24su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-24000-cfg-4",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-4",
+      modelId: "comfort-aire-a-series-wall-single-24000",
+      outdoorUnitId: "comfort-aire-a-kmh24su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-24000-cfg-5",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-5",
+      modelId: "comfort-aire-a-series-wall-single-24000",
+      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-24000-cfg-6",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-6",
+      modelId: "comfort-aire-a-series-wall-single-24000",
+      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 20.5,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-24000-cfg-7",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-7",
+      modelId: "comfort-aire-a-series-wall-single-24000",
       outdoorUnitId: "comfort-aire-a-vhp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23400,
@@ -1440,23 +2034,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-wall-single-cfg-57",
-      slug: "comfort-aire-a-series-wall-single-cfg-57",
-      modelId: "comfort-aire-a-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.4,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-wall-single-cfg-58",
-      slug: "comfort-aire-a-series-wall-single-cfg-58",
-      modelId: "comfort-aire-a-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-24000-cfg-8",
+      slug: "comfort-aire-a-series-wall-single-24000-cfg-8",
+      modelId: "comfort-aire-a-series-wall-single-24000",
       outdoorUnitId: "comfort-aire-a-vhp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1468,9 +2048,177 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-standard-wall-single-cfg-1",
-      slug: "comfort-aire-standard-wall-single-cfg-1",
-      modelId: "comfort-aire-standard-wall-single",
+      id: "comfort-aire-a-series-wall-single-30000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-30000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-30000",
+      outdoorUnitId: "comfort-aire-a-vmh28tv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 23,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-30000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-30000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-30000",
+      outdoorUnitId: "comfort-aire-a-vmh28tv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-30000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-30000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-30000",
+      outdoorUnitId: "comfort-aire-a-vmh33sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-30000-cfg-4",
+      slug: "comfort-aire-a-series-wall-single-30000-cfg-4",
+      modelId: "comfort-aire-a-series-wall-single-30000",
+      outdoorUnitId: "comfort-aire-a-vmh28tv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.5,
+      hspf2: 10.05,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-36000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-36000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vmh36qv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-36000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-36000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vmh36qv-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.4,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-36000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-36000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vmh36qv-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-36000-cfg-4",
+      slug: "comfort-aire-a-series-wall-single-36000-cfg-4",
+      modelId: "comfort-aire-a-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vmh36qv-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.9,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-36000-cfg-5",
+      slug: "comfort-aire-a-series-wall-single-36000-cfg-5",
+      modelId: "comfort-aire-a-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vmh36qv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.6,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-48000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-48000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vmh48pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.8,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-48000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-48000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vmh48pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-48000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-48000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vmh48pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.35,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-standard-wall-single-18000-cfg-1",
+      slug: "comfort-aire-standard-wall-single-18000-cfg-1",
+      modelId: "comfort-aire-standard-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-dvh18sh-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1482,51 +2230,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-standard-wall-single-cfg-2",
-      slug: "comfort-aire-standard-wall-single-cfg-2",
-      modelId: "comfort-aire-standard-wall-single",
-      outdoorUnitId: "comfort-aire-a-ssp09sa-0",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-standard-wall-single-cfg-3",
-      slug: "comfort-aire-standard-wall-single-cfg-3",
-      modelId: "comfort-aire-standard-wall-single",
-      outdoorUnitId: "comfort-aire-a-ssp12sa-0",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-standard-wall-single-cfg-4",
-      slug: "comfort-aire-standard-wall-single-cfg-4",
-      modelId: "comfort-aire-standard-wall-single",
-      outdoorUnitId: "comfort-aire-a-ssp12sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-standard-wall-single-cfg-5",
-      slug: "comfort-aire-standard-wall-single-cfg-5",
-      modelId: "comfort-aire-standard-wall-single",
+      id: "comfort-aire-standard-wall-single-18000-cfg-2",
+      slug: "comfort-aire-standard-wall-single-18000-cfg-2",
+      modelId: "comfort-aire-standard-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-ssp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -1538,9 +2244,135 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-ssp-series-wall-single-cfg-1",
-      slug: "comfort-aire-a-ssp-series-wall-single-cfg-1",
-      modelId: "comfort-aire-a-ssp-series-wall-single",
+      id: "comfort-aire-a-series-wall-single-15000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-15000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-15000",
+      outdoorUnitId: "comfort-aire-a-vmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-15000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-15000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-15000",
+      outdoorUnitId: "comfort-aire-a-vhp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-15000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-15000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-15000",
+      outdoorUnitId: "comfort-aire-a-vhp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-60000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-60000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-60000",
+      outdoorUnitId: "comfort-aire-a-vmh55pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-60000-cfg-2",
+      slug: "comfort-aire-a-series-wall-single-60000-cfg-2",
+      modelId: "comfort-aire-a-series-wall-single-60000",
+      outdoorUnitId: "comfort-aire-a-vmh55pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-60000-cfg-3",
+      slug: "comfort-aire-a-series-wall-single-60000-cfg-3",
+      modelId: "comfort-aire-a-series-wall-single-60000",
+      outdoorUnitId: "comfort-aire-a-vmh55pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 20.4,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-standard-wall-single-9000-cfg-1",
+      slug: "comfort-aire-standard-wall-single-9000-cfg-1",
+      modelId: "comfort-aire-standard-wall-single-9000",
+      outdoorUnitId: "comfort-aire-a-ssp09sa-0",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-standard-wall-single-12000-cfg-1",
+      slug: "comfort-aire-standard-wall-single-12000-cfg-1",
+      modelId: "comfort-aire-standard-wall-single-12000",
+      outdoorUnitId: "comfort-aire-a-ssp12sa-0",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-standard-wall-single-12000-cfg-2",
+      slug: "comfort-aire-standard-wall-single-12000-cfg-2",
+      modelId: "comfort-aire-standard-wall-single-12000",
+      outdoorUnitId: "comfort-aire-a-ssp12sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-ssp-series-wall-single-9000-cfg-1",
+      slug: "comfort-aire-a-ssp-series-wall-single-9000-cfg-1",
+      modelId: "comfort-aire-a-ssp-series-wall-single-9000",
       outdoorUnitId: "comfort-aire-a-ssp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1552,9 +2384,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-ssp-series-wall-single-cfg-2",
-      slug: "comfort-aire-a-ssp-series-wall-single-cfg-2",
-      modelId: "comfort-aire-a-ssp-series-wall-single",
+      id: "comfort-aire-a-ssp-series-wall-single-24000-cfg-1",
+      slug: "comfort-aire-a-ssp-series-wall-single-24000-cfg-1",
+      modelId: "comfort-aire-a-ssp-series-wall-single-24000",
       outdoorUnitId: "comfort-aire-a-ssp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1566,9 +2398,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-1",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-1",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-6000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-6000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-6000",
       outdoorUnitId: "comfort-aire-a-vhp06sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -1580,9 +2412,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-2",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-2",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-9000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-9000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-9000",
       outdoorUnitId: "comfort-aire-a-vhp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1594,9 +2426,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-3",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-3",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-12000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-12000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-12000",
       outdoorUnitId: "comfort-aire-a-vhp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1608,9 +2440,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-4",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-4",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-18000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-18000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-vhp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1622,37 +2454,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-5",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-5",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-6",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-6",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp33sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-7",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-7",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-18000-cfg-2",
+      slug: "comfort-aire-a-vhp-series-wall-single-18000-cfg-2",
+      modelId: "comfort-aire-a-vhp-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-vhp183a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1664,9 +2468,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-8",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-8",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-18000-cfg-3",
+      slug: "comfort-aire-a-vhp-series-wall-single-18000-cfg-3",
+      modelId: "comfort-aire-a-vhp-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-vhp183a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1678,9 +2482,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-9",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-9",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-18000-cfg-4",
+      slug: "comfort-aire-a-vhp-series-wall-single-18000-cfg-4",
+      modelId: "comfort-aire-a-vhp-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-vhp183a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1692,9 +2496,23 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-10",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-10",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-24000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-24000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-24000",
+      outdoorUnitId: "comfort-aire-a-vhp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-24000-cfg-2",
+      slug: "comfort-aire-a-vhp-series-wall-single-24000-cfg-2",
+      modelId: "comfort-aire-a-vhp-series-wall-single-24000",
       outdoorUnitId: "comfort-aire-a-vhp284a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -1706,9 +2524,23 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-11",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-11",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-30000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-30000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-30000",
+      outdoorUnitId: "comfort-aire-a-vhp33sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-30000-cfg-2",
+      slug: "comfort-aire-a-vhp-series-wall-single-30000-cfg-2",
+      modelId: "comfort-aire-a-vhp-series-wall-single-30000",
       outdoorUnitId: "comfort-aire-a-vhp284a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1720,9 +2552,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-12",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-12",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
+      id: "comfort-aire-a-vhp-series-wall-single-30000-cfg-3",
+      slug: "comfort-aire-a-vhp-series-wall-single-30000-cfg-3",
+      modelId: "comfort-aire-a-vhp-series-wall-single-30000",
       outdoorUnitId: "comfort-aire-a-vhp284a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -1734,135 +2566,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-13",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-13",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp365a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-14",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-14",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp365a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-15",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-15",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp365a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.2,
-      hspf2: 10.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-16",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-16",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp486a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-17",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-17",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp486a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-18",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-18",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp486a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-19",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-19",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp556a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
-      seer2: 22.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-20",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-20",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp556a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 20,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-vhp-series-wall-single-cfg-21",
-      slug: "comfort-aire-a-vhp-series-wall-single-cfg-21",
-      modelId: "comfort-aire-a-vhp-series-wall-single",
-      outdoorUnitId: "comfort-aire-a-vhp556a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 21.1,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-zhp-series-wall-single-cfg-1",
-      slug: "comfort-aire-a-zhp-series-wall-single-cfg-1",
-      modelId: "comfort-aire-a-zhp-series-wall-single",
+      id: "comfort-aire-a-zhp-series-wall-single-6000-cfg-1",
+      slug: "comfort-aire-a-zhp-series-wall-single-6000-cfg-1",
+      modelId: "comfort-aire-a-zhp-series-wall-single-6000",
       outdoorUnitId: "comfort-aire-a-zhp06sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -1874,9 +2580,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-zhp-series-wall-single-cfg-2",
-      slug: "comfort-aire-a-zhp-series-wall-single-cfg-2",
-      modelId: "comfort-aire-a-zhp-series-wall-single",
+      id: "comfort-aire-a-zhp-series-wall-single-9000-cfg-1",
+      slug: "comfort-aire-a-zhp-series-wall-single-9000-cfg-1",
+      modelId: "comfort-aire-a-zhp-series-wall-single-9000",
       outdoorUnitId: "comfort-aire-a-zhpo9sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1888,9 +2594,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-zhp-series-wall-single-cfg-3",
-      slug: "comfort-aire-a-zhp-series-wall-single-cfg-3",
-      modelId: "comfort-aire-a-zhp-series-wall-single",
+      id: "comfort-aire-a-zhp-series-wall-single-12000-cfg-1",
+      slug: "comfort-aire-a-zhp-series-wall-single-12000-cfg-1",
+      modelId: "comfort-aire-a-zhp-series-wall-single-12000",
       outdoorUnitId: "comfort-aire-a-zhp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1902,9 +2608,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-zhp-series-wall-single-cfg-4",
-      slug: "comfort-aire-a-zhp-series-wall-single-cfg-4",
-      modelId: "comfort-aire-a-zhp-series-wall-single",
+      id: "comfort-aire-a-zhp-series-wall-single-18000-cfg-1",
+      slug: "comfort-aire-a-zhp-series-wall-single-18000-cfg-1",
+      modelId: "comfort-aire-a-zhp-series-wall-single-18000",
       outdoorUnitId: "comfort-aire-a-zhp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1916,9 +2622,135 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-1",
-      slug: "comfort-aire-a-series-central-ducted-cfg-1",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-vhp-series-wall-single-36000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-36000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vhp365a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-36000-cfg-2",
+      slug: "comfort-aire-a-vhp-series-wall-single-36000-cfg-2",
+      modelId: "comfort-aire-a-vhp-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vhp365a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-36000-cfg-3",
+      slug: "comfort-aire-a-vhp-series-wall-single-36000-cfg-3",
+      modelId: "comfort-aire-a-vhp-series-wall-single-36000",
+      outdoorUnitId: "comfort-aire-a-vhp365a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.2,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-48000-cfg-1",
+      slug: "comfort-aire-a-vhp-series-wall-single-48000-cfg-1",
+      modelId: "comfort-aire-a-vhp-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vhp486a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-48000-cfg-2",
+      slug: "comfort-aire-a-vhp-series-wall-single-48000-cfg-2",
+      modelId: "comfort-aire-a-vhp-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vhp486a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-48000-cfg-3",
+      slug: "comfort-aire-a-vhp-series-wall-single-48000-cfg-3",
+      modelId: "comfort-aire-a-vhp-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vhp486a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.7,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-48000-cfg-4",
+      slug: "comfort-aire-a-vhp-series-wall-single-48000-cfg-4",
+      modelId: "comfort-aire-a-vhp-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vhp556a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 22.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-48000-cfg-5",
+      slug: "comfort-aire-a-vhp-series-wall-single-48000-cfg-5",
+      modelId: "comfort-aire-a-vhp-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vhp556a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vhp-series-wall-single-48000-cfg-6",
+      slug: "comfort-aire-a-vhp-series-wall-single-48000-cfg-6",
+      modelId: "comfort-aire-a-vhp-series-wall-single-48000",
+      outdoorUnitId: "comfort-aire-a-vhp556a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 21.1,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-1",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-1",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vmh18sv-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1930,79 +2762,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-2",
-      slug: "comfort-aire-a-series-central-ducted-cfg-2",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 18.4,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-3",
-      slug: "comfort-aire-a-series-central-ducted-cfg-3",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-4",
-      slug: "comfort-aire-a-series-central-ducted-cfg-4",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-5",
-      slug: "comfort-aire-a-series-central-ducted-cfg-5",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd60sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-6",
-      slug: "comfort-aire-a-series-central-ducted-cfg-6",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-7",
-      slug: "comfort-aire-a-series-central-ducted-cfg-7",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-2",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-2",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vcd18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2014,9 +2776,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-8",
-      slug: "comfort-aire-a-series-central-ducted-cfg-8",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-3",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-3",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vcd18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2028,93 +2790,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-9",
-      slug: "comfort-aire-a-series-central-ducted-cfg-9",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-10",
-      slug: "comfort-aire-a-series-central-ducted-cfg-10",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-11",
-      slug: "comfort-aire-a-series-central-ducted-cfg-11",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-12",
-      slug: "comfort-aire-a-series-central-ducted-cfg-12",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-13",
-      slug: "comfort-aire-a-series-central-ducted-cfg-13",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-14",
-      slug: "comfort-aire-a-series-central-ducted-cfg-14",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd60sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-15",
-      slug: "comfort-aire-a-series-central-ducted-cfg-15",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-4",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-4",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vcd18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2126,79 +2804,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-16",
-      slug: "comfort-aire-a-series-central-ducted-cfg-16",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-17",
-      slug: "comfort-aire-a-series-central-ducted-cfg-17",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-18",
-      slug: "comfort-aire-a-series-central-ducted-cfg-18",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-19",
-      slug: "comfort-aire-a-series-central-ducted-cfg-19",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-20",
-      slug: "comfort-aire-a-series-central-ducted-cfg-20",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vcd60sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-21",
-      slug: "comfort-aire-a-series-central-ducted-cfg-21",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-5",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-5",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vxp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2210,79 +2818,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-22",
-      slug: "comfort-aire-a-series-central-ducted-cfg-22",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 18.3,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-23",
-      slug: "comfort-aire-a-series-central-ducted-cfg-23",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.8,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-24",
-      slug: "comfort-aire-a-series-central-ducted-cfg-24",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 17.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-25",
-      slug: "comfort-aire-a-series-central-ducted-cfg-25",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-26",
-      slug: "comfort-aire-a-series-central-ducted-cfg-26",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp60sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 16,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-27",
-      slug: "comfort-aire-a-series-central-ducted-cfg-27",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-6",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-6",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vxp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2294,23 +2832,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-28",
-      slug: "comfort-aire-a-series-central-ducted-cfg-28",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-29",
-      slug: "comfort-aire-a-series-central-ducted-cfg-29",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-7",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-7",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vxp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2322,149 +2846,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-30",
-      slug: "comfort-aire-a-series-central-ducted-cfg-30",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-31",
-      slug: "comfort-aire-a-series-central-ducted-cfg-31",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.3,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-32",
-      slug: "comfort-aire-a-series-central-ducted-cfg-32",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 16,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-33",
-      slug: "comfort-aire-a-series-central-ducted-cfg-33",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-34",
-      slug: "comfort-aire-a-series-central-ducted-cfg-34",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 16,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-35",
-      slug: "comfort-aire-a-series-central-ducted-cfg-35",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-36",
-      slug: "comfort-aire-a-series-central-ducted-cfg-36",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-37",
-      slug: "comfort-aire-a-series-central-ducted-cfg-37",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp60sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 16,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-38",
-      slug: "comfort-aire-a-series-central-ducted-cfg-38",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp60sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.2,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-39",
-      slug: "comfort-aire-a-series-central-ducted-cfg-39",
-      modelId: "comfort-aire-a-series-central-ducted",
-      outdoorUnitId: "comfort-aire-a-vxp48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "comfort-aire-a-series-central-ducted-cfg-40",
-      slug: "comfort-aire-a-series-central-ducted-cfg-40",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-18000-cfg-8",
+      slug: "comfort-aire-a-series-central-ducted-18000-cfg-8",
+      modelId: "comfort-aire-a-series-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vxp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2476,9 +2860,107 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-41",
-      slug: "comfort-aire-a-series-central-ducted-cfg-41",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-1",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-1",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
+      outdoorUnitId: "comfort-aire-a-vmh24sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.4,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-2",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-2",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
+      outdoorUnitId: "comfort-aire-a-vcd24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-3",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-3",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
+      outdoorUnitId: "comfort-aire-a-vcd24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-4",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-4",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
+      outdoorUnitId: "comfort-aire-a-vcd24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-5",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-5",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
+      outdoorUnitId: "comfort-aire-a-vxp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-6",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-6",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
+      outdoorUnitId: "comfort-aire-a-vxp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-7",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-7",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
+      outdoorUnitId: "comfort-aire-a-vxp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-24000-cfg-8",
+      slug: "comfort-aire-a-series-central-ducted-24000-cfg-8",
+      modelId: "comfort-aire-a-series-central-ducted-24000",
       outdoorUnitId: "comfort-aire-a-vxp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2490,9 +2972,107 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-42",
-      slug: "comfort-aire-a-series-central-ducted-cfg-42",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-1",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-1",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
+      outdoorUnitId: "comfort-aire-a-vcd30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-2",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-2",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
+      outdoorUnitId: "comfort-aire-a-vcd30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-3",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-3",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
+      outdoorUnitId: "comfort-aire-a-vcd30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-4",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-4",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
+      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-5",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-5",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
+      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.3,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-6",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-6",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
+      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-7",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-7",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
+      outdoorUnitId: "comfort-aire-a-vxp30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-30000-cfg-8",
+      slug: "comfort-aire-a-series-central-ducted-30000-cfg-8",
+      modelId: "comfort-aire-a-series-central-ducted-30000",
       outdoorUnitId: "comfort-aire-a-vxp30sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2504,9 +3084,93 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-series-central-ducted-cfg-43",
-      slug: "comfort-aire-a-series-central-ducted-cfg-43",
-      modelId: "comfort-aire-a-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-36000-cfg-1",
+      slug: "comfort-aire-a-series-central-ducted-36000-cfg-1",
+      modelId: "comfort-aire-a-series-central-ducted-36000",
+      outdoorUnitId: "comfort-aire-a-vcd36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-36000-cfg-2",
+      slug: "comfort-aire-a-series-central-ducted-36000-cfg-2",
+      modelId: "comfort-aire-a-series-central-ducted-36000",
+      outdoorUnitId: "comfort-aire-a-vcd36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-36000-cfg-3",
+      slug: "comfort-aire-a-series-central-ducted-36000-cfg-3",
+      modelId: "comfort-aire-a-series-central-ducted-36000",
+      outdoorUnitId: "comfort-aire-a-vcd36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-36000-cfg-4",
+      slug: "comfort-aire-a-series-central-ducted-36000-cfg-4",
+      modelId: "comfort-aire-a-series-central-ducted-36000",
+      outdoorUnitId: "comfort-aire-a-vxp36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-36000-cfg-5",
+      slug: "comfort-aire-a-series-central-ducted-36000-cfg-5",
+      modelId: "comfort-aire-a-series-central-ducted-36000",
+      outdoorUnitId: "comfort-aire-a-vxp36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-36000-cfg-6",
+      slug: "comfort-aire-a-series-central-ducted-36000-cfg-6",
+      modelId: "comfort-aire-a-series-central-ducted-36000",
+      outdoorUnitId: "comfort-aire-a-vxp36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-36000-cfg-7",
+      slug: "comfort-aire-a-series-central-ducted-36000-cfg-7",
+      modelId: "comfort-aire-a-series-central-ducted-36000",
       outdoorUnitId: "comfort-aire-a-vxp36sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2518,9 +3182,163 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vcd-series-central-ducted-cfg-1",
-      slug: "comfort-aire-a-vcd-series-central-ducted-cfg-1",
-      modelId: "comfort-aire-a-vcd-series-central-ducted",
+      id: "comfort-aire-a-series-central-ducted-60000-cfg-1",
+      slug: "comfort-aire-a-series-central-ducted-60000-cfg-1",
+      modelId: "comfort-aire-a-series-central-ducted-60000",
+      outdoorUnitId: "comfort-aire-a-vcd60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-60000-cfg-2",
+      slug: "comfort-aire-a-series-central-ducted-60000-cfg-2",
+      modelId: "comfort-aire-a-series-central-ducted-60000",
+      outdoorUnitId: "comfort-aire-a-vcd60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-60000-cfg-3",
+      slug: "comfort-aire-a-series-central-ducted-60000-cfg-3",
+      modelId: "comfort-aire-a-series-central-ducted-60000",
+      outdoorUnitId: "comfort-aire-a-vcd60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-1",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-1",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vcd48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-2",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-2",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vcd48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-3",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-3",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vcd48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-4",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-4",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vxp48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-5",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-5",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vxp60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-6",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-6",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vxp60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-7",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-7",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vxp60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-48000-cfg-8",
+      slug: "comfort-aire-a-series-central-ducted-48000-cfg-8",
+      modelId: "comfort-aire-a-series-central-ducted-48000",
+      outdoorUnitId: "comfort-aire-a-vxp48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-vcd-series-central-ducted-30000-cfg-1",
+      slug: "comfort-aire-a-vcd-series-central-ducted-30000-cfg-1",
+      modelId: "comfort-aire-a-vcd-series-central-ducted-30000",
       outdoorUnitId: "comfort-aire-a-vcd30sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -2532,9 +3350,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-mcd-series-central-ducted-cfg-1",
-      slug: "comfort-aire-mcd-series-central-ducted-cfg-1",
-      modelId: "comfort-aire-mcd-series-central-ducted",
+      id: "comfort-aire-mcd-series-central-ducted-36000-cfg-1",
+      slug: "comfort-aire-mcd-series-central-ducted-36000-cfg-1",
+      modelId: "comfort-aire-mcd-series-central-ducted-36000",
       outdoorUnitId: "comfort-aire-a-vcd36sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -2546,9 +3364,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-central-ducted-cfg-1",
-      slug: "comfort-aire-a-vhp-central-ducted-cfg-1",
-      modelId: "comfort-aire-a-vhp-central-ducted",
+      id: "comfort-aire-a-vhp-central-ducted-18000-cfg-1",
+      slug: "comfort-aire-a-vhp-central-ducted-18000-cfg-1",
+      modelId: "comfort-aire-a-vhp-central-ducted-18000",
       outdoorUnitId: "comfort-aire-a-vhp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2560,9 +3378,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-central-ducted-cfg-2",
-      slug: "comfort-aire-a-vhp-central-ducted-cfg-2",
-      modelId: "comfort-aire-a-vhp-central-ducted",
+      id: "comfort-aire-a-vhp-central-ducted-24000-cfg-1",
+      slug: "comfort-aire-a-vhp-central-ducted-24000-cfg-1",
+      modelId: "comfort-aire-a-vhp-central-ducted-24000",
       outdoorUnitId: "comfort-aire-a-vhp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2574,9 +3392,9 @@ export const comfortaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "comfort-aire-a-vhp-central-ducted-cfg-3",
-      slug: "comfort-aire-a-vhp-central-ducted-cfg-3",
-      modelId: "comfort-aire-a-vhp-central-ducted",
+      id: "comfort-aire-a-vhp-central-ducted-30000-cfg-1",
+      slug: "comfort-aire-a-vhp-central-ducted-30000-cfg-1",
+      modelId: "comfort-aire-a-vhp-central-ducted-30000",
       outdoorUnitId: "comfort-aire-a-vhp33sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -2586,11 +3404,39 @@ export const comfortaireDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-central-ducted-42000-cfg-1",
+      slug: "comfort-aire-a-series-central-ducted-42000-cfg-1",
+      modelId: "comfort-aire-a-series-central-ducted-42000",
+      outdoorUnitId: "comfort-aire-a-vxp48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "comfort-aire-a-series-wall-single-20000-cfg-1",
+      slug: "comfort-aire-a-series-wall-single-20000-cfg-1",
+      modelId: "comfort-aire-a-series-wall-single-20000",
+      outdoorUnitId: "comfort-aire-a-vhp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.4,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-1",
+      configurationId: "comfort-aire-a-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2601,447 +3447,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6800,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6900,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10100,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.99,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-42",
+      configurationId: "comfort-aire-a-series-wall-single-6000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3052,7 +3458,62 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-43",
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10100,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3063,7 +3524,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-44",
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3074,7 +3535,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-45",
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3085,7 +3546,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-46",
+      configurationId: "comfort-aire-a-series-wall-single-9000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3096,7 +3557,62 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-47",
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3107,7 +3623,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-48",
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3118,7 +3634,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-49",
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3129,7 +3645,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-50",
+      configurationId: "comfort-aire-a-series-wall-single-12000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3140,7 +3656,95 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-51",
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3151,29 +3755,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-53",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-54",
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3184,7 +3766,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-55",
+      configurationId: "comfort-aire-a-series-wall-single-18000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3195,7 +3777,73 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-56",
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3206,18 +3854,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-57",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-wall-single-cfg-58",
+      configurationId: "comfort-aire-a-series-wall-single-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3228,7 +3865,139 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-standard-wall-single-cfg-1",
+      configurationId: "comfort-aire-a-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3239,40 +4008,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-standard-wall-single-cfg-5",
+      configurationId: "comfort-aire-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3283,7 +4019,106 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-ssp-series-wall-single-cfg-1",
+      configurationId: "comfort-aire-a-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-15000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-ssp-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3294,7 +4129,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-ssp-series-wall-single-cfg-2",
+      configurationId: "comfort-aire-a-ssp-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3305,7 +4140,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-1",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3316,7 +4151,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-2",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3327,7 +4162,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-3",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3338,7 +4173,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-4",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3349,29 +4184,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-7",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3382,7 +4195,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-8",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3393,7 +4206,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-9",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3404,7 +4217,18 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-10",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vhp-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3415,7 +4239,18 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-11",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vhp-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3426,7 +4261,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-12",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3437,106 +4272,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-vhp-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-zhp-series-wall-single-cfg-1",
+      configurationId: "comfort-aire-a-zhp-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3547,7 +4283,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-zhp-series-wall-single-cfg-2",
+      configurationId: "comfort-aire-a-zhp-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3558,7 +4294,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-zhp-series-wall-single-cfg-3",
+      configurationId: "comfort-aire-a-zhp-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3569,7 +4305,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-zhp-series-wall-single-cfg-4",
+      configurationId: "comfort-aire-a-zhp-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3580,139 +4316,18 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-1",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15400,
+          heatingCapacityBtu: 30000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-13",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3723,18 +4338,106 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-14",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
+          heatingCapacityBtu: 31400,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-15",
+      configurationId: "comfort-aire-a-vhp-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vhp-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vhp-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vhp-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vhp-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vhp-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3745,62 +4448,18 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-16",
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-21",
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3811,62 +4470,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-27",
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3877,18 +4481,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-29",
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3899,117 +4492,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-40",
+      configurationId: "comfort-aire-a-series-central-ducted-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4020,7 +4503,84 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-41",
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4031,7 +4591,84 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-42",
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-30000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4042,7 +4679,73 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-series-central-ducted-cfg-43",
+      configurationId: "comfort-aire-a-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4053,7 +4756,128 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vcd-series-central-ducted-cfg-1",
+      configurationId: "comfort-aire-a-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-vcd-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4064,7 +4888,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-mcd-series-central-ducted-cfg-1",
+      configurationId: "comfort-aire-mcd-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4075,7 +4899,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-central-ducted-cfg-1",
+      configurationId: "comfort-aire-a-vhp-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4086,7 +4910,7 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-central-ducted-cfg-2",
+      configurationId: "comfort-aire-a-vhp-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4097,12 +4921,34 @@ export const comfortaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "comfort-aire-a-vhp-central-ducted-cfg-3",
+      configurationId: "comfort-aire-a-vhp-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 27400,
           cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "comfort-aire-a-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
           confidence: "verified",
         }
       ]

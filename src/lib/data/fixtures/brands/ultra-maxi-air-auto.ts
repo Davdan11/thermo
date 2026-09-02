@@ -26,15 +26,16 @@ export const ultramaxiairDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "ultra-maxi-air-standard-wall-single",
-      slug: "ultra-maxi-air-standard-wall-single",
-      name: "Standard",
+      id: "ultra-maxi-air-standard-wall-single-18000",
+      slug: "ultra-maxi-air-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
       seriesId: "ultra-maxi-air-standard",
       brandId: "ultra-maxi-air",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 11500,
@@ -65,9 +66,9 @@ export const ultramaxiairDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "ultra-maxi-air-standard-wall-single-cfg-1",
-      slug: "ultra-maxi-air-standard-wall-single-cfg-1",
-      modelId: "ultra-maxi-air-standard-wall-single",
+      id: "ultra-maxi-air-standard-wall-single-18000-cfg-1",
+      slug: "ultra-maxi-air-standard-wall-single-18000-cfg-1",
+      modelId: "ultra-maxi-air-standard-wall-single-18000",
       outdoorUnitId: "ultra-maxi-air-lsab-18hrdn1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -81,7 +82,7 @@ export const ultramaxiairDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "ultra-maxi-air-standard-wall-single-cfg-1",
+      configurationId: "ultra-maxi-air-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

@@ -268,18 +268,46 @@ export const samsungDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "samsung-standard-wall-single",
-      slug: "samsung-standard-wall-single",
-      name: "Standard",
+      id: "samsung-standard-wall-single-60000",
+      slug: "samsung-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
       seriesId: "samsung-standard",
       brandId: "samsung",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 6700,
+      heatingCapacity5FMinBtu: 43000,
+      heatingCapacity5FMaxBtu: 43000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000",
+      slug: "samsung-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 28400,
       heatingCapacity5FMaxBtu: 46000,
       seer2Min: null,
       seer2Max: null,
@@ -294,22 +322,293 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted",
-      slug: "samsung-hylex-central-ducted",
-      name: "Hylex",
-      seriesId: "samsung-hylex",
+      id: "samsung-standard-wall-single-36000",
+      slug: "samsung-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "samsung-standard",
       brandId: "samsung",
-      modelNumber: "Hylex",
-      normalizedModelNumber: "hylex",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 57000,
-      heatingCapacity5FMinBtu: 31200,
-      heatingCapacity5FMaxBtu: 54000,
-      seer2Min: 16.5,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-12000",
+      slug: "samsung-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 13500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-9000",
+      slug: "samsung-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6700,
+      heatingCapacity5FMaxBtu: 12400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000",
+      slug: "samsung-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11500,
+      heatingCapacity5FMaxBtu: 27600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000",
+      slug: "samsung-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 13000,
+      heatingCapacity5FMaxBtu: 28000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000",
+      slug: "samsung-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17100,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000",
+      slug: "samsung-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 33200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-42000",
+      slug: "samsung-standard-wall-single-42000",
+      name: "Standard 42 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 42k",
+      normalizedModelNumber: "standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 41500,
+      heatingCapacity5FMaxBtu: 46000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-15000",
+      slug: "samsung-standard-wall-single-15000",
+      name: "Standard 15 000 BTU",
+      seriesId: "samsung-standard",
+      brandId: "samsung",
+      modelNumber: "Standard 15k",
+      normalizedModelNumber: "standard-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11500,
+      heatingCapacity5FMaxBtu: 20400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-hylex-central-ducted-36000",
+      slug: "samsung-hylex-central-ducted-36000",
+      name: "Hylex 36 000 BTU",
+      seriesId: "samsung-hylex",
+      brandId: "samsung",
+      modelNumber: "Hylex 36k",
+      normalizedModelNumber: "hylex-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: 17,
       seer2Max: 18.5,
       hspf2Min: 8.1,
+      hspf2Max: 8.4,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-hylex-central-ducted-60000",
+      slug: "samsung-hylex-central-ducted-60000",
+      name: "Hylex 60 000 BTU",
+      seriesId: "samsung-hylex",
+      brandId: "samsung",
+      modelNumber: "Hylex 60k",
+      normalizedModelNumber: "hylex-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      heatingCapacity5FMinBtu: 54000,
+      heatingCapacity5FMaxBtu: 54000,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 9,
       hspf2Max: 9,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
@@ -320,23 +619,78 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single",
-      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single",
-      name: "4-Way Cassette (WindFree™) Premium (CAC)",
-      seriesId: "samsung-4-way-cassette-windfree-premium-cac",
+      id: "samsung-hylex-central-ducted-24000",
+      slug: "samsung-hylex-central-ducted-24000",
+      name: "Hylex 24 000 BTU",
+      seriesId: "samsung-hylex",
       brandId: "samsung",
-      modelNumber: "4-Way Cassette (WindFree™) Premium (CAC)",
-      normalizedModelNumber: "4-way-cassette-windfree-premium-cac",
+      modelNumber: "Hylex 24k",
+      normalizedModelNumber: "hylex-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 31200,
+      heatingCapacity5FMaxBtu: 31200,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-hylex-central-ducted-48000",
+      slug: "samsung-hylex-central-ducted-48000",
+      name: "Hylex 48 000 BTU",
+      seriesId: "samsung-hylex",
+      brandId: "samsung",
+      modelNumber: "Hylex 48k",
+      normalizedModelNumber: "hylex-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 46000,
+      heatingCapacity5FMaxBtu: 46000,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-18000",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-18000",
+      name: "4-Way Cassette (WindFree™) Premium (CAC) 18 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Premium (CAC) 18k",
+      normalizedModelNumber: "4-way-cassette-windfree-premium-cac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 12400,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 20,
+      heatingCapacity5FMaxBtu: 12400,
+      seer2Min: 23.8,
       seer2Max: 23.8,
       hspf2Min: 9.6,
-      hspf2Max: 10.7,
+      hspf2Max: 9.6,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -346,21 +700,49 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single",
-      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single",
-      name: "1-Way Cassette (WindFree™) Premium (CAC)",
-      seriesId: "samsung-1-way-cassette-windfree-premium-cac",
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-24000",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-24000",
+      name: "4-Way Cassette (WindFree™) Premium (CAC) 24 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-premium-cac",
       brandId: "samsung",
-      modelNumber: "1-Way Cassette (WindFree™) Premium (CAC)",
-      normalizedModelNumber: "1-way-cassette-windfree-premium-cac",
+      modelNumber: "4-Way Cassette (WindFree™) Premium (CAC) 24k",
+      normalizedModelNumber: "4-way-cassette-windfree-premium-cac-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 18600,
+      heatingCapacity5FMaxBtu: 18600,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-18000",
+      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-18000",
+      name: "1-Way Cassette (WindFree™) Premium (CAC) 18 000 BTU",
+      seriesId: "samsung-1-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "1-Way Cassette (WindFree™) Premium (CAC) 18k",
+      normalizedModelNumber: "1-way-cassette-windfree-premium-cac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17500,
       coolingCapacityMaxBtu: 17500,
-      heatingCapacity5FMinBtu: 9100,
+      heatingCapacity5FMinBtu: 16000,
       heatingCapacity5FMaxBtu: 16000,
       seer2Min: 20,
-      seer2Max: 22.1,
+      seer2Max: 20,
       hspf2Min: 9.5,
       hspf2Max: 9.5,
       cop5FMin: 1.8,
@@ -372,23 +754,24 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-360-cassette-premium-cac-wall-single",
-      slug: "samsung-360-cassette-premium-cac-wall-single",
-      name: "360 Cassette Premium (CAC)",
+      id: "samsung-360-cassette-premium-cac-wall-single-18000",
+      slug: "samsung-360-cassette-premium-cac-wall-single-18000",
+      name: "360 Cassette Premium (CAC) 18 000 BTU",
       seriesId: "samsung-360-cassette-premium-cac",
       brandId: "samsung",
-      modelNumber: "360 Cassette Premium (CAC)",
-      normalizedModelNumber: "360-cassette-premium-cac",
+      modelNumber: "360 Cassette Premium (CAC) 18k",
+      normalizedModelNumber: "360-cassette-premium-cac-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 46000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13400,
-      heatingCapacity5FMaxBtu: 40500,
-      seer2Min: 18.5,
-      seer2Max: 23,
+      heatingCapacity5FMaxBtu: 13400,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
       hspf2Min: 9.5,
-      hspf2Max: 10.4,
+      hspf2Max: 9.5,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -398,23 +781,24 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single",
-      name: "Duct S (HSP) Premium (CAC)",
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-18000",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-18000",
+      name: "Duct S (HSP) Premium (CAC) 18 000 BTU",
       seriesId: "samsung-duct-s-hsp-premium-cac",
       brandId: "samsung",
-      modelNumber: "Duct S (HSP) Premium (CAC)",
-      normalizedModelNumber: "duct-s-hsp-premium-cac",
+      modelNumber: "Duct S (HSP) Premium (CAC) 18k",
+      normalizedModelNumber: "duct-s-hsp-premium-cac-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 47000,
-      heatingCapacity5FMinBtu: 9300,
-      heatingCapacity5FMaxBtu: 41000,
-      seer2Min: 18,
-      seer2Max: 20,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12800,
+      heatingCapacity5FMaxBtu: 12800,
+      seer2Min: 18.3,
+      seer2Max: 18.3,
       hspf2Min: 8.9,
-      hspf2Max: 10,
+      hspf2Max: 8.9,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -424,23 +808,24 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single",
-      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single",
-      name: "Mini 4-Way Cassette (WindFree™) Premium (CAC)",
+      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-18000",
+      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-18000",
+      name: "Mini 4-Way Cassette (WindFree™) Premium (CAC) 18 000 BTU",
       seriesId: "samsung-mini-4-way-cassette-windfree-premium-cac",
       brandId: "samsung",
-      modelNumber: "Mini 4-Way Cassette (WindFree™) Premium (CAC)",
-      normalizedModelNumber: "mini-4-way-cassette-windfree-premium-cac",
+      modelNumber: "Mini 4-Way Cassette (WindFree™) Premium (CAC) 18k",
+      normalizedModelNumber: "mini-4-way-cassette-windfree-premium-cac-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9100,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
       coolingCapacityMaxBtu: 17000,
-      heatingCapacity5FMinBtu: 9700,
+      heatingCapacity5FMinBtu: 15600,
       heatingCapacity5FMaxBtu: 15600,
       seer2Min: 20.5,
-      seer2Max: 22,
+      seer2Max: 20.5,
       hspf2Min: 9.5,
-      hspf2Max: 10.6,
+      hspf2Max: 9.5,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -450,178 +835,77 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-slim-duct-lsp-premium-cac-wall-single",
-      slug: "samsung-slim-duct-lsp-premium-cac-wall-single",
-      name: "Slim Duct (LSP) Premium (CAC)",
+      id: "samsung-360-cassette-premium-cac-wall-single-24000",
+      slug: "samsung-360-cassette-premium-cac-wall-single-24000",
+      name: "360 Cassette Premium (CAC) 24 000 BTU",
+      seriesId: "samsung-360-cassette-premium-cac",
+      brandId: "samsung",
+      modelNumber: "360 Cassette Premium (CAC) 24k",
+      normalizedModelNumber: "360-cassette-premium-cac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16800,
+      heatingCapacity5FMaxBtu: 16800,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 9.8,
+      hspf2Max: 9.8,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-24000",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-24000",
+      name: "Duct S (HSP) Premium (CAC) 24 000 BTU",
+      seriesId: "samsung-duct-s-hsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Premium (CAC) 24k",
+      normalizedModelNumber: "duct-s-hsp-premium-cac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 21600,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-slim-duct-lsp-premium-cac-wall-single-18000",
+      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-18000",
+      name: "Slim Duct (LSP) Premium (CAC) 18 000 BTU",
       seriesId: "samsung-slim-duct-lsp-premium-cac",
       brandId: "samsung",
-      modelNumber: "Slim Duct (LSP) Premium (CAC)",
-      normalizedModelNumber: "slim-duct-lsp-premium-cac",
+      modelNumber: "Slim Duct (LSP) Premium (CAC) 18k",
+      normalizedModelNumber: "slim-duct-lsp-premium-cac-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17500,
       coolingCapacityMaxBtu: 17500,
-      heatingCapacity5FMinBtu: 8100,
+      heatingCapacity5FMinBtu: 16200,
       heatingCapacity5FMaxBtu: 16200,
       seer2Min: 17,
-      seer2Max: 20.1,
+      seer2Max: 17,
       hspf2Min: 9,
-      hspf2Max: 9.6,
-      cop5FMin: 1.8,
-      cop5FMax: 1.8,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-max-heat-rac-wall-single",
-      slug: "samsung-windfree-max-heat-rac-wall-single",
-      name: "WindFree - Max heat (RAC)",
-      seriesId: "samsung-windfree-max-heat-rac",
-      brandId: "samsung",
-      modelNumber: "WindFree - Max heat (RAC)",
-      normalizedModelNumber: "windfree-max-heat-rac",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 9900,
-      heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 20,
-      seer2Max: 25,
-      hspf2Min: 9.5,
-      hspf2Max: 11,
-      cop5FMin: 2.05,
-      cop5FMax: 2.5,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-premium-rac-wall-single",
-      slug: "samsung-windfree-premium-rac-wall-single",
-      name: "WindFree - Premium (RAC)",
-      seriesId: "samsung-windfree-premium-rac",
-      brandId: "samsung",
-      modelNumber: "WindFree - Premium (RAC)",
-      normalizedModelNumber: "windfree-premium-rac",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 22000,
-      heatingCapacity5FMinBtu: 9900,
-      heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 20,
-      seer2Max: 25,
-      hspf2Min: 9.5,
-      hspf2Max: 11,
-      cop5FMin: 2.05,
-      cop5FMax: 2.5,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-standard-rac-wall-single",
-      slug: "samsung-windfree-standard-rac-wall-single",
-      name: "WindFree - Standard (RAC)",
-      seriesId: "samsung-windfree-standard-rac",
-      brandId: "samsung",
-      modelNumber: "WindFree - Standard (RAC)",
-      normalizedModelNumber: "windfree-standard-rac",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 10000,
-      heatingCapacity5FMaxBtu: 15000,
-      seer2Min: 21.5,
-      seer2Max: 25,
-      hspf2Min: 9,
-      hspf2Max: 10,
-      cop5FMin: 1.76,
-      cop5FMax: 2.38,
-      systemType: "wall-single",
-      categories: ["conventional", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-iaq-standard-rac-wall-single",
-      slug: "samsung-windfree-iaq-standard-rac-wall-single",
-      name: "WindFree IAQ - Standard (RAC)",
-      seriesId: "samsung-windfree-iaq-standard-rac",
-      brandId: "samsung",
-      modelNumber: "WindFree IAQ - Standard (RAC)",
-      normalizedModelNumber: "windfree-iaq-standard-rac",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 10000,
-      heatingCapacity5FMaxBtu: 15000,
-      seer2Min: 21.5,
-      seer2Max: 25,
-      hspf2Min: 9,
-      hspf2Max: 10,
-      cop5FMin: 1.76,
-      cop5FMax: 2.38,
-      systemType: "wall-single",
-      categories: ["conventional", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single",
-      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single",
-      name: "4-Way Cassette (WindFree™) Standard (CAC)",
-      seriesId: "samsung-4-way-cassette-windfree-standard-cac",
-      brandId: "samsung",
-      modelNumber: "4-Way Cassette (WindFree™) Standard (CAC)",
-      normalizedModelNumber: "4-way-cassette-windfree-standard-cac",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 11600,
-      heatingCapacity5FMaxBtu: 35400,
-      seer2Min: 18.5,
-      seer2Max: 23.8,
-      hspf2Min: 9,
-      hspf2Max: 9.6,
-      cop5FMin: 1.8,
-      cop5FMax: 1.8,
-      systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-duct-s-hsp-standard-cac-wall-single",
-      slug: "samsung-duct-s-hsp-standard-cac-wall-single",
-      name: "Duct S (HSP) Standard (CAC)",
-      seriesId: "samsung-duct-s-hsp-standard-cac",
-      brandId: "samsung",
-      modelNumber: "Duct S (HSP) Standard (CAC)",
-      normalizedModelNumber: "duct-s-hsp-standard-cac",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 12400,
-      heatingCapacity5FMaxBtu: 34000,
-      seer2Min: 17.3,
-      seer2Max: 19,
-      hspf2Min: 8.5,
       hspf2Max: 9,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
@@ -632,18 +916,1072 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-dvm-s-mini-wall-single",
-      slug: "samsung-dvm-s-mini-wall-single",
-      name: "DVM S Mini",
-      seriesId: "samsung-dvm-s-mini",
+      id: "samsung-windfree-max-heat-rac-wall-single-15000",
+      slug: "samsung-windfree-max-heat-rac-wall-single-15000",
+      name: "WindFree - Max heat (RAC) 15 000 BTU",
+      seriesId: "samsung-windfree-max-heat-rac",
       brandId: "samsung",
-      modelNumber: "DVM S Mini",
-      normalizedModelNumber: "dvm-s-mini",
+      modelNumber: "WindFree - Max heat (RAC) 15k",
+      normalizedModelNumber: "windfree-max-heat-rac-15000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 38000,
-      coolingCapacityMaxBtu: 60000,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.5,
+      cop5FMax: 2.5,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-15000",
+      slug: "samsung-windfree-premium-rac-wall-single-15000",
+      name: "WindFree - Premium (RAC) 15 000 BTU",
+      seriesId: "samsung-windfree-premium-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Premium (RAC) 15k",
+      normalizedModelNumber: "windfree-premium-rac-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.5,
+      cop5FMax: 2.5,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-standard-rac-wall-single-18000",
+      slug: "samsung-windfree-standard-rac-wall-single-18000",
+      name: "WindFree - Standard (RAC) 18 000 BTU",
+      seriesId: "samsung-windfree-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Standard (RAC) 18k",
+      normalizedModelNumber: "windfree-standard-rac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.09,
+      cop5FMax: 2.09,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-iaq-standard-rac-wall-single-18000",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-18000",
+      name: "WindFree IAQ - Standard (RAC) 18 000 BTU",
+      seriesId: "samsung-windfree-iaq-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree IAQ - Standard (RAC) 18k",
+      normalizedModelNumber: "windfree-iaq-standard-rac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.09,
+      cop5FMax: 2.09,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-max-heat-rac-wall-single-20000",
+      slug: "samsung-windfree-max-heat-rac-wall-single-20000",
+      name: "WindFree - Max heat (RAC) 20 000 BTU",
+      seriesId: "samsung-windfree-max-heat-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Max heat (RAC) 20k",
+      normalizedModelNumber: "windfree-max-heat-rac-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.22,
+      cop5FMax: 2.22,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-20000",
+      slug: "samsung-windfree-premium-rac-wall-single-20000",
+      name: "WindFree - Premium (RAC) 20 000 BTU",
+      seriesId: "samsung-windfree-premium-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Premium (RAC) 20k",
+      normalizedModelNumber: "windfree-premium-rac-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.22,
+      cop5FMax: 2.22,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-max-heat-rac-wall-single-18000",
+      slug: "samsung-windfree-max-heat-rac-wall-single-18000",
+      name: "WindFree - Max heat (RAC) 18 000 BTU",
+      seriesId: "samsung-windfree-max-heat-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Max heat (RAC) 18k",
+      normalizedModelNumber: "windfree-max-heat-rac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18500,
+      coolingCapacityMaxBtu: 18500,
+      heatingCapacity5FMinBtu: 17500,
+      heatingCapacity5FMaxBtu: 17500,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.7,
+      hspf2Max: 9.7,
+      cop5FMin: 2.05,
+      cop5FMax: 2.05,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-18000",
+      slug: "samsung-windfree-premium-rac-wall-single-18000",
+      name: "WindFree - Premium (RAC) 18 000 BTU",
+      seriesId: "samsung-windfree-premium-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Premium (RAC) 18k",
+      normalizedModelNumber: "windfree-premium-rac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18500,
+      coolingCapacityMaxBtu: 18500,
+      heatingCapacity5FMinBtu: 17500,
+      heatingCapacity5FMaxBtu: 17500,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.7,
+      hspf2Max: 9.7,
+      cop5FMin: 2.05,
+      cop5FMax: 2.05,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-standard-rac-wall-single-15000",
+      slug: "samsung-windfree-standard-rac-wall-single-15000",
+      name: "WindFree - Standard (RAC) 15 000 BTU",
+      seriesId: "samsung-windfree-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Standard (RAC) 15k",
+      normalizedModelNumber: "windfree-standard-rac-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      heatingCapacity5FMinBtu: 13000,
+      heatingCapacity5FMaxBtu: 13000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.38,
+      cop5FMax: 2.38,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-iaq-standard-rac-wall-single-15000",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-15000",
+      name: "WindFree IAQ - Standard (RAC) 15 000 BTU",
+      seriesId: "samsung-windfree-iaq-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree IAQ - Standard (RAC) 15k",
+      normalizedModelNumber: "windfree-iaq-standard-rac-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      heatingCapacity5FMinBtu: 13000,
+      heatingCapacity5FMaxBtu: 13000,
+      seer2Min: 21.5,
+      seer2Max: 21.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.38,
+      cop5FMax: 2.38,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-30000",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-30000",
+      name: "4-Way Cassette (WindFree™) Premium (CAC) 30 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Premium (CAC) 30k",
+      normalizedModelNumber: "4-way-cassette-windfree-premium-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 22.8,
+      seer2Max: 22.8,
+      hspf2Min: 10.7,
+      hspf2Max: 10.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-360-cassette-premium-cac-wall-single-30000",
+      slug: "samsung-360-cassette-premium-cac-wall-single-30000",
+      name: "360 Cassette Premium (CAC) 30 000 BTU",
+      seriesId: "samsung-360-cassette-premium-cac",
+      brandId: "samsung",
+      modelNumber: "360 Cassette Premium (CAC) 30k",
+      normalizedModelNumber: "360-cassette-premium-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 23800,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-30000",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-30000",
+      name: "Duct S (HSP) Premium (CAC) 30 000 BTU",
+      seriesId: "samsung-duct-s-hsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Premium (CAC) 30k",
+      normalizedModelNumber: "duct-s-hsp-premium-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-36000",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-36000",
+      name: "4-Way Cassette (WindFree™) Premium (CAC) 36 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Premium (CAC) 36k",
+      normalizedModelNumber: "4-way-cassette-windfree-premium-cac-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 28200,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-360-cassette-premium-cac-wall-single-36000",
+      slug: "samsung-360-cassette-premium-cac-wall-single-36000",
+      name: "360 Cassette Premium (CAC) 36 000 BTU",
+      seriesId: "samsung-360-cassette-premium-cac",
+      brandId: "samsung",
+      modelNumber: "360 Cassette Premium (CAC) 36k",
+      normalizedModelNumber: "360-cassette-premium-cac-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 28400,
+      heatingCapacity5FMaxBtu: 28400,
+      seer2Min: 21.7,
+      seer2Max: 21.7,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-36000",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-36000",
+      name: "Duct S (HSP) Premium (CAC) 36 000 BTU",
+      seriesId: "samsung-duct-s-hsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Premium (CAC) 36k",
+      normalizedModelNumber: "duct-s-hsp-premium-cac-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30600,
+      heatingCapacity5FMaxBtu: 30600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.8,
+      hspf2Max: 9.8,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-48000",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-48000",
+      name: "4-Way Cassette (WindFree™) Premium (CAC) 48 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Premium (CAC) 48k",
+      normalizedModelNumber: "4-way-cassette-windfree-premium-cac-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-360-cassette-premium-cac-wall-single-48000",
+      slug: "samsung-360-cassette-premium-cac-wall-single-48000",
+      name: "360 Cassette Premium (CAC) 48 000 BTU",
+      seriesId: "samsung-360-cassette-premium-cac",
+      brandId: "samsung",
+      modelNumber: "360 Cassette Premium (CAC) 48k",
+      normalizedModelNumber: "360-cassette-premium-cac-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      heatingCapacity5FMinBtu: 40500,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-48000",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-48000",
+      name: "Duct S (HSP) Premium (CAC) 48 000 BTU",
+      seriesId: "samsung-duct-s-hsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Premium (CAC) 48k",
+      normalizedModelNumber: "duct-s-hsp-premium-cac-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 41000,
+      heatingCapacity5FMaxBtu: 41000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-max-heat-rac-wall-single-12000",
+      slug: "samsung-windfree-max-heat-rac-wall-single-12000",
+      name: "WindFree - Max heat (RAC) 12 000 BTU",
+      seriesId: "samsung-windfree-max-heat-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Max heat (RAC) 12k",
+      normalizedModelNumber: "windfree-max-heat-rac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2.09,
+      cop5FMax: 2.09,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-max-heat-rac-wall-single-9000",
+      slug: "samsung-windfree-max-heat-rac-wall-single-9000",
+      name: "WindFree - Max heat (RAC) 9 000 BTU",
+      seriesId: "samsung-windfree-max-heat-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Max heat (RAC) 9k",
+      normalizedModelNumber: "windfree-max-heat-rac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9900,
+      heatingCapacity5FMaxBtu: 9900,
+      seer2Min: 25,
+      seer2Max: 25,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2.19,
+      cop5FMax: 2.19,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-12000",
+      slug: "samsung-windfree-premium-rac-wall-single-12000",
+      name: "WindFree - Premium (RAC) 12 000 BTU",
+      seriesId: "samsung-windfree-premium-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Premium (RAC) 12k",
+      normalizedModelNumber: "windfree-premium-rac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2.09,
+      cop5FMax: 2.09,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-9000",
+      slug: "samsung-windfree-premium-rac-wall-single-9000",
+      name: "WindFree - Premium (RAC) 9 000 BTU",
+      seriesId: "samsung-windfree-premium-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Premium (RAC) 9k",
+      normalizedModelNumber: "windfree-premium-rac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9900,
+      heatingCapacity5FMaxBtu: 9900,
+      seer2Min: 25,
+      seer2Max: 25,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2.19,
+      cop5FMax: 2.19,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-iaq-standard-rac-wall-single-12000",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-12000",
+      name: "WindFree IAQ - Standard (RAC) 12 000 BTU",
+      seriesId: "samsung-windfree-iaq-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree IAQ - Standard (RAC) 12k",
+      normalizedModelNumber: "windfree-iaq-standard-rac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10900,
+      heatingCapacity5FMaxBtu: 10900,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.76,
+      cop5FMax: 1.76,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-iaq-standard-rac-wall-single-9000",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-9000",
+      name: "WindFree IAQ - Standard (RAC) 9 000 BTU",
+      seriesId: "samsung-windfree-iaq-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree IAQ - Standard (RAC) 9k",
+      normalizedModelNumber: "windfree-iaq-standard-rac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 25,
+      seer2Max: 25,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-standard-rac-wall-single-12000",
+      slug: "samsung-windfree-standard-rac-wall-single-12000",
+      name: "WindFree - Standard (RAC) 12 000 BTU",
+      seriesId: "samsung-windfree-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Standard (RAC) 12k",
+      normalizedModelNumber: "windfree-standard-rac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10900,
+      heatingCapacity5FMaxBtu: 10900,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.76,
+      cop5FMax: 1.76,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-standard-rac-wall-single-9000",
+      slug: "samsung-windfree-standard-rac-wall-single-9000",
+      name: "WindFree - Standard (RAC) 9 000 BTU",
+      seriesId: "samsung-windfree-standard-rac",
+      brandId: "samsung",
+      modelNumber: "WindFree - Standard (RAC) 9k",
+      normalizedModelNumber: "windfree-standard-rac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 25,
+      seer2Max: 25,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-18000",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-18000",
+      name: "4-Way Cassette (WindFree™) Standard (CAC) 18 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-standard-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Standard (CAC) 18k",
+      normalizedModelNumber: "4-way-cassette-windfree-standard-cac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11600,
+      heatingCapacity5FMaxBtu: 11600,
+      seer2Min: 23.8,
+      seer2Max: 23.8,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-24000",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-24000",
+      name: "4-Way Cassette (WindFree™) Standard (CAC) 24 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-standard-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Standard (CAC) 24k",
+      normalizedModelNumber: "4-way-cassette-windfree-standard-cac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16800,
+      heatingCapacity5FMaxBtu: 16800,
+      seer2Min: 21.6,
+      seer2Max: 21.6,
+      hspf2Min: 9.6,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-30000",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-30000",
+      name: "4-Way Cassette (WindFree™) Standard (CAC) 30 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-standard-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Standard (CAC) 30k",
+      normalizedModelNumber: "4-way-cassette-windfree-standard-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 22600,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 21.7,
+      seer2Max: 21.7,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-36000",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-36000",
+      name: "4-Way Cassette (WindFree™) Standard (CAC) 36 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-standard-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Standard (CAC) 36k",
+      normalizedModelNumber: "4-way-cassette-windfree-standard-cac-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26200,
+      heatingCapacity5FMaxBtu: 26200,
+      seer2Min: 19.5,
+      seer2Max: 19.5,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-48000",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-48000",
+      name: "4-Way Cassette (WindFree™) Standard (CAC) 48 000 BTU",
+      seriesId: "samsung-4-way-cassette-windfree-standard-cac",
+      brandId: "samsung",
+      modelNumber: "4-Way Cassette (WindFree™) Standard (CAC) 48k",
+      normalizedModelNumber: "4-way-cassette-windfree-standard-cac-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 35400,
+      heatingCapacity5FMaxBtu: 35400,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-18000",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-18000",
+      name: "Duct S (HSP) Standard (CAC) 18 000 BTU",
+      seriesId: "samsung-duct-s-hsp-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Standard (CAC) 18k",
+      normalizedModelNumber: "duct-s-hsp-standard-cac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12400,
+      heatingCapacity5FMaxBtu: 12400,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-24000",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-24000",
+      name: "Duct S (HSP) Standard (CAC) 24 000 BTU",
+      seriesId: "samsung-duct-s-hsp-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Standard (CAC) 24k",
+      normalizedModelNumber: "duct-s-hsp-standard-cac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 15300,
+      heatingCapacity5FMaxBtu: 15300,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-30000",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-30000",
+      name: "Duct S (HSP) Standard (CAC) 30 000 BTU",
+      seriesId: "samsung-duct-s-hsp-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Standard (CAC) 30k",
+      normalizedModelNumber: "duct-s-hsp-standard-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 22800,
+      heatingCapacity5FMaxBtu: 22800,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-36000",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-36000",
+      name: "Duct S (HSP) Standard (CAC) 36 000 BTU",
+      seriesId: "samsung-duct-s-hsp-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Standard (CAC) 36k",
+      normalizedModelNumber: "duct-s-hsp-standard-cac-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27600,
+      heatingCapacity5FMaxBtu: 27600,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-48000",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-48000",
+      name: "Duct S (HSP) Standard (CAC) 48 000 BTU",
+      seriesId: "samsung-duct-s-hsp-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Standard (CAC) 48k",
+      normalizedModelNumber: "duct-s-hsp-standard-cac-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 17.3,
+      seer2Max: 17.3,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-36000",
+      slug: "samsung-dvm-s-mini-wall-single-36000",
+      name: "DVM S Mini 36 000 BTU",
+      seriesId: "samsung-dvm-s-mini",
+      brandId: "samsung",
+      modelNumber: "DVM S Mini 36k",
+      normalizedModelNumber: "dvm-s-mini-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 19,
+      seer2Max: 22,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 2.1,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-48000",
+      slug: "samsung-dvm-s-mini-wall-single-48000",
+      name: "DVM S Mini 48 000 BTU",
+      seriesId: "samsung-dvm-s-mini",
+      brandId: "samsung",
+      modelNumber: "DVM S Mini 48k",
+      normalizedModelNumber: "dvm-s-mini-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 35000,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 19,
+      seer2Max: 21.3,
+      hspf2Min: 10,
+      hspf2Max: 10.5,
+      cop5FMin: 2.1,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-60000",
+      slug: "samsung-dvm-s-mini-wall-single-60000",
+      name: "DVM S Mini 60 000 BTU",
+      seriesId: "samsung-dvm-s-mini",
+      brandId: "samsung",
+      modelNumber: "DVM S Mini 60k",
+      normalizedModelNumber: "dvm-s-mini-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      heatingCapacity5FMinBtu: 43000,
       heatingCapacity5FMaxBtu: 43000,
       seer2Min: 16.5,
       seer2Max: 23,
@@ -658,23 +1996,105 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-standard-wall-single",
-      slug: "samsung-fjm-standard-wall-single",
-      name: "FJM (Standard)",
+      id: "samsung-fjm-standard-wall-single-48000",
+      slug: "samsung-fjm-standard-wall-single-48000",
+      name: "FJM (Standard) 48 000 BTU",
       seriesId: "samsung-fjm-standard",
       brandId: "samsung",
-      modelNumber: "FJM (Standard)",
-      normalizedModelNumber: "fjm-standard",
+      modelNumber: "FJM (Standard) 48k",
+      normalizedModelNumber: "fjm-standard-48000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
       coolingCapacityMaxBtu: 46000,
-      heatingCapacity5FMinBtu: 12800,
+      heatingCapacity5FMinBtu: 28400,
       heatingCapacity5FMaxBtu: 28400,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-30000",
+      slug: "samsung-fjm-standard-wall-single-30000",
+      name: "FJM (Standard) 30 000 BTU",
+      seriesId: "samsung-fjm-standard",
+      brandId: "samsung",
+      modelNumber: "FJM (Standard) 30k",
+      normalizedModelNumber: "fjm-standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 21400,
       seer2Min: 19,
       seer2Max: 22.5,
       hspf2Min: 8.6,
       hspf2Max: 9.5,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-20000",
+      slug: "samsung-fjm-standard-wall-single-20000",
+      name: "FJM (Standard) 20 000 BTU",
+      seriesId: "samsung-fjm-standard",
+      brandId: "samsung",
+      modelNumber: "FJM (Standard) 20k",
+      normalizedModelNumber: "fjm-standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 14600,
+      heatingCapacity5FMaxBtu: 14600,
+      seer2Min: 19,
+      seer2Max: 22.5,
+      hspf2Min: 8.6,
+      hspf2Max: 9.5,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-18000",
+      slug: "samsung-fjm-standard-wall-single-18000",
+      name: "FJM (Standard) 18 000 BTU",
+      seriesId: "samsung-fjm-standard",
+      brandId: "samsung",
+      modelNumber: "FJM (Standard) 18k",
+      normalizedModelNumber: "fjm-standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12800,
+      heatingCapacity5FMaxBtu: 12800,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 8.8,
+      hspf2Max: 9,
       cop5FMin: 1.77,
       cop5FMax: 1.81,
       systemType: "wall-single",
@@ -684,23 +2104,24 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-premium-wall-single",
-      slug: "samsung-fjm-premium-wall-single",
-      name: "FJM (Premium)",
+      id: "samsung-fjm-premium-wall-single-36000",
+      slug: "samsung-fjm-premium-wall-single-36000",
+      name: "FJM (Premium) 36 000 BTU",
       seriesId: "samsung-fjm-premium",
       brandId: "samsung",
-      modelNumber: "FJM (Premium)",
-      normalizedModelNumber: "fjm-premium",
+      modelNumber: "FJM (Premium) 36k",
+      normalizedModelNumber: "fjm-premium-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 21000,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
       coolingCapacityMaxBtu: 34000,
-      heatingCapacity5FMinBtu: 13200,
+      heatingCapacity5FMinBtu: 20600,
       heatingCapacity5FMaxBtu: 23000,
       seer2Min: 18.5,
-      seer2Max: 23,
+      seer2Max: 21.5,
       hspf2Min: 8.5,
-      hspf2Max: 10.5,
+      hspf2Max: 9.5,
       cop5FMin: 1.81,
       cop5FMax: 2.04,
       systemType: "wall-single",
@@ -710,23 +2131,132 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-console-premium-cac-wall-single",
-      slug: "samsung-console-premium-cac-wall-single",
-      name: "Console - Premium (CAC)",
-      seriesId: "samsung-console-premium-cac",
+      id: "samsung-fjm-premium-wall-single-30000",
+      slug: "samsung-fjm-premium-wall-single-30000",
+      name: "FJM (Premium) 30 000 BTU",
+      seriesId: "samsung-fjm-premium",
       brandId: "samsung",
-      modelNumber: "Console - Premium (CAC)",
-      normalizedModelNumber: "console-premium-cac",
+      modelNumber: "FJM (Premium) 30k",
+      normalizedModelNumber: "fjm-premium-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 16000,
-      heatingCapacity5FMinBtu: 7600,
-      heatingCapacity5FMaxBtu: 11900,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 17500,
       seer2Min: 20,
-      seer2Max: 21,
+      seer2Max: 22.5,
       hspf2Min: 9.5,
-      hspf2Max: 9.7,
+      hspf2Max: 10,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-24000",
+      slug: "samsung-fjm-premium-wall-single-24000",
+      name: "FJM (Premium) 24 000 BTU",
+      seriesId: "samsung-fjm-premium",
+      brandId: "samsung",
+      modelNumber: "FJM (Premium) 24k",
+      normalizedModelNumber: "fjm-premium-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15200,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10.4,
+      cop5FMin: 1.82,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-20000",
+      slug: "samsung-fjm-premium-wall-single-20000",
+      name: "FJM (Premium) 20 000 BTU",
+      seriesId: "samsung-fjm-premium",
+      brandId: "samsung",
+      modelNumber: "FJM (Premium) 20k",
+      normalizedModelNumber: "fjm-premium-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      heatingCapacity5FMinBtu: 13200,
+      heatingCapacity5FMaxBtu: 13200,
+      seer2Min: 20.5,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.83,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-42000",
+      slug: "samsung-fjm-standard-wall-single-42000",
+      name: "FJM (Standard) 42 000 BTU",
+      seriesId: "samsung-fjm-standard",
+      brandId: "samsung",
+      modelNumber: "FJM (Standard) 42k",
+      normalizedModelNumber: "fjm-standard-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 43000,
+      coolingCapacityMaxBtu: 44500,
+      heatingCapacity5FMinBtu: 28400,
+      heatingCapacity5FMaxBtu: 28400,
+      seer2Min: 20,
+      seer2Max: 20.5,
+      hspf2Min: 8.6,
+      hspf2Max: 8.8,
+      cop5FMin: 1.81,
+      cop5FMax: 1.81,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-9000",
+      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-9000",
+      name: "Mini 4-Way Cassette (WindFree™) Premium (CAC) 9 000 BTU",
+      seriesId: "samsung-mini-4-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Mini 4-Way Cassette (WindFree™) Premium (CAC) 9k",
+      normalizedModelNumber: "mini-4-way-cassette-windfree-premium-cac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      heatingCapacity5FMinBtu: 9700,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
@@ -736,20 +2266,48 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-high-wall-premium-cac-wall-single",
-      slug: "samsung-windfree-high-wall-premium-cac-wall-single",
-      name: "WindFree™ High-Wall - Premium (CAC)",
-      seriesId: "samsung-windfree-high-wall-premium-cac",
+      id: "samsung-console-premium-cac-wall-single-15000",
+      slug: "samsung-console-premium-cac-wall-single-15000",
+      name: "Console - Premium (CAC) 15 000 BTU",
+      seriesId: "samsung-console-premium-cac",
       brandId: "samsung",
-      modelNumber: "WindFree™ High-Wall - Premium (CAC)",
-      normalizedModelNumber: "windfree-high-wall-premium-cac",
+      modelNumber: "Console - Premium (CAC) 15k",
+      normalizedModelNumber: "console-premium-cac-15000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 15700,
-      heatingCapacity5FMaxBtu: 16400,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 11900,
+      heatingCapacity5FMaxBtu: 11900,
       seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-high-wall-premium-cac-wall-single-18000",
+      slug: "samsung-windfree-high-wall-premium-cac-wall-single-18000",
+      name: "WindFree™ High-Wall - Premium (CAC) 18 000 BTU",
+      seriesId: "samsung-windfree-high-wall-premium-cac",
+      brandId: "samsung",
+      modelNumber: "WindFree™ High-Wall - Premium (CAC) 18k",
+      normalizedModelNumber: "windfree-high-wall-premium-cac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 16400,
+      heatingCapacity5FMaxBtu: 16400,
+      seer2Min: 20.5,
       seer2Max: 20.5,
       hspf2Min: 9.5,
       hspf2Max: 9.5,
@@ -762,15 +2320,43 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-high-wall-premium-cac-wall-single",
-      slug: "samsung-high-wall-premium-cac-wall-single",
-      name: "High-Wall - Premium (CAC)",
-      seriesId: "samsung-high-wall-premium-cac",
+      id: "samsung-windfree-high-wall-premium-cac-wall-single-24000",
+      slug: "samsung-windfree-high-wall-premium-cac-wall-single-24000",
+      name: "WindFree™ High-Wall - Premium (CAC) 24 000 BTU",
+      seriesId: "samsung-windfree-high-wall-premium-cac",
       brandId: "samsung",
-      modelNumber: "High-Wall - Premium (CAC)",
-      normalizedModelNumber: "high-wall-premium-cac",
+      modelNumber: "WindFree™ High-Wall - Premium (CAC) 24k",
+      normalizedModelNumber: "windfree-high-wall-premium-cac-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 15700,
+      heatingCapacity5FMaxBtu: 15700,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-high-wall-premium-cac-wall-single-30000",
+      slug: "samsung-high-wall-premium-cac-wall-single-30000",
+      name: "High-Wall - Premium (CAC) 30 000 BTU",
+      seriesId: "samsung-high-wall-premium-cac",
+      brandId: "samsung",
+      modelNumber: "High-Wall - Premium (CAC) 30k",
+      normalizedModelNumber: "high-wall-premium-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 33000,
       heatingCapacity5FMinBtu: 25000,
@@ -788,22 +2374,77 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-premium-cac-wall-single",
-      slug: "samsung-multi-position-air-handler-premium-cac-wall-single",
-      name: "Multi-Position Air Handler - Premium (CAC)",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-18000",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-18000",
+      name: "Multi-Position Air Handler - Premium (CAC) 18 000 BTU",
       seriesId: "samsung-multi-position-air-handler-premium-cac",
       brandId: "samsung",
-      modelNumber: "Multi-Position Air Handler - Premium (CAC)",
-      normalizedModelNumber: "multi-position-air-handler-premium-cac",
+      modelNumber: "Multi-Position Air Handler - Premium (CAC) 18k",
+      normalizedModelNumber: "multi-position-air-handler-premium-cac-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 14000,
-      heatingCapacity5FMaxBtu: 41500,
-      seer2Min: 17.3,
-      seer2Max: 19,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 18,
+      seer2Max: 18,
       hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-24000",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-24000",
+      name: "Multi-Position Air Handler - Premium (CAC) 24 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Multi-Position Air Handler - Premium (CAC) 24k",
+      normalizedModelNumber: "multi-position-air-handler-premium-cac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19300,
+      heatingCapacity5FMaxBtu: 19300,
+      seer2Min: 17.3,
+      seer2Max: 17.3,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-30000",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-30000",
+      name: "Multi-Position Air Handler - Premium (CAC) 30 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Multi-Position Air Handler - Premium (CAC) 30k",
+      normalizedModelNumber: "multi-position-air-handler-premium-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 25400,
+      heatingCapacity5FMaxBtu: 25400,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 9.7,
       hspf2Max: 9.7,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
@@ -814,22 +2455,23 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-standard-cac-wall-single",
-      slug: "samsung-multi-position-air-handler-standard-cac-wall-single",
-      name: "Multi-Position Air Handler - Standard (CAC)",
-      seriesId: "samsung-multi-position-air-handler-standard-cac",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-36000",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-36000",
+      name: "Multi-Position Air Handler - Premium (CAC) 36 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-premium-cac",
       brandId: "samsung",
-      modelNumber: "Multi-Position Air Handler - Standard (CAC)",
-      normalizedModelNumber: "multi-position-air-handler-standard-cac",
+      modelNumber: "Multi-Position Air Handler - Premium (CAC) 36k",
+      normalizedModelNumber: "multi-position-air-handler-premium-cac-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 12700,
-      heatingCapacity5FMaxBtu: 34600,
-      seer2Min: 16,
-      seer2Max: 19,
-      hspf2Min: 8.1,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 18.7,
+      seer2Max: 18.7,
+      hspf2Min: 9.5,
       hspf2Max: 9.5,
       cop5FMin: 1.8,
       cop5FMax: 1.8,
@@ -840,15 +2482,394 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-high-wall-rac-wall-single",
-      slug: "samsung-high-wall-rac-wall-single",
-      name: "High-Wall (RAC)",
-      seriesId: "samsung-high-wall-rac",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-48000",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-48000",
+      name: "Multi-Position Air Handler - Premium (CAC) 48 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-premium-cac",
       brandId: "samsung",
-      modelNumber: "High-Wall (RAC)",
-      normalizedModelNumber: "high-wall-rac",
+      modelNumber: "Multi-Position Air Handler - Premium (CAC) 48k",
+      normalizedModelNumber: "multi-position-air-handler-premium-cac-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 41500,
+      heatingCapacity5FMaxBtu: 41500,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-18000",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-18000",
+      name: "Multi-Position Air Handler - Standard (CAC) 18 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Multi-Position Air Handler - Standard (CAC) 18k",
+      normalizedModelNumber: "multi-position-air-handler-standard-cac-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 12700,
+      heatingCapacity5FMaxBtu: 12700,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-24000",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-24000",
+      name: "Multi-Position Air Handler - Standard (CAC) 24 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Multi-Position Air Handler - Standard (CAC) 24k",
+      normalizedModelNumber: "multi-position-air-handler-standard-cac-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 16.6,
+      seer2Max: 16.6,
+      hspf2Min: 8.3,
+      hspf2Max: 8.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-30000",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-30000",
+      name: "Multi-Position Air Handler - Standard (CAC) 30 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Multi-Position Air Handler - Standard (CAC) 30k",
+      normalizedModelNumber: "multi-position-air-handler-standard-cac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21200,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-36000",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-36000",
+      name: "Multi-Position Air Handler - Standard (CAC) 36 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Multi-Position Air Handler - Standard (CAC) 36k",
+      normalizedModelNumber: "multi-position-air-handler-standard-cac-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 8.6,
+      hspf2Max: 8.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-48000",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-48000",
+      name: "Multi-Position Air Handler - Standard (CAC) 48 000 BTU",
+      seriesId: "samsung-multi-position-air-handler-standard-cac",
+      brandId: "samsung",
+      modelNumber: "Multi-Position Air Handler - Standard (CAC) 48k",
+      normalizedModelNumber: "multi-position-air-handler-standard-cac-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 34600,
+      heatingCapacity5FMaxBtu: 34600,
+      seer2Min: 17.5,
+      seer2Max: 17.5,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-9000",
+      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-9000",
+      name: "1-Way Cassette (WindFree™) Premium (CAC) 9 000 BTU",
+      seriesId: "samsung-1-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "1-Way Cassette (WindFree™) Premium (CAC) 9k",
+      normalizedModelNumber: "1-way-cassette-windfree-premium-cac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9100,
+      heatingCapacity5FMaxBtu: 9100,
+      seer2Min: 22.1,
+      seer2Max: 22.1,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-12000",
+      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-12000",
+      name: "1-Way Cassette (WindFree™) Premium (CAC) 12 000 BTU",
+      seriesId: "samsung-1-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "1-Way Cassette (WindFree™) Premium (CAC) 12k",
+      normalizedModelNumber: "1-way-cassette-windfree-premium-cac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10500,
+      heatingCapacity5FMaxBtu: 10500,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-slim-duct-lsp-premium-cac-wall-single-9000",
+      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-9000",
+      name: "Slim Duct (LSP) Premium (CAC) 9 000 BTU",
+      seriesId: "samsung-slim-duct-lsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Slim Duct (LSP) Premium (CAC) 9k",
+      normalizedModelNumber: "slim-duct-lsp-premium-cac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8100,
+      heatingCapacity5FMaxBtu: 8100,
+      seer2Min: 20.1,
+      seer2Max: 20.1,
+      hspf2Min: 9.6,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-slim-duct-lsp-premium-cac-wall-single-12000",
+      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-12000",
+      name: "Slim Duct (LSP) Premium (CAC) 12 000 BTU",
+      seriesId: "samsung-slim-duct-lsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Slim Duct (LSP) Premium (CAC) 12k",
+      normalizedModelNumber: "slim-duct-lsp-premium-cac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8800,
+      heatingCapacity5FMaxBtu: 8800,
+      seer2Min: 19.6,
+      seer2Max: 19.6,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-9000",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-9000",
+      name: "Duct S (HSP) Premium (CAC) 9 000 BTU",
+      seriesId: "samsung-duct-s-hsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Premium (CAC) 9k",
+      normalizedModelNumber: "duct-s-hsp-premium-cac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9300,
+      heatingCapacity5FMaxBtu: 9300,
+      seer2Min: 18.9,
+      seer2Max: 18.9,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-12000",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-12000",
+      name: "Duct S (HSP) Premium (CAC) 12 000 BTU",
+      seriesId: "samsung-duct-s-hsp-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Duct S (HSP) Premium (CAC) 12k",
+      normalizedModelNumber: "duct-s-hsp-premium-cac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10800,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 18.6,
+      seer2Max: 18.6,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-12000",
+      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-12000",
+      name: "Mini 4-Way Cassette (WindFree™) Premium (CAC) 12 000 BTU",
+      seriesId: "samsung-mini-4-way-cassette-windfree-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Mini 4-Way Cassette (WindFree™) Premium (CAC) 12k",
+      normalizedModelNumber: "mini-4-way-cassette-windfree-premium-cac-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10700,
+      heatingCapacity5FMaxBtu: 10700,
+      seer2Min: 22,
+      seer2Max: 22,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-console-premium-cac-wall-single-9000",
+      slug: "samsung-console-premium-cac-wall-single-9000",
+      name: "Console - Premium (CAC) 9 000 BTU",
+      seriesId: "samsung-console-premium-cac",
+      brandId: "samsung",
+      modelNumber: "Console - Premium (CAC) 9k",
+      normalizedModelNumber: "console-premium-cac-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 10200,
+      heatingCapacity5FMinBtu: 7600,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 9.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-high-wall-rac-wall-single-30000",
+      slug: "samsung-high-wall-rac-wall-single-30000",
+      name: "High-Wall (RAC) 30 000 BTU",
+      seriesId: "samsung-high-wall-rac",
+      brandId: "samsung",
+      modelNumber: "High-Wall (RAC) 30k",
+      normalizedModelNumber: "high-wall-rac-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 33000,
       coolingCapacityMaxBtu: 33000,
       heatingCapacity5FMinBtu: 26600,
@@ -874,68 +2895,20 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-am048nxmdcr",
-      modelNumber: "AM048NXMDCR",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-am036nxmdcr",
-      modelNumber: "AM036NXMDCR",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-am053nxmdcr",
-      modelNumber: "AM053NXMDCR",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
       id: "samsung-am060nxmdcr",
       modelNumber: "AM060NXMDCR",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar12tsfacwkx",
-      modelNumber: "AR12TSFACWKX",
+      id: "samsung-am048nxmdcr",
+      modelNumber: "AM048NXMDCR",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar09tsfacwkx",
-      modelNumber: "AR09TSFACWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar12tsfabwkx",
-      modelNumber: "AR12TSFABWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar09tsfabwkx",
-      modelNumber: "AR09TSFABWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar18tsfacwkx",
-      modelNumber: "AR18TSFACWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar18tsfabwkx",
-      modelNumber: "AR18TSFABWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-am036txmdch",
-      modelNumber: "AM036TXMDCH",
+      id: "samsung-am053nxmdcr",
+      modelNumber: "AM053NXMDCR",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -958,38 +2931,20 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-aj020bxj2ch",
-      modelNumber: "AJ020BXJ2CH",
+      id: "samsung-ac048bxadch",
+      modelNumber: "AC048BXADCH",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-aj024bxj3ch",
-      modelNumber: "AJ024BXJ3CH",
+      id: "samsung-am036nxmdcr",
+      modelNumber: "AM036NXMDCR",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-aj036bxj4ch",
-      modelNumber: "AJ036BXJ4CH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-aj020bxs3ch",
-      modelNumber: "AJ020BXS3CH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-aj024bxs4ch",
-      modelNumber: "AJ024BXS4CH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-aj030bxs4ch",
-      modelNumber: "AJ030BXS4CH",
+      id: "samsung-am036txmdch",
+      modelNumber: "AM036TXMDCH",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1000,56 +2955,8 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-ac009bxadch",
-      modelNumber: "AC009BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ac018bxadch",
-      modelNumber: "AC018BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ac024bxadch",
-      modelNumber: "AC024BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
       id: "samsung-ac036bxadch",
       modelNumber: "AC036BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ac042bxadch",
-      modelNumber: "AC042BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ac030bxadch",
-      modelNumber: "AC030BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ac048bxadch",
-      modelNumber: "AC048BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ac012bxadch",
-      modelNumber: "AC012BXADCH",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar15bsfacwkxcv",
-      modelNumber: "AR15BSFACWKXCV",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1060,14 +2967,32 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-ac030bxscch",
-      modelNumber: "AC030BXSCCH",
+      id: "samsung-ac036bxscch",
+      modelNumber: "AC036BXSCCH",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-ac036bxscch",
-      modelNumber: "AC036BXSCCH",
+      id: "samsung-aj036cxs4ch",
+      modelNumber: "AJ036CXS4CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar12tsfacwkx",
+      modelNumber: "AR12TSFACWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar12tsfabwkx",
+      modelNumber: "AR12TSFABWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac012bxadch",
+      modelNumber: "AC012BXADCH",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1078,20 +3003,26 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar15csdacwkx",
-      modelNumber: "AR15CSDACWKX",
+      id: "samsung-ar12csdabwkx",
+      modelNumber: "AR12CSDABWKX",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar18csdacwkx",
-      modelNumber: "AR18CSDACWKX",
+      id: "samsung-ar09tsfacwkx",
+      modelNumber: "AR09TSFACWKX",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar24csdacwkx",
-      modelNumber: "AR24CSDACWKX",
+      id: "samsung-ar09tsfabwkx",
+      modelNumber: "AR09TSFABWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac009bxadch",
+      modelNumber: "AC009BXADCH",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1108,20 +3039,68 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar12csdabwkx",
-      modelNumber: "AR12CSDABWKX",
+      id: "samsung-ar18tsfacwkx",
+      modelNumber: "AR18TSFACWKX",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar15csdabwkx",
-      modelNumber: "AR15CSDABWKX",
+      id: "samsung-ar18tsfabwkx",
+      modelNumber: "AR18TSFABWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-aj020bxj2ch",
+      modelNumber: "AJ020BXJ2CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac018bxadch",
+      modelNumber: "AC018BXADCH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar18csdacwkx",
+      modelNumber: "AR18CSDACWKX",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
       id: "samsung-ar18csdabwkx",
       modelNumber: "AR18CSDABWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar18csdaewkx",
+      modelNumber: "AR18CSDAEWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar18csdadwkx",
+      modelNumber: "AR18CSDADWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-aj024bxj3ch",
+      modelNumber: "AJ024BXJ3CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-aj020bxs3ch",
+      modelNumber: "AJ020BXS3CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar24csdacwkx",
+      modelNumber: "AR24CSDACWKX",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1144,26 +3123,32 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar18csdaewkx",
-      modelNumber: "AR18CSDAEWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar18csdadwkx",
-      modelNumber: "AR18CSDADWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
       id: "samsung-aj020cxs3ch",
       modelNumber: "AJ020CXS3CH",
       brandId: "samsung",
       refrigerant: null as any,
     },
     {
-      id: "samsung-aj024cxs4ch",
-      modelNumber: "AJ024CXS4CH",
+      id: "samsung-aj036bxj4ch",
+      modelNumber: "AJ036BXJ4CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-aj030bxs4ch",
+      modelNumber: "AJ030BXS4CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac030bxadch",
+      modelNumber: "AC030BXADCH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac030bxscch",
+      modelNumber: "AC030BXSCCH",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1174,8 +3159,44 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-aj036cxs4ch",
-      modelNumber: "AJ036CXS4CH",
+      id: "samsung-aj024bxs4ch",
+      modelNumber: "AJ024BXS4CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac024bxadch",
+      modelNumber: "AC024BXADCH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-aj024cxs4ch",
+      modelNumber: "AJ024CXS4CH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac042bxadch",
+      modelNumber: "AC042BXADCH",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar15bsfacwkxcv",
+      modelNumber: "AR15BSFACWKXCV",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar15csdacwkx",
+      modelNumber: "AR15CSDACWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar15csdabwkx",
+      modelNumber: "AR15CSDABWKX",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1222,6 +3243,54 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "samsung-ar15dxdacwkx",
+      modelNumber: "AR15DXDACWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar15dxdabwkx",
+      modelNumber: "AR15DXDABWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar18dxfamwkx",
+      modelNumber: "AR18DXFAMWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar24dxdacwkx",
+      modelNumber: "AR24DXDACWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar24dxdabwkx",
+      modelNumber: "AR24DXDABWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar18dxdacwkx",
+      modelNumber: "AR18DXDACWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar18dxdabwkx",
+      modelNumber: "AR18DXDABWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ar15dxfamwkx",
+      modelNumber: "AR15DXFAMWKX",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
       id: "samsung-ac030dxsccg",
       modelNumber: "AC030DXSCCG",
       brandId: "samsung",
@@ -1240,36 +3309,6 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-ac009dxsccg",
-      modelNumber: "AC009DXSCCG",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ac012dxsccg",
-      modelNumber: "AC012DXSCCG",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar15dxdacwkx",
-      modelNumber: "AR15DXDACWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar24dxdacwkx",
-      modelNumber: "AR24DXDACWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar18dxdacwkx",
-      modelNumber: "AR18DXDACWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
       id: "samsung-ar12dxdacwkx",
       modelNumber: "AR12DXDACWKX",
       brandId: "samsung",
@@ -1282,24 +3321,6 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "samsung-ar15dxdabwkx",
-      modelNumber: "AR15DXDABWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar24dxdabwkx",
-      modelNumber: "AR24DXDABWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar18dxdabwkx",
-      modelNumber: "AR18DXDABWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
       id: "samsung-ar12dxdabwkx",
       modelNumber: "AR12DXDABWKX",
       brandId: "samsung",
@@ -1308,18 +3329,6 @@ export const samsungDataset: BrandDataset = {
     {
       id: "samsung-ar09dxdabwkx",
       modelNumber: "AR09DXDABWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar18dxfamwkx",
-      modelNumber: "AR18DXFAMWKX",
-      brandId: "samsung",
-      refrigerant: null as any,
-    },
-    {
-      id: "samsung-ar15dxfamwkx",
-      modelNumber: "AR15DXFAMWKX",
       brandId: "samsung",
       refrigerant: null as any,
     },
@@ -1438,6 +3447,18 @@ export const samsungDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "samsung-ac009dxsccg",
+      modelNumber: "AC009DXSCCG",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
+      id: "samsung-ac012dxsccg",
+      modelNumber: "AC012DXSCCG",
+      brandId: "samsung",
+      refrigerant: null as any,
+    },
+    {
       id: "samsung-ar36dxfumgmx",
       modelNumber: "AR36DXFUMGMX",
       brandId: "samsung",
@@ -1449,9 +3470,9 @@ export const samsungDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "samsung-standard-wall-single-cfg-1",
-      slug: "samsung-standard-wall-single-cfg-1",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-60000-cfg-1",
+      slug: "samsung-standard-wall-single-60000-cfg-1",
+      modelId: "samsung-standard-wall-single-60000",
       outdoorUnitId: "samsung-am060mxmdch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1463,9 +3484,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-2",
-      slug: "samsung-standard-wall-single-cfg-2",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-60000-cfg-2",
+      slug: "samsung-standard-wall-single-60000-cfg-2",
+      modelId: "samsung-standard-wall-single-60000",
       outdoorUnitId: "samsung-am060mxmdch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1477,79 +3498,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-3",
-      slug: "samsung-standard-wall-single-cfg-3",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am048nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-4",
-      slug: "samsung-standard-wall-single-cfg-4",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am036nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 38000,
-      coolingCapacityMaxBtu: 38000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-5",
-      slug: "samsung-standard-wall-single-cfg-5",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am048nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-6",
-      slug: "samsung-standard-wall-single-cfg-6",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am053nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-7",
-      slug: "samsung-standard-wall-single-cfg-7",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am053nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-8",
-      slug: "samsung-standard-wall-single-cfg-8",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-60000-cfg-3",
+      slug: "samsung-standard-wall-single-60000-cfg-3",
+      modelId: "samsung-standard-wall-single-60000",
       outdoorUnitId: "samsung-am060nxmdcr",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1561,9 +3512,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-9",
-      slug: "samsung-standard-wall-single-cfg-9",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-60000-cfg-4",
+      slug: "samsung-standard-wall-single-60000-cfg-4",
+      modelId: "samsung-standard-wall-single-60000",
       outdoorUnitId: "samsung-am060nxmdcr",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1575,275 +3526,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-10",
-      slug: "samsung-standard-wall-single-cfg-10",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am036nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 38000,
-      coolingCapacityMaxBtu: 38000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-11",
-      slug: "samsung-standard-wall-single-cfg-11",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar12tsfacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-12",
-      slug: "samsung-standard-wall-single-cfg-12",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar09tsfacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-13",
-      slug: "samsung-standard-wall-single-cfg-13",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar12tsfabwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-14",
-      slug: "samsung-standard-wall-single-cfg-14",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar09tsfabwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-15",
-      slug: "samsung-standard-wall-single-cfg-15",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar18tsfacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-16",
-      slug: "samsung-standard-wall-single-cfg-16",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar18tsfabwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-17",
-      slug: "samsung-standard-wall-single-cfg-17",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am036txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 38000,
-      coolingCapacityMaxBtu: 38000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-18",
-      slug: "samsung-standard-wall-single-cfg-18",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am048txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-19",
-      slug: "samsung-standard-wall-single-cfg-19",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am053txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-20",
-      slug: "samsung-standard-wall-single-cfg-20",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am036txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 38000,
-      coolingCapacityMaxBtu: 38000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-21",
-      slug: "samsung-standard-wall-single-cfg-21",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am048txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-22",
-      slug: "samsung-standard-wall-single-cfg-22",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am053txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-23",
-      slug: "samsung-standard-wall-single-cfg-23",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am036nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 38000,
-      coolingCapacityMaxBtu: 38000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-24",
-      slug: "samsung-standard-wall-single-cfg-24",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am036txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 38000,
-      coolingCapacityMaxBtu: 38000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-25",
-      slug: "samsung-standard-wall-single-cfg-25",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am048nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-26",
-      slug: "samsung-standard-wall-single-cfg-26",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am048txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-27",
-      slug: "samsung-standard-wall-single-cfg-27",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am053nxmdcr",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-28",
-      slug: "samsung-standard-wall-single-cfg-28",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-am053txmdch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-29",
-      slug: "samsung-standard-wall-single-cfg-29",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-60000-cfg-5",
+      slug: "samsung-standard-wall-single-60000-cfg-5",
+      modelId: "samsung-standard-wall-single-60000",
       outdoorUnitId: "samsung-am060mxmdch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1855,9 +3540,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-30",
-      slug: "samsung-standard-wall-single-cfg-30",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-60000-cfg-6",
+      slug: "samsung-standard-wall-single-60000-cfg-6",
+      modelId: "samsung-standard-wall-single-60000",
       outdoorUnitId: "samsung-am060nxmdcr",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1869,9 +3554,177 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-31",
-      slug: "samsung-standard-wall-single-cfg-31",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-48000-cfg-1",
+      slug: "samsung-standard-wall-single-48000-cfg-1",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am048nxmdcr",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-2",
+      slug: "samsung-standard-wall-single-48000-cfg-2",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am048nxmdcr",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-3",
+      slug: "samsung-standard-wall-single-48000-cfg-3",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am053nxmdcr",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-4",
+      slug: "samsung-standard-wall-single-48000-cfg-4",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am053nxmdcr",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-5",
+      slug: "samsung-standard-wall-single-48000-cfg-5",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am048txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-6",
+      slug: "samsung-standard-wall-single-48000-cfg-6",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am053txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-7",
+      slug: "samsung-standard-wall-single-48000-cfg-7",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am048txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-8",
+      slug: "samsung-standard-wall-single-48000-cfg-8",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am053txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-9",
+      slug: "samsung-standard-wall-single-48000-cfg-9",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am048nxmdcr",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-10",
+      slug: "samsung-standard-wall-single-48000-cfg-10",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am048txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-11",
+      slug: "samsung-standard-wall-single-48000-cfg-11",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am053nxmdcr",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-12",
+      slug: "samsung-standard-wall-single-48000-cfg-12",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-am053txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-48000-cfg-13",
+      slug: "samsung-standard-wall-single-48000-cfg-13",
+      modelId: "samsung-standard-wall-single-48000",
       outdoorUnitId: "samsung-aj048bxj5ch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1883,13 +3736,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-32",
-      slug: "samsung-standard-wall-single-cfg-32",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj020bxj2ch",
+      id: "samsung-standard-wall-single-48000-cfg-14",
+      slug: "samsung-standard-wall-single-48000-cfg-14",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-ac048bxadch",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1897,13 +3750,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-33",
-      slug: "samsung-standard-wall-single-cfg-33",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj024bxj3ch",
+      id: "samsung-standard-wall-single-48000-cfg-15",
+      slug: "samsung-standard-wall-single-48000-cfg-15",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-ac048bxadch",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1911,13 +3764,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-34",
-      slug: "samsung-standard-wall-single-cfg-34",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj036bxj4ch",
+      id: "samsung-standard-wall-single-48000-cfg-16",
+      slug: "samsung-standard-wall-single-48000-cfg-16",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-ac048bxadch",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1925,13 +3778,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-35",
-      slug: "samsung-standard-wall-single-cfg-35",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj020bxs3ch",
+      id: "samsung-standard-wall-single-48000-cfg-17",
+      slug: "samsung-standard-wall-single-48000-cfg-17",
+      modelId: "samsung-standard-wall-single-48000",
+      outdoorUnitId: "samsung-ac048bxadch",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1939,13 +3792,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-36",
-      slug: "samsung-standard-wall-single-cfg-36",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj024bxs4ch",
+      id: "samsung-standard-wall-single-36000-cfg-1",
+      slug: "samsung-standard-wall-single-36000-cfg-1",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-am036nxmdcr",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1953,13 +3806,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-37",
-      slug: "samsung-standard-wall-single-cfg-37",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj030bxs4ch",
+      id: "samsung-standard-wall-single-36000-cfg-2",
+      slug: "samsung-standard-wall-single-36000-cfg-2",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-am036nxmdcr",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1967,9 +3820,65 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-38",
-      slug: "samsung-standard-wall-single-cfg-38",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-3",
+      slug: "samsung-standard-wall-single-36000-cfg-3",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-am036txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-36000-cfg-4",
+      slug: "samsung-standard-wall-single-36000-cfg-4",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-am036txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-36000-cfg-5",
+      slug: "samsung-standard-wall-single-36000-cfg-5",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-am036nxmdcr",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-36000-cfg-6",
+      slug: "samsung-standard-wall-single-36000-cfg-6",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-am036txmdch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-36000-cfg-7",
+      slug: "samsung-standard-wall-single-36000-cfg-7",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-aj036bxs4ch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -1981,93 +3890,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-39",
-      slug: "samsung-standard-wall-single-cfg-39",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj020bxj2ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-40",
-      slug: "samsung-standard-wall-single-cfg-40",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj024bxj3ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-41",
-      slug: "samsung-standard-wall-single-cfg-41",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj036bxj4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-42",
-      slug: "samsung-standard-wall-single-cfg-42",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj020bxs3ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-43",
-      slug: "samsung-standard-wall-single-cfg-43",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj024bxs4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-44",
-      slug: "samsung-standard-wall-single-cfg-44",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj030bxs4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-45",
-      slug: "samsung-standard-wall-single-cfg-45",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-8",
+      slug: "samsung-standard-wall-single-36000-cfg-8",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-aj036bxs4ch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -2079,51 +3904,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-46",
-      slug: "samsung-standard-wall-single-cfg-46",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac009bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-47",
-      slug: "samsung-standard-wall-single-cfg-47",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac018bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-48",
-      slug: "samsung-standard-wall-single-cfg-48",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac024bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-49",
-      slug: "samsung-standard-wall-single-cfg-49",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-9",
+      slug: "samsung-standard-wall-single-36000-cfg-9",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxadch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2135,261 +3918,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-50",
-      slug: "samsung-standard-wall-single-cfg-50",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac042bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-51",
-      slug: "samsung-standard-wall-single-cfg-51",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac030bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-52",
-      slug: "samsung-standard-wall-single-cfg-52",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac048bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-53",
-      slug: "samsung-standard-wall-single-cfg-53",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac009bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-54",
-      slug: "samsung-standard-wall-single-cfg-54",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac009bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-55",
-      slug: "samsung-standard-wall-single-cfg-55",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac012bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-56",
-      slug: "samsung-standard-wall-single-cfg-56",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac012bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-57",
-      slug: "samsung-standard-wall-single-cfg-57",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac012bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 10800,
-      coolingCapacityMaxBtu: 10800,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-58",
-      slug: "samsung-standard-wall-single-cfg-58",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac018bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-59",
-      slug: "samsung-standard-wall-single-cfg-59",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac018bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-60",
-      slug: "samsung-standard-wall-single-cfg-60",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac018bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-61",
-      slug: "samsung-standard-wall-single-cfg-61",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac018bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-62",
-      slug: "samsung-standard-wall-single-cfg-62",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac024bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-63",
-      slug: "samsung-standard-wall-single-cfg-63",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac024bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-64",
-      slug: "samsung-standard-wall-single-cfg-64",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac024bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-65",
-      slug: "samsung-standard-wall-single-cfg-65",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac024bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-66",
-      slug: "samsung-standard-wall-single-cfg-66",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac030bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-67",
-      slug: "samsung-standard-wall-single-cfg-67",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac030bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-68",
-      slug: "samsung-standard-wall-single-cfg-68",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-10",
+      slug: "samsung-standard-wall-single-36000-cfg-10",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxadch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2401,9 +3932,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-69",
-      slug: "samsung-standard-wall-single-cfg-69",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-11",
+      slug: "samsung-standard-wall-single-36000-cfg-11",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxadch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2415,9 +3946,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-70",
-      slug: "samsung-standard-wall-single-cfg-70",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-12",
+      slug: "samsung-standard-wall-single-36000-cfg-12",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxadch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2429,9 +3960,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-71",
-      slug: "samsung-standard-wall-single-cfg-71",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-13",
+      slug: "samsung-standard-wall-single-36000-cfg-13",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxadch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2443,107 +3974,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-72",
-      slug: "samsung-standard-wall-single-cfg-72",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac042bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-73",
-      slug: "samsung-standard-wall-single-cfg-73",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac042bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-74",
-      slug: "samsung-standard-wall-single-cfg-74",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac042bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 42000,
-      coolingCapacityMaxBtu: 42000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-75",
-      slug: "samsung-standard-wall-single-cfg-75",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac048bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-76",
-      slug: "samsung-standard-wall-single-cfg-76",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac048bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-77",
-      slug: "samsung-standard-wall-single-cfg-77",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac048bxadch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-78",
-      slug: "samsung-standard-wall-single-cfg-78",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar15bsfacwkxcv",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-79",
-      slug: "samsung-standard-wall-single-cfg-79",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-14",
+      slug: "samsung-standard-wall-single-36000-cfg-14",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ar36bshumgmx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2555,37 +3988,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-80",
-      slug: "samsung-standard-wall-single-cfg-80",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac030bxscch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-81",
-      slug: "samsung-standard-wall-single-cfg-81",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac030bxscch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-82",
-      slug: "samsung-standard-wall-single-cfg-82",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-15",
+      slug: "samsung-standard-wall-single-36000-cfg-15",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxscch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2597,23 +4002,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-83",
-      slug: "samsung-standard-wall-single-cfg-83",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ac030bxscch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-84",
-      slug: "samsung-standard-wall-single-cfg-84",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-16",
+      slug: "samsung-standard-wall-single-36000-cfg-16",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxscch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2625,9 +4016,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-85",
-      slug: "samsung-standard-wall-single-cfg-85",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-17",
+      slug: "samsung-standard-wall-single-36000-cfg-17",
+      modelId: "samsung-standard-wall-single-36000",
       outdoorUnitId: "samsung-ac036bxscch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2639,9 +4030,107 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-86",
-      slug: "samsung-standard-wall-single-cfg-86",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-36000-cfg-18",
+      slug: "samsung-standard-wall-single-36000-cfg-18",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-aj036cxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-36000-cfg-19",
+      slug: "samsung-standard-wall-single-36000-cfg-19",
+      modelId: "samsung-standard-wall-single-36000",
+      outdoorUnitId: "samsung-aj036cxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-12000-cfg-1",
+      slug: "samsung-standard-wall-single-12000-cfg-1",
+      modelId: "samsung-standard-wall-single-12000",
+      outdoorUnitId: "samsung-ar12tsfacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-12000-cfg-2",
+      slug: "samsung-standard-wall-single-12000-cfg-2",
+      modelId: "samsung-standard-wall-single-12000",
+      outdoorUnitId: "samsung-ar12tsfabwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-12000-cfg-3",
+      slug: "samsung-standard-wall-single-12000-cfg-3",
+      modelId: "samsung-standard-wall-single-12000",
+      outdoorUnitId: "samsung-ac012bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-12000-cfg-4",
+      slug: "samsung-standard-wall-single-12000-cfg-4",
+      modelId: "samsung-standard-wall-single-12000",
+      outdoorUnitId: "samsung-ac012bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-12000-cfg-5",
+      slug: "samsung-standard-wall-single-12000-cfg-5",
+      modelId: "samsung-standard-wall-single-12000",
+      outdoorUnitId: "samsung-ac012bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 10800,
+      coolingCapacityMaxBtu: 10800,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-12000-cfg-6",
+      slug: "samsung-standard-wall-single-12000-cfg-6",
+      modelId: "samsung-standard-wall-single-12000",
       outdoorUnitId: "samsung-ar12csdacwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2653,79 +4142,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-87",
-      slug: "samsung-standard-wall-single-cfg-87",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar15csdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-88",
-      slug: "samsung-standard-wall-single-cfg-88",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar18csdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-89",
-      slug: "samsung-standard-wall-single-cfg-89",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar24csdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-90",
-      slug: "samsung-standard-wall-single-cfg-90",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar09csdabwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-91",
-      slug: "samsung-standard-wall-single-cfg-91",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar09csdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-92",
-      slug: "samsung-standard-wall-single-cfg-92",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-12000-cfg-7",
+      slug: "samsung-standard-wall-single-12000-cfg-7",
+      modelId: "samsung-standard-wall-single-12000",
       outdoorUnitId: "samsung-ar12csdabwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2737,13 +4156,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-93",
-      slug: "samsung-standard-wall-single-cfg-93",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar15csdabwkx",
+      id: "samsung-standard-wall-single-9000-cfg-1",
+      slug: "samsung-standard-wall-single-9000-cfg-1",
+      modelId: "samsung-standard-wall-single-9000",
+      outdoorUnitId: "samsung-ar09tsfacwkx",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -2751,9 +4170,233 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-94",
-      slug: "samsung-standard-wall-single-cfg-94",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-9000-cfg-2",
+      slug: "samsung-standard-wall-single-9000-cfg-2",
+      modelId: "samsung-standard-wall-single-9000",
+      outdoorUnitId: "samsung-ar09tsfabwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-9000-cfg-3",
+      slug: "samsung-standard-wall-single-9000-cfg-3",
+      modelId: "samsung-standard-wall-single-9000",
+      outdoorUnitId: "samsung-ac009bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-9000-cfg-4",
+      slug: "samsung-standard-wall-single-9000-cfg-4",
+      modelId: "samsung-standard-wall-single-9000",
+      outdoorUnitId: "samsung-ac009bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-9000-cfg-5",
+      slug: "samsung-standard-wall-single-9000-cfg-5",
+      modelId: "samsung-standard-wall-single-9000",
+      outdoorUnitId: "samsung-ac009bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-9000-cfg-6",
+      slug: "samsung-standard-wall-single-9000-cfg-6",
+      modelId: "samsung-standard-wall-single-9000",
+      outdoorUnitId: "samsung-ar09csdabwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-9000-cfg-7",
+      slug: "samsung-standard-wall-single-9000-cfg-7",
+      modelId: "samsung-standard-wall-single-9000",
+      outdoorUnitId: "samsung-ar09csdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-1",
+      slug: "samsung-standard-wall-single-18000-cfg-1",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ar18tsfacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-2",
+      slug: "samsung-standard-wall-single-18000-cfg-2",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ar18tsfabwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-3",
+      slug: "samsung-standard-wall-single-18000-cfg-3",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-aj020bxj2ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-4",
+      slug: "samsung-standard-wall-single-18000-cfg-4",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-aj020bxj2ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-5",
+      slug: "samsung-standard-wall-single-18000-cfg-5",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ac018bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-6",
+      slug: "samsung-standard-wall-single-18000-cfg-6",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ac018bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-7",
+      slug: "samsung-standard-wall-single-18000-cfg-7",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ac018bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-8",
+      slug: "samsung-standard-wall-single-18000-cfg-8",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ac018bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-9",
+      slug: "samsung-standard-wall-single-18000-cfg-9",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ac018bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-10",
+      slug: "samsung-standard-wall-single-18000-cfg-10",
+      modelId: "samsung-standard-wall-single-18000",
+      outdoorUnitId: "samsung-ar18csdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-18000-cfg-11",
+      slug: "samsung-standard-wall-single-18000-cfg-11",
+      modelId: "samsung-standard-wall-single-18000",
       outdoorUnitId: "samsung-ar18csdabwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2765,51 +4408,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-95",
-      slug: "samsung-standard-wall-single-cfg-95",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar24csdabwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-96",
-      slug: "samsung-standard-wall-single-cfg-96",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar24csdaewkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-97",
-      slug: "samsung-standard-wall-single-cfg-97",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-ar24csdadwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-98",
-      slug: "samsung-standard-wall-single-cfg-98",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-18000-cfg-12",
+      slug: "samsung-standard-wall-single-18000-cfg-12",
+      modelId: "samsung-standard-wall-single-18000",
       outdoorUnitId: "samsung-ar18csdaewkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2821,9 +4422,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-99",
-      slug: "samsung-standard-wall-single-cfg-99",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-18000-cfg-13",
+      slug: "samsung-standard-wall-single-18000-cfg-13",
+      modelId: "samsung-standard-wall-single-18000",
       outdoorUnitId: "samsung-ar18csdadwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2835,9 +4436,121 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-100",
-      slug: "samsung-standard-wall-single-cfg-100",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-20000-cfg-1",
+      slug: "samsung-standard-wall-single-20000-cfg-1",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-aj024bxj3ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-2",
+      slug: "samsung-standard-wall-single-20000-cfg-2",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-aj020bxs3ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-3",
+      slug: "samsung-standard-wall-single-20000-cfg-3",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-aj024bxj3ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-4",
+      slug: "samsung-standard-wall-single-20000-cfg-4",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-aj020bxs3ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-5",
+      slug: "samsung-standard-wall-single-20000-cfg-5",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-ar24csdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-6",
+      slug: "samsung-standard-wall-single-20000-cfg-6",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-ar24csdabwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-7",
+      slug: "samsung-standard-wall-single-20000-cfg-7",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-ar24csdaewkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-8",
+      slug: "samsung-standard-wall-single-20000-cfg-8",
+      modelId: "samsung-standard-wall-single-20000",
+      outdoorUnitId: "samsung-ar24csdadwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-20000-cfg-9",
+      slug: "samsung-standard-wall-single-20000-cfg-9",
+      modelId: "samsung-standard-wall-single-20000",
       outdoorUnitId: "samsung-aj020cxs3ch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 21000,
@@ -2849,51 +4562,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-101",
-      slug: "samsung-standard-wall-single-cfg-101",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj024cxs4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-102",
-      slug: "samsung-standard-wall-single-cfg-102",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj030cxs4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-103",
-      slug: "samsung-standard-wall-single-cfg-103",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj036cxs4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-104",
-      slug: "samsung-standard-wall-single-cfg-104",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-20000-cfg-10",
+      slug: "samsung-standard-wall-single-20000-cfg-10",
+      modelId: "samsung-standard-wall-single-20000",
       outdoorUnitId: "samsung-aj020cxs3ch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 21000,
@@ -2905,37 +4576,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-105",
-      slug: "samsung-standard-wall-single-cfg-105",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj024cxs4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-106",
-      slug: "samsung-standard-wall-single-cfg-106",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj030cxs4ch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-standard-wall-single-cfg-107",
-      slug: "samsung-standard-wall-single-cfg-107",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-20000-cfg-11",
+      slug: "samsung-standard-wall-single-20000-cfg-11",
+      modelId: "samsung-standard-wall-single-20000",
       outdoorUnitId: "samsung-aj020cxs3ch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 21000,
@@ -2947,13 +4590,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-108",
-      slug: "samsung-standard-wall-single-cfg-108",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj024cxs4ch",
+      id: "samsung-standard-wall-single-30000-cfg-1",
+      slug: "samsung-standard-wall-single-30000-cfg-1",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj036bxj4ch",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -2961,9 +4604,135 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-109",
-      slug: "samsung-standard-wall-single-cfg-109",
-      modelId: "samsung-standard-wall-single",
+      id: "samsung-standard-wall-single-30000-cfg-2",
+      slug: "samsung-standard-wall-single-30000-cfg-2",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj030bxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-3",
+      slug: "samsung-standard-wall-single-30000-cfg-3",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj036bxj4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-4",
+      slug: "samsung-standard-wall-single-30000-cfg-4",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj030bxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-5",
+      slug: "samsung-standard-wall-single-30000-cfg-5",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-ac030bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-6",
+      slug: "samsung-standard-wall-single-30000-cfg-6",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-ac030bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-7",
+      slug: "samsung-standard-wall-single-30000-cfg-7",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-ac030bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-8",
+      slug: "samsung-standard-wall-single-30000-cfg-8",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-ac030bxscch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-9",
+      slug: "samsung-standard-wall-single-30000-cfg-9",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-ac030bxscch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-10",
+      slug: "samsung-standard-wall-single-30000-cfg-10",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-ac030bxscch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-30000-cfg-11",
+      slug: "samsung-standard-wall-single-30000-cfg-11",
+      modelId: "samsung-standard-wall-single-30000",
       outdoorUnitId: "samsung-aj030cxs4ch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -2975,13 +4744,13 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-standard-wall-single-cfg-110",
-      slug: "samsung-standard-wall-single-cfg-110",
-      modelId: "samsung-standard-wall-single",
-      outdoorUnitId: "samsung-aj036cxs4ch",
+      id: "samsung-standard-wall-single-30000-cfg-12",
+      slug: "samsung-standard-wall-single-30000-cfg-12",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj030cxs4ch",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 34000,
-      coolingCapacityMaxBtu: 34000,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -2989,9 +4758,261 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted-cfg-1",
-      slug: "samsung-hylex-central-ducted-cfg-1",
-      modelId: "samsung-hylex-central-ducted",
+      id: "samsung-standard-wall-single-30000-cfg-13",
+      slug: "samsung-standard-wall-single-30000-cfg-13",
+      modelId: "samsung-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj030cxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-1",
+      slug: "samsung-standard-wall-single-24000-cfg-1",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-aj024bxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-2",
+      slug: "samsung-standard-wall-single-24000-cfg-2",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-aj024bxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-3",
+      slug: "samsung-standard-wall-single-24000-cfg-3",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-ac024bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-4",
+      slug: "samsung-standard-wall-single-24000-cfg-4",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-ac024bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-5",
+      slug: "samsung-standard-wall-single-24000-cfg-5",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-ac024bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-6",
+      slug: "samsung-standard-wall-single-24000-cfg-6",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-ac024bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-7",
+      slug: "samsung-standard-wall-single-24000-cfg-7",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-ac024bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-8",
+      slug: "samsung-standard-wall-single-24000-cfg-8",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-aj024cxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-9",
+      slug: "samsung-standard-wall-single-24000-cfg-9",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-aj024cxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-24000-cfg-10",
+      slug: "samsung-standard-wall-single-24000-cfg-10",
+      modelId: "samsung-standard-wall-single-24000",
+      outdoorUnitId: "samsung-aj024cxs4ch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-42000-cfg-1",
+      slug: "samsung-standard-wall-single-42000-cfg-1",
+      modelId: "samsung-standard-wall-single-42000",
+      outdoorUnitId: "samsung-ac042bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-42000-cfg-2",
+      slug: "samsung-standard-wall-single-42000-cfg-2",
+      modelId: "samsung-standard-wall-single-42000",
+      outdoorUnitId: "samsung-ac042bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-42000-cfg-3",
+      slug: "samsung-standard-wall-single-42000-cfg-3",
+      modelId: "samsung-standard-wall-single-42000",
+      outdoorUnitId: "samsung-ac042bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-42000-cfg-4",
+      slug: "samsung-standard-wall-single-42000-cfg-4",
+      modelId: "samsung-standard-wall-single-42000",
+      outdoorUnitId: "samsung-ac042bxadch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-15000-cfg-1",
+      slug: "samsung-standard-wall-single-15000-cfg-1",
+      modelId: "samsung-standard-wall-single-15000",
+      outdoorUnitId: "samsung-ar15bsfacwkxcv",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-15000-cfg-2",
+      slug: "samsung-standard-wall-single-15000-cfg-2",
+      modelId: "samsung-standard-wall-single-15000",
+      outdoorUnitId: "samsung-ar15csdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-standard-wall-single-15000-cfg-3",
+      slug: "samsung-standard-wall-single-15000-cfg-3",
+      modelId: "samsung-standard-wall-single-15000",
+      outdoorUnitId: "samsung-ar15csdabwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-hylex-central-ducted-36000-cfg-1",
+      slug: "samsung-hylex-central-ducted-36000-cfg-1",
+      modelId: "samsung-hylex-central-ducted-36000",
       outdoorUnitId: "samsung-ac036bxudch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3003,9 +5024,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted-cfg-2",
-      slug: "samsung-hylex-central-ducted-cfg-2",
-      modelId: "samsung-hylex-central-ducted",
+      id: "samsung-hylex-central-ducted-36000-cfg-2",
+      slug: "samsung-hylex-central-ducted-36000-cfg-2",
+      modelId: "samsung-hylex-central-ducted-36000",
       outdoorUnitId: "samsung-ac036bxupch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3017,51 +5038,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted-cfg-3",
-      slug: "samsung-hylex-central-ducted-cfg-3",
-      modelId: "samsung-hylex-central-ducted",
-      outdoorUnitId: "samsung-ac060bxupch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 57000,
-      coolingCapacityMaxBtu: 57000,
-      seer2: 17.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-hylex-central-ducted-cfg-4",
-      slug: "samsung-hylex-central-ducted-cfg-4",
-      modelId: "samsung-hylex-central-ducted",
-      outdoorUnitId: "samsung-ac024bxupch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.5,
-      hspf2: 8.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-hylex-central-ducted-cfg-5",
-      slug: "samsung-hylex-central-ducted-cfg-5",
-      modelId: "samsung-hylex-central-ducted",
-      outdoorUnitId: "samsung-ac048bxupch",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 17,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-hylex-central-ducted-cfg-6",
-      slug: "samsung-hylex-central-ducted-cfg-6",
-      modelId: "samsung-hylex-central-ducted",
+      id: "samsung-hylex-central-ducted-36000-cfg-3",
+      slug: "samsung-hylex-central-ducted-36000-cfg-3",
+      modelId: "samsung-hylex-central-ducted-36000",
       outdoorUnitId: "samsung-ac036bxudch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3073,9 +5052,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted-cfg-7",
-      slug: "samsung-hylex-central-ducted-cfg-7",
-      modelId: "samsung-hylex-central-ducted",
+      id: "samsung-hylex-central-ducted-36000-cfg-4",
+      slug: "samsung-hylex-central-ducted-36000-cfg-4",
+      modelId: "samsung-hylex-central-ducted-36000",
       outdoorUnitId: "samsung-ac036bxupch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3087,9 +5066,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted-cfg-8",
-      slug: "samsung-hylex-central-ducted-cfg-8",
-      modelId: "samsung-hylex-central-ducted",
+      id: "samsung-hylex-central-ducted-60000-cfg-1",
+      slug: "samsung-hylex-central-ducted-60000-cfg-1",
+      modelId: "samsung-hylex-central-ducted-60000",
       outdoorUnitId: "samsung-ac060bxupch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 57000,
@@ -3101,9 +5080,23 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted-cfg-9",
-      slug: "samsung-hylex-central-ducted-cfg-9",
-      modelId: "samsung-hylex-central-ducted",
+      id: "samsung-hylex-central-ducted-60000-cfg-2",
+      slug: "samsung-hylex-central-ducted-60000-cfg-2",
+      modelId: "samsung-hylex-central-ducted-60000",
+      outdoorUnitId: "samsung-ac060bxupch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: 17.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-hylex-central-ducted-24000-cfg-1",
+      slug: "samsung-hylex-central-ducted-24000-cfg-1",
+      modelId: "samsung-hylex-central-ducted-24000",
       outdoorUnitId: "samsung-ac024bxupch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3115,9 +5108,23 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-hylex-central-ducted-cfg-10",
-      slug: "samsung-hylex-central-ducted-cfg-10",
-      modelId: "samsung-hylex-central-ducted",
+      id: "samsung-hylex-central-ducted-24000-cfg-2",
+      slug: "samsung-hylex-central-ducted-24000-cfg-2",
+      modelId: "samsung-hylex-central-ducted-24000",
+      outdoorUnitId: "samsung-ac024bxupch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.5,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-hylex-central-ducted-48000-cfg-1",
+      slug: "samsung-hylex-central-ducted-48000-cfg-1",
+      modelId: "samsung-hylex-central-ducted-48000",
       outdoorUnitId: "samsung-ac048bxupch",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -3129,9 +5136,23 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-1",
-      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single",
+      id: "samsung-hylex-central-ducted-48000-cfg-2",
+      slug: "samsung-hylex-central-ducted-48000-cfg-2",
+      modelId: "samsung-hylex-central-ducted-48000",
+      outdoorUnitId: "samsung-ac048bxupch",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3143,9 +5164,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single",
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-24000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-24000",
       outdoorUnitId: "samsung-ac024dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3157,51 +5178,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac030dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22.8,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-4",
-      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-4",
-      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac036dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-5",
-      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-5",
-      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac048dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 20,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-1",
-      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-1-way-cassette-windfree-premium-cac-wall-single",
+      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -3213,37 +5192,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-1-way-cassette-windfree-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac009dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-1-way-cassette-windfree-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac012dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 21,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-360-cassette-premium-cac-wall-single-cfg-1",
-      slug: "samsung-360-cassette-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-360-cassette-premium-cac-wall-single",
+      id: "samsung-360-cassette-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-360-cassette-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-360-cassette-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3255,65 +5206,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-360-cassette-premium-cac-wall-single-cfg-2",
-      slug: "samsung-360-cassette-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-360-cassette-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac024dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 23,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-360-cassette-premium-cac-wall-single-cfg-3",
-      slug: "samsung-360-cassette-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-360-cassette-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac030dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 22,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-360-cassette-premium-cac-wall-single-cfg-4",
-      slug: "samsung-360-cassette-premium-cac-wall-single-cfg-4",
-      modelId: "samsung-360-cassette-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac036dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.7,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-360-cassette-premium-cac-wall-single-cfg-5",
-      slug: "samsung-360-cassette-premium-cac-wall-single-cfg-5",
-      modelId: "samsung-360-cassette-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac048dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 46000,
-      coolingCapacityMaxBtu: 46000,
-      seer2: 18.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-1",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-duct-s-hsp-premium-cac-wall-single",
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-duct-s-hsp-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3325,93 +5220,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-2",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-duct-s-hsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac024dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-3",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-duct-s-hsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac030dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-4",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-4",
-      modelId: "samsung-duct-s-hsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac036dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-5",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-5",
-      modelId: "samsung-duct-s-hsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac048dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-6",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-6",
-      modelId: "samsung-duct-s-hsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac009dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 18.9,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-7",
-      slug: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-7",
-      modelId: "samsung-duct-s-hsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac012dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 18.6,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-1",
-      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single",
+      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -3423,37 +5234,37 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac009dxsccg",
+      id: "samsung-360-cassette-premium-cac-wall-single-24000-cfg-1",
+      slug: "samsung-360-cassette-premium-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-360-cassette-premium-cac-wall-single-24000",
+      outdoorUnitId: "samsung-ac024dxsccg",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 9100,
-      coolingCapacityMaxBtu: 9100,
-      seer2: 22,
-      hspf2: 10.6,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23,
+      hspf2: 9.8,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac012dxsccg",
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-24000-cfg-1",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-duct-s-hsp-premium-cac-wall-single-24000",
+      outdoorUnitId: "samsung-ac024dxsccg",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22,
-      hspf2: 10.4,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18,
+      hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-1",
-      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-slim-duct-lsp-premium-cac-wall-single",
+      id: "samsung-slim-duct-lsp-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-slim-duct-lsp-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -3465,37 +5276,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-2",
-      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-slim-duct-lsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac009dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.1,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-3",
-      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-slim-duct-lsp-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac012dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.6,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-max-heat-rac-wall-single-cfg-1",
-      slug: "samsung-windfree-max-heat-rac-wall-single-cfg-1",
-      modelId: "samsung-windfree-max-heat-rac-wall-single",
+      id: "samsung-windfree-max-heat-rac-wall-single-15000-cfg-1",
+      slug: "samsung-windfree-max-heat-rac-wall-single-15000-cfg-1",
+      modelId: "samsung-windfree-max-heat-rac-wall-single-15000",
       outdoorUnitId: "samsung-ar15dxdacwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 15000,
@@ -3507,65 +5290,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-max-heat-rac-wall-single-cfg-2",
-      slug: "samsung-windfree-max-heat-rac-wall-single-cfg-2",
-      modelId: "samsung-windfree-max-heat-rac-wall-single",
-      outdoorUnitId: "samsung-ar24dxdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-max-heat-rac-wall-single-cfg-3",
-      slug: "samsung-windfree-max-heat-rac-wall-single-cfg-3",
-      modelId: "samsung-windfree-max-heat-rac-wall-single",
-      outdoorUnitId: "samsung-ar18dxdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18500,
-      coolingCapacityMaxBtu: 18500,
-      seer2: 21,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-max-heat-rac-wall-single-cfg-4",
-      slug: "samsung-windfree-max-heat-rac-wall-single-cfg-4",
-      modelId: "samsung-windfree-max-heat-rac-wall-single",
-      outdoorUnitId: "samsung-ar12dxdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-max-heat-rac-wall-single-cfg-5",
-      slug: "samsung-windfree-max-heat-rac-wall-single-cfg-5",
-      modelId: "samsung-windfree-max-heat-rac-wall-single",
-      outdoorUnitId: "samsung-ar09dxdacwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 25,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-premium-rac-wall-single-cfg-1",
-      slug: "samsung-windfree-premium-rac-wall-single-cfg-1",
-      modelId: "samsung-windfree-premium-rac-wall-single",
+      id: "samsung-windfree-premium-rac-wall-single-15000-cfg-1",
+      slug: "samsung-windfree-premium-rac-wall-single-15000-cfg-1",
+      modelId: "samsung-windfree-premium-rac-wall-single-15000",
       outdoorUnitId: "samsung-ar15dxdabwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 15000,
@@ -3577,9 +5304,51 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-premium-rac-wall-single-cfg-2",
-      slug: "samsung-windfree-premium-rac-wall-single-cfg-2",
-      modelId: "samsung-windfree-premium-rac-wall-single",
+      id: "samsung-windfree-standard-rac-wall-single-18000-cfg-1",
+      slug: "samsung-windfree-standard-rac-wall-single-18000-cfg-1",
+      modelId: "samsung-windfree-standard-rac-wall-single-18000",
+      outdoorUnitId: "samsung-ar18dxfamwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-iaq-standard-rac-wall-single-18000-cfg-1",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-18000-cfg-1",
+      modelId: "samsung-windfree-iaq-standard-rac-wall-single-18000",
+      outdoorUnitId: "samsung-ar18dxfamwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-max-heat-rac-wall-single-20000-cfg-1",
+      slug: "samsung-windfree-max-heat-rac-wall-single-20000-cfg-1",
+      modelId: "samsung-windfree-max-heat-rac-wall-single-20000",
+      outdoorUnitId: "samsung-ar24dxdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-20000-cfg-1",
+      slug: "samsung-windfree-premium-rac-wall-single-20000-cfg-1",
+      modelId: "samsung-windfree-premium-rac-wall-single-20000",
       outdoorUnitId: "samsung-ar24dxdabwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -3591,9 +5360,23 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-premium-rac-wall-single-cfg-3",
-      slug: "samsung-windfree-premium-rac-wall-single-cfg-3",
-      modelId: "samsung-windfree-premium-rac-wall-single",
+      id: "samsung-windfree-max-heat-rac-wall-single-18000-cfg-1",
+      slug: "samsung-windfree-max-heat-rac-wall-single-18000-cfg-1",
+      modelId: "samsung-windfree-max-heat-rac-wall-single-18000",
+      outdoorUnitId: "samsung-ar18dxdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18500,
+      coolingCapacityMaxBtu: 18500,
+      seer2: 21,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-18000-cfg-1",
+      slug: "samsung-windfree-premium-rac-wall-single-18000-cfg-1",
+      modelId: "samsung-windfree-premium-rac-wall-single-18000",
       outdoorUnitId: "samsung-ar18dxdabwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18500,
@@ -3605,9 +5388,191 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-premium-rac-wall-single-cfg-4",
-      slug: "samsung-windfree-premium-rac-wall-single-cfg-4",
-      modelId: "samsung-windfree-premium-rac-wall-single",
+      id: "samsung-windfree-standard-rac-wall-single-15000-cfg-1",
+      slug: "samsung-windfree-standard-rac-wall-single-15000-cfg-1",
+      modelId: "samsung-windfree-standard-rac-wall-single-15000",
+      outdoorUnitId: "samsung-ar15dxfamwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: 21.5,
+      hspf2: 10,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-iaq-standard-rac-wall-single-15000-cfg-1",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-15000-cfg-1",
+      modelId: "samsung-windfree-iaq-standard-rac-wall-single-15000",
+      outdoorUnitId: "samsung-ar15dxfamwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 15000,
+      coolingCapacityMaxBtu: 15000,
+      seer2: 21.5,
+      hspf2: 10,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-30000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-30000",
+      outdoorUnitId: "samsung-ac030dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22.8,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-360-cassette-premium-cac-wall-single-30000-cfg-1",
+      slug: "samsung-360-cassette-premium-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-360-cassette-premium-cac-wall-single-30000",
+      outdoorUnitId: "samsung-ac030dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-30000-cfg-1",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-duct-s-hsp-premium-cac-wall-single-30000",
+      outdoorUnitId: "samsung-ac030dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-36000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-36000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-36000",
+      outdoorUnitId: "samsung-ac036dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-360-cassette-premium-cac-wall-single-36000-cfg-1",
+      slug: "samsung-360-cassette-premium-cac-wall-single-36000-cfg-1",
+      modelId: "samsung-360-cassette-premium-cac-wall-single-36000",
+      outdoorUnitId: "samsung-ac036dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.7,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-36000-cfg-1",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-36000-cfg-1",
+      modelId: "samsung-duct-s-hsp-premium-cac-wall-single-36000",
+      outdoorUnitId: "samsung-ac036dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-4-way-cassette-windfree-premium-cac-wall-single-48000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-premium-cac-wall-single-48000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-48000",
+      outdoorUnitId: "samsung-ac048dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 20,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-360-cassette-premium-cac-wall-single-48000-cfg-1",
+      slug: "samsung-360-cassette-premium-cac-wall-single-48000-cfg-1",
+      modelId: "samsung-360-cassette-premium-cac-wall-single-48000",
+      outdoorUnitId: "samsung-ac048dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: 18.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-48000-cfg-1",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-48000-cfg-1",
+      modelId: "samsung-duct-s-hsp-premium-cac-wall-single-48000",
+      outdoorUnitId: "samsung-ac048dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-max-heat-rac-wall-single-12000-cfg-1",
+      slug: "samsung-windfree-max-heat-rac-wall-single-12000-cfg-1",
+      modelId: "samsung-windfree-max-heat-rac-wall-single-12000",
+      outdoorUnitId: "samsung-ar12dxdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-max-heat-rac-wall-single-9000-cfg-1",
+      slug: "samsung-windfree-max-heat-rac-wall-single-9000-cfg-1",
+      modelId: "samsung-windfree-max-heat-rac-wall-single-9000",
+      outdoorUnitId: "samsung-ar09dxdacwkx",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-windfree-premium-rac-wall-single-12000-cfg-1",
+      slug: "samsung-windfree-premium-rac-wall-single-12000-cfg-1",
+      modelId: "samsung-windfree-premium-rac-wall-single-12000",
       outdoorUnitId: "samsung-ar12dxdabwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3619,9 +5584,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-premium-rac-wall-single-cfg-5",
-      slug: "samsung-windfree-premium-rac-wall-single-cfg-5",
-      modelId: "samsung-windfree-premium-rac-wall-single",
+      id: "samsung-windfree-premium-rac-wall-single-9000-cfg-1",
+      slug: "samsung-windfree-premium-rac-wall-single-9000-cfg-1",
+      modelId: "samsung-windfree-premium-rac-wall-single-9000",
       outdoorUnitId: "samsung-ar09dxdabwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3633,37 +5598,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-standard-rac-wall-single-cfg-1",
-      slug: "samsung-windfree-standard-rac-wall-single-cfg-1",
-      modelId: "samsung-windfree-standard-rac-wall-single",
-      outdoorUnitId: "samsung-ar18dxfamwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 9,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-standard-rac-wall-single-cfg-2",
-      slug: "samsung-windfree-standard-rac-wall-single-cfg-2",
-      modelId: "samsung-windfree-standard-rac-wall-single",
-      outdoorUnitId: "samsung-ar15dxfamwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: 21.5,
-      hspf2: 10,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-standard-rac-wall-single-cfg-3",
-      slug: "samsung-windfree-standard-rac-wall-single-cfg-3",
-      modelId: "samsung-windfree-standard-rac-wall-single",
+      id: "samsung-windfree-iaq-standard-rac-wall-single-12000-cfg-1",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-12000-cfg-1",
+      modelId: "samsung-windfree-iaq-standard-rac-wall-single-12000",
       outdoorUnitId: "samsung-ar12dxfamwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3675,9 +5612,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-standard-rac-wall-single-cfg-4",
-      slug: "samsung-windfree-standard-rac-wall-single-cfg-4",
-      modelId: "samsung-windfree-standard-rac-wall-single",
+      id: "samsung-windfree-iaq-standard-rac-wall-single-9000-cfg-1",
+      slug: "samsung-windfree-iaq-standard-rac-wall-single-9000-cfg-1",
+      modelId: "samsung-windfree-iaq-standard-rac-wall-single-9000",
       outdoorUnitId: "samsung-ar09dxfamwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3689,37 +5626,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-iaq-standard-rac-wall-single-cfg-1",
-      slug: "samsung-windfree-iaq-standard-rac-wall-single-cfg-1",
-      modelId: "samsung-windfree-iaq-standard-rac-wall-single",
-      outdoorUnitId: "samsung-ar18dxfamwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 9,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-iaq-standard-rac-wall-single-cfg-2",
-      slug: "samsung-windfree-iaq-standard-rac-wall-single-cfg-2",
-      modelId: "samsung-windfree-iaq-standard-rac-wall-single",
-      outdoorUnitId: "samsung-ar15dxfamwkx",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 15000,
-      coolingCapacityMaxBtu: 15000,
-      seer2: 21.5,
-      hspf2: 10,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-iaq-standard-rac-wall-single-cfg-3",
-      slug: "samsung-windfree-iaq-standard-rac-wall-single-cfg-3",
-      modelId: "samsung-windfree-iaq-standard-rac-wall-single",
+      id: "samsung-windfree-standard-rac-wall-single-12000-cfg-1",
+      slug: "samsung-windfree-standard-rac-wall-single-12000-cfg-1",
+      modelId: "samsung-windfree-standard-rac-wall-single-12000",
       outdoorUnitId: "samsung-ar12dxfamwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -3731,9 +5640,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-iaq-standard-rac-wall-single-cfg-4",
-      slug: "samsung-windfree-iaq-standard-rac-wall-single-cfg-4",
-      modelId: "samsung-windfree-iaq-standard-rac-wall-single",
+      id: "samsung-windfree-standard-rac-wall-single-9000-cfg-1",
+      slug: "samsung-windfree-standard-rac-wall-single-9000-cfg-1",
+      modelId: "samsung-windfree-standard-rac-wall-single-9000",
       outdoorUnitId: "samsung-ar09dxfamwkx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -3745,9 +5654,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-1",
-      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-1",
-      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single",
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-18000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3759,9 +5668,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-2",
-      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-2",
-      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single",
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-24000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-24000",
       outdoorUnitId: "samsung-ac024dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3773,9 +5682,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-3",
-      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-3",
-      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single",
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-30000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-30000",
       outdoorUnitId: "samsung-ac030dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3787,9 +5696,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-4",
-      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-4",
-      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single",
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-36000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-36000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-36000",
       outdoorUnitId: "samsung-ac036dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3801,9 +5710,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-5",
-      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-5",
-      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single",
+      id: "samsung-4-way-cassette-windfree-standard-cac-wall-single-48000-cfg-1",
+      slug: "samsung-4-way-cassette-windfree-standard-cac-wall-single-48000-cfg-1",
+      modelId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-48000",
       outdoorUnitId: "samsung-ac048dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -3815,9 +5724,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-1",
-      slug: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-1",
-      modelId: "samsung-duct-s-hsp-standard-cac-wall-single",
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-18000-cfg-1",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-duct-s-hsp-standard-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -3829,9 +5738,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-2",
-      slug: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-2",
-      modelId: "samsung-duct-s-hsp-standard-cac-wall-single",
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-24000-cfg-1",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-duct-s-hsp-standard-cac-wall-single-24000",
       outdoorUnitId: "samsung-ac024dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -3843,9 +5752,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-3",
-      slug: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-3",
-      modelId: "samsung-duct-s-hsp-standard-cac-wall-single",
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-30000-cfg-1",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-duct-s-hsp-standard-cac-wall-single-30000",
       outdoorUnitId: "samsung-ac030dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3857,9 +5766,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-4",
-      slug: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-4",
-      modelId: "samsung-duct-s-hsp-standard-cac-wall-single",
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-36000-cfg-1",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-36000-cfg-1",
+      modelId: "samsung-duct-s-hsp-standard-cac-wall-single-36000",
       outdoorUnitId: "samsung-ac036dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3871,9 +5780,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-5",
-      slug: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-5",
-      modelId: "samsung-duct-s-hsp-standard-cac-wall-single",
+      id: "samsung-duct-s-hsp-standard-cac-wall-single-48000-cfg-1",
+      slug: "samsung-duct-s-hsp-standard-cac-wall-single-48000-cfg-1",
+      modelId: "samsung-duct-s-hsp-standard-cac-wall-single-48000",
       outdoorUnitId: "samsung-ac048dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -3885,9 +5794,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-dvm-s-mini-wall-single-cfg-1",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-1",
-      modelId: "samsung-dvm-s-mini-wall-single",
+      id: "samsung-dvm-s-mini-wall-single-36000-cfg-1",
+      slug: "samsung-dvm-s-mini-wall-single-36000-cfg-1",
+      modelId: "samsung-dvm-s-mini-wall-single-36000",
       outdoorUnitId: "samsung-am036fcmdcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 38000,
@@ -3899,51 +5808,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-dvm-s-mini-wall-single-cfg-2",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-2",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am048fcmdcg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-dvm-s-mini-wall-single-cfg-3",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-3",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am060fcmdcg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-dvm-s-mini-wall-single-cfg-4",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-4",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am060fcmdcg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: 19,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-dvm-s-mini-wall-single-cfg-5",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-5",
-      modelId: "samsung-dvm-s-mini-wall-single",
+      id: "samsung-dvm-s-mini-wall-single-36000-cfg-2",
+      slug: "samsung-dvm-s-mini-wall-single-36000-cfg-2",
+      modelId: "samsung-dvm-s-mini-wall-single-36000",
       outdoorUnitId: "samsung-am036fcmdcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 38000,
@@ -3955,51 +5822,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-dvm-s-mini-wall-single-cfg-6",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-6",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am048fcmdcg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.3,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-dvm-s-mini-wall-single-cfg-7",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-7",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am060fcmdcg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: 20,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-dvm-s-mini-wall-single-cfg-8",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-8",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am060fcmdcg1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-dvm-s-mini-wall-single-cfg-9",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-9",
-      modelId: "samsung-dvm-s-mini-wall-single",
+      id: "samsung-dvm-s-mini-wall-single-36000-cfg-3",
+      slug: "samsung-dvm-s-mini-wall-single-36000-cfg-3",
+      modelId: "samsung-dvm-s-mini-wall-single-36000",
       outdoorUnitId: "samsung-am036fcmdcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 38000,
@@ -4011,37 +5836,37 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-dvm-s-mini-wall-single-cfg-10",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-10",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am060fcmdcg",
+      id: "samsung-dvm-s-mini-wall-single-48000-cfg-1",
+      slug: "samsung-dvm-s-mini-wall-single-48000-cfg-1",
+      modelId: "samsung-dvm-s-mini-wall-single-48000",
+      outdoorUnitId: "samsung-am048fcmdcg",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: 18.25,
-      hspf2: 9.85,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-dvm-s-mini-wall-single-cfg-11",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-11",
-      modelId: "samsung-dvm-s-mini-wall-single",
-      outdoorUnitId: "samsung-am060fcmdcg1",
+      id: "samsung-dvm-s-mini-wall-single-48000-cfg-2",
+      slug: "samsung-dvm-s-mini-wall-single-48000-cfg-2",
+      modelId: "samsung-dvm-s-mini-wall-single-48000",
+      outdoorUnitId: "samsung-am048fcmdcg",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 60000,
-      coolingCapacityMaxBtu: 60000,
-      seer2: 21,
-      hspf2: 10.75,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.3,
+      hspf2: 10.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-dvm-s-mini-wall-single-cfg-12",
-      slug: "samsung-dvm-s-mini-wall-single-cfg-12",
-      modelId: "samsung-dvm-s-mini-wall-single",
+      id: "samsung-dvm-s-mini-wall-single-48000-cfg-3",
+      slug: "samsung-dvm-s-mini-wall-single-48000-cfg-3",
+      modelId: "samsung-dvm-s-mini-wall-single-48000",
       outdoorUnitId: "samsung-am048fcmdcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -4053,9 +5878,93 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-standard-wall-single-cfg-1",
-      slug: "samsung-fjm-standard-wall-single-cfg-1",
-      modelId: "samsung-fjm-standard-wall-single",
+      id: "samsung-dvm-s-mini-wall-single-60000-cfg-1",
+      slug: "samsung-dvm-s-mini-wall-single-60000-cfg-1",
+      modelId: "samsung-dvm-s-mini-wall-single-60000",
+      outdoorUnitId: "samsung-am060fcmdcg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-60000-cfg-2",
+      slug: "samsung-dvm-s-mini-wall-single-60000-cfg-2",
+      modelId: "samsung-dvm-s-mini-wall-single-60000",
+      outdoorUnitId: "samsung-am060fcmdcg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: 19,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-60000-cfg-3",
+      slug: "samsung-dvm-s-mini-wall-single-60000-cfg-3",
+      modelId: "samsung-dvm-s-mini-wall-single-60000",
+      outdoorUnitId: "samsung-am060fcmdcg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: 20,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-60000-cfg-4",
+      slug: "samsung-dvm-s-mini-wall-single-60000-cfg-4",
+      modelId: "samsung-dvm-s-mini-wall-single-60000",
+      outdoorUnitId: "samsung-am060fcmdcg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-60000-cfg-5",
+      slug: "samsung-dvm-s-mini-wall-single-60000-cfg-5",
+      modelId: "samsung-dvm-s-mini-wall-single-60000",
+      outdoorUnitId: "samsung-am060fcmdcg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: 18.25,
+      hspf2: 9.85,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-dvm-s-mini-wall-single-60000-cfg-6",
+      slug: "samsung-dvm-s-mini-wall-single-60000-cfg-6",
+      modelId: "samsung-dvm-s-mini-wall-single-60000",
+      outdoorUnitId: "samsung-am060fcmdcg1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: 21,
+      hspf2: 10.75,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-48000-cfg-1",
+      slug: "samsung-fjm-standard-wall-single-48000-cfg-1",
+      modelId: "samsung-fjm-standard-wall-single-48000",
       outdoorUnitId: "samsung-aj048dxj5cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -4067,9 +5976,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-standard-wall-single-cfg-2",
-      slug: "samsung-fjm-standard-wall-single-cfg-2",
-      modelId: "samsung-fjm-standard-wall-single",
+      id: "samsung-fjm-standard-wall-single-30000-cfg-1",
+      slug: "samsung-fjm-standard-wall-single-30000-cfg-1",
+      modelId: "samsung-fjm-standard-wall-single-30000",
       outdoorUnitId: "samsung-aj036dxj4cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 32000,
@@ -4081,9 +5990,37 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-standard-wall-single-cfg-3",
-      slug: "samsung-fjm-standard-wall-single-cfg-3",
-      modelId: "samsung-fjm-standard-wall-single",
+      id: "samsung-fjm-standard-wall-single-30000-cfg-2",
+      slug: "samsung-fjm-standard-wall-single-30000-cfg-2",
+      modelId: "samsung-fjm-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj036dxj4cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: 19,
+      hspf2: 8.6,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-30000-cfg-3",
+      slug: "samsung-fjm-standard-wall-single-30000-cfg-3",
+      modelId: "samsung-fjm-standard-wall-single-30000",
+      outdoorUnitId: "samsung-aj036dxj4cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 32000,
+      coolingCapacityMaxBtu: 32000,
+      seer2: 20.75,
+      hspf2: 9.05,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-20000-cfg-1",
+      slug: "samsung-fjm-standard-wall-single-20000-cfg-1",
+      modelId: "samsung-fjm-standard-wall-single-20000",
       outdoorUnitId: "samsung-aj024dxj3cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -4095,9 +6032,37 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-standard-wall-single-cfg-4",
-      slug: "samsung-fjm-standard-wall-single-cfg-4",
-      modelId: "samsung-fjm-standard-wall-single",
+      id: "samsung-fjm-standard-wall-single-20000-cfg-2",
+      slug: "samsung-fjm-standard-wall-single-20000-cfg-2",
+      modelId: "samsung-fjm-standard-wall-single-20000",
+      outdoorUnitId: "samsung-aj024dxj3cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 19,
+      hspf2: 8.6,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-20000-cfg-3",
+      slug: "samsung-fjm-standard-wall-single-20000-cfg-3",
+      modelId: "samsung-fjm-standard-wall-single-20000",
+      outdoorUnitId: "samsung-aj024dxj3cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.75,
+      hspf2: 9.05,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-18000-cfg-1",
+      slug: "samsung-fjm-standard-wall-single-18000-cfg-1",
+      modelId: "samsung-fjm-standard-wall-single-18000",
       outdoorUnitId: "samsung-aj020dxj2cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4109,93 +6074,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-standard-wall-single-cfg-5",
-      slug: "samsung-fjm-standard-wall-single-cfg-5",
-      modelId: "samsung-fjm-standard-wall-single",
-      outdoorUnitId: "samsung-aj048dxj5cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 43000,
-      coolingCapacityMaxBtu: 43000,
-      seer2: 20,
-      hspf2: 8.6,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-standard-wall-single-cfg-6",
-      slug: "samsung-fjm-standard-wall-single-cfg-6",
-      modelId: "samsung-fjm-standard-wall-single",
-      outdoorUnitId: "samsung-aj036dxj4cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: 19,
-      hspf2: 8.6,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-standard-wall-single-cfg-7",
-      slug: "samsung-fjm-standard-wall-single-cfg-7",
-      modelId: "samsung-fjm-standard-wall-single",
-      outdoorUnitId: "samsung-aj024dxj3cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 19,
-      hspf2: 8.6,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-standard-wall-single-cfg-8",
-      slug: "samsung-fjm-standard-wall-single-cfg-8",
-      modelId: "samsung-fjm-standard-wall-single",
-      outdoorUnitId: "samsung-aj048dxj5cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 44500,
-      coolingCapacityMaxBtu: 44500,
-      seer2: 20.5,
-      hspf2: 8.8,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-standard-wall-single-cfg-9",
-      slug: "samsung-fjm-standard-wall-single-cfg-9",
-      modelId: "samsung-fjm-standard-wall-single",
-      outdoorUnitId: "samsung-aj036dxj4cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 32000,
-      coolingCapacityMaxBtu: 32000,
-      seer2: 20.75,
-      hspf2: 9.05,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-standard-wall-single-cfg-10",
-      slug: "samsung-fjm-standard-wall-single-cfg-10",
-      modelId: "samsung-fjm-standard-wall-single",
-      outdoorUnitId: "samsung-aj024dxj3cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.75,
-      hspf2: 9.05,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-standard-wall-single-cfg-11",
-      slug: "samsung-fjm-standard-wall-single-cfg-11",
-      modelId: "samsung-fjm-standard-wall-single",
+      id: "samsung-fjm-standard-wall-single-18000-cfg-2",
+      slug: "samsung-fjm-standard-wall-single-18000-cfg-2",
+      modelId: "samsung-fjm-standard-wall-single-18000",
       outdoorUnitId: "samsung-aj020dxj2cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4207,9 +6088,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-premium-wall-single-cfg-1",
-      slug: "samsung-fjm-premium-wall-single-cfg-1",
-      modelId: "samsung-fjm-premium-wall-single",
+      id: "samsung-fjm-premium-wall-single-36000-cfg-1",
+      slug: "samsung-fjm-premium-wall-single-36000-cfg-1",
+      modelId: "samsung-fjm-premium-wall-single-36000",
       outdoorUnitId: "samsung-aj036dxs4cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -4221,51 +6102,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-premium-wall-single-cfg-2",
-      slug: "samsung-fjm-premium-wall-single-cfg-2",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj030dxs4cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 22.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-premium-wall-single-cfg-3",
-      slug: "samsung-fjm-premium-wall-single-cfg-3",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj024dxs4cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
-      seer2: 23,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-premium-wall-single-cfg-4",
-      slug: "samsung-fjm-premium-wall-single-cfg-4",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj020dxs3cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: 23,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-premium-wall-single-cfg-5",
-      slug: "samsung-fjm-premium-wall-single-cfg-5",
-      modelId: "samsung-fjm-premium-wall-single",
+      id: "samsung-fjm-premium-wall-single-36000-cfg-2",
+      slug: "samsung-fjm-premium-wall-single-36000-cfg-2",
+      modelId: "samsung-fjm-premium-wall-single-36000",
       outdoorUnitId: "samsung-aj036dxs4cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -4277,51 +6116,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-premium-wall-single-cfg-6",
-      slug: "samsung-fjm-premium-wall-single-cfg-6",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj030dxs4cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28400,
-      coolingCapacityMaxBtu: 28400,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-premium-wall-single-cfg-7",
-      slug: "samsung-fjm-premium-wall-single-cfg-7",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj024dxs4cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-premium-wall-single-cfg-8",
-      slug: "samsung-fjm-premium-wall-single-cfg-8",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj020dxs3cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: 20.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-premium-wall-single-cfg-9",
-      slug: "samsung-fjm-premium-wall-single-cfg-9",
-      modelId: "samsung-fjm-premium-wall-single",
+      id: "samsung-fjm-premium-wall-single-36000-cfg-3",
+      slug: "samsung-fjm-premium-wall-single-36000-cfg-3",
+      modelId: "samsung-fjm-premium-wall-single-36000",
       outdoorUnitId: "samsung-aj036dxs4cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -4333,37 +6130,37 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-premium-wall-single-cfg-10",
-      slug: "samsung-fjm-premium-wall-single-cfg-10",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj024dxs4cg",
+      id: "samsung-fjm-premium-wall-single-30000-cfg-1",
+      slug: "samsung-fjm-premium-wall-single-30000-cfg-1",
+      modelId: "samsung-fjm-premium-wall-single-30000",
+      outdoorUnitId: "samsung-aj030dxs4cg",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 25000,
-      coolingCapacityMaxBtu: 25000,
-      seer2: 21.5,
-      hspf2: 9.95,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-fjm-premium-wall-single-cfg-11",
-      slug: "samsung-fjm-premium-wall-single-cfg-11",
-      modelId: "samsung-fjm-premium-wall-single",
-      outdoorUnitId: "samsung-aj020dxs3cg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21000,
-      coolingCapacityMaxBtu: 21000,
-      seer2: 21.75,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 22.5,
       hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-fjm-premium-wall-single-cfg-12",
-      slug: "samsung-fjm-premium-wall-single-cfg-12",
-      modelId: "samsung-fjm-premium-wall-single",
+      id: "samsung-fjm-premium-wall-single-30000-cfg-2",
+      slug: "samsung-fjm-premium-wall-single-30000-cfg-2",
+      modelId: "samsung-fjm-premium-wall-single-30000",
+      outdoorUnitId: "samsung-aj030dxs4cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28400,
+      coolingCapacityMaxBtu: 28400,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-30000-cfg-3",
+      slug: "samsung-fjm-premium-wall-single-30000-cfg-3",
+      modelId: "samsung-fjm-premium-wall-single-30000",
       outdoorUnitId: "samsung-aj030dxs4cg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28400,
@@ -4375,9 +6172,135 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-console-premium-cac-wall-single-cfg-1",
-      slug: "samsung-console-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-console-premium-cac-wall-single",
+      id: "samsung-fjm-premium-wall-single-24000-cfg-1",
+      slug: "samsung-fjm-premium-wall-single-24000-cfg-1",
+      modelId: "samsung-fjm-premium-wall-single-24000",
+      outdoorUnitId: "samsung-aj024dxs4cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: 23,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-24000-cfg-2",
+      slug: "samsung-fjm-premium-wall-single-24000-cfg-2",
+      modelId: "samsung-fjm-premium-wall-single-24000",
+      outdoorUnitId: "samsung-aj024dxs4cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-24000-cfg-3",
+      slug: "samsung-fjm-premium-wall-single-24000-cfg-3",
+      modelId: "samsung-fjm-premium-wall-single-24000",
+      outdoorUnitId: "samsung-aj024dxs4cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 25000,
+      coolingCapacityMaxBtu: 25000,
+      seer2: 21.5,
+      hspf2: 9.95,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-20000-cfg-1",
+      slug: "samsung-fjm-premium-wall-single-20000-cfg-1",
+      modelId: "samsung-fjm-premium-wall-single-20000",
+      outdoorUnitId: "samsung-aj020dxs3cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-20000-cfg-2",
+      slug: "samsung-fjm-premium-wall-single-20000-cfg-2",
+      modelId: "samsung-fjm-premium-wall-single-20000",
+      outdoorUnitId: "samsung-aj020dxs3cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: 20.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-premium-wall-single-20000-cfg-3",
+      slug: "samsung-fjm-premium-wall-single-20000-cfg-3",
+      modelId: "samsung-fjm-premium-wall-single-20000",
+      outdoorUnitId: "samsung-aj020dxs3cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21000,
+      coolingCapacityMaxBtu: 21000,
+      seer2: 21.75,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-42000-cfg-1",
+      slug: "samsung-fjm-standard-wall-single-42000-cfg-1",
+      modelId: "samsung-fjm-standard-wall-single-42000",
+      outdoorUnitId: "samsung-aj048dxj5cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 43000,
+      coolingCapacityMaxBtu: 43000,
+      seer2: 20,
+      hspf2: 8.6,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-fjm-standard-wall-single-42000-cfg-2",
+      slug: "samsung-fjm-standard-wall-single-42000-cfg-2",
+      modelId: "samsung-fjm-standard-wall-single-42000",
+      outdoorUnitId: "samsung-aj048dxj5cg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 44500,
+      coolingCapacityMaxBtu: 44500,
+      seer2: 20.5,
+      hspf2: 8.8,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-9000-cfg-1",
+      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-9000-cfg-1",
+      modelId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-9000",
+      outdoorUnitId: "samsung-ac009dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9100,
+      coolingCapacityMaxBtu: 9100,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-console-premium-cac-wall-single-15000-cfg-1",
+      slug: "samsung-console-premium-cac-wall-single-15000-cfg-1",
+      modelId: "samsung-console-premium-cac-wall-single-15000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16000,
@@ -4389,37 +6312,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-console-premium-cac-wall-single-cfg-2",
-      slug: "samsung-console-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-console-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac009dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-console-premium-cac-wall-single-cfg-3",
-      slug: "samsung-console-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-console-premium-cac-wall-single",
-      outdoorUnitId: "samsung-ac012dxsccg",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 10200,
-      coolingCapacityMaxBtu: 10200,
-      seer2: 21,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "samsung-windfree-high-wall-premium-cac-wall-single-cfg-1",
-      slug: "samsung-windfree-high-wall-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-windfree-high-wall-premium-cac-wall-single",
+      id: "samsung-windfree-high-wall-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-windfree-high-wall-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-windfree-high-wall-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4431,9 +6326,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-windfree-high-wall-premium-cac-wall-single-cfg-2",
-      slug: "samsung-windfree-high-wall-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-windfree-high-wall-premium-cac-wall-single",
+      id: "samsung-windfree-high-wall-premium-cac-wall-single-24000-cfg-1",
+      slug: "samsung-windfree-high-wall-premium-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-windfree-high-wall-premium-cac-wall-single-24000",
       outdoorUnitId: "samsung-ac024dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4445,9 +6340,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-high-wall-premium-cac-wall-single-cfg-1",
-      slug: "samsung-high-wall-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-high-wall-premium-cac-wall-single",
+      id: "samsung-high-wall-premium-cac-wall-single-30000-cfg-1",
+      slug: "samsung-high-wall-premium-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-high-wall-premium-cac-wall-single-30000",
       outdoorUnitId: "samsung-ac030dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4459,9 +6354,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-high-wall-premium-cac-wall-single-cfg-2",
-      slug: "samsung-high-wall-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-high-wall-premium-cac-wall-single",
+      id: "samsung-high-wall-premium-cac-wall-single-30000-cfg-2",
+      slug: "samsung-high-wall-premium-cac-wall-single-30000-cfg-2",
+      modelId: "samsung-high-wall-premium-cac-wall-single-30000",
       outdoorUnitId: "samsung-ac036dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -4473,9 +6368,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-1",
-      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-1",
-      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-18000-cfg-1",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4487,9 +6382,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-2",
-      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-2",
-      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-24000-cfg-1",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single-24000",
       outdoorUnitId: "samsung-ac024dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4501,9 +6396,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-3",
-      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-3",
-      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-30000-cfg-1",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single-30000",
       outdoorUnitId: "samsung-ac030dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4515,9 +6410,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-4",
-      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-4",
-      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-36000-cfg-1",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-36000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single-36000",
       outdoorUnitId: "samsung-ac036dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -4529,9 +6424,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-5",
-      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-5",
-      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single",
+      id: "samsung-multi-position-air-handler-premium-cac-wall-single-48000-cfg-1",
+      slug: "samsung-multi-position-air-handler-premium-cac-wall-single-48000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-premium-cac-wall-single-48000",
       outdoorUnitId: "samsung-ac048dxsccg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -4543,9 +6438,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-1",
-      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-1",
-      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single",
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-18000-cfg-1",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-18000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single-18000",
       outdoorUnitId: "samsung-ac018dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -4557,9 +6452,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-2",
-      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-2",
-      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single",
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-24000-cfg-1",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-24000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single-24000",
       outdoorUnitId: "samsung-ac024dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -4571,9 +6466,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-3",
-      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-3",
-      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single",
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-30000-cfg-1",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-30000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single-30000",
       outdoorUnitId: "samsung-ac030dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -4585,9 +6480,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-4",
-      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-4",
-      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single",
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-36000-cfg-1",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-36000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single-36000",
       outdoorUnitId: "samsung-ac036dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -4599,9 +6494,9 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-5",
-      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-5",
-      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single",
+      id: "samsung-multi-position-air-handler-standard-cac-wall-single-48000-cfg-1",
+      slug: "samsung-multi-position-air-handler-standard-cac-wall-single-48000-cfg-1",
+      modelId: "samsung-multi-position-air-handler-standard-cac-wall-single-48000",
       outdoorUnitId: "samsung-ac048dxadcg",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -4613,9 +6508,135 @@ export const samsungDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "samsung-high-wall-rac-wall-single-cfg-1",
-      slug: "samsung-high-wall-rac-wall-single-cfg-1",
-      modelId: "samsung-high-wall-rac-wall-single",
+      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-9000-cfg-1",
+      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-9000-cfg-1",
+      modelId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-9000",
+      outdoorUnitId: "samsung-ac009dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-1-way-cassette-windfree-premium-cac-wall-single-12000-cfg-1",
+      slug: "samsung-1-way-cassette-windfree-premium-cac-wall-single-12000-cfg-1",
+      modelId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-12000",
+      outdoorUnitId: "samsung-ac012dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-slim-duct-lsp-premium-cac-wall-single-9000-cfg-1",
+      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-9000-cfg-1",
+      modelId: "samsung-slim-duct-lsp-premium-cac-wall-single-9000",
+      outdoorUnitId: "samsung-ac009dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.1,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-slim-duct-lsp-premium-cac-wall-single-12000-cfg-1",
+      slug: "samsung-slim-duct-lsp-premium-cac-wall-single-12000-cfg-1",
+      modelId: "samsung-slim-duct-lsp-premium-cac-wall-single-12000",
+      outdoorUnitId: "samsung-ac012dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.6,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-9000-cfg-1",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-9000-cfg-1",
+      modelId: "samsung-duct-s-hsp-premium-cac-wall-single-9000",
+      outdoorUnitId: "samsung-ac009dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-duct-s-hsp-premium-cac-wall-single-12000-cfg-1",
+      slug: "samsung-duct-s-hsp-premium-cac-wall-single-12000-cfg-1",
+      modelId: "samsung-duct-s-hsp-premium-cac-wall-single-12000",
+      outdoorUnitId: "samsung-ac012dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 18.6,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-12000-cfg-1",
+      slug: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-12000-cfg-1",
+      modelId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-12000",
+      outdoorUnitId: "samsung-ac012dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-console-premium-cac-wall-single-9000-cfg-1",
+      slug: "samsung-console-premium-cac-wall-single-9000-cfg-1",
+      modelId: "samsung-console-premium-cac-wall-single-9000",
+      outdoorUnitId: "samsung-ac009dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-console-premium-cac-wall-single-9000-cfg-2",
+      slug: "samsung-console-premium-cac-wall-single-9000-cfg-2",
+      modelId: "samsung-console-premium-cac-wall-single-9000",
+      outdoorUnitId: "samsung-ac012dxsccg",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 10200,
+      coolingCapacityMaxBtu: 10200,
+      seer2: 21,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "samsung-high-wall-rac-wall-single-30000-cfg-1",
+      slug: "samsung-high-wall-rac-wall-single-30000-cfg-1",
+      modelId: "samsung-high-wall-rac-wall-single-30000",
       outdoorUnitId: "samsung-ar36dxfumgmx",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -4629,7 +6650,7 @@ export const samsungDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "samsung-standard-wall-single-cfg-1",
+      configurationId: "samsung-standard-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4640,7 +6661,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-2",
+      configurationId: "samsung-standard-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4651,7 +6672,51 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-3",
+      configurationId: "samsung-standard-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-60000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-60000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-60000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4662,18 +6727,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-5",
+      configurationId: "samsung-standard-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4684,7 +6738,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-6",
+      configurationId: "samsung-standard-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4695,7 +6749,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-7",
+      configurationId: "samsung-standard-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4706,117 +6760,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-18",
+      configurationId: "samsung-standard-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4827,7 +6771,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-19",
+      configurationId: "samsung-standard-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4838,18 +6782,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-21",
+      configurationId: "samsung-standard-wall-single-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4860,7 +6793,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-22",
+      configurationId: "samsung-standard-wall-single-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4871,29 +6804,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-25",
+      configurationId: "samsung-standard-wall-single-48000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4904,7 +6815,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-26",
+      configurationId: "samsung-standard-wall-single-48000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4915,7 +6826,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-27",
+      configurationId: "samsung-standard-wall-single-48000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4926,7 +6837,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-28",
+      configurationId: "samsung-standard-wall-single-48000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4937,29 +6848,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-31",
+      configurationId: "samsung-standard-wall-single-48000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4970,73 +6859,117 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-32",
+      configurationId: "samsung-standard-wall-single-48000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
+          heatingCapacityBtu: 46000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-33",
+      configurationId: "samsung-standard-wall-single-48000-cfg-15",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
+          heatingCapacityBtu: 42000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-34",
+      configurationId: "samsung-standard-wall-single-48000-cfg-16",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
+          heatingCapacityBtu: 43000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-35",
+      configurationId: "samsung-standard-wall-single-48000-cfg-17",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 13100,
+          heatingCapacityBtu: 43000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-36",
+      configurationId: "samsung-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
+          heatingCapacityBtu: 25000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-37",
+      configurationId: "samsung-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
+          heatingCapacityBtu: 25000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-38",
+      configurationId: "samsung-standard-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-36000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5047,73 +6980,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-39",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-45",
+      configurationId: "samsung-standard-wall-single-36000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5124,40 +6991,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-49",
+      configurationId: "samsung-standard-wall-single-36000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5168,205 +7002,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-50",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 46000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-51",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 46000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-53",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-54",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-55",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12100,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-56",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-57",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-58",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-59",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-60",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-61",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-62",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-63",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-64",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-65",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-66",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-67",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-68",
+      configurationId: "samsung-standard-wall-single-36000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5377,7 +7013,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-69",
+      configurationId: "samsung-standard-wall-single-36000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5388,7 +7024,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-70",
+      configurationId: "samsung-standard-wall-single-36000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5399,7 +7035,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-71",
+      configurationId: "samsung-standard-wall-single-36000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5410,84 +7046,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-72",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-73",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-74",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-75",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-76",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-77",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 43000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-78",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-79",
+      configurationId: "samsung-standard-wall-single-36000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5498,7 +7057,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-80",
+      configurationId: "samsung-standard-wall-single-36000-cfg-15",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5509,40 +7068,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-81",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-82",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-83",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-84",
+      configurationId: "samsung-standard-wall-single-36000-cfg-16",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5553,7 +7079,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-85",
+      configurationId: "samsung-standard-wall-single-36000-cfg-17",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5564,194 +7090,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-86",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-87",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-88",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-89",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-90",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-91",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-92",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-93",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-94",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-95",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-96",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-97",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-98",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-99",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-100",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-101",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-102",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-103",
+      configurationId: "samsung-standard-wall-single-36000-cfg-18",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5762,7 +7101,414 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-104",
+      configurationId: "samsung-standard-wall-single-36000-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-9000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-18000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-20000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5773,29 +7519,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-105",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-106",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-standard-wall-single-cfg-107",
+      configurationId: "samsung-standard-wall-single-20000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5806,18 +7530,139 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-108",
+      configurationId: "samsung-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15100,
+          heatingCapacityBtu: 21000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-109",
+      configurationId: "samsung-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-30000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5828,18 +7673,194 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-standard-wall-single-cfg-110",
+      configurationId: "samsung-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 21800,
+          heatingCapacityBtu: 14600,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-hylex-central-ducted-cfg-1",
+      configurationId: "samsung-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-24000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 46000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-42000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-standard-wall-single-15000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-hylex-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5850,7 +7871,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-hylex-central-ducted-cfg-2",
+      configurationId: "samsung-hylex-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5861,40 +7882,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-hylex-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 54000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-hylex-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-hylex-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 46000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-hylex-central-ducted-cfg-6",
+      configurationId: "samsung-hylex-central-ducted-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5905,7 +7893,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-hylex-central-ducted-cfg-7",
+      configurationId: "samsung-hylex-central-ducted-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5916,7 +7904,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-hylex-central-ducted-cfg-8",
+      configurationId: "samsung-hylex-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5927,7 +7915,18 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-hylex-central-ducted-cfg-9",
+      configurationId: "samsung-hylex-central-ducted-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 54000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-hylex-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5938,7 +7937,18 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-hylex-central-ducted-cfg-10",
+      configurationId: "samsung-hylex-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-hylex-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5949,7 +7959,18 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-hylex-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 46000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5960,7 +7981,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-2",
+      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -5971,40 +7992,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6015,29 +8003,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9100,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-360-cassette-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-360-cassette-premium-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6048,51 +8014,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-360-cassette-premium-cac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-360-cassette-premium-cac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-360-cassette-premium-cac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-360-cassette-premium-cac-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 40500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6103,73 +8025,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 41000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6180,271 +8036,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-slim-duct-lsp-premium-cac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-max-heat-rac-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.5,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-max-heat-rac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2.22,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-max-heat-rac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-max-heat-rac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 2.09,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-max-heat-rac-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 2.19,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-premium-rac-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.5,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-premium-rac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2.22,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-premium-rac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-premium-rac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 2.09,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-premium-rac-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 2.19,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-standard-rac-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.09,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-standard-rac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: 2.38,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-standard-rac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: 1.76,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-standard-rac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.09,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: 2.38,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: 1.76,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-2",
+      configurationId: "samsung-360-cassette-premium-cac-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6455,7 +8047,348 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-3",
+      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-slim-duct-lsp-premium-cac-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-max-heat-rac-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.5,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-premium-rac-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.5,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-standard-rac-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.09,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.09,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-max-heat-rac-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-premium-rac-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2.22,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-max-heat-rac-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-premium-rac-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-standard-rac-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: 2.38,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: 2.38,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-360-cassette-premium-cac-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-360-cassette-premium-cac-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-4-way-cassette-windfree-premium-cac-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-360-cassette-premium-cac-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-max-heat-rac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 2.09,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-max-heat-rac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 2.19,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-premium-rac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 2.09,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-premium-rac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 2.19,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10900,
+          cop: 1.76,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-iaq-standard-rac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-standard-rac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10900,
+          cop: 1.76,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-windfree-standard-rac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6466,7 +8399,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-4",
+      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6477,7 +8410,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-cfg-5",
+      configurationId: "samsung-4-way-cassette-windfree-standard-cac-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6488,7 +8421,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-1",
+      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6499,7 +8432,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-2",
+      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6510,7 +8443,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-3",
+      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6521,7 +8454,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-4",
+      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6532,7 +8465,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-cfg-5",
+      configurationId: "samsung-duct-s-hsp-standard-cac-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6543,7 +8476,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-1",
+      configurationId: "samsung-dvm-s-mini-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6554,7 +8487,29 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-2",
+      configurationId: "samsung-dvm-s-mini-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-dvm-s-mini-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-dvm-s-mini-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6565,7 +8520,29 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-3",
+      configurationId: "samsung-dvm-s-mini-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-dvm-s-mini-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-dvm-s-mini-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6576,7 +8553,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-4",
+      configurationId: "samsung-dvm-s-mini-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6587,29 +8564,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-7",
+      configurationId: "samsung-dvm-s-mini-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6620,7 +8575,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-8",
+      configurationId: "samsung-dvm-s-mini-wall-single-60000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6631,18 +8586,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-10",
+      configurationId: "samsung-dvm-s-mini-wall-single-60000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6653,7 +8597,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-11",
+      configurationId: "samsung-dvm-s-mini-wall-single-60000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6664,18 +8608,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-dvm-s-mini-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-1",
+      configurationId: "samsung-fjm-standard-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6686,7 +8619,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-2",
+      configurationId: "samsung-fjm-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6697,40 +8630,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12800,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28400,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-6",
+      configurationId: "samsung-fjm-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6741,29 +8641,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28400,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-9",
+      configurationId: "samsung-fjm-standard-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6774,7 +8652,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-10",
+      configurationId: "samsung-fjm-standard-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6785,7 +8663,40 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-standard-wall-single-cfg-11",
+      configurationId: "samsung-fjm-standard-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-standard-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-standard-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6796,7 +8707,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-1",
+      configurationId: "samsung-fjm-premium-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6807,40 +8718,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17500,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-5",
+      configurationId: "samsung-fjm-premium-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6851,40 +8729,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: 1.81,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.82,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13200,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-9",
+      configurationId: "samsung-fjm-premium-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6895,29 +8740,29 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-10",
+      configurationId: "samsung-fjm-premium-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15100,
-          cop: 1.83,
+          heatingCapacityBtu: 17500,
+          cop: 1.81,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-11",
+      configurationId: "samsung-fjm-premium-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 13200,
-          cop: 1.89,
+          heatingCapacityBtu: 17200,
+          cop: 1.81,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "samsung-fjm-premium-wall-single-cfg-12",
+      configurationId: "samsung-fjm-premium-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6928,7 +8773,106 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-console-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-fjm-premium-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-premium-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.82,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-premium-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15100,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-premium-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-premium-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13200,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-premium-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13200,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-standard-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28400,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-fjm-standard-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28400,
+          cop: 1.81,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-console-premium-cac-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6939,29 +8883,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-console-premium-cac-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-console-premium-cac-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "samsung-windfree-high-wall-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-windfree-high-wall-premium-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6972,7 +8894,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-windfree-high-wall-premium-cac-wall-single-cfg-2",
+      configurationId: "samsung-windfree-high-wall-premium-cac-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6983,7 +8905,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-high-wall-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-high-wall-premium-cac-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -6994,7 +8916,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-high-wall-premium-cac-wall-single-cfg-2",
+      configurationId: "samsung-high-wall-premium-cac-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7005,7 +8927,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-1",
+      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7016,7 +8938,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-2",
+      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7027,7 +8949,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-3",
+      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7038,7 +8960,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-4",
+      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7049,7 +8971,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-cfg-5",
+      configurationId: "samsung-multi-position-air-handler-premium-cac-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7060,7 +8982,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-1",
+      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7071,7 +8993,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-2",
+      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7082,7 +9004,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-3",
+      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7093,7 +9015,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-4",
+      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7104,7 +9026,7 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-cfg-5",
+      configurationId: "samsung-multi-position-air-handler-standard-cac-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -7115,7 +9037,106 @@ export const samsungDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "samsung-high-wall-rac-wall-single-cfg-1",
+      configurationId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-1-way-cassette-windfree-premium-cac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-slim-duct-lsp-premium-cac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-slim-duct-lsp-premium-cac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-duct-s-hsp-premium-cac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-mini-4-way-cassette-windfree-premium-cac-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-console-premium-cac-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-console-premium-cac-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "samsung-high-wall-rac-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

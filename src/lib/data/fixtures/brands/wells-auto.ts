@@ -125,23 +125,24 @@ export const wellsDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "wells-wsa-series-wall-single",
-      slug: "wells-wsa-series-wall-single",
-      name: "WSA Series",
+      id: "wells-wsa-series-wall-single-18000",
+      slug: "wells-wsa-series-wall-single-18000",
+      name: "WSA Series 18 000 BTU",
       seriesId: "wells-wsa-series",
       brandId: "wells",
-      modelNumber: "WSA Series",
-      normalizedModelNumber: "wsa-series",
+      modelNumber: "WSA Series 18k",
+      normalizedModelNumber: "wsa-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 7500,
-      heatingCapacity5FMaxBtu: 34800,
-      seer2Min: 20,
-      seer2Max: 26.4,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 11100,
+      heatingCapacity5FMaxBtu: 14400,
+      seer2Min: 20.5,
+      seer2Max: 22,
       hspf2Min: 9,
-      hspf2Max: 12,
+      hspf2Max: 10.6,
       cop5FMin: 1.8,
       cop5FMax: 2,
       systemType: "wall-single",
@@ -151,23 +152,51 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single",
-      slug: "wells-wma-series-wall-single",
-      name: "WMA Series",
+      id: "wells-wma-series-wall-single-18000",
+      slug: "wells-wma-series-wall-single-18000",
+      name: "WMA Series 18 000 BTU",
       seriesId: "wells-wma-series",
       brandId: "wells",
-      modelNumber: "WMA Series",
-      normalizedModelNumber: "wma-series",
+      modelNumber: "WMA Series 18k",
+      normalizedModelNumber: "wma-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 19000,
       heatingCapacity5FMinBtu: 14600,
-      heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 18.8,
-      seer2Max: 22.25,
-      hspf2Min: 9,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 9.15,
       hspf2Max: 10,
+      cop5FMin: 1.83,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-24000",
+      slug: "wells-wsa-series-wall-single-24000",
+      name: "WSA Series 24 000 BTU",
+      seriesId: "wells-wsa-series",
+      brandId: "wells",
+      modelNumber: "WSA Series 24k",
+      normalizedModelNumber: "wsa-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 18900,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 20.5,
+      seer2Max: 23.5,
+      hspf2Min: 9.2,
+      hspf2Max: 10.3,
       cop5FMin: 1.8,
       cop5FMax: 2,
       systemType: "wall-single",
@@ -177,24 +206,79 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wmm-series-wall-single",
-      slug: "wells-wmm-series-wall-single",
-      name: "WMM Series",
-      seriesId: "wells-wmm-series",
+      id: "wells-wma-series-wall-single-30000",
+      slug: "wells-wma-series-wall-single-30000",
+      name: "WMA Series 30 000 BTU",
+      seriesId: "wells-wma-series",
       brandId: "wells",
-      modelNumber: "WMM Series",
-      normalizedModelNumber: "wmm-series",
+      modelNumber: "WMA Series 30k",
+      normalizedModelNumber: "wma-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 48000,
-      heatingCapacity5FMinBtu: 26400,
-      heatingCapacity5FMaxBtu: 36000,
-      seer2Min: 20,
-      seer2Max: 21.1,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 21,
+      seer2Max: 22.25,
       hspf2Min: 9.2,
-      hspf2Max: 9.5,
+      hspf2Max: 9.2,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wmm-series-wall-single-36000",
+      slug: "wells-wmm-series-wall-single-36000",
+      name: "WMM Series 36 000 BTU",
+      seriesId: "wells-wmm-series",
+      brandId: "wells",
+      modelNumber: "WMM Series 36k",
+      normalizedModelNumber: "wmm-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 26400,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
       cop5FMin: 1.68,
+      cop5FMax: 1.68,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wmm-series-wall-single-48000",
+      slug: "wells-wmm-series-wall-single-48000",
+      name: "WMM Series 48 000 BTU",
+      seriesId: "wells-wmm-series",
+      brandId: "wells",
+      modelNumber: "WMM Series 48k",
+      normalizedModelNumber: "wmm-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 21.1,
+      seer2Max: 21.1,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
       cop5FMax: 1.8,
       systemType: "wall-single",
       categories: ["conventional", "ductless", "single-zone"],
@@ -203,18 +287,19 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-standard-wall-single",
-      slug: "wells-standard-wall-single",
-      name: "Standard",
+      id: "wells-standard-wall-single-60000",
+      slug: "wells-standard-wall-single-60000",
+      name: "Standard 60 000 BTU",
       seriesId: "wells-standard",
       brandId: "wells",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 60k",
+      normalizedModelNumber: "standard-60000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
-      heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMinBtu: 34400,
       heatingCapacity5FMaxBtu: 39000,
       seer2Min: null,
       seer2Max: null,
@@ -229,15 +314,43 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-vmc-series-wall-single",
-      slug: "wells-vmc-series-wall-single",
-      name: "VMC Series",
-      seriesId: "wells-vmc-series",
+      id: "wells-wma-series-wall-single-24000",
+      slug: "wells-wma-series-wall-single-24000",
+      name: "WMA Series 24 000 BTU",
+      seriesId: "wells-wma-series",
       brandId: "wells",
-      modelNumber: "VMC Series",
-      normalizedModelNumber: "vmc-series",
+      modelNumber: "WMA Series 24k",
+      normalizedModelNumber: "wma-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 22600,
+      heatingCapacity5FMaxBtu: 23000,
+      seer2Min: 19,
+      seer2Max: 19.75,
+      hspf2Min: 9.8,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-vmc-series-wall-single-48000",
+      slug: "wells-vmc-series-wall-single-48000",
+      name: "VMC Series 48 000 BTU",
+      seriesId: "wells-vmc-series",
+      brandId: "wells",
+      modelNumber: "VMC Series 48k",
+      normalizedModelNumber: "vmc-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: 47500,
       coolingCapacityMaxBtu: 48000,
       heatingCapacity5FMinBtu: 37400,
@@ -255,24 +368,160 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wua-series-central-ducted",
-      slug: "wells-wua-series-central-ducted",
-      name: "WUA Series",
-      seriesId: "wells-wua-series",
+      id: "wells-wma-series-wall-single-48000",
+      slug: "wells-wma-series-wall-single-48000",
+      name: "WMA Series 48 000 BTU",
+      seriesId: "wells-wma-series",
       brandId: "wells",
-      modelNumber: "WUA Series",
-      normalizedModelNumber: "wua-series",
+      modelNumber: "WMA Series 48k",
+      normalizedModelNumber: "wma-series-48000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 24000,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 20.9,
+      seer2Max: 20.9,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-60000",
+      slug: "wells-wsa-series-wall-single-60000",
+      name: "WSA Series 60 000 BTU",
+      seriesId: "wells-wsa-series",
+      brandId: "wells",
+      modelNumber: "WSA Series 60k",
+      normalizedModelNumber: "wsa-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
       coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 19200,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.2,
-      seer2Max: 17.4,
-      hspf2Min: 8.5,
-      hspf2Max: 10,
+      heatingCapacity5FMinBtu: 34800,
+      heatingCapacity5FMaxBtu: 34800,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wma-series-wall-single-60000",
+      slug: "wells-wma-series-wall-single-60000",
+      name: "WMA Series 60 000 BTU",
+      seriesId: "wells-wma-series",
+      brandId: "wells",
+      modelNumber: "WMA Series 60k",
+      normalizedModelNumber: "wma-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 35000,
+      heatingCapacity5FMaxBtu: 35200,
+      seer2Min: 18.8,
+      seer2Max: 19.4,
+      hspf2Min: 9.3,
+      hspf2Max: 9.4,
+      cop5FMin: 1.85,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-36000",
+      slug: "wells-wsa-series-wall-single-36000",
+      name: "WSA Series 36 000 BTU",
+      seriesId: "wells-wsa-series",
+      brandId: "wells",
+      modelNumber: "WSA Series 36k",
+      normalizedModelNumber: "wsa-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 28600,
+      seer2Min: 20.2,
+      seer2Max: 21,
+      hspf2Min: 10.45,
+      hspf2Max: 10.9,
+      cop5FMin: 1.93,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wma-series-wall-single-36000",
+      slug: "wells-wma-series-wall-single-36000",
+      name: "WMA Series 36 000 BTU",
+      seriesId: "wells-wma-series",
+      brandId: "wells",
+      modelNumber: "WMA Series 36k",
+      normalizedModelNumber: "wma-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19.4,
+      seer2Max: 19.4,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-24000",
+      slug: "wells-wua-series-central-ducted-24000",
+      name: "WUA Series 24 000 BTU",
+      seriesId: "wells-wua-series",
+      brandId: "wells",
+      modelNumber: "WUA Series 24k",
+      normalizedModelNumber: "wua-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 22400,
+      seer2Min: 16.1,
+      seer2Max: 17.4,
+      hspf2Min: 9.8,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
       cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -281,22 +530,131 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wsb-series-wall-single",
-      slug: "wells-wsb-series-wall-single",
-      name: "WSB Series",
-      seriesId: "wells-wsb-series",
+      id: "wells-wua-series-central-ducted-30000",
+      slug: "wells-wua-series-central-ducted-30000",
+      name: "WUA Series 30 000 BTU",
+      seriesId: "wells-wua-series",
       brandId: "wells",
-      modelNumber: "WSB Series",
-      normalizedModelNumber: "wsb-series",
+      modelNumber: "WUA Series 30k",
+      normalizedModelNumber: "wua-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19600,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 15.2,
+      seer2Max: 16.2,
+      hspf2Min: 8.5,
+      hspf2Max: 8.9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-36000",
+      slug: "wells-wua-series-central-ducted-36000",
+      name: "WUA Series 36 000 BTU",
+      seriesId: "wells-wua-series",
+      brandId: "wells",
+      modelNumber: "WUA Series 36k",
+      normalizedModelNumber: "wua-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 27000,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 15.2,
+      seer2Max: 16.3,
+      hspf2Min: 8.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.97,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-48000",
+      slug: "wells-wua-series-central-ducted-48000",
+      name: "WUA Series 48 000 BTU",
+      seriesId: "wells-wua-series",
+      brandId: "wells",
+      modelNumber: "WUA Series 48k",
+      normalizedModelNumber: "wua-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-60000",
+      slug: "wells-wua-series-central-ducted-60000",
+      name: "WUA Series 60 000 BTU",
+      seriesId: "wells-wua-series",
+      brandId: "wells",
+      modelNumber: "WUA Series 60k",
+      normalizedModelNumber: "wua-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsb-series-wall-single-9000",
+      slug: "wells-wsb-series-wall-single-9000",
+      name: "WSB Series 9 000 BTU",
+      seriesId: "wells-wsb-series",
+      brandId: "wells",
+      modelNumber: "WSB Series 9k",
+      normalizedModelNumber: "wsb-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6000,
-      heatingCapacity5FMaxBtu: 11400,
-      seer2Min: 19.5,
+      heatingCapacity5FMaxBtu: 6300,
+      seer2Min: 21.5,
       seer2Max: 21.7,
-      hspf2Min: 8.7,
+      hspf2Min: 9.1,
       hspf2Max: 9.4,
       cop5FMin: 2,
       cop5FMax: 2.16,
@@ -307,24 +665,268 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-central-ducted",
-      slug: "wells-wos-series-central-ducted",
-      name: "WOS Series",
-      seriesId: "wells-wos-series",
+      id: "wells-standard-wall-single-12000",
+      slug: "wells-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "wells-standard",
       brandId: "wells",
-      modelNumber: "WOS Series",
-      normalizedModelNumber: "wos-series",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsb-series-wall-single-18000",
+      slug: "wells-wsb-series-wall-single-18000",
+      name: "WSB Series 18 000 BTU",
+      seriesId: "wells-wsb-series",
+      brandId: "wells",
+      modelNumber: "WSB Series 18k",
+      normalizedModelNumber: "wsb-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11400,
+      heatingCapacity5FMaxBtu: 11400,
+      seer2Min: 19.5,
+      seer2Max: 19.5,
+      hspf2Min: 8.7,
+      hspf2Max: 8.7,
+      cop5FMin: 2.06,
+      cop5FMax: 2.06,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-24000",
+      slug: "wells-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "wells-standard",
+      brandId: "wells",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16500,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-36000",
+      slug: "wells-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "wells-standard",
+      brandId: "wells",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-6000",
+      slug: "wells-wsa-series-wall-single-6000",
+      name: "WSA Series 6 000 BTU",
+      seriesId: "wells-wsa-series",
+      brandId: "wells",
+      modelNumber: "WSA Series 6k",
+      normalizedModelNumber: "wsa-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 7500,
+      seer2Min: 23.5,
+      seer2Max: 23.5,
+      hspf2Min: 12,
+      hspf2Max: 12,
+      cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-9000",
+      slug: "wells-wsa-series-wall-single-9000",
+      name: "WSA Series 9 000 BTU",
+      seriesId: "wells-wsa-series",
+      brandId: "wells",
+      modelNumber: "WSA Series 9k",
+      normalizedModelNumber: "wsa-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9300,
+      heatingCapacity5FMaxBtu: 9300,
+      seer2Min: 26.4,
+      seer2Max: 26.4,
+      hspf2Min: 11.6,
+      hspf2Max: 11.6,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-12000",
+      slug: "wells-wsa-series-wall-single-12000",
+      name: "WSA Series 12 000 BTU",
+      seriesId: "wells-wsa-series",
+      brandId: "wells",
+      modelNumber: "WSA Series 12k",
+      normalizedModelNumber: "wsa-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10300,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 23.1,
+      seer2Max: 23.1,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.88,
+      cop5FMax: 1.88,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-30000",
+      slug: "wells-wsa-series-wall-single-30000",
+      name: "WSA Series 30 000 BTU",
+      seriesId: "wells-wsa-series",
+      brandId: "wells",
+      modelNumber: "WSA Series 30k",
+      normalizedModelNumber: "wsa-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
       coolingCapacityMaxBtu: 33000,
-      heatingCapacity5FMinBtu: 13200,
-      heatingCapacity5FMaxBtu: 27400,
-      seer2Min: 16.5,
-      seer2Max: 19.7,
-      hspf2Min: 9,
+      heatingCapacity5FMinBtu: 27800,
+      heatingCapacity5FMaxBtu: 27800,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10,
       hspf2Max: 10,
-      cop5FMin: 2,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-48000",
+      slug: "wells-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "wells-standard",
+      brandId: "wells",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-central-ducted-18000",
+      slug: "wells-wos-series-central-ducted-18000",
+      name: "WOS Series 18 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 18k",
+      normalizedModelNumber: "wos-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13200,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 18,
+      seer2Max: 18.5,
+      hspf2Min: 9.8,
+      hspf2Max: 10,
+      cop5FMin: 2.2,
       cop5FMax: 2.3,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -333,24 +935,52 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wdhp-series-central-ducted",
-      slug: "wells-wdhp-series-central-ducted",
-      name: "WDHP Series",
-      seriesId: "wells-wdhp-series",
+      id: "wells-wos-series-central-ducted-24000",
+      slug: "wells-wos-series-central-ducted-24000",
+      name: "WOS Series 24 000 BTU",
+      seriesId: "wells-wos-series",
       brandId: "wells",
-      modelNumber: "WDHP Series",
-      normalizedModelNumber: "wdhp-series",
+      modelNumber: "WOS Series 24k",
+      normalizedModelNumber: "wos-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 54000,
-      heatingCapacity5FMinBtu: 19700,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.2,
-      seer2Max: 18.3,
-      hspf2Min: 8.1,
-      hspf2Max: 10.3,
-      cop5FMin: 1.8,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16900,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 18.7,
+      seer2Max: 19.7,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 2.16,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-central-ducted-30000",
+      slug: "wells-wos-series-central-ducted-30000",
+      name: "WOS Series 30 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 30k",
+      normalizedModelNumber: "wos-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -359,23 +989,240 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single",
-      slug: "wells-wos-series-wall-single",
-      name: "WOS Series",
-      seriesId: "wells-wos-series",
+      id: "wells-wdhp-series-central-ducted-36000",
+      slug: "wells-wdhp-series-central-ducted-36000",
+      name: "WDHP Series 36 000 BTU",
+      seriesId: "wells-wdhp-series",
       brandId: "wells",
-      modelNumber: "WOS Series",
-      normalizedModelNumber: "wos-series",
+      modelNumber: "WDHP Series 36k",
+      normalizedModelNumber: "wdhp-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 33000,
-      heatingCapacity5FMinBtu: 7000,
-      heatingCapacity5FMaxBtu: 29600,
-      seer2Min: 17,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 25600,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 15.8,
+      seer2Max: 17.4,
+      hspf2Min: 8.7,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-48000",
+      slug: "wells-wdhp-series-central-ducted-48000",
+      name: "WDHP Series 48 000 BTU",
+      seriesId: "wells-wdhp-series",
+      brandId: "wells",
+      modelNumber: "WDHP Series 48k",
+      normalizedModelNumber: "wdhp-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 16.5,
+      hspf2Min: 8.1,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-24000",
+      slug: "wells-wdhp-series-central-ducted-24000",
+      name: "WDHP Series 24 000 BTU",
+      seriesId: "wells-wdhp-series",
+      brandId: "wells",
+      modelNumber: "WDHP Series 24k",
+      normalizedModelNumber: "wdhp-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19700,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 16,
+      seer2Max: 18.3,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.87,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-30000",
+      slug: "wells-wdhp-series-central-ducted-30000",
+      name: "WDHP Series 30 000 BTU",
+      seriesId: "wells-wdhp-series",
+      brandId: "wells",
+      modelNumber: "WDHP Series 30k",
+      normalizedModelNumber: "wdhp-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.3,
+      seer2Max: 16.8,
+      hspf2Min: 9.3,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.96,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-9000",
+      slug: "wells-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
+      seriesId: "wells-standard",
+      brandId: "wells",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMaxBtu: 6900,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-9000",
+      slug: "wells-wos-series-wall-single-9000",
+      name: "WOS Series 9 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 9k",
+      normalizedModelNumber: "wos-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 7900,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 19,
       seer2Max: 27.2,
+      hspf2Min: 9.7,
+      hspf2Max: 13.9,
+      cop5FMin: 1.8,
+      cop5FMax: 2.33,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-18000",
+      slug: "wells-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "wells-standard",
+      brandId: "wells",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11200,
+      heatingCapacity5FMaxBtu: 11200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000",
+      slug: "wells-wos-series-wall-single-24000",
+      name: "WOS Series 24 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 24k",
+      normalizedModelNumber: "wos-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17100,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 17,
+      seer2Max: 23.5,
       hspf2Min: 8.5,
-      hspf2Max: 14.6,
+      hspf2Max: 13.3,
+      cop5FMin: 2,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000",
+      slug: "wells-wos-series-wall-single-12000",
+      name: "WOS Series 12 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 12k",
+      normalizedModelNumber: "wos-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 19,
+      seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 11.6,
       cop5FMin: 1.8,
       cop5FMax: 2.5,
       systemType: "wall-single",
@@ -385,27 +1232,325 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single",
-      slug: "wells-wom-series-wall-single",
-      name: "WOM Series",
-      seriesId: "wells-wom-series",
+      id: "wells-wos-series-wall-single-18000",
+      slug: "wells-wos-series-wall-single-18000",
+      name: "WOS Series 18 000 BTU",
+      seriesId: "wells-wos-series",
       brandId: "wells",
-      modelNumber: "WOM Series",
-      normalizedModelNumber: "wom-series",
+      modelNumber: "WOS Series 18k",
+      normalizedModelNumber: "wos-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 53000,
-      heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 19,
-      seer2Max: 23.1,
-      hspf2Min: 9,
-      hspf2Max: 11.3,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18,
+      seer2Max: 24,
+      hspf2Min: 10.3,
+      hspf2Max: 12.2,
+      cop5FMin: 1.86,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-6000",
+      slug: "wells-wos-series-wall-single-6000",
+      name: "WOS Series 6 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 6k",
+      normalizedModelNumber: "wos-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6500,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 21.4,
+      seer2Max: 25.3,
+      hspf2Min: 12,
+      hspf2Max: 14.6,
+      cop5FMin: 2.3,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-30000",
+      slug: "wells-wos-series-wall-single-30000",
+      name: "WOS Series 30 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 30k",
+      normalizedModelNumber: "wos-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 29600,
+      heatingCapacity5FMaxBtu: 29600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-15000",
+      slug: "wells-wos-series-wall-single-15000",
+      name: "WOS Series 15 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 15k",
+      normalizedModelNumber: "wos-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14100,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 23.8,
+      hspf2Min: 10.3,
+      hspf2Max: 13.5,
       cop5FMin: 1.9,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-20000",
+      slug: "wells-wos-series-wall-single-20000",
+      name: "WOS Series 20 000 BTU",
+      seriesId: "wells-wos-series",
+      brandId: "wells",
+      modelNumber: "WOS Series 20k",
+      normalizedModelNumber: "wos-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 20200,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 20.4,
+      seer2Max: 20.4,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-18000",
+      slug: "wells-wom-series-wall-single-18000",
+      name: "WOM Series 18 000 BTU",
+      seriesId: "wells-wom-series",
+      brandId: "wells",
+      modelNumber: "WOM Series 18k",
+      normalizedModelNumber: "wom-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
       cop5FMax: 2.3,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-24000",
+      slug: "wells-wom-series-wall-single-24000",
+      name: "WOM Series 24 000 BTU",
+      seriesId: "wells-wom-series",
+      brandId: "wells",
+      modelNumber: "WOM Series 24k",
+      normalizedModelNumber: "wom-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: 21,
+      seer2Max: 23,
+      hspf2Min: 9,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-36000",
+      slug: "wells-wom-series-wall-single-36000",
+      name: "WOM Series 36 000 BTU",
+      seriesId: "wells-wom-series",
+      brandId: "wells",
+      modelNumber: "WOM Series 36k",
+      normalizedModelNumber: "wom-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 36600,
+      seer2Min: 19.4,
+      seer2Max: 23.1,
+      hspf2Min: 9.2,
+      hspf2Max: 11.3,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-42000",
+      slug: "wells-wom-series-wall-single-42000",
+      name: "WOM Series 42 000 BTU",
+      seriesId: "wells-wom-series",
+      brandId: "wells",
+      modelNumber: "WOM Series 42k",
+      normalizedModelNumber: "wom-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: 20.4,
+      seer2Max: 21.3,
+      hspf2Min: 10,
+      hspf2Max: 10.6,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-30000",
+      slug: "wells-wom-series-wall-single-30000",
+      name: "WOM Series 30 000 BTU",
+      seriesId: "wells-wom-series",
+      brandId: "wells",
+      modelNumber: "WOM Series 30k",
+      normalizedModelNumber: "wom-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 23200,
+      seer2Min: 19,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 9.75,
+      cop5FMin: 1.95,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-48000",
+      slug: "wells-wom-series-wall-single-48000",
+      name: "WOM Series 48 000 BTU",
+      seriesId: "wells-wom-series",
+      brandId: "wells",
+      modelNumber: "WOM Series 48k",
+      normalizedModelNumber: "wom-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 42500,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 21.4,
+      hspf2Min: 10.6,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-42000",
+      slug: "wells-wdhp-series-central-ducted-42000",
+      name: "WDHP Series 42 000 BTU",
+      seriesId: "wells-wdhp-series",
+      brandId: "wells",
+      modelNumber: "WDHP Series 42k",
+      normalizedModelNumber: "wdhp-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -419,50 +1564,8 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "wells-wmma-27hfmo",
-      modelNumber: "WMMA-27HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
       id: "wells-wmca-18hfmo",
       modelNumber: "WMCA-18HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wmca-27hfmo",
-      modelNumber: "WMCA-27HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wmca-55hfmo",
-      modelNumber: "WMCA-55HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wmca-36hfmo",
-      modelNumber: "WMCA-36HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsa-06hfmo",
-      modelNumber: "WSA-06HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsa-09hfmo",
-      modelNumber: "WSA-09HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsa-12hfmo",
-      modelNumber: "WSA-12HFMO",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -473,20 +1576,20 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "wells-wmma-27hfmo",
+      modelNumber: "WMMA-27HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wmca-27hfmo",
+      modelNumber: "WMCA-27HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
       id: "wells-wsa-24hfmo",
       modelNumber: "WSA-24HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsa-33hfmo",
-      modelNumber: "WSA-33HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wmca-48hfmo",
-      modelNumber: "WMCA-48HFMO",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -509,74 +1612,32 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "wells-wsb-12hfbo",
-      modelNumber: "WSB-12HFBO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsb-12hfmo",
-      modelNumber: "WSB-12HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsb-24hfmo",
-      modelNumber: "WSB-24HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsb-36hfmo",
-      modelNumber: "WSB-36HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsma-36hfmo",
-      modelNumber: "WSMA-36HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wsma-48hfmo",
-      modelNumber: "WSMA-48HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
       id: "wells-wsma-60hfmo",
       modelNumber: "WSMA-60HFMO",
       brandId: "wells",
       refrigerant: null as any,
     },
     {
-      id: "wells-wos-09eco-115",
-      modelNumber: "WOS-09ECO/115",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wos-12eco-115",
-      modelNumber: "WOS-12ECO/115",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wos-12eco-230",
-      modelNumber: "WOS-12ECO/230",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wos-18eco-230",
-      modelNumber: "WOS-18ECO/230",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
       id: "wells-wom-60rh6-230",
       modelNumber: "WOM-60RH6/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wmca-48hfmo",
+      modelNumber: "WMCA-48HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wmca-55hfmo",
+      modelNumber: "WMCA-55HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wmca-36hfmo",
+      modelNumber: "WMCA-36HFMO",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -599,6 +1660,12 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "wells-wucb-36hfmo",
+      modelNumber: "WUCB-36HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
       id: "wells-wuca-48hfmo",
       modelNumber: "WUCA-48HFMO",
       brandId: "wells",
@@ -607,12 +1674,6 @@ export const wellsDataset: BrandDataset = {
     {
       id: "wells-wuca-60hfmo",
       modelNumber: "WUCA-60HFMO",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wucb-36hfmo",
-      modelNumber: "WUCB-36HFMO",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -629,8 +1690,80 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "wells-wsb-12hfbo",
+      modelNumber: "WSB-12HFBO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsb-12hfmo",
+      modelNumber: "WSB-12HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-12eco-115",
+      modelNumber: "WOS-12ECO/115",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-12eco-230",
+      modelNumber: "WOS-12ECO/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
       id: "wells-wsb-18hfmo",
       modelNumber: "WSB-18HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsb-24hfmo",
+      modelNumber: "WSB-24HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsb-36hfmo",
+      modelNumber: "WSB-36HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsma-36hfmo",
+      modelNumber: "WSMA-36HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsa-06hfmo",
+      modelNumber: "WSA-06HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsa-09hfmo",
+      modelNumber: "WSA-09HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsa-12hfmo",
+      modelNumber: "WSA-12HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsa-33hfmo",
+      modelNumber: "WSA-33HFMO",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wsma-48hfmo",
+      modelNumber: "WSMA-48HFMO",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -641,14 +1774,14 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "wells-wos-24qua-230",
-      modelNumber: "WOS-24QUA/230",
+      id: "wells-wos-18pre-230",
+      modelNumber: "WOS-18PRE/230",
       brandId: "wells",
       refrigerant: null as any,
     },
     {
-      id: "wells-wos-18pre-230",
-      modelNumber: "WOS-18PRE/230",
+      id: "wells-wos-24qua-230",
+      modelNumber: "WOS-24QUA/230",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -671,26 +1804,14 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "wells-wdhp-60rh",
-      modelNumber: "WDHP-60RH",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wdhp-24hh",
-      modelNumber: "WDHP-24HH",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wdhp-30hh",
-      modelNumber: "WDHP-30HH",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
       id: "wells-wdhp-36hh",
       modelNumber: "WDHP-36HH",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wdhp-60rh",
+      modelNumber: "WDHP-60RH",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -707,14 +1828,26 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "wells-wos-09eco-230",
-      modelNumber: "WOS-09ECO/230",
+      id: "wells-wdhp-24hh",
+      modelNumber: "WDHP-24HH",
       brandId: "wells",
       refrigerant: null as any,
     },
     {
-      id: "wells-wos-24eco-230",
-      modelNumber: "WOS-24ECO/230",
+      id: "wells-wdhp-30hh",
+      modelNumber: "WDHP-30HH",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-09eco-115",
+      modelNumber: "WOS-09ECO/115",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-09eco-230",
+      modelNumber: "WOS-09ECO/230",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -725,26 +1858,8 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "wells-wos-12qua-115",
-      modelNumber: "WOS-12QUA/115",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
       id: "wells-wos-09qua-230",
       modelNumber: "WOS-09QUA/230",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wos-12qua-230",
-      modelNumber: "WOS-12QUA/230",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wos-06pre-230",
-      modelNumber: "WOS-06PRE/230",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -755,8 +1870,38 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "wells-wos-18eco-230",
+      modelNumber: "WOS-18ECO/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-24eco-230",
+      modelNumber: "WOS-24ECO/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-12qua-115",
+      modelNumber: "WOS-12QUA/115",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-12qua-230",
+      modelNumber: "WOS-12QUA/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
       id: "wells-wos-12pre-230",
       modelNumber: "WOS-12PRE/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wos-06pre-230",
+      modelNumber: "WOS-06PRE/230",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -767,26 +1912,14 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "wells-wom-27rh4-230",
-      modelNumber: "WOM-27RH4/230",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wom-36rh5-230",
-      modelNumber: "WOM-36RH5/230",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
-      id: "wells-wom-48rh6-230",
-      modelNumber: "WOM-48RH6/230",
-      brandId: "wells",
-      refrigerant: null as any,
-    },
-    {
       id: "wells-wom-18hh3-230",
       modelNumber: "WOM-18HH3/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wom-27rh4-230",
+      modelNumber: "WOM-27RH4/230",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -797,8 +1930,20 @@ export const wellsDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "wells-wom-36rh5-230",
+      modelNumber: "WOM-36RH5/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
       id: "wells-wom-36hh5-230",
       modelNumber: "WOM-36HH5/230",
+      brandId: "wells",
+      refrigerant: null as any,
+    },
+    {
+      id: "wells-wom-48rh6-230",
+      modelNumber: "WOM-48RH6/230",
       brandId: "wells",
       refrigerant: null as any,
     },
@@ -820,9 +1965,9 @@ export const wellsDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "wells-wsa-series-wall-single-cfg-1",
-      slug: "wells-wsa-series-wall-single-cfg-1",
-      modelId: "wells-wsa-series-wall-single",
+      id: "wells-wsa-series-wall-single-18000-cfg-1",
+      slug: "wells-wsa-series-wall-single-18000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-18000",
       outdoorUnitId: "wells-wmma-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -834,23 +1979,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wsa-series-wall-single-cfg-2",
-      slug: "wells-wsa-series-wall-single-cfg-2",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wmma-27hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-3",
-      slug: "wells-wsa-series-wall-single-cfg-3",
-      modelId: "wells-wsa-series-wall-single",
+      id: "wells-wsa-series-wall-single-18000-cfg-2",
+      slug: "wells-wsa-series-wall-single-18000-cfg-2",
+      modelId: "wells-wsa-series-wall-single-18000",
       outdoorUnitId: "wells-wmca-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -862,107 +1993,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wsa-series-wall-single-cfg-4",
-      slug: "wells-wsa-series-wall-single-cfg-4",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wmca-27hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 20.5,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-5",
-      slug: "wells-wsa-series-wall-single-cfg-5",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wmca-55hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-6",
-      slug: "wells-wsa-series-wall-single-cfg-6",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wmca-36hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-7",
-      slug: "wells-wsa-series-wall-single-cfg-7",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wmca-36hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.2,
-      hspf2: 10.45,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-8",
-      slug: "wells-wsa-series-wall-single-cfg-8",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wsa-06hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 23.5,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-9",
-      slug: "wells-wsa-series-wall-single-cfg-9",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wsa-09hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 26.4,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-10",
-      slug: "wells-wsa-series-wall-single-cfg-10",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wsa-12hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-11",
-      slug: "wells-wsa-series-wall-single-cfg-11",
-      modelId: "wells-wsa-series-wall-single",
+      id: "wells-wsa-series-wall-single-18000-cfg-3",
+      slug: "wells-wsa-series-wall-single-18000-cfg-3",
+      modelId: "wells-wsa-series-wall-single-18000",
       outdoorUnitId: "wells-wsa-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -974,37 +2007,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wsa-series-wall-single-cfg-12",
-      slug: "wells-wsa-series-wall-single-cfg-12",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wsa-24hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 22.3,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wsa-series-wall-single-cfg-13",
-      slug: "wells-wsa-series-wall-single-cfg-13",
-      modelId: "wells-wsa-series-wall-single",
-      outdoorUnitId: "wells-wsa-33hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wma-series-wall-single-cfg-1",
-      slug: "wells-wma-series-wall-single-cfg-1",
-      modelId: "wells-wma-series-wall-single",
+      id: "wells-wma-series-wall-single-18000-cfg-1",
+      slug: "wells-wma-series-wall-single-18000-cfg-1",
+      modelId: "wells-wma-series-wall-single-18000",
       outdoorUnitId: "wells-wmma-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1016,9 +2021,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-2",
-      slug: "wells-wma-series-wall-single-cfg-2",
-      modelId: "wells-wma-series-wall-single",
+      id: "wells-wma-series-wall-single-18000-cfg-2",
+      slug: "wells-wma-series-wall-single-18000-cfg-2",
+      modelId: "wells-wma-series-wall-single-18000",
       outdoorUnitId: "wells-wmma-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1030,37 +2035,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-3",
-      slug: "wells-wma-series-wall-single-cfg-3",
-      modelId: "wells-wma-series-wall-single",
-      outdoorUnitId: "wells-wmma-27hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wma-series-wall-single-cfg-4",
-      slug: "wells-wma-series-wall-single-cfg-4",
-      modelId: "wells-wma-series-wall-single",
-      outdoorUnitId: "wells-wmma-27hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 22.25,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wma-series-wall-single-cfg-5",
-      slug: "wells-wma-series-wall-single-cfg-5",
-      modelId: "wells-wma-series-wall-single",
+      id: "wells-wma-series-wall-single-18000-cfg-3",
+      slug: "wells-wma-series-wall-single-18000-cfg-3",
+      modelId: "wells-wma-series-wall-single-18000",
       outdoorUnitId: "wells-wmca-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1072,9 +2049,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-6",
-      slug: "wells-wma-series-wall-single-cfg-6",
-      modelId: "wells-wma-series-wall-single",
+      id: "wells-wma-series-wall-single-18000-cfg-4",
+      slug: "wells-wma-series-wall-single-18000-cfg-4",
+      modelId: "wells-wma-series-wall-single-18000",
       outdoorUnitId: "wells-wmca-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1086,93 +2063,79 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-7",
-      slug: "wells-wma-series-wall-single-cfg-7",
-      modelId: "wells-wma-series-wall-single",
+      id: "wells-wsa-series-wall-single-24000-cfg-1",
+      slug: "wells-wsa-series-wall-single-24000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-24000",
+      outdoorUnitId: "wells-wmma-27hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-24000-cfg-2",
+      slug: "wells-wsa-series-wall-single-24000-cfg-2",
+      modelId: "wells-wsa-series-wall-single-24000",
       outdoorUnitId: "wells-wmca-27hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
       coolingCapacityMaxBtu: 27000,
-      seer2: 19,
-      hspf2: 10,
+      seer2: 20.5,
+      hspf2: 9.6,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-8",
-      slug: "wells-wma-series-wall-single-cfg-8",
-      modelId: "wells-wma-series-wall-single",
-      outdoorUnitId: "wells-wmca-27hfmo",
+      id: "wells-wsa-series-wall-single-24000-cfg-3",
+      slug: "wells-wsa-series-wall-single-24000-cfg-3",
+      modelId: "wells-wsa-series-wall-single-24000",
+      outdoorUnitId: "wells-wsa-24hfmo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 19.75,
-      hspf2: 9.8,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-9",
-      slug: "wells-wma-series-wall-single-cfg-9",
-      modelId: "wells-wma-series-wall-single",
-      outdoorUnitId: "wells-wmca-48hfmo",
+      id: "wells-wma-series-wall-single-30000-cfg-1",
+      slug: "wells-wma-series-wall-single-30000-cfg-1",
+      modelId: "wells-wma-series-wall-single-30000",
+      outdoorUnitId: "wells-wmma-27hfmo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-10",
-      slug: "wells-wma-series-wall-single-cfg-10",
-      modelId: "wells-wma-series-wall-single",
-      outdoorUnitId: "wells-wmca-55hfmo",
+      id: "wells-wma-series-wall-single-30000-cfg-2",
+      slug: "wells-wma-series-wall-single-30000-cfg-2",
+      modelId: "wells-wma-series-wall-single-30000",
+      outdoorUnitId: "wells-wmma-27hfmo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 18.8,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wma-series-wall-single-cfg-11",
-      slug: "wells-wma-series-wall-single-cfg-11",
-      modelId: "wells-wma-series-wall-single",
-      outdoorUnitId: "wells-wmca-55hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 19.4,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wma-series-wall-single-cfg-12",
-      slug: "wells-wma-series-wall-single-cfg-12",
-      modelId: "wells-wma-series-wall-single",
-      outdoorUnitId: "wells-wmca-36hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wmm-series-wall-single-cfg-1",
-      slug: "wells-wmm-series-wall-single-cfg-1",
-      modelId: "wells-wmm-series-wall-single",
+      id: "wells-wmm-series-wall-single-36000-cfg-1",
+      slug: "wells-wmm-series-wall-single-36000-cfg-1",
+      modelId: "wells-wmm-series-wall-single-36000",
       outdoorUnitId: "wells-wmma-36hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1184,9 +2147,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wmm-series-wall-single-cfg-2",
-      slug: "wells-wmm-series-wall-single-cfg-2",
-      modelId: "wells-wmm-series-wall-single",
+      id: "wells-wmm-series-wall-single-48000-cfg-1",
+      slug: "wells-wmm-series-wall-single-48000-cfg-1",
+      modelId: "wells-wmm-series-wall-single-48000",
       outdoorUnitId: "wells-wmma-48hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1198,9 +2161,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wmm-series-wall-single-cfg-3",
-      slug: "wells-wmm-series-wall-single-cfg-3",
-      modelId: "wells-wmm-series-wall-single",
+      id: "wells-wmm-series-wall-single-48000-cfg-2",
+      slug: "wells-wmm-series-wall-single-48000-cfg-2",
+      modelId: "wells-wmm-series-wall-single-48000",
       outdoorUnitId: "wells-wmma-48hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1212,9 +2175,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-standard-wall-single-cfg-1",
-      slug: "wells-standard-wall-single-cfg-1",
-      modelId: "wells-standard-wall-single",
+      id: "wells-standard-wall-single-60000-cfg-1",
+      slug: "wells-standard-wall-single-60000-cfg-1",
+      modelId: "wells-standard-wall-single-60000",
       outdoorUnitId: "wells-wmma-55hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1226,9 +2189,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-standard-wall-single-cfg-2",
-      slug: "wells-standard-wall-single-cfg-2",
-      modelId: "wells-standard-wall-single",
+      id: "wells-standard-wall-single-60000-cfg-2",
+      slug: "wells-standard-wall-single-60000-cfg-2",
+      modelId: "wells-standard-wall-single-60000",
       outdoorUnitId: "wells-wmma-55hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -1240,93 +2203,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-standard-wall-single-cfg-3",
-      slug: "wells-standard-wall-single-cfg-3",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wsb-12hfbo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-4",
-      slug: "wells-standard-wall-single-cfg-4",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wsb-12hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-5",
-      slug: "wells-standard-wall-single-cfg-5",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wsb-24hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-6",
-      slug: "wells-standard-wall-single-cfg-6",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wsb-36hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-7",
-      slug: "wells-standard-wall-single-cfg-7",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wsma-36hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-8",
-      slug: "wells-standard-wall-single-cfg-8",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wsma-48hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-9",
-      slug: "wells-standard-wall-single-cfg-9",
-      modelId: "wells-standard-wall-single",
+      id: "wells-standard-wall-single-60000-cfg-3",
+      slug: "wells-standard-wall-single-60000-cfg-3",
+      modelId: "wells-standard-wall-single-60000",
       outdoorUnitId: "wells-wsma-60hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 59000,
@@ -1338,65 +2217,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-standard-wall-single-cfg-10",
-      slug: "wells-standard-wall-single-cfg-10",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wos-09eco-115",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-11",
-      slug: "wells-standard-wall-single-cfg-11",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wos-12eco-115",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-12",
-      slug: "wells-standard-wall-single-cfg-12",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wos-12eco-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-13",
-      slug: "wells-standard-wall-single-cfg-13",
-      modelId: "wells-standard-wall-single",
-      outdoorUnitId: "wells-wos-18eco-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-standard-wall-single-cfg-14",
-      slug: "wells-standard-wall-single-cfg-14",
-      modelId: "wells-standard-wall-single",
+      id: "wells-standard-wall-single-60000-cfg-4",
+      slug: "wells-standard-wall-single-60000-cfg-4",
+      modelId: "wells-standard-wall-single-60000",
       outdoorUnitId: "wells-wom-60rh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1408,9 +2231,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-standard-wall-single-cfg-15",
-      slug: "wells-standard-wall-single-cfg-15",
-      modelId: "wells-standard-wall-single",
+      id: "wells-standard-wall-single-60000-cfg-5",
+      slug: "wells-standard-wall-single-60000-cfg-5",
+      modelId: "wells-standard-wall-single-60000",
       outdoorUnitId: "wells-wom-60rh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1422,9 +2245,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-standard-wall-single-cfg-16",
-      slug: "wells-standard-wall-single-cfg-16",
-      modelId: "wells-standard-wall-single",
+      id: "wells-standard-wall-single-60000-cfg-6",
+      slug: "wells-standard-wall-single-60000-cfg-6",
+      modelId: "wells-standard-wall-single-60000",
       outdoorUnitId: "wells-wom-60rh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 60000,
@@ -1436,9 +2259,37 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-vmc-series-wall-single-cfg-1",
-      slug: "wells-vmc-series-wall-single-cfg-1",
-      modelId: "wells-vmc-series-wall-single",
+      id: "wells-wma-series-wall-single-24000-cfg-1",
+      slug: "wells-wma-series-wall-single-24000-cfg-1",
+      modelId: "wells-wma-series-wall-single-24000",
+      outdoorUnitId: "wells-wmca-27hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wma-series-wall-single-24000-cfg-2",
+      slug: "wells-wma-series-wall-single-24000-cfg-2",
+      modelId: "wells-wma-series-wall-single-24000",
+      outdoorUnitId: "wells-wmca-27hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 19.75,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-vmc-series-wall-single-48000-cfg-1",
+      slug: "wells-vmc-series-wall-single-48000-cfg-1",
+      modelId: "wells-vmc-series-wall-single-48000",
       outdoorUnitId: "wells-wmca-48hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1450,9 +2301,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-vmc-series-wall-single-cfg-2",
-      slug: "wells-vmc-series-wall-single-cfg-2",
-      modelId: "wells-vmc-series-wall-single",
+      id: "wells-vmc-series-wall-single-48000-cfg-2",
+      slug: "wells-vmc-series-wall-single-48000-cfg-2",
+      modelId: "wells-vmc-series-wall-single-48000",
       outdoorUnitId: "wells-wmca-48hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47500,
@@ -1464,9 +2315,107 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wua-series-central-ducted-cfg-1",
-      slug: "wells-wua-series-central-ducted-cfg-1",
-      modelId: "wells-wua-series-central-ducted",
+      id: "wells-wma-series-wall-single-48000-cfg-1",
+      slug: "wells-wma-series-wall-single-48000-cfg-1",
+      modelId: "wells-wma-series-wall-single-48000",
+      outdoorUnitId: "wells-wmca-48hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-60000-cfg-1",
+      slug: "wells-wsa-series-wall-single-60000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-60000",
+      outdoorUnitId: "wells-wmca-55hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wma-series-wall-single-60000-cfg-1",
+      slug: "wells-wma-series-wall-single-60000-cfg-1",
+      modelId: "wells-wma-series-wall-single-60000",
+      outdoorUnitId: "wells-wmca-55hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wma-series-wall-single-60000-cfg-2",
+      slug: "wells-wma-series-wall-single-60000-cfg-2",
+      modelId: "wells-wma-series-wall-single-60000",
+      outdoorUnitId: "wells-wmca-55hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 19.4,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-36000-cfg-1",
+      slug: "wells-wsa-series-wall-single-36000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-36000",
+      outdoorUnitId: "wells-wmca-36hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-36000-cfg-2",
+      slug: "wells-wsa-series-wall-single-36000-cfg-2",
+      modelId: "wells-wsa-series-wall-single-36000",
+      outdoorUnitId: "wells-wmca-36hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.2,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wma-series-wall-single-36000-cfg-1",
+      slug: "wells-wma-series-wall-single-36000-cfg-1",
+      modelId: "wells-wma-series-wall-single-36000",
+      outdoorUnitId: "wells-wmca-36hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-24000-cfg-1",
+      slug: "wells-wua-series-central-ducted-24000-cfg-1",
+      modelId: "wells-wua-series-central-ducted-24000",
       outdoorUnitId: "wells-wuca-24hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1478,9 +2427,23 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wua-series-central-ducted-cfg-2",
-      slug: "wells-wua-series-central-ducted-cfg-2",
-      modelId: "wells-wua-series-central-ducted",
+      id: "wells-wua-series-central-ducted-24000-cfg-2",
+      slug: "wells-wua-series-central-ducted-24000-cfg-2",
+      modelId: "wells-wua-series-central-ducted-24000",
+      outdoorUnitId: "wells-wuca-24hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.1,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-30000-cfg-1",
+      slug: "wells-wua-series-central-ducted-30000-cfg-1",
+      modelId: "wells-wua-series-central-ducted-30000",
       outdoorUnitId: "wells-wuca-30hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1492,93 +2455,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wua-series-central-ducted-cfg-3",
-      slug: "wells-wua-series-central-ducted-cfg-3",
-      modelId: "wells-wua-series-central-ducted",
-      outdoorUnitId: "wells-wuca-36hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wua-series-central-ducted-cfg-4",
-      slug: "wells-wua-series-central-ducted-cfg-4",
-      modelId: "wells-wua-series-central-ducted",
-      outdoorUnitId: "wells-wuca-48hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wua-series-central-ducted-cfg-5",
-      slug: "wells-wua-series-central-ducted-cfg-5",
-      modelId: "wells-wua-series-central-ducted",
-      outdoorUnitId: "wells-wuca-60hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wua-series-central-ducted-cfg-6",
-      slug: "wells-wua-series-central-ducted-cfg-6",
-      modelId: "wells-wua-series-central-ducted",
-      outdoorUnitId: "wells-wuca-36hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wua-series-central-ducted-cfg-7",
-      slug: "wells-wua-series-central-ducted-cfg-7",
-      modelId: "wells-wua-series-central-ducted",
-      outdoorUnitId: "wells-wuca-48hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wua-series-central-ducted-cfg-8",
-      slug: "wells-wua-series-central-ducted-cfg-8",
-      modelId: "wells-wua-series-central-ducted",
-      outdoorUnitId: "wells-wuca-60hfmo",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wua-series-central-ducted-cfg-9",
-      slug: "wells-wua-series-central-ducted-cfg-9",
-      modelId: "wells-wua-series-central-ducted",
+      id: "wells-wua-series-central-ducted-30000-cfg-2",
+      slug: "wells-wua-series-central-ducted-30000-cfg-2",
+      modelId: "wells-wua-series-central-ducted-30000",
       outdoorUnitId: "wells-wuca-30hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -1590,23 +2469,37 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wua-series-central-ducted-cfg-10",
-      slug: "wells-wua-series-central-ducted-cfg-10",
-      modelId: "wells-wua-series-central-ducted",
-      outdoorUnitId: "wells-wuca-24hfmo",
+      id: "wells-wua-series-central-ducted-36000-cfg-1",
+      slug: "wells-wua-series-central-ducted-36000-cfg-1",
+      modelId: "wells-wua-series-central-ducted-36000",
+      outdoorUnitId: "wells-wuca-36hfmo",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.1,
-      hspf2: 9.8,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wua-series-central-ducted-cfg-11",
-      slug: "wells-wua-series-central-ducted-cfg-11",
-      modelId: "wells-wua-series-central-ducted",
+      id: "wells-wua-series-central-ducted-36000-cfg-2",
+      slug: "wells-wua-series-central-ducted-36000-cfg-2",
+      modelId: "wells-wua-series-central-ducted-36000",
+      outdoorUnitId: "wells-wuca-36hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-36000-cfg-3",
+      slug: "wells-wua-series-central-ducted-36000-cfg-3",
+      modelId: "wells-wua-series-central-ducted-36000",
       outdoorUnitId: "wells-wucb-36hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1618,9 +2511,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wua-series-central-ducted-cfg-12",
-      slug: "wells-wua-series-central-ducted-cfg-12",
-      modelId: "wells-wua-series-central-ducted",
+      id: "wells-wua-series-central-ducted-36000-cfg-4",
+      slug: "wells-wua-series-central-ducted-36000-cfg-4",
+      modelId: "wells-wua-series-central-ducted-36000",
       outdoorUnitId: "wells-wucb-36hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -1632,9 +2525,65 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wsb-series-wall-single-cfg-1",
-      slug: "wells-wsb-series-wall-single-cfg-1",
-      modelId: "wells-wsb-series-wall-single",
+      id: "wells-wua-series-central-ducted-48000-cfg-1",
+      slug: "wells-wua-series-central-ducted-48000-cfg-1",
+      modelId: "wells-wua-series-central-ducted-48000",
+      outdoorUnitId: "wells-wuca-48hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-48000-cfg-2",
+      slug: "wells-wua-series-central-ducted-48000-cfg-2",
+      modelId: "wells-wua-series-central-ducted-48000",
+      outdoorUnitId: "wells-wuca-48hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-60000-cfg-1",
+      slug: "wells-wua-series-central-ducted-60000-cfg-1",
+      modelId: "wells-wua-series-central-ducted-60000",
+      outdoorUnitId: "wells-wuca-60hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wua-series-central-ducted-60000-cfg-2",
+      slug: "wells-wua-series-central-ducted-60000-cfg-2",
+      modelId: "wells-wua-series-central-ducted-60000",
+      outdoorUnitId: "wells-wuca-60hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsb-series-wall-single-9000-cfg-1",
+      slug: "wells-wsb-series-wall-single-9000-cfg-1",
+      modelId: "wells-wsb-series-wall-single-9000",
       outdoorUnitId: "wells-wsb-09hfbo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1646,9 +2595,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wsb-series-wall-single-cfg-2",
-      slug: "wells-wsb-series-wall-single-cfg-2",
-      modelId: "wells-wsb-series-wall-single",
+      id: "wells-wsb-series-wall-single-9000-cfg-2",
+      slug: "wells-wsb-series-wall-single-9000-cfg-2",
+      modelId: "wells-wsb-series-wall-single-9000",
       outdoorUnitId: "wells-wsb-09hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1660,23 +2609,191 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wsb-series-wall-single-cfg-3",
-      slug: "wells-wsb-series-wall-single-cfg-3",
-      modelId: "wells-wsb-series-wall-single",
+      id: "wells-standard-wall-single-12000-cfg-1",
+      slug: "wells-standard-wall-single-12000-cfg-1",
+      modelId: "wells-standard-wall-single-12000",
+      outdoorUnitId: "wells-wsb-12hfbo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-12000-cfg-2",
+      slug: "wells-standard-wall-single-12000-cfg-2",
+      modelId: "wells-standard-wall-single-12000",
+      outdoorUnitId: "wells-wsb-12hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-12000-cfg-3",
+      slug: "wells-standard-wall-single-12000-cfg-3",
+      modelId: "wells-standard-wall-single-12000",
+      outdoorUnitId: "wells-wos-12eco-115",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-12000-cfg-4",
+      slug: "wells-standard-wall-single-12000-cfg-4",
+      modelId: "wells-standard-wall-single-12000",
+      outdoorUnitId: "wells-wos-12eco-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsb-series-wall-single-18000-cfg-1",
+      slug: "wells-wsb-series-wall-single-18000-cfg-1",
+      modelId: "wells-wsb-series-wall-single-18000",
       outdoorUnitId: "wells-wsb-18hfmo",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 19.5,
       hspf2: 8.7,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-24000-cfg-1",
+      slug: "wells-standard-wall-single-24000-cfg-1",
+      modelId: "wells-standard-wall-single-24000",
+      outdoorUnitId: "wells-wsb-24hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-36000-cfg-1",
+      slug: "wells-standard-wall-single-36000-cfg-1",
+      modelId: "wells-standard-wall-single-36000",
+      outdoorUnitId: "wells-wsb-36hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-36000-cfg-2",
+      slug: "wells-standard-wall-single-36000-cfg-2",
+      modelId: "wells-standard-wall-single-36000",
+      outdoorUnitId: "wells-wsma-36hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-6000-cfg-1",
+      slug: "wells-wsa-series-wall-single-6000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-6000",
+      outdoorUnitId: "wells-wsa-06hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 23.5,
+      hspf2: 12,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-central-ducted-cfg-1",
-      slug: "wells-wos-series-central-ducted-cfg-1",
-      modelId: "wells-wos-series-central-ducted",
+      id: "wells-wsa-series-wall-single-9000-cfg-1",
+      slug: "wells-wsa-series-wall-single-9000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-9000",
+      outdoorUnitId: "wells-wsa-09hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26.4,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-12000-cfg-1",
+      slug: "wells-wsa-series-wall-single-12000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-12000",
+      outdoorUnitId: "wells-wsa-12hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wsa-series-wall-single-30000-cfg-1",
+      slug: "wells-wsa-series-wall-single-30000-cfg-1",
+      modelId: "wells-wsa-series-wall-single-30000",
+      outdoorUnitId: "wells-wsa-33hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-48000-cfg-1",
+      slug: "wells-standard-wall-single-48000-cfg-1",
+      modelId: "wells-standard-wall-single-48000",
+      outdoorUnitId: "wells-wsma-48hfmo",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-central-ducted-18000-cfg-1",
+      slug: "wells-wos-series-central-ducted-18000-cfg-1",
+      modelId: "wells-wos-series-central-ducted-18000",
       outdoorUnitId: "wells-wos-18qua-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1688,23 +2805,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-central-ducted-cfg-2",
-      slug: "wells-wos-series-central-ducted-cfg-2",
-      modelId: "wells-wos-series-central-ducted",
-      outdoorUnitId: "wells-wos-24qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19.7,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-central-ducted-cfg-3",
-      slug: "wells-wos-series-central-ducted-cfg-3",
-      modelId: "wells-wos-series-central-ducted",
+      id: "wells-wos-series-central-ducted-18000-cfg-2",
+      slug: "wells-wos-series-central-ducted-18000-cfg-2",
+      modelId: "wells-wos-series-central-ducted-18000",
       outdoorUnitId: "wells-wos-18pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1716,9 +2819,23 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-central-ducted-cfg-4",
-      slug: "wells-wos-series-central-ducted-cfg-4",
-      modelId: "wells-wos-series-central-ducted",
+      id: "wells-wos-series-central-ducted-24000-cfg-1",
+      slug: "wells-wos-series-central-ducted-24000-cfg-1",
+      modelId: "wells-wos-series-central-ducted-24000",
+      outdoorUnitId: "wells-wos-24qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.7,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-central-ducted-24000-cfg-2",
+      slug: "wells-wos-series-central-ducted-24000-cfg-2",
+      modelId: "wells-wos-series-central-ducted-24000",
       outdoorUnitId: "wells-wos-24pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1730,9 +2847,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-central-ducted-cfg-5",
-      slug: "wells-wos-series-central-ducted-cfg-5",
-      modelId: "wells-wos-series-central-ducted",
+      id: "wells-wos-series-central-ducted-30000-cfg-1",
+      slug: "wells-wos-series-central-ducted-30000-cfg-1",
+      modelId: "wells-wos-series-central-ducted-30000",
       outdoorUnitId: "wells-wos-33pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -1744,9 +2861,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wdhp-series-central-ducted-cfg-1",
-      slug: "wells-wdhp-series-central-ducted-cfg-1",
-      modelId: "wells-wdhp-series-central-ducted",
+      id: "wells-wdhp-series-central-ducted-36000-cfg-1",
+      slug: "wells-wdhp-series-central-ducted-36000-cfg-1",
+      modelId: "wells-wdhp-series-central-ducted-36000",
       outdoorUnitId: "wells-wdhp-36rh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1758,51 +2875,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wdhp-series-central-ducted-cfg-2",
-      slug: "wells-wdhp-series-central-ducted-cfg-2",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-60rh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: 15.2,
-      hspf2: 8.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-3",
-      slug: "wells-wdhp-series-central-ducted-cfg-3",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-24hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 18.3,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-4",
-      slug: "wells-wdhp-series-central-ducted-cfg-4",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-30hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.8,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-5",
-      slug: "wells-wdhp-series-central-ducted-cfg-5",
-      modelId: "wells-wdhp-series-central-ducted",
+      id: "wells-wdhp-series-central-ducted-36000-cfg-2",
+      slug: "wells-wdhp-series-central-ducted-36000-cfg-2",
+      modelId: "wells-wdhp-series-central-ducted-36000",
       outdoorUnitId: "wells-wdhp-36hh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1814,9 +2889,51 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wdhp-series-central-ducted-cfg-6",
-      slug: "wells-wdhp-series-central-ducted-cfg-6",
-      modelId: "wells-wdhp-series-central-ducted",
+      id: "wells-wdhp-series-central-ducted-36000-cfg-3",
+      slug: "wells-wdhp-series-central-ducted-36000-cfg-3",
+      modelId: "wells-wdhp-series-central-ducted-36000",
+      outdoorUnitId: "wells-wdhp-36hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-36000-cfg-4",
+      slug: "wells-wdhp-series-central-ducted-36000-cfg-4",
+      modelId: "wells-wdhp-series-central-ducted-36000",
+      outdoorUnitId: "wells-wdhp-36hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-48000-cfg-1",
+      slug: "wells-wdhp-series-central-ducted-48000-cfg-1",
+      modelId: "wells-wdhp-series-central-ducted-48000",
+      outdoorUnitId: "wells-wdhp-60rh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-48000-cfg-2",
+      slug: "wells-wdhp-series-central-ducted-48000-cfg-2",
+      modelId: "wells-wdhp-series-central-ducted-48000",
       outdoorUnitId: "wells-wdhp-48hh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1828,9 +2945,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wdhp-series-central-ducted-cfg-7",
-      slug: "wells-wdhp-series-central-ducted-cfg-7",
-      modelId: "wells-wdhp-series-central-ducted",
+      id: "wells-wdhp-series-central-ducted-48000-cfg-3",
+      slug: "wells-wdhp-series-central-ducted-48000-cfg-3",
+      modelId: "wells-wdhp-series-central-ducted-48000",
       outdoorUnitId: "wells-wdhp-60hh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1842,121 +2959,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wdhp-series-central-ducted-cfg-8",
-      slug: "wells-wdhp-series-central-ducted-cfg-8",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-24hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-9",
-      slug: "wells-wdhp-series-central-ducted-cfg-9",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-24hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-10",
-      slug: "wells-wdhp-series-central-ducted-cfg-10",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-30hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.3,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-11",
-      slug: "wells-wdhp-series-central-ducted-cfg-11",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-30hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 16,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-12",
-      slug: "wells-wdhp-series-central-ducted-cfg-12",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-36hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-13",
-      slug: "wells-wdhp-series-central-ducted-cfg-13",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-30hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 16,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-14",
-      slug: "wells-wdhp-series-central-ducted-cfg-14",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-36hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-15",
-      slug: "wells-wdhp-series-central-ducted-cfg-15",
-      modelId: "wells-wdhp-series-central-ducted",
-      outdoorUnitId: "wells-wdhp-48hh",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wdhp-series-central-ducted-cfg-16",
-      slug: "wells-wdhp-series-central-ducted-cfg-16",
-      modelId: "wells-wdhp-series-central-ducted",
+      id: "wells-wdhp-series-central-ducted-48000-cfg-4",
+      slug: "wells-wdhp-series-central-ducted-48000-cfg-4",
+      modelId: "wells-wdhp-series-central-ducted-48000",
       outdoorUnitId: "wells-wdhp-60hh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -1968,9 +2973,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wdhp-series-central-ducted-cfg-17",
-      slug: "wells-wdhp-series-central-ducted-cfg-17",
-      modelId: "wells-wdhp-series-central-ducted",
+      id: "wells-wdhp-series-central-ducted-48000-cfg-5",
+      slug: "wells-wdhp-series-central-ducted-48000-cfg-5",
+      modelId: "wells-wdhp-series-central-ducted-48000",
       outdoorUnitId: "wells-wdhp-60hh",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1982,9 +2987,121 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-1",
-      slug: "wells-wos-series-wall-single-cfg-1",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wdhp-series-central-ducted-24000-cfg-1",
+      slug: "wells-wdhp-series-central-ducted-24000-cfg-1",
+      modelId: "wells-wdhp-series-central-ducted-24000",
+      outdoorUnitId: "wells-wdhp-24hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-24000-cfg-2",
+      slug: "wells-wdhp-series-central-ducted-24000-cfg-2",
+      modelId: "wells-wdhp-series-central-ducted-24000",
+      outdoorUnitId: "wells-wdhp-24hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-24000-cfg-3",
+      slug: "wells-wdhp-series-central-ducted-24000-cfg-3",
+      modelId: "wells-wdhp-series-central-ducted-24000",
+      outdoorUnitId: "wells-wdhp-24hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-30000-cfg-1",
+      slug: "wells-wdhp-series-central-ducted-30000-cfg-1",
+      modelId: "wells-wdhp-series-central-ducted-30000",
+      outdoorUnitId: "wells-wdhp-30hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-30000-cfg-2",
+      slug: "wells-wdhp-series-central-ducted-30000-cfg-2",
+      modelId: "wells-wdhp-series-central-ducted-30000",
+      outdoorUnitId: "wells-wdhp-30hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.3,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-30000-cfg-3",
+      slug: "wells-wdhp-series-central-ducted-30000-cfg-3",
+      modelId: "wells-wdhp-series-central-ducted-30000",
+      outdoorUnitId: "wells-wdhp-30hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-30000-cfg-4",
+      slug: "wells-wdhp-series-central-ducted-30000-cfg-4",
+      modelId: "wells-wdhp-series-central-ducted-30000",
+      outdoorUnitId: "wells-wdhp-30hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-standard-wall-single-9000-cfg-1",
+      slug: "wells-standard-wall-single-9000-cfg-1",
+      modelId: "wells-standard-wall-single-9000",
+      outdoorUnitId: "wells-wos-09eco-115",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-9000-cfg-1",
+      slug: "wells-wos-series-wall-single-9000-cfg-1",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09eco-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1996,23 +3113,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-2",
-      slug: "wells-wos-series-wall-single-cfg-2",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24eco-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 8.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-3",
-      slug: "wells-wos-series-wall-single-cfg-3",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-2",
+      slug: "wells-wos-series-wall-single-9000-cfg-2",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09qua-115",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2024,23 +3127,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-4",
-      slug: "wells-wos-series-wall-single-cfg-4",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12qua-115",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.2,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-5",
-      slug: "wells-wos-series-wall-single-cfg-5",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-3",
+      slug: "wells-wos-series-wall-single-9000-cfg-3",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09qua-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2052,65 +3141,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-6",
-      slug: "wells-wos-series-wall-single-cfg-6",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-7",
-      slug: "wells-wos-series-wall-single-cfg-7",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-8",
-      slug: "wells-wos-series-wall-single-cfg-8",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 23.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-9",
-      slug: "wells-wos-series-wall-single-cfg-9",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-06pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 25.3,
-      hspf2: 14.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-10",
-      slug: "wells-wos-series-wall-single-cfg-10",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-4",
+      slug: "wells-wos-series-wall-single-9000-cfg-4",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2122,65 +3155,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-11",
-      slug: "wells-wos-series-wall-single-cfg-11",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-12",
-      slug: "wells-wos-series-wall-single-cfg-12",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.7,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-13",
-      slug: "wells-wos-series-wall-single-cfg-13",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 22.3,
-      hspf2: 13.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-14",
-      slug: "wells-wos-series-wall-single-cfg-14",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-33pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 20,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-15",
-      slug: "wells-wos-series-wall-single-cfg-15",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-5",
+      slug: "wells-wos-series-wall-single-9000-cfg-5",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09qua-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2192,51 +3169,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-16",
-      slug: "wells-wos-series-wall-single-cfg-16",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 21.1,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-17",
-      slug: "wells-wos-series-wall-single-cfg-17",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16800,
-      coolingCapacityMaxBtu: 16800,
-      seer2: 20.7,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-18",
-      slug: "wells-wos-series-wall-single-cfg-18",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-19",
-      slug: "wells-wos-series-wall-single-cfg-19",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-6",
+      slug: "wells-wos-series-wall-single-9000-cfg-6",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09qua-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2248,37 +3183,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-20",
-      slug: "wells-wos-series-wall-single-cfg-20",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.1,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-21",
-      slug: "wells-wos-series-wall-single-cfg-21",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.2,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-22",
-      slug: "wells-wos-series-wall-single-cfg-22",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-7",
+      slug: "wells-wos-series-wall-single-9000-cfg-7",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09qua-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2290,37 +3197,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-23",
-      slug: "wells-wos-series-wall-single-cfg-23",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 11500,
-      coolingCapacityMaxBtu: 11500,
-      seer2: 19,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-24",
-      slug: "wells-wos-series-wall-single-cfg-24",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-25",
-      slug: "wells-wos-series-wall-single-cfg-25",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-8",
+      slug: "wells-wos-series-wall-single-9000-cfg-8",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09qua-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2332,51 +3211,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-26",
-      slug: "wells-wos-series-wall-single-cfg-26",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-27",
-      slug: "wells-wos-series-wall-single-cfg-27",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 20,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-28",
-      slug: "wells-wos-series-wall-single-cfg-28",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-29",
-      slug: "wells-wos-series-wall-single-cfg-29",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-9",
+      slug: "wells-wos-series-wall-single-9000-cfg-9",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09qua-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2388,65 +3225,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-30",
-      slug: "wells-wos-series-wall-single-cfg-30",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.6,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-31",
-      slug: "wells-wos-series-wall-single-cfg-31",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 23.8,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-32",
-      slug: "wells-wos-series-wall-single-cfg-32",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22.3,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-33",
-      slug: "wells-wos-series-wall-single-cfg-33",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24qua-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.1,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-34",
-      slug: "wells-wos-series-wall-single-cfg-34",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-10",
+      slug: "wells-wos-series-wall-single-9000-cfg-10",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2458,65 +3239,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-35",
-      slug: "wells-wos-series-wall-single-cfg-35",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.2,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-36",
-      slug: "wells-wos-series-wall-single-cfg-36",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-37",
-      slug: "wells-wos-series-wall-single-cfg-37",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23400,
-      coolingCapacityMaxBtu: 23400,
-      seer2: 20.7,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-38",
-      slug: "wells-wos-series-wall-single-cfg-38",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-06pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 22,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-39",
-      slug: "wells-wos-series-wall-single-cfg-39",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-11",
+      slug: "wells-wos-series-wall-single-9000-cfg-11",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2528,51 +3253,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-40",
-      slug: "wells-wos-series-wall-single-cfg-40",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-41",
-      slug: "wells-wos-series-wall-single-cfg-41",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16700,
-      coolingCapacityMaxBtu: 16700,
-      seer2: 20.6,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-42",
-      slug: "wells-wos-series-wall-single-cfg-42",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-06pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 21.4,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-43",
-      slug: "wells-wos-series-wall-single-cfg-43",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-12",
+      slug: "wells-wos-series-wall-single-9000-cfg-12",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2584,37 +3267,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-44",
-      slug: "wells-wos-series-wall-single-cfg-44",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-45",
-      slug: "wells-wos-series-wall-single-cfg-45",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-46",
-      slug: "wells-wos-series-wall-single-cfg-46",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-13",
+      slug: "wells-wos-series-wall-single-9000-cfg-13",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2626,51 +3281,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-47",
-      slug: "wells-wos-series-wall-single-cfg-47",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-12pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-48",
-      slug: "wells-wos-series-wall-single-cfg-48",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 18.4,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-49",
-      slug: "wells-wos-series-wall-single-cfg-49",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-24pre-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wos-series-wall-single-cfg-50",
-      slug: "wells-wos-series-wall-single-cfg-50",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-9000-cfg-14",
+      slug: "wells-wos-series-wall-single-9000-cfg-14",
+      modelId: "wells-wos-series-wall-single-9000",
       outdoorUnitId: "wells-wos-09pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2682,9 +3295,303 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-51",
-      slug: "wells-wos-series-wall-single-cfg-51",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-standard-wall-single-18000-cfg-1",
+      slug: "wells-standard-wall-single-18000-cfg-1",
+      modelId: "wells-standard-wall-single-18000",
+      outdoorUnitId: "wells-wos-18eco-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-1",
+      slug: "wells-wos-series-wall-single-24000-cfg-1",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24eco-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-2",
+      slug: "wells-wos-series-wall-single-24000-cfg-2",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-3",
+      slug: "wells-wos-series-wall-single-24000-cfg-3",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 13.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-4",
+      slug: "wells-wos-series-wall-single-24000-cfg-4",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-5",
+      slug: "wells-wos-series-wall-single-24000-cfg-5",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-6",
+      slug: "wells-wos-series-wall-single-24000-cfg-6",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.1,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-7",
+      slug: "wells-wos-series-wall-single-24000-cfg-7",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: 20.7,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-24000-cfg-8",
+      slug: "wells-wos-series-wall-single-24000-cfg-8",
+      modelId: "wells-wos-series-wall-single-24000",
+      outdoorUnitId: "wells-wos-24pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-1",
+      slug: "wells-wos-series-wall-single-12000-cfg-1",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12qua-115",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.2,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-2",
+      slug: "wells-wos-series-wall-single-12000-cfg-2",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-3",
+      slug: "wells-wos-series-wall-single-12000-cfg-3",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-4",
+      slug: "wells-wos-series-wall-single-12000-cfg-4",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21.1,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-5",
+      slug: "wells-wos-series-wall-single-12000-cfg-5",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.1,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-6",
+      slug: "wells-wos-series-wall-single-12000-cfg-6",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-7",
+      slug: "wells-wos-series-wall-single-12000-cfg-7",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-8",
+      slug: "wells-wos-series-wall-single-12000-cfg-8",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.6,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-9",
+      slug: "wells-wos-series-wall-single-12000-cfg-9",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-10",
+      slug: "wells-wos-series-wall-single-12000-cfg-10",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-11",
+      slug: "wells-wos-series-wall-single-12000-cfg-11",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-12",
+      slug: "wells-wos-series-wall-single-12000-cfg-12",
+      modelId: "wells-wos-series-wall-single-12000",
+      outdoorUnitId: "wells-wos-12pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-12000-cfg-13",
+      slug: "wells-wos-series-wall-single-12000-cfg-13",
+      modelId: "wells-wos-series-wall-single-12000",
       outdoorUnitId: "wells-wos-12pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2696,23 +3603,149 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-52",
-      slug: "wells-wos-series-wall-single-cfg-52",
-      modelId: "wells-wos-series-wall-single",
-      outdoorUnitId: "wells-wos-18pre-230",
+      id: "wells-wos-series-wall-single-18000-cfg-1",
+      slug: "wells-wos-series-wall-single-18000-cfg-1",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18qua-230",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 10.3,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 11.1,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-53",
-      slug: "wells-wos-series-wall-single-cfg-53",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-18000-cfg-2",
+      slug: "wells-wos-series-wall-single-18000-cfg-2",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-3",
+      slug: "wells-wos-series-wall-single-18000-cfg-3",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 16800,
+      seer2: 20.7,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-4",
+      slug: "wells-wos-series-wall-single-18000-cfg-4",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.2,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-5",
+      slug: "wells-wos-series-wall-single-18000-cfg-5",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-6",
+      slug: "wells-wos-series-wall-single-18000-cfg-6",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 20,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-7",
+      slug: "wells-wos-series-wall-single-18000-cfg-7",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.3,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-8",
+      slug: "wells-wos-series-wall-single-18000-cfg-8",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 16700,
+      seer2: 20.6,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-9",
+      slug: "wells-wos-series-wall-single-18000-cfg-9",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-10",
+      slug: "wells-wos-series-wall-single-18000-cfg-10",
+      modelId: "wells-wos-series-wall-single-18000",
+      outdoorUnitId: "wells-wos-18pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 18.4,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-18000-cfg-11",
+      slug: "wells-wos-series-wall-single-18000-cfg-11",
+      modelId: "wells-wos-series-wall-single-18000",
       outdoorUnitId: "wells-wos-18pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -2724,9 +3757,107 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wos-series-wall-single-cfg-54",
-      slug: "wells-wos-series-wall-single-cfg-54",
-      modelId: "wells-wos-series-wall-single",
+      id: "wells-wos-series-wall-single-6000-cfg-1",
+      slug: "wells-wos-series-wall-single-6000-cfg-1",
+      modelId: "wells-wos-series-wall-single-6000",
+      outdoorUnitId: "wells-wos-06pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 25.3,
+      hspf2: 14.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-6000-cfg-2",
+      slug: "wells-wos-series-wall-single-6000-cfg-2",
+      modelId: "wells-wos-series-wall-single-6000",
+      outdoorUnitId: "wells-wos-06pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 22,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-6000-cfg-3",
+      slug: "wells-wos-series-wall-single-6000-cfg-3",
+      modelId: "wells-wos-series-wall-single-6000",
+      outdoorUnitId: "wells-wos-06pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 21.4,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-30000-cfg-1",
+      slug: "wells-wos-series-wall-single-30000-cfg-1",
+      modelId: "wells-wos-series-wall-single-30000",
+      outdoorUnitId: "wells-wos-33pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-15000-cfg-1",
+      slug: "wells-wos-series-wall-single-15000-cfg-1",
+      modelId: "wells-wos-series-wall-single-15000",
+      outdoorUnitId: "wells-wos-18qua-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 23.8,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-15000-cfg-2",
+      slug: "wells-wos-series-wall-single-15000-cfg-2",
+      modelId: "wells-wos-series-wall-single-15000",
+      outdoorUnitId: "wells-wos-18pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-15000-cfg-3",
+      slug: "wells-wos-series-wall-single-15000-cfg-3",
+      modelId: "wells-wos-series-wall-single-15000",
+      outdoorUnitId: "wells-wos-18pre-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wos-series-wall-single-20000-cfg-1",
+      slug: "wells-wos-series-wall-single-20000-cfg-1",
+      modelId: "wells-wos-series-wall-single-20000",
       outdoorUnitId: "wells-wos-24pre-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2738,9 +3869,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-1",
-      slug: "wells-wom-series-wall-single-cfg-1",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-18000-cfg-1",
+      slug: "wells-wom-series-wall-single-18000-cfg-1",
+      modelId: "wells-wom-series-wall-single-18000",
       outdoorUnitId: "wells-wom-18rh3-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2752,9 +3883,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-2",
-      slug: "wells-wom-series-wall-single-cfg-2",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-18000-cfg-2",
+      slug: "wells-wom-series-wall-single-18000-cfg-2",
+      modelId: "wells-wom-series-wall-single-18000",
       outdoorUnitId: "wells-wom-18rh3-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2766,9 +3897,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-3",
-      slug: "wells-wom-series-wall-single-cfg-3",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-18000-cfg-3",
+      slug: "wells-wom-series-wall-single-18000-cfg-3",
+      modelId: "wells-wom-series-wall-single-18000",
       outdoorUnitId: "wells-wom-18rh3-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2780,135 +3911,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-4",
-      slug: "wells-wom-series-wall-single-cfg-4",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-27rh4-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26000,
-      coolingCapacityMaxBtu: 26000,
-      seer2: 23,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-5",
-      slug: "wells-wom-series-wall-single-cfg-5",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-27rh4-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26600,
-      coolingCapacityMaxBtu: 26600,
-      seer2: 21,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-6",
-      slug: "wells-wom-series-wall-single-cfg-6",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-27rh4-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26200,
-      coolingCapacityMaxBtu: 26200,
-      seer2: 22,
-      hspf2: 9.25,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-7",
-      slug: "wells-wom-series-wall-single-cfg-7",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-36rh5-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 23.1,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-8",
-      slug: "wells-wom-series-wall-single-cfg-8",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-36rh5-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 20,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-9",
-      slug: "wells-wom-series-wall-single-cfg-9",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-36rh5-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 21.55,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-10",
-      slug: "wells-wom-series-wall-single-cfg-10",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-48rh6-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 21.3,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-11",
-      slug: "wells-wom-series-wall-single-cfg-11",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-48rh6-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 20.4,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-12",
-      slug: "wells-wom-series-wall-single-cfg-12",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-48rh6-230",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 20.85,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "wells-wom-series-wall-single-cfg-13",
-      slug: "wells-wom-series-wall-single-cfg-13",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-18000-cfg-4",
+      slug: "wells-wom-series-wall-single-18000-cfg-4",
+      modelId: "wells-wom-series-wall-single-18000",
       outdoorUnitId: "wells-wom-18hh3-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2920,9 +3925,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-14",
-      slug: "wells-wom-series-wall-single-cfg-14",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-18000-cfg-5",
+      slug: "wells-wom-series-wall-single-18000-cfg-5",
+      modelId: "wells-wom-series-wall-single-18000",
       outdoorUnitId: "wells-wom-18hh3-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2934,9 +3939,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-15",
-      slug: "wells-wom-series-wall-single-cfg-15",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-18000-cfg-6",
+      slug: "wells-wom-series-wall-single-18000-cfg-6",
+      modelId: "wells-wom-series-wall-single-18000",
       outdoorUnitId: "wells-wom-18hh3-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2948,9 +3953,51 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-16",
-      slug: "wells-wom-series-wall-single-cfg-16",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-24000-cfg-1",
+      slug: "wells-wom-series-wall-single-24000-cfg-1",
+      modelId: "wells-wom-series-wall-single-24000",
+      outdoorUnitId: "wells-wom-27rh4-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-24000-cfg-2",
+      slug: "wells-wom-series-wall-single-24000-cfg-2",
+      modelId: "wells-wom-series-wall-single-24000",
+      outdoorUnitId: "wells-wom-27rh4-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-24000-cfg-3",
+      slug: "wells-wom-series-wall-single-24000-cfg-3",
+      modelId: "wells-wom-series-wall-single-24000",
+      outdoorUnitId: "wells-wom-27rh4-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26200,
+      coolingCapacityMaxBtu: 26200,
+      seer2: 22,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-24000-cfg-4",
+      slug: "wells-wom-series-wall-single-24000-cfg-4",
+      modelId: "wells-wom-series-wall-single-24000",
       outdoorUnitId: "wells-wom-27hh4-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -2962,37 +4009,51 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-17",
-      slug: "wells-wom-series-wall-single-cfg-17",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-27hh4-230",
+      id: "wells-wom-series-wall-single-36000-cfg-1",
+      slug: "wells-wom-series-wall-single-36000-cfg-1",
+      modelId: "wells-wom-series-wall-single-36000",
+      outdoorUnitId: "wells-wom-36rh5-230",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 23.1,
+      hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-18",
-      slug: "wells-wom-series-wall-single-cfg-18",
-      modelId: "wells-wom-series-wall-single",
-      outdoorUnitId: "wells-wom-27hh4-230",
+      id: "wells-wom-series-wall-single-36000-cfg-2",
+      slug: "wells-wom-series-wall-single-36000-cfg-2",
+      modelId: "wells-wom-series-wall-single-36000",
+      outdoorUnitId: "wells-wom-36rh5-230",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
       seer2: 20,
-      hspf2: 9.75,
+      hspf2: 9.2,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-19",
-      slug: "wells-wom-series-wall-single-cfg-19",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-36000-cfg-3",
+      slug: "wells-wom-series-wall-single-36000-cfg-3",
+      modelId: "wells-wom-series-wall-single-36000",
+      outdoorUnitId: "wells-wom-36rh5-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 21.55,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-36000-cfg-4",
+      slug: "wells-wom-series-wall-single-36000-cfg-4",
+      modelId: "wells-wom-series-wall-single-36000",
       outdoorUnitId: "wells-wom-36hh5-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3004,9 +4065,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-20",
-      slug: "wells-wom-series-wall-single-cfg-20",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-36000-cfg-5",
+      slug: "wells-wom-series-wall-single-36000-cfg-5",
+      modelId: "wells-wom-series-wall-single-36000",
       outdoorUnitId: "wells-wom-36hh5-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3018,9 +4079,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-21",
-      slug: "wells-wom-series-wall-single-cfg-21",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-36000-cfg-6",
+      slug: "wells-wom-series-wall-single-36000-cfg-6",
+      modelId: "wells-wom-series-wall-single-36000",
       outdoorUnitId: "wells-wom-36hh5-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3032,9 +4093,51 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-22",
-      slug: "wells-wom-series-wall-single-cfg-22",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-42000-cfg-1",
+      slug: "wells-wom-series-wall-single-42000-cfg-1",
+      modelId: "wells-wom-series-wall-single-42000",
+      outdoorUnitId: "wells-wom-48rh6-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-42000-cfg-2",
+      slug: "wells-wom-series-wall-single-42000-cfg-2",
+      modelId: "wells-wom-series-wall-single-42000",
+      outdoorUnitId: "wells-wom-48rh6-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-42000-cfg-3",
+      slug: "wells-wom-series-wall-single-42000-cfg-3",
+      modelId: "wells-wom-series-wall-single-42000",
+      outdoorUnitId: "wells-wom-48rh6-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.85,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-42000-cfg-4",
+      slug: "wells-wom-series-wall-single-42000-cfg-4",
+      modelId: "wells-wom-series-wall-single-42000",
       outdoorUnitId: "wells-wom-48hh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -3046,9 +4149,37 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-23",
-      slug: "wells-wom-series-wall-single-cfg-23",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-30000-cfg-1",
+      slug: "wells-wom-series-wall-single-30000-cfg-1",
+      modelId: "wells-wom-series-wall-single-30000",
+      outdoorUnitId: "wells-wom-27hh4-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-30000-cfg-2",
+      slug: "wells-wom-series-wall-single-30000-cfg-2",
+      modelId: "wells-wom-series-wall-single-30000",
+      outdoorUnitId: "wells-wom-27hh4-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 20,
+      hspf2: 9.75,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wom-series-wall-single-48000-cfg-1",
+      slug: "wells-wom-series-wall-single-48000-cfg-1",
+      modelId: "wells-wom-series-wall-single-48000",
       outdoorUnitId: "wells-wom-48hh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -3060,9 +4191,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-24",
-      slug: "wells-wom-series-wall-single-cfg-24",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-48000-cfg-2",
+      slug: "wells-wom-series-wall-single-48000-cfg-2",
+      modelId: "wells-wom-series-wall-single-48000",
       outdoorUnitId: "wells-wom-48hh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -3074,9 +4205,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-25",
-      slug: "wells-wom-series-wall-single-cfg-25",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-48000-cfg-3",
+      slug: "wells-wom-series-wall-single-48000-cfg-3",
+      modelId: "wells-wom-series-wall-single-48000",
       outdoorUnitId: "wells-wom-60hh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -3088,9 +4219,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-26",
-      slug: "wells-wom-series-wall-single-cfg-26",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-48000-cfg-4",
+      slug: "wells-wom-series-wall-single-48000-cfg-4",
+      modelId: "wells-wom-series-wall-single-48000",
       outdoorUnitId: "wells-wom-60hh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -3102,9 +4233,9 @@ export const wellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "wells-wom-series-wall-single-cfg-27",
-      slug: "wells-wom-series-wall-single-cfg-27",
-      modelId: "wells-wom-series-wall-single",
+      id: "wells-wom-series-wall-single-48000-cfg-5",
+      slug: "wells-wom-series-wall-single-48000-cfg-5",
+      modelId: "wells-wom-series-wall-single-48000",
       outdoorUnitId: "wells-wom-60hh6-230",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -3114,11 +4245,25 @@ export const wellsDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "wells-wdhp-series-central-ducted-42000-cfg-1",
+      slug: "wells-wdhp-series-central-ducted-42000-cfg-1",
+      modelId: "wells-wdhp-series-central-ducted-42000",
+      outdoorUnitId: "wells-wdhp-48hh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "wells-wsa-series-wall-single-cfg-1",
+      configurationId: "wells-wsa-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3129,18 +4274,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wsa-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-3",
+      configurationId: "wells-wsa-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3151,84 +4285,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wsa-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22400,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 28600,
-          cop: 1.93,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7500,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10300,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-11",
+      configurationId: "wells-wsa-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3239,29 +4296,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wsa-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18900,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wsa-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wma-series-wall-single-cfg-1",
+      configurationId: "wells-wma-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3272,7 +4307,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wma-series-wall-single-cfg-2",
+      configurationId: "wells-wma-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3283,29 +4318,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wma-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wma-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wma-series-wall-single-cfg-5",
+      configurationId: "wells-wma-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3316,7 +4329,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wma-series-wall-single-cfg-6",
+      configurationId: "wells-wma-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3327,73 +4340,62 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wma-series-wall-single-cfg-7",
+      configurationId: "wells-wsa-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wma-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wma-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
+          heatingCapacityBtu: 20000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "wells-wma-series-wall-single-cfg-10",
+      configurationId: "wells-wsa-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.9,
+          heatingCapacityBtu: 22400,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "wells-wma-series-wall-single-cfg-11",
+      configurationId: "wells-wsa-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.85,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "wells-wma-series-wall-single-cfg-12",
+      configurationId: "wells-wma-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.9,
+          heatingCapacityBtu: 22000,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "wells-wmm-series-wall-single-cfg-1",
+      configurationId: "wells-wma-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wmm-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3404,7 +4406,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wmm-series-wall-single-cfg-2",
+      configurationId: "wells-wmm-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3415,7 +4417,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wmm-series-wall-single-cfg-3",
+      configurationId: "wells-wmm-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3426,7 +4428,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-standard-wall-single-cfg-1",
+      configurationId: "wells-standard-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3437,7 +4439,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-standard-wall-single-cfg-2",
+      configurationId: "wells-standard-wall-single-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3448,73 +4450,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-9",
+      configurationId: "wells-standard-wall-single-60000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3525,51 +4461,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6900,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-standard-wall-single-cfg-14",
+      configurationId: "wells-standard-wall-single-60000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3580,7 +4472,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-standard-wall-single-cfg-15",
+      configurationId: "wells-standard-wall-single-60000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3591,7 +4483,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-standard-wall-single-cfg-16",
+      configurationId: "wells-standard-wall-single-60000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3602,7 +4494,29 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-vmc-series-wall-single-cfg-1",
+      configurationId: "wells-wma-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wma-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-vmc-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3613,7 +4527,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-vmc-series-wall-single-cfg-2",
+      configurationId: "wells-vmc-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3624,7 +4538,84 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wua-series-central-ducted-cfg-1",
+      configurationId: "wells-wma-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsa-series-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wma-series-wall-single-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wma-series-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsa-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsa-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 1.93,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wma-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3635,95 +4626,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wua-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wua-series-central-ducted-cfg-10",
+      configurationId: "wells-wua-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3734,7 +4637,51 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wua-series-central-ducted-cfg-11",
+      configurationId: "wells-wua-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3745,7 +4692,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wua-series-central-ducted-cfg-12",
+      configurationId: "wells-wua-series-central-ducted-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3756,7 +4703,51 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wsb-series-wall-single-cfg-1",
+      configurationId: "wells-wua-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wua-series-central-ducted-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsb-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3767,7 +4758,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wsb-series-wall-single-cfg-2",
+      configurationId: "wells-wsb-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3778,7 +4769,51 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wsb-series-wall-single-cfg-3",
+      configurationId: "wells-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-standard-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsb-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3789,7 +4824,95 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-central-ducted-cfg-1",
+      configurationId: "wells-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsa-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsa-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsa-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wsa-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3800,7 +4923,18 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-central-ducted-cfg-2",
+      configurationId: "wells-wos-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3811,18 +4945,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-central-ducted-cfg-4",
+      configurationId: "wells-wos-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3833,7 +4956,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-central-ducted-cfg-5",
+      configurationId: "wells-wos-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3844,7 +4967,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-1",
+      configurationId: "wells-wdhp-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3855,40 +4978,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23800,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-5",
+      configurationId: "wells-wdhp-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3899,7 +4989,40 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-6",
+      configurationId: "wells-wdhp-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3910,7 +5033,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-7",
+      configurationId: "wells-wdhp-series-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3921,95 +5044,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-16",
+      configurationId: "wells-wdhp-series-central-ducted-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4020,7 +5055,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wdhp-series-central-ducted-cfg-17",
+      configurationId: "wells-wdhp-series-central-ducted-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4031,7 +5066,95 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-1",
+      configurationId: "wells-wdhp-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-standard-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4042,18 +5165,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17100,
-          cop: 2.01,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-3",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4064,18 +5176,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8800,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-5",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4086,51 +5187,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 2.35,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: 2.35,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19500,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7600,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-10",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4141,51 +5198,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29600,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-15",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4196,40 +5209,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13900,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-19",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4240,29 +5220,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 2.48,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-22",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4273,29 +5231,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2.25,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-25",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4306,40 +5242,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9100,
-          cop: 2.44,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.3,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-29",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4350,51 +5253,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 2.5,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13700,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2.27,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-34",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4405,51 +5264,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.23,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-39",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4460,40 +5275,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-40",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-43",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-12",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4504,29 +5286,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-46",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4537,40 +5297,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wos-series-wall-single-cfg-50",
+      configurationId: "wells-wos-series-wall-single-9000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4581,7 +5308,238 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-51",
+      configurationId: "wells-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17100,
+          cop: 2.01,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.23,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-24000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2.35,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 2.48,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.5,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-12000-cfg-13",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4592,18 +5550,117 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-52",
+      configurationId: "wells-wos-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.95,
+          heatingCapacityBtu: 13000,
+          cop: 2.35,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-53",
+      configurationId: "wells-wos-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13700,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-18000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4614,7 +5671,84 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wos-series-wall-single-cfg-54",
+      configurationId: "wells-wos-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-6000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-6000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-15000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wos-series-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4625,7 +5759,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-1",
+      configurationId: "wells-wom-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4636,7 +5770,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-2",
+      configurationId: "wells-wom-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4647,7 +5781,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-3",
+      configurationId: "wells-wom-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4658,106 +5792,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35400,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "wells-wom-series-wall-single-cfg-13",
+      configurationId: "wells-wom-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4768,7 +5803,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-14",
+      configurationId: "wells-wom-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4779,7 +5814,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-15",
+      configurationId: "wells-wom-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4790,7 +5825,40 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-16",
+      configurationId: "wells-wom-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4801,29 +5869,40 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-17",
+      configurationId: "wells-wom-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
+          heatingCapacityBtu: 27000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-18",
+      configurationId: "wells-wom-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: 1.95,
+          heatingCapacityBtu: 26400,
+          cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-19",
+      configurationId: "wells-wom-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4834,7 +5913,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-20",
+      configurationId: "wells-wom-series-wall-single-36000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4845,7 +5924,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-21",
+      configurationId: "wells-wom-series-wall-single-36000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4856,7 +5935,40 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-22",
+      configurationId: "wells-wom-series-wall-single-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-42000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-42000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35400,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-42000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4867,7 +5979,29 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-23",
+      configurationId: "wells-wom-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wom-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4878,7 +6012,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-24",
+      configurationId: "wells-wom-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4889,7 +6023,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-25",
+      configurationId: "wells-wom-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4900,7 +6034,7 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-26",
+      configurationId: "wells-wom-series-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4911,12 +6045,23 @@ export const wellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "wells-wom-series-wall-single-cfg-27",
+      configurationId: "wells-wom-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 45000,
           cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "wells-wdhp-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.85,
           confidence: "verified",
         }
       ]

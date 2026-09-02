@@ -48,24 +48,25 @@ export const ductlessaireDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "ductlessaire-da-series-wall-single",
-      slug: "ductlessaire-da-series-wall-single",
-      name: "DA series",
+      id: "ductlessaire-da-series-wall-single-18000",
+      slug: "ductlessaire-da-series-wall-single-18000",
+      name: "DA series 18 000 BTU",
       seriesId: "ductlessaire-da-series",
       brandId: "ductlessaire",
-      modelNumber: "DA series",
-      normalizedModelNumber: "da-series",
+      modelNumber: "DA series 18k",
+      normalizedModelNumber: "da-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 26600,
-      heatingCapacity5FMinBtu: 8200,
-      heatingCapacity5FMaxBtu: 18400,
-      seer2Min: 21,
-      seer2Max: 24,
-      hspf2Min: 9,
-      hspf2Max: 11.4,
-      cop5FMin: 2,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 23.7,
+      seer2Max: 23.7,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 2.39,
       cop5FMax: 2.39,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -74,18 +75,154 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-standard-wall-single",
-      slug: "ductlessaire-standard-wall-single",
-      name: "Standard",
-      seriesId: "ductlessaire-standard",
+      id: "ductlessaire-da-series-wall-single-9000",
+      slug: "ductlessaire-da-series-wall-single-9000",
+      name: "DA series 9 000 BTU",
+      seriesId: "ductlessaire-da-series",
       brandId: "ductlessaire",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "DA series 9k",
+      normalizedModelNumber: "da-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8300,
+      heatingCapacity5FMaxBtu: 8300,
+      seer2Min: 24,
+      seer2Max: 24,
+      hspf2Min: 11.4,
+      hspf2Max: 11.4,
+      cop5FMin: 2.18,
+      cop5FMax: 2.18,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-da-series-wall-single-12000",
+      slug: "ductlessaire-da-series-wall-single-12000",
+      name: "DA series 12 000 BTU",
+      seriesId: "ductlessaire-da-series",
+      brandId: "ductlessaire",
+      modelNumber: "DA series 12k",
+      normalizedModelNumber: "da-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 8200,
+      heatingCapacity5FMaxBtu: 8200,
+      seer2Min: 23.1,
+      seer2Max: 23.1,
+      hspf2Min: 9.3,
+      hspf2Max: 9.3,
+      cop5FMin: 2.24,
+      cop5FMax: 2.24,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-standard-wall-single-24000",
+      slug: "ductlessaire-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "ductlessaire-standard",
+      brandId: "ductlessaire",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-standard-wall-single-30000",
+      slug: "ductlessaire-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "ductlessaire-standard",
+      brandId: "ductlessaire",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-standard-wall-single-12000",
+      slug: "ductlessaire-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "ductlessaire-standard",
+      brandId: "ductlessaire",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7800,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-standard-wall-single-48000",
+      slug: "ductlessaire-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "ductlessaire-standard",
+      brandId: "ductlessaire",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 36000,
       seer2Min: null,
       seer2Max: null,
@@ -100,25 +237,215 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single",
-      slug: "ductlessaire-454-series-wall-single",
-      name: "454 Series",
-      seriesId: "ductlessaire-454-series",
+      id: "ductlessaire-standard-wall-single-18000",
+      slug: "ductlessaire-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "ductlessaire-standard",
       brandId: "ductlessaire",
-      modelNumber: "454 Series",
-      normalizedModelNumber: "454-series",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 45000,
-      heatingCapacity5FMinBtu: 8600,
-      heatingCapacity5FMaxBtu: 37000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11200,
+      heatingCapacity5FMaxBtu: 11200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-24000",
+      slug: "ductlessaire-454-series-wall-single-24000",
+      name: "454 Series 24 000 BTU",
+      seriesId: "ductlessaire-454-series",
+      brandId: "ductlessaire",
+      modelNumber: "454 Series 24k",
+      normalizedModelNumber: "454-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 26600,
+      heatingCapacity5FMinBtu: 16700,
+      heatingCapacity5FMaxBtu: 18400,
       seer2Min: 17,
-      seer2Max: 24.6,
+      seer2Max: 23,
       hspf2Min: 8.5,
-      hspf2Max: 13,
+      hspf2Max: 9.5,
       cop5FMin: 2,
+      cop5FMax: 2.13,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-9000",
+      slug: "ductlessaire-454-series-wall-single-9000",
+      name: "454 Series 9 000 BTU",
+      seriesId: "ductlessaire-454-series",
+      brandId: "ductlessaire",
+      modelNumber: "454 Series 9k",
+      normalizedModelNumber: "454-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 8600,
+      heatingCapacity5FMaxBtu: 8600,
+      seer2Min: 24.6,
+      seer2Max: 24.6,
+      hspf2Min: 13,
+      hspf2Max: 13,
+      cop5FMin: 2.26,
+      cop5FMax: 2.26,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-12000",
+      slug: "ductlessaire-454-series-wall-single-12000",
+      name: "454 Series 12 000 BTU",
+      seriesId: "ductlessaire-454-series",
+      brandId: "ductlessaire",
+      modelNumber: "454 Series 12k",
+      normalizedModelNumber: "454-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9100,
+      heatingCapacity5FMaxBtu: 9100,
+      seer2Min: 23.1,
+      seer2Max: 23.1,
+      hspf2Min: 10.2,
+      hspf2Max: 10.2,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-18000",
+      slug: "ductlessaire-454-series-wall-single-18000",
+      name: "454 Series 18 000 BTU",
+      seriesId: "ductlessaire-454-series",
+      brandId: "ductlessaire",
+      modelNumber: "454 Series 18k",
+      normalizedModelNumber: "454-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14100,
+      heatingCapacity5FMaxBtu: 14100,
+      seer2Min: 23.7,
+      seer2Max: 23.7,
+      hspf2Min: 11.9,
+      hspf2Max: 11.9,
+      cop5FMin: 2.4,
       cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-da-series-wall-single-24000",
+      slug: "ductlessaire-da-series-wall-single-24000",
+      name: "DA Series 24 000 BTU",
+      seriesId: "ductlessaire-da-series",
+      brandId: "ductlessaire",
+      modelNumber: "DA Series 24k",
+      normalizedModelNumber: "da-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26600,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 18400,
+      seer2Min: 21,
+      seer2Max: 23,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-42000",
+      slug: "ductlessaire-454-series-wall-single-42000",
+      name: "454 Series 42 000 BTU",
+      seriesId: "ductlessaire-454-series",
+      brandId: "ductlessaire",
+      modelNumber: "454 Series 42k",
+      normalizedModelNumber: "454-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 20.4,
+      seer2Max: 21.3,
+      hspf2Min: 10,
+      hspf2Max: 10.6,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-36000",
+      slug: "ductlessaire-454-series-wall-single-36000",
+      name: "454 Series 36 000 BTU",
+      seriesId: "ductlessaire-454-series",
+      brandId: "ductlessaire",
+      modelNumber: "454 Series 36k",
+      normalizedModelNumber: "454-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 23.1,
+      hspf2Min: 9.2,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -146,12 +473,6 @@ export const ductlessaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "ductlessaire-da27-4z-o",
-      modelNumber: "DA27-4Z-O",
-      brandId: "ductlessaire",
-      refrigerant: null as any,
-    },
-    {
       id: "ductlessaire-da2421-h2-o",
       modelNumber: "DA2421-H2-O*",
       brandId: "ductlessaire",
@@ -170,14 +491,14 @@ export const ductlessaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "ductlessaire-da48-5z-o",
-      modelNumber: "DA48-5Z-O",
+      id: "ductlessaire-454-12-o-ps",
+      modelNumber: "454-12-O-PS",
       brandId: "ductlessaire",
       refrigerant: null as any,
     },
     {
-      id: "ductlessaire-454-12-o-ps",
-      modelNumber: "454-12-O-PS",
+      id: "ductlessaire-da48-5z-o",
+      modelNumber: "DA48-5Z-O",
       brandId: "ductlessaire",
       refrigerant: null as any,
     },
@@ -190,6 +511,18 @@ export const ductlessaireDataset: BrandDataset = {
     {
       id: "ductlessaire-454-24-o-ps",
       modelNumber: "454-24-O-PS",
+      brandId: "ductlessaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "ductlessaire-454-24-o-da",
+      modelNumber: "454-24-O-DA",
+      brandId: "ductlessaire",
+      refrigerant: null as any,
+    },
+    {
+      id: "ductlessaire-454-28-4z-o",
+      modelNumber: "454-28-4Z-O",
       brandId: "ductlessaire",
       refrigerant: null as any,
     },
@@ -212,14 +545,8 @@ export const ductlessaireDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "ductlessaire-454-24-o-da",
-      modelNumber: "454-24-O-DA",
-      brandId: "ductlessaire",
-      refrigerant: null as any,
-    },
-    {
-      id: "ductlessaire-454-28-4z-o",
-      modelNumber: "454-28-4Z-O",
+      id: "ductlessaire-da27-4z-o",
+      modelNumber: "DA27-4Z-O",
       brandId: "ductlessaire",
       refrigerant: null as any,
     },
@@ -241,9 +568,9 @@ export const ductlessaireDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "ductlessaire-da-series-wall-single-cfg-1",
-      slug: "ductlessaire-da-series-wall-single-cfg-1",
-      modelId: "ductlessaire-da-series-wall-single",
+      id: "ductlessaire-da-series-wall-single-18000-cfg-1",
+      slug: "ductlessaire-da-series-wall-single-18000-cfg-1",
+      modelId: "ductlessaire-da-series-wall-single-18000",
       outdoorUnitId: "ductlessaire-da1821-h2-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -255,9 +582,23 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-da-series-wall-single-cfg-2",
-      slug: "ductlessaire-da-series-wall-single-cfg-2",
-      modelId: "ductlessaire-da-series-wall-single",
+      id: "ductlessaire-da-series-wall-single-18000-cfg-2",
+      slug: "ductlessaire-da-series-wall-single-18000-cfg-2",
+      modelId: "ductlessaire-da-series-wall-single-18000",
+      outdoorUnitId: "ductlessaire-da1821-h2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.7,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-da-series-wall-single-9000-cfg-1",
+      slug: "ductlessaire-da-series-wall-single-9000-cfg-1",
+      modelId: "ductlessaire-da-series-wall-single-9000",
       outdoorUnitId: "ductlessaire-da0921-h2-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -269,79 +610,23 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-da-series-wall-single-cfg-3",
-      slug: "ductlessaire-da-series-wall-single-cfg-3",
-      modelId: "ductlessaire-da-series-wall-single",
+      id: "ductlessaire-da-series-wall-single-12000-cfg-1",
+      slug: "ductlessaire-da-series-wall-single-12000-cfg-1",
+      modelId: "ductlessaire-da-series-wall-single-12000",
       outdoorUnitId: "ductlessaire-da1221-h2-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 23.1,
       hspf2: 9.3,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-da-series-wall-single-cfg-4",
-      slug: "ductlessaire-da-series-wall-single-cfg-4",
-      modelId: "ductlessaire-da-series-wall-single",
-      outdoorUnitId: "ductlessaire-da1821-h2-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.7,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-da-series-wall-single-cfg-5",
-      slug: "ductlessaire-da-series-wall-single-cfg-5",
-      modelId: "ductlessaire-da-series-wall-single",
-      outdoorUnitId: "ductlessaire-da27-4z-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26000,
-      coolingCapacityMaxBtu: 26000,
-      seer2: 23,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-da-series-wall-single-cfg-6",
-      slug: "ductlessaire-da-series-wall-single-cfg-6",
-      modelId: "ductlessaire-da-series-wall-single",
-      outdoorUnitId: "ductlessaire-da27-4z-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26600,
-      coolingCapacityMaxBtu: 26600,
-      seer2: 21,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-da-series-wall-single-cfg-7",
-      slug: "ductlessaire-da-series-wall-single-cfg-7",
-      modelId: "ductlessaire-da-series-wall-single",
-      outdoorUnitId: "ductlessaire-da27-4z-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 26200,
-      coolingCapacityMaxBtu: 26200,
-      seer2: 22,
-      hspf2: 9.25,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-standard-wall-single-cfg-1",
-      slug: "ductlessaire-standard-wall-single-cfg-1",
-      modelId: "ductlessaire-standard-wall-single",
+      id: "ductlessaire-standard-wall-single-24000-cfg-1",
+      slug: "ductlessaire-standard-wall-single-24000-cfg-1",
+      modelId: "ductlessaire-standard-wall-single-24000",
       outdoorUnitId: "ductlessaire-da2421-h2-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -353,9 +638,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-standard-wall-single-cfg-2",
-      slug: "ductlessaire-standard-wall-single-cfg-2",
-      modelId: "ductlessaire-standard-wall-single",
+      id: "ductlessaire-standard-wall-single-24000-cfg-2",
+      slug: "ductlessaire-standard-wall-single-24000-cfg-2",
+      modelId: "ductlessaire-standard-wall-single-24000",
       outdoorUnitId: "ductlessaire-da27-3z-0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -367,9 +652,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-standard-wall-single-cfg-3",
-      slug: "ductlessaire-standard-wall-single-cfg-3",
-      modelId: "ductlessaire-standard-wall-single",
+      id: "ductlessaire-standard-wall-single-30000-cfg-1",
+      slug: "ductlessaire-standard-wall-single-30000-cfg-1",
+      modelId: "ductlessaire-standard-wall-single-30000",
       outdoorUnitId: "ductlessaire-da27-3z-0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -381,9 +666,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-standard-wall-single-cfg-4",
-      slug: "ductlessaire-standard-wall-single-cfg-4",
-      modelId: "ductlessaire-standard-wall-single",
+      id: "ductlessaire-standard-wall-single-30000-cfg-2",
+      slug: "ductlessaire-standard-wall-single-30000-cfg-2",
+      modelId: "ductlessaire-standard-wall-single-30000",
       outdoorUnitId: "ductlessaire-da27-3z-0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -395,9 +680,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-standard-wall-single-cfg-5",
-      slug: "ductlessaire-standard-wall-single-cfg-5",
-      modelId: "ductlessaire-standard-wall-single",
+      id: "ductlessaire-standard-wall-single-12000-cfg-1",
+      slug: "ductlessaire-standard-wall-single-12000-cfg-1",
+      modelId: "ductlessaire-standard-wall-single-12000",
       outdoorUnitId: "ductlessaire-da-115-12-20-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -409,37 +694,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-standard-wall-single-cfg-6",
-      slug: "ductlessaire-standard-wall-single-cfg-6",
-      modelId: "ductlessaire-standard-wall-single",
-      outdoorUnitId: "ductlessaire-da48-5z-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-standard-wall-single-cfg-7",
-      slug: "ductlessaire-standard-wall-single-cfg-7",
-      modelId: "ductlessaire-standard-wall-single",
-      outdoorUnitId: "ductlessaire-da48-5z-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-standard-wall-single-cfg-8",
-      slug: "ductlessaire-standard-wall-single-cfg-8",
-      modelId: "ductlessaire-standard-wall-single",
+      id: "ductlessaire-standard-wall-single-12000-cfg-2",
+      slug: "ductlessaire-standard-wall-single-12000-cfg-2",
+      modelId: "ductlessaire-standard-wall-single-12000",
       outdoorUnitId: "ductlessaire-454-12-o-ps",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -451,9 +708,37 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-standard-wall-single-cfg-9",
-      slug: "ductlessaire-standard-wall-single-cfg-9",
-      modelId: "ductlessaire-standard-wall-single",
+      id: "ductlessaire-standard-wall-single-48000-cfg-1",
+      slug: "ductlessaire-standard-wall-single-48000-cfg-1",
+      modelId: "ductlessaire-standard-wall-single-48000",
+      outdoorUnitId: "ductlessaire-da48-5z-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-standard-wall-single-48000-cfg-2",
+      slug: "ductlessaire-standard-wall-single-48000-cfg-2",
+      modelId: "ductlessaire-standard-wall-single-48000",
+      outdoorUnitId: "ductlessaire-da48-5z-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-standard-wall-single-18000-cfg-1",
+      slug: "ductlessaire-standard-wall-single-18000-cfg-1",
+      modelId: "ductlessaire-standard-wall-single-18000",
       outdoorUnitId: "ductlessaire-454-18-o-ps",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
@@ -465,9 +750,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-1",
-      slug: "ductlessaire-454-series-wall-single-cfg-1",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-24000-cfg-1",
+      slug: "ductlessaire-454-series-wall-single-24000-cfg-1",
+      modelId: "ductlessaire-454-series-wall-single-24000",
       outdoorUnitId: "ductlessaire-454-24-o-ps",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -479,51 +764,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-2",
-      slug: "ductlessaire-454-series-wall-single-cfg-2",
-      modelId: "ductlessaire-454-series-wall-single",
-      outdoorUnitId: "ductlessaire-454-9-o-da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24.6,
-      hspf2: 13,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-454-series-wall-single-cfg-3",
-      slug: "ductlessaire-454-series-wall-single-cfg-3",
-      modelId: "ductlessaire-454-series-wall-single",
-      outdoorUnitId: "ductlessaire-454-12-o-da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.1,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-454-series-wall-single-cfg-4",
-      slug: "ductlessaire-454-series-wall-single-cfg-4",
-      modelId: "ductlessaire-454-series-wall-single",
-      outdoorUnitId: "ductlessaire-454-18-o-da",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.7,
-      hspf2: 11.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "ductlessaire-454-series-wall-single-cfg-5",
-      slug: "ductlessaire-454-series-wall-single-cfg-5",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-24000-cfg-2",
+      slug: "ductlessaire-454-series-wall-single-24000-cfg-2",
+      modelId: "ductlessaire-454-series-wall-single-24000",
       outdoorUnitId: "ductlessaire-454-24-o-da",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -535,9 +778,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-6",
-      slug: "ductlessaire-454-series-wall-single-cfg-6",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-24000-cfg-3",
+      slug: "ductlessaire-454-series-wall-single-24000-cfg-3",
+      modelId: "ductlessaire-454-series-wall-single-24000",
       outdoorUnitId: "ductlessaire-454-28-4z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 26000,
@@ -549,9 +792,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-7",
-      slug: "ductlessaire-454-series-wall-single-cfg-7",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-24000-cfg-4",
+      slug: "ductlessaire-454-series-wall-single-24000-cfg-4",
+      modelId: "ductlessaire-454-series-wall-single-24000",
       outdoorUnitId: "ductlessaire-454-28-4z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 26600,
@@ -563,9 +806,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-8",
-      slug: "ductlessaire-454-series-wall-single-cfg-8",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-24000-cfg-5",
+      slug: "ductlessaire-454-series-wall-single-24000-cfg-5",
+      modelId: "ductlessaire-454-series-wall-single-24000",
       outdoorUnitId: "ductlessaire-454-28-4z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 26200,
@@ -577,9 +820,93 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-9",
-      slug: "ductlessaire-454-series-wall-single-cfg-9",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-9000-cfg-1",
+      slug: "ductlessaire-454-series-wall-single-9000-cfg-1",
+      modelId: "ductlessaire-454-series-wall-single-9000",
+      outdoorUnitId: "ductlessaire-454-9-o-da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24.6,
+      hspf2: 13,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-12000-cfg-1",
+      slug: "ductlessaire-454-series-wall-single-12000-cfg-1",
+      modelId: "ductlessaire-454-series-wall-single-12000",
+      outdoorUnitId: "ductlessaire-454-12-o-da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-18000-cfg-1",
+      slug: "ductlessaire-454-series-wall-single-18000-cfg-1",
+      modelId: "ductlessaire-454-series-wall-single-18000",
+      outdoorUnitId: "ductlessaire-454-18-o-da",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.7,
+      hspf2: 11.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-da-series-wall-single-24000-cfg-1",
+      slug: "ductlessaire-da-series-wall-single-24000-cfg-1",
+      modelId: "ductlessaire-da-series-wall-single-24000",
+      outdoorUnitId: "ductlessaire-da27-4z-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-da-series-wall-single-24000-cfg-2",
+      slug: "ductlessaire-da-series-wall-single-24000-cfg-2",
+      modelId: "ductlessaire-da-series-wall-single-24000",
+      outdoorUnitId: "ductlessaire-da27-4z-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-da-series-wall-single-24000-cfg-3",
+      slug: "ductlessaire-da-series-wall-single-24000-cfg-3",
+      modelId: "ductlessaire-da-series-wall-single-24000",
+      outdoorUnitId: "ductlessaire-da27-4z-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26200,
+      coolingCapacityMaxBtu: 26200,
+      seer2: 22,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ductlessaire-454-series-wall-single-42000-cfg-1",
+      slug: "ductlessaire-454-series-wall-single-42000-cfg-1",
+      modelId: "ductlessaire-454-series-wall-single-42000",
       outdoorUnitId: "ductlessaire-454-48-6z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -591,9 +918,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-10",
-      slug: "ductlessaire-454-series-wall-single-cfg-10",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-42000-cfg-2",
+      slug: "ductlessaire-454-series-wall-single-42000-cfg-2",
+      modelId: "ductlessaire-454-series-wall-single-42000",
       outdoorUnitId: "ductlessaire-454-48-6z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -605,9 +932,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-11",
-      slug: "ductlessaire-454-series-wall-single-cfg-11",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-42000-cfg-3",
+      slug: "ductlessaire-454-series-wall-single-42000-cfg-3",
+      modelId: "ductlessaire-454-series-wall-single-42000",
       outdoorUnitId: "ductlessaire-454-48-6z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -619,9 +946,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-12",
-      slug: "ductlessaire-454-series-wall-single-cfg-12",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-36000-cfg-1",
+      slug: "ductlessaire-454-series-wall-single-36000-cfg-1",
+      modelId: "ductlessaire-454-series-wall-single-36000",
       outdoorUnitId: "ductlessaire-454-36-5z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -633,9 +960,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-13",
-      slug: "ductlessaire-454-series-wall-single-cfg-13",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-36000-cfg-2",
+      slug: "ductlessaire-454-series-wall-single-36000-cfg-2",
+      modelId: "ductlessaire-454-series-wall-single-36000",
       outdoorUnitId: "ductlessaire-454-36-5z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -647,9 +974,9 @@ export const ductlessaireDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "ductlessaire-454-series-wall-single-cfg-14",
-      slug: "ductlessaire-454-series-wall-single-cfg-14",
-      modelId: "ductlessaire-454-series-wall-single",
+      id: "ductlessaire-454-series-wall-single-36000-cfg-3",
+      slug: "ductlessaire-454-series-wall-single-36000-cfg-3",
+      modelId: "ductlessaire-454-series-wall-single-36000",
       outdoorUnitId: "ductlessaire-454-36-5z-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -663,7 +990,7 @@ export const ductlessaireDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "ductlessaire-da-series-wall-single-cfg-1",
+      configurationId: "ductlessaire-da-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -674,29 +1001,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-da-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8300,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-da-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8200,
-          cop: 2.24,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-da-series-wall-single-cfg-4",
+      configurationId: "ductlessaire-da-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -707,40 +1012,29 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-da-series-wall-single-cfg-5",
+      configurationId: "ductlessaire-da-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: 2,
+          heatingCapacityBtu: 8300,
+          cop: 2.18,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "ductlessaire-da-series-wall-single-cfg-6",
+      configurationId: "ductlessaire-da-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 18400,
-          cop: 2,
+          heatingCapacityBtu: 8200,
+          cop: 2.24,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "ductlessaire-da-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18200,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-standard-wall-single-cfg-1",
+      configurationId: "ductlessaire-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -751,7 +1045,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-standard-wall-single-cfg-2",
+      configurationId: "ductlessaire-standard-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -762,7 +1056,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-standard-wall-single-cfg-3",
+      configurationId: "ductlessaire-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -773,7 +1067,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-standard-wall-single-cfg-4",
+      configurationId: "ductlessaire-standard-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -784,7 +1078,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-standard-wall-single-cfg-5",
+      configurationId: "ductlessaire-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -795,29 +1089,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-standard-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-standard-wall-single-cfg-8",
+      configurationId: "ductlessaire-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -828,7 +1100,29 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-standard-wall-single-cfg-9",
+      configurationId: "ductlessaire-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -839,7 +1133,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-1",
+      configurationId: "ductlessaire-454-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -850,40 +1144,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8600,
-          cop: 2.26,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9100,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-5",
+      configurationId: "ductlessaire-454-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -894,7 +1155,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-6",
+      configurationId: "ductlessaire-454-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -905,7 +1166,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-7",
+      configurationId: "ductlessaire-454-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -916,7 +1177,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-8",
+      configurationId: "ductlessaire-454-series-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -927,7 +1188,73 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-9",
+      configurationId: "ductlessaire-454-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 2.26,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-454-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-454-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-da-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-da-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-da-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ductlessaire-454-series-wall-single-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -938,7 +1265,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-10",
+      configurationId: "ductlessaire-454-series-wall-single-42000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -949,7 +1276,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-11",
+      configurationId: "ductlessaire-454-series-wall-single-42000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -960,7 +1287,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-12",
+      configurationId: "ductlessaire-454-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -971,7 +1298,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-13",
+      configurationId: "ductlessaire-454-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -982,7 +1309,7 @@ export const ductlessaireDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "ductlessaire-454-series-wall-single-cfg-14",
+      configurationId: "ductlessaire-454-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,

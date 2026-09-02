@@ -26,25 +26,134 @@ export const connectmDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "connect-m-cntm-series-central-ducted",
-      slug: "connect-m-cntm-series-central-ducted",
-      name: "CNTM Series",
+      id: "connect-m-cntm-series-central-ducted-18000",
+      slug: "connect-m-cntm-series-central-ducted-18000",
+      name: "CNTM Series 18 000 BTU",
       seriesId: "connect-m-cntm-series",
       brandId: "connect-m",
-      modelNumber: "CNTM Series",
-      normalizedModelNumber: "cntm-series",
+      modelNumber: "CNTM Series 18k",
+      normalizedModelNumber: "cntm-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.2,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 16.1,
       seer2Max: 18,
       hspf2Min: 9.3,
-      hspf2Max: 10,
-      cop5FMin: 1.9,
+      hspf2Max: 9.5,
+      cop5FMin: 2.04,
       cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-24000",
+      slug: "connect-m-cntm-series-central-ducted-24000",
+      name: "CNTM Series 24 000 BTU",
+      seriesId: "connect-m-cntm-series",
+      brandId: "connect-m",
+      modelNumber: "CNTM Series 24k",
+      normalizedModelNumber: "cntm-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 19200,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-36000",
+      slug: "connect-m-cntm-series-central-ducted-36000",
+      name: "CNTM Series 36 000 BTU",
+      seriesId: "connect-m-cntm-series",
+      brandId: "connect-m",
+      modelNumber: "CNTM Series 36k",
+      normalizedModelNumber: "cntm-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.97,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-48000",
+      slug: "connect-m-cntm-series-central-ducted-48000",
+      name: "CNTM Series 48 000 BTU",
+      seriesId: "connect-m-cntm-series",
+      brandId: "connect-m",
+      modelNumber: "CNTM Series 48k",
+      normalizedModelNumber: "cntm-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-60000",
+      slug: "connect-m-cntm-series-central-ducted-60000",
+      name: "CNTM Series 60 000 BTU",
+      seriesId: "connect-m-cntm-series",
+      brandId: "connect-m",
+      modelNumber: "CNTM Series 60k",
+      normalizedModelNumber: "cntm-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -89,9 +198,9 @@ export const connectmDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "connect-m-cntm-series-central-ducted-cfg-1",
-      slug: "connect-m-cntm-series-central-ducted-cfg-1",
-      modelId: "connect-m-cntm-series-central-ducted",
+      id: "connect-m-cntm-series-central-ducted-18000-cfg-1",
+      slug: "connect-m-cntm-series-central-ducted-18000-cfg-1",
+      modelId: "connect-m-cntm-series-central-ducted-18000",
       outdoorUnitId: "connect-m-cntm16dhp18aa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -103,65 +212,9 @@ export const connectmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "connect-m-cntm-series-central-ducted-cfg-2",
-      slug: "connect-m-cntm-series-central-ducted-cfg-2",
-      modelId: "connect-m-cntm-series-central-ducted",
-      outdoorUnitId: "connect-m-cntm16dhp24aa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "connect-m-cntm-series-central-ducted-cfg-3",
-      slug: "connect-m-cntm-series-central-ducted-cfg-3",
-      modelId: "connect-m-cntm-series-central-ducted",
-      outdoorUnitId: "connect-m-cntm16dhp36aa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "connect-m-cntm-series-central-ducted-cfg-4",
-      slug: "connect-m-cntm-series-central-ducted-cfg-4",
-      modelId: "connect-m-cntm-series-central-ducted",
-      outdoorUnitId: "connect-m-cntm16dhp48aa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "connect-m-cntm-series-central-ducted-cfg-5",
-      slug: "connect-m-cntm-series-central-ducted-cfg-5",
-      modelId: "connect-m-cntm-series-central-ducted",
-      outdoorUnitId: "connect-m-cntm16dhp60aa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "connect-m-cntm-series-central-ducted-cfg-6",
-      slug: "connect-m-cntm-series-central-ducted-cfg-6",
-      modelId: "connect-m-cntm-series-central-ducted",
+      id: "connect-m-cntm-series-central-ducted-18000-cfg-2",
+      slug: "connect-m-cntm-series-central-ducted-18000-cfg-2",
+      modelId: "connect-m-cntm-series-central-ducted-18000",
       outdoorUnitId: "connect-m-cntm16dhp18aa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -173,9 +226,37 @@ export const connectmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "connect-m-cntm-series-central-ducted-cfg-7",
-      slug: "connect-m-cntm-series-central-ducted-cfg-7",
-      modelId: "connect-m-cntm-series-central-ducted",
+      id: "connect-m-cntm-series-central-ducted-24000-cfg-1",
+      slug: "connect-m-cntm-series-central-ducted-24000-cfg-1",
+      modelId: "connect-m-cntm-series-central-ducted-24000",
+      outdoorUnitId: "connect-m-cntm16dhp24aa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-36000-cfg-1",
+      slug: "connect-m-cntm-series-central-ducted-36000-cfg-1",
+      modelId: "connect-m-cntm-series-central-ducted-36000",
+      outdoorUnitId: "connect-m-cntm16dhp36aa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-36000-cfg-2",
+      slug: "connect-m-cntm-series-central-ducted-36000-cfg-2",
+      modelId: "connect-m-cntm-series-central-ducted-36000",
       outdoorUnitId: "connect-m-cntm16dhp36aa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 35000,
@@ -187,9 +268,9 @@ export const connectmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "connect-m-cntm-series-central-ducted-cfg-8",
-      slug: "connect-m-cntm-series-central-ducted-cfg-8",
-      modelId: "connect-m-cntm-series-central-ducted",
+      id: "connect-m-cntm-series-central-ducted-48000-cfg-1",
+      slug: "connect-m-cntm-series-central-ducted-48000-cfg-1",
+      modelId: "connect-m-cntm-series-central-ducted-48000",
       outdoorUnitId: "connect-m-cntm16dhp48aa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -201,9 +282,37 @@ export const connectmDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "connect-m-cntm-series-central-ducted-cfg-9",
-      slug: "connect-m-cntm-series-central-ducted-cfg-9",
-      modelId: "connect-m-cntm-series-central-ducted",
+      id: "connect-m-cntm-series-central-ducted-48000-cfg-2",
+      slug: "connect-m-cntm-series-central-ducted-48000-cfg-2",
+      modelId: "connect-m-cntm-series-central-ducted-48000",
+      outdoorUnitId: "connect-m-cntm16dhp48aa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-60000-cfg-1",
+      slug: "connect-m-cntm-series-central-ducted-60000-cfg-1",
+      modelId: "connect-m-cntm-series-central-ducted-60000",
+      outdoorUnitId: "connect-m-cntm16dhp60aa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "connect-m-cntm-series-central-ducted-60000-cfg-2",
+      slug: "connect-m-cntm-series-central-ducted-60000-cfg-2",
+      modelId: "connect-m-cntm-series-central-ducted-60000",
       outdoorUnitId: "connect-m-cntm16dhp60aa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -217,7 +326,7 @@ export const connectmDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-1",
+      configurationId: "connect-m-cntm-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -228,51 +337,7 @@ export const connectmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-6",
+      configurationId: "connect-m-cntm-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -283,7 +348,29 @@ export const connectmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-7",
+      configurationId: "connect-m-cntm-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "connect-m-cntm-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "connect-m-cntm-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -294,7 +381,18 @@ export const connectmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-8",
+      configurationId: "connect-m-cntm-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "connect-m-cntm-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -305,7 +403,18 @@ export const connectmDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "connect-m-cntm-series-central-ducted-cfg-9",
+      configurationId: "connect-m-cntm-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "connect-m-cntm-series-central-ducted-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

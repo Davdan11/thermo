@@ -18,7 +18,7 @@ export const maxiairDataset: BrandDataset = {
       name: "YS series",
       brandId: "maxi-air",
       systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -48,24 +48,52 @@ export const maxiairDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "maxi-air-ys-series-wall-single",
-      slug: "maxi-air-ys-series-wall-single",
-      name: "YS series",
+      id: "maxi-air-ys-series-wall-single-12000",
+      slug: "maxi-air-ys-series-wall-single-12000",
+      name: "YS series 12 000 BTU",
       seriesId: "maxi-air-ys-series",
       brandId: "maxi-air",
-      modelNumber: "YS series",
-      normalizedModelNumber: "ys-series",
+      modelNumber: "YS series 12k",
+      normalizedModelNumber: "ys-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 18000,
+      coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8200,
-      heatingCapacity5FMaxBtu: 14000,
+      heatingCapacity5FMaxBtu: 8200,
       seer2Min: 23.1,
-      seer2Max: 23.7,
+      seer2Max: 23.1,
       hspf2Min: 9.3,
-      hspf2Max: 10.3,
+      hspf2Max: 9.3,
       cop5FMin: 2.24,
+      cop5FMax: 2.24,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-ys-series-wall-single-18000",
+      slug: "maxi-air-ys-series-wall-single-18000",
+      name: "YS series 18 000 BTU",
+      seriesId: "maxi-air-ys-series",
+      brandId: "maxi-air",
+      modelNumber: "YS series 18k",
+      normalizedModelNumber: "ys-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 23.7,
+      seer2Max: 23.7,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 2.39,
       cop5FMax: 2.39,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -74,24 +102,52 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-maxs-series-central-ducted",
-      slug: "maxi-air-maxs-series-central-ducted",
-      name: "MAXS series",
+      id: "maxi-air-maxs-series-central-ducted-30000",
+      slug: "maxi-air-maxs-series-central-ducted-30000",
+      name: "MAXS series 30 000 BTU",
       seriesId: "maxi-air-maxs-series",
       brandId: "maxi-air",
-      modelNumber: "MAXS series",
-      normalizedModelNumber: "maxs-series",
+      modelNumber: "MAXS series 30k",
+      normalizedModelNumber: "maxs-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 30000,
       heatingCapacity5FMinBtu: 21000,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.3,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 16.2,
       seer2Max: 16.2,
       hspf2Min: 8.9,
-      hspf2Max: 9.4,
+      hspf2Max: 8.9,
       cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-maxs-series-central-ducted-60000",
+      slug: "maxi-air-maxs-series-central-ducted-60000",
+      name: "MAXS series 60 000 BTU",
+      seriesId: "maxi-air-maxs-series",
+      brandId: "maxi-air",
+      modelNumber: "MAXS series 60k",
+      normalizedModelNumber: "maxs-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
       cop5FMax: 1.91,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -100,25 +156,107 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single",
-      slug: "maxi-air-ne-series-wall-single",
-      name: "NE series",
+      id: "maxi-air-ne-series-wall-single-12000",
+      slug: "maxi-air-ne-series-wall-single-12000",
+      name: "NE series 12 000 BTU",
       seriesId: "maxi-air-ne-series",
       brandId: "maxi-air",
-      modelNumber: "NE series",
-      normalizedModelNumber: "ne-series",
+      modelNumber: "NE series 12k",
+      normalizedModelNumber: "ne-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMaxBtu: 12000,
       heatingCapacity5FMinBtu: 8200,
-      heatingCapacity5FMaxBtu: 34000,
-      seer2Min: 21.5,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 23.1,
       seer2Max: 25.5,
       hspf2Min: 9.3,
+      hspf2Max: 10.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2.24,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-ne-series-wall-single-18000",
+      slug: "maxi-air-ne-series-wall-single-18000",
+      name: "NE series 18 000 BTU",
+      seriesId: "maxi-air-ne-series",
+      brandId: "maxi-air",
+      modelNumber: "NE series 18k",
+      normalizedModelNumber: "ne-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21.5,
+      seer2Max: 23.7,
+      hspf2Min: 10.3,
       hspf2Max: 11.3,
       cop5FMin: 1.8,
       cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-ne-series-wall-single-30000",
+      slug: "maxi-air-ne-series-wall-single-30000",
+      name: "NE series 30 000 BTU",
+      seriesId: "maxi-air-ne-series",
+      brandId: "maxi-air",
+      modelNumber: "NE series 30k",
+      normalizedModelNumber: "ne-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 26600,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-ne-series-wall-single-36000",
+      slug: "maxi-air-ne-series-wall-single-36000",
+      name: "NE series 36 000 BTU",
+      seriesId: "maxi-air-ne-series",
+      brandId: "maxi-air",
+      modelNumber: "NE series 36k",
+      normalizedModelNumber: "ne-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 22.2,
+      seer2Max: 22.2,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -164,6 +302,12 @@ export const maxiairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "maxi-air-ne-t53-aeg12ext",
+      modelNumber: "NE-T53-AEG12EXT",
+      brandId: "maxi-air",
+      refrigerant: null as any,
+    },
+    {
       id: "maxi-air-ne-t52-supae18e",
       modelNumber: "NE-T52-SUPAE18E",
       brandId: "maxi-air",
@@ -172,12 +316,6 @@ export const maxiairDataset: BrandDataset = {
     {
       id: "maxi-air-ne-t52-pla18int",
       modelNumber: "NE-T52-PLA18INT",
-      brandId: "maxi-air",
-      refrigerant: null as any,
-    },
-    {
-      id: "maxi-air-ne-t53-aeg12ext",
-      modelNumber: "NE-T53-AEG12EXT",
       brandId: "maxi-air",
       refrigerant: null as any,
     },
@@ -205,23 +343,23 @@ export const maxiairDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "maxi-air-ys-series-wall-single-cfg-1",
-      slug: "maxi-air-ys-series-wall-single-cfg-1",
-      modelId: "maxi-air-ys-series-wall-single",
+      id: "maxi-air-ys-series-wall-single-12000-cfg-1",
+      slug: "maxi-air-ys-series-wall-single-12000-cfg-1",
+      modelId: "maxi-air-ys-series-wall-single-12000",
       outdoorUnitId: "maxi-air-ys21f-12hrdn1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 23.1,
       hspf2: 9.3,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ys-series-wall-single-cfg-2",
-      slug: "maxi-air-ys-series-wall-single-cfg-2",
-      modelId: "maxi-air-ys-series-wall-single",
+      id: "maxi-air-ys-series-wall-single-18000-cfg-1",
+      slug: "maxi-air-ys-series-wall-single-18000-cfg-1",
+      modelId: "maxi-air-ys-series-wall-single-18000",
       outdoorUnitId: "maxi-air-ys21f-18hrdn1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -233,9 +371,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-maxs-series-central-ducted-cfg-1",
-      slug: "maxi-air-maxs-series-central-ducted-cfg-1",
-      modelId: "maxi-air-maxs-series-central-ducted",
+      id: "maxi-air-maxs-series-central-ducted-30000-cfg-1",
+      slug: "maxi-air-maxs-series-central-ducted-30000-cfg-1",
+      modelId: "maxi-air-maxs-series-central-ducted-30000",
       outdoorUnitId: "maxi-air-maxs-2430",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -247,9 +385,23 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-maxs-series-central-ducted-cfg-2",
-      slug: "maxi-air-maxs-series-central-ducted-cfg-2",
-      modelId: "maxi-air-maxs-series-central-ducted",
+      id: "maxi-air-maxs-series-central-ducted-30000-cfg-2",
+      slug: "maxi-air-maxs-series-central-ducted-30000-cfg-2",
+      modelId: "maxi-air-maxs-series-central-ducted-30000",
+      outdoorUnitId: "maxi-air-maxs-2430",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-maxs-series-central-ducted-60000-cfg-1",
+      slug: "maxi-air-maxs-series-central-ducted-60000-cfg-1",
+      modelId: "maxi-air-maxs-series-central-ducted-60000",
       outdoorUnitId: "maxi-air-maxs-4260",
       indoorUnitId: null,
       coolingCapacityMinBtu: 55000,
@@ -261,23 +413,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-maxs-series-central-ducted-cfg-3",
-      slug: "maxi-air-maxs-series-central-ducted-cfg-3",
-      modelId: "maxi-air-maxs-series-central-ducted",
-      outdoorUnitId: "maxi-air-maxs-2430",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 16.2,
-      hspf2: 8.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "maxi-air-ne-series-wall-single-cfg-1",
-      slug: "maxi-air-ne-series-wall-single-cfg-1",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-12000-cfg-1",
+      slug: "maxi-air-ne-series-wall-single-12000-cfg-1",
+      modelId: "maxi-air-ne-series-wall-single-12000",
       outdoorUnitId: "maxi-air-ne-t52-supae12e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -289,9 +427,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-2",
-      slug: "maxi-air-ne-series-wall-single-cfg-2",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-12000-cfg-2",
+      slug: "maxi-air-ne-series-wall-single-12000-cfg-2",
+      modelId: "maxi-air-ne-series-wall-single-12000",
       outdoorUnitId: "maxi-air-ne-t52-pla12int",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -303,37 +441,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-3",
-      slug: "maxi-air-ne-series-wall-single-cfg-3",
-      modelId: "maxi-air-ne-series-wall-single",
-      outdoorUnitId: "maxi-air-ne-t52-supae18e",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "maxi-air-ne-series-wall-single-cfg-4",
-      slug: "maxi-air-ne-series-wall-single-cfg-4",
-      modelId: "maxi-air-ne-series-wall-single",
-      outdoorUnitId: "maxi-air-ne-t52-pla18int",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.7,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "maxi-air-ne-series-wall-single-cfg-5",
-      slug: "maxi-air-ne-series-wall-single-cfg-5",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-12000-cfg-3",
+      slug: "maxi-air-ne-series-wall-single-12000-cfg-3",
+      modelId: "maxi-air-ne-series-wall-single-12000",
       outdoorUnitId: "maxi-air-ne-t53-aeg12ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -345,9 +455,37 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-6",
-      slug: "maxi-air-ne-series-wall-single-cfg-6",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-18000-cfg-1",
+      slug: "maxi-air-ne-series-wall-single-18000-cfg-1",
+      modelId: "maxi-air-ne-series-wall-single-18000",
+      outdoorUnitId: "maxi-air-ne-t52-supae18e",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-ne-series-wall-single-18000-cfg-2",
+      slug: "maxi-air-ne-series-wall-single-18000-cfg-2",
+      modelId: "maxi-air-ne-series-wall-single-18000",
+      outdoorUnitId: "maxi-air-ne-t52-pla18int",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.7,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "maxi-air-ne-series-wall-single-18000-cfg-3",
+      slug: "maxi-air-ne-series-wall-single-18000-cfg-3",
+      modelId: "maxi-air-ne-series-wall-single-18000",
       outdoorUnitId: "maxi-air-ne-t53-aeg18ext",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -359,9 +497,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-7",
-      slug: "maxi-air-ne-series-wall-single-cfg-7",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-30000-cfg-1",
+      slug: "maxi-air-ne-series-wall-single-30000-cfg-1",
+      modelId: "maxi-air-ne-series-wall-single-30000",
       outdoorUnitId: "maxi-air-ne-t53-multi28e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -373,9 +511,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-8",
-      slug: "maxi-air-ne-series-wall-single-cfg-8",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-30000-cfg-2",
+      slug: "maxi-air-ne-series-wall-single-30000-cfg-2",
+      modelId: "maxi-air-ne-series-wall-single-30000",
       outdoorUnitId: "maxi-air-ne-t53-multi28e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -387,9 +525,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-9",
-      slug: "maxi-air-ne-series-wall-single-cfg-9",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-30000-cfg-3",
+      slug: "maxi-air-ne-series-wall-single-30000-cfg-3",
+      modelId: "maxi-air-ne-series-wall-single-30000",
       outdoorUnitId: "maxi-air-ne-t53-multi28e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -401,9 +539,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-10",
-      slug: "maxi-air-ne-series-wall-single-cfg-10",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-36000-cfg-1",
+      slug: "maxi-air-ne-series-wall-single-36000-cfg-1",
+      modelId: "maxi-air-ne-series-wall-single-36000",
       outdoorUnitId: "maxi-air-ne-t53-multi36e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -415,9 +553,9 @@ export const maxiairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "maxi-air-ne-series-wall-single-cfg-11",
-      slug: "maxi-air-ne-series-wall-single-cfg-11",
-      modelId: "maxi-air-ne-series-wall-single",
+      id: "maxi-air-ne-series-wall-single-36000-cfg-2",
+      slug: "maxi-air-ne-series-wall-single-36000-cfg-2",
+      modelId: "maxi-air-ne-series-wall-single-36000",
       outdoorUnitId: "maxi-air-ne-t53-multi36e",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -431,7 +569,7 @@ export const maxiairDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "maxi-air-ys-series-wall-single-cfg-1",
+      configurationId: "maxi-air-ys-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -442,7 +580,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ys-series-wall-single-cfg-2",
+      configurationId: "maxi-air-ys-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -453,7 +591,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-maxs-series-central-ducted-cfg-1",
+      configurationId: "maxi-air-maxs-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -464,18 +602,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-maxs-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "maxi-air-maxs-series-central-ducted-cfg-3",
+      configurationId: "maxi-air-maxs-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -486,7 +613,18 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-1",
+      configurationId: "maxi-air-maxs-series-central-ducted-60000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "maxi-air-ne-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -497,7 +635,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-2",
+      configurationId: "maxi-air-ne-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -508,29 +646,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-5",
+      configurationId: "maxi-air-ne-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -541,7 +657,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-6",
+      configurationId: "maxi-air-ne-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -552,7 +668,29 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-7",
+      configurationId: "maxi-air-ne-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "maxi-air-ne-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "maxi-air-ne-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -563,7 +701,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-8",
+      configurationId: "maxi-air-ne-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -574,7 +712,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-9",
+      configurationId: "maxi-air-ne-series-wall-single-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -585,7 +723,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-10",
+      configurationId: "maxi-air-ne-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -596,7 +734,7 @@ export const maxiairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "maxi-air-ne-series-wall-single-cfg-11",
+      configurationId: "maxi-air-ne-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

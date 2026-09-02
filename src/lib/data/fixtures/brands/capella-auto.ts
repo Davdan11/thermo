@@ -114,25 +114,26 @@ export const capellaDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "capella-cpib-series-wall-single",
-      slug: "capella-cpib-series-wall-single",
-      name: "CPIB Series",
+      id: "capella-cpib-series-wall-single-9000",
+      slug: "capella-cpib-series-wall-single-9000",
+      name: "CPIB Series 9 000 BTU",
       seriesId: "capella-cpib-series",
       brandId: "capella",
-      modelNumber: "CPIB Series",
-      normalizedModelNumber: "cpib-series",
+      modelNumber: "CPIB Series 9k",
+      normalizedModelNumber: "cpib-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6600,
-      heatingCapacity5FMaxBtu: 17200,
-      seer2Min: 18.5,
+      heatingCapacity5FMaxBtu: 6600,
+      seer2Min: 21.6,
       seer2Max: 21.6,
-      hspf2Min: 9,
+      hspf2Min: 9.4,
       hspf2Max: 9.4,
       cop5FMin: 2,
-      cop5FMax: 2.11,
+      cop5FMax: 2,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -140,15 +141,16 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-standard-wall-single",
-      slug: "capella-standard-wall-single",
-      name: "Standard",
+      id: "capella-standard-wall-single-12000",
+      slug: "capella-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "capella-standard",
       brandId: "capella",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 8300,
@@ -166,24 +168,160 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cppb-series-wall-single",
-      slug: "capella-cppb-series-wall-single",
-      name: "CPPB Series",
-      seriesId: "capella-cppb-series",
+      id: "capella-cpib-series-wall-single-18000",
+      slug: "capella-cpib-series-wall-single-18000",
+      name: "CPIB Series 18 000 BTU",
+      seriesId: "capella-cpib-series",
       brandId: "capella",
-      modelNumber: "CPPB Series",
-      normalizedModelNumber: "cppb-series",
+      modelNumber: "CPIB Series 18k",
+      normalizedModelNumber: "cpib-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 11700,
+      heatingCapacity5FMaxBtu: 11700,
+      seer2Min: 20.2,
+      seer2Max: 20.2,
+      hspf2Min: 9.1,
+      hspf2Max: 9.1,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpib-series-wall-single-24000",
+      slug: "capella-cpib-series-wall-single-24000",
+      name: "CPIB Series 24 000 BTU",
+      seriesId: "capella-cpib-series",
+      brandId: "capella",
+      modelNumber: "CPIB Series 24k",
+      normalizedModelNumber: "cpib-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 17200,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 2.11,
+      cop5FMax: 2.11,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cppb-series-wall-single-9000",
+      slug: "capella-cppb-series-wall-single-9000",
+      name: "CPPB Series 9 000 BTU",
+      seriesId: "capella-cppb-series",
+      brandId: "capella",
+      modelNumber: "CPPB Series 9k",
+      normalizedModelNumber: "cppb-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 27.4,
+      seer2Max: 27.4,
+      hspf2Min: 12.5,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cppb-series-wall-single-12000",
+      slug: "capella-cppb-series-wall-single-12000",
+      name: "CPPB Series 12 000 BTU",
+      seriesId: "capella-cppb-series",
+      brandId: "capella",
+      modelNumber: "CPPB Series 12k",
+      normalizedModelNumber: "cppb-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 25.4,
+      seer2Max: 25.4,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cppb-series-wall-single-18000",
+      slug: "capella-cppb-series-wall-single-18000",
+      name: "CPPB Series 18 000 BTU",
+      seriesId: "capella-cppb-series",
+      brandId: "capella",
+      modelNumber: "CPPB Series 18k",
+      normalizedModelNumber: "cppb-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 16600,
+      heatingCapacity5FMaxBtu: 16600,
+      seer2Min: 21.4,
+      seer2Max: 21.4,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 1.92,
+      cop5FMax: 1.92,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cppb-series-wall-single-24000",
+      slug: "capella-cppb-series-wall-single-24000",
+      name: "CPPB Series 24 000 BTU",
+      seriesId: "capella-cppb-series",
+      brandId: "capella",
+      modelNumber: "CPPB Series 24k",
+      normalizedModelNumber: "cppb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21000,
       heatingCapacity5FMaxBtu: 21000,
       seer2Min: 21,
-      seer2Max: 27.4,
-      hspf2Min: 10.5,
+      seer2Max: 21,
+      hspf2Min: 13.5,
       hspf2Max: 13.5,
-      cop5FMin: 1.8,
+      cop5FMin: 2.34,
       cop5FMax: 2.34,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -192,24 +330,106 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sicb-series-wall-single",
-      slug: "capella-sicb-series-wall-single",
-      name: "SICB Series",
+      id: "capella-sicb-series-wall-single-9000",
+      slug: "capella-sicb-series-wall-single-9000",
+      name: "SICB Series 9 000 BTU",
       seriesId: "capella-sicb-series",
       brandId: "capella",
-      modelNumber: "SICB Series",
-      normalizedModelNumber: "sicb-series",
+      modelNumber: "SICB Series 9k",
+      normalizedModelNumber: "sicb-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 23400,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 9700,
-      heatingCapacity5FMaxBtu: 20400,
-      seer2Min: 20,
+      heatingCapacity5FMaxBtu: 9700,
+      seer2Min: 22.6,
       seer2Max: 22.6,
-      hspf2Min: 11.6,
-      hspf2Max: 12.3,
+      hspf2Min: 12.1,
+      hspf2Max: 12.1,
       cop5FMin: 1.84,
+      cop5FMax: 1.84,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-sicb-series-wall-single-12000",
+      slug: "capella-sicb-series-wall-single-12000",
+      name: "SICB Series 12 000 BTU",
+      seriesId: "capella-sicb-series",
+      brandId: "capella",
+      modelNumber: "SICB Series 12k",
+      normalizedModelNumber: "sicb-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 10000,
+      seer2Min: 22.2,
+      seer2Max: 22.2,
+      hspf2Min: 11.6,
+      hspf2Max: 11.6,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-sicb-series-wall-single-15000",
+      slug: "capella-sicb-series-wall-single-15000",
+      name: "SICB Series 15 000 BTU",
+      seriesId: "capella-sicb-series",
+      brandId: "capella",
+      modelNumber: "SICB Series 15k",
+      normalizedModelNumber: "sicb-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14900,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 12.3,
+      hspf2Max: 12.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-sicb-series-wall-single-24000",
+      slug: "capella-sicb-series-wall-single-24000",
+      name: "SICB Series 24 000 BTU",
+      seriesId: "capella-sicb-series",
+      brandId: "capella",
+      modelNumber: "SICB Series 24k",
+      normalizedModelNumber: "sicb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      heatingCapacity5FMinBtu: 20400,
+      heatingCapacity5FMaxBtu: 20400,
+      seer2Min: 20.7,
+      seer2Max: 20.7,
+      hspf2Min: 11.6,
+      hspf2Max: 11.6,
+      cop5FMin: 2.23,
       cop5FMax: 2.23,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -218,24 +438,106 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sfcb-series-wall-single",
-      slug: "capella-sfcb-series-wall-single",
-      name: "SFCB Series",
+      id: "capella-sfcb-series-wall-single-9000",
+      slug: "capella-sfcb-series-wall-single-9000",
+      name: "SFCB Series 9 000 BTU",
       seriesId: "capella-sfcb-series",
       brandId: "capella",
-      modelNumber: "SFCB Series",
-      normalizedModelNumber: "sfcb-series",
+      modelNumber: "SFCB Series 9k",
+      normalizedModelNumber: "sfcb-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 10200,
-      heatingCapacity5FMaxBtu: 21600,
-      seer2Min: 18.4,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20.5,
       seer2Max: 20.5,
-      hspf2Min: 10.6,
+      hspf2Min: 13.8,
       hspf2Max: 13.8,
       cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-sfcb-series-wall-single-12000",
+      slug: "capella-sfcb-series-wall-single-12000",
+      name: "SFCB Series 12 000 BTU",
+      seriesId: "capella-sfcb-series",
+      brandId: "capella",
+      modelNumber: "SFCB Series 12k",
+      normalizedModelNumber: "sfcb-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10200,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.6,
+      hspf2Max: 10.6,
+      cop5FMin: 1.95,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-sfcb-series-wall-single-18000",
+      slug: "capella-sfcb-series-wall-single-18000",
+      name: "SFCB Series 18 000 BTU",
+      seriesId: "capella-sfcb-series",
+      brandId: "capella",
+      modelNumber: "SFCB Series 18k",
+      normalizedModelNumber: "sfcb-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 18.4,
+      seer2Max: 18.4,
+      hspf2Min: 11.1,
+      hspf2Max: 11.1,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-sfcb-series-wall-single-24000",
+      slug: "capella-sfcb-series-wall-single-24000",
+      name: "SFCB Series 24 000 BTU",
+      seriesId: "capella-sfcb-series",
+      brandId: "capella",
+      modelNumber: "SFCB Series 24k",
+      normalizedModelNumber: "sfcb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 21600,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 19,
+      seer2Max: 19,
+      hspf2Min: 11.7,
+      hspf2Max: 11.7,
+      cop5FMin: 2.18,
       cop5FMax: 2.18,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -244,22 +546,131 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single",
-      slug: "capella-cpm-series-wall-single",
-      name: "CPM Series",
+      id: "capella-cpm-series-wall-single-18000",
+      slug: "capella-cpm-series-wall-single-18000",
+      name: "CPM Series 18 000 BTU",
       seriesId: "capella-cpm-series",
       brandId: "capella",
-      modelNumber: "CPM Series",
-      normalizedModelNumber: "cpm-series",
+      modelNumber: "CPM Series 18k",
+      normalizedModelNumber: "cpm-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 19000,
       heatingCapacity5FMinBtu: 17000,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 19,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 20,
       seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 10.4,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-24000",
+      slug: "capella-cpm-series-wall-single-24000",
+      name: "CPM Series 24 000 BTU",
+      seriesId: "capella-cpm-series",
+      brandId: "capella",
+      modelNumber: "CPM Series 24k",
+      normalizedModelNumber: "cpm-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 25000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-30000",
+      slug: "capella-cpm-series-wall-single-30000",
+      name: "CPM Series 30 000 BTU",
+      seriesId: "capella-cpm-series",
+      brandId: "capella",
+      modelNumber: "CPM Series 30k",
+      normalizedModelNumber: "cpm-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 19,
+      seer2Max: 21,
       hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-36000",
+      slug: "capella-cpm-series-wall-single-36000",
+      name: "CPM Series 36 000 BTU",
+      seriesId: "capella-cpm-series",
+      brandId: "capella",
+      modelNumber: "CPM Series 36k",
+      normalizedModelNumber: "cpm-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.4,
+      seer2Max: 23,
+      hspf2Min: 10.4,
+      hspf2Max: 10.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-48000",
+      slug: "capella-cpm-series-wall-single-48000",
+      name: "CPM Series 48 000 BTU",
+      seriesId: "capella-cpm-series",
+      brandId: "capella",
+      modelNumber: "CPM Series 48k",
+      normalizedModelNumber: "cpm-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 44000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 10.5,
       hspf2Max: 11,
       cop5FMin: 2,
       cop5FMax: 2.1,
@@ -270,24 +681,52 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cahb-series-central-ducted",
-      slug: "capella-cahb-series-central-ducted",
-      name: "CAHB Series",
+      id: "capella-cahb-series-central-ducted-24000",
+      slug: "capella-cahb-series-central-ducted-24000",
+      name: "CAHB Series 24 000 BTU",
       seriesId: "capella-cahb-series",
       brandId: "capella",
-      modelNumber: "CAHB Series",
-      normalizedModelNumber: "cahb-series",
+      modelNumber: "CAHB Series 24k",
+      normalizedModelNumber: "cahb-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 23000,
       heatingCapacity5FMinBtu: 20000,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 16,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 18.3,
       seer2Max: 18.3,
-      hspf2Min: 9,
-      hspf2Max: 10.3,
-      cop5FMin: 1.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.87,
+      cop5FMax: 1.87,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cahb-series-central-ducted-30000",
+      slug: "capella-cahb-series-central-ducted-30000",
+      name: "CAHB Series 30 000 BTU",
+      seriesId: "capella-cahb-series",
+      brandId: "capella",
+      modelNumber: "CAHB Series 30k",
+      normalizedModelNumber: "cahb-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23800,
+      heatingCapacity5FMaxBtu: 23800,
+      seer2Min: 16.8,
+      seer2Max: 16.8,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.96,
       cop5FMax: 1.96,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -296,24 +735,79 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-energia-b-wall-single",
-      slug: "capella-energia-b-wall-single",
-      name: "Energia B",
-      seriesId: "capella-energia-b",
+      id: "capella-cahb-series-central-ducted-36000",
+      slug: "capella-cahb-series-central-ducted-36000",
+      name: "CAHB Series 36 000 BTU",
+      seriesId: "capella-cahb-series",
       brandId: "capella",
-      modelNumber: "Energia B",
-      normalizedModelNumber: "energia-b",
+      modelNumber: "CAHB Series 36k",
+      normalizedModelNumber: "cahb-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 24000,
-      heatingCapacity5FMinBtu: 9000,
-      heatingCapacity5FMaxBtu: 22000,
-      seer2Min: 21,
-      seer2Max: 25,
-      hspf2Min: 9.5,
-      hspf2Max: 11,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 31800,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 17.4,
+      seer2Max: 17.4,
+      hspf2Min: 10.3,
+      hspf2Max: 10.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cahb-series-central-ducted-48000",
+      slug: "capella-cahb-series-central-ducted-48000",
+      name: "CAHB Series 48 000 BTU",
+      seriesId: "capella-cahb-series",
+      brandId: "capella",
+      modelNumber: "CAHB Series 48k",
+      normalizedModelNumber: "cahb-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 16,
+      seer2Max: 16.5,
+      hspf2Min: 9,
+      hspf2Max: 9.5,
       cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-energia-b-wall-single-9000",
+      slug: "capella-energia-b-wall-single-9000",
+      name: "Energia B 9 000 BTU",
+      seriesId: "capella-energia-b",
+      brandId: "capella",
+      modelNumber: "Energia B 9k",
+      normalizedModelNumber: "energia-b-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 9000,
+      seer2Min: 25,
+      seer2Max: 25,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2.1,
       cop5FMax: 2.1,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -322,25 +816,215 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted",
-      slug: "capella-ccb-series-central-ducted",
-      name: "CCB Series",
-      seriesId: "capella-ccb-series",
+      id: "capella-energia-b-wall-single-12000",
+      slug: "capella-energia-b-wall-single-12000",
+      name: "Energia B 12 000 BTU",
+      seriesId: "capella-energia-b",
       brandId: "capella",
-      modelNumber: "CCB Series",
-      normalizedModelNumber: "ccb-series",
+      modelNumber: "Energia B 12k",
+      normalizedModelNumber: "energia-b-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 10800,
+      heatingCapacity5FMaxBtu: 10800,
+      seer2Min: 23,
+      seer2Max: 23,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-energia-b-wall-single-18000",
+      slug: "capella-energia-b-wall-single-18000",
+      name: "Energia B 18 000 BTU",
+      seriesId: "capella-energia-b",
+      brandId: "capella",
+      modelNumber: "Energia B 18k",
+      normalizedModelNumber: "energia-b-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: 21,
+      seer2Max: 21,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-energia-b-wall-single-24000",
+      slug: "capella-energia-b-wall-single-24000",
+      name: "Energia B 24 000 BTU",
+      seriesId: "capella-energia-b",
+      brandId: "capella",
+      modelNumber: "Energia B 24k",
+      normalizedModelNumber: "energia-b-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 52000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 22000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 22.5,
+      seer2Max: 22.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-ccb-series-central-ducted-24000",
+      slug: "capella-ccb-series-central-ducted-24000",
+      name: "CCB Series 24 000 BTU",
+      seriesId: "capella-ccb-series",
+      brandId: "capella",
+      modelNumber: "CCB Series 24k",
+      normalizedModelNumber: "ccb-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 19700,
+      heatingCapacity5FMaxBtu: 19700,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-ccb-series-central-ducted-30000",
+      slug: "capella-ccb-series-central-ducted-30000",
+      name: "CCB Series 30 000 BTU",
+      seriesId: "capella-ccb-series",
+      brandId: "capella",
+      modelNumber: "CCB Series 30k",
+      normalizedModelNumber: "ccb-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.3,
+      seer2Max: 16,
+      hspf2Min: 9.3,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-ccb-series-central-ducted-36000",
+      slug: "capella-ccb-series-central-ducted-36000",
+      name: "CCB Series 36 000 BTU",
+      seriesId: "capella-ccb-series",
+      brandId: "capella",
+      modelNumber: "CCB Series 36k",
+      normalizedModelNumber: "ccb-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 29200,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-ccb-series-central-ducted-48000",
+      slug: "capella-ccb-series-central-ducted-48000",
+      name: "CCB Series 48 000 BTU",
+      seriesId: "capella-ccb-series",
+      brandId: "capella",
+      modelNumber: "CCB Series 48k",
+      normalizedModelNumber: "ccb-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 52000,
+      heatingCapacity5FMinBtu: 36000,
       heatingCapacity5FMaxBtu: 38000,
       seer2Min: 15.2,
       seer2Max: 16,
       hspf2Min: 8.1,
-      hspf2Max: 9.6,
+      hspf2Max: 8.5,
       cop5FMin: 1.8,
-      cop5FMax: 1.9,
+      cop5FMax: 1.83,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-ccb-series-central-ducted-42000",
+      slug: "capella-ccb-series-central-ducted-42000",
+      name: "CCB Series 42 000 BTU",
+      seriesId: "capella-ccb-series",
+      brandId: "capella",
+      modelNumber: "CCB Series 42k",
+      normalizedModelNumber: "ccb-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
       status: "published",
@@ -356,6 +1040,12 @@ export const capellaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "capella-cpib-h12a-o",
+      modelNumber: "CPIB-H12A-O",
+      brandId: "capella",
+      refrigerant: null as any,
+    },
+    {
       id: "capella-cpib-h18a-o",
       modelNumber: "CPIB-H18A-O",
       brandId: "capella",
@@ -364,12 +1054,6 @@ export const capellaDataset: BrandDataset = {
     {
       id: "capella-cpib-h24a-o",
       modelNumber: "CPIB-H24A-O",
-      brandId: "capella",
-      refrigerant: null as any,
-    },
-    {
-      id: "capella-cpib-h12a-o",
-      modelNumber: "CPIB-H12A-O",
       brandId: "capella",
       refrigerant: null as any,
     },
@@ -404,14 +1088,32 @@ export const capellaDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "capella-cpm2b1v-h18a-o",
+      modelNumber: "CPM2B1V-H18A-O",
+      brandId: "capella",
+      refrigerant: null as any,
+    },
+    {
       id: "capella-cpm3b1-h27a-o",
       modelNumber: "CPM3B1-H27A-O",
       brandId: "capella",
       refrigerant: null as any,
     },
     {
+      id: "capella-cpm3b1v-h27a-o",
+      modelNumber: "CPM3B1V-H27A-O",
+      brandId: "capella",
+      refrigerant: null as any,
+    },
+    {
       id: "capella-cpm4b1-h36a-o",
       modelNumber: "CPM4B1-H36A-O",
+      brandId: "capella",
+      refrigerant: null as any,
+    },
+    {
+      id: "capella-cpm4b1v-h36a-o",
+      modelNumber: "CPM4B1V-H36A-O",
       brandId: "capella",
       refrigerant: null as any,
     },
@@ -424,24 +1126,6 @@ export const capellaDataset: BrandDataset = {
     {
       id: "capella-cpm5b1-h55a-o",
       modelNumber: "CPM5B1-H55A-O",
-      brandId: "capella",
-      refrigerant: null as any,
-    },
-    {
-      id: "capella-cpm2b1v-h18a-o",
-      modelNumber: "CPM2B1V-H18A-O",
-      brandId: "capella",
-      refrigerant: null as any,
-    },
-    {
-      id: "capella-cpm3b1v-h27a-o",
-      modelNumber: "CPM3B1V-H27A-O",
-      brandId: "capella",
-      refrigerant: null as any,
-    },
-    {
-      id: "capella-cpm4b1v-h36a-o",
-      modelNumber: "CPM4B1V-H36A-O",
       brandId: "capella",
       refrigerant: null as any,
     },
@@ -517,9 +1201,9 @@ export const capellaDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "capella-cpib-series-wall-single-cfg-1",
-      slug: "capella-cpib-series-wall-single-cfg-1",
-      modelId: "capella-cpib-series-wall-single",
+      id: "capella-cpib-series-wall-single-9000-cfg-1",
+      slug: "capella-cpib-series-wall-single-9000-cfg-1",
+      modelId: "capella-cpib-series-wall-single-9000",
       outdoorUnitId: "capella-cpib-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -531,37 +1215,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpib-series-wall-single-cfg-2",
-      slug: "capella-cpib-series-wall-single-cfg-2",
-      modelId: "capella-cpib-series-wall-single",
-      outdoorUnitId: "capella-cpib-h18a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20.2,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpib-series-wall-single-cfg-3",
-      slug: "capella-cpib-series-wall-single-cfg-3",
-      modelId: "capella-cpib-series-wall-single",
-      outdoorUnitId: "capella-cpib-h24a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 18.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-standard-wall-single-cfg-1",
-      slug: "capella-standard-wall-single-cfg-1",
-      modelId: "capella-standard-wall-single",
+      id: "capella-standard-wall-single-12000-cfg-1",
+      slug: "capella-standard-wall-single-12000-cfg-1",
+      modelId: "capella-standard-wall-single-12000",
       outdoorUnitId: "capella-cpib-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -573,9 +1229,37 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cppb-series-wall-single-cfg-1",
-      slug: "capella-cppb-series-wall-single-cfg-1",
-      modelId: "capella-cppb-series-wall-single",
+      id: "capella-cpib-series-wall-single-18000-cfg-1",
+      slug: "capella-cpib-series-wall-single-18000-cfg-1",
+      modelId: "capella-cpib-series-wall-single-18000",
+      outdoorUnitId: "capella-cpib-h18a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.2,
+      hspf2: 9.1,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpib-series-wall-single-24000-cfg-1",
+      slug: "capella-cpib-series-wall-single-24000-cfg-1",
+      modelId: "capella-cpib-series-wall-single-24000",
+      outdoorUnitId: "capella-cpib-h24a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cppb-series-wall-single-9000-cfg-1",
+      slug: "capella-cppb-series-wall-single-9000-cfg-1",
+      modelId: "capella-cppb-series-wall-single-9000",
       outdoorUnitId: "capella-cppb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -587,9 +1271,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cppb-series-wall-single-cfg-2",
-      slug: "capella-cppb-series-wall-single-cfg-2",
-      modelId: "capella-cppb-series-wall-single",
+      id: "capella-cppb-series-wall-single-12000-cfg-1",
+      slug: "capella-cppb-series-wall-single-12000-cfg-1",
+      modelId: "capella-cppb-series-wall-single-12000",
       outdoorUnitId: "capella-cppb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -601,9 +1285,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cppb-series-wall-single-cfg-3",
-      slug: "capella-cppb-series-wall-single-cfg-3",
-      modelId: "capella-cppb-series-wall-single",
+      id: "capella-cppb-series-wall-single-18000-cfg-1",
+      slug: "capella-cppb-series-wall-single-18000-cfg-1",
+      modelId: "capella-cppb-series-wall-single-18000",
       outdoorUnitId: "capella-cppb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -615,9 +1299,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cppb-series-wall-single-cfg-4",
-      slug: "capella-cppb-series-wall-single-cfg-4",
-      modelId: "capella-cppb-series-wall-single",
+      id: "capella-cppb-series-wall-single-24000-cfg-1",
+      slug: "capella-cppb-series-wall-single-24000-cfg-1",
+      modelId: "capella-cppb-series-wall-single-24000",
       outdoorUnitId: "capella-cppb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -629,9 +1313,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sicb-series-wall-single-cfg-1",
-      slug: "capella-sicb-series-wall-single-cfg-1",
-      modelId: "capella-sicb-series-wall-single",
+      id: "capella-sicb-series-wall-single-9000-cfg-1",
+      slug: "capella-sicb-series-wall-single-9000-cfg-1",
+      modelId: "capella-sicb-series-wall-single-9000",
       outdoorUnitId: "capella-cppb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -643,9 +1327,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sicb-series-wall-single-cfg-2",
-      slug: "capella-sicb-series-wall-single-cfg-2",
-      modelId: "capella-sicb-series-wall-single",
+      id: "capella-sicb-series-wall-single-12000-cfg-1",
+      slug: "capella-sicb-series-wall-single-12000-cfg-1",
+      modelId: "capella-sicb-series-wall-single-12000",
       outdoorUnitId: "capella-cppb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -657,9 +1341,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sicb-series-wall-single-cfg-3",
-      slug: "capella-sicb-series-wall-single-cfg-3",
-      modelId: "capella-sicb-series-wall-single",
+      id: "capella-sicb-series-wall-single-15000-cfg-1",
+      slug: "capella-sicb-series-wall-single-15000-cfg-1",
+      modelId: "capella-sicb-series-wall-single-15000",
       outdoorUnitId: "capella-cppb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16000,
@@ -671,9 +1355,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sicb-series-wall-single-cfg-4",
-      slug: "capella-sicb-series-wall-single-cfg-4",
-      modelId: "capella-sicb-series-wall-single",
+      id: "capella-sicb-series-wall-single-24000-cfg-1",
+      slug: "capella-sicb-series-wall-single-24000-cfg-1",
+      modelId: "capella-sicb-series-wall-single-24000",
       outdoorUnitId: "capella-cppb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23400,
@@ -685,9 +1369,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sfcb-series-wall-single-cfg-1",
-      slug: "capella-sfcb-series-wall-single-cfg-1",
-      modelId: "capella-sfcb-series-wall-single",
+      id: "capella-sfcb-series-wall-single-9000-cfg-1",
+      slug: "capella-sfcb-series-wall-single-9000-cfg-1",
+      modelId: "capella-sfcb-series-wall-single-9000",
       outdoorUnitId: "capella-cppb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -699,9 +1383,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sfcb-series-wall-single-cfg-2",
-      slug: "capella-sfcb-series-wall-single-cfg-2",
-      modelId: "capella-sfcb-series-wall-single",
+      id: "capella-sfcb-series-wall-single-12000-cfg-1",
+      slug: "capella-sfcb-series-wall-single-12000-cfg-1",
+      modelId: "capella-sfcb-series-wall-single-12000",
       outdoorUnitId: "capella-cppb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -713,9 +1397,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sfcb-series-wall-single-cfg-3",
-      slug: "capella-sfcb-series-wall-single-cfg-3",
-      modelId: "capella-sfcb-series-wall-single",
+      id: "capella-sfcb-series-wall-single-18000-cfg-1",
+      slug: "capella-sfcb-series-wall-single-18000-cfg-1",
+      modelId: "capella-sfcb-series-wall-single-18000",
       outdoorUnitId: "capella-cppb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17500,
@@ -727,9 +1411,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-sfcb-series-wall-single-cfg-4",
-      slug: "capella-sfcb-series-wall-single-cfg-4",
-      modelId: "capella-sfcb-series-wall-single",
+      id: "capella-sfcb-series-wall-single-24000-cfg-1",
+      slug: "capella-sfcb-series-wall-single-24000-cfg-1",
+      modelId: "capella-sfcb-series-wall-single-24000",
       outdoorUnitId: "capella-cppb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -741,9 +1425,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-1",
-      slug: "capella-cpm-series-wall-single-cfg-1",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-18000-cfg-1",
+      slug: "capella-cpm-series-wall-single-18000-cfg-1",
+      modelId: "capella-cpm-series-wall-single-18000",
       outdoorUnitId: "capella-cpm2b1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -755,9 +1439,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-2",
-      slug: "capella-cpm-series-wall-single-cfg-2",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-18000-cfg-2",
+      slug: "capella-cpm-series-wall-single-18000-cfg-2",
+      modelId: "capella-cpm-series-wall-single-18000",
       outdoorUnitId: "capella-cpm2b1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -769,9 +1453,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-3",
-      slug: "capella-cpm-series-wall-single-cfg-3",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-18000-cfg-3",
+      slug: "capella-cpm-series-wall-single-18000-cfg-3",
+      modelId: "capella-cpm-series-wall-single-18000",
       outdoorUnitId: "capella-cpm2b1-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -783,177 +1467,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-4",
-      slug: "capella-cpm-series-wall-single-cfg-4",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm3b1-h27a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-5",
-      slug: "capella-cpm-series-wall-single-cfg-5",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm3b1-h27a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-6",
-      slug: "capella-cpm-series-wall-single-cfg-6",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm3b1-h27a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-7",
-      slug: "capella-cpm-series-wall-single-cfg-7",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm4b1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-8",
-      slug: "capella-cpm-series-wall-single-cfg-8",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm4b1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-9",
-      slug: "capella-cpm-series-wall-single-cfg-9",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm4b1-h36a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.2,
-      hspf2: 10.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-10",
-      slug: "capella-cpm-series-wall-single-cfg-10",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm5b1-h48a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-11",
-      slug: "capella-cpm-series-wall-single-cfg-11",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm5b1-h48a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-12",
-      slug: "capella-cpm-series-wall-single-cfg-12",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm5b1-h48a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-13",
-      slug: "capella-cpm-series-wall-single-cfg-13",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm5b1-h55a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
-      seer2: 22.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-14",
-      slug: "capella-cpm-series-wall-single-cfg-14",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm5b1-h55a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 20,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-15",
-      slug: "capella-cpm-series-wall-single-cfg-15",
-      modelId: "capella-cpm-series-wall-single",
-      outdoorUnitId: "capella-cpm5b1-h55a-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 21.1,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "capella-cpm-series-wall-single-cfg-16",
-      slug: "capella-cpm-series-wall-single-cfg-16",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-18000-cfg-4",
+      slug: "capella-cpm-series-wall-single-18000-cfg-4",
+      modelId: "capella-cpm-series-wall-single-18000",
       outdoorUnitId: "capella-cpm2b1v-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -965,9 +1481,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-17",
-      slug: "capella-cpm-series-wall-single-cfg-17",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-18000-cfg-5",
+      slug: "capella-cpm-series-wall-single-18000-cfg-5",
+      modelId: "capella-cpm-series-wall-single-18000",
       outdoorUnitId: "capella-cpm2b1v-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -979,9 +1495,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-18",
-      slug: "capella-cpm-series-wall-single-cfg-18",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-18000-cfg-6",
+      slug: "capella-cpm-series-wall-single-18000-cfg-6",
+      modelId: "capella-cpm-series-wall-single-18000",
       outdoorUnitId: "capella-cpm2b1v-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -993,9 +1509,23 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-19",
-      slug: "capella-cpm-series-wall-single-cfg-19",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-24000-cfg-1",
+      slug: "capella-cpm-series-wall-single-24000-cfg-1",
+      modelId: "capella-cpm-series-wall-single-24000",
+      outdoorUnitId: "capella-cpm3b1-h27a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-24000-cfg-2",
+      slug: "capella-cpm-series-wall-single-24000-cfg-2",
+      modelId: "capella-cpm-series-wall-single-24000",
       outdoorUnitId: "capella-cpm3b1v-h27a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -1007,9 +1537,37 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-20",
-      slug: "capella-cpm-series-wall-single-cfg-20",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-30000-cfg-1",
+      slug: "capella-cpm-series-wall-single-30000-cfg-1",
+      modelId: "capella-cpm-series-wall-single-30000",
+      outdoorUnitId: "capella-cpm3b1-h27a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-30000-cfg-2",
+      slug: "capella-cpm-series-wall-single-30000-cfg-2",
+      modelId: "capella-cpm-series-wall-single-30000",
+      outdoorUnitId: "capella-cpm3b1-h27a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-30000-cfg-3",
+      slug: "capella-cpm-series-wall-single-30000-cfg-3",
+      modelId: "capella-cpm-series-wall-single-30000",
       outdoorUnitId: "capella-cpm3b1v-h27a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1021,9 +1579,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-21",
-      slug: "capella-cpm-series-wall-single-cfg-21",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-30000-cfg-4",
+      slug: "capella-cpm-series-wall-single-30000-cfg-4",
+      modelId: "capella-cpm-series-wall-single-30000",
       outdoorUnitId: "capella-cpm3b1v-h27a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -1035,9 +1593,51 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-22",
-      slug: "capella-cpm-series-wall-single-cfg-22",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-36000-cfg-1",
+      slug: "capella-cpm-series-wall-single-36000-cfg-1",
+      modelId: "capella-cpm-series-wall-single-36000",
+      outdoorUnitId: "capella-cpm4b1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-36000-cfg-2",
+      slug: "capella-cpm-series-wall-single-36000-cfg-2",
+      modelId: "capella-cpm-series-wall-single-36000",
+      outdoorUnitId: "capella-cpm4b1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-36000-cfg-3",
+      slug: "capella-cpm-series-wall-single-36000-cfg-3",
+      modelId: "capella-cpm-series-wall-single-36000",
+      outdoorUnitId: "capella-cpm4b1-h36a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.2,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-36000-cfg-4",
+      slug: "capella-cpm-series-wall-single-36000-cfg-4",
+      modelId: "capella-cpm-series-wall-single-36000",
       outdoorUnitId: "capella-cpm4b1v-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1049,9 +1649,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-23",
-      slug: "capella-cpm-series-wall-single-cfg-23",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-36000-cfg-5",
+      slug: "capella-cpm-series-wall-single-36000-cfg-5",
+      modelId: "capella-cpm-series-wall-single-36000",
       outdoorUnitId: "capella-cpm4b1v-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1063,9 +1663,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-24",
-      slug: "capella-cpm-series-wall-single-cfg-24",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-36000-cfg-6",
+      slug: "capella-cpm-series-wall-single-36000-cfg-6",
+      modelId: "capella-cpm-series-wall-single-36000",
       outdoorUnitId: "capella-cpm4b1v-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1077,9 +1677,93 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-25",
-      slug: "capella-cpm-series-wall-single-cfg-25",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-48000-cfg-1",
+      slug: "capella-cpm-series-wall-single-48000-cfg-1",
+      modelId: "capella-cpm-series-wall-single-48000",
+      outdoorUnitId: "capella-cpm5b1-h48a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-48000-cfg-2",
+      slug: "capella-cpm-series-wall-single-48000-cfg-2",
+      modelId: "capella-cpm-series-wall-single-48000",
+      outdoorUnitId: "capella-cpm5b1-h48a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-48000-cfg-3",
+      slug: "capella-cpm-series-wall-single-48000-cfg-3",
+      modelId: "capella-cpm-series-wall-single-48000",
+      outdoorUnitId: "capella-cpm5b1-h48a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.7,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-48000-cfg-4",
+      slug: "capella-cpm-series-wall-single-48000-cfg-4",
+      modelId: "capella-cpm-series-wall-single-48000",
+      outdoorUnitId: "capella-cpm5b1-h55a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 22.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-48000-cfg-5",
+      slug: "capella-cpm-series-wall-single-48000-cfg-5",
+      modelId: "capella-cpm-series-wall-single-48000",
+      outdoorUnitId: "capella-cpm5b1-h55a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-48000-cfg-6",
+      slug: "capella-cpm-series-wall-single-48000-cfg-6",
+      modelId: "capella-cpm-series-wall-single-48000",
+      outdoorUnitId: "capella-cpm5b1-h55a-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 21.1,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "capella-cpm-series-wall-single-48000-cfg-7",
+      slug: "capella-cpm-series-wall-single-48000-cfg-7",
+      modelId: "capella-cpm-series-wall-single-48000",
       outdoorUnitId: "capella-cpm5b1v-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1091,9 +1775,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-26",
-      slug: "capella-cpm-series-wall-single-cfg-26",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-48000-cfg-8",
+      slug: "capella-cpm-series-wall-single-48000-cfg-8",
+      modelId: "capella-cpm-series-wall-single-48000",
       outdoorUnitId: "capella-cpm5b1v-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1105,9 +1789,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-27",
-      slug: "capella-cpm-series-wall-single-cfg-27",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-48000-cfg-9",
+      slug: "capella-cpm-series-wall-single-48000-cfg-9",
+      modelId: "capella-cpm-series-wall-single-48000",
       outdoorUnitId: "capella-cpm5b1v-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1119,9 +1803,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-28",
-      slug: "capella-cpm-series-wall-single-cfg-28",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-48000-cfg-10",
+      slug: "capella-cpm-series-wall-single-48000-cfg-10",
+      modelId: "capella-cpm-series-wall-single-48000",
       outdoorUnitId: "capella-cpm5b1v-h55a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 51000,
@@ -1133,9 +1817,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-29",
-      slug: "capella-cpm-series-wall-single-cfg-29",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-48000-cfg-11",
+      slug: "capella-cpm-series-wall-single-48000-cfg-11",
+      modelId: "capella-cpm-series-wall-single-48000",
       outdoorUnitId: "capella-cpm5b1v-h55a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -1147,9 +1831,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cpm-series-wall-single-cfg-30",
-      slug: "capella-cpm-series-wall-single-cfg-30",
-      modelId: "capella-cpm-series-wall-single",
+      id: "capella-cpm-series-wall-single-48000-cfg-12",
+      slug: "capella-cpm-series-wall-single-48000-cfg-12",
+      modelId: "capella-cpm-series-wall-single-48000",
       outdoorUnitId: "capella-cpm5b1v-h55a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -1161,9 +1845,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cahb-series-central-ducted-cfg-1",
-      slug: "capella-cahb-series-central-ducted-cfg-1",
-      modelId: "capella-cahb-series-central-ducted",
+      id: "capella-cahb-series-central-ducted-24000-cfg-1",
+      slug: "capella-cahb-series-central-ducted-24000-cfg-1",
+      modelId: "capella-cahb-series-central-ducted-24000",
       outdoorUnitId: "capella-ccb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -1175,9 +1859,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cahb-series-central-ducted-cfg-2",
-      slug: "capella-cahb-series-central-ducted-cfg-2",
-      modelId: "capella-cahb-series-central-ducted",
+      id: "capella-cahb-series-central-ducted-30000-cfg-1",
+      slug: "capella-cahb-series-central-ducted-30000-cfg-1",
+      modelId: "capella-cahb-series-central-ducted-30000",
       outdoorUnitId: "capella-ccb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1189,9 +1873,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cahb-series-central-ducted-cfg-3",
-      slug: "capella-cahb-series-central-ducted-cfg-3",
-      modelId: "capella-cahb-series-central-ducted",
+      id: "capella-cahb-series-central-ducted-36000-cfg-1",
+      slug: "capella-cahb-series-central-ducted-36000-cfg-1",
+      modelId: "capella-cahb-series-central-ducted-36000",
       outdoorUnitId: "capella-ccb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1203,9 +1887,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cahb-series-central-ducted-cfg-4",
-      slug: "capella-cahb-series-central-ducted-cfg-4",
-      modelId: "capella-cahb-series-central-ducted",
+      id: "capella-cahb-series-central-ducted-48000-cfg-1",
+      slug: "capella-cahb-series-central-ducted-48000-cfg-1",
+      modelId: "capella-cahb-series-central-ducted-48000",
       outdoorUnitId: "capella-ccb1-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1217,9 +1901,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-cahb-series-central-ducted-cfg-5",
-      slug: "capella-cahb-series-central-ducted-cfg-5",
-      modelId: "capella-cahb-series-central-ducted",
+      id: "capella-cahb-series-central-ducted-48000-cfg-2",
+      slug: "capella-cahb-series-central-ducted-48000-cfg-2",
+      modelId: "capella-cahb-series-central-ducted-48000",
       outdoorUnitId: "capella-ccb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1231,9 +1915,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-energia-b-wall-single-cfg-1",
-      slug: "capella-energia-b-wall-single-cfg-1",
-      modelId: "capella-energia-b-wall-single",
+      id: "capella-energia-b-wall-single-9000-cfg-1",
+      slug: "capella-energia-b-wall-single-9000-cfg-1",
+      modelId: "capella-energia-b-wall-single-9000",
       outdoorUnitId: "capella-cpeb-h09a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -1245,9 +1929,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-energia-b-wall-single-cfg-2",
-      slug: "capella-energia-b-wall-single-cfg-2",
-      modelId: "capella-energia-b-wall-single",
+      id: "capella-energia-b-wall-single-12000-cfg-1",
+      slug: "capella-energia-b-wall-single-12000-cfg-1",
+      modelId: "capella-energia-b-wall-single-12000",
       outdoorUnitId: "capella-cpeb-h12a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1259,9 +1943,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-energia-b-wall-single-cfg-3",
-      slug: "capella-energia-b-wall-single-cfg-3",
-      modelId: "capella-energia-b-wall-single",
+      id: "capella-energia-b-wall-single-18000-cfg-1",
+      slug: "capella-energia-b-wall-single-18000-cfg-1",
+      modelId: "capella-energia-b-wall-single-18000",
       outdoorUnitId: "capella-cpeb-h18a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -1273,9 +1957,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-energia-b-wall-single-cfg-4",
-      slug: "capella-energia-b-wall-single-cfg-4",
-      modelId: "capella-energia-b-wall-single",
+      id: "capella-energia-b-wall-single-24000-cfg-1",
+      slug: "capella-energia-b-wall-single-24000-cfg-1",
+      modelId: "capella-energia-b-wall-single-24000",
       outdoorUnitId: "capella-cpeb-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1287,9 +1971,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-1",
-      slug: "capella-ccb-series-central-ducted-cfg-1",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-24000-cfg-1",
+      slug: "capella-ccb-series-central-ducted-24000-cfg-1",
+      modelId: "capella-ccb-series-central-ducted-24000",
       outdoorUnitId: "capella-ccb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1301,9 +1985,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-2",
-      slug: "capella-ccb-series-central-ducted-cfg-2",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-24000-cfg-2",
+      slug: "capella-ccb-series-central-ducted-24000-cfg-2",
+      modelId: "capella-ccb-series-central-ducted-24000",
       outdoorUnitId: "capella-ccb1-h24a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1315,9 +1999,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-3",
-      slug: "capella-ccb-series-central-ducted-cfg-3",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-30000-cfg-1",
+      slug: "capella-ccb-series-central-ducted-30000-cfg-1",
+      modelId: "capella-ccb-series-central-ducted-30000",
       outdoorUnitId: "capella-ccb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -1329,9 +2013,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-4",
-      slug: "capella-ccb-series-central-ducted-cfg-4",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-30000-cfg-2",
+      slug: "capella-ccb-series-central-ducted-30000-cfg-2",
+      modelId: "capella-ccb-series-central-ducted-30000",
       outdoorUnitId: "capella-ccb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -1343,9 +2027,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-5",
-      slug: "capella-ccb-series-central-ducted-cfg-5",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-30000-cfg-3",
+      slug: "capella-ccb-series-central-ducted-30000-cfg-3",
+      modelId: "capella-ccb-series-central-ducted-30000",
       outdoorUnitId: "capella-ccb1-h30a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -1357,9 +2041,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-6",
-      slug: "capella-ccb-series-central-ducted-cfg-6",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-36000-cfg-1",
+      slug: "capella-ccb-series-central-ducted-36000-cfg-1",
+      modelId: "capella-ccb-series-central-ducted-36000",
       outdoorUnitId: "capella-ccb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1371,9 +2055,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-7",
-      slug: "capella-ccb-series-central-ducted-cfg-7",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-36000-cfg-2",
+      slug: "capella-ccb-series-central-ducted-36000-cfg-2",
+      modelId: "capella-ccb-series-central-ducted-36000",
       outdoorUnitId: "capella-ccb1-h36a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -1385,9 +2069,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-8",
-      slug: "capella-ccb-series-central-ducted-cfg-8",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-48000-cfg-1",
+      slug: "capella-ccb-series-central-ducted-48000-cfg-1",
+      modelId: "capella-ccb-series-central-ducted-48000",
       outdoorUnitId: "capella-ccb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -1399,9 +2083,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-9",
-      slug: "capella-ccb-series-central-ducted-cfg-9",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-48000-cfg-2",
+      slug: "capella-ccb-series-central-ducted-48000-cfg-2",
+      modelId: "capella-ccb-series-central-ducted-48000",
       outdoorUnitId: "capella-ccb1-h60a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -1413,9 +2097,9 @@ export const capellaDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "capella-ccb-series-central-ducted-cfg-10",
-      slug: "capella-ccb-series-central-ducted-cfg-10",
-      modelId: "capella-ccb-series-central-ducted",
+      id: "capella-ccb-series-central-ducted-42000-cfg-1",
+      slug: "capella-ccb-series-central-ducted-42000-cfg-1",
+      modelId: "capella-ccb-series-central-ducted-42000",
       outdoorUnitId: "capella-ccb1-h48a-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -1429,7 +2113,7 @@ export const capellaDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "capella-cpib-series-wall-single-cfg-1",
+      configurationId: "capella-cpib-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1440,29 +2124,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpib-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11700,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpib-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: 2.11,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-standard-wall-single-cfg-1",
+      configurationId: "capella-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1473,7 +2135,29 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cppb-series-wall-single-cfg-1",
+      configurationId: "capella-cpib-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpib-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cppb-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1484,7 +2168,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cppb-series-wall-single-cfg-2",
+      configurationId: "capella-cppb-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1495,7 +2179,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cppb-series-wall-single-cfg-3",
+      configurationId: "capella-cppb-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1506,7 +2190,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cppb-series-wall-single-cfg-4",
+      configurationId: "capella-cppb-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1517,7 +2201,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sicb-series-wall-single-cfg-1",
+      configurationId: "capella-sicb-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1528,7 +2212,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sicb-series-wall-single-cfg-2",
+      configurationId: "capella-sicb-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1539,7 +2223,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sicb-series-wall-single-cfg-3",
+      configurationId: "capella-sicb-series-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1550,7 +2234,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sicb-series-wall-single-cfg-4",
+      configurationId: "capella-sicb-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1561,7 +2245,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sfcb-series-wall-single-cfg-1",
+      configurationId: "capella-sfcb-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1572,7 +2256,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sfcb-series-wall-single-cfg-2",
+      configurationId: "capella-sfcb-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1583,7 +2267,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sfcb-series-wall-single-cfg-3",
+      configurationId: "capella-sfcb-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1594,7 +2278,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-sfcb-series-wall-single-cfg-4",
+      configurationId: "capella-sfcb-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1605,7 +2289,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-1",
+      configurationId: "capella-cpm-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1616,7 +2300,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-2",
+      configurationId: "capella-cpm-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1627,7 +2311,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-3",
+      configurationId: "capella-cpm-series-wall-single-18000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1638,139 +2322,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "capella-cpm-series-wall-single-cfg-16",
+      configurationId: "capella-cpm-series-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1781,7 +2333,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-17",
+      configurationId: "capella-cpm-series-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1792,7 +2344,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-18",
+      configurationId: "capella-cpm-series-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1803,7 +2355,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-19",
+      configurationId: "capella-cpm-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1814,7 +2366,18 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-20",
+      configurationId: "capella-cpm-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1825,7 +2388,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-21",
+      configurationId: "capella-cpm-series-wall-single-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1836,7 +2399,29 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-22",
+      configurationId: "capella-cpm-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1847,7 +2432,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-23",
+      configurationId: "capella-cpm-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1858,7 +2443,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-24",
+      configurationId: "capella-cpm-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1869,7 +2454,40 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-25",
+      configurationId: "capella-cpm-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1880,7 +2498,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-26",
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1891,7 +2509,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-27",
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1902,7 +2520,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-28",
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1913,7 +2531,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-29",
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1924,7 +2542,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cpm-series-wall-single-cfg-30",
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1935,7 +2553,73 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cahb-series-central-ducted-cfg-1",
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cpm-series-wall-single-48000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "capella-cahb-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1946,7 +2630,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cahb-series-central-ducted-cfg-2",
+      configurationId: "capella-cahb-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1957,7 +2641,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cahb-series-central-ducted-cfg-3",
+      configurationId: "capella-cahb-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1968,7 +2652,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cahb-series-central-ducted-cfg-4",
+      configurationId: "capella-cahb-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1979,7 +2663,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-cahb-series-central-ducted-cfg-5",
+      configurationId: "capella-cahb-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1990,7 +2674,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-energia-b-wall-single-cfg-1",
+      configurationId: "capella-energia-b-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2001,7 +2685,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-energia-b-wall-single-cfg-2",
+      configurationId: "capella-energia-b-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2012,7 +2696,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-energia-b-wall-single-cfg-3",
+      configurationId: "capella-energia-b-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2023,7 +2707,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-energia-b-wall-single-cfg-4",
+      configurationId: "capella-energia-b-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2034,7 +2718,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-1",
+      configurationId: "capella-ccb-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2045,7 +2729,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-2",
+      configurationId: "capella-ccb-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2056,7 +2740,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-3",
+      configurationId: "capella-ccb-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2067,7 +2751,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-4",
+      configurationId: "capella-ccb-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2078,7 +2762,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-5",
+      configurationId: "capella-ccb-series-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2089,7 +2773,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-6",
+      configurationId: "capella-ccb-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2100,7 +2784,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-7",
+      configurationId: "capella-ccb-series-central-ducted-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2111,7 +2795,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-8",
+      configurationId: "capella-ccb-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2122,7 +2806,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-9",
+      configurationId: "capella-ccb-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2133,7 +2817,7 @@ export const capellaDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "capella-ccb-series-central-ducted-cfg-10",
+      configurationId: "capella-ccb-series-central-ducted-42000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

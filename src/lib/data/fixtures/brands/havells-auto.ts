@@ -26,18 +26,73 @@ export const havellsDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "havells-standard-wall-single",
-      slug: "havells-standard-wall-single",
-      name: "Standard",
+      id: "havells-standard-wall-single-18000",
+      slug: "havells-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
       seriesId: "havells-standard",
       brandId: "havells",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 12000,
+      heatingCapacity5FMaxBtu: 12000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "havells-standard-wall-single-24000",
+      slug: "havells-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "havells-standard",
+      brandId: "havells",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23600,
+      heatingCapacity5FMaxBtu: 23600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "havells-standard-wall-single-36000",
+      slug: "havells-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "havells-standard",
+      brandId: "havells",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 27200,
       heatingCapacity5FMaxBtu: 27200,
       seer2Min: null,
       seer2Max: null,
@@ -83,9 +138,9 @@ export const havellsDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "havells-standard-wall-single-cfg-1",
-      slug: "havells-standard-wall-single-cfg-1",
-      modelId: "havells-standard-wall-single",
+      id: "havells-standard-wall-single-18000-cfg-1",
+      slug: "havells-standard-wall-single-18000-cfg-1",
+      modelId: "havells-standard-wall-single-18000",
       outdoorUnitId: "havells-gsshax7641",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17700,
@@ -97,9 +152,9 @@ export const havellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "havells-standard-wall-single-cfg-2",
-      slug: "havells-standard-wall-single-cfg-2",
-      modelId: "havells-standard-wall-single",
+      id: "havells-standard-wall-single-24000-cfg-1",
+      slug: "havells-standard-wall-single-24000-cfg-1",
+      modelId: "havells-standard-wall-single-24000",
       outdoorUnitId: "havells-gsshax7642",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -111,9 +166,9 @@ export const havellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "havells-standard-wall-single-cfg-3",
-      slug: "havells-standard-wall-single-cfg-3",
-      modelId: "havells-standard-wall-single",
+      id: "havells-standard-wall-single-36000-cfg-1",
+      slug: "havells-standard-wall-single-36000-cfg-1",
+      modelId: "havells-standard-wall-single-36000",
       outdoorUnitId: "havells-gsshax7643",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -125,9 +180,9 @@ export const havellsDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "havells-standard-wall-single-cfg-4",
-      slug: "havells-standard-wall-single-cfg-4",
-      modelId: "havells-standard-wall-single",
+      id: "havells-standard-wall-single-36000-cfg-2",
+      slug: "havells-standard-wall-single-36000-cfg-2",
+      modelId: "havells-standard-wall-single-36000",
       outdoorUnitId: "havells-gsshax7644",
       indoorUnitId: null,
       coolingCapacityMinBtu: 37000,
@@ -141,7 +196,7 @@ export const havellsDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "havells-standard-wall-single-cfg-1",
+      configurationId: "havells-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -152,7 +207,7 @@ export const havellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "havells-standard-wall-single-cfg-2",
+      configurationId: "havells-standard-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -163,7 +218,7 @@ export const havellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "havells-standard-wall-single-cfg-3",
+      configurationId: "havells-standard-wall-single-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -174,7 +229,7 @@ export const havellsDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "havells-standard-wall-single-cfg-4",
+      configurationId: "havells-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

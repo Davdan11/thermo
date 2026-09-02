@@ -26,18 +26,46 @@ export const whynterDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "whynter-standard-wall-single",
-      slug: "whynter-standard-wall-single",
-      name: "Standard",
+      id: "whynter-standard-wall-single-9000",
+      slug: "whynter-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "whynter-standard",
       brandId: "whynter",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 8600,
+      heatingCapacity5FMaxBtu: 8600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "whynter-standard-wall-single-12000",
+      slug: "whynter-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "whynter-standard",
+      brandId: "whynter",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 9600,
       heatingCapacity5FMaxBtu: 9600,
       seer2Min: null,
       seer2Max: null,
@@ -71,9 +99,9 @@ export const whynterDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "whynter-standard-wall-single-cfg-1",
-      slug: "whynter-standard-wall-single-cfg-1",
-      modelId: "whynter-standard-wall-single",
+      id: "whynter-standard-wall-single-9000-cfg-1",
+      slug: "whynter-standard-wall-single-9000-cfg-1",
+      modelId: "whynter-standard-wall-single-9000",
       outdoorUnitId: "whynter-mso-009h11522-01esag",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -85,9 +113,9 @@ export const whynterDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "whynter-standard-wall-single-cfg-2",
-      slug: "whynter-standard-wall-single-cfg-2",
-      modelId: "whynter-standard-wall-single",
+      id: "whynter-standard-wall-single-12000-cfg-1",
+      slug: "whynter-standard-wall-single-12000-cfg-1",
+      modelId: "whynter-standard-wall-single-12000",
       outdoorUnitId: "whynter-mso-012h11522-01esag",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -101,7 +129,7 @@ export const whynterDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "whynter-standard-wall-single-cfg-1",
+      configurationId: "whynter-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -112,7 +140,7 @@ export const whynterDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "whynter-standard-wall-single-cfg-2",
+      configurationId: "whynter-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

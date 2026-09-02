@@ -26,15 +26,16 @@ export const quiltDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "quilt-quilt-wall-single",
-      slug: "quilt-quilt-wall-single",
-      name: "Quilt",
+      id: "quilt-quilt-wall-single-15000",
+      slug: "quilt-quilt-wall-single-15000",
+      name: "Quilt 15 000 BTU",
       seriesId: "quilt-quilt",
       brandId: "quilt",
-      modelNumber: "Quilt",
-      normalizedModelNumber: "quilt",
+      modelNumber: "Quilt 15k",
+      normalizedModelNumber: "quilt-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
       coolingCapacityMinBtu: 16000,
       coolingCapacityMaxBtu: 16000,
       heatingCapacity5FMinBtu: 12000,
@@ -65,9 +66,9 @@ export const quiltDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "quilt-quilt-wall-single-cfg-1",
-      slug: "quilt-quilt-wall-single-cfg-1",
-      modelId: "quilt-quilt-wall-single",
+      id: "quilt-quilt-wall-single-15000-cfg-1",
+      slug: "quilt-quilt-wall-single-15000-cfg-1",
+      modelId: "quilt-quilt-wall-single-15000",
       outdoorUnitId: "quilt-qo1-m2z18-nc-na",
       indoorUnitId: null,
       coolingCapacityMinBtu: 16000,
@@ -81,7 +82,7 @@ export const quiltDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "quilt-quilt-wall-single-cfg-1",
+      configurationId: "quilt-quilt-wall-single-15000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

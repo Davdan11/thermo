@@ -37,24 +37,79 @@ export const novairDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "novair-lea-series-wall-single",
-      slug: "novair-lea-series-wall-single",
-      name: "LEA SERIES",
+      id: "novair-lea-series-wall-single-12000",
+      slug: "novair-lea-series-wall-single-12000",
+      name: "LEA SERIES 12 000 BTU",
       seriesId: "novair-lea-series",
       brandId: "novair",
-      modelNumber: "LEA SERIES",
-      normalizedModelNumber: "lea-series",
+      modelNumber: "LEA SERIES 12k",
+      normalizedModelNumber: "lea-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 36000,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 10300,
+      seer2Min: 23.1,
+      seer2Max: 25.5,
+      hspf2Min: 10.4,
+      hspf2Max: 10.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2.41,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-9000",
+      slug: "novair-lea-series-wall-single-9000",
+      name: "LEA SERIES 9 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA SERIES 9k",
+      normalizedModelNumber: "lea-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6300,
-      heatingCapacity5FMaxBtu: 35000,
-      seer2Min: 19,
+      heatingCapacity5FMaxBtu: 9500,
+      seer2Min: 21.5,
       seer2Max: 28.1,
+      hspf2Min: 9.1,
+      hspf2Max: 12.3,
+      cop5FMin: 1.85,
+      cop5FMax: 2.25,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000",
+      slug: "novair-lea-series-wall-single-18000",
+      name: "LEA SERIES 18 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA SERIES 18k",
+      normalizedModelNumber: "lea-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 11100,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 19,
+      seer2Max: 24,
       hspf2Min: 8.7,
-      hspf2Max: 13.6,
-      cop5FMin: 1.68,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
       cop5FMax: 2.44,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -63,15 +118,16 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-standard-wall-single",
-      slug: "novair-standard-wall-single",
-      name: "Standard",
+      id: "novair-standard-wall-single-12000",
+      slug: "novair-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "novair-standard",
       brandId: "novair",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7800,
@@ -89,27 +145,271 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-central-ducted",
-      slug: "novair-lea-series-central-ducted",
-      name: "LEA series",
+      id: "novair-lea-series-wall-single-36000",
+      slug: "novair-lea-series-wall-single-36000",
+      name: "LEA SERIES 36 000 BTU",
       seriesId: "novair-lea-series",
       brandId: "novair",
-      modelNumber: "LEA series",
-      normalizedModelNumber: "lea-series",
+      modelNumber: "LEA SERIES 36k",
+      normalizedModelNumber: "lea-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 42000,
-      seer2Min: 15.2,
-      seer2Max: 18,
-      hspf2Min: 8.9,
-      hspf2Max: 10,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 19.5,
+      seer2Max: 22.2,
+      hspf2Min: 9.2,
+      hspf2Max: 10.3,
+      cop5FMin: 1.68,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-30000",
+      slug: "novair-lea-series-wall-single-30000",
+      name: "LEA SERIES 30 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA SERIES 30k",
+      normalizedModelNumber: "lea-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 22.6,
+      hspf2Min: 9.2,
+      hspf2Max: 9.8,
       cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-24000",
+      slug: "novair-lea-series-wall-single-24000",
+      name: "LEA SERIES 24 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA SERIES 24k",
+      normalizedModelNumber: "lea-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 16200,
+      heatingCapacity5FMaxBtu: 21200,
+      seer2Min: 21.5,
+      seer2Max: 23.5,
+      hspf2Min: 9.2,
+      hspf2Max: 11.4,
+      cop5FMin: 1.8,
+      cop5FMax: 2.21,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-30000",
+      slug: "novair-lea-series-central-ducted-30000",
+      name: "LEA series 30 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA series 30k",
+      normalizedModelNumber: "lea-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 15.5,
+      seer2Max: 16.2,
+      hspf2Min: 8.9,
+      hspf2Max: 9.7,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-36000",
+      slug: "novair-lea-series-central-ducted-36000",
+      name: "LEA series 36 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA series 36k",
+      normalizedModelNumber: "lea-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30400,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.97,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-18000",
+      slug: "novair-lea-series-central-ducted-18000",
+      name: "LEA series 18 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA series 18k",
+      normalizedModelNumber: "lea-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 14700,
+      seer2Min: 16.1,
+      seer2Max: 18,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 2.04,
       cop5FMax: 2.2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-60000",
+      slug: "novair-lea-series-central-ducted-60000",
+      name: "LEA series 60 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA series 60k",
+      normalizedModelNumber: "lea-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-24000",
+      slug: "novair-lea-series-central-ducted-24000",
+      name: "LEA series 24 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA series 24k",
+      normalizedModelNumber: "lea-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.5,
+      seer2Max: 17.4,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.91,
+      cop5FMax: 1.95,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-48000",
+      slug: "novair-lea-series-central-ducted-48000",
+      name: "LEA series 48 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA series 48k",
+      normalizedModelNumber: "lea-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 15.6,
+      seer2Max: 15.6,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-6000",
+      slug: "novair-lea-series-wall-single-6000",
+      name: "LEA SERIES 6 000 BTU",
+      seriesId: "novair-lea-series",
+      brandId: "novair",
+      modelNumber: "LEA SERIES 6k",
+      normalizedModelNumber: "lea-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 26.5,
+      seer2Max: 26.5,
+      hspf2Min: 13.6,
+      hspf2Max: 13.6,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -119,6 +419,12 @@ export const novairDataset: BrandDataset = {
     {
       id: "novair-lea12sz25sk-o",
       modelNumber: "LEA12SZ25SK-O",
+      brandId: "novair",
+      refrigerant: null as any,
+    },
+    {
+      id: "novair-lea12sz35sk-o",
+      modelNumber: "LEA12SZ35SK-O",
       brandId: "novair",
       refrigerant: null as any,
     },
@@ -135,14 +441,14 @@ export const novairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "novair-lea18sz35sk-o",
-      modelNumber: "LEA18SZ35SK-O",
+      id: "novair-lea09sz15sk-o",
+      modelNumber: "LEA09SZ15SK-O",
       brandId: "novair",
       refrigerant: null as any,
     },
     {
-      id: "novair-lea09sz15sk-o",
-      modelNumber: "LEA09SZ15SK-O",
+      id: "novair-lea18sz35sk-o",
+      modelNumber: "LEA18SZ35SK-O",
       brandId: "novair",
       refrigerant: null as any,
     },
@@ -159,38 +465,8 @@ export const novairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "novair-lea12sz35sk-o",
-      modelNumber: "LEA12SZ35SK-O",
-      brandId: "novair",
-      refrigerant: null as any,
-    },
-    {
-      id: "novair-lea36mz-4p-25sk-o",
-      modelNumber: "LEA36MZ-4P-25SK-O",
-      brandId: "novair",
-      refrigerant: null as any,
-    },
-    {
-      id: "novair-lea27mz-3p-25sk-o",
-      modelNumber: "LEA27MZ-3P-25SK-O",
-      brandId: "novair",
-      refrigerant: null as any,
-    },
-    {
       id: "novair-lea18mz-2p-25sk-o",
       modelNumber: "LEA18MZ-2P-25SK-O",
-      brandId: "novair",
-      refrigerant: null as any,
-    },
-    {
-      id: "novair-lea24sz35sk-o",
-      modelNumber: "LEA24SZ35SK-O",
-      brandId: "novair",
-      refrigerant: null as any,
-    },
-    {
-      id: "novair-lea28mz-3p-35sk-o",
-      modelNumber: "LEA28MZ-3P-35SK-O",
       brandId: "novair",
       refrigerant: null as any,
     },
@@ -201,20 +477,44 @@ export const novairDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "novair-lea12sz15sk-o",
+      modelNumber: "LEA12SZ15SK-O",
+      brandId: "novair",
+      refrigerant: null as any,
+    },
+    {
+      id: "novair-lea36mz-4p-25sk-o",
+      modelNumber: "LEA36MZ-4P-25SK-O",
+      brandId: "novair",
+      refrigerant: null as any,
+    },
+    {
       id: "novair-lea36mz-4p-35sk-o",
       modelNumber: "LEA36MZ-4P-35SK-O",
       brandId: "novair",
       refrigerant: null as any,
     },
     {
-      id: "novair-lea24sz25sk-o",
-      modelNumber: "LEA24SZ25SK-O",
+      id: "novair-lea27mz-3p-25sk-o",
+      modelNumber: "LEA27MZ-3P-25SK-O",
       brandId: "novair",
       refrigerant: null as any,
     },
     {
-      id: "novair-lea12sz15sk-o",
-      modelNumber: "LEA12SZ15SK-O",
+      id: "novair-lea28mz-3p-35sk-o",
+      modelNumber: "LEA28MZ-3P-35SK-O",
+      brandId: "novair",
+      refrigerant: null as any,
+    },
+    {
+      id: "novair-lea24sz35sk-o",
+      modelNumber: "LEA24SZ35SK-O",
+      brandId: "novair",
+      refrigerant: null as any,
+    },
+    {
+      id: "novair-lea24sz25sk-o",
+      modelNumber: "LEA24SZ25SK-O",
       brandId: "novair",
       refrigerant: null as any,
     },
@@ -260,9 +560,9 @@ export const novairDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "novair-lea-series-wall-single-cfg-1",
-      slug: "novair-lea-series-wall-single-cfg-1",
-      modelId: "novair-lea-series-wall-single",
+      id: "novair-lea-series-wall-single-12000-cfg-1",
+      slug: "novair-lea-series-wall-single-12000-cfg-1",
+      modelId: "novair-lea-series-wall-single-12000",
       outdoorUnitId: "novair-lea12sz25sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -274,93 +574,9 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-wall-single-cfg-2",
-      slug: "novair-lea-series-wall-single-cfg-2",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea09sz25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-3",
-      slug: "novair-lea-series-wall-single-cfg-3",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea09sz35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 26.4,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-4",
-      slug: "novair-lea-series-wall-single-cfg-4",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea18sz35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 22,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-5",
-      slug: "novair-lea-series-wall-single-cfg-5",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea09sz15sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 21.5,
-      hspf2: 9.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-6",
-      slug: "novair-lea-series-wall-single-cfg-6",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea18sz25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-7",
-      slug: "novair-lea-series-wall-single-cfg-7",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea18sz15sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19.5,
-      hspf2: 8.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-8",
-      slug: "novair-lea-series-wall-single-cfg-8",
-      modelId: "novair-lea-series-wall-single",
+      id: "novair-lea-series-wall-single-12000-cfg-2",
+      slug: "novair-lea-series-wall-single-12000-cfg-2",
+      modelId: "novair-lea-series-wall-single-12000",
       outdoorUnitId: "novair-lea12sz35sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -372,247 +588,9 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-wall-single-cfg-9",
-      slug: "novair-lea-series-wall-single-cfg-9",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea36mz-4p-25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-10",
-      slug: "novair-lea-series-wall-single-cfg-10",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea27mz-3p-25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-11",
-      slug: "novair-lea-series-wall-single-cfg-11",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea27mz-3p-25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23.5,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-12",
-      slug: "novair-lea-series-wall-single-cfg-12",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea27mz-3p-25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 22.25,
-      hspf2: 9.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-13",
-      slug: "novair-lea-series-wall-single-cfg-13",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea18mz-2p-25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-14",
-      slug: "novair-lea-series-wall-single-cfg-14",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea18mz-2p-25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-15",
-      slug: "novair-lea-series-wall-single-cfg-15",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea18mz-2p-25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 20,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-16",
-      slug: "novair-lea-series-wall-single-cfg-16",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea24sz35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 22.3,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-17",
-      slug: "novair-lea-series-wall-single-cfg-17",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea28mz-3p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 22.6,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-18",
-      slug: "novair-lea-series-wall-single-cfg-18",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea28mz-3p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-19",
-      slug: "novair-lea-series-wall-single-cfg-19",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea28mz-3p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21.3,
-      hspf2: 9.65,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-20",
-      slug: "novair-lea-series-wall-single-cfg-20",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20.5,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-21",
-      slug: "novair-lea-series-wall-single-cfg-21",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 19,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-22",
-      slug: "novair-lea-series-wall-single-cfg-22",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 19.75,
-      hspf2: 9.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-23",
-      slug: "novair-lea-series-wall-single-cfg-23",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-24",
-      slug: "novair-lea-series-wall-single-cfg-24",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.5,
-      hspf2: 9.85,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-25",
-      slug: "novair-lea-series-wall-single-cfg-25",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea09sz25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 25.5,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-26",
-      slug: "novair-lea-series-wall-single-cfg-26",
-      modelId: "novair-lea-series-wall-single",
+      id: "novair-lea-series-wall-single-12000-cfg-3",
+      slug: "novair-lea-series-wall-single-12000-cfg-3",
+      modelId: "novair-lea-series-wall-single-12000",
       outdoorUnitId: "novair-lea12sz25sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -624,65 +602,9 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-wall-single-cfg-27",
-      slug: "novair-lea-series-wall-single-cfg-27",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea18sz25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 23.5,
-      hspf2: 10.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-28",
-      slug: "novair-lea-series-wall-single-cfg-28",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea24sz25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 22,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-29",
-      slug: "novair-lea-series-wall-single-cfg-29",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea09sz25sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 26.5,
-      hspf2: 13.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-30",
-      slug: "novair-lea-series-wall-single-cfg-30",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea09sz35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 28.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-31",
-      slug: "novair-lea-series-wall-single-cfg-31",
-      modelId: "novair-lea-series-wall-single",
+      id: "novair-lea-series-wall-single-12000-cfg-4",
+      slug: "novair-lea-series-wall-single-12000-cfg-4",
+      modelId: "novair-lea-series-wall-single-12000",
       outdoorUnitId: "novair-lea12sz35sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -694,51 +616,177 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-wall-single-cfg-32",
-      slug: "novair-lea-series-wall-single-cfg-32",
-      modelId: "novair-lea-series-wall-single",
+      id: "novair-lea-series-wall-single-9000-cfg-1",
+      slug: "novair-lea-series-wall-single-9000-cfg-1",
+      modelId: "novair-lea-series-wall-single-9000",
+      outdoorUnitId: "novair-lea09sz25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-9000-cfg-2",
+      slug: "novair-lea-series-wall-single-9000-cfg-2",
+      modelId: "novair-lea-series-wall-single-9000",
+      outdoorUnitId: "novair-lea09sz35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26.4,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-9000-cfg-3",
+      slug: "novair-lea-series-wall-single-9000-cfg-3",
+      modelId: "novair-lea-series-wall-single-9000",
+      outdoorUnitId: "novair-lea09sz15sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-9000-cfg-4",
+      slug: "novair-lea-series-wall-single-9000-cfg-4",
+      modelId: "novair-lea-series-wall-single-9000",
+      outdoorUnitId: "novair-lea09sz25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 25.5,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-9000-cfg-5",
+      slug: "novair-lea-series-wall-single-9000-cfg-5",
+      modelId: "novair-lea-series-wall-single-9000",
+      outdoorUnitId: "novair-lea09sz35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-1",
+      slug: "novair-lea-series-wall-single-18000-cfg-1",
+      modelId: "novair-lea-series-wall-single-18000",
       outdoorUnitId: "novair-lea18sz35sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-33",
-      slug: "novair-lea-series-wall-single-cfg-33",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea24sz35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21.5,
-      hspf2: 11.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-34",
-      slug: "novair-lea-series-wall-single-cfg-34",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
       seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-2",
+      slug: "novair-lea-series-wall-single-18000-cfg-2",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea18sz25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-3",
+      slug: "novair-lea-series-wall-single-18000-cfg-3",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea18sz15sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-4",
+      slug: "novair-lea-series-wall-single-18000-cfg-4",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea18mz-2p-25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-5",
+      slug: "novair-lea-series-wall-single-18000-cfg-5",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea18mz-2p-25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
       hspf2: 9.8,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-wall-single-cfg-35",
-      slug: "novair-lea-series-wall-single-cfg-35",
-      modelId: "novair-lea-series-wall-single",
+      id: "novair-lea-series-wall-single-18000-cfg-6",
+      slug: "novair-lea-series-wall-single-18000-cfg-6",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea18mz-2p-25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-7",
+      slug: "novair-lea-series-wall-single-18000-cfg-7",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-8",
+      slug: "novair-lea-series-wall-single-18000-cfg-8",
+      modelId: "novair-lea-series-wall-single-18000",
       outdoorUnitId: "novair-lea20mz-2p-35sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -750,9 +798,79 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-wall-single-cfg-36",
-      slug: "novair-lea-series-wall-single-cfg-36",
-      modelId: "novair-lea-series-wall-single",
+      id: "novair-lea-series-wall-single-18000-cfg-9",
+      slug: "novair-lea-series-wall-single-18000-cfg-9",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19.75,
+      hspf2: 9.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-10",
+      slug: "novair-lea-series-wall-single-18000-cfg-10",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea18sz25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-11",
+      slug: "novair-lea-series-wall-single-18000-cfg-11",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea18sz35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-12",
+      slug: "novair-lea-series-wall-single-18000-cfg-12",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 22,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-13",
+      slug: "novair-lea-series-wall-single-18000-cfg-13",
+      modelId: "novair-lea-series-wall-single-18000",
+      outdoorUnitId: "novair-lea20mz-2p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-18000-cfg-14",
+      slug: "novair-lea-series-wall-single-18000-cfg-14",
+      modelId: "novair-lea-series-wall-single-18000",
       outdoorUnitId: "novair-lea20mz-2p-35sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -764,37 +882,9 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-wall-single-cfg-37",
-      slug: "novair-lea-series-wall-single-cfg-37",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.2,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-wall-single-cfg-38",
-      slug: "novair-lea-series-wall-single-cfg-38",
-      modelId: "novair-lea-series-wall-single",
-      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.6,
-      hspf2: 10.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-standard-wall-single-cfg-1",
-      slug: "novair-standard-wall-single-cfg-1",
-      modelId: "novair-standard-wall-single",
+      id: "novair-standard-wall-single-12000-cfg-1",
+      slug: "novair-standard-wall-single-12000-cfg-1",
+      modelId: "novair-standard-wall-single-12000",
       outdoorUnitId: "novair-lea12sz15sk-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -806,9 +896,205 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-central-ducted-cfg-1",
-      slug: "novair-lea-series-central-ducted-cfg-1",
-      modelId: "novair-lea-series-central-ducted",
+      id: "novair-lea-series-wall-single-36000-cfg-1",
+      slug: "novair-lea-series-wall-single-36000-cfg-1",
+      modelId: "novair-lea-series-wall-single-36000",
+      outdoorUnitId: "novair-lea36mz-4p-25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-36000-cfg-2",
+      slug: "novair-lea-series-wall-single-36000-cfg-2",
+      modelId: "novair-lea-series-wall-single-36000",
+      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-36000-cfg-3",
+      slug: "novair-lea-series-wall-single-36000-cfg-3",
+      modelId: "novair-lea-series-wall-single-36000",
+      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.5,
+      hspf2: 9.85,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-36000-cfg-4",
+      slug: "novair-lea-series-wall-single-36000-cfg-4",
+      modelId: "novair-lea-series-wall-single-36000",
+      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-36000-cfg-5",
+      slug: "novair-lea-series-wall-single-36000-cfg-5",
+      modelId: "novair-lea-series-wall-single-36000",
+      outdoorUnitId: "novair-lea36mz-4p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.6,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-30000-cfg-1",
+      slug: "novair-lea-series-wall-single-30000-cfg-1",
+      modelId: "novair-lea-series-wall-single-30000",
+      outdoorUnitId: "novair-lea27mz-3p-25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-30000-cfg-2",
+      slug: "novair-lea-series-wall-single-30000-cfg-2",
+      modelId: "novair-lea-series-wall-single-30000",
+      outdoorUnitId: "novair-lea27mz-3p-25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-30000-cfg-3",
+      slug: "novair-lea-series-wall-single-30000-cfg-3",
+      modelId: "novair-lea-series-wall-single-30000",
+      outdoorUnitId: "novair-lea28mz-3p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.6,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-30000-cfg-4",
+      slug: "novair-lea-series-wall-single-30000-cfg-4",
+      modelId: "novair-lea-series-wall-single-30000",
+      outdoorUnitId: "novair-lea28mz-3p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-30000-cfg-5",
+      slug: "novair-lea-series-wall-single-30000-cfg-5",
+      modelId: "novair-lea-series-wall-single-30000",
+      outdoorUnitId: "novair-lea28mz-3p-35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.3,
+      hspf2: 9.65,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-24000-cfg-1",
+      slug: "novair-lea-series-wall-single-24000-cfg-1",
+      modelId: "novair-lea-series-wall-single-24000",
+      outdoorUnitId: "novair-lea27mz-3p-25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-24000-cfg-2",
+      slug: "novair-lea-series-wall-single-24000-cfg-2",
+      modelId: "novair-lea-series-wall-single-24000",
+      outdoorUnitId: "novair-lea24sz35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-24000-cfg-3",
+      slug: "novair-lea-series-wall-single-24000-cfg-3",
+      modelId: "novair-lea-series-wall-single-24000",
+      outdoorUnitId: "novair-lea24sz25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-24000-cfg-4",
+      slug: "novair-lea-series-wall-single-24000-cfg-4",
+      modelId: "novair-lea-series-wall-single-24000",
+      outdoorUnitId: "novair-lea24sz35sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-30000-cfg-1",
+      slug: "novair-lea-series-central-ducted-30000-cfg-1",
+      modelId: "novair-lea-series-central-ducted-30000",
       outdoorUnitId: "novair-lea30-evox-30-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -820,93 +1106,9 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-central-ducted-cfg-2",
-      slug: "novair-lea-series-central-ducted-cfg-2",
-      modelId: "novair-lea-series-central-ducted",
-      outdoorUnitId: "novair-lea36-evox-30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-central-ducted-cfg-3",
-      slug: "novair-lea-series-central-ducted-cfg-3",
-      modelId: "novair-lea-series-central-ducted",
-      outdoorUnitId: "novair-lea18-evox-30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-central-ducted-cfg-4",
-      slug: "novair-lea-series-central-ducted-cfg-4",
-      modelId: "novair-lea-series-central-ducted",
-      outdoorUnitId: "novair-lea60-evox-30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-central-ducted-cfg-5",
-      slug: "novair-lea-series-central-ducted-cfg-5",
-      modelId: "novair-lea-series-central-ducted",
-      outdoorUnitId: "novair-lea24-evox-30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-central-ducted-cfg-6",
-      slug: "novair-lea-series-central-ducted-cfg-6",
-      modelId: "novair-lea-series-central-ducted",
-      outdoorUnitId: "novair-lea48-evox-30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-central-ducted-cfg-7",
-      slug: "novair-lea-series-central-ducted-cfg-7",
-      modelId: "novair-lea-series-central-ducted",
-      outdoorUnitId: "novair-lea24-evox-30-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "novair-lea-series-central-ducted-cfg-8",
-      slug: "novair-lea-series-central-ducted-cfg-8",
-      modelId: "novair-lea-series-central-ducted",
+      id: "novair-lea-series-central-ducted-30000-cfg-2",
+      slug: "novair-lea-series-central-ducted-30000-cfg-2",
+      modelId: "novair-lea-series-central-ducted-30000",
       outdoorUnitId: "novair-lea30-evox-30-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -918,9 +1120,51 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-central-ducted-cfg-9",
-      slug: "novair-lea-series-central-ducted-cfg-9",
-      modelId: "novair-lea-series-central-ducted",
+      id: "novair-lea-series-central-ducted-36000-cfg-1",
+      slug: "novair-lea-series-central-ducted-36000-cfg-1",
+      modelId: "novair-lea-series-central-ducted-36000",
+      outdoorUnitId: "novair-lea36-evox-30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-36000-cfg-2",
+      slug: "novair-lea-series-central-ducted-36000-cfg-2",
+      modelId: "novair-lea-series-central-ducted-36000",
+      outdoorUnitId: "novair-lea36-evox-30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-18000-cfg-1",
+      slug: "novair-lea-series-central-ducted-18000-cfg-1",
+      modelId: "novair-lea-series-central-ducted-18000",
+      outdoorUnitId: "novair-lea18-evox-30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-18000-cfg-2",
+      slug: "novair-lea-series-central-ducted-18000-cfg-2",
+      modelId: "novair-lea-series-central-ducted-18000",
       outdoorUnitId: "novair-lea18-evox-30-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -932,15 +1176,71 @@ export const novairDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "novair-lea-series-central-ducted-cfg-10",
-      slug: "novair-lea-series-central-ducted-cfg-10",
-      modelId: "novair-lea-series-central-ducted",
-      outdoorUnitId: "novair-lea36-evox-30-o",
+      id: "novair-lea-series-central-ducted-60000-cfg-1",
+      slug: "novair-lea-series-central-ducted-60000-cfg-1",
+      modelId: "novair-lea-series-central-ducted-60000",
+      outdoorUnitId: "novair-lea60-evox-30-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-24000-cfg-1",
+      slug: "novair-lea-series-central-ducted-24000-cfg-1",
+      modelId: "novair-lea-series-central-ducted-24000",
+      outdoorUnitId: "novair-lea24-evox-30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
       hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-24000-cfg-2",
+      slug: "novair-lea-series-central-ducted-24000-cfg-2",
+      modelId: "novair-lea-series-central-ducted-24000",
+      outdoorUnitId: "novair-lea24-evox-30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-central-ducted-48000-cfg-1",
+      slug: "novair-lea-series-central-ducted-48000-cfg-1",
+      modelId: "novair-lea-series-central-ducted-48000",
+      outdoorUnitId: "novair-lea48-evox-30-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "novair-lea-series-wall-single-6000-cfg-1",
+      slug: "novair-lea-series-wall-single-6000-cfg-1",
+      modelId: "novair-lea-series-wall-single-6000",
+      outdoorUnitId: "novair-lea09sz25sk-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 26.5,
+      hspf2: 13.6,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -948,7 +1248,7 @@ export const novairDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "novair-lea-series-wall-single-cfg-1",
+      configurationId: "novair-lea-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -959,73 +1259,7 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8100,
-          cop: 2.25,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9300,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11100,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 6300,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.44,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-8",
+      configurationId: "novair-lea-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1036,194 +1270,7 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26400,
-          cop: 1.68,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14800,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18900,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.17,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-26",
+      configurationId: "novair-lea-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1234,51 +1281,7 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 2.02,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-31",
+      configurationId: "novair-lea-series-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1289,40 +1292,139 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-wall-single-cfg-32",
+      configurationId: "novair-lea-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
+          heatingCapacityBtu: 8100,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6300,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.17,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
           cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "novair-lea-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21200,
-          cop: 2.21,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-35",
+      configurationId: "novair-lea-series-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1333,7 +1435,62 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-wall-single-cfg-36",
+      configurationId: "novair-lea-series-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-18000-cfg-14",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1344,29 +1501,7 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-wall-single-cfg-38",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-standard-wall-single-cfg-1",
+      configurationId: "novair-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1377,7 +1512,161 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-central-ducted-cfg-1",
+      configurationId: "novair-lea-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 1.68,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1388,73 +1677,7 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "novair-lea-series-central-ducted-cfg-8",
+      configurationId: "novair-lea-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1465,7 +1688,40 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-central-ducted-cfg-9",
+      configurationId: "novair-lea-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-central-ducted-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -1476,12 +1732,56 @@ export const novairDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "novair-lea-series-central-ducted-cfg-10",
+      configurationId: "novair-lea-series-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "novair-lea-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.1,
           confidence: "verified",
         }
       ]

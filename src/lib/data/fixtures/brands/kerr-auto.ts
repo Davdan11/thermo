@@ -103,18 +103,154 @@ export const kerrDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "kerr-standard-wall-single",
-      slug: "kerr-standard-wall-single",
-      name: "Standard",
+      id: "kerr-standard-wall-single-9000",
+      slug: "kerr-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "kerr-standard",
       brandId: "kerr",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6900,
+      heatingCapacity5FMaxBtu: 7200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-12000",
+      slug: "kerr-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "kerr-standard",
+      brandId: "kerr",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7700,
+      heatingCapacity5FMaxBtu: 8700,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-30000",
+      slug: "kerr-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "kerr-standard",
+      brandId: "kerr",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-36000",
+      slug: "kerr-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "kerr-standard",
+      brandId: "kerr",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23200,
+      heatingCapacity5FMaxBtu: 24600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-24000",
+      slug: "kerr-a-series-wall-single-24000",
+      name: "A-series 24 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A-series 24k",
+      normalizedModelNumber: "a-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 19,
+      seer2Max: 21.5,
+      hspf2Min: 10.5,
+      hspf2Max: 11.7,
+      cop5FMin: 2,
+      cop5FMax: 2.23,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-48000",
+      slug: "kerr-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "kerr-standard",
+      brandId: "kerr",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 29600,
       heatingCapacity5FMaxBtu: 29600,
       seer2Min: null,
       seer2Max: null,
@@ -129,24 +265,106 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single",
-      slug: "kerr-a-series-wall-single",
-      name: "A-series",
+      id: "kerr-a-series-wall-single-18000",
+      slug: "kerr-a-series-wall-single-18000",
+      name: "A series 18 000 BTU",
       seriesId: "kerr-a-series",
       brandId: "kerr",
-      modelNumber: "A-series",
-      normalizedModelNumber: "a-series",
+      modelNumber: "A series 18k",
+      normalizedModelNumber: "a-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 55000,
-      heatingCapacity5FMinBtu: 7000,
-      heatingCapacity5FMaxBtu: 36000,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 10900,
+      heatingCapacity5FMaxBtu: 16000,
       seer2Min: 18,
-      seer2Max: 28.1,
-      hspf2Min: 9,
-      hspf2Max: 13.8,
-      cop5FMin: 1.59,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 12.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000",
+      slug: "kerr-a-series-wall-single-20000",
+      name: "A-series 20 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A-series 20k",
+      normalizedModelNumber: "a-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 22000,
+      heatingCapacity5FMinBtu: 14500,
+      heatingCapacity5FMaxBtu: 20200,
+      seer2Min: 18.9,
+      seer2Max: 20.4,
+      hspf2Min: 10.4,
+      hspf2Max: 12.1,
+      cop5FMin: 1.89,
+      cop5FMax: 2.16,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-15000",
+      slug: "kerr-a-series-wall-single-15000",
+      name: "A series 15 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A series 15k",
+      normalizedModelNumber: "a-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14200,
+      heatingCapacity5FMaxBtu: 15600,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 9.5,
+      hspf2Max: 12.3,
+      cop5FMin: 1.75,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-6000",
+      slug: "kerr-a-series-wall-single-6000",
+      name: "A series 6 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A series 6k",
+      normalizedModelNumber: "a-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6500,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 8500,
+      seer2Min: 22,
+      seer2Max: 26.5,
+      hspf2Min: 12,
+      hspf2Max: 13.6,
+      cop5FMin: 2.1,
       cop5FMax: 2.4,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -155,24 +373,322 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kcd-series-central-ducted",
-      slug: "kerr-a-kcd-series-central-ducted",
-      name: "A-KCD series",
-      seriesId: "kerr-a-kcd-series",
+      id: "kerr-a-series-wall-single-9000",
+      slug: "kerr-a-series-wall-single-9000",
+      name: "A series 9 000 BTU",
+      seriesId: "kerr-a-series",
       brandId: "kerr",
-      modelNumber: "A-KCD series",
-      normalizedModelNumber: "a-kcd-series",
+      modelNumber: "A series 9k",
+      normalizedModelNumber: "a-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 7100,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20.2,
+      seer2Max: 28.1,
+      hspf2Min: 10.3,
+      hspf2Max: 13.8,
+      cop5FMin: 1.59,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000",
+      slug: "kerr-a-series-wall-single-12000",
+      name: "A series 12 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A series 12k",
+      normalizedModelNumber: "a-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 7600,
+      heatingCapacity5FMaxBtu: 10600,
+      seer2Min: 19.5,
+      seer2Max: 25.5,
+      hspf2Min: 9.5,
+      hspf2Max: 11.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-30000",
+      slug: "kerr-a-series-wall-single-30000",
+      name: "A series 30 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A series 30k",
+      normalizedModelNumber: "a-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 26600,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-36000",
+      slug: "kerr-a-series-wall-single-36000",
+      name: "A series 36 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A series 36k",
+      normalizedModelNumber: "a-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 19,
+      seer2Max: 22.2,
+      hspf2Min: 10,
+      hspf2Max: 10.3,
+      cop5FMin: 1.7,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-48000",
+      slug: "kerr-a-series-wall-single-48000",
+      name: "A series 48 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A series 48k",
+      normalizedModelNumber: "a-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 20.9,
+      seer2Max: 21.8,
+      hspf2Min: 9,
+      hspf2Max: 9.8,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-24000",
+      slug: "kerr-a-kcd-series-central-ducted-24000",
+      name: "A-KCD series 24 000 BTU",
+      seriesId: "kerr-a-kcd-series",
+      brandId: "kerr",
+      modelNumber: "A-KCD series 24k",
+      normalizedModelNumber: "a-kcd-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 16700,
-      heatingCapacity5FMaxBtu: 42000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.95,
+      cop5FMax: 1.95,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-30000",
+      slug: "kerr-a-series-central-ducted-30000",
+      name: "A Series 30 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A Series 30k",
+      normalizedModelNumber: "a-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.2,
+      seer2Max: 16.8,
+      hspf2Min: 8.5,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.96,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-36000",
+      slug: "kerr-a-series-central-ducted-36000",
+      name: "A Series 36 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A Series 36k",
+      normalizedModelNumber: "a-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 31800,
+      seer2Min: 15.5,
+      seer2Max: 17.4,
+      hspf2Min: 8.6,
+      hspf2Max: 10.3,
+      cop5FMin: 1.85,
+      cop5FMax: 1.97,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-48000",
+      slug: "kerr-a-series-central-ducted-48000",
+      name: "A-series 48 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A-series 48k",
+      normalizedModelNumber: "a-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 32000,
+      heatingCapacity5FMaxBtu: 45000,
       seer2Min: 15.2,
       seer2Max: 16.5,
+      hspf2Min: 8.1,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-60000",
+      slug: "kerr-a-kcd-series-central-ducted-60000",
+      name: "A-KCD series 60 000 BTU",
+      seriesId: "kerr-a-kcd-series",
+      brandId: "kerr",
+      modelNumber: "A-KCD series 60k",
+      normalizedModelNumber: "a-kcd-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 37000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
       hspf2Min: 9.4,
-      hspf2Max: 10,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-30000",
+      slug: "kerr-a-kcd-series-central-ducted-30000",
+      name: "A-KCD series 30 000 BTU",
+      seriesId: "kerr-a-kcd-series",
+      brandId: "kerr",
+      modelNumber: "A-KCD series 30k",
+      normalizedModelNumber: "a-kcd-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 22600,
+      heatingCapacity5FMaxBtu: 22600,
+      seer2Min: 15.5,
+      seer2Max: 15.5,
+      hspf2Min: 9.7,
+      hspf2Max: 9.7,
       cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-36000",
+      slug: "kerr-a-kcd-series-central-ducted-36000",
+      name: "A-KCD series 36 000 BTU",
+      seriesId: "kerr-a-kcd-series",
+      brandId: "kerr",
+      modelNumber: "A-KCD series 36k",
+      normalizedModelNumber: "a-kcd-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -181,49 +697,24 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted",
-      slug: "kerr-a-series-central-ducted",
-      name: "A Series",
+      id: "kerr-a-series-central-ducted-18000",
+      slug: "kerr-a-series-central-ducted-18000",
+      name: "A-series 18 000 BTU",
       seriesId: "kerr-a-series",
       brandId: "kerr",
-      modelNumber: "A Series",
-      normalizedModelNumber: "a-series",
+      modelNumber: "A-series 18k",
+      normalizedModelNumber: "a-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 55000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 13500,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 15.2,
+      heatingCapacity5FMaxBtu: 15200,
+      seer2Min: 16.1,
       seer2Max: 19,
-      hspf2Min: 8.1,
-      hspf2Max: 10.3,
-      cop5FMin: 1.8,
-      cop5FMax: 2.2,
-      systemType: "central-ducted",
-      categories: ["cold-climate", "ducted"],
-      status: "published",
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-central-ducted",
-      slug: "kerr-a-khp-series-central-ducted",
-      name: "A-KHP Series",
-      seriesId: "kerr-a-khp-series",
-      brandId: "kerr",
-      modelNumber: "A-KHP Series",
-      normalizedModelNumber: "a-khp-series",
-      isActive2026: true,
-      thermomatchEligible: true,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 33000,
-      heatingCapacity5FMinBtu: 14000,
-      heatingCapacity5FMaxBtu: 27400,
-      seer2Min: 16.5,
-      seer2Max: 18.7,
-      hspf2Min: 10,
-      hspf2Max: 10,
+      hspf2Min: 9.3,
+      hspf2Max: 9.7,
       cop5FMin: 2,
       cop5FMax: 2.2,
       systemType: "central-ducted",
@@ -233,24 +724,187 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-ksp-series-wall-single",
-      slug: "kerr-a-ksp-series-wall-single",
-      name: "A-KSP Series",
-      seriesId: "kerr-a-ksp-series",
+      id: "kerr-a-series-central-ducted-24000",
+      slug: "kerr-a-series-central-ducted-24000",
+      name: "A-series 24 000 BTU",
+      seriesId: "kerr-a-series",
       brandId: "kerr",
-      modelNumber: "A-KSP Series",
-      normalizedModelNumber: "a-ksp-series",
+      modelNumber: "A-series 24k",
+      normalizedModelNumber: "a-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 9000,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 16,
+      seer2Max: 18.3,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-60000",
+      slug: "kerr-a-series-central-ducted-60000",
+      name: "A-series 60 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A-series 60k",
+      normalizedModelNumber: "a-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 42000,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 15.3,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.91,
+      cop5FMax: 1.91,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-60000",
+      slug: "kerr-a-series-wall-single-60000",
+      name: "A-series 60 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A-series 60k",
+      normalizedModelNumber: "a-series-60000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 60000,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 35200,
+      seer2Min: 18.8,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 9.5,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-central-ducted-18000",
+      slug: "kerr-a-khp-series-central-ducted-18000",
+      name: "A-KHP Series 18 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 18k",
+      normalizedModelNumber: "a-khp-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 14000,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.2,
+      cop5FMax: 2.2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-central-ducted-24000",
+      slug: "kerr-a-khp-series-central-ducted-24000",
+      name: "A-KHP Series 24 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 24k",
+      normalizedModelNumber: "a-khp-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 16900,
+      heatingCapacity5FMaxBtu: 16900,
+      seer2Min: 18.7,
+      seer2Max: 18.7,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2.16,
+      cop5FMax: 2.16,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-central-ducted-30000",
+      slug: "kerr-a-khp-series-central-ducted-30000",
+      name: "A-KHP Series 30 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 30k",
+      normalizedModelNumber: "a-khp-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 27400,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 16.5,
+      seer2Max: 16.5,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-ksp-series-wall-single-9000",
+      slug: "kerr-a-ksp-series-wall-single-9000",
+      name: "A-KSP Series 9 000 BTU",
+      seriesId: "kerr-a-ksp-series",
+      brandId: "kerr",
+      modelNumber: "A-KSP Series 9k",
+      normalizedModelNumber: "a-ksp-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 8000,
-      heatingCapacity5FMaxBtu: 17100,
-      seer2Min: 17,
+      heatingCapacity5FMaxBtu: 8000,
+      seer2Min: 19,
       seer2Max: 19,
-      hspf2Min: 8.5,
+      hspf2Min: 9.7,
       hspf2Max: 9.7,
-      cop5FMin: 2.01,
+      cop5FMin: 2.15,
       cop5FMax: 2.15,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -259,24 +913,79 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single",
-      slug: "kerr-a-khp-series-wall-single",
-      name: "A-KHP Series",
-      seriesId: "kerr-a-khp-series",
+      id: "kerr-standard-wall-single-18000",
+      slug: "kerr-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "kerr-standard",
       brandId: "kerr",
-      modelNumber: "A-KHP Series",
-      normalizedModelNumber: "a-khp-series",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 11200,
+      heatingCapacity5FMaxBtu: 11200,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-ksp-series-wall-single-24000",
+      slug: "kerr-a-ksp-series-wall-single-24000",
+      name: "A-KSP Series 24 000 BTU",
+      seriesId: "kerr-a-ksp-series",
+      brandId: "kerr",
+      modelNumber: "A-KSP Series 24k",
+      normalizedModelNumber: "a-ksp-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17100,
+      heatingCapacity5FMaxBtu: 17100,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 2.01,
+      cop5FMax: 2.01,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-6000",
+      slug: "kerr-a-khp-series-wall-single-6000",
+      name: "A-KHP Series 6 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 6k",
+      normalizedModelNumber: "a-khp-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
       coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 6000,
       heatingCapacity5FMinBtu: 7900,
-      heatingCapacity5FMaxBtu: 45000,
-      seer2Min: 19,
-      seer2Max: 27.4,
-      hspf2Min: 9.5,
+      heatingCapacity5FMaxBtu: 7900,
+      seer2Min: 25.5,
+      seer2Max: 25.5,
+      hspf2Min: 14.8,
       hspf2Max: 14.8,
-      cop5FMin: 1.8,
+      cop5FMin: 2.39,
       cop5FMax: 2.39,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
@@ -285,23 +994,105 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kzp-series-wall-single",
-      slug: "kerr-a-kzp-series-wall-single",
-      name: "A-KZP Series",
-      seriesId: "kerr-a-kzp-series",
+      id: "kerr-a-khp-series-wall-single-9000",
+      slug: "kerr-a-khp-series-wall-single-9000",
+      name: "A-KHP Series 9 000 BTU",
+      seriesId: "kerr-a-khp-series",
       brandId: "kerr",
-      modelNumber: "A-KZP Series",
-      normalizedModelNumber: "a-kzp-series",
+      modelNumber: "A-KHP Series 9k",
+      normalizedModelNumber: "a-khp-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 18000,
-      heatingCapacity5FMinBtu: 11000,
-      heatingCapacity5FMaxBtu: 19300,
-      seer2Min: 25.6,
-      seer2Max: 35,
-      hspf2Min: 12.7,
-      hspf2Max: 16.2,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 27.4,
+      seer2Max: 27.4,
+      hspf2Min: 12.5,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-12000",
+      slug: "kerr-a-khp-series-wall-single-12000",
+      name: "A-KHP Series 12 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 12k",
+      normalizedModelNumber: "a-khp-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: 25.4,
+      seer2Max: 25.4,
+      hspf2Min: 10.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-18000",
+      slug: "kerr-a-khp-series-wall-single-18000",
+      name: "A-KHP Series 18 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 18k",
+      normalizedModelNumber: "a-khp-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 16600,
+      heatingCapacity5FMaxBtu: 17600,
+      seer2Min: 20,
+      seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 1.92,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-24000",
+      slug: "kerr-a-khp-series-wall-single-24000",
+      name: "A-KHP Series 24 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 24k",
+      normalizedModelNumber: "a-khp-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 21000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 21,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 13.5,
       cop5FMin: 2,
       cop5FMax: 2.34,
       systemType: "wall-single",
@@ -311,24 +1102,214 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted",
-      slug: "kerr-kxp-series-central-ducted",
-      name: "KXP Series",
-      seriesId: "kerr-kxp-series",
+      id: "kerr-a-khp-series-wall-single-30000",
+      slug: "kerr-a-khp-series-wall-single-30000",
+      name: "A-KHP Series 30 000 BTU",
+      seriesId: "kerr-a-khp-series",
       brandId: "kerr",
-      modelNumber: "KXP Series",
-      normalizedModelNumber: "kxp-series",
+      modelNumber: "A-KHP Series 30k",
+      normalizedModelNumber: "a-khp-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.98,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kzp-series-wall-single-6000",
+      slug: "kerr-a-kzp-series-wall-single-6000",
+      name: "A-KZP Series 6 000 BTU",
+      seriesId: "kerr-a-kzp-series",
+      brandId: "kerr",
+      modelNumber: "A-KZP Series 6k",
+      normalizedModelNumber: "a-kzp-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 35,
+      seer2Max: 35,
+      hspf2Min: 15.6,
+      hspf2Max: 15.6,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kzp-series-wall-single-9000",
+      slug: "kerr-a-kzp-series-wall-single-9000",
+      name: "A-KZP Series 9 000 BTU",
+      seriesId: "kerr-a-kzp-series",
+      brandId: "kerr",
+      modelNumber: "A-KZP Series 9k",
+      normalizedModelNumber: "a-kzp-series-9000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 33.3,
+      seer2Max: 33.3,
+      hspf2Min: 14.6,
+      hspf2Max: 14.6,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kzp-series-wall-single-12000",
+      slug: "kerr-a-kzp-series-wall-single-12000",
+      name: "A-KZP Series 12 000 BTU",
+      seriesId: "kerr-a-kzp-series",
+      brandId: "kerr",
+      modelNumber: "A-KZP Series 12k",
+      normalizedModelNumber: "a-kzp-series-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 11000,
+      heatingCapacity5FMaxBtu: 11000,
+      seer2Min: 29.4,
+      seer2Max: 29.4,
+      hspf2Min: 12.7,
+      hspf2Max: 12.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kzp-series-wall-single-18000",
+      slug: "kerr-a-kzp-series-wall-single-18000",
+      name: "A-KZP Series 18 000 BTU",
+      seriesId: "kerr-a-kzp-series",
+      brandId: "kerr",
+      modelNumber: "A-KZP Series 18k",
+      normalizedModelNumber: "a-kzp-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 45000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 19300,
+      heatingCapacity5FMaxBtu: 19300,
+      seer2Min: 25.6,
+      seer2Max: 25.6,
+      hspf2Min: 16.2,
+      hspf2Max: 16.2,
+      cop5FMin: 2.34,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-36000",
+      slug: "kerr-a-khp-series-wall-single-36000",
+      name: "A-KHP Series 36 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 36k",
+      normalizedModelNumber: "a-khp-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 30000,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 19.4,
+      seer2Max: 23,
+      hspf2Min: 10.4,
+      hspf2Max: 10.7,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-48000",
+      slug: "kerr-a-khp-series-wall-single-48000",
+      name: "A-KHP Series 48 000 BTU",
+      seriesId: "kerr-a-khp-series",
+      brandId: "kerr",
+      modelNumber: "A-KHP Series 48k",
+      normalizedModelNumber: "a-khp-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 44000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 10.5,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-kxp-series-central-ducted-18000",
+      slug: "kerr-kxp-series-central-ducted-18000",
+      name: "KXP Series 18 000 BTU",
+      seriesId: "kerr-kxp-series",
+      brandId: "kerr",
+      modelNumber: "KXP Series 18k",
+      normalizedModelNumber: "kxp-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 15200,
-      heatingCapacity5FMaxBtu: 34400,
-      seer2Min: 15.2,
+      heatingCapacity5FMaxBtu: 15200,
+      seer2Min: 16.1,
       seer2Max: 16.1,
-      hspf2Min: 8.8,
-      hspf2Max: 9.6,
-      cop5FMin: 1.8,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 2.06,
       cop5FMax: 2.06,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
@@ -337,15 +1318,124 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kmh-series-wall-single",
-      slug: "kerr-a-kmh-series-wall-single",
-      name: "A-KMH Series",
-      seriesId: "kerr-a-kmh-series",
+      id: "kerr-kxp-series-central-ducted-24000",
+      slug: "kerr-kxp-series-central-ducted-24000",
+      name: "KXP Series 24 000 BTU",
+      seriesId: "kerr-kxp-series",
       brandId: "kerr",
-      modelNumber: "A-KMH Series",
-      normalizedModelNumber: "a-kmh-series",
+      modelNumber: "KXP Series 24k",
+      normalizedModelNumber: "kxp-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 19700,
+      heatingCapacity5FMaxBtu: 19700,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-kxp-series-central-ducted-30000",
+      slug: "kerr-kxp-series-central-ducted-30000",
+      name: "KXP Series 30 000 BTU",
+      seriesId: "kerr-kxp-series",
+      brandId: "kerr",
+      modelNumber: "KXP Series 30k",
+      normalizedModelNumber: "kxp-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 15.3,
+      seer2Max: 16,
+      hspf2Min: 9.3,
+      hspf2Max: 9.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-kxp-series-central-ducted-36000",
+      slug: "kerr-kxp-series-central-ducted-36000",
+      name: "KXP Series 36 000 BTU",
+      seriesId: "kerr-kxp-series",
+      brandId: "kerr",
+      modelNumber: "KXP Series 36k",
+      normalizedModelNumber: "kxp-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 29200,
+      heatingCapacity5FMaxBtu: 29200,
+      seer2Min: 15.8,
+      seer2Max: 15.8,
+      hspf2Min: 9.4,
+      hspf2Max: 9.4,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-kxp-series-central-ducted-42000",
+      slug: "kerr-kxp-series-central-ducted-42000",
+      name: "KXP Series 42 000 BTU",
+      seriesId: "kerr-kxp-series",
+      brandId: "kerr",
+      modelNumber: "KXP Series 42k",
+      normalizedModelNumber: "kxp-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kmh-series-wall-single-36000",
+      slug: "kerr-a-kmh-series-wall-single-36000",
+      name: "A-KMH Series 36 000 BTU",
+      seriesId: "kerr-a-kmh-series",
+      brandId: "kerr",
+      modelNumber: "A-KMH Series 36k",
+      normalizedModelNumber: "a-kmh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 27400,
@@ -361,6 +1451,33 @@ export const kerrDataset: BrandDataset = {
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-42000",
+      slug: "kerr-a-series-central-ducted-42000",
+      name: "A Series 42 000 BTU",
+      seriesId: "kerr-a-series",
+      brandId: "kerr",
+      modelNumber: "A Series 42k",
+      normalizedModelNumber: "a-series-42000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 42000,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34400,
+      seer2Min: 15.2,
+      seer2Max: 15.2,
+      hspf2Min: 8.8,
+      hspf2Max: 8.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   outdoorUnits: [
@@ -371,32 +1488,14 @@ export const kerrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kerr-a-kmh12su-1",
-      modelNumber: "A-KMH12SU-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh28tu-1",
-      modelNumber: "A-KMH28TU-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh36qu-1",
-      modelNumber: "A-KMH36QU-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh48pu-1",
-      modelNumber: "A-KMH48PU-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
       id: "kerr-a-ksp09sa-0",
       modelNumber: "A-KSP09SA-0",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh12su-1",
+      modelNumber: "A-KMH12SU-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -413,8 +1512,14 @@ export const kerrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kerr-a-ksp18sa-1",
-      modelNumber: "A-KSP18SA-1",
+      id: "kerr-a-kmh28tu-1",
+      modelNumber: "A-KMH28TU-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh36qu-1",
+      modelNumber: "A-KMH36QU-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -425,50 +1530,8 @@ export const kerrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kerr-a-kmh18su-1a",
-      modelNumber: "A-KMH18SU-1A",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-vmh24su-1a",
-      modelNumber: "A-VMH24SU-1A",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
       id: "kerr-a-kmh24su-1a",
       modelNumber: "A-KMH24SU-1A",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh18su-1",
-      modelNumber: "A-KMH18SU-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh06sv-1",
-      modelNumber: "A-KMH06SV-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh09sv-1",
-      modelNumber: "A-KMH09SV-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh12sv-1",
-      modelNumber: "A-KMH12SV-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kmh18sv-1",
-      modelNumber: "A-KMH18SV-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -479,8 +1542,86 @@ export const kerrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kerr-a-khp24sa-1",
+      modelNumber: "A-KHP24SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh48pu-1",
+      modelNumber: "A-KMH48PU-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh18su-1a",
+      modelNumber: "A-KMH18SU-1A",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh18su-1",
+      modelNumber: "A-KMH18SU-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh18sv-1",
+      modelNumber: "A-KMH18SV-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
       id: "kerr-a-kmh18dv-1",
       modelNumber: "A-KMH18DV-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-khp18sa-1",
+      modelNumber: "A-KHP18SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-vmh24su-1a",
+      modelNumber: "A-VMH24SU-1A",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh06sv-1",
+      modelNumber: "A-KMH06SV-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-khp06sa-1",
+      modelNumber: "A-KHP06SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh09sv-1",
+      modelNumber: "A-KMH09SV-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-khp09sa-1",
+      modelNumber: "A-KHP09SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kmh12sv-1",
+      modelNumber: "A-KMH12SV-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-khp12sa-1",
+      modelNumber: "A-KHP12SA-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -503,50 +1644,8 @@ export const kerrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kerr-a-kmh55pv-1",
-      modelNumber: "A-KMH55PV-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp06sa-1",
-      modelNumber: "A-KHP06SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp09sa-1",
-      modelNumber: "A-KHP09SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp12sa-1",
-      modelNumber: "A-KHP12SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp18sa-1",
-      modelNumber: "A-KHP18SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp24sa-1",
-      modelNumber: "A-KHP24SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
       id: "kerr-a-kcd24sa-1",
       modelNumber: "A-KCD24SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kcd60sa-1",
-      modelNumber: "A-KCD60SA-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -557,14 +1656,44 @@ export const kerrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "kerr-a-kxp30sa-1",
+      modelNumber: "A-KXP30SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
       id: "kerr-a-kcd36sa-1",
       modelNumber: "A-KCD36SA-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
     {
+      id: "kerr-a-kxp36sa-1",
+      modelNumber: "A-KXP36SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
       id: "kerr-a-kcd48sa-1",
       modelNumber: "A-KCD48SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kxp48sa-1",
+      modelNumber: "A-KXP48SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kxp60sa-1",
+      modelNumber: "A-KXP60SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-kcd60sa-1",
+      modelNumber: "A-KCD60SA-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -587,26 +1716,8 @@ export const kerrDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "kerr-a-kxp30sa-1",
-      modelNumber: "A-KXP30SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kxp36sa-1",
-      modelNumber: "A-KXP36SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kxp48sa-1",
-      modelNumber: "A-KXP48SA-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-kxp60sa-1",
-      modelNumber: "A-KXP60SA-1",
+      id: "kerr-a-kmh55pv-1",
+      modelNumber: "A-KMH55PV-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -619,6 +1730,12 @@ export const kerrDataset: BrandDataset = {
     {
       id: "kerr-a-ksp09sa-1",
       modelNumber: "A-KSP09SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-ksp18sa-1",
+      modelNumber: "A-KSP18SA-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -637,24 +1754,6 @@ export const kerrDataset: BrandDataset = {
     {
       id: "kerr-a-khp284a-1",
       modelNumber: "A-KHP284A-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp365a-1",
-      modelNumber: "A-KHP365A-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp486a-1",
-      modelNumber: "A-KHP486A-1",
-      brandId: "kerr",
-      refrigerant: null as any,
-    },
-    {
-      id: "kerr-a-khp556a-1",
-      modelNumber: "A-KHP556A-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -679,6 +1778,24 @@ export const kerrDataset: BrandDataset = {
     {
       id: "kerr-a-kzp18sa-1",
       modelNumber: "A-KZP18SA-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-khp365a-1",
+      modelNumber: "A-KHP365A-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-khp486a-1",
+      modelNumber: "A-KHP486A-1",
+      brandId: "kerr",
+      refrigerant: null as any,
+    },
+    {
+      id: "kerr-a-khp556a-1",
+      modelNumber: "A-KHP556A-1",
       brandId: "kerr",
       refrigerant: null as any,
     },
@@ -724,9 +1841,9 @@ export const kerrDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "kerr-standard-wall-single-cfg-1",
-      slug: "kerr-standard-wall-single-cfg-1",
-      modelId: "kerr-standard-wall-single",
+      id: "kerr-standard-wall-single-9000-cfg-1",
+      slug: "kerr-standard-wall-single-9000-cfg-1",
+      modelId: "kerr-standard-wall-single-9000",
       outdoorUnitId: "kerr-a-kmh09su-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -738,65 +1855,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-standard-wall-single-cfg-2",
-      slug: "kerr-standard-wall-single-cfg-2",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-kmh12su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-standard-wall-single-cfg-3",
-      slug: "kerr-standard-wall-single-cfg-3",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-kmh28tu-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-standard-wall-single-cfg-4",
-      slug: "kerr-standard-wall-single-cfg-4",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-kmh36qu-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-standard-wall-single-cfg-5",
-      slug: "kerr-standard-wall-single-cfg-5",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-kmh36qu-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-standard-wall-single-cfg-6",
-      slug: "kerr-standard-wall-single-cfg-6",
-      modelId: "kerr-standard-wall-single",
+      id: "kerr-standard-wall-single-9000-cfg-2",
+      slug: "kerr-standard-wall-single-9000-cfg-2",
+      modelId: "kerr-standard-wall-single-9000",
       outdoorUnitId: "kerr-a-kmh09su-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -808,51 +1869,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-standard-wall-single-cfg-7",
-      slug: "kerr-standard-wall-single-cfg-7",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-kmh12su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-standard-wall-single-cfg-8",
-      slug: "kerr-standard-wall-single-cfg-8",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-kmh48pu-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-standard-wall-single-cfg-9",
-      slug: "kerr-standard-wall-single-cfg-9",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-kmh12su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-standard-wall-single-cfg-10",
-      slug: "kerr-standard-wall-single-cfg-10",
-      modelId: "kerr-standard-wall-single",
+      id: "kerr-standard-wall-single-9000-cfg-3",
+      slug: "kerr-standard-wall-single-9000-cfg-3",
+      modelId: "kerr-standard-wall-single-9000",
       outdoorUnitId: "kerr-a-ksp09sa-0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -864,9 +1883,51 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-standard-wall-single-cfg-11",
-      slug: "kerr-standard-wall-single-cfg-11",
-      modelId: "kerr-standard-wall-single",
+      id: "kerr-standard-wall-single-12000-cfg-1",
+      slug: "kerr-standard-wall-single-12000-cfg-1",
+      modelId: "kerr-standard-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-12000-cfg-2",
+      slug: "kerr-standard-wall-single-12000-cfg-2",
+      modelId: "kerr-standard-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-12000-cfg-3",
+      slug: "kerr-standard-wall-single-12000-cfg-3",
+      modelId: "kerr-standard-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-12000-cfg-4",
+      slug: "kerr-standard-wall-single-12000-cfg-4",
+      modelId: "kerr-standard-wall-single-12000",
       outdoorUnitId: "kerr-a-ksp12sa-0",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -878,9 +1939,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-standard-wall-single-cfg-12",
-      slug: "kerr-standard-wall-single-cfg-12",
-      modelId: "kerr-standard-wall-single",
+      id: "kerr-standard-wall-single-12000-cfg-5",
+      slug: "kerr-standard-wall-single-12000-cfg-5",
+      modelId: "kerr-standard-wall-single-12000",
       outdoorUnitId: "kerr-a-ksp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -892,13 +1953,13 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-standard-wall-single-cfg-13",
-      slug: "kerr-standard-wall-single-cfg-13",
-      modelId: "kerr-standard-wall-single",
-      outdoorUnitId: "kerr-a-ksp18sa-1",
+      id: "kerr-standard-wall-single-30000-cfg-1",
+      slug: "kerr-standard-wall-single-30000-cfg-1",
+      modelId: "kerr-standard-wall-single-30000",
+      outdoorUnitId: "kerr-a-kmh28tu-1",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -906,9 +1967,37 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-1",
-      slug: "kerr-a-series-wall-single-cfg-1",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-standard-wall-single-36000-cfg-1",
+      slug: "kerr-standard-wall-single-36000-cfg-1",
+      modelId: "kerr-standard-wall-single-36000",
+      outdoorUnitId: "kerr-a-kmh36qu-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-standard-wall-single-36000-cfg-2",
+      slug: "kerr-standard-wall-single-36000-cfg-2",
+      modelId: "kerr-standard-wall-single-36000",
+      outdoorUnitId: "kerr-a-kmh36qu-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-24000-cfg-1",
+      slug: "kerr-a-series-wall-single-24000-cfg-1",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24su-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -920,93 +2009,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-2",
-      slug: "kerr-a-series-wall-single-cfg-2",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-3",
-      slug: "kerr-a-series-wall-single-cfg-3",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-vmh24su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21600,
-      coolingCapacityMaxBtu: 21600,
-      seer2: 18.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-4",
-      slug: "kerr-a-series-wall-single-cfg-4",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh24su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21600,
-      coolingCapacityMaxBtu: 21600,
-      seer2: 18.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-5",
-      slug: "kerr-a-series-wall-single-cfg-5",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-6",
-      slug: "kerr-a-series-wall-single-cfg-6",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh24su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21600,
-      coolingCapacityMaxBtu: 21600,
-      seer2: 18.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-7",
-      slug: "kerr-a-series-wall-single-cfg-7",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-8",
-      slug: "kerr-a-series-wall-single-cfg-8",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-2",
+      slug: "kerr-a-series-wall-single-24000-cfg-2",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24su-1a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1018,23 +2023,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-9",
-      slug: "kerr-a-series-wall-single-cfg-9",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-10",
-      slug: "kerr-a-series-wall-single-cfg-10",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-3",
+      slug: "kerr-a-series-wall-single-24000-cfg-3",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24su-1a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1046,121 +2037,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-11",
-      slug: "kerr-a-series-wall-single-cfg-11",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-12",
-      slug: "kerr-a-series-wall-single-cfg-12",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh24su-1a",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21600,
-      coolingCapacityMaxBtu: 21600,
-      seer2: 18.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-13",
-      slug: "kerr-a-series-wall-single-cfg-13",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-14",
-      slug: "kerr-a-series-wall-single-cfg-14",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh24su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21600,
-      coolingCapacityMaxBtu: 21600,
-      seer2: 18.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-15",
-      slug: "kerr-a-series-wall-single-cfg-15",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh06sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 26.5,
-      hspf2: 13.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-16",
-      slug: "kerr-a-series-wall-single-cfg-16",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh09sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 28.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-17",
-      slug: "kerr-a-series-wall-single-cfg-17",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25.5,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-18",
-      slug: "kerr-a-series-wall-single-cfg-18",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-19",
-      slug: "kerr-a-series-wall-single-cfg-19",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-4",
+      slug: "kerr-a-series-wall-single-24000-cfg-4",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24sv-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1172,9 +2051,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-20",
-      slug: "kerr-a-series-wall-single-cfg-20",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-5",
+      slug: "kerr-a-series-wall-single-24000-cfg-5",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24sv-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1186,247 +2065,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-21",
-      slug: "kerr-a-series-wall-single-cfg-21",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18dv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 19,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-22",
-      slug: "kerr-a-series-wall-single-cfg-22",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18dv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 22,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-23",
-      slug: "kerr-a-series-wall-single-cfg-23",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18dv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 20.5,
-      hspf2: 9.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-24",
-      slug: "kerr-a-series-wall-single-cfg-24",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh28tv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 23,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-25",
-      slug: "kerr-a-series-wall-single-cfg-25",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh28tv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-26",
-      slug: "kerr-a-series-wall-single-cfg-26",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh28tv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 21.5,
-      hspf2: 10.05,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-27",
-      slug: "kerr-a-series-wall-single-cfg-27",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh36qv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 22.2,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-28",
-      slug: "kerr-a-series-wall-single-cfg-28",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh36qv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-29",
-      slug: "kerr-a-series-wall-single-cfg-29",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh48pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 21.8,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-30",
-      slug: "kerr-a-series-wall-single-cfg-30",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh48pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.9,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-31",
-      slug: "kerr-a-series-wall-single-cfg-31",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh48pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47500,
-      coolingCapacityMaxBtu: 47500,
-      seer2: 21.35,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-32",
-      slug: "kerr-a-series-wall-single-cfg-32",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh36qv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20.6,
-      hspf2: 10.15,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-33",
-      slug: "kerr-a-series-wall-single-cfg-33",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh09sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 25,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-34",
-      slug: "kerr-a-series-wall-single-cfg-34",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.6,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-35",
-      slug: "kerr-a-series-wall-single-cfg-35",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 19.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-36",
-      slug: "kerr-a-series-wall-single-cfg-36",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh24sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 21600,
-      coolingCapacityMaxBtu: 21600,
-      seer2: 18.9,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-37",
-      slug: "kerr-a-series-wall-single-cfg-37",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18su-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-38",
-      slug: "kerr-a-series-wall-single-cfg-38",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-6",
+      slug: "kerr-a-series-wall-single-24000-cfg-6",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24su-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1438,9 +2079,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-39",
-      slug: "kerr-a-series-wall-single-cfg-39",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-7",
+      slug: "kerr-a-series-wall-single-24000-cfg-7",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24sv-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1452,9 +2093,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-40",
-      slug: "kerr-a-series-wall-single-cfg-40",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-8",
+      slug: "kerr-a-series-wall-single-24000-cfg-8",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24sv-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1466,51 +2107,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-41",
-      slug: "kerr-a-series-wall-single-cfg-41",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh09sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-42",
-      slug: "kerr-a-series-wall-single-cfg-42",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.5,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-43",
-      slug: "kerr-a-series-wall-single-cfg-43",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23.6,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-44",
-      slug: "kerr-a-series-wall-single-cfg-44",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-9",
+      slug: "kerr-a-series-wall-single-24000-cfg-9",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-kmh24sv-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1522,387 +2121,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-45",
-      slug: "kerr-a-series-wall-single-cfg-45",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 18,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-46",
-      slug: "kerr-a-series-wall-single-cfg-46",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh18sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-47",
-      slug: "kerr-a-series-wall-single-cfg-47",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh09sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.2,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-48",
-      slug: "kerr-a-series-wall-single-cfg-48",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.3,
-      hspf2: 10.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-49",
-      slug: "kerr-a-series-wall-single-cfg-49",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 19.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-50",
-      slug: "kerr-a-series-wall-single-cfg-50",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh12sv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 24.2,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-51",
-      slug: "kerr-a-series-wall-single-cfg-51",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh55pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 22,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-52",
-      slug: "kerr-a-series-wall-single-cfg-52",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh55pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 18.8,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-53",
-      slug: "kerr-a-series-wall-single-cfg-53",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-kmh55pv-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 20.4,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-54",
-      slug: "kerr-a-series-wall-single-cfg-54",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp06sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 22,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-55",
-      slug: "kerr-a-series-wall-single-cfg-55",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp06sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6500,
-      coolingCapacityMaxBtu: 6500,
-      seer2: 22,
-      hspf2: 12,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-56",
-      slug: "kerr-a-series-wall-single-cfg-56",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp09sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-57",
-      slug: "kerr-a-series-wall-single-cfg-57",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp09sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 24,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-58",
-      slug: "kerr-a-series-wall-single-cfg-58",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp09sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.6,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-59",
-      slug: "kerr-a-series-wall-single-cfg-59",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp09sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 22.6,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-60",
-      slug: "kerr-a-series-wall-single-cfg-60",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp09sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.2,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-61",
-      slug: "kerr-a-series-wall-single-cfg-61",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp09sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-62",
-      slug: "kerr-a-series-wall-single-cfg-62",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp09sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-63",
-      slug: "kerr-a-series-wall-single-cfg-63",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp12sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 23,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-64",
-      slug: "kerr-a-series-wall-single-cfg-64",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp12sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 22.2,
-      hspf2: 11.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-65",
-      slug: "kerr-a-series-wall-single-cfg-65",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp12sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 25,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-66",
-      slug: "kerr-a-series-wall-single-cfg-66",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp12sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: 20,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-67",
-      slug: "kerr-a-series-wall-single-cfg-67",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16700,
-      coolingCapacityMaxBtu: 16700,
-      seer2: 20.6,
-      hspf2: 12.2,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-68",
-      slug: "kerr-a-series-wall-single-cfg-68",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-69",
-      slug: "kerr-a-series-wall-single-cfg-69",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-70",
-      slug: "kerr-a-series-wall-single-cfg-70",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 17000,
-      seer2: 20.4,
-      hspf2: 10.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-71",
-      slug: "kerr-a-series-wall-single-cfg-71",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 18.4,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-72",
-      slug: "kerr-a-series-wall-single-cfg-72",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-10",
+      slug: "kerr-a-series-wall-single-24000-cfg-10",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-khp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23400,
@@ -1914,23 +2135,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-wall-single-cfg-73",
-      slug: "kerr-a-series-wall-single-cfg-73",
-      modelId: "kerr-a-series-wall-single",
-      outdoorUnitId: "kerr-a-khp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 22000,
-      seer2: 20.4,
-      hspf2: 12.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-wall-single-cfg-74",
-      slug: "kerr-a-series-wall-single-cfg-74",
-      modelId: "kerr-a-series-wall-single",
+      id: "kerr-a-series-wall-single-24000-cfg-11",
+      slug: "kerr-a-series-wall-single-24000-cfg-11",
+      modelId: "kerr-a-series-wall-single-24000",
       outdoorUnitId: "kerr-a-khp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1942,93 +2149,891 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kcd-series-central-ducted-cfg-1",
-      slug: "kerr-a-kcd-series-central-ducted-cfg-1",
-      modelId: "kerr-a-kcd-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd24sa-1",
+      id: "kerr-standard-wall-single-48000-cfg-1",
+      slug: "kerr-standard-wall-single-48000-cfg-1",
+      modelId: "kerr-standard-wall-single-48000",
+      outdoorUnitId: "kerr-a-kmh48pu-1",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kcd-series-central-ducted-cfg-2",
-      slug: "kerr-a-kcd-series-central-ducted-cfg-2",
-      modelId: "kerr-a-kcd-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd60sa-1",
+      id: "kerr-a-series-wall-single-18000-cfg-1",
+      slug: "kerr-a-series-wall-single-18000-cfg-1",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18su-1a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-kcd-series-central-ducted-cfg-3",
-      slug: "kerr-a-kcd-series-central-ducted-cfg-3",
-      modelId: "kerr-a-kcd-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16.5,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-kcd-series-central-ducted-cfg-4",
-      slug: "kerr-a-kcd-series-central-ducted-cfg-4",
-      modelId: "kerr-a-kcd-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.5,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-kcd-series-central-ducted-cfg-5",
-      slug: "kerr-a-kcd-series-central-ducted-cfg-5",
-      modelId: "kerr-a-kcd-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.2,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 19.4,
       hspf2: 10,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kcd-series-central-ducted-cfg-6",
-      slug: "kerr-a-kcd-series-central-ducted-cfg-6",
-      modelId: "kerr-a-kcd-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd60sa-1",
+      id: "kerr-a-series-wall-single-18000-cfg-2",
+      slug: "kerr-a-series-wall-single-18000-cfg-2",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18su-1a",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-3",
+      slug: "kerr-a-series-wall-single-18000-cfg-3",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-4",
+      slug: "kerr-a-series-wall-single-18000-cfg-4",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-5",
+      slug: "kerr-a-series-wall-single-18000-cfg-5",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-6",
+      slug: "kerr-a-series-wall-single-18000-cfg-6",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-7",
+      slug: "kerr-a-series-wall-single-18000-cfg-7",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18dv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-8",
+      slug: "kerr-a-series-wall-single-18000-cfg-8",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18dv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 22,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-9",
+      slug: "kerr-a-series-wall-single-18000-cfg-9",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18dv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 9.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-10",
+      slug: "kerr-a-series-wall-single-18000-cfg-10",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-11",
+      slug: "kerr-a-series-wall-single-18000-cfg-11",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-12",
+      slug: "kerr-a-series-wall-single-18000-cfg-12",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-13",
+      slug: "kerr-a-series-wall-single-18000-cfg-13",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-kmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-14",
+      slug: "kerr-a-series-wall-single-18000-cfg-14",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-khp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 16700,
+      seer2: 20.6,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-15",
+      slug: "kerr-a-series-wall-single-18000-cfg-15",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-khp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-18000-cfg-16",
+      slug: "kerr-a-series-wall-single-18000-cfg-16",
+      modelId: "kerr-a-series-wall-single-18000",
+      outdoorUnitId: "kerr-a-khp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 18.4,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000-cfg-1",
+      slug: "kerr-a-series-wall-single-20000-cfg-1",
+      modelId: "kerr-a-series-wall-single-20000",
+      outdoorUnitId: "kerr-a-vmh24su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      seer2: 18.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000-cfg-2",
+      slug: "kerr-a-series-wall-single-20000-cfg-2",
+      modelId: "kerr-a-series-wall-single-20000",
+      outdoorUnitId: "kerr-a-kmh24su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      seer2: 18.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000-cfg-3",
+      slug: "kerr-a-series-wall-single-20000-cfg-3",
+      modelId: "kerr-a-series-wall-single-20000",
+      outdoorUnitId: "kerr-a-kmh24su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      seer2: 18.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000-cfg-4",
+      slug: "kerr-a-series-wall-single-20000-cfg-4",
+      modelId: "kerr-a-series-wall-single-20000",
+      outdoorUnitId: "kerr-a-kmh24su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      seer2: 18.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000-cfg-5",
+      slug: "kerr-a-series-wall-single-20000-cfg-5",
+      modelId: "kerr-a-series-wall-single-20000",
+      outdoorUnitId: "kerr-a-kmh24su-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      seer2: 18.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000-cfg-6",
+      slug: "kerr-a-series-wall-single-20000-cfg-6",
+      modelId: "kerr-a-series-wall-single-20000",
+      outdoorUnitId: "kerr-a-kmh24sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      seer2: 18.9,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-20000-cfg-7",
+      slug: "kerr-a-series-wall-single-20000-cfg-7",
+      modelId: "kerr-a-series-wall-single-20000",
+      outdoorUnitId: "kerr-a-khp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.4,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-15000-cfg-1",
+      slug: "kerr-a-series-wall-single-15000-cfg-1",
+      modelId: "kerr-a-series-wall-single-15000",
+      outdoorUnitId: "kerr-a-kmh18su-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-15000-cfg-2",
+      slug: "kerr-a-series-wall-single-15000-cfg-2",
+      modelId: "kerr-a-series-wall-single-15000",
+      outdoorUnitId: "kerr-a-kmh18sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-15000-cfg-3",
+      slug: "kerr-a-series-wall-single-15000-cfg-3",
+      modelId: "kerr-a-series-wall-single-15000",
+      outdoorUnitId: "kerr-a-khp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-15000-cfg-4",
+      slug: "kerr-a-series-wall-single-15000-cfg-4",
+      modelId: "kerr-a-series-wall-single-15000",
+      outdoorUnitId: "kerr-a-khp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-6000-cfg-1",
+      slug: "kerr-a-series-wall-single-6000-cfg-1",
+      modelId: "kerr-a-series-wall-single-6000",
+      outdoorUnitId: "kerr-a-kmh06sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 26.5,
+      hspf2: 13.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-6000-cfg-2",
+      slug: "kerr-a-series-wall-single-6000-cfg-2",
+      modelId: "kerr-a-series-wall-single-6000",
+      outdoorUnitId: "kerr-a-khp06sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 22,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-6000-cfg-3",
+      slug: "kerr-a-series-wall-single-6000-cfg-3",
+      modelId: "kerr-a-series-wall-single-6000",
+      outdoorUnitId: "kerr-a-khp06sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 22,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-1",
+      slug: "kerr-a-series-wall-single-9000-cfg-1",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-kmh09sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-2",
+      slug: "kerr-a-series-wall-single-9000-cfg-2",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-kmh09sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 25,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-3",
+      slug: "kerr-a-series-wall-single-9000-cfg-3",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-kmh09sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-4",
+      slug: "kerr-a-series-wall-single-9000-cfg-4",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-kmh09sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.2,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-5",
+      slug: "kerr-a-series-wall-single-9000-cfg-5",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-khp09sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-6",
+      slug: "kerr-a-series-wall-single-9000-cfg-6",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-khp09sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-7",
+      slug: "kerr-a-series-wall-single-9000-cfg-7",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-khp09sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-8",
+      slug: "kerr-a-series-wall-single-9000-cfg-8",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-khp09sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-9",
+      slug: "kerr-a-series-wall-single-9000-cfg-9",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-khp09sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.2,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-10",
+      slug: "kerr-a-series-wall-single-9000-cfg-10",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-khp09sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-9000-cfg-11",
+      slug: "kerr-a-series-wall-single-9000-cfg-11",
+      modelId: "kerr-a-series-wall-single-9000",
+      outdoorUnitId: "kerr-a-khp09sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-1",
+      slug: "kerr-a-series-wall-single-12000-cfg-1",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-2",
+      slug: "kerr-a-series-wall-single-12000-cfg-2",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.6,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-3",
+      slug: "kerr-a-series-wall-single-12000-cfg-3",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.6,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-4",
+      slug: "kerr-a-series-wall-single-12000-cfg-4",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.3,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-5",
+      slug: "kerr-a-series-wall-single-12000-cfg-5",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-6",
+      slug: "kerr-a-series-wall-single-12000-cfg-6",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-kmh12sv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.2,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-7",
+      slug: "kerr-a-series-wall-single-12000-cfg-7",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-khp12sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-8",
+      slug: "kerr-a-series-wall-single-12000-cfg-8",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-khp12sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-9",
+      slug: "kerr-a-series-wall-single-12000-cfg-9",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-khp12sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-12000-cfg-10",
+      slug: "kerr-a-series-wall-single-12000-cfg-10",
+      modelId: "kerr-a-series-wall-single-12000",
+      outdoorUnitId: "kerr-a-khp12sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-30000-cfg-1",
+      slug: "kerr-a-series-wall-single-30000-cfg-1",
+      modelId: "kerr-a-series-wall-single-30000",
+      outdoorUnitId: "kerr-a-kmh28tv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 23,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-30000-cfg-2",
+      slug: "kerr-a-series-wall-single-30000-cfg-2",
+      modelId: "kerr-a-series-wall-single-30000",
+      outdoorUnitId: "kerr-a-kmh28tv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-30000-cfg-3",
+      slug: "kerr-a-series-wall-single-30000-cfg-3",
+      modelId: "kerr-a-series-wall-single-30000",
+      outdoorUnitId: "kerr-a-kmh28tv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.5,
+      hspf2: 10.05,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-36000-cfg-1",
+      slug: "kerr-a-series-wall-single-36000-cfg-1",
+      modelId: "kerr-a-series-wall-single-36000",
+      outdoorUnitId: "kerr-a-kmh36qv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-36000-cfg-2",
+      slug: "kerr-a-series-wall-single-36000-cfg-2",
+      modelId: "kerr-a-series-wall-single-36000",
+      outdoorUnitId: "kerr-a-kmh36qv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-36000-cfg-3",
+      slug: "kerr-a-series-wall-single-36000-cfg-3",
+      modelId: "kerr-a-series-wall-single-36000",
+      outdoorUnitId: "kerr-a-kmh36qv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.6,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-48000-cfg-1",
+      slug: "kerr-a-series-wall-single-48000-cfg-1",
+      modelId: "kerr-a-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-kmh48pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.8,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-48000-cfg-2",
+      slug: "kerr-a-series-wall-single-48000-cfg-2",
+      modelId: "kerr-a-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-kmh48pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-48000-cfg-3",
+      slug: "kerr-a-series-wall-single-48000-cfg-3",
+      modelId: "kerr-a-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-kmh48pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.35,
       hspf2: 9.4,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-1",
-      slug: "kerr-a-series-central-ducted-cfg-1",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-kcd-series-central-ducted-24000-cfg-1",
+      slug: "kerr-a-kcd-series-central-ducted-24000-cfg-1",
+      modelId: "kerr-a-kcd-series-central-ducted-24000",
+      outdoorUnitId: "kerr-a-kcd24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-24000-cfg-2",
+      slug: "kerr-a-kcd-series-central-ducted-24000-cfg-2",
+      modelId: "kerr-a-kcd-series-central-ducted-24000",
+      outdoorUnitId: "kerr-a-kcd24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-30000-cfg-1",
+      slug: "kerr-a-series-central-ducted-30000-cfg-1",
+      modelId: "kerr-a-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-kcd30sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -2040,107 +3045,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-2",
-      slug: "kerr-a-series-central-ducted-cfg-2",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 35000,
-      coolingCapacityMaxBtu: 35000,
-      seer2: 15.5,
-      hspf2: 8.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-3",
-      slug: "kerr-a-series-central-ducted-cfg-3",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-4",
-      slug: "kerr-a-series-central-ducted-cfg-4",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-5",
-      slug: "kerr-a-series-central-ducted-cfg-5",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-6",
-      slug: "kerr-a-series-central-ducted-cfg-6",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-7",
-      slug: "kerr-a-series-central-ducted-cfg-7",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 18,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-8",
-      slug: "kerr-a-series-central-ducted-cfg-8",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-9",
-      slug: "kerr-a-series-central-ducted-cfg-9",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-30000-cfg-2",
+      slug: "kerr-a-series-central-ducted-30000-cfg-2",
+      modelId: "kerr-a-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-kcd30sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2152,65 +3059,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-10",
-      slug: "kerr-a-series-central-ducted-cfg-10",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-11",
-      slug: "kerr-a-series-central-ducted-cfg-11",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-12",
-      slug: "kerr-a-series-central-ducted-cfg-12",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd60sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 55000,
-      coolingCapacityMaxBtu: 55000,
-      seer2: 15.3,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-13",
-      slug: "kerr-a-series-central-ducted-cfg-13",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17.4,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-14",
-      slug: "kerr-a-series-central-ducted-cfg-14",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-30000-cfg-3",
+      slug: "kerr-a-series-central-ducted-30000-cfg-3",
+      modelId: "kerr-a-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-kcd30sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2222,65 +3073,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-15",
-      slug: "kerr-a-series-central-ducted-cfg-15",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-16",
-      slug: "kerr-a-series-central-ducted-cfg-16",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kcd48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 15.6,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-17",
-      slug: "kerr-a-series-central-ducted-cfg-17",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 19,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-18",
-      slug: "kerr-a-series-central-ducted-cfg-18",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 23000,
-      coolingCapacityMaxBtu: 23000,
-      seer2: 18.3,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-19",
-      slug: "kerr-a-series-central-ducted-cfg-19",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-30000-cfg-4",
+      slug: "kerr-a-series-central-ducted-30000-cfg-4",
+      modelId: "kerr-a-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-kxp30sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -2292,9 +3087,93 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-20",
-      slug: "kerr-a-series-central-ducted-cfg-20",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-30000-cfg-5",
+      slug: "kerr-a-series-central-ducted-30000-cfg-5",
+      modelId: "kerr-a-series-central-ducted-30000",
+      outdoorUnitId: "kerr-a-kxp30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.3,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-30000-cfg-6",
+      slug: "kerr-a-series-central-ducted-30000-cfg-6",
+      modelId: "kerr-a-series-central-ducted-30000",
+      outdoorUnitId: "kerr-a-kxp30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-30000-cfg-7",
+      slug: "kerr-a-series-central-ducted-30000-cfg-7",
+      modelId: "kerr-a-series-central-ducted-30000",
+      outdoorUnitId: "kerr-a-kxp30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-36000-cfg-1",
+      slug: "kerr-a-series-central-ducted-36000-cfg-1",
+      modelId: "kerr-a-series-central-ducted-36000",
+      outdoorUnitId: "kerr-a-kcd36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.5,
+      hspf2: 8.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-36000-cfg-2",
+      slug: "kerr-a-series-central-ducted-36000-cfg-2",
+      modelId: "kerr-a-series-central-ducted-36000",
+      outdoorUnitId: "kerr-a-kcd36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-36000-cfg-3",
+      slug: "kerr-a-series-central-ducted-36000-cfg-3",
+      modelId: "kerr-a-series-central-ducted-36000",
+      outdoorUnitId: "kerr-a-kcd36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-36000-cfg-4",
+      slug: "kerr-a-series-central-ducted-36000-cfg-4",
+      modelId: "kerr-a-series-central-ducted-36000",
       outdoorUnitId: "kerr-a-kxp36sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2306,9 +3185,93 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-21",
-      slug: "kerr-a-series-central-ducted-cfg-21",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-36000-cfg-5",
+      slug: "kerr-a-series-central-ducted-36000-cfg-5",
+      modelId: "kerr-a-series-central-ducted-36000",
+      outdoorUnitId: "kerr-a-kxp36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-36000-cfg-6",
+      slug: "kerr-a-series-central-ducted-36000-cfg-6",
+      modelId: "kerr-a-series-central-ducted-36000",
+      outdoorUnitId: "kerr-a-kxp36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-48000-cfg-1",
+      slug: "kerr-a-series-central-ducted-48000-cfg-1",
+      modelId: "kerr-a-series-central-ducted-48000",
+      outdoorUnitId: "kerr-a-kcd48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-48000-cfg-2",
+      slug: "kerr-a-series-central-ducted-48000-cfg-2",
+      modelId: "kerr-a-series-central-ducted-48000",
+      outdoorUnitId: "kerr-a-kcd48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-48000-cfg-3",
+      slug: "kerr-a-series-central-ducted-48000-cfg-3",
+      modelId: "kerr-a-series-central-ducted-48000",
+      outdoorUnitId: "kerr-a-kcd48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-48000-cfg-4",
+      slug: "kerr-a-series-central-ducted-48000-cfg-4",
+      modelId: "kerr-a-series-central-ducted-48000",
+      outdoorUnitId: "kerr-a-kcd48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-48000-cfg-5",
+      slug: "kerr-a-series-central-ducted-48000-cfg-5",
+      modelId: "kerr-a-series-central-ducted-48000",
       outdoorUnitId: "kerr-a-kxp48sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2320,9 +3283,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-22",
-      slug: "kerr-a-series-central-ducted-cfg-22",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-48000-cfg-6",
+      slug: "kerr-a-series-central-ducted-48000-cfg-6",
+      modelId: "kerr-a-series-central-ducted-48000",
       outdoorUnitId: "kerr-a-kxp60sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2334,149 +3297,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-23",
-      slug: "kerr-a-series-central-ducted-cfg-23",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-24",
-      slug: "kerr-a-series-central-ducted-cfg-24",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp18sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 16.1,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-25",
-      slug: "kerr-a-series-central-ducted-cfg-25",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-26",
-      slug: "kerr-a-series-central-ducted-cfg-26",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 16,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-27",
-      slug: "kerr-a-series-central-ducted-cfg-27",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 30000,
-      coolingCapacityMaxBtu: 30000,
-      seer2: 15.3,
-      hspf2: 9.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-28",
-      slug: "kerr-a-series-central-ducted-cfg-28",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 16,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-29",
-      slug: "kerr-a-series-central-ducted-cfg-29",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp30sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 29000,
-      coolingCapacityMaxBtu: 29000,
-      seer2: 16,
-      hspf2: 9.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-30",
-      slug: "kerr-a-series-central-ducted-cfg-30",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-31",
-      slug: "kerr-a-series-central-ducted-cfg-31",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp36sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 15.8,
-      hspf2: 9.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-32",
-      slug: "kerr-a-series-central-ducted-cfg-32",
-      modelId: "kerr-a-series-central-ducted",
-      outdoorUnitId: "kerr-a-kxp48sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 45000,
-      coolingCapacityMaxBtu: 45000,
-      seer2: 15.2,
-      hspf2: 8.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-series-central-ducted-cfg-33",
-      slug: "kerr-a-series-central-ducted-cfg-33",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-48000-cfg-7",
+      slug: "kerr-a-series-central-ducted-48000-cfg-7",
+      modelId: "kerr-a-series-central-ducted-48000",
       outdoorUnitId: "kerr-a-kxp48sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -2488,9 +3311,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-34",
-      slug: "kerr-a-series-central-ducted-cfg-34",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-48000-cfg-8",
+      slug: "kerr-a-series-central-ducted-48000-cfg-8",
+      modelId: "kerr-a-series-central-ducted-48000",
       outdoorUnitId: "kerr-a-kxp60sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 52000,
@@ -2502,9 +3325,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-series-central-ducted-cfg-35",
-      slug: "kerr-a-series-central-ducted-cfg-35",
-      modelId: "kerr-a-series-central-ducted",
+      id: "kerr-a-series-central-ducted-48000-cfg-9",
+      slug: "kerr-a-series-central-ducted-48000-cfg-9",
+      modelId: "kerr-a-series-central-ducted-48000",
       outdoorUnitId: "kerr-a-kxp60sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 47000,
@@ -2516,9 +3339,275 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-central-ducted-cfg-1",
-      slug: "kerr-a-khp-series-central-ducted-cfg-1",
-      modelId: "kerr-a-khp-series-central-ducted",
+      id: "kerr-a-kcd-series-central-ducted-60000-cfg-1",
+      slug: "kerr-a-kcd-series-central-ducted-60000-cfg-1",
+      modelId: "kerr-a-kcd-series-central-ducted-60000",
+      outdoorUnitId: "kerr-a-kcd60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-60000-cfg-2",
+      slug: "kerr-a-kcd-series-central-ducted-60000-cfg-2",
+      modelId: "kerr-a-kcd-series-central-ducted-60000",
+      outdoorUnitId: "kerr-a-kcd60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-30000-cfg-1",
+      slug: "kerr-a-kcd-series-central-ducted-30000-cfg-1",
+      modelId: "kerr-a-kcd-series-central-ducted-30000",
+      outdoorUnitId: "kerr-a-kcd30sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-kcd-series-central-ducted-36000-cfg-1",
+      slug: "kerr-a-kcd-series-central-ducted-36000-cfg-1",
+      modelId: "kerr-a-kcd-series-central-ducted-36000",
+      outdoorUnitId: "kerr-a-kcd36sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 15.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-18000-cfg-1",
+      slug: "kerr-a-series-central-ducted-18000-cfg-1",
+      modelId: "kerr-a-series-central-ducted-18000",
+      outdoorUnitId: "kerr-a-kcd18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-18000-cfg-2",
+      slug: "kerr-a-series-central-ducted-18000-cfg-2",
+      modelId: "kerr-a-series-central-ducted-18000",
+      outdoorUnitId: "kerr-a-kcd18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-18000-cfg-3",
+      slug: "kerr-a-series-central-ducted-18000-cfg-3",
+      modelId: "kerr-a-series-central-ducted-18000",
+      outdoorUnitId: "kerr-a-kcd18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-18000-cfg-4",
+      slug: "kerr-a-series-central-ducted-18000-cfg-4",
+      modelId: "kerr-a-series-central-ducted-18000",
+      outdoorUnitId: "kerr-a-kxp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-18000-cfg-5",
+      slug: "kerr-a-series-central-ducted-18000-cfg-5",
+      modelId: "kerr-a-series-central-ducted-18000",
+      outdoorUnitId: "kerr-a-kxp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-18000-cfg-6",
+      slug: "kerr-a-series-central-ducted-18000-cfg-6",
+      modelId: "kerr-a-series-central-ducted-18000",
+      outdoorUnitId: "kerr-a-kxp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-24000-cfg-1",
+      slug: "kerr-a-series-central-ducted-24000-cfg-1",
+      modelId: "kerr-a-series-central-ducted-24000",
+      outdoorUnitId: "kerr-a-kcd24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-24000-cfg-2",
+      slug: "kerr-a-series-central-ducted-24000-cfg-2",
+      modelId: "kerr-a-series-central-ducted-24000",
+      outdoorUnitId: "kerr-a-kcd24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-24000-cfg-3",
+      slug: "kerr-a-series-central-ducted-24000-cfg-3",
+      modelId: "kerr-a-series-central-ducted-24000",
+      outdoorUnitId: "kerr-a-kxp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-24000-cfg-4",
+      slug: "kerr-a-series-central-ducted-24000-cfg-4",
+      modelId: "kerr-a-series-central-ducted-24000",
+      outdoorUnitId: "kerr-a-kxp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-24000-cfg-5",
+      slug: "kerr-a-series-central-ducted-24000-cfg-5",
+      modelId: "kerr-a-series-central-ducted-24000",
+      outdoorUnitId: "kerr-a-kxp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-60000-cfg-1",
+      slug: "kerr-a-series-central-ducted-60000-cfg-1",
+      modelId: "kerr-a-series-central-ducted-60000",
+      outdoorUnitId: "kerr-a-kcd60sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-60000-cfg-1",
+      slug: "kerr-a-series-wall-single-60000-cfg-1",
+      modelId: "kerr-a-series-wall-single-60000",
+      outdoorUnitId: "kerr-a-kmh55pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-60000-cfg-2",
+      slug: "kerr-a-series-wall-single-60000-cfg-2",
+      modelId: "kerr-a-series-wall-single-60000",
+      outdoorUnitId: "kerr-a-kmh55pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-wall-single-60000-cfg-3",
+      slug: "kerr-a-series-wall-single-60000-cfg-3",
+      modelId: "kerr-a-series-wall-single-60000",
+      outdoorUnitId: "kerr-a-kmh55pv-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 20.4,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-central-ducted-18000-cfg-1",
+      slug: "kerr-a-khp-series-central-ducted-18000-cfg-1",
+      modelId: "kerr-a-khp-series-central-ducted-18000",
       outdoorUnitId: "kerr-a-khp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2530,9 +3619,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-central-ducted-cfg-2",
-      slug: "kerr-a-khp-series-central-ducted-cfg-2",
-      modelId: "kerr-a-khp-series-central-ducted",
+      id: "kerr-a-khp-series-central-ducted-24000-cfg-1",
+      slug: "kerr-a-khp-series-central-ducted-24000-cfg-1",
+      modelId: "kerr-a-khp-series-central-ducted-24000",
       outdoorUnitId: "kerr-a-khp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 23000,
@@ -2544,9 +3633,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-central-ducted-cfg-3",
-      slug: "kerr-a-khp-series-central-ducted-cfg-3",
-      modelId: "kerr-a-khp-series-central-ducted",
+      id: "kerr-a-khp-series-central-ducted-30000-cfg-1",
+      slug: "kerr-a-khp-series-central-ducted-30000-cfg-1",
+      modelId: "kerr-a-khp-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-khp33sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -2558,9 +3647,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-ksp-series-wall-single-cfg-1",
-      slug: "kerr-a-ksp-series-wall-single-cfg-1",
-      modelId: "kerr-a-ksp-series-wall-single",
+      id: "kerr-a-ksp-series-wall-single-9000-cfg-1",
+      slug: "kerr-a-ksp-series-wall-single-9000-cfg-1",
+      modelId: "kerr-a-ksp-series-wall-single-9000",
       outdoorUnitId: "kerr-a-ksp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2572,9 +3661,23 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-ksp-series-wall-single-cfg-2",
-      slug: "kerr-a-ksp-series-wall-single-cfg-2",
-      modelId: "kerr-a-ksp-series-wall-single",
+      id: "kerr-standard-wall-single-18000-cfg-1",
+      slug: "kerr-standard-wall-single-18000-cfg-1",
+      modelId: "kerr-standard-wall-single-18000",
+      outdoorUnitId: "kerr-a-ksp18sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-ksp-series-wall-single-24000-cfg-1",
+      slug: "kerr-a-ksp-series-wall-single-24000-cfg-1",
+      modelId: "kerr-a-ksp-series-wall-single-24000",
       outdoorUnitId: "kerr-a-ksp24sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2586,9 +3689,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-1",
-      slug: "kerr-a-khp-series-wall-single-cfg-1",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-6000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-6000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-6000",
       outdoorUnitId: "kerr-a-khp06sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -2600,9 +3703,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-2",
-      slug: "kerr-a-khp-series-wall-single-cfg-2",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-9000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-9000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-9000",
       outdoorUnitId: "kerr-a-khp09sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2614,9 +3717,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-3",
-      slug: "kerr-a-khp-series-wall-single-cfg-3",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-12000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-12000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-12000",
       outdoorUnitId: "kerr-a-khp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2628,9 +3731,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-4",
-      slug: "kerr-a-khp-series-wall-single-cfg-4",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-18000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-18000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-18000",
       outdoorUnitId: "kerr-a-khp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2642,37 +3745,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-5",
-      slug: "kerr-a-khp-series-wall-single-cfg-5",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp24sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-6",
-      slug: "kerr-a-khp-series-wall-single-cfg-6",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp33sa-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-7",
-      slug: "kerr-a-khp-series-wall-single-cfg-7",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-18000-cfg-2",
+      slug: "kerr-a-khp-series-wall-single-18000-cfg-2",
+      modelId: "kerr-a-khp-series-wall-single-18000",
       outdoorUnitId: "kerr-a-khp183a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2684,9 +3759,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-8",
-      slug: "kerr-a-khp-series-wall-single-cfg-8",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-18000-cfg-3",
+      slug: "kerr-a-khp-series-wall-single-18000-cfg-3",
+      modelId: "kerr-a-khp-series-wall-single-18000",
       outdoorUnitId: "kerr-a-khp183a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2698,9 +3773,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-9",
-      slug: "kerr-a-khp-series-wall-single-cfg-9",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-18000-cfg-4",
+      slug: "kerr-a-khp-series-wall-single-18000-cfg-4",
+      modelId: "kerr-a-khp-series-wall-single-18000",
       outdoorUnitId: "kerr-a-khp183a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -2712,9 +3787,23 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-10",
-      slug: "kerr-a-khp-series-wall-single-cfg-10",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-24000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-24000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-24000",
+      outdoorUnitId: "kerr-a-khp24sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-24000-cfg-2",
+      slug: "kerr-a-khp-series-wall-single-24000-cfg-2",
+      modelId: "kerr-a-khp-series-wall-single-24000",
       outdoorUnitId: "kerr-a-khp284a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27000,
@@ -2726,9 +3815,23 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-11",
-      slug: "kerr-a-khp-series-wall-single-cfg-11",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-30000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-30000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-30000",
+      outdoorUnitId: "kerr-a-khp33sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-30000-cfg-2",
+      slug: "kerr-a-khp-series-wall-single-30000-cfg-2",
+      modelId: "kerr-a-khp-series-wall-single-30000",
       outdoorUnitId: "kerr-a-khp284a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -2740,9 +3843,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-12",
-      slug: "kerr-a-khp-series-wall-single-cfg-12",
-      modelId: "kerr-a-khp-series-wall-single",
+      id: "kerr-a-khp-series-wall-single-30000-cfg-3",
+      slug: "kerr-a-khp-series-wall-single-30000-cfg-3",
+      modelId: "kerr-a-khp-series-wall-single-30000",
       outdoorUnitId: "kerr-a-khp284a-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -2754,135 +3857,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-khp-series-wall-single-cfg-13",
-      slug: "kerr-a-khp-series-wall-single-cfg-13",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp365a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-14",
-      slug: "kerr-a-khp-series-wall-single-cfg-14",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp365a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-15",
-      slug: "kerr-a-khp-series-wall-single-cfg-15",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp365a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.2,
-      hspf2: 10.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-16",
-      slug: "kerr-a-khp-series-wall-single-cfg-16",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp486a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-17",
-      slug: "kerr-a-khp-series-wall-single-cfg-17",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp486a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-18",
-      slug: "kerr-a-khp-series-wall-single-cfg-18",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp486a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-19",
-      slug: "kerr-a-khp-series-wall-single-cfg-19",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp556a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
-      seer2: 22.2,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-20",
-      slug: "kerr-a-khp-series-wall-single-cfg-20",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp556a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
-      seer2: 20,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-khp-series-wall-single-cfg-21",
-      slug: "kerr-a-khp-series-wall-single-cfg-21",
-      modelId: "kerr-a-khp-series-wall-single",
-      outdoorUnitId: "kerr-a-khp556a-1",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
-      seer2: 21.1,
-      hspf2: 10.6,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "kerr-a-kzp-series-wall-single-cfg-1",
-      slug: "kerr-a-kzp-series-wall-single-cfg-1",
-      modelId: "kerr-a-kzp-series-wall-single",
+      id: "kerr-a-kzp-series-wall-single-6000-cfg-1",
+      slug: "kerr-a-kzp-series-wall-single-6000-cfg-1",
+      modelId: "kerr-a-kzp-series-wall-single-6000",
       outdoorUnitId: "kerr-a-kzp06sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 6000,
@@ -2894,9 +3871,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kzp-series-wall-single-cfg-2",
-      slug: "kerr-a-kzp-series-wall-single-cfg-2",
-      modelId: "kerr-a-kzp-series-wall-single",
+      id: "kerr-a-kzp-series-wall-single-9000-cfg-1",
+      slug: "kerr-a-kzp-series-wall-single-9000-cfg-1",
+      modelId: "kerr-a-kzp-series-wall-single-9000",
       outdoorUnitId: "kerr-a-kzpo9sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -2908,9 +3885,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kzp-series-wall-single-cfg-3",
-      slug: "kerr-a-kzp-series-wall-single-cfg-3",
-      modelId: "kerr-a-kzp-series-wall-single",
+      id: "kerr-a-kzp-series-wall-single-12000-cfg-1",
+      slug: "kerr-a-kzp-series-wall-single-12000-cfg-1",
+      modelId: "kerr-a-kzp-series-wall-single-12000",
       outdoorUnitId: "kerr-a-kzp12sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -2922,9 +3899,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kzp-series-wall-single-cfg-4",
-      slug: "kerr-a-kzp-series-wall-single-cfg-4",
-      modelId: "kerr-a-kzp-series-wall-single",
+      id: "kerr-a-kzp-series-wall-single-18000-cfg-1",
+      slug: "kerr-a-kzp-series-wall-single-18000-cfg-1",
+      modelId: "kerr-a-kzp-series-wall-single-18000",
       outdoorUnitId: "kerr-a-kzp18sa-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2936,9 +3913,135 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-1",
-      slug: "kerr-kxp-series-central-ducted-cfg-1",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-a-khp-series-wall-single-36000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-36000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-36000",
+      outdoorUnitId: "kerr-a-khp365a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-36000-cfg-2",
+      slug: "kerr-a-khp-series-wall-single-36000-cfg-2",
+      modelId: "kerr-a-khp-series-wall-single-36000",
+      outdoorUnitId: "kerr-a-khp365a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-36000-cfg-3",
+      slug: "kerr-a-khp-series-wall-single-36000-cfg-3",
+      modelId: "kerr-a-khp-series-wall-single-36000",
+      outdoorUnitId: "kerr-a-khp365a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.2,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-48000-cfg-1",
+      slug: "kerr-a-khp-series-wall-single-48000-cfg-1",
+      modelId: "kerr-a-khp-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-khp486a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-48000-cfg-2",
+      slug: "kerr-a-khp-series-wall-single-48000-cfg-2",
+      modelId: "kerr-a-khp-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-khp486a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-48000-cfg-3",
+      slug: "kerr-a-khp-series-wall-single-48000-cfg-3",
+      modelId: "kerr-a-khp-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-khp486a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.7,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-48000-cfg-4",
+      slug: "kerr-a-khp-series-wall-single-48000-cfg-4",
+      modelId: "kerr-a-khp-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-khp556a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 22.2,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-48000-cfg-5",
+      slug: "kerr-a-khp-series-wall-single-48000-cfg-5",
+      modelId: "kerr-a-khp-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-khp556a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-khp-series-wall-single-48000-cfg-6",
+      slug: "kerr-a-khp-series-wall-single-48000-cfg-6",
+      modelId: "kerr-a-khp-series-wall-single-48000",
+      outdoorUnitId: "kerr-a-khp556a-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 21.1,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-kxp-series-central-ducted-18000-cfg-1",
+      slug: "kerr-kxp-series-central-ducted-18000-cfg-1",
+      modelId: "kerr-kxp-series-central-ducted-18000",
       outdoorUnitId: "kerr-a-kxp18ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2950,9 +4053,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-2",
-      slug: "kerr-kxp-series-central-ducted-cfg-2",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-18000-cfg-2",
+      slug: "kerr-kxp-series-central-ducted-18000-cfg-2",
+      modelId: "kerr-kxp-series-central-ducted-18000",
       outdoorUnitId: "kerr-a-kxp18ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -2964,9 +4067,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-3",
-      slug: "kerr-kxp-series-central-ducted-cfg-3",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-24000-cfg-1",
+      slug: "kerr-kxp-series-central-ducted-24000-cfg-1",
+      modelId: "kerr-kxp-series-central-ducted-24000",
       outdoorUnitId: "kerr-a-kxp24ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2978,9 +4081,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-4",
-      slug: "kerr-kxp-series-central-ducted-cfg-4",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-24000-cfg-2",
+      slug: "kerr-kxp-series-central-ducted-24000-cfg-2",
+      modelId: "kerr-kxp-series-central-ducted-24000",
       outdoorUnitId: "kerr-a-kxp24ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2992,9 +4095,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-5",
-      slug: "kerr-kxp-series-central-ducted-cfg-5",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-30000-cfg-1",
+      slug: "kerr-kxp-series-central-ducted-30000-cfg-1",
+      modelId: "kerr-kxp-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-kxp30ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 30000,
@@ -3006,9 +4109,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-6",
-      slug: "kerr-kxp-series-central-ducted-cfg-6",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-30000-cfg-2",
+      slug: "kerr-kxp-series-central-ducted-30000-cfg-2",
+      modelId: "kerr-kxp-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-kxp30ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -3020,9 +4123,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-7",
-      slug: "kerr-kxp-series-central-ducted-cfg-7",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-30000-cfg-3",
+      slug: "kerr-kxp-series-central-ducted-30000-cfg-3",
+      modelId: "kerr-kxp-series-central-ducted-30000",
       outdoorUnitId: "kerr-a-kxp30ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 29000,
@@ -3034,9 +4137,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-8",
-      slug: "kerr-kxp-series-central-ducted-cfg-8",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-36000-cfg-1",
+      slug: "kerr-kxp-series-central-ducted-36000-cfg-1",
+      modelId: "kerr-kxp-series-central-ducted-36000",
       outdoorUnitId: "kerr-a-kxp36ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3048,9 +4151,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-9",
-      slug: "kerr-kxp-series-central-ducted-cfg-9",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-36000-cfg-2",
+      slug: "kerr-kxp-series-central-ducted-36000-cfg-2",
+      modelId: "kerr-kxp-series-central-ducted-36000",
       outdoorUnitId: "kerr-a-kxp36ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3062,9 +4165,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-kxp-series-central-ducted-cfg-10",
-      slug: "kerr-kxp-series-central-ducted-cfg-10",
-      modelId: "kerr-kxp-series-central-ducted",
+      id: "kerr-kxp-series-central-ducted-42000-cfg-1",
+      slug: "kerr-kxp-series-central-ducted-42000-cfg-1",
+      modelId: "kerr-kxp-series-central-ducted-42000",
       outdoorUnitId: "kerr-a-kxp48ta-1",
       indoorUnitId: null,
       coolingCapacityMinBtu: 45000,
@@ -3076,9 +4179,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kmh-series-wall-single-cfg-1",
-      slug: "kerr-a-kmh-series-wall-single-cfg-1",
-      modelId: "kerr-a-kmh-series-wall-single",
+      id: "kerr-a-kmh-series-wall-single-36000-cfg-1",
+      slug: "kerr-a-kmh-series-wall-single-36000-cfg-1",
+      modelId: "kerr-a-kmh-series-wall-single-36000",
       outdoorUnitId: "kerr-a-kmh36qv-1a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3090,9 +4193,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kmh-series-wall-single-cfg-2",
-      slug: "kerr-a-kmh-series-wall-single-cfg-2",
-      modelId: "kerr-a-kmh-series-wall-single",
+      id: "kerr-a-kmh-series-wall-single-36000-cfg-2",
+      slug: "kerr-a-kmh-series-wall-single-36000-cfg-2",
+      modelId: "kerr-a-kmh-series-wall-single-36000",
       outdoorUnitId: "kerr-a-kmh36qv-1a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3104,9 +4207,9 @@ export const kerrDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "kerr-a-kmh-series-wall-single-cfg-3",
-      slug: "kerr-a-kmh-series-wall-single-cfg-3",
-      modelId: "kerr-a-kmh-series-wall-single",
+      id: "kerr-a-kmh-series-wall-single-36000-cfg-3",
+      slug: "kerr-a-kmh-series-wall-single-36000-cfg-3",
+      modelId: "kerr-a-kmh-series-wall-single-36000",
       outdoorUnitId: "kerr-a-kmh36qv-1a",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -3116,11 +4219,25 @@ export const kerrDataset: BrandDataset = {
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "kerr-a-series-central-ducted-42000-cfg-1",
+      slug: "kerr-a-series-central-ducted-42000-cfg-1",
+      modelId: "kerr-a-series-central-ducted-42000",
+      outdoorUnitId: "kerr-a-kxp48sa-1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
     }
   ],
   performanceProfiles: [
     {
-      configurationId: "kerr-standard-wall-single-cfg-1",
+      configurationId: "kerr-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3131,51 +4248,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 18000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-standard-wall-single-cfg-6",
+      configurationId: "kerr-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3186,40 +4259,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-standard-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8700,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-standard-wall-single-cfg-10",
+      configurationId: "kerr-standard-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3230,7 +4270,40 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-standard-wall-single-cfg-11",
+      configurationId: "kerr-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-standard-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-standard-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-standard-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3241,7 +4314,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-standard-wall-single-cfg-12",
+      configurationId: "kerr-standard-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3252,18 +4325,40 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-standard-wall-single-cfg-13",
+      configurationId: "kerr-standard-wall-single-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 11200,
+          heatingCapacityBtu: 18000,
           cop: null,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-1",
+      configurationId: "kerr-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-standard-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3274,73 +4369,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-8",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3351,18 +4380,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-10",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3373,95 +4391,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8500,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-19",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3472,7 +4402,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-20",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3483,194 +4413,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15500,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.7,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7100,
-          cop: 1.59,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-34",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19400,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-38",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3681,7 +4424,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-39",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3692,7 +4435,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-40",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3703,40 +4446,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-41",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 12000,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-44",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3747,304 +4457,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15600,
-          cop: 1.75,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10100,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9900,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-49",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10600,
-          cop: 1.96,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-50",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.99,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-51",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-52",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-53",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34800,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-54",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-55",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7000,
-          cop: 2.4,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-56",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-57",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9000,
-          cop: 1.83,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-58",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-59",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-60",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-61",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-62",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-63",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-64",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-65",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.88,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-66",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-67",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14500,
-          cop: 1.89,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-68",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-69",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.95,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-70",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14400,
-          cop: 1.86,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-71",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-72",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-10",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4055,18 +4468,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-wall-single-cfg-73",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20200,
-          cop: 2.16,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-wall-single-cfg-74",
+      configurationId: "kerr-a-series-wall-single-24000-cfg-11",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4077,7 +4479,678 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-kcd-series-central-ducted-cfg-1",
+      configurationId: "kerr-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-18000-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-20000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-20000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-20000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: 1.75,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-15000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-15000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-6000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-6000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7100,
+          cop: 1.59,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10100,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-9000-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9900,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10600,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-12000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.7,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-kcd-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4088,18 +5161,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-kcd-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-kcd-series-central-ducted-cfg-3",
+      configurationId: "kerr-a-kcd-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4110,40 +5172,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-kcd-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 22600,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-kcd-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-kcd-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 37000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-1",
+      configurationId: "kerr-a-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4154,84 +5183,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14700,
-          cop: 2.2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13500,
-          cop: 2.04,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-9",
+      configurationId: "kerr-a-series-central-ducted-30000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4242,51 +5194,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 42000,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19200,
-          cop: 1.91,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-14",
+      configurationId: "kerr-a-series-central-ducted-30000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4297,51 +5205,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-15",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30400,
-          cop: 1.97,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.87,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-19",
+      configurationId: "kerr-a-series-central-ducted-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4352,7 +5216,73 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-20",
+      configurationId: "kerr-a-series-central-ducted-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-30000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-36000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4363,7 +5293,73 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-21",
+      configurationId: "kerr-a-series-central-ducted-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4374,7 +5370,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-22",
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4385,117 +5381,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15200,
-          cop: 2.06,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-30",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 34400,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-series-central-ducted-cfg-33",
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4506,7 +5392,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-34",
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4517,7 +5403,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-series-central-ducted-cfg-35",
+      configurationId: "kerr-a-series-central-ducted-48000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4528,205 +5414,40 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-khp-series-central-ducted-cfg-1",
+      configurationId: "kerr-a-kcd-series-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14000,
-          cop: 2.2,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kerr-a-khp-series-central-ducted-cfg-2",
+      configurationId: "kerr-a-kcd-series-central-ducted-60000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 16900,
-          cop: 2.16,
+          heatingCapacityBtu: 37000,
+          cop: 1.91,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kerr-a-khp-series-central-ducted-cfg-3",
+      configurationId: "kerr-a-kcd-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 27400,
-          cop: 2,
+          heatingCapacityBtu: 22600,
+          cop: 1.85,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kerr-a-ksp-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 8000,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-ksp-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17100,
-          cop: 2.01,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7900,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17300,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-14",
+      configurationId: "kerr-a-kcd-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4737,128 +5458,51 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-15",
+      configurationId: "kerr-a-series-central-ducted-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-khp-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2.05,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-kzp-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-kzp-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-kzp-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-a-kzp-series-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19300,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-1",
+      configurationId: "kerr-a-series-central-ducted-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4869,7 +5513,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-2",
+      configurationId: "kerr-a-series-central-ducted-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4880,7 +5524,40 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-3",
+      configurationId: "kerr-a-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-24000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4891,7 +5568,7 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-4",
+      configurationId: "kerr-a-series-central-ducted-24000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4902,73 +5579,73 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-5",
+      configurationId: "kerr-a-series-central-ducted-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 23400,
-          cop: 1.8,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29200,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "kerr-kxp-series-central-ducted-cfg-10",
+      configurationId: "kerr-a-series-wall-single-60000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 34400,
-          cop: 1.85,
+          cop: 1.9,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "kerr-a-kmh-series-wall-single-cfg-1",
+      configurationId: "kerr-a-series-wall-single-60000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-wall-single-60000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16900,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-central-ducted-30000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4979,7 +5656,436 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-kmh-series-wall-single-cfg-2",
+      configurationId: "kerr-a-ksp-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-ksp-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17100,
+          cop: 2.01,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7900,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-kzp-series-wall-single-6000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-kzp-series-wall-single-9000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-kzp-series-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-kzp-series-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19300,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-khp-series-wall-single-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-kxp-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-kmh-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-kmh-series-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -4990,12 +6096,23 @@ export const kerrDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "kerr-a-kmh-series-wall-single-cfg-3",
+      configurationId: "kerr-a-kmh-series-wall-single-36000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
           heatingCapacityBtu: 28600,
           cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "kerr-a-series-central-ducted-42000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.85,
           confidence: "verified",
         }
       ]

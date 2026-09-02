@@ -48,18 +48,100 @@ export const borealDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "boreal-standard-wall-single",
-      slug: "boreal-standard-wall-single",
-      name: "Standard",
+      id: "boreal-standard-wall-single-9000",
+      slug: "boreal-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "boreal-standard",
       brandId: "boreal",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 6800,
+      heatingCapacity5FMaxBtu: 6800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-standard-wall-single-12000",
+      slug: "boreal-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "boreal-standard",
+      brandId: "boreal",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7100,
+      heatingCapacity5FMaxBtu: 7100,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-standard-wall-single-18000",
+      slug: "boreal-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "boreal-standard",
+      brandId: "boreal",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 12400,
+      heatingCapacity5FMaxBtu: 12400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-standard-wall-single-20000",
+      slug: "boreal-standard-wall-single-20000",
+      name: "Standard 20 000 BTU",
+      seriesId: "boreal-standard",
+      brandId: "boreal",
+      modelNumber: "Standard 20k",
+      normalizedModelNumber: "standard-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 14600,
       heatingCapacity5FMaxBtu: 14600,
       seer2Min: null,
       seer2Max: null,
@@ -74,18 +156,73 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-unix-high-efficiency-series-central-ducted",
-      slug: "boreal-unix-high-efficiency-series-central-ducted",
-      name: "Unix High-efficiency Series",
+      id: "boreal-unix-high-efficiency-series-central-ducted-24000",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-24000",
+      name: "Unix High-efficiency Series 24 000 BTU",
       seriesId: "boreal-unix-high-efficiency-series",
       brandId: "boreal",
-      modelNumber: "Unix High-efficiency Series",
-      normalizedModelNumber: "unix-high-efficiency-series",
+      modelNumber: "Unix High-efficiency Series 24k",
+      normalizedModelNumber: "unix-high-efficiency-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 22000,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-unix-high-efficiency-series-central-ducted-36000",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-36000",
+      name: "Unix High-efficiency Series 36 000 BTU",
+      seriesId: "boreal-unix-high-efficiency-series",
+      brandId: "boreal",
+      modelNumber: "Unix High-efficiency Series 36k",
+      normalizedModelNumber: "unix-high-efficiency-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 24000,
+      heatingCapacity5FMaxBtu: 24000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-unix-high-efficiency-series-central-ducted-48000",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-48000",
+      name: "Unix High-efficiency Series 48 000 BTU",
+      seriesId: "boreal-unix-high-efficiency-series",
+      brandId: "boreal",
+      modelNumber: "Unix High-efficiency Series 48k",
+      normalizedModelNumber: "unix-high-efficiency-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 31200,
       heatingCapacity5FMaxBtu: 36000,
       seer2Min: 16,
       seer2Max: 17,
@@ -100,20 +237,75 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-e-series-central-ducted",
-      slug: "boreal-e-series-central-ducted",
-      name: "E Series",
+      id: "boreal-e-series-central-ducted-24000",
+      slug: "boreal-e-series-central-ducted-24000",
+      name: "E Series 24 000 BTU",
       seriesId: "boreal-e-series",
       brandId: "boreal",
-      modelNumber: "E Series",
-      normalizedModelNumber: "e-series",
+      modelNumber: "E Series 24k",
+      normalizedModelNumber: "e-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 20600,
-      heatingCapacity5FMaxBtu: 45000,
+      heatingCapacity5FMaxBtu: 20600,
       seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-e-series-central-ducted-36000",
+      slug: "boreal-e-series-central-ducted-36000",
+      name: "E Series 36 000 BTU",
+      seriesId: "boreal-e-series",
+      brandId: "boreal",
+      modelNumber: "E Series 36k",
+      normalizedModelNumber: "e-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 28200,
+      heatingCapacity5FMaxBtu: 28200,
+      seer2Min: 18.2,
+      seer2Max: 18.2,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-e-series-central-ducted-48000",
+      slug: "boreal-e-series-central-ducted-48000",
+      name: "E Series 48 000 BTU",
+      seriesId: "boreal-e-series",
+      brandId: "boreal",
+      modelNumber: "E Series 48k",
+      normalizedModelNumber: "e-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 39500,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 18.2,
       seer2Max: 19,
       hspf2Min: 10,
       hspf2Max: 10,
@@ -181,9 +373,9 @@ export const borealDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "boreal-standard-wall-single-cfg-1",
-      slug: "boreal-standard-wall-single-cfg-1",
-      modelId: "boreal-standard-wall-single",
+      id: "boreal-standard-wall-single-9000-cfg-1",
+      slug: "boreal-standard-wall-single-9000-cfg-1",
+      modelId: "boreal-standard-wall-single-9000",
       outdoorUnitId: "boreal-eqx09hpj1ob",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -195,9 +387,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-standard-wall-single-cfg-2",
-      slug: "boreal-standard-wall-single-cfg-2",
-      modelId: "boreal-standard-wall-single",
+      id: "boreal-standard-wall-single-12000-cfg-1",
+      slug: "boreal-standard-wall-single-12000-cfg-1",
+      modelId: "boreal-standard-wall-single-12000",
       outdoorUnitId: "boreal-eqx12hpj1ob",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -209,9 +401,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-standard-wall-single-cfg-3",
-      slug: "boreal-standard-wall-single-cfg-3",
-      modelId: "boreal-standard-wall-single",
+      id: "boreal-standard-wall-single-18000-cfg-1",
+      slug: "boreal-standard-wall-single-18000-cfg-1",
+      modelId: "boreal-standard-wall-single-18000",
       outdoorUnitId: "boreal-eqx18hpj1ob",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -223,9 +415,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-standard-wall-single-cfg-4",
-      slug: "boreal-standard-wall-single-cfg-4",
-      modelId: "boreal-standard-wall-single",
+      id: "boreal-standard-wall-single-20000-cfg-1",
+      slug: "boreal-standard-wall-single-20000-cfg-1",
+      modelId: "boreal-standard-wall-single-20000",
       outdoorUnitId: "boreal-eqx24hpj1ob",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -237,9 +429,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-1",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-1",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
+      id: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-1",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-1",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-24000",
       outdoorUnitId: "boreal-envbr36hpj1oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -251,9 +443,37 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-2",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-2",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
+      id: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-2",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-2",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "boreal-envbr36hpj1oa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-3",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-3",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-24000",
+      outdoorUnitId: "boreal-envbr36hpj1oa",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "boreal-unix-high-efficiency-series-central-ducted-36000-cfg-1",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-36000-cfg-1",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-36000",
       outdoorUnitId: "boreal-envbr36hpj1oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -265,9 +485,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-3",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-3",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
+      id: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-1",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-1",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "boreal-envbr60hpj1oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -279,9 +499,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-4",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-4",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
+      id: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-2",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-2",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "boreal-envbr60hpj1oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -293,37 +513,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-5",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-5",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
-      outdoorUnitId: "boreal-envbr36hpj1oa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-6",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-6",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
-      outdoorUnitId: "boreal-envbr36hpj1oa",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 17,
-      hspf2: 9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-7",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-7",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
+      id: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-3",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-3",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "boreal-envbr60hpj1oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -335,9 +527,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-unix-high-efficiency-series-central-ducted-cfg-8",
-      slug: "boreal-unix-high-efficiency-series-central-ducted-cfg-8",
-      modelId: "boreal-unix-high-efficiency-series-central-ducted",
+      id: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-4",
+      slug: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-4",
+      modelId: "boreal-unix-high-efficiency-series-central-ducted-48000",
       outdoorUnitId: "boreal-envbr60hpj1oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -349,9 +541,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-e-series-central-ducted-cfg-1",
-      slug: "boreal-e-series-central-ducted-cfg-1",
-      modelId: "boreal-e-series-central-ducted",
+      id: "boreal-e-series-central-ducted-24000-cfg-1",
+      slug: "boreal-e-series-central-ducted-24000-cfg-1",
+      modelId: "boreal-e-series-central-ducted-24000",
       outdoorUnitId: "boreal-enx36hpj132oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -363,9 +555,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-e-series-central-ducted-cfg-2",
-      slug: "boreal-e-series-central-ducted-cfg-2",
-      modelId: "boreal-e-series-central-ducted",
+      id: "boreal-e-series-central-ducted-36000-cfg-1",
+      slug: "boreal-e-series-central-ducted-36000-cfg-1",
+      modelId: "boreal-e-series-central-ducted-36000",
       outdoorUnitId: "boreal-enx36hpj132oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -377,9 +569,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-e-series-central-ducted-cfg-3",
-      slug: "boreal-e-series-central-ducted-cfg-3",
-      modelId: "boreal-e-series-central-ducted",
+      id: "boreal-e-series-central-ducted-48000-cfg-1",
+      slug: "boreal-e-series-central-ducted-48000-cfg-1",
+      modelId: "boreal-e-series-central-ducted-48000",
       outdoorUnitId: "boreal-enx60hpj132oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -391,9 +583,9 @@ export const borealDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "boreal-e-series-central-ducted-cfg-4",
-      slug: "boreal-e-series-central-ducted-cfg-4",
-      modelId: "boreal-e-series-central-ducted",
+      id: "boreal-e-series-central-ducted-48000-cfg-2",
+      slug: "boreal-e-series-central-ducted-48000-cfg-2",
+      modelId: "boreal-e-series-central-ducted-48000",
       outdoorUnitId: "boreal-enx60hpj132oa",
       indoorUnitId: null,
       coolingCapacityMinBtu: 53000,
@@ -407,7 +599,7 @@ export const borealDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "boreal-standard-wall-single-cfg-1",
+      configurationId: "boreal-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -418,7 +610,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-standard-wall-single-cfg-2",
+      configurationId: "boreal-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -429,7 +621,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-standard-wall-single-cfg-3",
+      configurationId: "boreal-standard-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -440,7 +632,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-standard-wall-single-cfg-4",
+      configurationId: "boreal-standard-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -451,7 +643,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-1",
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -462,40 +654,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 32000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-5",
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -506,7 +665,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-6",
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-24000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -517,7 +676,40 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-7",
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -528,7 +720,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-unix-high-efficiency-series-central-ducted-cfg-8",
+      configurationId: "boreal-unix-high-efficiency-series-central-ducted-48000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -539,7 +731,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-e-series-central-ducted-cfg-1",
+      configurationId: "boreal-e-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -550,7 +742,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-e-series-central-ducted-cfg-2",
+      configurationId: "boreal-e-series-central-ducted-36000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -561,7 +753,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-e-series-central-ducted-cfg-3",
+      configurationId: "boreal-e-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -572,7 +764,7 @@ export const borealDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "boreal-e-series-central-ducted-cfg-4",
+      configurationId: "boreal-e-series-central-ducted-48000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,

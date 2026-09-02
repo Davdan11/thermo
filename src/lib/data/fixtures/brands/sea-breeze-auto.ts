@@ -59,15 +59,16 @@ export const seabreezeDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "sea-breeze-9h-series-wall-single",
-      slug: "sea-breeze-9h-series-wall-single",
-      name: "9H Series",
+      id: "sea-breeze-9h-series-wall-single-9000",
+      slug: "sea-breeze-9h-series-wall-single-9000",
+      name: "9H Series 9 000 BTU",
       seriesId: "sea-breeze-9h-series",
       brandId: "sea-breeze",
-      modelNumber: "9H Series",
-      normalizedModelNumber: "9h-series",
+      modelNumber: "9H Series 9k",
+      normalizedModelNumber: "9h-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       heatingCapacity5FMinBtu: 6000,
@@ -85,19 +86,20 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-standard-wall-single",
-      slug: "sea-breeze-standard-wall-single",
-      name: "Standard",
+      id: "sea-breeze-standard-wall-single-12000",
+      slug: "sea-breeze-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
       seriesId: "sea-breeze-standard",
       brandId: "sea-breeze",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 7000,
-      heatingCapacity5FMaxBtu: 16500,
+      heatingCapacity5FMaxBtu: 7800,
       seer2Min: null,
       seer2Max: null,
       hspf2Min: null,
@@ -111,15 +113,16 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-18h-series-wall-single",
-      slug: "sea-breeze-18h-series-wall-single",
-      name: "18H Series",
+      id: "sea-breeze-18h-series-wall-single-18000",
+      slug: "sea-breeze-18h-series-wall-single-18000",
+      name: "18H Series 18 000 BTU",
       seriesId: "sea-breeze-18h-series",
       brandId: "sea-breeze",
-      modelNumber: "18H Series",
-      normalizedModelNumber: "18h-series",
+      modelNumber: "18H Series 18k",
+      normalizedModelNumber: "18h-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       heatingCapacity5FMinBtu: 11400,
@@ -137,15 +140,43 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-24h-series-wall-single",
-      slug: "sea-breeze-24h-series-wall-single",
-      name: "24H Series",
-      seriesId: "sea-breeze-24h-series",
+      id: "sea-breeze-standard-wall-single-24000",
+      slug: "sea-breeze-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "sea-breeze-standard",
       brandId: "sea-breeze",
-      modelNumber: "24H Series",
-      normalizedModelNumber: "24h-series",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 16500,
+      heatingCapacity5FMaxBtu: 16500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sea-breeze-24h-series-wall-single-24000",
+      slug: "sea-breeze-24h-series-wall-single-24000",
+      name: "24H Series 24 000 BTU",
+      seriesId: "sea-breeze-24h-series",
+      brandId: "sea-breeze",
+      modelNumber: "24H Series 24k",
+      normalizedModelNumber: "24h-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 17200,
@@ -195,12 +226,6 @@ export const seabreezeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "sea-breeze-24h421zomi",
-      modelNumber: "24H421ZOMI",
-      brandId: "sea-breeze",
-      refrigerant: null as any,
-    },
-    {
       id: "sea-breeze-12h521yomi",
       modelNumber: "12H521YOMI",
       brandId: "sea-breeze",
@@ -219,6 +244,12 @@ export const seabreezeDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "sea-breeze-24h421zomi",
+      modelNumber: "24H421ZOMI",
+      brandId: "sea-breeze",
+      refrigerant: null as any,
+    },
+    {
       id: "sea-breeze-24h521zomi",
       modelNumber: "24H521ZOMI",
       brandId: "sea-breeze",
@@ -230,9 +261,9 @@ export const seabreezeDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "sea-breeze-9h-series-wall-single-cfg-1",
-      slug: "sea-breeze-9h-series-wall-single-cfg-1",
-      modelId: "sea-breeze-9h-series-wall-single",
+      id: "sea-breeze-9h-series-wall-single-9000-cfg-1",
+      slug: "sea-breeze-9h-series-wall-single-9000-cfg-1",
+      modelId: "sea-breeze-9h-series-wall-single-9000",
       outdoorUnitId: "sea-breeze-9h421yomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -244,9 +275,9 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-9h-series-wall-single-cfg-2",
-      slug: "sea-breeze-9h-series-wall-single-cfg-2",
-      modelId: "sea-breeze-9h-series-wall-single",
+      id: "sea-breeze-9h-series-wall-single-9000-cfg-2",
+      slug: "sea-breeze-9h-series-wall-single-9000-cfg-2",
+      modelId: "sea-breeze-9h-series-wall-single-9000",
       outdoorUnitId: "sea-breeze-9h421zomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -258,9 +289,9 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-9h-series-wall-single-cfg-3",
-      slug: "sea-breeze-9h-series-wall-single-cfg-3",
-      modelId: "sea-breeze-9h-series-wall-single",
+      id: "sea-breeze-9h-series-wall-single-9000-cfg-3",
+      slug: "sea-breeze-9h-series-wall-single-9000-cfg-3",
+      modelId: "sea-breeze-9h-series-wall-single-9000",
       outdoorUnitId: "sea-breeze-9h521yomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -272,9 +303,9 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-standard-wall-single-cfg-1",
-      slug: "sea-breeze-standard-wall-single-cfg-1",
-      modelId: "sea-breeze-standard-wall-single",
+      id: "sea-breeze-standard-wall-single-12000-cfg-1",
+      slug: "sea-breeze-standard-wall-single-12000-cfg-1",
+      modelId: "sea-breeze-standard-wall-single-12000",
       outdoorUnitId: "sea-breeze-12h421yomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -286,9 +317,9 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-standard-wall-single-cfg-2",
-      slug: "sea-breeze-standard-wall-single-cfg-2",
-      modelId: "sea-breeze-standard-wall-single",
+      id: "sea-breeze-standard-wall-single-12000-cfg-2",
+      slug: "sea-breeze-standard-wall-single-12000-cfg-2",
+      modelId: "sea-breeze-standard-wall-single-12000",
       outdoorUnitId: "sea-breeze-12h421zomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -300,23 +331,9 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-standard-wall-single-cfg-3",
-      slug: "sea-breeze-standard-wall-single-cfg-3",
-      modelId: "sea-breeze-standard-wall-single",
-      outdoorUnitId: "sea-breeze-24h421zomi",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "sea-breeze-standard-wall-single-cfg-4",
-      slug: "sea-breeze-standard-wall-single-cfg-4",
-      modelId: "sea-breeze-standard-wall-single",
+      id: "sea-breeze-standard-wall-single-12000-cfg-3",
+      slug: "sea-breeze-standard-wall-single-12000-cfg-3",
+      modelId: "sea-breeze-standard-wall-single-12000",
       outdoorUnitId: "sea-breeze-12h521yomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -328,9 +345,9 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-18h-series-wall-single-cfg-1",
-      slug: "sea-breeze-18h-series-wall-single-cfg-1",
-      modelId: "sea-breeze-18h-series-wall-single",
+      id: "sea-breeze-18h-series-wall-single-18000-cfg-1",
+      slug: "sea-breeze-18h-series-wall-single-18000-cfg-1",
+      modelId: "sea-breeze-18h-series-wall-single-18000",
       outdoorUnitId: "sea-breeze-18h421zomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -342,9 +359,9 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-18h-series-wall-single-cfg-2",
-      slug: "sea-breeze-18h-series-wall-single-cfg-2",
-      modelId: "sea-breeze-18h-series-wall-single",
+      id: "sea-breeze-18h-series-wall-single-18000-cfg-2",
+      slug: "sea-breeze-18h-series-wall-single-18000-cfg-2",
+      modelId: "sea-breeze-18h-series-wall-single-18000",
       outdoorUnitId: "sea-breeze-18h521zomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -356,9 +373,23 @@ export const seabreezeDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "sea-breeze-24h-series-wall-single-cfg-1",
-      slug: "sea-breeze-24h-series-wall-single-cfg-1",
-      modelId: "sea-breeze-24h-series-wall-single",
+      id: "sea-breeze-standard-wall-single-24000-cfg-1",
+      slug: "sea-breeze-standard-wall-single-24000-cfg-1",
+      modelId: "sea-breeze-standard-wall-single-24000",
+      outdoorUnitId: "sea-breeze-24h421zomi",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "sea-breeze-24h-series-wall-single-24000-cfg-1",
+      slug: "sea-breeze-24h-series-wall-single-24000-cfg-1",
+      modelId: "sea-breeze-24h-series-wall-single-24000",
       outdoorUnitId: "sea-breeze-24h521zomi",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -372,7 +403,7 @@ export const seabreezeDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "sea-breeze-9h-series-wall-single-cfg-1",
+      configurationId: "sea-breeze-9h-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -383,7 +414,7 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-9h-series-wall-single-cfg-2",
+      configurationId: "sea-breeze-9h-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -394,7 +425,7 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-9h-series-wall-single-cfg-3",
+      configurationId: "sea-breeze-9h-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -405,7 +436,7 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-standard-wall-single-cfg-1",
+      configurationId: "sea-breeze-standard-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -416,7 +447,7 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-standard-wall-single-cfg-2",
+      configurationId: "sea-breeze-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -427,18 +458,7 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "sea-breeze-standard-wall-single-cfg-4",
+      configurationId: "sea-breeze-standard-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -449,7 +469,7 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-18h-series-wall-single-cfg-1",
+      configurationId: "sea-breeze-18h-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -460,7 +480,7 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-18h-series-wall-single-cfg-2",
+      configurationId: "sea-breeze-18h-series-wall-single-18000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -471,7 +491,18 @@ export const seabreezeDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "sea-breeze-24h-series-wall-single-cfg-1",
+      configurationId: "sea-breeze-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "sea-breeze-24h-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,

@@ -29,7 +29,7 @@ export const napoleonDataset: BrandDataset = {
       name: "NH series",
       brandId: "napoleon",
       systemType: "wall-single",
-      categories: ["cold-climate", "ductless", "single-zone"],
+      categories: ["conventional", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -114,18 +114,235 @@ export const napoleonDataset: BrandDataset = {
   ],
   models: [
     {
-      id: "napoleon-standard-wall-single",
-      slug: "napoleon-standard-wall-single",
-      name: "Standard",
+      id: "napoleon-standard-wall-single-9000",
+      slug: "napoleon-standard-wall-single-9000",
+      name: "Standard 9 000 BTU",
       seriesId: "napoleon-standard",
       brandId: "napoleon",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 9k",
+      normalizedModelNumber: "standard-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-12000",
+      slug: "napoleon-standard-wall-single-12000",
+      name: "Standard 12 000 BTU",
+      seriesId: "napoleon-standard",
+      brandId: "napoleon",
+      modelNumber: "Standard 12k",
+      normalizedModelNumber: "standard-12000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 9800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-18000",
+      slug: "napoleon-standard-wall-single-18000",
+      name: "Standard 18 000 BTU",
+      seriesId: "napoleon-standard",
+      brandId: "napoleon",
+      modelNumber: "Standard 18k",
+      normalizedModelNumber: "standard-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 10400,
+      heatingCapacity5FMaxBtu: 19300,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-30000",
+      slug: "napoleon-standard-wall-single-30000",
+      name: "Standard 30 000 BTU",
+      seriesId: "napoleon-standard",
+      brandId: "napoleon",
+      modelNumber: "Standard 30k",
+      normalizedModelNumber: "standard-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 17200,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-24000",
+      slug: "napoleon-standard-wall-single-24000",
+      name: "Standard 24 000 BTU",
+      seriesId: "napoleon-standard",
+      brandId: "napoleon",
+      modelNumber: "Standard 24k",
+      normalizedModelNumber: "standard-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 15300,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-36000",
+      slug: "napoleon-standard-wall-single-36000",
+      name: "Standard 36 000 BTU",
+      seriesId: "napoleon-standard",
+      brandId: "napoleon",
+      modelNumber: "Standard 36k",
+      normalizedModelNumber: "standard-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 24200,
+      heatingCapacity5FMaxBtu: 24600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-nh-series-wall-single-18000",
+      slug: "napoleon-nh-series-wall-single-18000",
+      name: "NH series 18 000 BTU",
+      seriesId: "napoleon-nh-series",
+      brandId: "napoleon",
+      modelNumber: "NH series 18k",
+      normalizedModelNumber: "nh-series-18000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      heatingCapacity5FMinBtu: 10900,
+      heatingCapacity5FMaxBtu: 10900,
+      seer2Min: 19.4,
+      seer2Max: 19.4,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-nh-series-wall-single-20000",
+      slug: "napoleon-nh-series-wall-single-20000",
+      name: "NH Series 20 000 BTU",
+      seriesId: "napoleon-nh-series",
+      brandId: "napoleon",
+      modelNumber: "NH Series 20k",
+      normalizedModelNumber: "nh-series-20000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
+      coolingCapacityMinBtu: 21600,
+      coolingCapacityMaxBtu: 21600,
+      heatingCapacity5FMinBtu: 19400,
+      heatingCapacity5FMaxBtu: 19400,
+      seer2Min: 18.9,
+      seer2Max: 18.9,
+      hspf2Min: 10.4,
+      hspf2Max: 10.4,
+      cop5FMin: 1.89,
+      cop5FMax: 1.89,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-48000",
+      slug: "napoleon-standard-wall-single-48000",
+      name: "Standard 48 000 BTU",
+      seriesId: "napoleon-standard",
+      brandId: "napoleon",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 31400,
       heatingCapacity5FMaxBtu: 45000,
       seer2Min: null,
       seer2Max: null,
@@ -140,25 +357,26 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-nh-series-wall-single",
-      slug: "napoleon-nh-series-wall-single",
-      name: "NH series",
-      seriesId: "napoleon-nh-series",
+      id: "napoleon-ndh-series-wall-single-12000",
+      slug: "napoleon-ndh-series-wall-single-12000",
+      name: "NDH series 12 000 BTU",
+      seriesId: "napoleon-ndh-series",
       brandId: "napoleon",
-      modelNumber: "NH series",
-      normalizedModelNumber: "nh-series",
+      modelNumber: "NDH series 12k",
+      normalizedModelNumber: "ndh-series-12000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 17000,
-      coolingCapacityMaxBtu: 21600,
-      heatingCapacity5FMinBtu: 10900,
-      heatingCapacity5FMaxBtu: 19400,
-      seer2Min: 18.9,
-      seer2Max: 19.4,
-      hspf2Min: 10,
-      hspf2Max: 10.4,
-      cop5FMin: 1.89,
-      cop5FMax: 1.9,
+      nominalCapacityBtu: 12000,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20,
+      seer2Max: 25.5,
+      hspf2Min: 10.4,
+      hspf2Max: 11.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2.41,
       systemType: "wall-single",
       categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
@@ -166,23 +384,24 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single",
-      slug: "napoleon-ndh-series-wall-single",
-      name: "NDH series",
+      id: "napoleon-ndh-series-wall-single-18000",
+      slug: "napoleon-ndh-series-wall-single-18000",
+      name: "NDH series 18 000 BTU",
       seriesId: "napoleon-ndh-series",
       brandId: "napoleon",
-      modelNumber: "NDH series",
-      normalizedModelNumber: "ndh-series",
+      modelNumber: "NDH series 18k",
+      normalizedModelNumber: "ndh-series-18000",
       isActive2026: true,
       thermomatchEligible: true,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 47000,
-      heatingCapacity5FMinBtu: 7900,
-      heatingCapacity5FMaxBtu: 44500,
+      nominalCapacityBtu: 18000,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 13000,
+      heatingCapacity5FMaxBtu: 17600,
       seer2Min: 18.4,
-      seer2Max: 28.1,
-      hspf2Min: 9.5,
-      hspf2Max: 14.8,
+      seer2Max: 25,
+      hspf2Min: 10,
+      hspf2Max: 11.3,
       cop5FMin: 1.8,
       cop5FMax: 2.44,
       systemType: "wall-single",
@@ -192,15 +411,16 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndha-series-wall-single",
-      slug: "napoleon-ndha-series-wall-single",
-      name: "NDHA Series",
+      id: "napoleon-ndha-series-wall-single-24000",
+      slug: "napoleon-ndha-series-wall-single-24000",
+      name: "NDHA Series 24 000 BTU",
       seriesId: "napoleon-ndha-series",
       brandId: "napoleon",
-      modelNumber: "NDHA Series",
-      normalizedModelNumber: "ndha-series",
+      modelNumber: "NDHA Series 24k",
+      normalizedModelNumber: "ndha-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 17400,
@@ -218,18 +438,154 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted",
-      slug: "napoleon-wse-series-central-ducted",
-      name: "WSE Series",
-      seriesId: "napoleon-wse-series",
+      id: "napoleon-ndh-series-wall-single-9000",
+      slug: "napoleon-ndh-series-wall-single-9000",
+      name: "NDH series 9 000 BTU",
+      seriesId: "napoleon-ndh-series",
       brandId: "napoleon",
-      modelNumber: "WSE Series",
-      normalizedModelNumber: "wse-series",
+      modelNumber: "NDH series 9k",
+      normalizedModelNumber: "ndh-series-9000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 9000,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 9500,
+      heatingCapacity5FMaxBtu: 10200,
+      seer2Min: 20.5,
+      seer2Max: 28.1,
+      hspf2Min: 10.9,
+      hspf2Max: 13.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000",
+      slug: "napoleon-ndh-series-wall-single-30000",
+      name: "NDH series 30 000 BTU",
+      seriesId: "napoleon-ndh-series",
+      brandId: "napoleon",
+      modelNumber: "NDH series 30k",
+      normalizedModelNumber: "ndh-series-30000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19,
+      seer2Max: 22.6,
+      hspf2Min: 9.5,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-36000",
+      slug: "napoleon-ndh-series-wall-single-36000",
+      name: "NDH series 36 000 BTU",
+      seriesId: "napoleon-ndh-series",
+      brandId: "napoleon",
+      modelNumber: "NDH series 36k",
+      normalizedModelNumber: "ndh-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 19.4,
+      seer2Max: 23,
+      hspf2Min: 9.7,
+      hspf2Max: 10.7,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-wse-series-central-ducted-24000",
+      slug: "napoleon-wse-series-central-ducted-24000",
+      name: "WSE Series 24 000 BTU",
+      seriesId: "napoleon-wse-series",
+      brandId: "napoleon",
+      modelNumber: "WSE Series 24k",
+      normalizedModelNumber: "wse-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 54000,
+      coolingCapacityMaxBtu: 24000,
       heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-wse-series-central-ducted-36000",
+      slug: "napoleon-wse-series-central-ducted-36000",
+      name: "WSE Series 36 000 BTU",
+      seriesId: "napoleon-wse-series",
+      brandId: "napoleon",
+      modelNumber: "WSE Series 36k",
+      normalizedModelNumber: "wse-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 29000,
+      heatingCapacity5FMaxBtu: 29000,
+      seer2Min: 16,
+      seer2Max: 16,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-wse-series-central-ducted-48000",
+      slug: "napoleon-wse-series-central-ducted-48000",
+      name: "WSE Series 48 000 BTU",
+      seriesId: "napoleon-wse-series",
+      brandId: "napoleon",
+      modelNumber: "WSE Series 48k",
+      normalizedModelNumber: "wse-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 33000,
       heatingCapacity5FMaxBtu: 44000,
       seer2Min: 16,
       seer2Max: 17,
@@ -244,15 +600,16 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted",
-      slug: "napoleon-standard-central-ducted",
-      name: "Standard",
+      id: "napoleon-standard-central-ducted-48000",
+      slug: "napoleon-standard-central-ducted-48000",
+      name: "Standard 48 000 BTU",
       seriesId: "napoleon-standard",
       brandId: "napoleon",
-      modelNumber: "Standard",
-      normalizedModelNumber: "standard",
+      modelNumber: "Standard 48k",
+      normalizedModelNumber: "standard-48000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 33000,
@@ -270,18 +627,46 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted",
-      slug: "napoleon-hyper-heat-central-ducted",
-      name: "Hyper Heat",
+      id: "napoleon-hyper-heat-central-ducted-20000",
+      slug: "napoleon-hyper-heat-central-ducted-20000",
+      name: "Hyper Heat 20 000 BTU",
       seriesId: "napoleon-hyper-heat",
       brandId: "napoleon",
-      modelNumber: "Hyper Heat",
-      normalizedModelNumber: "hyper-heat",
+      modelNumber: "Hyper Heat 20k",
+      normalizedModelNumber: "hyper-heat-20000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 20000,
       coolingCapacityMinBtu: 22000,
-      coolingCapacityMaxBtu: 38000,
+      coolingCapacityMaxBtu: 22000,
       heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 17,
+      seer2Max: 17,
+      hspf2Min: 8.5,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-hyper-heat-central-ducted-36000",
+      slug: "napoleon-hyper-heat-central-ducted-36000",
+      name: "Hyper Heat 36 000 BTU",
+      seriesId: "napoleon-hyper-heat",
+      brandId: "napoleon",
+      modelNumber: "Hyper Heat 36k",
+      normalizedModelNumber: "hyper-heat-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 38000,
+      coolingCapacityMaxBtu: 38000,
+      heatingCapacity5FMinBtu: 25600,
       heatingCapacity5FMaxBtu: 25600,
       seer2Min: 17,
       seer2Max: 17,
@@ -296,15 +681,16 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-cdh-series-wall-single",
-      slug: "napoleon-cdh-series-wall-single",
-      name: "CDH Series",
+      id: "napoleon-cdh-series-wall-single-36000",
+      slug: "napoleon-cdh-series-wall-single-36000",
+      name: "CDH Series 36 000 BTU",
       seriesId: "napoleon-cdh-series",
       brandId: "napoleon",
-      modelNumber: "CDH Series",
-      normalizedModelNumber: "cdh-series",
+      modelNumber: "CDH Series 36k",
+      normalizedModelNumber: "cdh-series-36000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       heatingCapacity5FMinBtu: 30000,
@@ -322,15 +708,16 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-cdha-series-wall-single",
-      slug: "napoleon-cdha-series-wall-single",
-      name: "CDHA Series",
+      id: "napoleon-cdha-series-wall-single-30000",
+      slug: "napoleon-cdha-series-wall-single-30000",
+      name: "CDHA Series 30 000 BTU",
       seriesId: "napoleon-cdha-series",
       brandId: "napoleon",
-      modelNumber: "CDHA Series",
-      normalizedModelNumber: "cdha-series",
+      modelNumber: "CDHA Series 30k",
+      normalizedModelNumber: "cdha-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 33000,
       coolingCapacityMaxBtu: 33000,
       heatingCapacity5FMinBtu: 30000,
@@ -348,27 +735,190 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-f-series-central-ducted",
-      slug: "napoleon-f-series-central-ducted",
-      name: "F Series",
-      seriesId: "napoleon-f-series",
+      id: "napoleon-ndh-series-wall-single-24000",
+      slug: "napoleon-ndh-series-wall-single-24000",
+      name: "NDH Series 24 000 BTU",
+      seriesId: "napoleon-ndh-series",
       brandId: "napoleon",
-      modelNumber: "F Series",
-      normalizedModelNumber: "f-series",
+      modelNumber: "NDH Series 24k",
+      normalizedModelNumber: "ndh-series-24000",
       isActive2026: true,
       thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
       coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 54000,
-      heatingCapacity5FMinBtu: 18000,
-      heatingCapacity5FMaxBtu: 38000,
-      seer2Min: 18,
-      seer2Max: 19,
-      hspf2Min: 9.5,
+      coolingCapacityMaxBtu: 27000,
+      heatingCapacity5FMinBtu: 19500,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: 19,
+      seer2Max: 23.5,
+      hspf2Min: 10,
+      hspf2Max: 13.5,
+      cop5FMin: 2,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-f-series-central-ducted-36000",
+      slug: "napoleon-f-series-central-ducted-36000",
+      name: "F Series 36 000 BTU",
+      seriesId: "napoleon-f-series",
+      brandId: "napoleon",
+      modelNumber: "F Series 36k",
+      normalizedModelNumber: "f-series-36000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 36000,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 23000,
+      seer2Min: 18.5,
+      seer2Max: 18.5,
+      hspf2Min: 10,
       hspf2Max: 10,
-      cop5FMin: 1.75,
+      cop5FMin: 2,
       cop5FMax: 2,
       systemType: "central-ducted",
       categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-f-series-central-ducted-48000",
+      slug: "napoleon-f-series-central-ducted-48000",
+      name: "F Series 48 000 BTU",
+      seriesId: "napoleon-f-series",
+      brandId: "napoleon",
+      modelNumber: "F Series 48k",
+      normalizedModelNumber: "f-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 33400,
+      heatingCapacity5FMaxBtu: 38000,
+      seer2Min: 18.5,
+      seer2Max: 19,
+      hspf2Min: 9.5,
+      hspf2Max: 9.5,
+      cop5FMin: 1.75,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-f-series-central-ducted-24000",
+      slug: "napoleon-f-series-central-ducted-24000",
+      name: "F Series 24 000 BTU",
+      seriesId: "napoleon-f-series",
+      brandId: "napoleon",
+      modelNumber: "F Series 24k",
+      normalizedModelNumber: "f-series-24000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 24000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 10,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-6000",
+      slug: "napoleon-ndh-series-wall-single-6000",
+      name: "NDH Series 6 000 BTU",
+      seriesId: "napoleon-ndh-series",
+      brandId: "napoleon",
+      modelNumber: "NDH Series 6k",
+      normalizedModelNumber: "ndh-series-6000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 6000,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      heatingCapacity5FMinBtu: 7900,
+      heatingCapacity5FMaxBtu: 7900,
+      seer2Min: 25.5,
+      seer2Max: 25.5,
+      hspf2Min: 14.8,
+      hspf2Max: 14.8,
+      cop5FMin: 2.39,
+      cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-15000",
+      slug: "napoleon-ndh-series-wall-single-15000",
+      name: "NDH Series 15 000 BTU",
+      seriesId: "napoleon-ndh-series",
+      brandId: "napoleon",
+      modelNumber: "NDH Series 15k",
+      normalizedModelNumber: "ndh-series-15000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 15000,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      heatingCapacity5FMinBtu: 14200,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 20,
+      seer2Max: 20,
+      hspf2Min: 10.3,
+      hspf2Max: 12.3,
+      cop5FMin: 1.9,
+      cop5FMax: 1.95,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-48000",
+      slug: "napoleon-ndh-series-wall-single-48000",
+      name: "NDH Series 48 000 BTU",
+      seriesId: "napoleon-ndh-series",
+      brandId: "napoleon",
+      modelNumber: "NDH Series 48k",
+      normalizedModelNumber: "ndh-series-48000",
+      isActive2026: true,
+      thermomatchEligible: true,
+      nominalCapacityBtu: 48000,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 44000,
+      heatingCapacity5FMaxBtu: 44500,
+      seer2Min: 20.4,
+      seer2Max: 23,
+      hspf2Min: 11,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
       status: "published",
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -382,56 +932,26 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "napoleon-nh25-12f-o",
-      modelNumber: "NH25-12F-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-nh21-18f-o",
-      modelNumber: "NH21-18F-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-nmzo-27f-b",
-      modelNumber: "NMZO-27F-B",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-nhas-18-o",
-      modelNumber: "NHAS-18-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
       id: "napoleon-nh21-09f-o",
       modelNumber: "NH21-09F-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
     {
+      id: "napoleon-ndhas26b-09-o",
+      modelNumber: "NDHAS26B-09-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-nh25-12f-o",
+      modelNumber: "NH25-12F-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
       id: "napoleon-nh21-12f-o",
       modelNumber: "NH21-12F-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-nh21-24f-o",
-      modelNumber: "NH21-24F-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-nmzo-36f-b",
-      modelNumber: "NMZO-36F-B",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ns18hv48a60",
-      modelNumber: "NS18HV48A60",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -448,26 +968,26 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "napoleon-ndhas22b-18-o",
-      modelNumber: "NDHAS22B-18-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas22b-24-o",
-      modelNumber: "NDHAS22B-24-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas26b-09-o",
-      modelNumber: "NDHAS26B-09-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
       id: "napoleon-ndhas26b-12-o",
       modelNumber: "NDHAS26B-12-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-nh21-18f-o",
+      modelNumber: "NH21-18F-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-nhas-18-o",
+      modelNumber: "NHAS-18-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas22b-18-o",
+      modelNumber: "NDHAS22B-18-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -484,8 +1004,8 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "napoleon-ndhas26b-36-o",
-      modelNumber: "NDHAS26B-36-O",
+      id: "napoleon-nmzo-27f-b",
+      modelNumber: "NMZO-27F-B",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -502,8 +1022,26 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "napoleon-ndhambb-53-o",
-      modelNumber: "NDHAMBB-53-O",
+      id: "napoleon-nh21-24f-o",
+      modelNumber: "NH21-24F-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas22b-24-o",
+      modelNumber: "NDHAS22B-24-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-nmzo-36f-b",
+      modelNumber: "NMZO-36F-B",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas26b-36-o",
+      modelNumber: "NDHAS26B-36-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -520,20 +1058,20 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "napoleon-ns18hv48a60",
+      modelNumber: "NS18HV48A60",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhambb-53-o",
+      modelNumber: "NDHAMBB-53-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
       id: "napoleon-ndhas22-12-o",
       modelNumber: "NDHAS22-12-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas22-18-o",
-      modelNumber: "NDHAS22-18-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas26-09-o",
-      modelNumber: "NDHAS26-09-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -544,44 +1082,8 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
-      id: "napoleon-ndhas26-18-o",
-      modelNumber: "NDHAS26-18-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndham-28-o",
-      modelNumber: "NDHAM-28-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndham-36-o",
-      modelNumber: "NDHAM-36-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
       id: "napoleon-ndhas22ba-12-o",
       modelNumber: "NDHAS22BA-12-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas22ba-18-o",
-      modelNumber: "NDHAS22BA-18-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas22ba-24-o",
-      modelNumber: "NDHAS22BA-24-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas26ba-09-o",
-      modelNumber: "NDHAS26BA-09-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -592,50 +1094,32 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "napoleon-ndhas22-18-o",
+      modelNumber: "NDHAS22-18-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas26-18-o",
+      modelNumber: "NDHAS26-18-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas22ba-18-o",
+      modelNumber: "NDHAS22BA-18-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
       id: "napoleon-ndhas26ba-18-o",
       modelNumber: "NDHAS26BA-18-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
     {
-      id: "napoleon-ndhas26ba-24-o",
-      modelNumber: "NDHAS26BA-24-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas26ba-33-o",
-      modelNumber: "NDHAS26BA-33-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
       id: "napoleon-ndhambb-18-o",
       modelNumber: "NDHAMBB-18-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhambb-27-o",
-      modelNumber: "NDHAMBB-27-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhambb-36-o",
-      modelNumber: "NDHAMBB-36-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhas26ba-06-o",
-      modelNumber: "NDHAS26BA-06-O",
-      brandId: "napoleon",
-      refrigerant: null as any,
-    },
-    {
-      id: "napoleon-ndhambb-48-o",
-      modelNumber: "NDHAMBB-48-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -648,6 +1132,48 @@ export const napoleonDataset: BrandDataset = {
     {
       id: "napoleon-ndhas26-24-o",
       modelNumber: "NDHAS26-24-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas26-09-o",
+      modelNumber: "NDHAS26-09-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas26ba-09-o",
+      modelNumber: "NDHAS26BA-09-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndham-28-o",
+      modelNumber: "NDHAM-28-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas26ba-33-o",
+      modelNumber: "NDHAS26BA-33-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhambb-27-o",
+      modelNumber: "NDHAMBB-27-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndham-36-o",
+      modelNumber: "NDHAM-36-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhambb-36-o",
+      modelNumber: "NDHAMBB-36-O",
       brandId: "napoleon",
       refrigerant: null as any,
     },
@@ -676,6 +1202,18 @@ export const napoleonDataset: BrandDataset = {
       refrigerant: null as any,
     },
     {
+      id: "napoleon-ndhas22ba-24-o",
+      modelNumber: "NDHAS22BA-24-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas26ba-24-o",
+      modelNumber: "NDHAS26BA-24-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
       id: "napoleon-wsehv2436ba1-n",
       modelNumber: "WSEHV2436BA1-N",
       brandId: "napoleon",
@@ -686,6 +1224,18 @@ export const napoleonDataset: BrandDataset = {
       modelNumber: "WSEHV4860BA1-N",
       brandId: "napoleon",
       refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhas26ba-06-o",
+      modelNumber: "NDHAS26BA-06-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
+    },
+    {
+      id: "napoleon-ndhambb-48-o",
+      modelNumber: "NDHAMBB-48-O",
+      brandId: "napoleon",
+      refrigerant: null as any,
     }
   ],
   indoorUnits: [
@@ -693,9 +1243,9 @@ export const napoleonDataset: BrandDataset = {
   ],
   configurations: [
     {
-      id: "napoleon-standard-wall-single-cfg-1",
-      slug: "napoleon-standard-wall-single-cfg-1",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-9000-cfg-1",
+      slug: "napoleon-standard-wall-single-9000-cfg-1",
+      modelId: "napoleon-standard-wall-single-9000",
       outdoorUnitId: "napoleon-nh25-09f-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -707,65 +1257,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-2",
-      slug: "napoleon-standard-wall-single-cfg-2",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nh25-12f-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-3",
-      slug: "napoleon-standard-wall-single-cfg-3",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nh21-18f-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-4",
-      slug: "napoleon-standard-wall-single-cfg-4",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nmzo-27f-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-5",
-      slug: "napoleon-standard-wall-single-cfg-5",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nhas-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-6",
-      slug: "napoleon-standard-wall-single-cfg-6",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-9000-cfg-2",
+      slug: "napoleon-standard-wall-single-9000-cfg-2",
+      modelId: "napoleon-standard-wall-single-9000",
       outdoorUnitId: "napoleon-nh21-09f-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -777,149 +1271,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-7",
-      slug: "napoleon-standard-wall-single-cfg-7",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nh21-12f-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-8",
-      slug: "napoleon-standard-wall-single-cfg-8",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nh21-18f-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-9",
-      slug: "napoleon-standard-wall-single-cfg-9",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nh21-24f-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-10",
-      slug: "napoleon-standard-wall-single-cfg-10",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-nmzo-36f-b",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-11",
-      slug: "napoleon-standard-wall-single-cfg-11",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ns18hv48a60",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-12",
-      slug: "napoleon-standard-wall-single-cfg-12",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ns18hv48a60",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 54000,
-      coolingCapacityMaxBtu: 54000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-13",
-      slug: "napoleon-standard-wall-single-cfg-13",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhbs20-12-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-14",
-      slug: "napoleon-standard-wall-single-cfg-14",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhas22b-12-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 12000,
-      coolingCapacityMaxBtu: 12000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-15",
-      slug: "napoleon-standard-wall-single-cfg-15",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhas22b-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-16",
-      slug: "napoleon-standard-wall-single-cfg-16",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhas22b-24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-17",
-      slug: "napoleon-standard-wall-single-cfg-17",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-9000-cfg-3",
+      slug: "napoleon-standard-wall-single-9000-cfg-3",
+      modelId: "napoleon-standard-wall-single-9000",
       outdoorUnitId: "napoleon-ndhas26b-09-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 9000,
@@ -931,9 +1285,65 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-18",
-      slug: "napoleon-standard-wall-single-cfg-18",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-12000-cfg-1",
+      slug: "napoleon-standard-wall-single-12000-cfg-1",
+      modelId: "napoleon-standard-wall-single-12000",
+      outdoorUnitId: "napoleon-nh25-12f-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-12000-cfg-2",
+      slug: "napoleon-standard-wall-single-12000-cfg-2",
+      modelId: "napoleon-standard-wall-single-12000",
+      outdoorUnitId: "napoleon-nh21-12f-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-12000-cfg-3",
+      slug: "napoleon-standard-wall-single-12000-cfg-3",
+      modelId: "napoleon-standard-wall-single-12000",
+      outdoorUnitId: "napoleon-ndhbs20-12-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-12000-cfg-4",
+      slug: "napoleon-standard-wall-single-12000-cfg-4",
+      modelId: "napoleon-standard-wall-single-12000",
+      outdoorUnitId: "napoleon-ndhas22b-12-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-12000-cfg-5",
+      slug: "napoleon-standard-wall-single-12000-cfg-5",
+      modelId: "napoleon-standard-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas26b-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -945,9 +1355,65 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-19",
-      slug: "napoleon-standard-wall-single-cfg-19",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-18000-cfg-1",
+      slug: "napoleon-standard-wall-single-18000-cfg-1",
+      modelId: "napoleon-standard-wall-single-18000",
+      outdoorUnitId: "napoleon-nh21-18f-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-18000-cfg-2",
+      slug: "napoleon-standard-wall-single-18000-cfg-2",
+      modelId: "napoleon-standard-wall-single-18000",
+      outdoorUnitId: "napoleon-nhas-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-18000-cfg-3",
+      slug: "napoleon-standard-wall-single-18000-cfg-3",
+      modelId: "napoleon-standard-wall-single-18000",
+      outdoorUnitId: "napoleon-nh21-18f-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-18000-cfg-4",
+      slug: "napoleon-standard-wall-single-18000-cfg-4",
+      modelId: "napoleon-standard-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhas22b-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-18000-cfg-5",
+      slug: "napoleon-standard-wall-single-18000-cfg-5",
+      modelId: "napoleon-standard-wall-single-18000",
       outdoorUnitId: "napoleon-ndhas26b-18-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -959,9 +1425,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-20",
-      slug: "napoleon-standard-wall-single-cfg-20",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-18000-cfg-6",
+      slug: "napoleon-standard-wall-single-18000-cfg-6",
+      modelId: "napoleon-standard-wall-single-18000",
       outdoorUnitId: "napoleon-ndhas26b-24-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 18000,
@@ -973,13 +1439,13 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-21",
-      slug: "napoleon-standard-wall-single-cfg-21",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhas26b-36-o",
+      id: "napoleon-standard-wall-single-30000-cfg-1",
+      slug: "napoleon-standard-wall-single-30000-cfg-1",
+      modelId: "napoleon-standard-wall-single-30000",
+      outdoorUnitId: "napoleon-nmzo-27f-b",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -987,23 +1453,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-22",
-      slug: "napoleon-standard-wall-single-cfg-22",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhamb-27-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: null,
-      hspf2: null,
-      minHeatingTempC: -20,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-standard-wall-single-cfg-23",
-      slug: "napoleon-standard-wall-single-cfg-23",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-30000-cfg-2",
+      slug: "napoleon-standard-wall-single-30000-cfg-2",
+      modelId: "napoleon-standard-wall-single-30000",
       outdoorUnitId: "napoleon-ndhamb-27-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 28000,
@@ -1015,9 +1467,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-24",
-      slug: "napoleon-standard-wall-single-cfg-24",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-30000-cfg-3",
+      slug: "napoleon-standard-wall-single-30000-cfg-3",
+      modelId: "napoleon-standard-wall-single-30000",
       outdoorUnitId: "napoleon-ndhamb-27-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 27400,
@@ -1029,9 +1481,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-25",
-      slug: "napoleon-standard-wall-single-cfg-25",
-      modelId: "napoleon-standard-wall-single",
+      id: "napoleon-standard-wall-single-30000-cfg-4",
+      slug: "napoleon-standard-wall-single-30000-cfg-4",
+      modelId: "napoleon-standard-wall-single-30000",
       outdoorUnitId: "napoleon-ndhas26b-33-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -1043,13 +1495,13 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-26",
-      slug: "napoleon-standard-wall-single-cfg-26",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-53-o",
+      id: "napoleon-standard-wall-single-24000-cfg-1",
+      slug: "napoleon-standard-wall-single-24000-cfg-1",
+      modelId: "napoleon-standard-wall-single-24000",
+      outdoorUnitId: "napoleon-nh21-24f-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 51000,
-      coolingCapacityMaxBtu: 51000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1057,13 +1509,13 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-27",
-      slug: "napoleon-standard-wall-single-cfg-27",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-53-o",
+      id: "napoleon-standard-wall-single-24000-cfg-2",
+      slug: "napoleon-standard-wall-single-24000-cfg-2",
+      modelId: "napoleon-standard-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhas22b-24-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 53000,
-      coolingCapacityMaxBtu: 53000,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1071,13 +1523,13 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-wall-single-cfg-28",
-      slug: "napoleon-standard-wall-single-cfg-28",
-      modelId: "napoleon-standard-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-53-o",
+      id: "napoleon-standard-wall-single-24000-cfg-3",
+      slug: "napoleon-standard-wall-single-24000-cfg-3",
+      modelId: "napoleon-standard-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhamb-27-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 52000,
-      coolingCapacityMaxBtu: 52000,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
       seer2: null,
       hspf2: null,
       minHeatingTempC: -20,
@@ -1085,23 +1537,51 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-nh-series-wall-single-cfg-1",
-      slug: "napoleon-nh-series-wall-single-cfg-1",
-      modelId: "napoleon-nh-series-wall-single",
+      id: "napoleon-standard-wall-single-36000-cfg-1",
+      slug: "napoleon-standard-wall-single-36000-cfg-1",
+      modelId: "napoleon-standard-wall-single-36000",
+      outdoorUnitId: "napoleon-nmzo-36f-b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-36000-cfg-2",
+      slug: "napoleon-standard-wall-single-36000-cfg-2",
+      modelId: "napoleon-standard-wall-single-36000",
+      outdoorUnitId: "napoleon-ndhas26b-36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-nh-series-wall-single-18000-cfg-1",
+      slug: "napoleon-nh-series-wall-single-18000-cfg-1",
+      modelId: "napoleon-nh-series-wall-single-18000",
       outdoorUnitId: "napoleon-nh25-18h-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 17000,
       coolingCapacityMaxBtu: 17000,
       seer2: 19.4,
       hspf2: 10,
-      minHeatingTempC: -25,
+      minHeatingTempC: -20,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-nh-series-wall-single-cfg-2",
-      slug: "napoleon-nh-series-wall-single-cfg-2",
-      modelId: "napoleon-nh-series-wall-single",
+      id: "napoleon-nh-series-wall-single-20000-cfg-1",
+      slug: "napoleon-nh-series-wall-single-20000-cfg-1",
+      modelId: "napoleon-nh-series-wall-single-20000",
       outdoorUnitId: "napoleon-nh25-18h-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 21600,
@@ -1113,9 +1593,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-nh-series-wall-single-cfg-3",
-      slug: "napoleon-nh-series-wall-single-cfg-3",
-      modelId: "napoleon-nh-series-wall-single",
+      id: "napoleon-nh-series-wall-single-20000-cfg-2",
+      slug: "napoleon-nh-series-wall-single-20000-cfg-2",
+      modelId: "napoleon-nh-series-wall-single-20000",
       outdoorUnitId: "napoleon-nh25-24h-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 21600,
@@ -1127,9 +1607,79 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-1",
-      slug: "napoleon-ndh-series-wall-single-cfg-1",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-standard-wall-single-48000-cfg-1",
+      slug: "napoleon-standard-wall-single-48000-cfg-1",
+      modelId: "napoleon-standard-wall-single-48000",
+      outdoorUnitId: "napoleon-ns18hv48a60",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-48000-cfg-2",
+      slug: "napoleon-standard-wall-single-48000-cfg-2",
+      modelId: "napoleon-standard-wall-single-48000",
+      outdoorUnitId: "napoleon-ns18hv48a60",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-48000-cfg-3",
+      slug: "napoleon-standard-wall-single-48000-cfg-3",
+      modelId: "napoleon-standard-wall-single-48000",
+      outdoorUnitId: "napoleon-ndhambb-53-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-48000-cfg-4",
+      slug: "napoleon-standard-wall-single-48000-cfg-4",
+      modelId: "napoleon-standard-wall-single-48000",
+      outdoorUnitId: "napoleon-ndhambb-53-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-standard-wall-single-48000-cfg-5",
+      slug: "napoleon-standard-wall-single-48000-cfg-5",
+      modelId: "napoleon-standard-wall-single-48000",
+      outdoorUnitId: "napoleon-ndhambb-53-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-12000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas22-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1141,37 +1691,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-2",
-      slug: "napoleon-ndh-series-wall-single-cfg-2",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas22-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-3",
-      slug: "napoleon-ndh-series-wall-single-cfg-3",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26-09-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 28.1,
-      hspf2: 11.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-4",
-      slug: "napoleon-ndh-series-wall-single-cfg-4",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-12000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas26-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1183,107 +1705,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-5",
-      slug: "napoleon-ndh-series-wall-single-cfg-5",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.5,
-      hspf2: 11.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-6",
-      slug: "napoleon-ndh-series-wall-single-cfg-6",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndham-28-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 22.6,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-7",
-      slug: "napoleon-ndh-series-wall-single-cfg-7",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndham-28-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 22.6,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-8",
-      slug: "napoleon-ndh-series-wall-single-cfg-8",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndham-28-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 22.6,
-      hspf2: 9.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-9",
-      slug: "napoleon-ndh-series-wall-single-cfg-9",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndham-36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-10",
-      slug: "napoleon-ndh-series-wall-single-cfg-10",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndham-36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-11",
-      slug: "napoleon-ndh-series-wall-single-cfg-11",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndham-36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 20,
-      hspf2: 9.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-12",
-      slug: "napoleon-ndh-series-wall-single-cfg-12",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-12000-cfg-3",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-3",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas22ba-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1295,51 +1719,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-13",
-      slug: "napoleon-ndh-series-wall-single-cfg-13",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas22ba-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 24,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-14",
-      slug: "napoleon-ndh-series-wall-single-cfg-14",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas22ba-24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 23.5,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-15",
-      slug: "napoleon-ndh-series-wall-single-cfg-15",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-09-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.4,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-16",
-      slug: "napoleon-ndh-series-wall-single-cfg-16",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-12000-cfg-4",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-4",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas26ba-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1351,121 +1733,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-17",
-      slug: "napoleon-ndh-series-wall-single-cfg-17",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-18",
-      slug: "napoleon-ndh-series-wall-single-cfg-18",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-19",
-      slug: "napoleon-ndh-series-wall-single-cfg-19",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-33-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-20",
-      slug: "napoleon-ndh-series-wall-single-cfg-20",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 19000,
-      coolingCapacityMaxBtu: 19000,
-      seer2: 25,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-21",
-      slug: "napoleon-ndh-series-wall-single-cfg-21",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-27-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27000,
-      coolingCapacityMaxBtu: 27000,
-      seer2: 23,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-22",
-      slug: "napoleon-ndh-series-wall-single-cfg-22",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 23,
-      hspf2: 10.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-23",
-      slug: "napoleon-ndh-series-wall-single-cfg-23",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-06-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 6000,
-      coolingCapacityMaxBtu: 6000,
-      seer2: 25.5,
-      hspf2: 14.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-24",
-      slug: "napoleon-ndh-series-wall-single-cfg-24",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-09-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.4,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-25",
-      slug: "napoleon-ndh-series-wall-single-cfg-25",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-12000-cfg-5",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-5",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas26ba-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1477,65 +1747,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-26",
-      slug: "napoleon-ndh-series-wall-single-cfg-26",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 18000,
-      coolingCapacityMaxBtu: 18000,
-      seer2: 21.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-27",
-      slug: "napoleon-ndh-series-wall-single-cfg-27",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-28",
-      slug: "napoleon-ndh-series-wall-single-cfg-28",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-33-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 33000,
-      coolingCapacityMaxBtu: 33000,
-      seer2: 19.5,
-      hspf2: 10.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-29",
-      slug: "napoleon-ndh-series-wall-single-cfg-29",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-09-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.4,
-      hspf2: 12.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-30",
-      slug: "napoleon-ndh-series-wall-single-cfg-30",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-12000-cfg-6",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-6",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas26ba-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1547,51 +1761,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-31",
-      slug: "napoleon-ndh-series-wall-single-cfg-31",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 12.3,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-32",
-      slug: "napoleon-ndh-series-wall-single-cfg-32",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 21,
-      hspf2: 13.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-33",
-      slug: "napoleon-ndh-series-wall-single-cfg-33",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-09-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 20.5,
-      hspf2: 13.8,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-34",
-      slug: "napoleon-ndh-series-wall-single-cfg-34",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-12000-cfg-7",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-7",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas26ba-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1603,51 +1775,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-35",
-      slug: "napoleon-ndh-series-wall-single-cfg-35",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-18-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 17500,
-      coolingCapacityMaxBtu: 17500,
-      seer2: 18.4,
-      hspf2: 11.1,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-36",
-      slug: "napoleon-ndh-series-wall-single-cfg-36",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-24-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 24000,
-      coolingCapacityMaxBtu: 24000,
-      seer2: 19,
-      hspf2: 11.7,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-37",
-      slug: "napoleon-ndh-series-wall-single-cfg-37",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-09-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 9000,
-      coolingCapacityMaxBtu: 9000,
-      seer2: 27.2,
-      hspf2: 10.9,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-38",
-      slug: "napoleon-ndh-series-wall-single-cfg-38",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-12000-cfg-8",
+      slug: "napoleon-ndh-series-wall-single-12000-cfg-8",
+      modelId: "napoleon-ndh-series-wall-single-12000",
       outdoorUnitId: "napoleon-ndhas26ba-12-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 12000,
@@ -1659,23 +1789,107 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-39",
-      slug: "napoleon-ndh-series-wall-single-cfg-39",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhas26ba-18-o",
+      id: "napoleon-ndh-series-wall-single-18000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhas22-18-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 16000,
-      coolingCapacityMaxBtu: 16000,
-      seer2: 20,
-      hspf2: 10.3,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 10.5,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-40",
-      slug: "napoleon-ndh-series-wall-single-cfg-40",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-18000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhas26-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-18000-cfg-3",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-3",
+      modelId: "napoleon-ndh-series-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhas22ba-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-18000-cfg-4",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-4",
+      modelId: "napoleon-ndh-series-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhas26ba-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-18000-cfg-5",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-5",
+      modelId: "napoleon-ndh-series-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhambb-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 25,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-18000-cfg-6",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-6",
+      modelId: "napoleon-ndh-series-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhas26ba-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-18000-cfg-7",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-7",
+      modelId: "napoleon-ndh-series-wall-single-18000",
+      outdoorUnitId: "napoleon-ndhas26ba-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 18.4,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-18000-cfg-8",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-8",
+      modelId: "napoleon-ndh-series-wall-single-18000",
       outdoorUnitId: "napoleon-ndhambb-18-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1687,9 +1901,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-41",
-      slug: "napoleon-ndh-series-wall-single-cfg-41",
-      modelId: "napoleon-ndh-series-wall-single",
+      id: "napoleon-ndh-series-wall-single-18000-cfg-9",
+      slug: "napoleon-ndh-series-wall-single-18000-cfg-9",
+      modelId: "napoleon-ndh-series-wall-single-18000",
       outdoorUnitId: "napoleon-ndhambb-18-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 19000,
@@ -1701,107 +1915,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndh-series-wall-single-cfg-42",
-      slug: "napoleon-ndh-series-wall-single-cfg-42",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-27-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 28000,
-      coolingCapacityMaxBtu: 28000,
-      seer2: 19,
-      hspf2: 9.5,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-43",
-      slug: "napoleon-ndh-series-wall-single-cfg-43",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-27-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 27400,
-      coolingCapacityMaxBtu: 27400,
-      seer2: 21,
-      hspf2: 10,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-44",
-      slug: "napoleon-ndh-series-wall-single-cfg-44",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 19.4,
-      hspf2: 10.4,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-45",
-      slug: "napoleon-ndh-series-wall-single-cfg-45",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-36-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 36000,
-      coolingCapacityMaxBtu: 36000,
-      seer2: 21.2,
-      hspf2: 10.55,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-46",
-      slug: "napoleon-ndh-series-wall-single-cfg-46",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-48-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 23,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-47",
-      slug: "napoleon-ndh-series-wall-single-cfg-47",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-48-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 20.4,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndh-series-wall-single-cfg-48",
-      slug: "napoleon-ndh-series-wall-single-cfg-48",
-      modelId: "napoleon-ndh-series-wall-single",
-      outdoorUnitId: "napoleon-ndhambb-48-o",
-      indoorUnitId: null,
-      coolingCapacityMinBtu: 47000,
-      coolingCapacityMaxBtu: 47000,
-      seer2: 21.7,
-      hspf2: 11,
-      minHeatingTempC: -25,
-      createdAt: "2024-01-01T00:00:00Z",
-      updatedAt: "2024-01-01T00:00:00Z",
-    },
-    {
-      id: "napoleon-ndha-series-wall-single-cfg-1",
-      slug: "napoleon-ndha-series-wall-single-cfg-1",
-      modelId: "napoleon-ndha-series-wall-single",
+      id: "napoleon-ndha-series-wall-single-24000-cfg-1",
+      slug: "napoleon-ndha-series-wall-single-24000-cfg-1",
+      modelId: "napoleon-ndha-series-wall-single-24000",
       outdoorUnitId: "napoleon-ndhas22-24-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1813,9 +1929,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-ndha-series-wall-single-cfg-2",
-      slug: "napoleon-ndha-series-wall-single-cfg-2",
-      modelId: "napoleon-ndha-series-wall-single",
+      id: "napoleon-ndha-series-wall-single-24000-cfg-2",
+      slug: "napoleon-ndha-series-wall-single-24000-cfg-2",
+      modelId: "napoleon-ndha-series-wall-single-24000",
       outdoorUnitId: "napoleon-ndhas26-24-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1827,9 +1943,275 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-1",
-      slug: "napoleon-wse-series-central-ducted-cfg-1",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-ndh-series-wall-single-9000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-9000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-9000",
+      outdoorUnitId: "napoleon-ndhas26-09-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-9000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-9000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-9000",
+      outdoorUnitId: "napoleon-ndhas26ba-09-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-9000-cfg-3",
+      slug: "napoleon-ndh-series-wall-single-9000-cfg-3",
+      modelId: "napoleon-ndh-series-wall-single-9000",
+      outdoorUnitId: "napoleon-ndhas26ba-09-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-9000-cfg-4",
+      slug: "napoleon-ndh-series-wall-single-9000-cfg-4",
+      modelId: "napoleon-ndh-series-wall-single-9000",
+      outdoorUnitId: "napoleon-ndhas26ba-09-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-9000-cfg-5",
+      slug: "napoleon-ndh-series-wall-single-9000-cfg-5",
+      modelId: "napoleon-ndh-series-wall-single-9000",
+      outdoorUnitId: "napoleon-ndhas26ba-09-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-9000-cfg-6",
+      slug: "napoleon-ndh-series-wall-single-9000-cfg-6",
+      modelId: "napoleon-ndh-series-wall-single-9000",
+      outdoorUnitId: "napoleon-ndhas26ba-09-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.2,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-30000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-30000",
+      outdoorUnitId: "napoleon-ndham-28-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.6,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-30000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-30000",
+      outdoorUnitId: "napoleon-ndham-28-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.6,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000-cfg-3",
+      slug: "napoleon-ndh-series-wall-single-30000-cfg-3",
+      modelId: "napoleon-ndh-series-wall-single-30000",
+      outdoorUnitId: "napoleon-ndham-28-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.6,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000-cfg-4",
+      slug: "napoleon-ndh-series-wall-single-30000-cfg-4",
+      modelId: "napoleon-ndh-series-wall-single-30000",
+      outdoorUnitId: "napoleon-ndhas26ba-33-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000-cfg-5",
+      slug: "napoleon-ndh-series-wall-single-30000-cfg-5",
+      modelId: "napoleon-ndh-series-wall-single-30000",
+      outdoorUnitId: "napoleon-ndhas26ba-33-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000-cfg-6",
+      slug: "napoleon-ndh-series-wall-single-30000-cfg-6",
+      modelId: "napoleon-ndh-series-wall-single-30000",
+      outdoorUnitId: "napoleon-ndhambb-27-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-30000-cfg-7",
+      slug: "napoleon-ndh-series-wall-single-30000-cfg-7",
+      modelId: "napoleon-ndh-series-wall-single-30000",
+      outdoorUnitId: "napoleon-ndhambb-27-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-36000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-36000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-36000",
+      outdoorUnitId: "napoleon-ndham-36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-36000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-36000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-36000",
+      outdoorUnitId: "napoleon-ndham-36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-36000-cfg-3",
+      slug: "napoleon-ndh-series-wall-single-36000-cfg-3",
+      modelId: "napoleon-ndh-series-wall-single-36000",
+      outdoorUnitId: "napoleon-ndham-36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-36000-cfg-4",
+      slug: "napoleon-ndh-series-wall-single-36000-cfg-4",
+      modelId: "napoleon-ndh-series-wall-single-36000",
+      outdoorUnitId: "napoleon-ndhambb-36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-36000-cfg-5",
+      slug: "napoleon-ndh-series-wall-single-36000-cfg-5",
+      modelId: "napoleon-ndh-series-wall-single-36000",
+      outdoorUnitId: "napoleon-ndhambb-36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-36000-cfg-6",
+      slug: "napoleon-ndh-series-wall-single-36000-cfg-6",
+      modelId: "napoleon-ndh-series-wall-single-36000",
+      outdoorUnitId: "napoleon-ndhambb-36-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.2,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-wse-series-central-ducted-24000-cfg-1",
+      slug: "napoleon-wse-series-central-ducted-24000-cfg-1",
+      modelId: "napoleon-wse-series-central-ducted-24000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -1841,9 +2223,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-2",
-      slug: "napoleon-wse-series-central-ducted-cfg-2",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-36000-cfg-1",
+      slug: "napoleon-wse-series-central-ducted-36000-cfg-1",
+      modelId: "napoleon-wse-series-central-ducted-36000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -1855,9 +2237,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-3",
-      slug: "napoleon-wse-series-central-ducted-cfg-3",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-1",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-1",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1869,9 +2251,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-4",
-      slug: "napoleon-wse-series-central-ducted-cfg-4",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-2",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-2",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -1883,9 +2265,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-5",
-      slug: "napoleon-wse-series-central-ducted-cfg-5",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-3",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-3",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1897,9 +2279,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-6",
-      slug: "napoleon-wse-series-central-ducted-cfg-6",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-4",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-4",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1911,9 +2293,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-7",
-      slug: "napoleon-wse-series-central-ducted-cfg-7",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-5",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-5",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1925,9 +2307,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-8",
-      slug: "napoleon-wse-series-central-ducted-cfg-8",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-6",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-6",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1939,9 +2321,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-9",
-      slug: "napoleon-wse-series-central-ducted-cfg-9",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-7",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-7",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1953,9 +2335,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-10",
-      slug: "napoleon-wse-series-central-ducted-cfg-10",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-8",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-8",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1967,9 +2349,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-11",
-      slug: "napoleon-wse-series-central-ducted-cfg-11",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-9",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-9",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1981,9 +2363,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-wse-series-central-ducted-cfg-12",
-      slug: "napoleon-wse-series-central-ducted-cfg-12",
-      modelId: "napoleon-wse-series-central-ducted",
+      id: "napoleon-wse-series-central-ducted-48000-cfg-10",
+      slug: "napoleon-wse-series-central-ducted-48000-cfg-10",
+      modelId: "napoleon-wse-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 48000,
@@ -1995,9 +2377,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-1",
-      slug: "napoleon-standard-central-ducted-cfg-1",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-1",
+      slug: "napoleon-standard-central-ducted-48000-cfg-1",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2009,9 +2391,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-2",
-      slug: "napoleon-standard-central-ducted-cfg-2",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-2",
+      slug: "napoleon-standard-central-ducted-48000-cfg-2",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2023,9 +2405,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-3",
-      slug: "napoleon-standard-central-ducted-cfg-3",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-3",
+      slug: "napoleon-standard-central-ducted-48000-cfg-3",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2037,9 +2419,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-4",
-      slug: "napoleon-standard-central-ducted-cfg-4",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-4",
+      slug: "napoleon-standard-central-ducted-48000-cfg-4",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2051,9 +2433,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-5",
-      slug: "napoleon-standard-central-ducted-cfg-5",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-5",
+      slug: "napoleon-standard-central-ducted-48000-cfg-5",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -2065,9 +2447,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-6",
-      slug: "napoleon-standard-central-ducted-cfg-6",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-6",
+      slug: "napoleon-standard-central-ducted-48000-cfg-6",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -2079,9 +2461,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-7",
-      slug: "napoleon-standard-central-ducted-cfg-7",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-7",
+      slug: "napoleon-standard-central-ducted-48000-cfg-7",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -2093,9 +2475,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-standard-central-ducted-cfg-8",
-      slug: "napoleon-standard-central-ducted-cfg-8",
-      modelId: "napoleon-standard-central-ducted",
+      id: "napoleon-standard-central-ducted-48000-cfg-8",
+      slug: "napoleon-standard-central-ducted-48000-cfg-8",
+      modelId: "napoleon-standard-central-ducted-48000",
       outdoorUnitId: "napoleon-ns18hv48a60",
       indoorUnitId: null,
       coolingCapacityMinBtu: 46000,
@@ -2107,9 +2489,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-1",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-1",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-20000-cfg-1",
+      slug: "napoleon-hyper-heat-central-ducted-20000-cfg-1",
+      modelId: "napoleon-hyper-heat-central-ducted-20000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2121,9 +2503,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-2",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-2",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-20000-cfg-2",
+      slug: "napoleon-hyper-heat-central-ducted-20000-cfg-2",
+      modelId: "napoleon-hyper-heat-central-ducted-20000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2135,9 +2517,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-3",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-3",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-20000-cfg-3",
+      slug: "napoleon-hyper-heat-central-ducted-20000-cfg-3",
+      modelId: "napoleon-hyper-heat-central-ducted-20000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2149,9 +2531,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-4",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-4",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-20000-cfg-4",
+      slug: "napoleon-hyper-heat-central-ducted-20000-cfg-4",
+      modelId: "napoleon-hyper-heat-central-ducted-20000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2163,9 +2545,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-5",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-5",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-20000-cfg-5",
+      slug: "napoleon-hyper-heat-central-ducted-20000-cfg-5",
+      modelId: "napoleon-hyper-heat-central-ducted-20000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2177,9 +2559,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-6",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-6",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-20000-cfg-6",
+      slug: "napoleon-hyper-heat-central-ducted-20000-cfg-6",
+      modelId: "napoleon-hyper-heat-central-ducted-20000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 22000,
@@ -2191,9 +2573,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-7",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-7",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-36000-cfg-1",
+      slug: "napoleon-hyper-heat-central-ducted-36000-cfg-1",
+      modelId: "napoleon-hyper-heat-central-ducted-36000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 38000,
@@ -2205,9 +2587,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-8",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-8",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-36000-cfg-2",
+      slug: "napoleon-hyper-heat-central-ducted-36000-cfg-2",
+      modelId: "napoleon-hyper-heat-central-ducted-36000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 38000,
@@ -2219,9 +2601,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-9",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-9",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-36000-cfg-3",
+      slug: "napoleon-hyper-heat-central-ducted-36000-cfg-3",
+      modelId: "napoleon-hyper-heat-central-ducted-36000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 38000,
@@ -2233,9 +2615,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-hyper-heat-central-ducted-cfg-10",
-      slug: "napoleon-hyper-heat-central-ducted-cfg-10",
-      modelId: "napoleon-hyper-heat-central-ducted",
+      id: "napoleon-hyper-heat-central-ducted-36000-cfg-4",
+      slug: "napoleon-hyper-heat-central-ducted-36000-cfg-4",
+      modelId: "napoleon-hyper-heat-central-ducted-36000",
       outdoorUnitId: "napoleon-wsehv2436ra1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 38000,
@@ -2247,9 +2629,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-cdh-series-wall-single-cfg-1",
-      slug: "napoleon-cdh-series-wall-single-cfg-1",
-      modelId: "napoleon-cdh-series-wall-single",
+      id: "napoleon-cdh-series-wall-single-36000-cfg-1",
+      slug: "napoleon-cdh-series-wall-single-36000-cfg-1",
+      modelId: "napoleon-cdh-series-wall-single-36000",
       outdoorUnitId: "napoleon-ndhamb-36-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2261,9 +2643,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-cdh-series-wall-single-cfg-2",
-      slug: "napoleon-cdh-series-wall-single-cfg-2",
-      modelId: "napoleon-cdh-series-wall-single",
+      id: "napoleon-cdh-series-wall-single-36000-cfg-2",
+      slug: "napoleon-cdh-series-wall-single-36000-cfg-2",
+      modelId: "napoleon-cdh-series-wall-single-36000",
       outdoorUnitId: "napoleon-ndhamb-36-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2275,9 +2657,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-cdh-series-wall-single-cfg-3",
-      slug: "napoleon-cdh-series-wall-single-cfg-3",
-      modelId: "napoleon-cdh-series-wall-single",
+      id: "napoleon-cdh-series-wall-single-36000-cfg-3",
+      slug: "napoleon-cdh-series-wall-single-36000-cfg-3",
+      modelId: "napoleon-cdh-series-wall-single-36000",
       outdoorUnitId: "napoleon-ndhamb-36-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 36000,
@@ -2289,9 +2671,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-cdha-series-wall-single-cfg-1",
-      slug: "napoleon-cdha-series-wall-single-cfg-1",
-      modelId: "napoleon-cdha-series-wall-single",
+      id: "napoleon-cdha-series-wall-single-30000-cfg-1",
+      slug: "napoleon-cdha-series-wall-single-30000-cfg-1",
+      modelId: "napoleon-cdha-series-wall-single-30000",
       outdoorUnitId: "napoleon-cdhas26b-33-o",
       indoorUnitId: null,
       coolingCapacityMinBtu: 33000,
@@ -2303,9 +2685,93 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-f-series-central-ducted-cfg-1",
-      slug: "napoleon-f-series-central-ducted-cfg-1",
-      modelId: "napoleon-f-series-central-ducted",
+      id: "napoleon-ndh-series-wall-single-24000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-24000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhas22ba-24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-24000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-24000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhas26ba-24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-24000-cfg-3",
+      slug: "napoleon-ndh-series-wall-single-24000-cfg-3",
+      modelId: "napoleon-ndh-series-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhambb-27-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-24000-cfg-4",
+      slug: "napoleon-ndh-series-wall-single-24000-cfg-4",
+      modelId: "napoleon-ndh-series-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhas26ba-24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-24000-cfg-5",
+      slug: "napoleon-ndh-series-wall-single-24000-cfg-5",
+      modelId: "napoleon-ndh-series-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhas26ba-24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-24000-cfg-6",
+      slug: "napoleon-ndh-series-wall-single-24000-cfg-6",
+      modelId: "napoleon-ndh-series-wall-single-24000",
+      outdoorUnitId: "napoleon-ndhas26ba-24-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-f-series-central-ducted-36000-cfg-1",
+      slug: "napoleon-f-series-central-ducted-36000-cfg-1",
+      modelId: "napoleon-f-series-central-ducted-36000",
       outdoorUnitId: "napoleon-wsehv2436ba1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 34000,
@@ -2317,9 +2783,9 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-f-series-central-ducted-cfg-2",
-      slug: "napoleon-f-series-central-ducted-cfg-2",
-      modelId: "napoleon-f-series-central-ducted",
+      id: "napoleon-f-series-central-ducted-48000-cfg-1",
+      slug: "napoleon-f-series-central-ducted-48000-cfg-1",
+      modelId: "napoleon-f-series-central-ducted-48000",
       outdoorUnitId: "napoleon-wsehv4860ba1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 54000,
@@ -2331,9 +2797,23 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-f-series-central-ducted-cfg-3",
-      slug: "napoleon-f-series-central-ducted-cfg-3",
-      modelId: "napoleon-f-series-central-ducted",
+      id: "napoleon-f-series-central-ducted-48000-cfg-2",
+      slug: "napoleon-f-series-central-ducted-48000-cfg-2",
+      modelId: "napoleon-f-series-central-ducted-48000",
+      outdoorUnitId: "napoleon-wsehv4860ba1-n",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-f-series-central-ducted-24000-cfg-1",
+      slug: "napoleon-f-series-central-ducted-24000-cfg-1",
+      modelId: "napoleon-f-series-central-ducted-24000",
       outdoorUnitId: "napoleon-wsehv2436ba1-n",
       indoorUnitId: null,
       coolingCapacityMinBtu: 24000,
@@ -2345,15 +2825,85 @@ export const napoleonDataset: BrandDataset = {
       updatedAt: "2024-01-01T00:00:00Z",
     },
     {
-      id: "napoleon-f-series-central-ducted-cfg-4",
-      slug: "napoleon-f-series-central-ducted-cfg-4",
-      modelId: "napoleon-f-series-central-ducted",
-      outdoorUnitId: "napoleon-wsehv4860ba1-n",
+      id: "napoleon-ndh-series-wall-single-6000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-6000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-6000",
+      outdoorUnitId: "napoleon-ndhas26ba-06-o",
       indoorUnitId: null,
-      coolingCapacityMinBtu: 48000,
-      coolingCapacityMaxBtu: 48000,
-      seer2: 19,
-      hspf2: 9.5,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 25.5,
+      hspf2: 14.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-15000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-15000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-15000",
+      outdoorUnitId: "napoleon-ndhas26ba-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-15000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-15000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-15000",
+      outdoorUnitId: "napoleon-ndhas26ba-18-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-48000-cfg-1",
+      slug: "napoleon-ndh-series-wall-single-48000-cfg-1",
+      modelId: "napoleon-ndh-series-wall-single-48000",
+      outdoorUnitId: "napoleon-ndhambb-48-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 23,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-48000-cfg-2",
+      slug: "napoleon-ndh-series-wall-single-48000-cfg-2",
+      modelId: "napoleon-ndh-series-wall-single-48000",
+      outdoorUnitId: "napoleon-ndhambb-48-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "napoleon-ndh-series-wall-single-48000-cfg-3",
+      slug: "napoleon-ndh-series-wall-single-48000-cfg-3",
+      modelId: "napoleon-ndh-series-wall-single-48000",
+      outdoorUnitId: "napoleon-ndhambb-48-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21.7,
+      hspf2: 11,
       minHeatingTempC: -25,
       createdAt: "2024-01-01T00:00:00Z",
       updatedAt: "2024-01-01T00:00:00Z",
@@ -2361,7 +2911,7 @@ export const napoleonDataset: BrandDataset = {
   ],
   performanceProfiles: [
     {
-      configurationId: "napoleon-standard-wall-single-cfg-1",
+      configurationId: "napoleon-standard-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2372,51 +2922,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17200,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-6",
+      configurationId: "napoleon-standard-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2427,7 +2933,29 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-7",
+      configurationId: "napoleon-standard-wall-single-9000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-12000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2438,62 +2966,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 11400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15300,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24600,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 36000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-13",
+      configurationId: "napoleon-standard-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2504,7 +2977,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-14",
+      configurationId: "napoleon-standard-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2515,7 +2988,51 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-15",
+      configurationId: "napoleon-standard-wall-single-12000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-18000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-18000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2526,40 +3043,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-16",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-19",
+      configurationId: "napoleon-standard-wall-single-18000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2570,7 +3054,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-20",
+      configurationId: "napoleon-standard-wall-single-18000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2581,7 +3065,95 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-21",
+      configurationId: "napoleon-standard-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-30000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-36000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2592,84 +3164,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-standard-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 45000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-nh-series-wall-single-cfg-1",
+      configurationId: "napoleon-nh-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2680,7 +3175,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-nh-series-wall-single-cfg-2",
+      configurationId: "napoleon-nh-series-wall-single-20000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2691,7 +3186,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-nh-series-wall-single-cfg-3",
+      configurationId: "napoleon-nh-series-wall-single-20000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2702,7 +3197,62 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-1",
+      configurationId: "napoleon-standard-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-wall-single-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2713,29 +3263,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14100,
-          cop: 2.44,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-4",
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2746,84 +3274,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 27000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 26200,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 35000,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-12",
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2834,29 +3285,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-13",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 13000,
-          cop: 2.35,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-14",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 19500,
-          cop: 2.15,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-15",
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2867,7 +3296,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-16",
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-5",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -2878,150 +3307,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-17",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 16600,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-18",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-19",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-20",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 17600,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-21",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-22",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-23",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 7900,
-          cop: 2.39,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-24",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-25",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-26",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.92,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-27",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21000,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-28",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
-          cop: 1.98,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-29",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9700,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-30",
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3032,40 +3318,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-31",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 14900,
-          cop: 1.9,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-32",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 20400,
-          cop: 2.34,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-33",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 10200,
-          cop: 1.85,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-34",
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-7",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3076,40 +3329,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-35",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 2.1,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-36",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 21600,
-          cop: 2.18,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-37",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 9800,
-          cop: 1.84,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-38",
+      configurationId: "napoleon-ndh-series-wall-single-12000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3120,18 +3340,84 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-39",
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 14200,
-          cop: 1.95,
+          heatingCapacityBtu: 14100,
+          cop: 2.44,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-40",
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: 2.35,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-8",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3142,7 +3428,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-41",
+      configurationId: "napoleon-ndh-series-wall-single-18000-cfg-9",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3153,84 +3439,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-42",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 23000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-43",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 24000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-44",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-45",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-46",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-47",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44500,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndh-series-wall-single-cfg-48",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 2,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-ndha-series-wall-single-cfg-1",
+      configurationId: "napoleon-ndha-series-wall-single-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3241,7 +3450,7 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-ndha-series-wall-single-cfg-2",
+      configurationId: "napoleon-ndha-series-wall-single-24000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3252,370 +3461,106 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-1",
+      configurationId: "napoleon-ndh-series-wall-single-9000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 20000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 29000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 39500,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 44000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-11",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-wse-series-central-ducted-cfg-12",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 38000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-standard-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: null,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-2",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-3",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-4",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-5",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-6",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 15000,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-7",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-8",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-9",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-hyper-heat-central-ducted-cfg-10",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 25600,
-          cop: 1.8,
-          confidence: "verified",
-        }
-      ]
-    },
-    {
-      configurationId: "napoleon-cdh-series-wall-single-cfg-1",
-      dataPoints: [
-        {
-          outdoorTempC: -15,
-          heatingCapacityBtu: 30000,
+          heatingCapacityBtu: 9500,
           cop: 2,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "napoleon-cdh-series-wall-single-cfg-2",
+      configurationId: "napoleon-ndh-series-wall-single-9000-cfg-2",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 33000,
-          cop: 2,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "napoleon-cdh-series-wall-single-cfg-3",
+      configurationId: "napoleon-ndh-series-wall-single-9000-cfg-3",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 31400,
-          cop: 2,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
           confidence: "verified",
         }
       ]
     },
     {
-      configurationId: "napoleon-cdha-series-wall-single-cfg-1",
+      configurationId: "napoleon-ndh-series-wall-single-9000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-9000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-9000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-30000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-30000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-30000-cfg-4",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3626,7 +3571,18 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-f-series-central-ducted-cfg-1",
+      configurationId: "napoleon-ndh-series-wall-single-30000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-30000-cfg-6",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3637,7 +3593,535 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-f-series-central-ducted-cfg-2",
+      configurationId: "napoleon-ndh-series-wall-single-30000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-36000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-36000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-wse-series-central-ducted-48000-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-standard-central-ducted-48000-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-20000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-20000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-20000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-20000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-20000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-20000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-hyper-heat-central-ducted-36000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-cdh-series-wall-single-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-cdh-series-wall-single-36000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-cdh-series-wall-single-36000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-cdha-series-wall-single-30000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.98,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-24000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-24000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-24000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-24000-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-24000-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-24000-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-f-series-central-ducted-36000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-f-series-central-ducted-48000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3648,7 +4132,18 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-f-series-central-ducted-cfg-3",
+      configurationId: "napoleon-f-series-central-ducted-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-f-series-central-ducted-24000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
@@ -3659,12 +4154,67 @@ export const napoleonDataset: BrandDataset = {
       ]
     },
     {
-      configurationId: "napoleon-f-series-central-ducted-cfg-4",
+      configurationId: "napoleon-ndh-series-wall-single-6000-cfg-1",
       dataPoints: [
         {
           outdoorTempC: -15,
-          heatingCapacityBtu: 33400,
-          cop: 1.8,
+          heatingCapacityBtu: 7900,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-15000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-15000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-48000-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-48000-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "napoleon-ndh-series-wall-single-48000-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
           confidence: "verified",
         }
       ]
