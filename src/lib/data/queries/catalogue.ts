@@ -166,9 +166,11 @@ export function getCatalogueModels(
   }
 
   if (params.series) {
-    const matchedSeries = registry.series.find((s) => s.slug === params.series);
-    if (matchedSeries) {
-      models = models.filter((m) => m.seriesId === matchedSeries.id);
+    const matchedSeriesIds = new Set(
+      registry.series.filter((s) => s.slug === params.series).map((s) => s.id),
+    );
+    if (matchedSeriesIds.size > 0) {
+      models = models.filter((m) => matchedSeriesIds.has(m.seriesId));
     } else {
       models = [];
     }

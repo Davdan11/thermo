@@ -42,7 +42,7 @@ export const daikinDataset: BrandDataset = {
 
   series: [
     {
-      id: "series-daikin-aurora",
+      id: "daikin-aurora",
       slug: "daikin-aurora",
       name: "Aurora",
       brandId: "daikin",
@@ -56,7 +56,7 @@ export const daikinDataset: BrandDataset = {
       verifiedAt: null,
     },
     {
-      id: "series-daikin-fit-aurora",
+      id: "daikin-fit-aurora",
       slug: "daikin-fit-aurora",
       name: "FIT Aurora",
       brandId: "daikin",
@@ -70,7 +70,7 @@ export const daikinDataset: BrandDataset = {
       verifiedAt: null,
     },
     {
-      id: "series-daikin-atmosphera",
+      id: "daikin-atmosphera",
       slug: "daikin-atmosphera",
       name: "Atmosphera",
       brandId: "daikin",
@@ -87,36 +87,36 @@ export const daikinDataset: BrandDataset = {
 
   models: [
     // Aurora
-    { id: "model-daikin-aurora-9k",  slug: "daikin-aurora-9k",  name: "Aurora 9 000 BTU",  seriesId: "series-daikin-aurora", brandId: "daikin", modelNumber: "FTXS09WVJU", normalizedModelNumber: "ftxs09wvju",
+    { id: "model-daikin-aurora-9k",  slug: "daikin-aurora-9k",  name: "Aurora 9 000 BTU",  seriesId: "daikin-aurora", brandId: "daikin", modelNumber: "FTXS09WVJU", normalizedModelNumber: "ftxs09wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 9000,  zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-aurora-12k", slug: "daikin-aurora-12k", name: "Aurora 12 000 BTU", seriesId: "series-daikin-aurora", brandId: "daikin", modelNumber: "FTXS12WVJU", normalizedModelNumber: "ftxs12wvju",
+    { id: "model-daikin-aurora-12k", slug: "daikin-aurora-12k", name: "Aurora 12 000 BTU", seriesId: "daikin-aurora", brandId: "daikin", modelNumber: "FTXS12WVJU", normalizedModelNumber: "ftxs12wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 12000, zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-aurora-15k", slug: "daikin-aurora-15k", name: "Aurora 15 000 BTU", seriesId: "series-daikin-aurora", brandId: "daikin", modelNumber: "FTXS15WVJU", normalizedModelNumber: "ftxs15wvju",
+    { id: "model-daikin-aurora-15k", slug: "daikin-aurora-15k", name: "Aurora 15 000 BTU", seriesId: "daikin-aurora", brandId: "daikin", modelNumber: "FTXS15WVJU", normalizedModelNumber: "ftxs15wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 15000, zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-aurora-18k", slug: "daikin-aurora-18k", name: "Aurora 18 000 BTU", seriesId: "series-daikin-aurora", brandId: "daikin", modelNumber: "FTXS18WVJU", normalizedModelNumber: "ftxs18wvju",
+    { id: "model-daikin-aurora-18k", slug: "daikin-aurora-18k", name: "Aurora 18 000 BTU", seriesId: "daikin-aurora", brandId: "daikin", modelNumber: "FTXS18WVJU", normalizedModelNumber: "ftxs18wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 18000, zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-aurora-24k", slug: "daikin-aurora-24k", name: "Aurora 24 000 BTU", seriesId: "series-daikin-aurora", brandId: "daikin", modelNumber: "FTXS24WVJU", normalizedModelNumber: "ftxs24wvju",
+    { id: "model-daikin-aurora-24k", slug: "daikin-aurora-24k", name: "Aurora 24 000 BTU", seriesId: "daikin-aurora", brandId: "daikin", modelNumber: "FTXS24WVJU", normalizedModelNumber: "ftxs24wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 24000, zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
     // FIT Aurora
-    { id: "model-daikin-fit-18k",    slug: "daikin-fit-aurora-18k", name: "FIT Aurora 18 000 BTU", seriesId: "series-daikin-fit-aurora", brandId: "daikin", modelNumber: "DZ17VSA-18A", normalizedModelNumber: "dz17vsa18a",
+    { id: "model-daikin-fit-18k",    slug: "daikin-fit-aurora-18k", name: "FIT Aurora 18 000 BTU", seriesId: "daikin-fit-aurora", brandId: "daikin", modelNumber: "DZ17VSA-18A", normalizedModelNumber: "dz17vsa18a",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 18000, zones: 1, systemType: "central-ducted", categories: ["air-air","cold-climate","ducted","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-fit-24k",    slug: "daikin-fit-aurora-24k", name: "FIT Aurora 24 000 BTU", seriesId: "series-daikin-fit-aurora", brandId: "daikin", modelNumber: "DZ17VSA-24A", normalizedModelNumber: "dz17vsa24a",
+    { id: "model-daikin-fit-24k",    slug: "daikin-fit-aurora-24k", name: "FIT Aurora 24 000 BTU", seriesId: "daikin-fit-aurora", brandId: "daikin", modelNumber: "DZ17VSA-24A", normalizedModelNumber: "dz17vsa24a",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 24000, zones: 1, systemType: "central-ducted", categories: ["air-air","cold-climate","ducted","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-fit-36k",    slug: "daikin-fit-aurora-36k", name: "FIT Aurora 36 000 BTU", seriesId: "series-daikin-fit-aurora", brandId: "daikin", modelNumber: "DZ17VSA-36A", normalizedModelNumber: "dz17vsa36a",
+    { id: "model-daikin-fit-36k",    slug: "daikin-fit-aurora-36k", name: "FIT Aurora 36 000 BTU", seriesId: "daikin-fit-aurora", brandId: "daikin", modelNumber: "DZ17VSA-36A", normalizedModelNumber: "dz17vsa36a",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 36000, zones: 1, systemType: "central-ducted", categories: ["air-air","cold-climate","ducted","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
     // Atmosphera
-    { id: "model-daikin-atmo-9k",    slug: "daikin-atmosphera-9k",  name: "Atmosphera 9 000 BTU",  seriesId: "series-daikin-atmosphera", brandId: "daikin", modelNumber: "FTXA09WVJU", normalizedModelNumber: "ftxa09wvju",
+    { id: "model-daikin-atmo-9k",    slug: "daikin-atmosphera-9k",  name: "Atmosphera 9 000 BTU",  seriesId: "daikin-atmosphera", brandId: "daikin", modelNumber: "FTXA09WVJU", normalizedModelNumber: "ftxa09wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 9000,  zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-atmo-12k",   slug: "daikin-atmosphera-12k", name: "Atmosphera 12 000 BTU", seriesId: "series-daikin-atmosphera", brandId: "daikin", modelNumber: "FTXA12WVJU", normalizedModelNumber: "ftxa12wvju",
+    { id: "model-daikin-atmo-12k",   slug: "daikin-atmosphera-12k", name: "Atmosphera 12 000 BTU", seriesId: "daikin-atmosphera", brandId: "daikin", modelNumber: "FTXA12WVJU", normalizedModelNumber: "ftxa12wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 12000, zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
   ],
