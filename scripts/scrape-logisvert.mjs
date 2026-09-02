@@ -100,7 +100,7 @@ async function main() {
   
   for (let offset = 0; offset < total; offset += BATCH_SIZE) {
     process.stdout.write(`   Fetching ES batch ${offset}–${offset + BATCH_SIZE}...`);
-    const url = `${ES_API}?$where=markets%20like%20'%25Canada%25'&$limit=${BATCH_SIZE}&$offset=${offset}&$select=ahri_reference_number,series_name,seer2_btu_wh,hspf2_btu_wh,cold_climate,product_type,cop_at_5_f,heating_capacity_at_5_f_btu_h,cooling_capacity_btu_h,eer2_btu_wh`;
+    const url = `${ES_API}?$where=markets%20like%20'%25Canada%25'&$limit=${BATCH_SIZE}&$offset=${offset}&$select=ahri_reference_number,model_number,series_name,seer2_btu_wh,hspf2_btu_wh,cold_climate,product_type,cop_at_5_f,heating_capacity_at_5_f_btu_h,cooling_capacity_btu_h,eer2_btu_wh`;
     try {
       const res = await fetch(url);
       if (!res.ok) { console.log(` SKIP (${res.status})`); continue; }
@@ -117,15 +117,36 @@ async function main() {
   }
   console.log(`   ENERGY STAR enrichment entries: ${esData.size}`);
 
+  // ── Step 4b: Build model-based index from ENERGY STAR for second-pass matching ──
+  console.log("🔗 Building ENERGY STAR model index for second-pass matching...");
+  const esModelIndex = new Map(); // normalized outdoor model → ES entry
+  for (const [, row] of esData) {
+    if (row.model_number) {
+      const norm = row.model_number.toLowerCase().replace(/[^a-z0-9]/g, "").replace(/\*$/, "");
+      if (!esModelIndex.has(norm)) esModelIndex.set(norm, row);
+    }
+  }
+  console.log(`   ES model index: ${esModelIndex.size} unique models`);
+
   // ── Step 5: Merge and build final JSON ────────────────────────────
   console.log("📦 Building final JSON...");
   
   const result = {};
   const modelIndex = {};  // outdoor model → AHRI numbers
   let enriched = 0;
+  let enrichedByModel = 0;
+  let typeFromFurnace = 0;
   
   for (const [ahri, entry] of hqEntries) {
-    const es = esData.get(ahri);
+    // Try AHRI match first, then model match
+    let es = esData.get(ahri);
+    
+    if (!es) {
+      // Second pass: try matching by outdoor model number
+      const normModel = entry.m.toLowerCase().replace(/[^a-z0-9]/g, "").replace(/\*$/, "");
+      es = esModelIndex.get(normModel);
+      if (es) enrichedByModel++;
+    }
     
     const final = {
       b: entry.b,
@@ -137,6 +158,13 @@ async function main() {
       hr: entry.hr,          // haut rendement
     };
 
+    // Detect type from HQ furnace column
+    // If furnace model is present → it's a central/ducted system
+    if (entry.f && entry.f.length > 1) {
+      final.t = "C";
+      typeFromFurnace++;
+    }
+
     // Enrich with ES data if available
     if (es) {
       enriched++;
@@ -147,7 +175,20 @@ async function main() {
       if (es.cop_at_5_f) final.cop5 = parseFloat(es.cop_at_5_f);
       if (es.heating_capacity_at_5_f_btu_h) final.h5 = parseInt(es.heating_capacity_at_5_f_btu_h);
       if (es.cooling_capacity_btu_h) final.c = parseInt(es.cooling_capacity_btu_h);
-      if (es.product_type) final.t = es.product_type.includes("Mini") ? "M" : "C";
+      if (es.product_type && !final.t) final.t = es.product_type.includes("Mini") ? "M" : "C";
+    }
+
+    // If still no type, infer from model naming conventions
+    if (!final.t) {
+      const m = entry.m.toUpperCase();
+      // Common mini-split outdoor model prefixes
+      if (/^(MSZ|MUZ|MXZ|RXM|RXS|RXL|FTX|ASU|AOU|WH|CS|CU|GWH|SEN|VIR|ACQ|DERA)/.test(m)) {
+        final.t = "M";
+      }
+      // If has indoor model but no furnace → likely mini-split
+      else if ((!entry.f || entry.f.length < 2) && entry.im && entry.im.length > 2) {
+        final.t = "M";
+      }
     }
 
     result[ahri] = final;
@@ -160,7 +201,10 @@ async function main() {
     }
   }
 
-  console.log(`   Enriched with ENERGY STAR: ${enriched}/${hqEntries.size}`);
+  console.log(`   Enriched with ENERGY STAR (AHRI match): ${enriched - enrichedByModel}/${hqEntries.size}`);
+  console.log(`   Enriched with ENERGY STAR (model match): ${enrichedByModel}`);
+  console.log(`   Type detected from furnace column: ${typeFromFurnace}`);
+  console.log(`   Total enriched: ${enriched}/${hqEntries.size}`);
 
   // ── Step 6: Write output ──────────────────────────────────────────
   writeFileSync(OUTPUT_PATH, JSON.stringify(result, null, 0));
