@@ -111,7 +111,7 @@ export function ProductCard({
           {logisVertDollars != null && logisVertDollars > 0 && (
             <div className="flex items-center justify-between py-3.5 border-t border-[#E5E5E5]">
               <span className="text-[15px] text-[#6B7280] flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                <Image src="/images/hydroquebec.png" alt="LogisVert" width={16} height={16} className="object-contain" />
                 LogisVert
               </span>
               <span className="text-[15px] font-bold text-[#16a34a] flex items-center gap-1">

@@ -96,7 +96,10 @@ export function TechSpecs({ detail }: TechSpecsProps) {
       } else {
         comfortRows.push({ label: "Débit d'air (CFM)", value: `${max || min} CFM` });
       }
+    } else {
+      comfortRows.push({ label: "Débit d'air (CFM)", value: "À vérifier avec l'installateur" });
     }
+    
     if (configuration.fanSpeeds != null) {
       comfortRows.push({ label: "Vitesses de ventilation", value: `${configuration.fanSpeeds}` });
     }
@@ -125,9 +128,13 @@ export function TechSpecs({ detail }: TechSpecsProps) {
     if (outdoorUnit.refrigerant) {
       ouRows.push({ label: "Réfrigérant", value: outdoorUnit.refrigerant });
     }
+    
     if (outdoorUnit.widthMm != null && outdoorUnit.heightMm != null && outdoorUnit.depthMm != null) {
       ouRows.push({ label: "Dimensions (L×H×P)", value: `${outdoorUnit.widthMm} × ${outdoorUnit.heightMm} × ${outdoorUnit.depthMm} mm` });
+    } else {
+      ouRows.push({ label: "Dimensions (L×H×P)", value: "À vérifier avec l'installateur" });
     }
+    
     if (outdoorUnit.weightKg != null) {
       ouRows.push({ label: "Poids", value: `${outdoorUnit.weightKg} kg` });
     }
@@ -139,19 +146,24 @@ export function TechSpecs({ detail }: TechSpecsProps) {
     const iuRows: SpecRow[] = [
       { label: "Numéro de modèle", value: indoorUnit.modelNumber },
     ];
+    
     if (indoorUnit.widthMm != null && indoorUnit.heightMm != null && indoorUnit.depthMm != null) {
       iuRows.push({ label: "Dimensions (L×H×P)", value: `${indoorUnit.widthMm} × ${indoorUnit.heightMm} × ${indoorUnit.depthMm} mm` });
+    } else {
+      iuRows.push({ label: "Dimensions (L×H×P)", value: "À vérifier avec l'installateur" });
     }
+    
     if (indoorUnit.weightKg != null) {
       iuRows.push({ label: "Poids", value: `${indoorUnit.weightKg} kg` });
     }
+    
     if (indoorUnit.airflowCfmMin != null || indoorUnit.airflowCfmMax != null) {
       const min = indoorUnit.airflowCfmMin;
       const max = indoorUnit.airflowCfmMax;
       if (min && max && min !== max) {
-        iuRows.push({ label: "Débit d'air (CFM)", value: `${min} – ${max} CFM` });
+        iuRows.push({ label: "Débit d'air intérieur", value: `${min} – ${max} CFM` });
       } else {
-        iuRows.push({ label: "Débit d'air (CFM)", value: `${max || min} CFM` });
+        iuRows.push({ label: "Débit d'air intérieur", value: `${max || min} CFM` });
       }
     }
     groups.push({ title: "Unité intérieure", rows: iuRows });
