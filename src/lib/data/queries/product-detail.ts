@@ -92,17 +92,17 @@ export function getProductDetail(slug: string): ProductDetail | null {
 
   // Warranties
   const warranties = registry.warranties.filter(
-    (w) => w.modelId === model.id,
+    (w) => w?.modelId && w.modelId === model.id,
   );
 
   // Prices
   const prices = registry.priceObservations.filter(
-    (p) => p.modelId === model.id || p.configurationId === configuration?.id,
+    (p) => (p?.modelId && p.modelId === model.id) || (p?.configurationId && p.configurationId === configuration?.id),
   );
 
   // Editorial
   const editorial =
-    registry.editorial.find((e) => e.modelId === model.id) ?? null;
+    registry.editorial.find((e) => e?.modelId && e.modelId === model.id) ?? null;
 
   // Sources — collect all source IDs referenced by this product
   const sourceIds = new Set<string>();

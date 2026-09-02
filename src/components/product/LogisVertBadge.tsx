@@ -16,12 +16,12 @@ interface LogisVertBadgeProps {
 }
 
 export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
-  const { model, brand, isColdClimate, configuration } = detail;
+  const { model, brand, isColdClimate, configuration, outdoorUnit } = detail;
 
   // --- Try to find official LogisVert amount from government data ---
-  // Try outdoor unit model numbers from the configuration
-  let officialEntry = configuration
-    ? lookupLogisVertFuzzy(configuration.outdoorUnitId, brand.name)
+  // Try outdoor unit MODEL NUMBER (not ID) from the configuration
+  let officialEntry = outdoorUnit?.modelNumber
+    ? lookupLogisVertFuzzy(outdoorUnit.modelNumber, brand.name)
     : null;
 
   // If not found, try the model number directly

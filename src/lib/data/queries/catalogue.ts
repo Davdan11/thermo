@@ -50,6 +50,8 @@ export interface CatalogueProduct {
   /** Official manufacturer image URL (from model or series) */
   imageUrl: string | null;
   refrigerant: string | null;
+  /** Outdoor unit model number for LogisVert lookup */
+  outdoorModelNumber: string | null;
 }
 
 /* ------------------------------------------------------------------
@@ -194,10 +196,12 @@ export function getCatalogueModels(
     const series = registry.series.find((s) => s.id === model.seriesId);
 
     let refrigerant: string | null = null;
+    let outdoorModelNumber: string | null = null;
     if (configuration) {
       const outdoorUnit = registry.outdoorUnits.find((u) => u.id === configuration.outdoorUnitId);
-      if (outdoorUnit && outdoorUnit.refrigerant) {
-        refrigerant = outdoorUnit.refrigerant as string;
+      if (outdoorUnit) {
+        if (outdoorUnit.refrigerant) refrigerant = outdoorUnit.refrigerant as string;
+        if (outdoorUnit.modelNumber) outdoorModelNumber = outdoorUnit.modelNumber;
       }
     }
 
@@ -209,6 +213,7 @@ export function getCatalogueModels(
       isColdClimate: model.categories.includes("cold-climate"),
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
+      outdoorModelNumber,
     };
   });
 

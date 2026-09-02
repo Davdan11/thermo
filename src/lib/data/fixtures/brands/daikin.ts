@@ -113,10 +113,10 @@ export const daikinDataset: BrandDataset = {
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 36000, zones: 1, systemType: "central-ducted", categories: ["air-air","cold-climate","ducted","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
     // Atmosphera
-    { id: "model-daikin-atmo-9k",    slug: "daikin-atmosphera-9k",  name: "Atmosphera 9 000 BTU",  seriesId: "daikin-atmosphera", brandId: "daikin", modelNumber: "FTXA09WVJU", normalizedModelNumber: "ftxa09wvju",
+    { id: "model-daikin-atmo-9k",    slug: "daikin-atmosphera-9k",  name: "Atmosphera 9 000 BTU",  seriesId: "daikin-atmosphera", brandId: "daikin", modelNumber: "FTXM09WVJU", normalizedModelNumber: "ftxm09wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 9000,  zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
-    { id: "model-daikin-atmo-12k",   slug: "daikin-atmosphera-12k", name: "Atmosphera 12 000 BTU", seriesId: "daikin-atmosphera", brandId: "daikin", modelNumber: "FTXA12WVJU", normalizedModelNumber: "ftxa12wvju",
+    { id: "model-daikin-atmo-12k",   slug: "daikin-atmosphera-12k", name: "Atmosphera 12 000 BTU", seriesId: "daikin-atmosphera", brandId: "daikin", modelNumber: "FTXM12WVJU", normalizedModelNumber: "ftxm12wvju",
       isActive2026: true,
       thermomatchEligible: true, nominalCapacityBtu: 12000, zones: 1, systemType: "wall-single", categories: ["air-air","cold-climate","ductless","single-zone"], status: "published", launchYear: null, discontinuedYear: null, replacedByModelId: null, createdAt: NOW, updatedAt: NOW, verifiedAt: null },
   ],
@@ -130,8 +130,8 @@ export const daikinDataset: BrandDataset = {
     { id: "ou-daikin-fit-18k",    modelNumber: "DZ17VSA-18A",  brandId: "daikin", refrigerant: "R-410A" },
     { id: "ou-daikin-fit-24k",    modelNumber: "DZ17VSA-24A",  brandId: "daikin", refrigerant: "R-410A" },
     { id: "ou-daikin-fit-36k",    modelNumber: "DZ17VSA-36A",  brandId: "daikin", refrigerant: "R-410A" },
-    { id: "ou-daikin-atmo-9k",    modelNumber: "RXA09MVJU",    brandId: "daikin", refrigerant: "R-32" },
-    { id: "ou-daikin-atmo-12k",   modelNumber: "RXA12MVJU",    brandId: "daikin", refrigerant: "R-32" },
+    { id: "ou-daikin-atmo-9k",    modelNumber: "RXM09WVJU",    brandId: "daikin", refrigerant: "R-32" },
+    { id: "ou-daikin-atmo-12k",   modelNumber: "RXM12WVJU",    brandId: "daikin", refrigerant: "R-32" },
   ],
 
   indoorUnits: [
@@ -140,8 +140,8 @@ export const daikinDataset: BrandDataset = {
     { id: "iu-daikin-aurora-15k", modelNumber: "FTXS15WVJU", brandId: "daikin", type: "wall-single" },
     { id: "iu-daikin-aurora-18k", modelNumber: "FTXS18WVJU", brandId: "daikin", type: "wall-single" },
     { id: "iu-daikin-aurora-24k", modelNumber: "FTXS24WVJU", brandId: "daikin", type: "wall-single" },
-    { id: "iu-daikin-atmo-9k",    modelNumber: "FTXA09WVJU", brandId: "daikin", type: "wall-single" },
-    { id: "iu-daikin-atmo-12k",   modelNumber: "FTXA12WVJU", brandId: "daikin", type: "wall-single" },
+    { id: "iu-daikin-atmo-9k",    modelNumber: "FTXM09WVJU", brandId: "daikin", type: "wall-single" },
+    { id: "iu-daikin-atmo-12k",   modelNumber: "FTXM12WVJU", brandId: "daikin", type: "wall-single" },
   ],
 
   configurations: [

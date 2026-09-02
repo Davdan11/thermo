@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
+import { lookupLogisVertFuzzy } from "@/lib/subsidies/logisvert-official";
+import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
 
 export function ProductCard({
   product,
@@ -16,6 +18,23 @@ export function ProductCard({
 }) {
   const { model, brand, configuration, isColdClimate } = product;
   const noiseMin = configuration?.noiseIndoorMinDbA;
+
+  // --- LogisVert subsidy lookup ---
+  let logisVertDollars: number | null = null;
+  let logisVertOfficial = false;
+  const officialEntry = product.outdoorModelNumber
+    ? lookupLogisVertFuzzy(product.outdoorModelNumber, brand.name)
+    : lookupLogisVertFuzzy(model.modelNumber, brand.name);
+  if (officialEntry && officialEntry.logisVertDollars > 0) {
+    logisVertDollars = officialEntry.logisVertDollars;
+    logisVertOfficial = true;
+  } else {
+    const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
+    if (btu > 0) {
+      const result = calculateLogisVertSimple(btu, isColdClimate);
+      if (result.dollars > 0) logisVertDollars = result.dollars;
+    }
+  }
 
   return (
     <article
@@ -88,6 +107,21 @@ export function ProductCard({
               À partir de {noiseMin ?? 19} dB(A)
             </span>
           </div>
+
+          {logisVertDollars != null && logisVertDollars > 0 && (
+            <div className="flex items-center justify-between py-3.5 border-t border-[#E5E5E5]">
+              <span className="text-[15px] text-[#6B7280] flex items-center gap-1.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                LogisVert
+              </span>
+              <span className="text-[15px] font-bold text-[#16a34a] flex items-center gap-1">
+                {logisVertDollars.toLocaleString("fr-CA")} $
+                {logisVertOfficial && (
+                  <span className="text-[10px] font-semibold bg-[#16a34a]/10 text-[#16a34a] px-1.5 py-0.5 rounded-sm uppercase tracking-wider">HQ</span>
+                )}
+              </span>
+            </div>
+          )}
           
           {/* Actions - Now part of the bottom list */}
           <div className="flex items-center justify-between py-4 border-t border-[#E5E5E5] relative z-20">
