@@ -262,7 +262,7 @@ export function getBrandDetail(slug: string): BrandDetail | null {
     modelSlug: string;
   })[] = [];
   for (const m of publishedModels) {
-    const ed = registry.editorial.find((e) => e.modelId === m.id);
+    const ed = registry.editorial.find((e) => e?.modelId && e.modelId === m.id);
     if (ed) {
       editorialContent.push({ ...ed, modelName: m.name, modelSlug: m.slug });
     }
