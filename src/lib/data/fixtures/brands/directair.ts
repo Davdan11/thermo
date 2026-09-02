@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const directairDataset: BrandDataset = {
   brand: {
-    id: "brand-directair",
+    id: "directair",
     slug: "directair",
     name: "DirectAir",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const directairDataset: BrandDataset = {
       id: "series-directair-placeholder",
       slug: "directair-placeholder",
       name: "Série à venir",
-      brandId: "brand-directair",
+      brandId: "directair",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const directairDataset: BrandDataset = {
       slug: "directair-placeholder",
       name: "Modèles à venir",
       seriesId: "series-directair-placeholder",
-      brandId: "brand-directair",
+      brandId: "directair",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

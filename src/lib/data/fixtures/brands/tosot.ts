@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const tosotDataset: BrandDataset = {
   brand: {
-    id: "brand-tosot",
+    id: "tosot",
     slug: "tosot",
     name: "Tosot",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const tosotDataset: BrandDataset = {
       id: "series-tosot-placeholder",
       slug: "tosot-placeholder",
       name: "Série à venir",
-      brandId: "brand-tosot",
+      brandId: "tosot",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const tosotDataset: BrandDataset = {
       slug: "tosot-placeholder",
       name: "Modèles à venir",
       seriesId: "series-tosot-placeholder",
-      brandId: "brand-tosot",
+      brandId: "tosot",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

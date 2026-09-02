@@ -182,10 +182,10 @@ export default async function BrandPage({
                   )}
 
                   <Link 
-                    href={`/thermopompes?brand=${brand.slug}`} 
+                    href={`/thermopompes?brand=${brand.slug}&series=${s.slug}`} 
                     className="mt-auto text-sm font-bold text-[var(--color-accent)] hover:opacity-80 transition-opacity flex items-center"
                   >
-                    Voir les modèles
+                    Voir les modèles {seriesName}
                     <svg className="ml-1.5 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7-7 7" />
                     </svg>

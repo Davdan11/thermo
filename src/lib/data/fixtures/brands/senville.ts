@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const senvilleDataset: BrandDataset = {
   brand: {
-    id: "brand-senville",
+    id: "senville",
     slug: "senville",
     name: "Senville",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const senvilleDataset: BrandDataset = {
       id: "series-senville-placeholder",
       slug: "senville-placeholder",
       name: "Série à venir",
-      brandId: "brand-senville",
+      brandId: "senville",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const senvilleDataset: BrandDataset = {
       slug: "senville-placeholder",
       name: "Modèles à venir",
       seriesId: "series-senville-placeholder",
-      brandId: "brand-senville",
+      brandId: "senville",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

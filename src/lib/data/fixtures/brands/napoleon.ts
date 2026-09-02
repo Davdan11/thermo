@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const napoleonDataset: BrandDataset = {
   brand: {
-    id: "brand-napoleon",
+    id: "napoleon",
     slug: "napoleon",
     name: "Napoleon",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const napoleonDataset: BrandDataset = {
       id: "series-napoleon-placeholder",
       slug: "napoleon-placeholder",
       name: "Série à venir",
-      brandId: "brand-napoleon",
+      brandId: "napoleon",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const napoleonDataset: BrandDataset = {
       slug: "napoleon-placeholder",
       name: "Modèles à venir",
       seriesId: "series-napoleon-placeholder",
-      brandId: "brand-napoleon",
+      brandId: "napoleon",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const boschDataset: BrandDataset = {
   brand: {
-    id: "brand-bosch",
+    id: "bosch",
     slug: "bosch",
     name: "Bosch",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const boschDataset: BrandDataset = {
       id: "series-bosch-placeholder",
       slug: "bosch-placeholder",
       name: "Série à venir",
-      brandId: "brand-bosch",
+      brandId: "bosch",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const boschDataset: BrandDataset = {
       slug: "bosch-placeholder",
       name: "Modèles à venir",
       seriesId: "series-bosch-placeholder",
-      brandId: "brand-bosch",
+      brandId: "bosch",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

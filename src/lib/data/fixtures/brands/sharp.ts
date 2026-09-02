@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const sharpDataset: BrandDataset = {
   brand: {
-    id: "brand-sharp",
+    id: "sharp",
     slug: "sharp",
     name: "Sharp",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const sharpDataset: BrandDataset = {
       id: "series-sharp-placeholder",
       slug: "sharp-placeholder",
       name: "Série à venir",
-      brandId: "brand-sharp",
+      brandId: "sharp",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const sharpDataset: BrandDataset = {
       slug: "sharp-placeholder",
       name: "Modèles à venir",
       seriesId: "series-sharp-placeholder",
-      brandId: "brand-sharp",
+      brandId: "sharp",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

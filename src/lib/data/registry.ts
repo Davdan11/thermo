@@ -25,19 +25,14 @@ import type {
 import { brandDatasetSchema } from "./schemas";
 
 /* ---- Import fixtures ---- */
-import { daikinDataset } from "./fixtures/brands/daikin-auto";
-import { mitsubishielectricDataset as mitsubishiElectricDataset } from "./fixtures/brands/mitsubishi-electric-auto";
-// Fujitsu utilise le jeu vérifié manuellement : modèles KZAH1 exacts et photos officielles.
-import { fujitsuDataset } from "./fixtures/brands/fujitsu";
-import { greeDataset } from "./fixtures/brands/gree-auto";
-// Midea utilise le jeu vérifié manuellement : appariements All Easy Pro officiels.
-import { mideaDataset } from "./fixtures/brands/midea";
-import { lgDataset } from "./fixtures/brands/lg-auto";
-import { samsungDataset } from "./fixtures/brands/samsung-auto";
-import { moovairDataset } from "./fixtures/brands/moovair-auto";
-import { panasonicDataset } from "./fixtures/brands/panasonic-auto";
-import { mainlineDataset } from "./fixtures/brands/mainline";
-
+// Auto-generated datasets
+import { daikinDataset as daikinAuto } from "./fixtures/brands/daikin-auto";
+import { mitsubishielectricDataset as mitsubishiAuto } from "./fixtures/brands/mitsubishi-electric-auto";
+import { greeDataset as greeAuto } from "./fixtures/brands/gree-auto";
+import { lgDataset as lgAuto } from "./fixtures/brands/lg-auto";
+import { samsungDataset as samsungAuto } from "./fixtures/brands/samsung-auto";
+import { moovairDataset as moovairAuto } from "./fixtures/brands/moovair-auto";
+import { panasonicDataset as panasonicAuto } from "./fixtures/brands/panasonic-auto";
 import { sharpDataset } from "./fixtures/brands/sharp-auto";
 import { zephyrDataset } from "./fixtures/brands/zephyr-auto";
 import { goodmanDataset } from "./fixtures/brands/goodman-auto";
@@ -46,22 +41,64 @@ import { lennoxDataset } from "./fixtures/brands/lennox-auto";
 import { tosotDataset } from "./fixtures/brands/tosot-auto";
 import { senvilleDataset } from "./fixtures/brands/senville-auto";
 import { napoleonDataset } from "./fixtures/brands/napoleon-auto";
+
+// Manual datasets (curated models with verified specs)
+import { daikinDataset as daikinManual } from "./fixtures/brands/daikin";
+import { mitsubishiElectricDataset as mitsubishiManual } from "./fixtures/brands/mitsubishi-electric";
+import { fujitsuDataset } from "./fixtures/brands/fujitsu";
+import { greeDataset as greeManual } from "./fixtures/brands/gree";
+import { mideaDataset } from "./fixtures/brands/midea";
+import { lgDataset as lgManual } from "./fixtures/brands/lg";
+import { samsungDataset as samsungManual } from "./fixtures/brands/samsung";
+import { moovairDataset as moovairManual } from "./fixtures/brands/moovair";
+import { panasonicDataset as panasonicManual } from "./fixtures/brands/panasonic";
+import { mainlineDataset } from "./fixtures/brands/mainline";
 import { directairDataset } from "./fixtures/brands/directair";
+
+/* ------------------------------------------------------------------
+   Merge function — combines auto-generated + manual datasets
+   Manual data takes priority for the brand object.
+   Arrays are concatenated, deduped by ID (manual wins on conflict).
+   ------------------------------------------------------------------ */
+
+function mergeDatasets(auto: BrandDataset, manual: BrandDataset): BrandDataset {
+  const dedup = <T extends { id: string }>(autoArr: T[], manualArr: T[]): T[] => {
+    const byId = new Map<string, T>();
+    for (const item of autoArr) byId.set(item.id, item);
+    for (const item of manualArr) byId.set(item.id, item); // manual overrides
+    return [...byId.values()];
+  };
+
+  return {
+    brand: manual.brand.description ? manual.brand : auto.brand,
+    sources: [...(auto.sources || []), ...(manual.sources || [])],
+    series: dedup(auto.series, manual.series),
+    models: dedup(auto.models, manual.models),
+    outdoorUnits: dedup(auto.outdoorUnits, manual.outdoorUnits),
+    indoorUnits: dedup(auto.indoorUnits, manual.indoorUnits),
+    configurations: dedup(auto.configurations, manual.configurations),
+    performanceProfiles: [...(auto.performanceProfiles || []), ...(manual.performanceProfiles || [])],
+    certifications: dedup(auto.certifications || [], manual.certifications || []),
+    warranties: [...(auto.warranties || []), ...(manual.warranties || [])],
+    priceObservations: [...(auto.priceObservations || []), ...(manual.priceObservations || [])],
+    editorialContent: [...(auto.editorialContent || []), ...(manual.editorialContent || [])],
+  };
+}
 
 /* ------------------------------------------------------------------
    Raw datasets — add new brands here
    ------------------------------------------------------------------ */
 
 const RAW_DATASETS: BrandDataset[] = [
-  daikinDataset,
-  mitsubishiElectricDataset,
+  mergeDatasets(daikinAuto, daikinManual),
+  mergeDatasets(mitsubishiAuto, mitsubishiManual),
   fujitsuDataset,
-  greeDataset,
+  mergeDatasets(greeAuto, greeManual),
   mideaDataset,
-  lgDataset,
-  samsungDataset,
-  moovairDataset,
-  panasonicDataset,
+  mergeDatasets(lgAuto, lgManual),
+  mergeDatasets(samsungAuto, samsungManual),
+  mergeDatasets(moovairAuto, moovairManual),
+  mergeDatasets(panasonicAuto, panasonicManual),
   mainlineDataset,
   sharpDataset,
   zephyrDataset,

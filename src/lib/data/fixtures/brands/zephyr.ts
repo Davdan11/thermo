@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const zephyrDataset: BrandDataset = {
   brand: {
-    id: "brand-zephyr",
+    id: "zephyr",
     slug: "zephyr",
     name: "Zephyr",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const zephyrDataset: BrandDataset = {
       id: "series-zephyr-placeholder",
       slug: "zephyr-placeholder",
       name: "Série à venir",
-      brandId: "brand-zephyr",
+      brandId: "zephyr",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const zephyrDataset: BrandDataset = {
       slug: "zephyr-placeholder",
       name: "Modèles à venir",
       seriesId: "series-zephyr-placeholder",
-      brandId: "brand-zephyr",
+      brandId: "zephyr",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

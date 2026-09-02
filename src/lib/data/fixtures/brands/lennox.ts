@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const lennoxDataset: BrandDataset = {
   brand: {
-    id: "brand-lennox",
+    id: "lennox",
     slug: "lennox",
     name: "Lennox",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const lennoxDataset: BrandDataset = {
       id: "series-lennox-placeholder",
       slug: "lennox-placeholder",
       name: "Série à venir",
-      brandId: "brand-lennox",
+      brandId: "lennox",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const lennoxDataset: BrandDataset = {
       slug: "lennox-placeholder",
       name: "Modèles à venir",
       seriesId: "series-lennox-placeholder",
-      brandId: "brand-lennox",
+      brandId: "lennox",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

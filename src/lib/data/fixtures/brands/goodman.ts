@@ -2,7 +2,7 @@ import type { BrandDataset } from "../../types";
 
 export const goodmanDataset: BrandDataset = {
   brand: {
-    id: "brand-goodman",
+    id: "goodman",
     slug: "goodman",
     name: "Goodman",
     countryOfOrigin: "CA",
@@ -20,7 +20,7 @@ export const goodmanDataset: BrandDataset = {
       id: "series-goodman-placeholder",
       slug: "goodman-placeholder",
       name: "Série à venir",
-      brandId: "brand-goodman",
+      brandId: "goodman",
       systemType: "wall-single",
       categories: ["air-air", "ductless", "single-zone"],
       description: null,
@@ -36,7 +36,7 @@ export const goodmanDataset: BrandDataset = {
       slug: "goodman-placeholder",
       name: "Modèles à venir",
       seriesId: "series-goodman-placeholder",
-      brandId: "brand-goodman",
+      brandId: "goodman",
       modelNumber: "TBD",
       normalizedModelNumber: "tbd",
       isActive2026: true,

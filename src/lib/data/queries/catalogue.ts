@@ -18,6 +18,7 @@ export interface CatalogueParams {
   search?: string;
   type?: SystemType;
   brand?: string;        // brand slug
+  series?: string;       // series slug
   capacity?: number;     // nominal BTU
   coldClimate?: boolean;
   sort?: CatalogueSort;
@@ -160,6 +161,15 @@ export function getCatalogueModels(
       models = models.filter((m) => m.brandId === brand.id);
     } else {
       // Unknown brand slug → no results
+      models = [];
+    }
+  }
+
+  if (params.series) {
+    const matchedSeries = registry.series.find((s) => s.slug === params.series);
+    if (matchedSeries) {
+      models = models.filter((m) => m.seriesId === matchedSeries.id);
+    } else {
       models = [];
     }
   }

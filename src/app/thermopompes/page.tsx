@@ -51,6 +51,9 @@ function parseParams(
   const brand = typeof sp.brand === "string" ? sp.brand.trim() : "";
   if (brand) params.brand = brand;
 
+  const series = typeof sp.series === "string" ? sp.series.trim() : "";
+  if (series) params.series = series;
+
   const capacity = typeof sp.capacity === "string" ? parseInt(sp.capacity, 10) : NaN;
   if (!isNaN(capacity) && capacity > 0) params.capacity = capacity;
 
