@@ -1,0 +1,298 @@
+import type { BrandDataset } from "../../types";
+
+export const supremeDataset: BrandDataset = {
+  brand: {
+    id: "supreme",
+    slug: "supreme",
+    name: "SUPREME",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "supreme-standard",
+      slug: "supreme-standard",
+      name: "Standard",
+      brandId: "supreme",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ys-series",
+      slug: "supreme-ys-series",
+      name: "YS series",
+      brandId: "supreme",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ne-series",
+      slug: "supreme-ne-series",
+      name: "NE series",
+      brandId: "supreme",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "supreme-standard-wall-single",
+      slug: "supreme-standard-wall-single",
+      name: "Standard",
+      seriesId: "supreme-standard",
+      brandId: "supreme",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7800,
+      heatingCapacity5FMaxBtu: 7800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ys-series-wall-single",
+      slug: "supreme-ys-series-wall-single",
+      name: "YS series",
+      seriesId: "supreme-ys-series",
+      brandId: "supreme",
+      modelNumber: "YS series",
+      normalizedModelNumber: "ys-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 9000,
+      heatingCapacity5FMaxBtu: 14900,
+      seer2Min: 23.5,
+      seer2Max: 24.6,
+      hspf2Min: 10.7,
+      hspf2Max: 10.8,
+      cop5FMin: 2.02,
+      cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ne-series-wall-single",
+      slug: "supreme-ne-series-wall-single",
+      name: "NE series",
+      seriesId: "supreme-ne-series",
+      brandId: "supreme",
+      modelNumber: "NE series",
+      normalizedModelNumber: "ne-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 10000,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 21.5,
+      seer2Max: 25.5,
+      hspf2Min: 10.4,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "supreme-ys25m-12hrdn1",
+      modelNumber: "YS25M-12HRDN1",
+      brandId: "supreme",
+      refrigerant: null as any,
+    },
+    {
+      id: "supreme-ys25e-12hrdn1",
+      modelNumber: "YS25E-12HRDN1",
+      brandId: "supreme",
+      refrigerant: null as any,
+    },
+    {
+      id: "supreme-ys25e-18hrdn1",
+      modelNumber: "YS25E-18HRDN1",
+      brandId: "supreme",
+      refrigerant: null as any,
+    },
+    {
+      id: "supreme-ne-t52-supae12e",
+      modelNumber: "NE-T52-SUPAE12E",
+      brandId: "supreme",
+      refrigerant: null as any,
+    },
+    {
+      id: "supreme-ne-t52-supae18e",
+      modelNumber: "NE-T52-SUPAE18E",
+      brandId: "supreme",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "supreme-standard-wall-single-cfg-1",
+      slug: "supreme-standard-wall-single-cfg-1",
+      modelId: "supreme-standard-wall-single",
+      outdoorUnitId: "supreme-ys25m-12hrdn1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ys-series-wall-single-cfg-1",
+      slug: "supreme-ys-series-wall-single-cfg-1",
+      modelId: "supreme-ys-series-wall-single",
+      outdoorUnitId: "supreme-ys25e-12hrdn1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.6,
+      hspf2: 10.7,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ys-series-wall-single-cfg-2",
+      slug: "supreme-ys-series-wall-single-cfg-2",
+      modelId: "supreme-ys-series-wall-single",
+      outdoorUnitId: "supreme-ys25e-18hrdn1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
+      hspf2: 10.8,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ne-series-wall-single-cfg-1",
+      slug: "supreme-ne-series-wall-single-cfg-1",
+      modelId: "supreme-ne-series-wall-single",
+      outdoorUnitId: "supreme-ne-t52-supae12e",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "supreme-ne-series-wall-single-cfg-2",
+      slug: "supreme-ne-series-wall-single-cfg-2",
+      modelId: "supreme-ne-series-wall-single",
+      outdoorUnitId: "supreme-ne-t52-supae18e",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "supreme-standard-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "supreme-ys-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "supreme-ys-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "supreme-ne-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "supreme-ne-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};

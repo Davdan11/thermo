@@ -1,0 +1,7420 @@
+import type { BrandDataset } from "../../types";
+
+export const aiairconditioningDataset: BrandDataset = {
+  brand: {
+    id: "ai-air-conditioning",
+    slug: "ai-air-conditioning",
+    name: "AI AIR CONDITIONING",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "ai-air-conditioning-au-series",
+      slug: "ai-air-conditioning-au-series",
+      name: "AU Series",
+      brandId: "ai-air-conditioning",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series",
+      slug: "ai-air-conditioning-aw-series",
+      name: "AW Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard",
+      slug: "ai-air-conditioning-standard",
+      name: "Standard",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series",
+      slug: "ai-air-conditioning-ao-series",
+      name: "AO Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series",
+      slug: "ai-air-conditioning-a2m-series",
+      name: "A2M Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series",
+      slug: "ai-air-conditioning-a3m-series",
+      name: "A3M Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series",
+      slug: "ai-air-conditioning-a4m-series",
+      name: "A4M Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series",
+      slug: "ai-air-conditioning-a5m-series",
+      name: "A5M Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series",
+      slug: "ai-air-conditioning-aso-series",
+      name: "ASO Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series",
+      slug: "ai-air-conditioning-a6m-series",
+      name: "A6M Series",
+      brandId: "ai-air-conditioning",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-as-series",
+      slug: "ai-air-conditioning-as-series",
+      name: "AS Series",
+      brandId: "ai-air-conditioning",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-auo-series",
+      slug: "ai-air-conditioning-auo-series",
+      name: "AUO Series",
+      brandId: "ai-air-conditioning",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "ai-air-conditioning-au-series-central-ducted",
+      slug: "ai-air-conditioning-au-series-central-ducted",
+      name: "AU Series",
+      seriesId: "ai-air-conditioning-au-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "AU Series",
+      normalizedModelNumber: "au-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 12600,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 19.3,
+      hspf2Min: 8.1,
+      hspf2Max: 10.8,
+      cop5FMin: 1.8,
+      cop5FMax: 2.14,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single",
+      slug: "ai-air-conditioning-aw-series-wall-single",
+      name: "AW Series",
+      seriesId: "ai-air-conditioning-aw-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "AW Series",
+      normalizedModelNumber: "aw-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 5900,
+      heatingCapacity5FMaxBtu: 28800,
+      seer2Min: 19.5,
+      seer2Max: 29,
+      hspf2Min: 8.5,
+      hspf2Max: 14.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.44,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single",
+      slug: "ai-air-conditioning-standard-wall-single",
+      name: "Standard",
+      seriesId: "ai-air-conditioning-standard",
+      brandId: "ai-air-conditioning",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 40500,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single",
+      slug: "ai-air-conditioning-ao-series-wall-single",
+      name: "AO Series",
+      seriesId: "ai-air-conditioning-ao-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "AO Series",
+      normalizedModelNumber: "ao-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 6600,
+      heatingCapacity5FMaxBtu: 29600,
+      seer2Min: 18,
+      seer2Max: 35,
+      hspf2Min: 8.7,
+      hspf2Max: 16.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2.5,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series-wall-single",
+      slug: "ai-air-conditioning-a2m-series-wall-single",
+      name: "A2M Series",
+      seriesId: "ai-air-conditioning-a2m-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "A2M Series",
+      normalizedModelNumber: "a2m-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 19,
+      seer2Max: 21,
+      hspf2Min: 9,
+      hspf2Max: 10.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single",
+      slug: "ai-air-conditioning-a3m-series-wall-single",
+      name: "A3M Series",
+      seriesId: "ai-air-conditioning-a3m-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "A3M Series",
+      normalizedModelNumber: "a3m-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 23000,
+      seer2Min: 19,
+      seer2Max: 23.5,
+      hspf2Min: 9.2,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single",
+      slug: "ai-air-conditioning-a4m-series-wall-single",
+      name: "A4M Series",
+      seriesId: "ai-air-conditioning-a4m-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "A4M Series",
+      normalizedModelNumber: "a4m-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 18000,
+      heatingCapacity5FMaxBtu: 30000,
+      seer2Min: 19,
+      seer2Max: 23,
+      hspf2Min: 9,
+      hspf2Max: 10.9,
+      cop5FMin: 1.68,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single",
+      slug: "ai-air-conditioning-a5m-series-wall-single",
+      name: "A5M Series",
+      seriesId: "ai-air-conditioning-a5m-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "A5M Series",
+      normalizedModelNumber: "a5m-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 39000,
+      seer2Min: 18.8,
+      seer2Max: 23.1,
+      hspf2Min: 9,
+      hspf2Max: 11.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single",
+      slug: "ai-air-conditioning-aso-series-wall-single",
+      name: "ASO Series",
+      seriesId: "ai-air-conditioning-aso-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "ASO Series",
+      normalizedModelNumber: "aso-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 25000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.8,
+      seer2Max: 21.2,
+      hspf2Min: 9.8,
+      hspf2Max: 11.1,
+      cop5FMin: 1.83,
+      cop5FMax: 2.2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single",
+      slug: "ai-air-conditioning-a6m-series-wall-single",
+      name: "A6M Series",
+      seriesId: "ai-air-conditioning-a6m-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "A6M Series",
+      normalizedModelNumber: "a6m-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 20,
+      seer2Max: 21.4,
+      hspf2Min: 10,
+      hspf2Max: 11,
+      cop5FMin: 2,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-central-ducted",
+      slug: "ai-air-conditioning-ao-series-central-ducted",
+      name: "AO Series",
+      seriesId: "ai-air-conditioning-ao-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "AO Series",
+      normalizedModelNumber: "ao-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 33000,
+      heatingCapacity5FMinBtu: 13200,
+      heatingCapacity5FMaxBtu: 27400,
+      seer2Min: 16.5,
+      seer2Max: 19.7,
+      hspf2Min: 8.7,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2.3,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-as-series-central-ducted",
+      slug: "ai-air-conditioning-as-series-central-ducted",
+      name: "AS Series",
+      seriesId: "ai-air-conditioning-as-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "AS Series",
+      normalizedModelNumber: "as-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 28000,
+      heatingCapacity5FMaxBtu: 41000,
+      seer2Min: 15.2,
+      seer2Max: 17.7,
+      hspf2Min: 9.2,
+      hspf2Max: 10.2,
+      cop5FMin: 1.9,
+      cop5FMax: 2.06,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-auo-series-central-ducted",
+      slug: "ai-air-conditioning-auo-series-central-ducted",
+      name: "AUO Series",
+      seriesId: "ai-air-conditioning-auo-series",
+      brandId: "ai-air-conditioning",
+      modelNumber: "AUO Series",
+      normalizedModelNumber: "auo-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 11800,
+      heatingCapacity5FMaxBtu: 33000,
+      seer2Min: 15.2,
+      seer2Max: 16.8,
+      hspf2Min: 8.8,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.85,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "ai-air-conditioning-auo18-18n1-m3h",
+      modelNumber: "AUO18-18N1-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-24n1-m3h",
+      modelNumber: "AUO18-24N1-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-30n1-m3h",
+      modelNumber: "AUO18-30N1-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-36n1-m3h",
+      modelNumber: "AUO18-36N1-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-48n1-m3h",
+      modelNumber: "AUO18-48N1-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-60n1-m3h",
+      modelNumber: "AUO18-60N1-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo17-24n1-m3",
+      modelNumber: "AUO17-24N1-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-18n2-m3",
+      modelNumber: "AUO18-18N2-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-24n2-m3",
+      modelNumber: "AUO18-24N2-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-30n2-m3",
+      modelNumber: "AUO18-30N2-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-36n2-m3",
+      modelNumber: "AUO18-36N2-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-48n2-m3",
+      modelNumber: "AUO18-48N2-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo18-60n2-m3",
+      modelNumber: "AUO18-60N2-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-18n2-m3h",
+      modelNumber: "AUO19-18N2-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-24n2-m3h",
+      modelNumber: "AUO19-24N2-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-30n2-m3h",
+      modelNumber: "AUO19-30N2-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-36n2-m3h",
+      modelNumber: "AUO19-36N2-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-36n2-m3h-s",
+      modelNumber: "AUO19-36N2-M3H-S",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-42n2-m3h-s",
+      modelNumber: "AUO19-42N2-M3H-S",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-48n2-m3h",
+      modelNumber: "AUO19-48N2-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-48n2-m3h-s",
+      modelNumber: "AUO19-48N2-M3H-S",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo19-60n2-m3h",
+      modelNumber: "AUO19-60N2-M3H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-09n1-b1",
+      modelNumber: "AO21-09N1-B1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-09n1-m1",
+      modelNumber: "AO21-09N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-09n1-b1h",
+      modelNumber: "AO24-09N1-B1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-12n1-b1h",
+      modelNumber: "AO24-12N1-B1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-09n1-m1h",
+      modelNumber: "AO24-09N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-12n1-m1h",
+      modelNumber: "AO24-12N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-18n1-m1h",
+      modelNumber: "AO24-18N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-24n1-m1h",
+      modelNumber: "AO24-24N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-06n1-m1h",
+      modelNumber: "AO25-06N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-09n1-m1h",
+      modelNumber: "AO25-09N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-12n1-m1h",
+      modelNumber: "AO25-12N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-18n1-m1h",
+      modelNumber: "AO25-18N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-24n1-m1h",
+      modelNumber: "AO25-24N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao29-09n1-m1h",
+      modelNumber: "AO29-09N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao29-12n1-m1h",
+      modelNumber: "AO29-12N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao29-24n1-m1h",
+      modelNumber: "AO29-24N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao29-33n1-m1h",
+      modelNumber: "AO29-33N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-30n1-m1",
+      modelNumber: "AO21-30N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-09n1-b1h",
+      modelNumber: "AO25-09N1-B1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-12n1-b1h",
+      modelNumber: "AO25-12N1-B1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-12n1-b1",
+      modelNumber: "AO21-12N1-B1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-12n1-m1",
+      modelNumber: "AO21-12N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-24n1-m1",
+      modelNumber: "AO21-24N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-36n1-m1",
+      modelNumber: "AO21-36N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao29-18n1-m1h",
+      modelNumber: "AO29-18N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo17-18n1-m3",
+      modelNumber: "AUO17-18N1-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo17-36n1-m3",
+      modelNumber: "AUO17-36N1-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo17-48n1-m3",
+      modelNumber: "AUO17-48N1-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-auo17-60n1-m3",
+      modelNumber: "AUO17-60N1-M3",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-afo19-36n1-m1",
+      modelNumber: "AFO19-36N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a5mo21-55n1-m1",
+      modelNumber: "A5MO21-55N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-12n2-b1",
+      modelNumber: "AO21-12N2-B1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-12n2-m1",
+      modelNumber: "AO21-12N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-36n2-m1",
+      modelNumber: "AO21-36N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-aso24-60n2-m2",
+      modelNumber: "ASO24-60N2-M2",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a6mo21-60n2-m1",
+      modelNumber: "A6MO21-60N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-18n1-m1",
+      modelNumber: "AO21-18N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-09n2-b1",
+      modelNumber: "AO21-09N2-B1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-09n2-m1",
+      modelNumber: "AO21-09N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-18n2-m1",
+      modelNumber: "AO21-18N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-24n2-m1",
+      modelNumber: "AO21-24N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao21-30n2-m1",
+      modelNumber: "AO21-30N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-09n2-b1h",
+      modelNumber: "AO24-09N2-B1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-12n2-b1h",
+      modelNumber: "AO24-12N2-B1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-09n2-m1",
+      modelNumber: "AO24-09N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-12n2-m1",
+      modelNumber: "AO24-12N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-18n2-m1",
+      modelNumber: "AO24-18N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao24-24n2-m1",
+      modelNumber: "AO24-24N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-06n2-m1h",
+      modelNumber: "AO25-06N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-09n2-m1h",
+      modelNumber: "AO25-09N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-12n2-m1h",
+      modelNumber: "AO25-12N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-18n2-m1h",
+      modelNumber: "AO25-18N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-24n2-m1h",
+      modelNumber: "AO25-24N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao25-33n2-m1h",
+      modelNumber: "AO25-33N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao35-06n2-m1h",
+      modelNumber: "AO35-06N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao35-09n2-m1h",
+      modelNumber: "AO35-09N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao35-12n2-m1h",
+      modelNumber: "AO35-12N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-ao35-18n2-m1h",
+      modelNumber: "AO35-18N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a2mo22-18n1-m1h",
+      modelNumber: "A2MO22-18N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a2mo21-18n1-m1",
+      modelNumber: "A2MO21-18N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a3mo22-27n1-m1h",
+      modelNumber: "A3MO22-27N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a3mo21-27n1-m1",
+      modelNumber: "A3MO21-27N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a3mo21-18n2-m1",
+      modelNumber: "A3MO21-18N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a3mo23-18n2-m1h",
+      modelNumber: "A3MO23-18N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a4mo22-36n1-m1h",
+      modelNumber: "A4MO22-36N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a4mo21-36n1-m1",
+      modelNumber: "A4MO21-36N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a4mo21-27n2-m1",
+      modelNumber: "A4MO21-27N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a4mo23-27n2-m1h",
+      modelNumber: "A4MO23-27N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a5mo22-48n1-m1h",
+      modelNumber: "A5MO22-48N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a5mo22-55n1-m1h",
+      modelNumber: "A5MO22-55N1-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a5mo21-48n1-m1",
+      modelNumber: "A5MO21-48N1-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a5mo21-36n2-m1",
+      modelNumber: "A5MO21-36N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a5mo23-36n2-m1h",
+      modelNumber: "A5MO23-36N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-aso24-36n2-m2",
+      modelNumber: "ASO24-36N2-M2",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-aso24-48n2-m2",
+      modelNumber: "ASO24-48N2-M2",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-aso25-36n2-m2h",
+      modelNumber: "ASO25-36N2-M2H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-aso25-48n2-m2h",
+      modelNumber: "ASO25-48N2-M2H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-aso25-60n2-m2h",
+      modelNumber: "ASO25-60N2-M2H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a6mo21-48n2-m1",
+      modelNumber: "A6MO21-48N2-M1",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a6mo23-48n2-m1h",
+      modelNumber: "A6MO23-48N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    },
+    {
+      id: "ai-air-conditioning-a6mo23-55n2-m1h",
+      modelNumber: "A6MO23-55N2-M1H",
+      brandId: "ai-air-conditioning",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-1",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-1",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-18n1-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-2",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-2",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-24n1-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-3",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-3",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-30n1-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.2,
+      hspf2: 8.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-4",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-4",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-36n1-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 16.3,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-5",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-5",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-48n1-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-6",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-6",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-60n1-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-7",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-7",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo17-24n1-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-8",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-8",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-18n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.8,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-9",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-9",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-24n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.1,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-10",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-10",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-30n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.6,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-11",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-11",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-36n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-12",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-12",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-48n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-13",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-13",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-60n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-14",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-14",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-18n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-15",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-15",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-24n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-16",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-16",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-30n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-17",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-17",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.5,
+      hspf2: 8.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-18",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-18",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-19",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-19",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-42n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 16.7,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-20",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-20",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-48n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-21",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-21",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-48n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.3,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-22",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-22",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-60n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-23",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-23",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-18n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-24",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-24",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-24n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.6,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-25",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-25",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-30n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.2,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-26",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-26",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.7,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-27",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-27",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-28",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-28",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-48n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-29",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-29",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-60n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 17.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-30",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-30",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-24n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-31",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-31",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-24n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-32",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-32",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-30n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.6,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-33",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-33",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-30n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.6,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-34",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-34",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-36n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-35",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-35",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-36n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-36",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-36",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-18n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-37",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-37",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-24n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-38",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-38",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-18n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-39",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-39",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-24n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-40",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-40",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-30n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 15.3,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-41",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-41",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-30n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-42",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-42",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-43",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-43",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-30n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-44",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-44",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.8,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-45",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-45",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-48n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-46",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-46",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-60n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-47",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-47",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-60n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.2,
+      hspf2: 8.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-48",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-48",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-18n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.5,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-49",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-49",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-24n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-50",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-50",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-30n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.6,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-51",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-51",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-36n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.7,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-52",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-52",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-18n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.3,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-53",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-53",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-24n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-54",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-54",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-30n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17.5,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-55",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-55",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.8,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-56",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-56",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-24n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-57",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-57",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-30n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.6,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-58",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-58",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-36n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.4,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-59",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-59",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-18n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-60",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-60",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-24n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-61",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-61",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-30n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.3,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-62",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-62",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-36n2-m3h-s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 15.4,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-63",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-63",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-30n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 18.6,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-64",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-64",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-36n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-65",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-65",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-48n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-66",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-66",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-60n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-67",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-67",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-60n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-au-series-central-ducted-cfg-68",
+      slug: "ai-air-conditioning-au-series-central-ducted-cfg-68",
+      modelId: "ai-air-conditioning-au-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo19-48n2-m3h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-09n1-b1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-09n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n1-b1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 23,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n1-b1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.7,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-7",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-8",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-24n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-9",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-06n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 23.5,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-10",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-10",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26.4,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-11",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-11",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-12",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-12",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-13",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-13",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-24n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-14",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-14",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao29-09n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 29,
+      hspf2: 14,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-15",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-15",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao29-12n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 27.5,
+      hspf2: 14.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-16",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-16",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao29-24n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-17",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-17",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao29-33n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-18",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-18",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-30n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 21,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-19",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-19",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n1-b1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 23,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aw-series-wall-single-cfg-20",
+      slug: "ai-air-conditioning-aw-series-wall-single-cfg-20",
+      modelId: "ai-air-conditioning-aw-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n1-b1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.7,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-1",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-12n1-b1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-2",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-12n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-3",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-24n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-4",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-36n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-5",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao29-18n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-6",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-auo17-18n1-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-7",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-auo17-36n1-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-8",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-auo17-48n1-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-9",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-auo17-60n1-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-10",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-10",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-afo19-36n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-11",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-11",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo21-55n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-12",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-12",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo21-55n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-13",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-13",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-12n2-b1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-14",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-14",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-12n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-15",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-15",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-36n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-16",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-16",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-60n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 58000,
+      coolingCapacityMaxBtu: 58000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-17",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-17",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-60n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-18",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-18",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo21-60n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-19",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-19",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo21-60n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-20",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-20",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo21-60n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-21",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-21",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-36n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-standard-wall-single-cfg-22",
+      slug: "ai-air-conditioning-standard-wall-single-cfg-22",
+      modelId: "ai-air-conditioning-standard-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-60n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-18n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-09n2-b1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-09n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.2,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-24n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao21-30n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22.3,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-7",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n2-b1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24.5,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-8",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n2-b1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.2,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-9",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24.6,
+      hspf2: 13,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-10",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-10",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-11",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-11",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-12",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-12",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-24n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-13",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-13",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-06n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 25.3,
+      hspf2: 14.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-14",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-14",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-15",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-15",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-16",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-16",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-17",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-17",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-24n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 13.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-18",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-18",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-33n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-19",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-19",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao35-06n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6000,
+      coolingCapacityMaxBtu: 6000,
+      seer2: 35,
+      hspf2: 15.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-20",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-20",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao35-09n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 33.3,
+      hspf2: 14.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-21",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-21",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao35-12n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 29.4,
+      hspf2: 12.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-22",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-22",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao35-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 25.6,
+      hspf2: 16.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-23",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-23",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.6,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-24",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-24",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 21.1,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-25",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-25",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 16800,
+      seer2: 20.7,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-26",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-26",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-24n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-27",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-27",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.1,
+      hspf2: 11.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-28",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-28",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.1,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-29",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-29",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.2,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-30",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-30",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 19.5,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-31",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-31",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-32",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-32",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-33",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-33",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 19.7,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-34",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-34",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 19.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-35",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-35",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 20,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-36",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-36",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-24n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-37",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-37",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-09n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26,
+      hspf2: 13.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-38",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-38",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-12n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.6,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-39",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-39",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 23.8,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-40",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-40",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.3,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-41",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-41",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao24-24n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.1,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-42",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-42",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-43",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-43",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-44",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-44",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-45",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-45",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-24n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: 20.7,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-46",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-46",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-06n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 22,
+      hspf2: 12,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-47",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-47",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-48",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-48",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-49",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-49",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 16700,
+      seer2: 20.6,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-50",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-50",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-06n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 6500,
+      coolingCapacityMaxBtu: 6500,
+      seer2: 21.4,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-51",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-51",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-52",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-52",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-53",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-53",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-54",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-54",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.5,
+      hspf2: 13.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-55",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-55",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-56",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-56",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17500,
+      coolingCapacityMaxBtu: 17500,
+      seer2: 18.4,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-57",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-57",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-24n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-58",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-58",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-09n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.2,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-59",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-59",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-12n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-60",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-60",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-61",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-61",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-wall-single-cfg-62",
+      slug: "ai-air-conditioning-ao-series-wall-single-cfg-62",
+      modelId: "ai-air-conditioning-ao-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-ao25-24n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 22000,
+      coolingCapacityMaxBtu: 22000,
+      seer2: 20.4,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-a2m-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-a2m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a2mo22-18n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-a2m-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-a2m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a2mo22-18n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-a2m-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-a2m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a2mo22-18n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19.75,
+      hspf2: 9.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-a2m-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-a2m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a2mo21-18n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-a2m-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-a2m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a2mo21-18n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a2m-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-a2m-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-a2m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a2mo21-18n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo22-27n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 20.5,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo22-27n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 19,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo22-27n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 19.75,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo21-27n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo21-27n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo21-27n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-7",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo21-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-8",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo21-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-9",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo21-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-10",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-10",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo23-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-11",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-11",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo23-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a3m-series-wall-single-cfg-12",
+      slug: "ai-air-conditioning-a3m-series-wall-single-cfg-12",
+      modelId: "ai-air-conditioning-a3m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a3mo23-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo22-36n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21,
+      hspf2: 10.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo22-36n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo22-36n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.2,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo21-36n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo21-27n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo21-27n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-7",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo21-27n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26200,
+      coolingCapacityMaxBtu: 26200,
+      seer2: 22,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-8",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo23-27n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 21,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-9",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo23-27n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a4m-series-wall-single-cfg-10",
+      slug: "ai-air-conditioning-a4m-series-wall-single-cfg-10",
+      modelId: "ai-air-conditioning-a4m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a4mo23-27n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 20,
+      hspf2: 9.75,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo22-48n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo22-48n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo22-48n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.05,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo22-55n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo22-55n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo22-55n1-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 19.4,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-7",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo21-48n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-8",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo21-48n1-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.1,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-9",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo21-36n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 23.1,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-10",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-10",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo21-36n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-11",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-11",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo21-36n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 21.55,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-12",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-12",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo23-36n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-13",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-13",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo23-36n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 19.4,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a5m-series-wall-single-cfg-14",
+      slug: "ai-air-conditioning-a5m-series-wall-single-cfg-14",
+      modelId: "ai-air-conditioning-a5m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a5mo23-36n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.45,
+      hspf2: 10.85,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-36n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-48n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19,
+      hspf2: 9.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-36n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-48n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17.1,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-36n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-48n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 19.8,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-7",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-36n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36600,
+      coolingCapacityMaxBtu: 36600,
+      seer2: 21.2,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-8",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-48n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-9",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-36n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.7,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-10",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-10",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-48n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-11",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-11",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-60n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.8,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-12",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-12",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-36n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36400,
+      coolingCapacityMaxBtu: 36400,
+      seer2: 20,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-13",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-13",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-48n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.5,
+      hspf2: 10.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-14",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-14",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso25-60n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 18,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-aso-series-wall-single-cfg-15",
+      slug: "ai-air-conditioning-aso-series-wall-single-cfg-15",
+      modelId: "ai-air-conditioning-aso-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-aso24-36n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-1",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-1",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo21-48n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-2",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-2",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo21-48n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-3",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-3",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo21-48n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.85,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-4",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-4",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo23-48n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.2,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-5",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-5",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo23-48n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-6",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-6",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo23-48n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: 20.8,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-7",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-7",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo23-55n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 51000,
+      coolingCapacityMaxBtu: 51000,
+      seer2: 21.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-8",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-8",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo23-55n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 20,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-a6m-series-wall-single-cfg-9",
+      slug: "ai-air-conditioning-a6m-series-wall-single-cfg-9",
+      modelId: "ai-air-conditioning-a6m-series-wall-single",
+      outdoorUnitId: "ai-air-conditioning-a6mo23-55n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 52000,
+      coolingCapacityMaxBtu: 52000,
+      seer2: 20.7,
+      hspf2: 10.65,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-central-ducted-cfg-1",
+      slug: "ai-air-conditioning-ao-series-central-ducted-cfg-1",
+      modelId: "ai-air-conditioning-ao-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-ao24-18n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.5,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-central-ducted-cfg-2",
+      slug: "ai-air-conditioning-ao-series-central-ducted-cfg-2",
+      modelId: "ai-air-conditioning-ao-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-ao24-24n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.7,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-central-ducted-cfg-3",
+      slug: "ai-air-conditioning-ao-series-central-ducted-cfg-3",
+      modelId: "ai-air-conditioning-ao-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-ao21-30n2-m1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 17,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-central-ducted-cfg-4",
+      slug: "ai-air-conditioning-ao-series-central-ducted-cfg-4",
+      modelId: "ai-air-conditioning-ao-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-ao25-18n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-central-ducted-cfg-5",
+      slug: "ai-air-conditioning-ao-series-central-ducted-cfg-5",
+      modelId: "ai-air-conditioning-ao-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-ao25-24n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.7,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-ao-series-central-ducted-cfg-6",
+      slug: "ai-air-conditioning-ao-series-central-ducted-cfg-6",
+      modelId: "ai-air-conditioning-ao-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-ao25-33n2-m1h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 16.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-as-series-central-ducted-cfg-1",
+      slug: "ai-air-conditioning-as-series-central-ducted-cfg-1",
+      modelId: "ai-air-conditioning-as-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-aso24-48n2-m2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17.7,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-as-series-central-ducted-cfg-2",
+      slug: "ai-air-conditioning-as-series-central-ducted-cfg-2",
+      modelId: "ai-air-conditioning-as-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-aso25-36n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.2,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-as-series-central-ducted-cfg-3",
+      slug: "ai-air-conditioning-as-series-central-ducted-cfg-3",
+      modelId: "ai-air-conditioning-as-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-aso25-48n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-as-series-central-ducted-cfg-4",
+      slug: "ai-air-conditioning-as-series-central-ducted-cfg-4",
+      modelId: "ai-air-conditioning-as-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-aso25-60n2-m2h",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-auo-series-central-ducted-cfg-1",
+      slug: "ai-air-conditioning-auo-series-central-ducted-cfg-1",
+      modelId: "ai-air-conditioning-auo-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-18n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-auo-series-central-ducted-cfg-2",
+      slug: "ai-air-conditioning-auo-series-central-ducted-cfg-2",
+      modelId: "ai-air-conditioning-auo-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-18n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-auo-series-central-ducted-cfg-3",
+      slug: "ai-air-conditioning-auo-series-central-ducted-cfg-3",
+      modelId: "ai-air-conditioning-auo-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-18n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.8,
+      hspf2: 8.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "ai-air-conditioning-auo-series-central-ducted-cfg-4",
+      slug: "ai-air-conditioning-auo-series-central-ducted-cfg-4",
+      modelId: "ai-air-conditioning-auo-series-central-ducted",
+      outdoorUnitId: "ai-air-conditioning-auo18-48n2-m3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 15.2,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18500,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-21",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-23",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 2.12,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-24",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.14,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-25",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.97,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-26",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-27",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-28",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-29",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-30",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-31",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-32",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-33",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-34",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-35",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-36",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-37",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-38",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-39",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19700,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-40",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-41",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-42",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-43",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-44",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-45",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-46",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-47",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-48",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-49",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-50",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18200,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-51",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24800,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-52",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-53",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-54",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-55",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-56",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-57",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-58",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-59",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-60",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-61",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-62",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-63",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-64",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-65",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-66",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-67",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-au-series-central-ducted-cfg-68",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6300,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5900,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2.41,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5900,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aw-series-wall-single-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-21",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-standard-wall-single-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 2.33,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2.35,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: 2.35,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-21",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19300,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-23",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.17,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-24",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-25",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-26",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-27",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7900,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-28",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 2.48,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-29",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.24,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-30",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-31",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-32",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-33",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 2.31,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-34",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-35",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-36",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-37",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-38",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.5,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-39",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-40",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13700,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-41",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-42",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-43",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-44",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-45",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.23,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-46",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-47",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-48",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-49",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-50",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8000,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-51",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-52",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-53",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-54",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-55",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-56",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-57",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-58",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-59",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-60",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-61",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 1.86,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-wall-single-cfg-62",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20200,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a2m-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a2m-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a2m-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14700,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a2m-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a2m-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a2m-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a3m-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28600,
+          cop: 1.93,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 1.68,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a4m-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23200,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a5m-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36600,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39500,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31600,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30200,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38500,
+          cop: 1.83,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-aso-series-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35400,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-a6m-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13200,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17600,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19400,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-central-ducted-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16900,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-ao-series-central-ducted-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-as-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-as-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-as-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 40000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-as-series-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 41000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-auo-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-auo-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-auo-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "ai-air-conditioning-auo-series-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};

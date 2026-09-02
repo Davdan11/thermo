@@ -1,0 +1,653 @@
+import type { BrandDataset } from "../../types";
+
+export const ecoairDataset: BrandDataset = {
+  brand: {
+    id: "eco-air",
+    slug: "eco-air",
+    name: "ECO AIR",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "eco-air-standard",
+      slug: "eco-air-standard",
+      name: "Standard",
+      brandId: "eco-air",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m2o-series",
+      slug: "eco-air-m2o-series",
+      name: "M2O Series",
+      brandId: "eco-air",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m3o-series",
+      slug: "eco-air-m3o-series",
+      name: "M3O Series",
+      brandId: "eco-air",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m40-series",
+      slug: "eco-air-m40-series",
+      name: "M40 Series",
+      brandId: "eco-air",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series",
+      slug: "eco-air-m5o-series",
+      name: "M5O Series",
+      brandId: "eco-air",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "eco-air-standard-wall-single",
+      slug: "eco-air-standard-wall-single",
+      name: "Standard",
+      seriesId: "eco-air-standard",
+      brandId: "eco-air",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 34800,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m2o-series-wall-single",
+      slug: "eco-air-m2o-series-wall-single",
+      name: "M2O Series",
+      seriesId: "eco-air-m2o-series",
+      brandId: "eco-air",
+      modelNumber: "M2O Series",
+      normalizedModelNumber: "m2o-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 16000,
+      seer2Min: 19,
+      seer2Max: 22,
+      hspf2Min: 9.3,
+      hspf2Max: 9.8,
+      cop5FMin: 1.85,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m3o-series-wall-single",
+      slug: "eco-air-m3o-series-wall-single",
+      name: "M3O Series",
+      seriesId: "eco-air-m3o-series",
+      brandId: "eco-air",
+      modelNumber: "M3O Series",
+      normalizedModelNumber: "m3o-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      heatingCapacity5FMinBtu: 26600,
+      heatingCapacity5FMaxBtu: 27000,
+      seer2Min: 20,
+      seer2Max: 23,
+      hspf2Min: 9.5,
+      hspf2Max: 10.6,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m40-series-wall-single",
+      slug: "eco-air-m40-series-wall-single",
+      name: "M40 Series",
+      seriesId: "eco-air-m40-series",
+      brandId: "eco-air",
+      modelNumber: "M40 Series",
+      normalizedModelNumber: "m40-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      heatingCapacity5FMinBtu: 33000,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 20.6,
+      seer2Max: 22.2,
+      hspf2Min: 10.15,
+      hspf2Max: 10.3,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single",
+      slug: "eco-air-m5o-series-wall-single",
+      name: "M5O Series",
+      seriesId: "eco-air-m5o-series",
+      brandId: "eco-air",
+      modelNumber: "M5O Series",
+      normalizedModelNumber: "m5o-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 34400,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 18.8,
+      seer2Max: 22,
+      hspf2Min: 9,
+      hspf2Max: 9.8,
+      cop5FMin: 1.9,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "eco-air-m5oa-55hfn1-m",
+      modelNumber: "M5OA-55HFN1-M",
+      brandId: "eco-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "eco-air-m2oi-18hfn1-m",
+      modelNumber: "M2OI-18HFN1-M",
+      brandId: "eco-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "eco-air-m3oi-28hfn1-m",
+      modelNumber: "M3OI-28HFN1-M",
+      brandId: "eco-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "eco-air-m4oi-36hfn1-m",
+      modelNumber: "M4OI-36HFN1-M",
+      brandId: "eco-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "eco-air-m5og-48hfn1-m-x",
+      modelNumber: "M5OG-48HFN1-M-[X]",
+      brandId: "eco-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "eco-air-m5oa-55hfn1-m-x",
+      modelNumber: "M5OA-55HFN1-M-[X]",
+      brandId: "eco-air",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "eco-air-standard-wall-single-cfg-1",
+      slug: "eco-air-standard-wall-single-cfg-1",
+      modelId: "eco-air-standard-wall-single",
+      outdoorUnitId: "eco-air-m5oa-55hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-standard-wall-single-cfg-2",
+      slug: "eco-air-standard-wall-single-cfg-2",
+      modelId: "eco-air-standard-wall-single",
+      outdoorUnitId: "eco-air-m5oa-55hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m2o-series-wall-single-cfg-1",
+      slug: "eco-air-m2o-series-wall-single-cfg-1",
+      modelId: "eco-air-m2o-series-wall-single",
+      outdoorUnitId: "eco-air-m2oi-18hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 22,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m2o-series-wall-single-cfg-2",
+      slug: "eco-air-m2o-series-wall-single-cfg-2",
+      modelId: "eco-air-m2o-series-wall-single",
+      outdoorUnitId: "eco-air-m2oi-18hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 19,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m2o-series-wall-single-cfg-3",
+      slug: "eco-air-m2o-series-wall-single-cfg-3",
+      modelId: "eco-air-m2o-series-wall-single",
+      outdoorUnitId: "eco-air-m2oi-18hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 19000,
+      coolingCapacityMaxBtu: 19000,
+      seer2: 20.5,
+      hspf2: 9.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m3o-series-wall-single-cfg-1",
+      slug: "eco-air-m3o-series-wall-single-cfg-1",
+      modelId: "eco-air-m3o-series-wall-single",
+      outdoorUnitId: "eco-air-m3oi-28hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 23,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m3o-series-wall-single-cfg-2",
+      slug: "eco-air-m3o-series-wall-single-cfg-2",
+      modelId: "eco-air-m3o-series-wall-single",
+      outdoorUnitId: "eco-air-m3oi-28hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m3o-series-wall-single-cfg-3",
+      slug: "eco-air-m3o-series-wall-single-cfg-3",
+      modelId: "eco-air-m3o-series-wall-single",
+      outdoorUnitId: "eco-air-m3oi-28hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21.5,
+      hspf2: 10.05,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m40-series-wall-single-cfg-1",
+      slug: "eco-air-m40-series-wall-single-cfg-1",
+      modelId: "eco-air-m40-series-wall-single",
+      outdoorUnitId: "eco-air-m4oi-36hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 22.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m40-series-wall-single-cfg-2",
+      slug: "eco-air-m40-series-wall-single-cfg-2",
+      modelId: "eco-air-m40-series-wall-single",
+      outdoorUnitId: "eco-air-m4oi-36hfn1-m",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20.6,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single-cfg-1",
+      slug: "eco-air-m5o-series-wall-single-cfg-1",
+      modelId: "eco-air-m5o-series-wall-single",
+      outdoorUnitId: "eco-air-m5og-48hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.8,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single-cfg-2",
+      slug: "eco-air-m5o-series-wall-single-cfg-2",
+      modelId: "eco-air-m5o-series-wall-single",
+      outdoorUnitId: "eco-air-m5og-48hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single-cfg-3",
+      slug: "eco-air-m5o-series-wall-single-cfg-3",
+      modelId: "eco-air-m5o-series-wall-single",
+      outdoorUnitId: "eco-air-m5og-48hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.35,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single-cfg-4",
+      slug: "eco-air-m5o-series-wall-single-cfg-4",
+      modelId: "eco-air-m5o-series-wall-single",
+      outdoorUnitId: "eco-air-m5oa-55hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single-cfg-5",
+      slug: "eco-air-m5o-series-wall-single-cfg-5",
+      modelId: "eco-air-m5o-series-wall-single",
+      outdoorUnitId: "eco-air-m5oa-55hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 18.8,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "eco-air-m5o-series-wall-single-cfg-6",
+      slug: "eco-air-m5o-series-wall-single-cfg-6",
+      modelId: "eco-air-m5o-series-wall-single",
+      outdoorUnitId: "eco-air-m5oa-55hfn1-m-x",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 20.4,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "eco-air-standard-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-standard-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m2o-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m2o-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m2o-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m3o-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m3o-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m3o-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m40-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m40-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m5o-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m5o-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m5o-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m5o-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m5o-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "eco-air-m5o-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};

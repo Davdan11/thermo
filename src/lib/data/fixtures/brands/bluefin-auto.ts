@@ -1,0 +1,770 @@
+import type { BrandDataset } from "../../types";
+
+export const bluefinDataset: BrandDataset = {
+  brand: {
+    id: "bluefin",
+    slug: "bluefin",
+    name: "BLUEFIN",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "bluefin-bfm-series",
+      slug: "bluefin-bfm-series",
+      name: "BFM Series",
+      brandId: "bluefin",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard",
+      slug: "bluefin-standard",
+      name: "Standard",
+      brandId: "bluefin",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "bluefin-bfm-series-wall-single",
+      slug: "bluefin-bfm-series-wall-single",
+      name: "BFM Series",
+      seriesId: "bluefin-bfm-series",
+      brandId: "bluefin",
+      modelNumber: "BFM Series",
+      normalizedModelNumber: "bfm-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 18.5,
+      seer2Max: 26.4,
+      hspf2Min: 8.5,
+      hspf2Max: 11.6,
+      cop5FMin: 1.8,
+      cop5FMax: 2.44,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard-wall-single",
+      slug: "bluefin-standard-wall-single",
+      name: "Standard",
+      seriesId: "bluefin-standard",
+      brandId: "bluefin",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 25600,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "bluefin-bfms24pr-01o",
+      modelNumber: "BFMS24PR-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms24pl-01o",
+      modelNumber: "BFMS24PL-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms18pl-01o",
+      modelNumber: "BFMS18PL-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms12pr-01o",
+      modelNumber: "BFMS12PR-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms09pl-01o",
+      modelNumber: "BFMS09PL-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms12pl-01o",
+      modelNumber: "BFMS12PL-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms18pr-01o",
+      modelNumber: "BFMS18PR-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms09ba-01o",
+      modelNumber: "BFMS09BA-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms09pr-01o",
+      modelNumber: "BFMS09PR-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms18ba-02o",
+      modelNumber: "BFMS18BA-02O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms24ba-02o",
+      modelNumber: "BFMS24BA-02O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms30ba-02o",
+      modelNumber: "BFMS30BA-02O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms09ba-02o",
+      modelNumber: "BFMS09BA-02O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms27mzpl-02o",
+      modelNumber: "BFMS27MZPL-02O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms12ba-01o",
+      modelNumber: "BFMS12BA-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms24ba-01o",
+      modelNumber: "BFMS24BA-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms18ba-01o",
+      modelNumber: "BFMS18BA-01O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms36ba-02o",
+      modelNumber: "BFMS36BA-02O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    },
+    {
+      id: "bluefin-bfms12ba-02o",
+      modelNumber: "BFMS12BA-02O",
+      brandId: "bluefin",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-1",
+      slug: "bluefin-bfm-series-wall-single-cfg-1",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms24pr-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-2",
+      slug: "bluefin-bfm-series-wall-single-cfg-2",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms24pl-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-3",
+      slug: "bluefin-bfm-series-wall-single-cfg-3",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms18pl-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-4",
+      slug: "bluefin-bfm-series-wall-single-cfg-4",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms12pr-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-5",
+      slug: "bluefin-bfm-series-wall-single-cfg-5",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms09pl-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-6",
+      slug: "bluefin-bfm-series-wall-single-cfg-6",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms12pl-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-7",
+      slug: "bluefin-bfm-series-wall-single-cfg-7",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms18pr-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-8",
+      slug: "bluefin-bfm-series-wall-single-cfg-8",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms09ba-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-9",
+      slug: "bluefin-bfm-series-wall-single-cfg-9",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms09pr-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26.4,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-10",
+      slug: "bluefin-bfm-series-wall-single-cfg-10",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms18ba-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.2,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-11",
+      slug: "bluefin-bfm-series-wall-single-cfg-11",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms24ba-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-12",
+      slug: "bluefin-bfm-series-wall-single-cfg-12",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms30ba-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22.3,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-13",
+      slug: "bluefin-bfm-series-wall-single-cfg-13",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms09ba-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-14",
+      slug: "bluefin-bfm-series-wall-single-cfg-14",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms27mzpl-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-15",
+      slug: "bluefin-bfm-series-wall-single-cfg-15",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms27mzpl-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-bfm-series-wall-single-cfg-16",
+      slug: "bluefin-bfm-series-wall-single-cfg-16",
+      modelId: "bluefin-bfm-series-wall-single",
+      outdoorUnitId: "bluefin-bfms27mzpl-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26200,
+      coolingCapacityMaxBtu: 26200,
+      seer2: 22,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard-wall-single-cfg-1",
+      slug: "bluefin-standard-wall-single-cfg-1",
+      modelId: "bluefin-standard-wall-single",
+      outdoorUnitId: "bluefin-bfms12ba-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard-wall-single-cfg-2",
+      slug: "bluefin-standard-wall-single-cfg-2",
+      modelId: "bluefin-standard-wall-single",
+      outdoorUnitId: "bluefin-bfms24ba-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard-wall-single-cfg-3",
+      slug: "bluefin-standard-wall-single-cfg-3",
+      modelId: "bluefin-standard-wall-single",
+      outdoorUnitId: "bluefin-bfms18ba-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard-wall-single-cfg-4",
+      slug: "bluefin-standard-wall-single-cfg-4",
+      modelId: "bluefin-standard-wall-single",
+      outdoorUnitId: "bluefin-bfms12ba-01o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard-wall-single-cfg-5",
+      slug: "bluefin-standard-wall-single-cfg-5",
+      modelId: "bluefin-standard-wall-single",
+      outdoorUnitId: "bluefin-bfms36ba-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "bluefin-standard-wall-single-cfg-6",
+      slug: "bluefin-standard-wall-single-cfg-6",
+      modelId: "bluefin-standard-wall-single",
+      outdoorUnitId: "bluefin-bfms12ba-02o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2.41,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-bfm-series-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-standard-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-standard-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-standard-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-standard-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-standard-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "bluefin-standard-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};

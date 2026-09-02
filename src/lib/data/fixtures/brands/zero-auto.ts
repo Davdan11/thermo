@@ -1,0 +1,4496 @@
+import type { BrandDataset } from "../../types";
+
+export const zeroDataset: BrandDataset = {
+  brand: {
+    id: "zero",
+    slug: "zero",
+    name: "ZERO",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "zero-zmsb-series",
+      slug: "zero-zmsb-series",
+      name: "ZMSB Series",
+      brandId: "zero",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard",
+      slug: "zero-standard",
+      name: "Standard",
+      brandId: "zero",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series",
+      slug: "zero-z4s-series",
+      name: "Z4S Series",
+      brandId: "zero",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z5sov-series",
+      slug: "zero-z5sov-series",
+      name: "Z5SOV Series",
+      brandId: "zero",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zav-series",
+      slug: "zero-zav-series",
+      name: "ZAV Series",
+      brandId: "zero",
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series",
+      slug: "zero-z3sov-series",
+      name: "Z3SOV Series",
+      brandId: "zero",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat",
+      slug: "zero-z-max-us-r454b-hyper-heat",
+      name: "Z-MAX US R454B Hyper Heat",
+      brandId: "zero",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max",
+      slug: "zero-z-max",
+      name: "Z-MAX",
+      brandId: "zero",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series",
+      slug: "zero-zava-series",
+      name: "ZAVA Series",
+      brandId: "zero",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z6sov-series",
+      slug: "zero-z6sov-series",
+      name: "Z6SOV Series",
+      brandId: "zero",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zsou-series",
+      slug: "zero-zsou-series",
+      name: "ZSOU Series",
+      brandId: "zero",
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "zero-zmsb-series-wall-single",
+      slug: "zero-zmsb-series-wall-single",
+      name: "ZMSB Series",
+      seriesId: "zero-zmsb-series",
+      brandId: "zero",
+      modelNumber: "ZMSB Series",
+      normalizedModelNumber: "zmsb-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 6000,
+      heatingCapacity5FMaxBtu: 38000,
+      seer2Min: 18.5,
+      seer2Max: 26.4,
+      hspf2Min: 8.5,
+      hspf2Max: 13.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2.44,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single",
+      slug: "zero-standard-wall-single",
+      name: "Standard",
+      seriesId: "zero-standard",
+      brandId: "zero",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 39000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single",
+      slug: "zero-z4s-series-wall-single",
+      name: "Z4S Series",
+      seriesId: "zero-z4s-series",
+      brandId: "zero",
+      modelNumber: "Z4S Series",
+      normalizedModelNumber: "z4s-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 20,
+      seer2Max: 23.1,
+      hspf2Min: 9,
+      hspf2Max: 10.6,
+      cop5FMin: 1.68,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z5sov-series-wall-single",
+      slug: "zero-z5sov-series-wall-single",
+      name: "Z5SOV Series",
+      seriesId: "zero-z5sov-series",
+      brandId: "zero",
+      modelNumber: "Z5SOV Series",
+      normalizedModelNumber: "z5sov-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 26400,
+      heatingCapacity5FMaxBtu: 39000,
+      seer2Min: 20,
+      seer2Max: 23.1,
+      hspf2Min: 9.2,
+      hspf2Max: 10,
+      cop5FMin: 2,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zav-series-central-ducted",
+      slug: "zero-zav-series-central-ducted",
+      name: "ZAV Series",
+      seriesId: "zero-zav-series",
+      brandId: "zero",
+      modelNumber: "ZAV Series",
+      normalizedModelNumber: "zav-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series-wall-single",
+      slug: "zero-z3sov-series-wall-single",
+      name: "Z3SOV Series",
+      seriesId: "zero-z3sov-series",
+      brandId: "zero",
+      modelNumber: "Z3SOV Series",
+      normalizedModelNumber: "z3sov-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 13500,
+      heatingCapacity5FMaxBtu: 14800,
+      seer2Min: 19,
+      seer2Max: 23,
+      hspf2Min: 9.8,
+      hspf2Max: 10.2,
+      cop5FMin: 2,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      slug: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      name: "Z-MAX US R454B Hyper Heat",
+      seriesId: "zero-z-max-us-r454b-hyper-heat",
+      brandId: "zero",
+      modelNumber: "Z-MAX US R454B Hyper Heat",
+      normalizedModelNumber: "z-max-us-r454b-hyper-heat",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 23000,
+      heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 14000,
+      seer2Min: 23,
+      seer2Max: 24,
+      hspf2Min: 9.5,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-central-ducted",
+      slug: "zero-z-max-central-ducted",
+      name: "Z-MAX",
+      seriesId: "zero-z-max",
+      brandId: "zero",
+      modelNumber: "Z-MAX",
+      normalizedModelNumber: "z-max",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 53000,
+      heatingCapacity5FMinBtu: 19000,
+      heatingCapacity5FMaxBtu: 38000,
+      seer2Min: 17,
+      seer2Max: 19,
+      hspf2Min: 8.2,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single",
+      slug: "zero-z-max-wall-single",
+      name: "Z-MAX",
+      seriesId: "zero-z-max",
+      brandId: "zero",
+      modelNumber: "Z-MAX",
+      normalizedModelNumber: "z-max",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 42000,
+      heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 29400,
+      seer2Min: 19.5,
+      seer2Max: 25,
+      hspf2Min: 9,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted",
+      slug: "zero-zava-series-central-ducted",
+      name: "ZAVA Series",
+      seriesId: "zero-zava-series",
+      brandId: "zero",
+      modelNumber: "ZAVA Series",
+      normalizedModelNumber: "zava-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 12600,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 19,
+      hspf2Min: 8.4,
+      hspf2Max: 10.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z6sov-series-wall-single",
+      slug: "zero-z6sov-series-wall-single",
+      name: "Z6SOV Series",
+      seriesId: "zero-z6sov-series",
+      brandId: "zero",
+      modelNumber: "Z6SOV Series",
+      normalizedModelNumber: "z6sov-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      heatingCapacity5FMinBtu: 34000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 20.4,
+      seer2Max: 21.3,
+      hspf2Min: 10,
+      hspf2Max: 10.6,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zsou-series-central-ducted",
+      slug: "zero-zsou-series-central-ducted",
+      name: "ZSOU Series",
+      seriesId: "zero-zsou-series",
+      brandId: "zero",
+      modelNumber: "ZSOU Series",
+      normalizedModelNumber: "zsou-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17000,
+      heatingCapacity5FMaxBtu: 17000,
+      seer2Min: 18,
+      seer2Max: 18,
+      hspf2Min: 8.1,
+      hspf2Max: 8.1,
+      cop5FMin: 1.9,
+      cop5FMax: 1.9,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "zero-zmsb-09hvd110-us",
+      modelNumber: "ZMSB-09HVD110-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvd-us",
+      modelNumber: "ZMSB-09HVD-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hvd-us",
+      modelNumber: "ZMSB-18HVD-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsov-24hdm-us",
+      modelNumber: "ZSOV-24HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsov-48hdm-us",
+      modelNumber: "ZSOV-48HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z3sov-27hdm-us",
+      modelNumber: "Z3SOV-27HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z5sov-48hdm-us",
+      modelNumber: "Z5SOV-48HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hv-ushh",
+      modelNumber: "ZMSB-09HV-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv-ushh",
+      modelNumber: "ZMSB-12HV-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hv-ushh",
+      modelNumber: "ZMSB-18HV-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hv-ushh",
+      modelNumber: "ZMSB-24HV-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hv-ushhc",
+      modelNumber: "ZMSB-09HV-USHHC",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv-ushhc",
+      modelNumber: "ZMSB-12HV-USHHC",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hv-ushhc",
+      modelNumber: "ZMSB-18HV-USHHC",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hv-ushhc",
+      modelNumber: "ZMSB-24HV-USHHC",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hv-ushhc-o",
+      modelNumber: "ZMSB-09HV-USHHC-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv-ushhc-o",
+      modelNumber: "ZMSB-12HV-USHHC-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hv-ushhc-o",
+      modelNumber: "ZMSB-18HV-USHHC-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hv-ushhc-o",
+      modelNumber: "ZMSB-24HV-USHHC-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hv-us-o",
+      modelNumber: "ZMSB-18HV-US-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hv-ushhcr2-o",
+      modelNumber: "ZMSB-09HV-USHHCR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv-ushhcr2-o",
+      modelNumber: "ZMSB-12HV-USHHCR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hv-ushhcr2-o",
+      modelNumber: "ZMSB-18HV-USHHCR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hv-ushhcr2-o",
+      modelNumber: "ZMSB-24HV-USHHCR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-33hv-ushhcr2-o",
+      modelNumber: "ZMSB-33HV-USHHCR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv110-ushhr2-o",
+      modelNumber: "ZMSB-12HV110-USHHR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hv-ushhr2-o",
+      modelNumber: "ZMSB-09HV-USHHR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv-ushhr2-o",
+      modelNumber: "ZMSB-12HV-USHHR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hv-ushhr2-o",
+      modelNumber: "ZMSB-18HV-USHHR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hv-ushhr2-o",
+      modelNumber: "ZMSB-24HV-USHHR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hv110-usr2-o",
+      modelNumber: "ZMSB-09HV110-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hv-usr2-o",
+      modelNumber: "ZMSB-09HV-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hv-usr2-o",
+      modelNumber: "ZMSB-18HV-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hv-usr2-o",
+      modelNumber: "ZMSB-24HV-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-30hv-usr2-o",
+      modelNumber: "ZMSB-30HV-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvd110-us",
+      modelNumber: "ZMSB-12HVD110-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvd-us",
+      modelNumber: "ZMSB-12HVD-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hvd-us",
+      modelNumber: "ZMSB-24HVD-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvt110-ushh",
+      modelNumber: "ZMSB-09HVT110-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvt110-ushh",
+      modelNumber: "ZMSB-12HVT110-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvt-ushh",
+      modelNumber: "ZMSB-09HVT-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvt-ushh",
+      modelNumber: "ZMSB-12HVT-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hvt-ushh",
+      modelNumber: "ZMSB-18HVT-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hvt-ushh",
+      modelNumber: "ZMSB-24HVT-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsov-36hdm-us",
+      modelNumber: "ZSOV-36HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsov-60hdm-us",
+      modelNumber: "ZSOV-60HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv110-us-o",
+      modelNumber: "ZMSB-12HV110-US-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv-us-o",
+      modelNumber: "ZMSB-12HV-US-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hv-us-o",
+      modelNumber: "ZMSB-24HV-US-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvt110-usr2",
+      modelNumber: "ZMSB-09HVT110-USR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvt110-usr2",
+      modelNumber: "ZMSB-12HVT110-USR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvt-usr2",
+      modelNumber: "ZMSB-09HVT-USR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvt-usr2",
+      modelNumber: "ZMSB-12HVT-USR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hvt-usr2",
+      modelNumber: "ZMSB-18HVT-USR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hvt-usr2",
+      modelNumber: "ZMSB-24HVT-USR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-36hvt-usr2",
+      modelNumber: "ZMSB-36HVT-USR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv110-usr2-o",
+      modelNumber: "ZMSB-12HV110-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hv-usr2-o",
+      modelNumber: "ZMSB-12HV-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-36hv-usr2-o",
+      modelNumber: "ZMSB-36HV-USR2-O",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-30hdmb-us",
+      modelNumber: "ZSOVA-30HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z4sov-60hdmb-us",
+      modelNumber: "Z4SOV-60HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z6sov-60hdmb-us",
+      modelNumber: "Z6SOV-60HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z4sov-36hdm-us",
+      modelNumber: "Z4SOV-36HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z4sov-18hdmb-us",
+      modelNumber: "Z4SOV-18HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z4sov-27hdmb-us",
+      modelNumber: "Z4SOV-27HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z4sov-36hdmb-us",
+      modelNumber: "Z4SOV-36HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z4sov-48hdmb-us",
+      modelNumber: "Z4SOV-48HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z5sov-36hdmb-us",
+      modelNumber: "Z5SOV-36HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z3sov-18hdm-us",
+      modelNumber: "Z3SOV-18HDM-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z3sov-18hdmb-us",
+      modelNumber: "Z3SOV-18HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvt110-ushhr2",
+      modelNumber: "ZMSB-09HVT110-USHHR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvt110-ushhr2",
+      modelNumber: "ZMSB-12HVT110-USHHR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvt-ushhr2",
+      modelNumber: "ZMSB-09HVT-USHHR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvt-ushhr2",
+      modelNumber: "ZMSB-12HVT-USHHR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hvt-ushhr2",
+      modelNumber: "ZMSB-18HVT-USHHR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hvt-ushhr2",
+      modelNumber: "ZMSB-24HVT-USHHR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zov-36hdtb",
+      modelNumber: "ZOV-36HDTB",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zov-48hdtb",
+      modelNumber: "ZOV-48HDTB",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zov-60hdtb",
+      modelNumber: "ZOV-60HDTB",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zov-24hdtb",
+      modelNumber: "ZOV-24HDTB",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z2sov-18hdtb-us",
+      modelNumber: "Z2SOV-18HDTB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z3sov-27hdtb-us",
+      modelNumber: "Z3SOV-27HDTB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z4sov-36hdtb-us",
+      modelNumber: "Z4SOV-36HDTB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z5sov-42hdtb-us",
+      modelNumber: "Z5SOV-42HDTB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-09hvt-ushhcr2",
+      modelNumber: "ZMSB-09HVT-USHHCR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-12hvt-ushhcr2",
+      modelNumber: "ZMSB-12HVT-USHHCR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-18hvt-ushhcr2",
+      modelNumber: "ZMSB-18HVT-USHHCR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zmsb-24hvt-ushhcr2",
+      modelNumber: "ZMSB-24HVT-USHHCR2",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-18hdmb-us",
+      modelNumber: "ZSOVA-18HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-24hdmb-us",
+      modelNumber: "ZSOVA-24HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-36hdmb-us",
+      modelNumber: "ZSOVA-36HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-48hdmb-us",
+      modelNumber: "ZSOVA-48HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-60hdmb-us",
+      modelNumber: "ZSOVA-60HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-18hdmb-ushh",
+      modelNumber: "ZSOVA-18HDMB-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-24hdmb-ushh",
+      modelNumber: "ZSOVA-24HDMB-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-30hdmb-ushh",
+      modelNumber: "ZSOVA-30HDMB-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-36hdmb-ushh",
+      modelNumber: "ZSOVA-36HDMB-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-48hdmb-ushh",
+      modelNumber: "ZSOVA-48HDMB-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsova-60hdmb-ushh",
+      modelNumber: "ZSOVA-60HDMB-USHH",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-z6sov-48hdmb-us",
+      modelNumber: "Z6SOV-48HDMB-US",
+      brandId: "zero",
+      refrigerant: null as any,
+    },
+    {
+      id: "zero-zsou-24hdg-hyper",
+      modelNumber: "ZSOU-24HDG-HYPER",
+      brandId: "zero",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "zero-zmsb-series-wall-single-cfg-1",
+      slug: "zero-zmsb-series-wall-single-cfg-1",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvd110-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-2",
+      slug: "zero-zmsb-series-wall-single-cfg-2",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvd-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.7,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-3",
+      slug: "zero-zmsb-series-wall-single-cfg-3",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hvd-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-4",
+      slug: "zero-zmsb-series-wall-single-cfg-4",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zsov-24hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 19,
+      hspf2: 11.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-5",
+      slug: "zero-zmsb-series-wall-single-cfg-5",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zsov-48hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-6",
+      slug: "zero-zmsb-series-wall-single-cfg-6",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zsov-24hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-7",
+      slug: "zero-zmsb-series-wall-single-cfg-7",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zsov-48hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-8",
+      slug: "zero-zmsb-series-wall-single-cfg-8",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-z3sov-27hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-9",
+      slug: "zero-zmsb-series-wall-single-cfg-9",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-z3sov-27hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-10",
+      slug: "zero-zmsb-series-wall-single-cfg-10",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-z3sov-27hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-11",
+      slug: "zero-zmsb-series-wall-single-cfg-11",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-z5sov-48hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20.9,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-12",
+      slug: "zero-zmsb-series-wall-single-cfg-12",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zsov-48hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-13",
+      slug: "zero-zmsb-series-wall-single-cfg-13",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hv-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-14",
+      slug: "zero-zmsb-series-wall-single-cfg-14",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-15",
+      slug: "zero-zmsb-series-wall-single-cfg-15",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hv-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-16",
+      slug: "zero-zmsb-series-wall-single-cfg-16",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-24hv-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-17",
+      slug: "zero-zmsb-series-wall-single-cfg-17",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hv-ushhc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26.4,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-18",
+      slug: "zero-zmsb-series-wall-single-cfg-18",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv-ushhc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-19",
+      slug: "zero-zmsb-series-wall-single-cfg-19",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hv-ushhc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-20",
+      slug: "zero-zmsb-series-wall-single-cfg-20",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-24hv-ushhc",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-21",
+      slug: "zero-zmsb-series-wall-single-cfg-21",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hv-ushhc-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26.4,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-22",
+      slug: "zero-zmsb-series-wall-single-cfg-22",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv-ushhc-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-23",
+      slug: "zero-zmsb-series-wall-single-cfg-23",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hv-ushhc-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-24",
+      slug: "zero-zmsb-series-wall-single-cfg-24",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-24hv-ushhc-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-25",
+      slug: "zero-zmsb-series-wall-single-cfg-25",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hv-us-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19.5,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-26",
+      slug: "zero-zmsb-series-wall-single-cfg-26",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hv-ushhcr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 26,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-27",
+      slug: "zero-zmsb-series-wall-single-cfg-27",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv-ushhcr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-28",
+      slug: "zero-zmsb-series-wall-single-cfg-28",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hv-ushhcr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.7,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-29",
+      slug: "zero-zmsb-series-wall-single-cfg-29",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-24hv-ushhcr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 22.3,
+      hspf2: 13.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-30",
+      slug: "zero-zmsb-series-wall-single-cfg-30",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-33hv-ushhcr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-31",
+      slug: "zero-zmsb-series-wall-single-cfg-31",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv110-ushhr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.2,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-32",
+      slug: "zero-zmsb-series-wall-single-cfg-32",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hv-ushhr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 24.6,
+      hspf2: 13,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-33",
+      slug: "zero-zmsb-series-wall-single-cfg-33",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv-ushhr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-34",
+      slug: "zero-zmsb-series-wall-single-cfg-34",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hv-ushhr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 11.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-35",
+      slug: "zero-zmsb-series-wall-single-cfg-35",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-24hv-ushhr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-36",
+      slug: "zero-zmsb-series-wall-single-cfg-36",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hv110-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-37",
+      slug: "zero-zmsb-series-wall-single-cfg-37",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-09hv-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-38",
+      slug: "zero-zmsb-series-wall-single-cfg-38",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-18hv-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.2,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-39",
+      slug: "zero-zmsb-series-wall-single-cfg-39",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-24hv-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zmsb-series-wall-single-cfg-40",
+      slug: "zero-zmsb-series-wall-single-cfg-40",
+      modelId: "zero-zmsb-series-wall-single",
+      outdoorUnitId: "zero-zmsb-30hv-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 22.3,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-1",
+      slug: "zero-standard-wall-single-cfg-1",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvd110-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-2",
+      slug: "zero-standard-wall-single-cfg-2",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvd-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-3",
+      slug: "zero-standard-wall-single-cfg-3",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-24hvd-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-4",
+      slug: "zero-standard-wall-single-cfg-4",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvt110-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-5",
+      slug: "zero-standard-wall-single-cfg-5",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvt110-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-6",
+      slug: "zero-standard-wall-single-cfg-6",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvt-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-7",
+      slug: "zero-standard-wall-single-cfg-7",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvt-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-8",
+      slug: "zero-standard-wall-single-cfg-8",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-18hvt-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-9",
+      slug: "zero-standard-wall-single-cfg-9",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-24hvt-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-10",
+      slug: "zero-standard-wall-single-cfg-10",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zsov-36hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-11",
+      slug: "zero-standard-wall-single-cfg-11",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zsov-60hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 59000,
+      coolingCapacityMaxBtu: 59000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-12",
+      slug: "zero-standard-wall-single-cfg-12",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zsov-36hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-13",
+      slug: "zero-standard-wall-single-cfg-13",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zsov-60hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-14",
+      slug: "zero-standard-wall-single-cfg-14",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zsov-36hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-15",
+      slug: "zero-standard-wall-single-cfg-15",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zsov-60hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-16",
+      slug: "zero-standard-wall-single-cfg-16",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv110-us-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-17",
+      slug: "zero-standard-wall-single-cfg-17",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv-us-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-18",
+      slug: "zero-standard-wall-single-cfg-18",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-24hv-us-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-19",
+      slug: "zero-standard-wall-single-cfg-19",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvt110-usr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-20",
+      slug: "zero-standard-wall-single-cfg-20",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvt110-usr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-21",
+      slug: "zero-standard-wall-single-cfg-21",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvt-usr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-22",
+      slug: "zero-standard-wall-single-cfg-22",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvt-usr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-23",
+      slug: "zero-standard-wall-single-cfg-23",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-18hvt-usr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-24",
+      slug: "zero-standard-wall-single-cfg-24",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-24hvt-usr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-25",
+      slug: "zero-standard-wall-single-cfg-25",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-36hvt-usr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-26",
+      slug: "zero-standard-wall-single-cfg-26",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv110-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-27",
+      slug: "zero-standard-wall-single-cfg-27",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-12hv-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-28",
+      slug: "zero-standard-wall-single-cfg-28",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zmsb-36hv-usr2-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-29",
+      slug: "zero-standard-wall-single-cfg-29",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-zsova-30hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-30",
+      slug: "zero-standard-wall-single-cfg-30",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-z4sov-60hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-31",
+      slug: "zero-standard-wall-single-cfg-31",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-z4sov-60hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-32",
+      slug: "zero-standard-wall-single-cfg-32",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-z4sov-60hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-33",
+      slug: "zero-standard-wall-single-cfg-33",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-z6sov-60hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-34",
+      slug: "zero-standard-wall-single-cfg-34",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-z6sov-60hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-standard-wall-single-cfg-35",
+      slug: "zero-standard-wall-single-cfg-35",
+      modelId: "zero-standard-wall-single",
+      outdoorUnitId: "zero-z6sov-60hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 60000,
+      coolingCapacityMaxBtu: 60000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-1",
+      slug: "zero-z4s-series-wall-single-cfg-1",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-36hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-2",
+      slug: "zero-z4s-series-wall-single-cfg-2",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-18hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-3",
+      slug: "zero-z4s-series-wall-single-cfg-3",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-18hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-4",
+      slug: "zero-z4s-series-wall-single-cfg-4",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-18hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-5",
+      slug: "zero-z4s-series-wall-single-cfg-5",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-27hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-6",
+      slug: "zero-z4s-series-wall-single-cfg-6",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-27hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-7",
+      slug: "zero-z4s-series-wall-single-cfg-7",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-27hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26200,
+      coolingCapacityMaxBtu: 26200,
+      seer2: 22,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-8",
+      slug: "zero-z4s-series-wall-single-cfg-8",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-36hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 23.1,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-9",
+      slug: "zero-z4s-series-wall-single-cfg-9",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-36hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-10",
+      slug: "zero-z4s-series-wall-single-cfg-10",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-36hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 21.55,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-11",
+      slug: "zero-z4s-series-wall-single-cfg-11",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-48hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-12",
+      slug: "zero-z4s-series-wall-single-cfg-12",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-48hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z4s-series-wall-single-cfg-13",
+      slug: "zero-z4s-series-wall-single-cfg-13",
+      modelId: "zero-z4s-series-wall-single",
+      outdoorUnitId: "zero-z4sov-48hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.85,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z5sov-series-wall-single-cfg-1",
+      slug: "zero-z5sov-series-wall-single-cfg-1",
+      modelId: "zero-z5sov-series-wall-single",
+      outdoorUnitId: "zero-z5sov-48hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.2,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z5sov-series-wall-single-cfg-2",
+      slug: "zero-z5sov-series-wall-single-cfg-2",
+      modelId: "zero-z5sov-series-wall-single",
+      outdoorUnitId: "zero-z5sov-48hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47500,
+      coolingCapacityMaxBtu: 47500,
+      seer2: 21.05,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z5sov-series-wall-single-cfg-3",
+      slug: "zero-z5sov-series-wall-single-cfg-3",
+      modelId: "zero-z5sov-series-wall-single",
+      outdoorUnitId: "zero-z5sov-36hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 23.1,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z5sov-series-wall-single-cfg-4",
+      slug: "zero-z5sov-series-wall-single-cfg-4",
+      modelId: "zero-z5sov-series-wall-single",
+      outdoorUnitId: "zero-z5sov-36hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z5sov-series-wall-single-cfg-5",
+      slug: "zero-z5sov-series-wall-single-cfg-5",
+      modelId: "zero-z5sov-series-wall-single",
+      outdoorUnitId: "zero-z5sov-36hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 21.55,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zav-series-central-ducted-cfg-1",
+      slug: "zero-zav-series-central-ducted-cfg-1",
+      modelId: "zero-zav-series-central-ducted",
+      outdoorUnitId: "zero-zsov-24hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series-wall-single-cfg-1",
+      slug: "zero-z3sov-series-wall-single-cfg-1",
+      modelId: "zero-z3sov-series-wall-single",
+      outdoorUnitId: "zero-z3sov-18hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series-wall-single-cfg-2",
+      slug: "zero-z3sov-series-wall-single-cfg-2",
+      modelId: "zero-z3sov-series-wall-single",
+      outdoorUnitId: "zero-z3sov-18hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series-wall-single-cfg-3",
+      slug: "zero-z3sov-series-wall-single-cfg-3",
+      modelId: "zero-z3sov-series-wall-single",
+      outdoorUnitId: "zero-z3sov-18hdm-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series-wall-single-cfg-4",
+      slug: "zero-z3sov-series-wall-single-cfg-4",
+      modelId: "zero-z3sov-series-wall-single",
+      outdoorUnitId: "zero-z3sov-18hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series-wall-single-cfg-5",
+      slug: "zero-z3sov-series-wall-single-cfg-5",
+      modelId: "zero-z3sov-series-wall-single",
+      outdoorUnitId: "zero-z3sov-18hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z3sov-series-wall-single-cfg-6",
+      slug: "zero-z3sov-series-wall-single-cfg-6",
+      modelId: "zero-z3sov-series-wall-single",
+      outdoorUnitId: "zero-z3sov-18hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-1",
+      slug: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-1",
+      modelId: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvt110-ushhr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-2",
+      slug: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-2",
+      modelId: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvt110-ushhr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-3",
+      slug: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-3",
+      modelId: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvt-ushhr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-4",
+      slug: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-4",
+      modelId: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvt-ushhr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-5",
+      slug: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-5",
+      modelId: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      outdoorUnitId: "zero-zmsb-18hvt-ushhr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-6",
+      slug: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-6",
+      modelId: "zero-z-max-us-r454b-hyper-heat-wall-single",
+      outdoorUnitId: "zero-zmsb-24hvt-ushhr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 23,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-central-ducted-cfg-1",
+      slug: "zero-z-max-central-ducted-cfg-1",
+      modelId: "zero-z-max-central-ducted",
+      outdoorUnitId: "zero-zov-36hdtb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 19,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-central-ducted-cfg-2",
+      slug: "zero-z-max-central-ducted-cfg-2",
+      modelId: "zero-z-max-central-ducted",
+      outdoorUnitId: "zero-zov-48hdtb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 18,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-central-ducted-cfg-3",
+      slug: "zero-z-max-central-ducted-cfg-3",
+      modelId: "zero-z-max-central-ducted",
+      outdoorUnitId: "zero-zov-60hdtb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 53000,
+      coolingCapacityMaxBtu: 53000,
+      seer2: 17,
+      hspf2: 8.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-central-ducted-cfg-4",
+      slug: "zero-z-max-central-ducted-cfg-4",
+      modelId: "zero-z-max-central-ducted",
+      outdoorUnitId: "zero-zov-24hdtb",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-1",
+      slug: "zero-z-max-wall-single-cfg-1",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z2sov-18hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-2",
+      slug: "zero-z-max-wall-single-cfg-2",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z3sov-27hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 24,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-3",
+      slug: "zero-z-max-wall-single-cfg-3",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z4sov-36hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 22.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-4",
+      slug: "zero-z-max-wall-single-cfg-4",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z5sov-42hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 42000,
+      coolingCapacityMaxBtu: 42000,
+      seer2: 22,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-5",
+      slug: "zero-z-max-wall-single-cfg-5",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z2sov-18hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-6",
+      slug: "zero-z-max-wall-single-cfg-6",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z3sov-27hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-7",
+      slug: "zero-z-max-wall-single-cfg-7",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z4sov-36hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 20.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-8",
+      slug: "zero-z-max-wall-single-cfg-8",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-z5sov-42hdtb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 41000,
+      coolingCapacityMaxBtu: 41000,
+      seer2: 19.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-9",
+      slug: "zero-z-max-wall-single-cfg-9",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-zmsb-09hvt-ushhcr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-10",
+      slug: "zero-z-max-wall-single-cfg-10",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-zmsb-12hvt-ushhcr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-11",
+      slug: "zero-z-max-wall-single-cfg-11",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-zmsb-18hvt-ushhcr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z-max-wall-single-cfg-12",
+      slug: "zero-z-max-wall-single-cfg-12",
+      modelId: "zero-z-max-wall-single",
+      outdoorUnitId: "zero-zmsb-24hvt-ushhcr2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-1",
+      slug: "zero-zava-series-central-ducted-cfg-1",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-18hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 18.8,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-2",
+      slug: "zero-zava-series-central-ducted-cfg-2",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-24hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.1,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-3",
+      slug: "zero-zava-series-central-ducted-cfg-3",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-36hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.1,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-4",
+      slug: "zero-zava-series-central-ducted-cfg-4",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-48hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-5",
+      slug: "zero-zava-series-central-ducted-cfg-5",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-60hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-6",
+      slug: "zero-zava-series-central-ducted-cfg-6",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-18hdmb-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-7",
+      slug: "zero-zava-series-central-ducted-cfg-7",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-24hdmb-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-8",
+      slug: "zero-zava-series-central-ducted-cfg-8",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-30hdmb-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-9",
+      slug: "zero-zava-series-central-ducted-cfg-9",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-36hdmb-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-10",
+      slug: "zero-zava-series-central-ducted-cfg-10",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-48hdmb-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zava-series-central-ducted-cfg-11",
+      slug: "zero-zava-series-central-ducted-cfg-11",
+      modelId: "zero-zava-series-central-ducted",
+      outdoorUnitId: "zero-zsova-60hdmb-ushh",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z6sov-series-wall-single-cfg-1",
+      slug: "zero-z6sov-series-wall-single-cfg-1",
+      modelId: "zero-z6sov-series-wall-single",
+      outdoorUnitId: "zero-z6sov-48hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 21.3,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z6sov-series-wall-single-cfg-2",
+      slug: "zero-z6sov-series-wall-single-cfg-2",
+      modelId: "zero-z6sov-series-wall-single",
+      outdoorUnitId: "zero-z6sov-48hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-z6sov-series-wall-single-cfg-3",
+      slug: "zero-z6sov-series-wall-single-cfg-3",
+      modelId: "zero-z6sov-series-wall-single",
+      outdoorUnitId: "zero-z6sov-48hdmb-us",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.85,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "zero-zsou-series-central-ducted-cfg-1",
+      slug: "zero-zsou-series-central-ducted-cfg-1",
+      modelId: "zero-zsou-series-central-ducted",
+      outdoorUnitId: "zero-zsou-24hdg-hyper",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18,
+      hspf2: 8.1,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6300,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2.41,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-21",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10300,
+          cop: 1.88,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-23",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11100,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-24",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-25",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: 2.06,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-26",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-27",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-28",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-29",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-30",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-31",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8800,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-32",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8600,
+          cop: 2.33,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-33",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 2.35,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-34",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13000,
+          cop: 2.35,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-35",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: 2.15,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-36",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-37",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-38",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-39",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: 2.11,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zmsb-series-wall-single-cfg-40",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.94,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-21",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-23",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-24",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-25",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-26",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-27",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-28",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-29",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-30",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-31",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-32",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-33",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-34",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-standard-wall-single-cfg-35",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 1.68,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z4s-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35400,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z5sov-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 39000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z5sov-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z5sov-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 27000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z5sov-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z5sov-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zav-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z3sov-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z3sov-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z3sov-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z3sov-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z3sov-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z3sov-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.25,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6200,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-us-r454b-hyper-heat-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z-max-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15500,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zava-series-central-ducted-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z6sov-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z6sov-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-z6sov-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35400,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "zero-zsou-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};

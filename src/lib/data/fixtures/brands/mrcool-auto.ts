@@ -1,0 +1,6227 @@
+import type { BrandDataset } from "../../types";
+
+export const mrcoolDataset: BrandDataset = {
+  brand: {
+    id: "mrcool",
+    slug: "mrcool",
+    name: "MRCOOL",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "mrcool-standard",
+      slug: "mrcool-standard",
+      name: "Standard",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series",
+      slug: "mrcool-o-series",
+      name: "O-series",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series",
+      slug: "mrcool-diy-series",
+      name: "DIY-series",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-a-series",
+      slug: "mrcool-a-series",
+      name: "A-series",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series",
+      slug: "mrcool-o-es-series",
+      name: "O-ES series",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi",
+      slug: "mrcool-multi",
+      name: "MULTI",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central",
+      slug: "mrcool-central",
+      name: "CENTRAL",
+      brandId: "mrcool",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-series",
+      slug: "mrcool-central-series",
+      name: "CENTRAL SERIES",
+      brandId: "mrcool",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diyh-series",
+      slug: "mrcool-diyh-series",
+      name: "DIYH SERIES",
+      brandId: "mrcool",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal",
+      slug: "mrcool-universal",
+      name: "Universal",
+      brandId: "mrcool",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series",
+      slug: "mrcool-mvp-series",
+      name: "MVP-series",
+      brandId: "mrcool",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-series-inverter-packaged-heat-pump",
+      slug: "mrcool-universal-series-inverter-packaged-heat-pump",
+      name: "Universal Series Inverter Packaged Heat Pump",
+      brandId: "mrcool",
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-ez-series",
+      slug: "mrcool-ez-series",
+      name: "EZ Series",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series",
+      slug: "mrcool-o-hh-series",
+      name: "O-HH Series",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series",
+      slug: "mrcool-multi-series",
+      name: "MULTI Series",
+      brandId: "mrcool",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "mrcool-standard-wall-single",
+      slug: "mrcool-standard-wall-single",
+      name: "Standard",
+      seriesId: "mrcool-standard",
+      brandId: "mrcool",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 5800,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single",
+      slug: "mrcool-o-series-wall-single",
+      name: "O-series",
+      seriesId: "mrcool-o-series",
+      brandId: "mrcool",
+      modelNumber: "O-series",
+      normalizedModelNumber: "o-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 8500,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 21,
+      seer2Max: 28.1,
+      hspf2Min: 10,
+      hspf2Max: 13.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.39,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single",
+      slug: "mrcool-diy-series-wall-single",
+      name: "DIY-series",
+      seriesId: "mrcool-diy-series",
+      brandId: "mrcool",
+      modelNumber: "DIY-series",
+      normalizedModelNumber: "diy-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 44000,
+      seer2Min: 19,
+      seer2Max: 23.9,
+      hspf2Min: 9,
+      hspf2Max: 12.2,
+      cop5FMin: 1.8,
+      cop5FMax: 2.44,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-a-series-wall-single",
+      slug: "mrcool-a-series-wall-single",
+      name: "A-series",
+      seriesId: "mrcool-a-series",
+      brandId: "mrcool",
+      modelNumber: "A-series",
+      normalizedModelNumber: "a-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 6500,
+      heatingCapacity5FMaxBtu: 16900,
+      seer2Min: 18.7,
+      seer2Max: 21.5,
+      hspf2Min: 9,
+      hspf2Max: 9.3,
+      cop5FMin: 1.89,
+      cop5FMax: 2.14,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single",
+      slug: "mrcool-o-es-series-wall-single",
+      name: "O-ES series",
+      seriesId: "mrcool-o-es-series",
+      brandId: "mrcool",
+      modelNumber: "O-ES series",
+      normalizedModelNumber: "o-es-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 18000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 15000,
+      seer2Min: 20,
+      seer2Max: 27.4,
+      hspf2Min: 10,
+      hspf2Max: 12.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.02,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single",
+      slug: "mrcool-multi-wall-single",
+      name: "MULTI",
+      seriesId: "mrcool-multi",
+      brandId: "mrcool",
+      modelNumber: "MULTI",
+      normalizedModelNumber: "multi",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 14300,
+      heatingCapacity5FMaxBtu: 35000,
+      seer2Min: 19,
+      seer2Max: 24.6,
+      hspf2Min: 8.7,
+      hspf2Max: 10.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-central-ducted",
+      slug: "mrcool-central-central-ducted",
+      name: "CENTRAL",
+      seriesId: "mrcool-central",
+      brandId: "mrcool",
+      modelNumber: "CENTRAL",
+      normalizedModelNumber: "central",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 14800,
+      heatingCapacity5FMaxBtu: 18000,
+      seer2Min: 16.6,
+      seer2Max: 16.7,
+      hspf2Min: 9.1,
+      hspf2Max: 10.2,
+      cop5FMin: 2.29,
+      cop5FMax: 2.29,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-series-central-ducted",
+      slug: "mrcool-central-series-central-ducted",
+      name: "CENTRAL SERIES",
+      seriesId: "mrcool-central-series",
+      brandId: "mrcool",
+      modelNumber: "CENTRAL SERIES",
+      normalizedModelNumber: "central-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 55000,
+      heatingCapacity5FMinBtu: 19200,
+      heatingCapacity5FMaxBtu: 42000,
+      seer2Min: 15.3,
+      seer2Max: 17.4,
+      hspf2Min: 9.4,
+      hspf2Max: 10,
+      cop5FMin: 1.85,
+      cop5FMax: 1.95,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diyh-series-central-ducted",
+      slug: "mrcool-diyh-series-central-ducted",
+      name: "DIYH SERIES",
+      seriesId: "mrcool-diyh-series",
+      brandId: "mrcool",
+      modelNumber: "DIYH SERIES",
+      normalizedModelNumber: "diyh-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 30000,
+      heatingCapacity5FMinBtu: 15000,
+      heatingCapacity5FMaxBtu: 21000,
+      seer2Min: 16,
+      seer2Max: 18,
+      hspf2Min: 9.1,
+      hspf2Max: 10,
+      cop5FMin: 1.8,
+      cop5FMax: 2.13,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-central-ducted",
+      slug: "mrcool-universal-central-ducted",
+      name: "Universal",
+      seriesId: "mrcool-universal",
+      brandId: "mrcool",
+      modelNumber: "Universal",
+      normalizedModelNumber: "universal",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 16,
+      seer2Max: 17,
+      hspf2Min: 9,
+      hspf2Max: 9,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted",
+      slug: "mrcool-mvp-series-central-ducted",
+      name: "MVP-series",
+      seriesId: "mrcool-mvp-series",
+      brandId: "mrcool",
+      modelNumber: "MVP-series",
+      normalizedModelNumber: "mvp-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 54000,
+      heatingCapacity5FMinBtu: 12600,
+      heatingCapacity5FMaxBtu: 45000,
+      seer2Min: 15.2,
+      seer2Max: 18.4,
+      hspf2Min: 8.4,
+      hspf2Max: 10.3,
+      cop5FMin: 1.8,
+      cop5FMax: 2.29,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted",
+      slug: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted",
+      name: "Universal Series Inverter Packaged Heat Pump",
+      seriesId: "mrcool-universal-series-inverter-packaged-heat-pump",
+      brandId: "mrcool",
+      modelNumber: "Universal Series Inverter Packaged Heat Pump",
+      normalizedModelNumber: "universal-series-inverter-packaged-heat-pump",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 56000,
+      heatingCapacity5FMinBtu: 36000,
+      heatingCapacity5FMaxBtu: 37000,
+      seer2Min: 17,
+      seer2Max: 17.8,
+      hspf2Min: 8.3,
+      hspf2Max: 8.5,
+      cop5FMin: 1.8,
+      cop5FMax: 1.8,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-central-ducted",
+      slug: "mrcool-standard-central-ducted",
+      name: "Standard",
+      seriesId: "mrcool-standard",
+      brandId: "mrcool",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23400,
+      heatingCapacity5FMaxBtu: 23400,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "central-ducted",
+      categories: ["conventional", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-ez-series-wall-single",
+      slug: "mrcool-ez-series-wall-single",
+      name: "EZ Series",
+      seriesId: "mrcool-ez-series",
+      brandId: "mrcool",
+      modelNumber: "EZ Series",
+      normalizedModelNumber: "ez-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      heatingCapacity5FMinBtu: 7000,
+      heatingCapacity5FMaxBtu: 7000,
+      seer2Min: 20.2,
+      seer2Max: 20.2,
+      hspf2Min: 9.2,
+      hspf2Max: 9.2,
+      cop5FMin: 2.07,
+      cop5FMax: 2.07,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single",
+      slug: "mrcool-o-hh-series-wall-single",
+      name: "O-HH Series",
+      seriesId: "mrcool-o-hh-series",
+      brandId: "mrcool",
+      modelNumber: "O-HH Series",
+      normalizedModelNumber: "o-hh-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 9600,
+      heatingCapacity5FMaxBtu: 21600,
+      seer2Min: 18,
+      seer2Max: 27.4,
+      hspf2Min: 10,
+      hspf2Max: 13.5,
+      cop5FMin: 1.8,
+      cop5FMax: 2.34,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-central-ducted",
+      slug: "mrcool-diy-series-central-ducted",
+      name: "DIY Series",
+      seriesId: "mrcool-diy-series",
+      brandId: "mrcool",
+      modelNumber: "DIY Series",
+      normalizedModelNumber: "diy-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 17800,
+      heatingCapacity5FMaxBtu: 17800,
+      seer2Min: 19.4,
+      seer2Max: 19.4,
+      hspf2Min: 9.1,
+      hspf2Max: 9.1,
+      cop5FMin: 2.1,
+      cop5FMax: 2.1,
+      systemType: "central-ducted",
+      categories: ["cold-climate", "ducted"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single",
+      slug: "mrcool-multi-series-wall-single",
+      name: "MULTI Series",
+      seriesId: "mrcool-multi-series",
+      brandId: "mrcool",
+      modelNumber: "MULTI Series",
+      normalizedModelNumber: "multi-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 47000,
+      heatingCapacity5FMinBtu: 13600,
+      heatingCapacity5FMaxBtu: 38000,
+      seer2Min: 20,
+      seer2Max: 25.1,
+      hspf2Min: 9,
+      hspf2Max: 10.6,
+      cop5FMin: 2,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "mrcool-multi2-18hp230v1",
+      modelNumber: "MULTI2-18HP230V1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi3-27hp230v1",
+      modelNumber: "MULTI3-27HP230V1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi4-36hp230v1",
+      modelNumber: "MULTI4-36HP230V1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi5-48hp230v1",
+      modelNumber: "MULTI5-48HP230V1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-18-hp-c-230b",
+      modelNumber: "A-18-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-12-hp-c-230",
+      modelNumber: "O-HH-12-HP-C-230",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-12-hp-c-230",
+      modelNumber: "O-ES-12-HP-C-230",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-18-hp-c-230",
+      modelNumber: "O-ES-18-HP-C-230",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-24-hp-c-230",
+      modelNumber: "O-ES-24-HP-C-230",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-09-hp-c-230",
+      modelNumber: "O-ES-09-HP-C-230",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-09-hp-c-230",
+      modelNumber: "O-HH-09-HP-C-230",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-24-hp-c-230",
+      modelNumber: "O-HH-24-HP-C-230",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-12-hp-c-115b",
+      modelNumber: "DIY-12-HP-C-115B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-18-hp-c-230b",
+      modelNumber: "DIY-18-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-24-hp-c-230b",
+      modelNumber: "DIY-24-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-09-hp-c-115b",
+      modelNumber: "A-09-HP-C-115B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-36-hp-c-230c",
+      modelNumber: "DIY-36-HP-C-230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi4-36hp230c",
+      modelNumber: "DIY-MULTI4-36HP230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-36-hp-c-230c25",
+      modelNumber: "DIY-36-HP-C-230C25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-12-hp-c-115c",
+      modelNumber: "A-12-HP-C-115C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-18-hp-c-230c",
+      modelNumber: "A-18-HP-C-230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-36-hp-c-230c",
+      modelNumber: "A-36-HP-C-230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi5-48hp230c",
+      modelNumber: "DIY-MULTI5-48HP230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-30-hp-c-23025",
+      modelNumber: "CENTRAL-30-HP-C-23025",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-36-hp-c-23000",
+      modelNumber: "CENTRAL-36-HP-C-23000",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-48-hp-c-23000",
+      modelNumber: "CENTRAL-48-HP-C-23000",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-60-hp-c-23000",
+      modelNumber: "CENTRAL-60-HP-C-23000",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-36-hp-c-230-00",
+      modelNumber: "MVP-36-HP-C-230-00",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-60-hp-c-230-00",
+      modelNumber: "MVP-60-HP-C-230-00",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-30-hp-c-230-25",
+      modelNumber: "MVP-30-HP-C-230-25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-48-hp-c-230-00",
+      modelNumber: "MVP-48-HP-C-230-00",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-36-hp-c-230d25-o",
+      modelNumber: "DIY-36-HP-C-230D25-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-ezpro-12-hp-c-11516d-o",
+      modelNumber: "EZPRO-12-HP-C-11516D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-ezpro-18-hp-c-23016d-o",
+      modelNumber: "EZPRO-18-HP-C-23016D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-ezpro-24-hp-c-23016d-o",
+      modelNumber: "EZPRO-24-HP-C-23016D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-09-hp-c-230c-o",
+      modelNumber: "O-ES-09-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-12-hp-c-230c-o",
+      modelNumber: "O-ES-12-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-18-hp-c-230c-o",
+      modelNumber: "O-ES-18-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-24-hp-c-230c-o",
+      modelNumber: "O-ES-24-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-12-hp-c-115d-o",
+      modelNumber: "A-12-HP-C-115D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-12-hp-c-230d-o",
+      modelNumber: "A-12-HP-C-230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-18-hp-c-230d-o",
+      modelNumber: "A-18-HP-C-230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-36-hp-c-230d-o",
+      modelNumber: "A-36-HP-C-230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-09-hp-c-230a",
+      modelNumber: "O-HH-09-HP-C-230A",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-12-hp-c-230a",
+      modelNumber: "O-HH-12-HP-C-230A",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-18-hp-c-230a",
+      modelNumber: "O-HH-18-HP-C-230A",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-24-hp-c-230a",
+      modelNumber: "O-HH-24-HP-C-230A",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-09-hp-c-230b",
+      modelNumber: "O-ES-09-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-12-hp-c-230b",
+      modelNumber: "O-ES-12-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-24-hp-c-230b",
+      modelNumber: "O-ES-24-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-09-hp-c-230b",
+      modelNumber: "O-HH-09-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-12-hp-c-230b",
+      modelNumber: "O-HH-12-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-18-hp-c-230b",
+      modelNumber: "O-HH-18-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-24-hp-c-230b",
+      modelNumber: "O-HH-24-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-24-hp-c-230c-o1",
+      modelNumber: "O-ES-24-HP-C-230C-O1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-12-hp-c-115c",
+      modelNumber: "DIY-12-HP-C-115C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-18-hp-c-230c",
+      modelNumber: "DIY-18-HP-C-230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-24-hp-c-230c",
+      modelNumber: "DIY-24-HP-C-230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi3-27hp230c",
+      modelNumber: "DIY-MULTI3-27HP230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi2-18hp230c",
+      modelNumber: "DIY-MULTI2-18HP230C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-12-hp-c-115c25",
+      modelNumber: "DIY-12-HP-C-115C25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-18-hp-c-230c25",
+      modelNumber: "DIY-18-HP-C-230C25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-24-hp-c-230c25",
+      modelNumber: "DIY-24-HP-C-230C25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-24-hp-c-230d25-o",
+      modelNumber: "DIY-24-HP-C-230D25-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-09-hp-c-115d25-o",
+      modelNumber: "DIY-09-HP-C-115D25-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-12-hp-c-115d25-o",
+      modelNumber: "DIY-12-HP-C-115D25-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-18-hp-c-230d25-o",
+      modelNumber: "DIY-18-HP-C-230D25-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diyhh-12-hp-c-230d25-o",
+      modelNumber: "DIYHH-12-HP-C-230D25-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diyhh-18-hp-c-230d25-o",
+      modelNumber: "DIYHH-18-HP-C-230D25-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi3-18hp230d-o",
+      modelNumber: "DIY-MULTI3-18HP230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi4-27hp230d-o",
+      modelNumber: "DIY-MULTI4-27HP230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi5-36hp230d-o",
+      modelNumber: "DIY-MULTI5-36HP230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi6-48hp230d-o",
+      modelNumber: "DIY-MULTI6-48HP230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diy-multi6-55hp230d-o",
+      modelNumber: "DIY-MULTI6-55HP230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-09-hp-c-115c",
+      modelNumber: "A-09-HP-C-115C",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-09-hp-c-115d-o",
+      modelNumber: "A-09-HP-C-115D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-09-hp-c-230d-o",
+      modelNumber: "A-09-HP-C-230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-a-24-hp-c-230d-o",
+      modelNumber: "A-24-HP-C-230D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-18-hp-c-230b",
+      modelNumber: "O-ES-18-HP-C-230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-09-hp-c-230c-o1",
+      modelNumber: "O-ES-09-HP-C-230C-O1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-12-hp-c-230c-o1",
+      modelNumber: "O-ES-12-HP-C-230C-O1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-es-18-hp-c-230c-o1",
+      modelNumber: "O-ES-18-HP-C-230C-O1",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi2-18hp230b",
+      modelNumber: "MULTI2-18HP230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi3-27hp230b",
+      modelNumber: "MULTI3-27HP230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi5-48hp230b",
+      modelNumber: "MULTI5-48HP230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi4-36hp230b",
+      modelNumber: "MULTI4-36HP230B",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-18-hp-c-23025",
+      modelNumber: "CENTRAL-18-HP-C-23025",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-24-hp-c-23025",
+      modelNumber: "CENTRAL-24-HP-C-23025",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-36-hp-c-230a00",
+      modelNumber: "CENTRAL-36-HP-C-230A00",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-48-hp-c-230a00",
+      modelNumber: "CENTRAL-48-HP-C-230A00",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-60-hp-c-230a00",
+      modelNumber: "CENTRAL-60-HP-C-230A00",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-24-hp-c-230a00",
+      modelNumber: "CENTRAL-24-HP-C-230A00",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diyh-24-hp-c-230c25",
+      modelNumber: "DIYH-24-HP-C-230C25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diyh-30-hp-c-230c25",
+      modelNumber: "DIYH-30-HP-C-230C25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-diyh-18-hp-c-230c25",
+      modelNumber: "DIYH-18-HP-C-230C25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mduo18024036",
+      modelNumber: "MDUO18024036",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mduo18048060",
+      modelNumber: "MDUO18048060",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-24-hp-c-230-25",
+      modelNumber: "MVP-24-HP-C-230-25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-18-hp-c-230-25",
+      modelNumber: "MVP-18-HP-C-230-25",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-24-hp-c-230b00-o",
+      modelNumber: "CENTRAL-24-HP-C-230B00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-30-hp-c-230b00-o",
+      modelNumber: "CENTRAL-30-HP-C-230B00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-36-hp-c-230b00-o",
+      modelNumber: "CENTRAL-36-HP-C-230B00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-48-hp-c-230b00-o",
+      modelNumber: "CENTRAL-48-HP-C-230B00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-central-60-hp-c-230b00-o",
+      modelNumber: "CENTRAL-60-HP-C-230B00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-18-hp-c-230a00-o",
+      modelNumber: "MVP-18-HP-C-230A00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-24-hp-c-230a00-o",
+      modelNumber: "MVP-24-HP-C-230A00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-30-hp-c-230a00-o",
+      modelNumber: "MVP-30-HP-C-230A00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-36-hp-c-230a00-o",
+      modelNumber: "MVP-36-HP-C-230A00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-48-hp-c-230a00-o",
+      modelNumber: "MVP-48-HP-C-230A00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mvp-60-hp-c-230a00-o",
+      modelNumber: "MVP-60-HP-C-230A00-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mdph180604",
+      modelNumber: "MDPH180604",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mdph180484",
+      modelNumber: "MDPH180484",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mdph180364",
+      modelNumber: "MDPH180364",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-mdph180244",
+      modelNumber: "MDPH180244",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-ezpro-09-hp-c-11516d-o",
+      modelNumber: "EZPRO-09-HP-C-11516D-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-09-hp-c-230c-o",
+      modelNumber: "O-HH-09-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-12-hp-c-230c-o",
+      modelNumber: "O-HH-12-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-18-hp-c-230c-o",
+      modelNumber: "O-HH-18-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-o-hh-24-hp-c-230c-o",
+      modelNumber: "O-HH-24-HP-C-230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi3-18hp230c-o",
+      modelNumber: "MULTI3-18HP230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi4-27hp230c-o",
+      modelNumber: "MULTI4-27HP230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi5-36hp230c-o",
+      modelNumber: "MULTI5-36HP230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    },
+    {
+      id: "mrcool-multi6-48hp230c-o",
+      modelNumber: "MULTI6-48HP230C-O",
+      brandId: "mrcool",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "mrcool-standard-wall-single-cfg-1",
+      slug: "mrcool-standard-wall-single-cfg-1",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-multi2-18hp230v1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-2",
+      slug: "mrcool-standard-wall-single-cfg-2",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-multi3-27hp230v1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-3",
+      slug: "mrcool-standard-wall-single-cfg-3",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-multi4-36hp230v1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-4",
+      slug: "mrcool-standard-wall-single-cfg-4",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-multi5-48hp230v1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-5",
+      slug: "mrcool-standard-wall-single-cfg-5",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-18-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-6",
+      slug: "mrcool-standard-wall-single-cfg-6",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-7",
+      slug: "mrcool-standard-wall-single-cfg-7",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-8",
+      slug: "mrcool-standard-wall-single-cfg-8",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-9",
+      slug: "mrcool-standard-wall-single-cfg-9",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-10",
+      slug: "mrcool-standard-wall-single-cfg-10",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-11",
+      slug: "mrcool-standard-wall-single-cfg-11",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-12",
+      slug: "mrcool-standard-wall-single-cfg-12",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-13",
+      slug: "mrcool-standard-wall-single-cfg-13",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-hh-09-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-14",
+      slug: "mrcool-standard-wall-single-cfg-14",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-15",
+      slug: "mrcool-standard-wall-single-cfg-15",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-hh-24-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-16",
+      slug: "mrcool-standard-wall-single-cfg-16",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-12-hp-c-115b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-17",
+      slug: "mrcool-standard-wall-single-cfg-17",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-18-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-18",
+      slug: "mrcool-standard-wall-single-cfg-18",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-24-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-19",
+      slug: "mrcool-standard-wall-single-cfg-19",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-20",
+      slug: "mrcool-standard-wall-single-cfg-20",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-21",
+      slug: "mrcool-standard-wall-single-cfg-21",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-22",
+      slug: "mrcool-standard-wall-single-cfg-22",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-23",
+      slug: "mrcool-standard-wall-single-cfg-23",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-hh-09-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-24",
+      slug: "mrcool-standard-wall-single-cfg-24",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-25",
+      slug: "mrcool-standard-wall-single-cfg-25",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-09-hp-c-115b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-26",
+      slug: "mrcool-standard-wall-single-cfg-26",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-36-hp-c-230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-27",
+      slug: "mrcool-standard-wall-single-cfg-27",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-multi4-36hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-28",
+      slug: "mrcool-standard-wall-single-cfg-28",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-36-hp-c-230c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-29",
+      slug: "mrcool-standard-wall-single-cfg-29",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-12-hp-c-115c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-30",
+      slug: "mrcool-standard-wall-single-cfg-30",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-18-hp-c-230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-31",
+      slug: "mrcool-standard-wall-single-cfg-31",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-36-hp-c-230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-32",
+      slug: "mrcool-standard-wall-single-cfg-32",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-multi5-48hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-33",
+      slug: "mrcool-standard-wall-single-cfg-33",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-multi5-48hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 49000,
+      coolingCapacityMaxBtu: 49000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-34",
+      slug: "mrcool-standard-wall-single-cfg-34",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-multi4-36hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-35",
+      slug: "mrcool-standard-wall-single-cfg-35",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-central-30-hp-c-23025",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-36",
+      slug: "mrcool-standard-wall-single-cfg-36",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-central-36-hp-c-23000",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-37",
+      slug: "mrcool-standard-wall-single-cfg-37",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-central-48-hp-c-23000",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-38",
+      slug: "mrcool-standard-wall-single-cfg-38",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-central-60-hp-c-23000",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-39",
+      slug: "mrcool-standard-wall-single-cfg-39",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-multi4-36hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-40",
+      slug: "mrcool-standard-wall-single-cfg-40",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-multi5-48hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48500,
+      coolingCapacityMaxBtu: 48500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-41",
+      slug: "mrcool-standard-wall-single-cfg-41",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-mvp-36-hp-c-230-00",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-42",
+      slug: "mrcool-standard-wall-single-cfg-42",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-mvp-60-hp-c-230-00",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 57000,
+      coolingCapacityMaxBtu: 57000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-43",
+      slug: "mrcool-standard-wall-single-cfg-43",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-mvp-30-hp-c-230-25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-44",
+      slug: "mrcool-standard-wall-single-cfg-44",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-mvp-48-hp-c-230-00",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-45",
+      slug: "mrcool-standard-wall-single-cfg-45",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-36-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-46",
+      slug: "mrcool-standard-wall-single-cfg-46",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-36-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-47",
+      slug: "mrcool-standard-wall-single-cfg-47",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-ezpro-12-hp-c-11516d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-48",
+      slug: "mrcool-standard-wall-single-cfg-48",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-ezpro-18-hp-c-23016d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-49",
+      slug: "mrcool-standard-wall-single-cfg-49",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-ezpro-24-hp-c-23016d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-50",
+      slug: "mrcool-standard-wall-single-cfg-50",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-51",
+      slug: "mrcool-standard-wall-single-cfg-51",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-52",
+      slug: "mrcool-standard-wall-single-cfg-52",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-53",
+      slug: "mrcool-standard-wall-single-cfg-53",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-54",
+      slug: "mrcool-standard-wall-single-cfg-54",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-55",
+      slug: "mrcool-standard-wall-single-cfg-55",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-56",
+      slug: "mrcool-standard-wall-single-cfg-56",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-57",
+      slug: "mrcool-standard-wall-single-cfg-57",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16800,
+      coolingCapacityMaxBtu: 16800,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-58",
+      slug: "mrcool-standard-wall-single-cfg-58",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-59",
+      slug: "mrcool-standard-wall-single-cfg-59",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-60",
+      slug: "mrcool-standard-wall-single-cfg-60",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-61",
+      slug: "mrcool-standard-wall-single-cfg-61",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-62",
+      slug: "mrcool-standard-wall-single-cfg-62",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-12-hp-c-115d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-63",
+      slug: "mrcool-standard-wall-single-cfg-63",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-12-hp-c-230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-64",
+      slug: "mrcool-standard-wall-single-cfg-64",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-18-hp-c-230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-65",
+      slug: "mrcool-standard-wall-single-cfg-65",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-a-36-hp-c-230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-wall-single-cfg-66",
+      slug: "mrcool-standard-wall-single-cfg-66",
+      modelId: "mrcool-standard-wall-single",
+      outdoorUnitId: "mrcool-diy-36-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-1",
+      slug: "mrcool-o-series-wall-single-cfg-1",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-09-hp-c-230a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-2",
+      slug: "mrcool-o-series-wall-single-cfg-2",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-3",
+      slug: "mrcool-o-series-wall-single-cfg-3",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-18-hp-c-230a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-4",
+      slug: "mrcool-o-series-wall-single-cfg-4",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-24-hp-c-230a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-5",
+      slug: "mrcool-o-series-wall-single-cfg-5",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 25.5,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-6",
+      slug: "mrcool-o-series-wall-single-cfg-6",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 24.6,
+      hspf2: 10.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-7",
+      slug: "mrcool-o-series-wall-single-cfg-7",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-8",
+      slug: "mrcool-o-series-wall-single-cfg-8",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-09-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 28.1,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-9",
+      slug: "mrcool-o-series-wall-single-cfg-9",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.5,
+      hspf2: 10.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-10",
+      slug: "mrcool-o-series-wall-single-cfg-10",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-18-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.5,
+      hspf2: 11.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-11",
+      slug: "mrcool-o-series-wall-single-cfg-11",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-24-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 11.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-12",
+      slug: "mrcool-o-series-wall-single-cfg-12",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-13",
+      slug: "mrcool-o-series-wall-single-cfg-13",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-series-wall-single-cfg-14",
+      slug: "mrcool-o-series-wall-single-cfg-14",
+      modelId: "mrcool-o-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-24-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-1",
+      slug: "mrcool-diy-series-wall-single-cfg-1",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-12-hp-c-115c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-2",
+      slug: "mrcool-diy-series-wall-single-cfg-2",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-18-hp-c-230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.7,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-3",
+      slug: "mrcool-diy-series-wall-single-cfg-3",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-24-hp-c-230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 20.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-4",
+      slug: "mrcool-diy-series-wall-single-cfg-4",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi3-27hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-5",
+      slug: "mrcool-diy-series-wall-single-cfg-5",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi2-18hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.2,
+      hspf2: 9.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-6",
+      slug: "mrcool-diy-series-wall-single-cfg-6",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-12-hp-c-115c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-7",
+      slug: "mrcool-diy-series-wall-single-cfg-7",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-18-hp-c-230c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.7,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-8",
+      slug: "mrcool-diy-series-wall-single-cfg-8",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-24-hp-c-230c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 20.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-9",
+      slug: "mrcool-diy-series-wall-single-cfg-9",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi3-27hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-10",
+      slug: "mrcool-diy-series-wall-single-cfg-10",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-18-hp-c-230c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 23,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-11",
+      slug: "mrcool-diy-series-wall-single-cfg-11",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi3-27hp230c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 22,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-12",
+      slug: "mrcool-diy-series-wall-single-cfg-12",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-24-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.7,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-13",
+      slug: "mrcool-diy-series-wall-single-cfg-13",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-09-hp-c-115d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 23.6,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-14",
+      slug: "mrcool-diy-series-wall-single-cfg-14",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-12-hp-c-115d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.5,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-15",
+      slug: "mrcool-diy-series-wall-single-cfg-15",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-18-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-16",
+      slug: "mrcool-diy-series-wall-single-cfg-16",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-18-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-17",
+      slug: "mrcool-diy-series-wall-single-cfg-17",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-24-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.7,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-18",
+      slug: "mrcool-diy-series-wall-single-cfg-18",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diyhh-12-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-19",
+      slug: "mrcool-diy-series-wall-single-cfg-19",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diyhh-12-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-20",
+      slug: "mrcool-diy-series-wall-single-cfg-20",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diyhh-18-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.2,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-21",
+      slug: "mrcool-diy-series-wall-single-cfg-21",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diyhh-18-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16700,
+      coolingCapacityMaxBtu: 16700,
+      seer2: 19.8,
+      hspf2: 12.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-22",
+      slug: "mrcool-diy-series-wall-single-cfg-22",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi3-18hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-23",
+      slug: "mrcool-diy-series-wall-single-cfg-23",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi4-27hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 23,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-24",
+      slug: "mrcool-diy-series-wall-single-cfg-24",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi4-27hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 20,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-25",
+      slug: "mrcool-diy-series-wall-single-cfg-25",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi4-27hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26000,
+      coolingCapacityMaxBtu: 26000,
+      seer2: 21.5,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-26",
+      slug: "mrcool-diy-series-wall-single-cfg-26",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi5-36hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 23,
+      hspf2: 9.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-27",
+      slug: "mrcool-diy-series-wall-single-cfg-27",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi5-36hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33000,
+      coolingCapacityMaxBtu: 33000,
+      seer2: 19,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-28",
+      slug: "mrcool-diy-series-wall-single-cfg-28",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi5-36hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 33400,
+      coolingCapacityMaxBtu: 33400,
+      seer2: 21,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-29",
+      slug: "mrcool-diy-series-wall-single-cfg-29",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi6-48hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 43000,
+      coolingCapacityMaxBtu: 43000,
+      seer2: 21.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-30",
+      slug: "mrcool-diy-series-wall-single-cfg-30",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi6-48hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 43000,
+      coolingCapacityMaxBtu: 43000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-31",
+      slug: "mrcool-diy-series-wall-single-cfg-31",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi6-48hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 43000,
+      coolingCapacityMaxBtu: 43000,
+      seer2: 20.9,
+      hspf2: 10.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-32",
+      slug: "mrcool-diy-series-wall-single-cfg-32",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi6-55hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 22,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-33",
+      slug: "mrcool-diy-series-wall-single-cfg-33",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi6-55hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 20,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-wall-single-cfg-34",
+      slug: "mrcool-diy-series-wall-single-cfg-34",
+      modelId: "mrcool-diy-series-wall-single",
+      outdoorUnitId: "mrcool-diy-multi6-55hp230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 21,
+      hspf2: 10.55,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-a-series-wall-single-cfg-1",
+      slug: "mrcool-a-series-wall-single-cfg-1",
+      modelId: "mrcool-a-series-wall-single",
+      outdoorUnitId: "mrcool-a-09-hp-c-115c",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-a-series-wall-single-cfg-2",
+      slug: "mrcool-a-series-wall-single-cfg-2",
+      modelId: "mrcool-a-series-wall-single",
+      outdoorUnitId: "mrcool-a-09-hp-c-115d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-a-series-wall-single-cfg-3",
+      slug: "mrcool-a-series-wall-single-cfg-3",
+      modelId: "mrcool-a-series-wall-single",
+      outdoorUnitId: "mrcool-a-09-hp-c-230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.2,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-a-series-wall-single-cfg-4",
+      slug: "mrcool-a-series-wall-single-cfg-4",
+      modelId: "mrcool-a-series-wall-single",
+      outdoorUnitId: "mrcool-a-24-hp-c-230d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.7,
+      hspf2: 9.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-1",
+      slug: "mrcool-o-es-series-wall-single-cfg-1",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23.5,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-2",
+      slug: "mrcool-o-es-series-wall-single-cfg-2",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-3",
+      slug: "mrcool-o-es-series-wall-single-cfg-3",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-4",
+      slug: "mrcool-o-es-series-wall-single-cfg-4",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-09-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-5",
+      slug: "mrcool-o-es-series-wall-single-cfg-5",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.4,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-6",
+      slug: "mrcool-o-es-series-wall-single-cfg-6",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-7",
+      slug: "mrcool-o-es-series-wall-single-cfg-7",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-12-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-8",
+      slug: "mrcool-o-es-series-wall-single-cfg-8",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-9",
+      slug: "mrcool-o-es-series-wall-single-cfg-9",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-es-series-wall-single-cfg-10",
+      slug: "mrcool-o-es-series-wall-single-cfg-10",
+      modelId: "mrcool-o-es-series-wall-single",
+      outdoorUnitId: "mrcool-o-es-18-hp-c-230c-o1",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-1",
+      slug: "mrcool-multi-wall-single-cfg-1",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi2-18hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.9,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-2",
+      slug: "mrcool-multi-wall-single-cfg-2",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi2-18hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-3",
+      slug: "mrcool-multi-wall-single-cfg-3",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi2-18hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20.95,
+      hspf2: 10.15,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-4",
+      slug: "mrcool-multi-wall-single-cfg-4",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi3-27hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 24.6,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-5",
+      slug: "mrcool-multi-wall-single-cfg-5",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi5-48hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 23.4,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-6",
+      slug: "mrcool-multi-wall-single-cfg-6",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi3-27hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-7",
+      slug: "mrcool-multi-wall-single-cfg-7",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi3-27hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 22.8,
+      hspf2: 9.35,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-8",
+      slug: "mrcool-multi-wall-single-cfg-8",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi4-36hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 23.9,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-9",
+      slug: "mrcool-multi-wall-single-cfg-9",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi5-48hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 23.4,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-wall-single-cfg-10",
+      slug: "mrcool-multi-wall-single-cfg-10",
+      modelId: "mrcool-multi-wall-single",
+      outdoorUnitId: "mrcool-multi5-48hp230b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 23.4,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-central-ducted-cfg-1",
+      slug: "mrcool-central-central-ducted-cfg-1",
+      modelId: "mrcool-central-central-ducted",
+      outdoorUnitId: "mrcool-central-18-hp-c-23025",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 16.6,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-central-ducted-cfg-2",
+      slug: "mrcool-central-central-ducted-cfg-2",
+      modelId: "mrcool-central-central-ducted",
+      outdoorUnitId: "mrcool-central-24-hp-c-23025",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.7,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-series-central-ducted-cfg-1",
+      slug: "mrcool-central-series-central-ducted-cfg-1",
+      modelId: "mrcool-central-series-central-ducted",
+      outdoorUnitId: "mrcool-central-36-hp-c-230a00",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-series-central-ducted-cfg-2",
+      slug: "mrcool-central-series-central-ducted-cfg-2",
+      modelId: "mrcool-central-series-central-ducted",
+      outdoorUnitId: "mrcool-central-48-hp-c-230a00",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 15.6,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-series-central-ducted-cfg-3",
+      slug: "mrcool-central-series-central-ducted-cfg-3",
+      modelId: "mrcool-central-series-central-ducted",
+      outdoorUnitId: "mrcool-central-60-hp-c-230a00",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 55000,
+      coolingCapacityMaxBtu: 55000,
+      seer2: 15.3,
+      hspf2: 9.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-central-series-central-ducted-cfg-4",
+      slug: "mrcool-central-series-central-ducted-cfg-4",
+      modelId: "mrcool-central-series-central-ducted",
+      outdoorUnitId: "mrcool-central-24-hp-c-230a00",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diyh-series-central-ducted-cfg-1",
+      slug: "mrcool-diyh-series-central-ducted-cfg-1",
+      modelId: "mrcool-diyh-series-central-ducted",
+      outdoorUnitId: "mrcool-diyh-24-hp-c-230c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diyh-series-central-ducted-cfg-2",
+      slug: "mrcool-diyh-series-central-ducted-cfg-2",
+      modelId: "mrcool-diyh-series-central-ducted",
+      outdoorUnitId: "mrcool-diyh-30-hp-c-230c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diyh-series-central-ducted-cfg-3",
+      slug: "mrcool-diyh-series-central-ducted-cfg-3",
+      modelId: "mrcool-diyh-series-central-ducted",
+      outdoorUnitId: "mrcool-diyh-18-hp-c-230c25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 17.5,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-central-ducted-cfg-1",
+      slug: "mrcool-universal-central-ducted-cfg-1",
+      modelId: "mrcool-universal-central-ducted",
+      outdoorUnitId: "mrcool-mduo18024036",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-central-ducted-cfg-2",
+      slug: "mrcool-universal-central-ducted-cfg-2",
+      modelId: "mrcool-universal-central-ducted",
+      outdoorUnitId: "mrcool-mduo18024036",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34000,
+      coolingCapacityMaxBtu: 34000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-central-ducted-cfg-3",
+      slug: "mrcool-universal-central-ducted-cfg-3",
+      modelId: "mrcool-universal-central-ducted",
+      outdoorUnitId: "mrcool-mduo18048060",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 17,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-central-ducted-cfg-4",
+      slug: "mrcool-universal-central-ducted-cfg-4",
+      modelId: "mrcool-universal-central-ducted",
+      outdoorUnitId: "mrcool-mduo18048060",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-1",
+      slug: "mrcool-mvp-series-central-ducted-cfg-1",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-24-hp-c-230-25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 16.7,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-2",
+      slug: "mrcool-mvp-series-central-ducted-cfg-2",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-18-hp-c-230-25",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 16.6,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-3",
+      slug: "mrcool-mvp-series-central-ducted-cfg-3",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-central-24-hp-c-230b00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 18.4,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-4",
+      slug: "mrcool-mvp-series-central-ducted-cfg-4",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-central-30-hp-c-230b00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 30000,
+      coolingCapacityMaxBtu: 30000,
+      seer2: 16.8,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-5",
+      slug: "mrcool-mvp-series-central-ducted-cfg-5",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-central-36-hp-c-230b00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 17.4,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-6",
+      slug: "mrcool-mvp-series-central-ducted-cfg-6",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-central-48-hp-c-230b00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16.5,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-7",
+      slug: "mrcool-mvp-series-central-ducted-cfg-7",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-central-60-hp-c-230b00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 16,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-8",
+      slug: "mrcool-mvp-series-central-ducted-cfg-8",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-18-hp-c-230a00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 16.4,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-9",
+      slug: "mrcool-mvp-series-central-ducted-cfg-9",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-24-hp-c-230a00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 18.1,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-10",
+      slug: "mrcool-mvp-series-central-ducted-cfg-10",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-30-hp-c-230a00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 29000,
+      coolingCapacityMaxBtu: 29000,
+      seer2: 16.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-11",
+      slug: "mrcool-mvp-series-central-ducted-cfg-11",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-36-hp-c-230a00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 16.2,
+      hspf2: 8.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-12",
+      slug: "mrcool-mvp-series-central-ducted-cfg-12",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-48-hp-c-230a00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 16,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-mvp-series-central-ducted-cfg-13",
+      slug: "mrcool-mvp-series-central-ducted-cfg-13",
+      modelId: "mrcool-mvp-series-central-ducted",
+      outdoorUnitId: "mrcool-mvp-60-hp-c-230a00-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 54000,
+      coolingCapacityMaxBtu: 54000,
+      seer2: 15.2,
+      hspf2: 8.4,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted-cfg-1",
+      slug: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted-cfg-1",
+      modelId: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted",
+      outdoorUnitId: "mrcool-mdph180604",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 56000,
+      coolingCapacityMaxBtu: 56000,
+      seer2: 17,
+      hspf2: 8.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted-cfg-2",
+      slug: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted-cfg-2",
+      modelId: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted",
+      outdoorUnitId: "mrcool-mdph180484",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 17.8,
+      hspf2: 8.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-central-ducted-cfg-1",
+      slug: "mrcool-standard-central-ducted-cfg-1",
+      modelId: "mrcool-standard-central-ducted",
+      outdoorUnitId: "mrcool-mdph180364",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 34400,
+      coolingCapacityMaxBtu: 34400,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-standard-central-ducted-cfg-2",
+      slug: "mrcool-standard-central-ducted-cfg-2",
+      modelId: "mrcool-standard-central-ducted",
+      outdoorUnitId: "mrcool-mdph180244",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-ez-series-wall-single-cfg-1",
+      slug: "mrcool-ez-series-wall-single-cfg-1",
+      modelId: "mrcool-ez-series-wall-single",
+      outdoorUnitId: "mrcool-ezpro-09-hp-c-11516d-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 20.2,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-1",
+      slug: "mrcool-o-hh-series-wall-single-cfg-1",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-09-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 27.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-2",
+      slug: "mrcool-o-hh-series-wall-single-cfg-2",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-09-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 22.6,
+      hspf2: 12.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-3",
+      slug: "mrcool-o-hh-series-wall-single-cfg-3",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-09-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 21.4,
+      hspf2: 12.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-4",
+      slug: "mrcool-o-hh-series-wall-single-cfg-4",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 25.4,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-5",
+      slug: "mrcool-o-hh-series-wall-single-cfg-5",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.2,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-6",
+      slug: "mrcool-o-hh-series-wall-single-cfg-6",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-12-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-7",
+      slug: "mrcool-o-hh-series-wall-single-cfg-7",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-18-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21.4,
+      hspf2: 11,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-8",
+      slug: "mrcool-o-hh-series-wall-single-cfg-8",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-18-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20,
+      hspf2: 12.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-9",
+      slug: "mrcool-o-hh-series-wall-single-cfg-9",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-18-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 18,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-10",
+      slug: "mrcool-o-hh-series-wall-single-cfg-10",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-24-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21,
+      hspf2: 13.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-11",
+      slug: "mrcool-o-hh-series-wall-single-cfg-11",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-24-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23400,
+      coolingCapacityMaxBtu: 23400,
+      seer2: 20.7,
+      hspf2: 11.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-o-hh-series-wall-single-cfg-12",
+      slug: "mrcool-o-hh-series-wall-single-cfg-12",
+      modelId: "mrcool-o-hh-series-wall-single",
+      outdoorUnitId: "mrcool-o-hh-24-hp-c-230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19,
+      hspf2: 11.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-diy-series-central-ducted-cfg-1",
+      slug: "mrcool-diy-series-central-ducted-cfg-1",
+      modelId: "mrcool-diy-series-central-ducted",
+      outdoorUnitId: "mrcool-diy-24-hp-c-230d25-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 19.4,
+      hspf2: 9.1,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-1",
+      slug: "mrcool-multi-series-wall-single-cfg-1",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi3-18hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 25.1,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-2",
+      slug: "mrcool-multi-series-wall-single-cfg-2",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi3-18hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-3",
+      slug: "mrcool-multi-series-wall-single-cfg-3",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi3-18hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.55,
+      hspf2: 9.9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-4",
+      slug: "mrcool-multi-series-wall-single-cfg-4",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi4-27hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 25,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-5",
+      slug: "mrcool-multi-series-wall-single-cfg-5",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi4-27hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26600,
+      coolingCapacityMaxBtu: 26600,
+      seer2: 21,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-6",
+      slug: "mrcool-multi-series-wall-single-cfg-6",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi4-27hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 26800,
+      coolingCapacityMaxBtu: 26800,
+      seer2: 23,
+      hspf2: 9.25,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-7",
+      slug: "mrcool-multi-series-wall-single-cfg-7",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi5-36hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 24,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-8",
+      slug: "mrcool-multi-series-wall-single-cfg-8",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi5-36hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35000,
+      coolingCapacityMaxBtu: 35000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-9",
+      slug: "mrcool-multi-series-wall-single-cfg-9",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi5-36hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 35400,
+      coolingCapacityMaxBtu: 35400,
+      seer2: 22,
+      hspf2: 9.35,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-10",
+      slug: "mrcool-multi-series-wall-single-cfg-10",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi6-48hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 47000,
+      coolingCapacityMaxBtu: 47000,
+      seer2: 24,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-11",
+      slug: "mrcool-multi-series-wall-single-cfg-11",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi6-48hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 45000,
+      coolingCapacityMaxBtu: 45000,
+      seer2: 20.4,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "mrcool-multi-series-wall-single-cfg-12",
+      slug: "mrcool-multi-series-wall-single-cfg-12",
+      modelId: "mrcool-multi-series-wall-single",
+      outdoorUnitId: "mrcool-multi6-48hp230c-o",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 46000,
+      coolingCapacityMaxBtu: 46000,
+      seer2: 22.2,
+      hspf2: 10.45,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 5800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-21",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-23",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-24",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-25",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-26",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-27",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 28000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-28",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-29",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-30",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-31",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-32",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-33",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-34",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-35",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-36",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-37",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-38",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-39",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-40",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-41",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-42",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-43",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-44",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-45",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-46",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-47",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-48",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 11500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-49",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-50",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8100,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-51",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-52",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-53",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-54",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-55",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-56",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-57",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13900,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-58",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-59",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-60",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-61",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-62",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-63",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8700,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-64",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12300,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-65",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-wall-single-cfg-66",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24600,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.17,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9000,
+          cop: 2.39,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16200,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21200,
+          cop: 2.21,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13800,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17900,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13800,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17900,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14000,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 2.17,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-14",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.08,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-15",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-16",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13300,
+          cop: 2.32,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-17",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17900,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-18",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-19",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9100,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-20",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15200,
+          cop: 1.99,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-21",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-22",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-23",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-24",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-25",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17600,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-26",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-27",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-28",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24700,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-29",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35200,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-30",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-31",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-32",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 44000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-33",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-wall-single-cfg-34",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 43250,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-a-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-a-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6500,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-a-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 6800,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-a-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16900,
+          cop: 2.14,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 2.02,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-es-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14300,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14500,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 35000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-central-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-central-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 2.29,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-central-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30400,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-central-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-central-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 42000,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-central-series-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19200,
+          cop: 1.91,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diyh-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 1.95,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diyh-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diyh-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2.13,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-universal-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-universal-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-universal-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31400,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-universal-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18000,
+          cop: 2.29,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23800,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 31800,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 45000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 1.87,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18500,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 24800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 32400,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-mvp-series-central-ducted-cfg-13",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 33000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-universal-series-inverter-packaged-heat-pump-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-standard-central-ducted-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23400,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-ez-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7000,
+          cop: 2.07,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9700,
+          cop: 1.84,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.89,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9800,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 10000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9600,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16600,
+          cop: 1.92,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14900,
+          cop: 1.9,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 15000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2.34,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20400,
+          cop: 2.23,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-o-hh-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21600,
+          cop: 2.18,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-diy-series-central-ducted-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17800,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14100,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 18400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 38000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37000,
+          cop: 2.1,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "mrcool-multi-series-wall-single-cfg-12",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 37400,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};

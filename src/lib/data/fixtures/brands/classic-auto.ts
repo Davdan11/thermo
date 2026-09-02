@@ -1,0 +1,815 @@
+import type { BrandDataset } from "../../types";
+
+export const classicDataset: BrandDataset = {
+  brand: {
+    id: "classic",
+    slug: "classic",
+    name: "CLASSIC",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "classic-m-series",
+      slug: "classic-m-series",
+      name: "M series",
+      brandId: "classic",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mr-series",
+      slug: "classic-mr-series",
+      name: "MR Series",
+      brandId: "classic",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-standard",
+      slug: "classic-standard",
+      name: "Standard",
+      brandId: "classic",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series",
+      slug: "classic-mm-series",
+      name: "MM Series",
+      brandId: "classic",
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "classic-m-series-wall-single",
+      slug: "classic-m-series-wall-single",
+      name: "M series",
+      seriesId: "classic-m-series",
+      brandId: "classic",
+      modelNumber: "M series",
+      normalizedModelNumber: "m-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 8900,
+      heatingCapacity5FMaxBtu: 34000,
+      seer2Min: 18.9,
+      seer2Max: 23,
+      hspf2Min: 9.8,
+      hspf2Max: 10.6,
+      cop5FMin: 1.85,
+      cop5FMax: 2.4,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mr-series-wall-single",
+      slug: "classic-mr-series-wall-single",
+      name: "MR Series",
+      seriesId: "classic-mr-series",
+      brandId: "classic",
+      modelNumber: "MR Series",
+      normalizedModelNumber: "mr-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 16000,
+      heatingCapacity5FMaxBtu: 20000,
+      seer2Min: 19,
+      seer2Max: 21.5,
+      hspf2Min: 9.7,
+      hspf2Max: 11.2,
+      cop5FMin: 2.2,
+      cop5FMax: 2.3,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-standard-wall-single",
+      slug: "classic-standard-wall-single",
+      name: "Standard",
+      seriesId: "classic-standard",
+      brandId: "classic",
+      modelNumber: "Standard",
+      normalizedModelNumber: "standard",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: null,
+      coolingCapacityMaxBtu: null,
+      heatingCapacity5FMinBtu: 23000,
+      heatingCapacity5FMaxBtu: 25000,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
+      cop5FMin: null,
+      cop5FMax: null,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series-wall-single",
+      slug: "classic-mm-series-wall-single",
+      name: "MM Series",
+      seriesId: "classic-mm-series",
+      brandId: "classic",
+      modelNumber: "MM Series",
+      normalizedModelNumber: "mm-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 48000,
+      heatingCapacity5FMinBtu: 20000,
+      heatingCapacity5FMaxBtu: 36000,
+      seer2Min: 20,
+      seer2Max: 23.5,
+      hspf2Min: 9.2,
+      hspf2Max: 9.5,
+      cop5FMin: 1.68,
+      cop5FMax: 2,
+      systemType: "wall-single",
+      categories: ["conventional", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "classic-mrsvhc12as",
+      modelNumber: "MRSVHC12AS",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mrsvhc18as",
+      modelNumber: "MRSVHC18AS",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mrsvhc48as",
+      modelNumber: "MRSVHC48AS",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mc4vhc18s",
+      modelNumber: "MC4VHC18S",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mmrshc18as2",
+      modelNumber: "MMRSHC18AS2",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mrsvhc24as",
+      modelNumber: "MRSVHC24AS",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mrsvhc36as",
+      modelNumber: "MRSVHC36AS",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mmrshc27as3",
+      modelNumber: "MMRSHC27AS3",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mmrshc36as4",
+      modelNumber: "MMRSHC36AS4",
+      brandId: "classic",
+      refrigerant: null as any,
+    },
+    {
+      id: "classic-mmrshc48as5",
+      modelNumber: "MMRSHC48AS5",
+      brandId: "classic",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "classic-m-series-wall-single-cfg-1",
+      slug: "classic-m-series-wall-single-cfg-1",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc12as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.7,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-2",
+      slug: "classic-m-series-wall-single-cfg-2",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc18as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 16000,
+      coolingCapacityMaxBtu: 16000,
+      seer2: 20.5,
+      hspf2: 10.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-3",
+      slug: "classic-m-series-wall-single-cfg-3",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc48as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-4",
+      slug: "classic-m-series-wall-single-cfg-4",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc12as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 11500,
+      coolingCapacityMaxBtu: 11500,
+      seer2: 19,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-5",
+      slug: "classic-m-series-wall-single-cfg-5",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc18as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 17000,
+      coolingCapacityMaxBtu: 17000,
+      seer2: 20,
+      hspf2: 10.6,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-6",
+      slug: "classic-m-series-wall-single-cfg-6",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc48as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-7",
+      slug: "classic-m-series-wall-single-cfg-7",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mc4vhc18s",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 23,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-8",
+      slug: "classic-m-series-wall-single-cfg-8",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc48as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 18.9,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-9",
+      slug: "classic-m-series-wall-single-cfg-9",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mmrshc18as2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 21,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-10",
+      slug: "classic-m-series-wall-single-cfg-10",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mmrshc18as2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 19,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-m-series-wall-single-cfg-11",
+      slug: "classic-m-series-wall-single-cfg-11",
+      modelId: "classic-m-series-wall-single",
+      outdoorUnitId: "classic-mmrshc18as2",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 20,
+      hspf2: 10,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mr-series-wall-single-cfg-1",
+      slug: "classic-mr-series-wall-single-cfg-1",
+      modelId: "classic-mr-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc24as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.5,
+      hspf2: 9.7,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mr-series-wall-single-cfg-2",
+      slug: "classic-mr-series-wall-single-cfg-2",
+      modelId: "classic-mr-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc24as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 19,
+      hspf2: 11.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mr-series-wall-single-cfg-3",
+      slug: "classic-mr-series-wall-single-cfg-3",
+      modelId: "classic-mr-series-wall-single",
+      outdoorUnitId: "classic-mrsvhc24as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 21.2,
+      hspf2: 10.3,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-standard-wall-single-cfg-1",
+      slug: "classic-standard-wall-single-cfg-1",
+      modelId: "classic-standard-wall-single",
+      outdoorUnitId: "classic-mrsvhc36as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-standard-wall-single-cfg-2",
+      slug: "classic-standard-wall-single-cfg-2",
+      modelId: "classic-standard-wall-single",
+      outdoorUnitId: "classic-mrsvhc36as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-standard-wall-single-cfg-3",
+      slug: "classic-standard-wall-single-cfg-3",
+      modelId: "classic-standard-wall-single",
+      outdoorUnitId: "classic-mrsvhc36as",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: null,
+      hspf2: null,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series-wall-single-cfg-1",
+      slug: "classic-mm-series-wall-single-cfg-1",
+      modelId: "classic-mm-series-wall-single",
+      outdoorUnitId: "classic-mmrshc27as3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27000,
+      coolingCapacityMaxBtu: 27000,
+      seer2: 23.5,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series-wall-single-cfg-2",
+      slug: "classic-mm-series-wall-single-cfg-2",
+      modelId: "classic-mm-series-wall-single",
+      outdoorUnitId: "classic-mmrshc27as3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 28000,
+      coolingCapacityMaxBtu: 28000,
+      seer2: 21,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series-wall-single-cfg-3",
+      slug: "classic-mm-series-wall-single-cfg-3",
+      modelId: "classic-mm-series-wall-single",
+      outdoorUnitId: "classic-mmrshc27as3",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 27400,
+      coolingCapacityMaxBtu: 27400,
+      seer2: 22.25,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series-wall-single-cfg-4",
+      slug: "classic-mm-series-wall-single-cfg-4",
+      modelId: "classic-mm-series-wall-single",
+      outdoorUnitId: "classic-mmrshc36as4",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 36000,
+      coolingCapacityMaxBtu: 36000,
+      seer2: 20,
+      hspf2: 9.2,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series-wall-single-cfg-5",
+      slug: "classic-mm-series-wall-single-cfg-5",
+      modelId: "classic-mm-series-wall-single",
+      outdoorUnitId: "classic-mmrshc48as5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.1,
+      hspf2: 9.5,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "classic-mm-series-wall-single-cfg-6",
+      slug: "classic-mm-series-wall-single-cfg-6",
+      modelId: "classic-mm-series-wall-single",
+      outdoorUnitId: "classic-mmrshc48as5",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 48000,
+      coolingCapacityMaxBtu: 48000,
+      seer2: 21.1,
+      hspf2: 9.5,
+      minHeatingTempC: -20,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "classic-m-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8900,
+          cop: 2.27,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12000,
+          cop: 2.16,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 30000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 9300,
+          cop: 2.26,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12600,
+          cop: 2.4,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 34000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 12800,
+          cop: 2.08,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 29000,
+          cop: 1.85,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-9",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14400,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-10",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14800,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-m-series-wall-single-cfg-11",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 14600,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mr-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 19000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mr-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2.3,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mr-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 16000,
+          cop: 2.2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-standard-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-standard-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 25000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-standard-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 23000,
+          cop: null,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mm-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 20000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mm-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 22000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mm-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 21000,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mm-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 26400,
+          cop: 1.68,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mm-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "classic-mm-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 36000,
+          cop: 1.8,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};

@@ -1,0 +1,317 @@
+import type { BrandDataset } from "../../types";
+
+export const coastairDataset: BrandDataset = {
+  brand: {
+    id: "coast-air",
+    slug: "coast-air",
+    name: "COAST AIR",
+    description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
+    activeInQuebec: true,
+    status: "published",
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+  },
+  series: [
+    {
+      id: "coast-air-a-series",
+      slug: "coast-air-a-series",
+      name: "A-series",
+      brandId: "coast-air",
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  models: [
+    {
+      id: "coast-air-a-series-wall-single",
+      slug: "coast-air-a-series-wall-single",
+      name: "A-series",
+      seriesId: "coast-air-a-series",
+      brandId: "coast-air",
+      modelNumber: "A-series",
+      normalizedModelNumber: "a-series",
+      isActive2026: true,
+      thermomatchEligible: true,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 24000,
+      heatingCapacity5FMinBtu: 7500,
+      heatingCapacity5FMaxBtu: 17900,
+      seer2Min: 20.5,
+      seer2Max: 25,
+      hspf2Min: 9,
+      hspf2Max: 11.5,
+      cop5FMin: 1.96,
+      cop5FMax: 2.44,
+      systemType: "wall-single",
+      categories: ["cold-climate", "ductless", "single-zone"],
+      status: "published",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  outdoorUnits: [
+    {
+      id: "coast-air-a-cad09-0a",
+      modelNumber: "A-CAD09-0A",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "coast-air-a-cad24-1a",
+      modelNumber: "A-CAD24-1A",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "coast-air-a-cad12-0a",
+      modelNumber: "A-CAD12-0A",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "coast-air-a-cad18-1a",
+      modelNumber: "A-CAD18-1A",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "coast-air-a-cad09-0b",
+      modelNumber: "A-CAD09-0B",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "coast-air-a-cad12-0b",
+      modelNumber: "A-CAD12-0B",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "coast-air-a-cad18-1b",
+      modelNumber: "A-CAD18-1B",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    },
+    {
+      id: "coast-air-a-cad24-1b",
+      modelNumber: "A-CAD24-1B",
+      brandId: "coast-air",
+      refrigerant: null as any,
+    }
+  ],
+  indoorUnits: [
+
+  ],
+  configurations: [
+    {
+      id: "coast-air-a-series-wall-single-cfg-1",
+      slug: "coast-air-a-series-wall-single-cfg-1",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad09-0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 25,
+      hspf2: 10.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "coast-air-a-series-wall-single-cfg-2",
+      slug: "coast-air-a-series-wall-single-cfg-2",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad24-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 23000,
+      coolingCapacityMaxBtu: 23000,
+      seer2: 20.5,
+      hspf2: 9.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "coast-air-a-series-wall-single-cfg-3",
+      slug: "coast-air-a-series-wall-single-cfg-3",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad12-0a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 22.5,
+      hspf2: 9,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "coast-air-a-series-wall-single-cfg-4",
+      slug: "coast-air-a-series-wall-single-cfg-4",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad18-1a",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.7,
+      hspf2: 9.8,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "coast-air-a-series-wall-single-cfg-5",
+      slug: "coast-air-a-series-wall-single-cfg-5",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad09-0b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 9000,
+      coolingCapacityMaxBtu: 9000,
+      seer2: 23.6,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "coast-air-a-series-wall-single-cfg-6",
+      slug: "coast-air-a-series-wall-single-cfg-6",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad12-0b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 12000,
+      coolingCapacityMaxBtu: 12000,
+      seer2: 23.5,
+      hspf2: 10.2,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "coast-air-a-series-wall-single-cfg-7",
+      slug: "coast-air-a-series-wall-single-cfg-7",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad18-1b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 18000,
+      coolingCapacityMaxBtu: 18000,
+      seer2: 22.5,
+      hspf2: 11.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    },
+    {
+      id: "coast-air-a-series-wall-single-cfg-8",
+      slug: "coast-air-a-series-wall-single-cfg-8",
+      modelId: "coast-air-a-series-wall-single",
+      outdoorUnitId: "coast-air-a-cad24-1b",
+      indoorUnitId: null,
+      coolingCapacityMinBtu: 24000,
+      coolingCapacityMaxBtu: 24000,
+      seer2: 22.7,
+      hspf2: 9.5,
+      minHeatingTempC: -25,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    }
+  ],
+  performanceProfiles: [
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-1",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-2",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17900,
+          cop: 2.04,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-3",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 1.96,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-4",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13800,
+          cop: 2.05,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-5",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 7500,
+          cop: 2.17,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-6",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 8500,
+          cop: 2.08,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-7",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 13400,
+          cop: 2.44,
+          confidence: "verified",
+        }
+      ]
+    },
+    {
+      configurationId: "coast-air-a-series-wall-single-cfg-8",
+      dataPoints: [
+        {
+          outdoorTempC: -15,
+          heatingCapacityBtu: 17900,
+          cop: 2,
+          confidence: "verified",
+        }
+      ]
+    }
+  ],
+  certifications: [],
+  warranties: [],
+  priceObservations: [],
+  sources: [],
+  editorial: [],
+};
