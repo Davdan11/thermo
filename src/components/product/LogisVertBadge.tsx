@@ -30,14 +30,12 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
   }
 
   let dollars: number;
-  let rate: number;
   let btu: number;
   let isOfficial: boolean;
 
   if (officialEntry) {
-    // Use REAL certified data
+    // Use REAL data from Hydro-Québec
     dollars = officialEntry.logisVertDollars;
-    rate = officialEntry.coldClimate ? 120 : 50;
     btu = officialEntry.heatingBtu17F;
     isOfficial = true;
   } else {
@@ -52,7 +50,6 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
 
     const result = calculateLogisVertSimple(fallbackBtu, isColdClimate);
     dollars = result.dollars;
-    rate = result.rate;
     btu = fallbackBtu;
     isOfficial = false;
   }
@@ -85,7 +82,7 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
           </div>
           <p className={styles.subtitle}>
             {isOfficial
-              ? <>Montant basé sur la capacité certifiée AHRI de <strong>{btu.toLocaleString("fr-CA")} BTU/h à -8 °C</strong>.</>
+              ? <>Montant officiel Hydro-Québec — capacité certifiée AHRI de <strong>{btu.toLocaleString("fr-CA")} BTU/h à -8 °C</strong>.</>
               : <>Montant estimé pour une capacité de <strong>{btu.toLocaleString("fr-CA")} BTU/h</strong>.</>
             }
           </p>
@@ -98,20 +95,18 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
         </div>
       </div>
 
-      {/* Formula breakdown */}
+      {/* Data breakdown */}
       <div className={styles.formulaBox}>
-        <span>Capacité : <span className={styles.formulaHighlight}>{btu.toLocaleString("fr-CA")} BTU/h{isOfficial ? " à -8 °C" : ""}</span></span>
-        <span>×</span>
-        <span>Taux : <span className={styles.formulaHighlight}>{rate} $ / 1 000 BTU/h</span></span>
-        <span>=</span>
+        <span>Capacité : <span className={styles.formulaHighlight}>{btu.toLocaleString("fr-CA")} BTU/h à -8 °C</span></span>
+        <span>→</span>
         <span className={styles.formulaResult}>{dollars.toLocaleString("fr-CA")} $</span>
-        {dollars >= 6700 && <span style={{ color: "#b45309", fontWeight: 600, marginLeft: 4 }}>(plafond max. atteint)</span>}
+        {isOfficial && <span style={{ color: "#16a34a", fontWeight: 600, fontSize: 11, marginLeft: 4 }}>✓ Vérifié HQ</span>}
       </div>
 
       {/* Disclaimer */}
       <p className={styles.disclaimer}>
         {isOfficial
-          ? "Montant calculé selon la capacité de chauffage certifiée AHRI à -8 °C et les barèmes officiels d'Hydro-Québec."
+          ? "Montant officiel tiré directement de la liste des thermopompes admissibles d'Hydro-Québec."
           : "Montant estimatif basé sur la capacité du modèle. Consultez le portail LogisVert pour le montant exact."
         }{" "}
         <a

@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "scrape:logisvert": "node scripts/scrape-logisvert.mjs"
   },
   "dependencies": {
     "@faker-js/faker": "^10.6.0",

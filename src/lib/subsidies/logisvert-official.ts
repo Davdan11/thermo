@@ -1,102 +1,176 @@
 /* ==================================================================
-   LogisVert Official Amounts — Real data from government AHRI database
+   LogisVert Official Amounts — REAL data from Hydro-Québec
    
-   Source: thermopompes_quebec_canada_2011_2026.xlsx
-   (ENERGY STAR Certified Heat Pumps — NRCan / EPA)
+   Source: hydroquebec.com CSV (updated regularly by HQ)
+   Enriched with: ENERGY STAR API (series, SEER2, HSPF2, COP)
    
-   The amounts are calculated using the OFFICIAL LogisVert formula:
-   - Cold Climate:    120 $ per 1,000 BTU/h at -8°C (17°F)
-   - ENERGY STAR:      50 $ per 1,000 BTU/h at -8°C (17°F)
-   - Maximum cap:   6,700 $
-   
-   Using CERTIFIED heating capacity at -8°C from AHRI data.
+   The amounts are the OFFICIAL LogisVert subsidy values,
+   NOT calculated — taken directly from HQ's published data.
    ================================================================== */
 
 import officialData from "./logisvert-official-amounts.json";
+
+let modelIndex: Record<string, string[]> | null = null;
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  modelIndex = require("./logisvert-model-index.json");
+} catch {
+  modelIndex = null;
+}
 
 /**
  * Entry from the official LogisVert amounts database.
  */
 export interface LogisVertOfficialEntry {
+  /** AHRI reference number */
+  ahri: string;
   /** Brand name */
   brand: string;
+  /** Series name (from ENERGY STAR) */
+  series?: string;
   /** Outdoor model number */
   outdoorModel: string;
-  /** LogisVert subsidy amount in $ */
+  /** Indoor model number */
+  indoorModel?: string;
+  /** LogisVert subsidy amount in $ — REAL amount from HQ */
   logisVertDollars: number;
-  /** Certified heating capacity at -8°C (17°F) in BTU/h */
+  /** Certified heating capacity at -8°C in BTU/h */
   heatingBtu17F: number;
   /** Certified heating capacity at -15°C (5°F) in BTU/h */
-  heatingBtu5F: number;
+  heatingBtu5F?: number;
   /** Cooling capacity in BTU/h */
-  coolingBtu: number;
+  coolingBtu?: number;
+  /** Nominal heating capacity in BTU/h */
+  nominalBtu?: number;
   /** Whether cold-climate certified */
   coldClimate: boolean;
+  /** Whether high-efficiency (haut rendement) */
+  highEfficiency: boolean;
   /** System type: "C" = central, "M" = mini/multi */
-  systemType: "C" | "M";
+  systemType?: "C" | "M";
+  /** SEER2 rating */
+  seer2?: number;
   /** HSPF2 rating */
-  hspf2: number;
+  hspf2?: number;
+  /** COP at -15°C (5°F) */
+  cop5?: number;
 }
 
-const data = officialData as Record<string, {
-  b: string; m: string; a: number; h: number; h5: number;
-  c: number; cc: boolean; t: string; p: number;
-}>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const data = officialData as Record<string, any>;
 
-/**
- * Look up the official LogisVert amount for an outdoor model number.
- * Returns null if the model is not found in the database.
- */
-export function lookupLogisVert(outdoorModel: string): LogisVertOfficialEntry | null {
-  const key = outdoorModel.toLowerCase().replace(/[^a-z0-9]/g, "");
-  const entry = data[key];
-  if (!entry) return null;
-
+function toEntry(ahri: string, e: Record<string, unknown>): LogisVertOfficialEntry {
   return {
-    brand: entry.b,
-    outdoorModel: entry.m,
-    logisVertDollars: entry.a,
-    heatingBtu17F: entry.h,
-    heatingBtu5F: entry.h5,
-    coolingBtu: entry.c,
-    coldClimate: entry.cc,
-    systemType: entry.t as "C" | "M",
-    hspf2: entry.p,
+    ahri,
+    brand: (e.b as string) || "",
+    series: e.s as string | undefined,
+    outdoorModel: (e.m as string) || "",
+    indoorModel: e.im as string | undefined,
+    logisVertDollars: (e.a as number) || 0,
+    heatingBtu17F: (e.h17 as number) || 0,
+    heatingBtu5F: e.h5 as number | undefined,
+    coolingBtu: e.c as number | undefined,
+    nominalBtu: e.hn as number | undefined,
+    coldClimate: !!(e.cc ?? e.hr),
+    highEfficiency: !!(e.hr),
+    systemType: e.t as "C" | "M" | undefined,
+    seer2: e.seer2 as number | undefined,
+    hspf2: (e.hspf2 ?? e.p) as number | undefined,
+    cop5: e.cop5 as number | undefined,
   };
 }
 
 /**
- * Look up LogisVert by trying multiple model number variations.
- * Useful when the exact model format may vary (wildcards, suffixes, etc.)
+ * Look up by AHRI reference number — the most precise lookup.
+ */
+export function lookupByAHRI(ahriNumber: string): LogisVertOfficialEntry | null {
+  const entry = data[ahriNumber];
+  if (!entry) return null;
+  return toEntry(ahriNumber, entry);
+}
+
+/**
+ * Look up the official LogisVert amount for an outdoor model number.
+ * Returns the BEST match (highest subsidy) if multiple AHRI entries exist.
+ */
+export function lookupLogisVert(outdoorModel: string): LogisVertOfficialEntry | null {
+  const key = outdoorModel.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+  // Try model index first (fast lookup)
+  if (modelIndex && modelIndex[key]) {
+    const ahriIds = modelIndex[key];
+    let best: LogisVertOfficialEntry | null = null;
+    for (const ahri of ahriIds) {
+      const entry = data[ahri];
+      if (entry) {
+        const e = toEntry(ahri, entry);
+        if (!best || e.logisVertDollars > best.logisVertDollars) best = e;
+      }
+    }
+    if (best) return best;
+  }
+
+  // Fallback: scan all entries (for backward compat)
+  let best: LogisVertOfficialEntry | null = null;
+  for (const [ahri, entry] of Object.entries(data)) {
+    const eModel = ((entry as Record<string, unknown>).m as string || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (eModel === key || eModel.startsWith(key) || key.startsWith(eModel)) {
+      const e = toEntry(ahri, entry as Record<string, unknown>);
+      if (!best || e.logisVertDollars > best.logisVertDollars) best = e;
+    }
+  }
+  return best;
+}
+
+/**
+ * Fuzzy lookup — tries multiple variations.
  */
 export function lookupLogisVertFuzzy(modelNumber: string, brand?: string): LogisVertOfficialEntry | null {
-  // Try exact match first
   const exact = lookupLogisVert(modelNumber);
   if (exact) return exact;
 
-  // Normalize and try
   const norm = modelNumber.toLowerCase().replace(/[^a-z0-9]/g, "");
-  
-  // Try partial match — find entries that start with the normalized model
-  for (const [key, entry] of Object.entries(data)) {
-    if (key.startsWith(norm) || norm.startsWith(key)) {
-      // If brand filter provided, check it matches
-      if (brand && !entry.b.toLowerCase().includes(brand.toLowerCase())) continue;
-      return {
-        brand: entry.b,
-        outdoorModel: entry.m,
-        logisVertDollars: entry.a,
-        heatingBtu17F: entry.h,
-        heatingBtu5F: entry.h5,
-        coolingBtu: entry.c,
-        coldClimate: entry.cc,
-        systemType: entry.t as "C" | "M",
-        hspf2: entry.p,
-      };
+
+  for (const [ahri, entry] of Object.entries(data)) {
+    const e = entry as Record<string, unknown>;
+    const eModel = ((e.m as string) || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (eModel.startsWith(norm) || norm.startsWith(eModel)) {
+      if (brand && !(e.b as string || "").toLowerCase().includes(brand.toLowerCase())) continue;
+      return toEntry(ahri, e);
     }
   }
 
   return null;
+}
+
+/**
+ * Search LogisVert by query string (brand, model, or series).
+ */
+export function searchLogisVert(query: string, limit = 20): LogisVertOfficialEntry[] {
+  const q = query.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+  if (!q) return [];
+
+  const results: LogisVertOfficialEntry[] = [];
+  const words = q.split(/\s+/);
+
+  for (const [ahri, entry] of Object.entries(data)) {
+    const e = entry as Record<string, unknown>;
+    const searchable = [
+      (e.b as string) || "",
+      (e.m as string) || "",
+      (e.s as string) || "",
+      (e.im as string) || "",
+    ].join(" ").toLowerCase();
+
+    if (words.every(w => searchable.includes(w))) {
+      results.push(toEntry(ahri, e));
+      if (results.length >= limit * 3) break; // gather more, then sort+trim
+    }
+  }
+
+  return results
+    .sort((a, b) => b.logisVertDollars - a.logisVertDollars)
+    .slice(0, limit);
 }
 
 /**
@@ -106,19 +180,10 @@ export function getLogisVertByBrand(brandName: string): LogisVertOfficialEntry[]
   const norm = brandName.toLowerCase();
   const results: LogisVertOfficialEntry[] = [];
 
-  for (const entry of Object.values(data)) {
-    if (entry.b.toLowerCase() === norm) {
-      results.push({
-        brand: entry.b,
-        outdoorModel: entry.m,
-        logisVertDollars: entry.a,
-        heatingBtu17F: entry.h,
-        heatingBtu5F: entry.h5,
-        coolingBtu: entry.c,
-        coldClimate: entry.cc,
-        systemType: entry.t as "C" | "M",
-        hspf2: entry.p,
-      });
+  for (const [ahri, entry] of Object.entries(data)) {
+    const e = entry as Record<string, unknown>;
+    if (((e.b as string) || "").toLowerCase() === norm) {
+      results.push(toEntry(ahri, e));
     }
   }
 
@@ -134,8 +199,43 @@ export function getMaxLogisVertForBrand(brandName: string): number {
 }
 
 /**
+ * Get all unique LogisVert entries for an outdoor model (different indoor combos).
+ */
+export function getLogisVertVariants(outdoorModel: string): LogisVertOfficialEntry[] {
+  const key = outdoorModel.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const results: LogisVertOfficialEntry[] = [];
+
+  // Use model index
+  if (modelIndex && modelIndex[key]) {
+    for (const ahri of modelIndex[key]) {
+      const entry = data[ahri];
+      if (entry) results.push(toEntry(ahri, entry as Record<string, unknown>));
+    }
+  }
+
+  return results.sort((a, b) => b.logisVertDollars - a.logisVertDollars);
+}
+
+/**
  * Get total count of models in the official database.
  */
 export function getOfficialModelCount(): number {
   return Object.keys(data).length;
+}
+
+/**
+ * Get a range string like "1 032 $ – 1 920 $" for a model with variants.
+ */
+export function getLogisVertRange(outdoorModel: string): string | null {
+  const variants = getLogisVertVariants(outdoorModel);
+  if (variants.length === 0) return null;
+  
+  const amounts = variants.map(v => v.logisVertDollars);
+  const min = Math.min(...amounts);
+  const max = Math.max(...amounts);
+  
+  const fmt = (n: number) => n.toLocaleString("fr-CA") + " $";
+  
+  if (min === max) return fmt(max);
+  return `${fmt(min)} – ${fmt(max)}`;
 }

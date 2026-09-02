@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useMemo, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import type { LogisVertResult } from "@/lib/subsidies/logisvert-calculator";
-import officialData from "@/lib/subsidies/logisvert-official-amounts.json";
 
 /* ── Postal helpers ── */
 const POSTAL_RE = /^[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d$/;
@@ -36,32 +35,22 @@ function detectCity(p: string) {
   return POSTAL_MAP[p.replace(/\s/g, "").toUpperCase().slice(0, 3)] || "";
 }
 
-/* ── Products from OFFICIAL government AHRI database ── */
-const _data = officialData as Record<string, {
-  b: string; s: string; m: string; a: number; h: number; h5: number;
-  c: number; cc: boolean; t: string; p: number; e: number;
-}>;
-
-function getProducts() {
-  return Object.entries(_data)
-    .map(([key, e]) => ({
-      id: key,
-      brand: e.b,
-      series: e.s || "",
-      model: e.m,
-      slug: key,
-      btu: e.h, // Real heating capacity at -8°C (17°F) from AHRI
-      coolingBtu: e.c,
-      heatingBtu5F: e.h5,
-      isColdClimate: e.cc,
-      logisVertDollars: e.a, // Real LogisVert amount from official data
-      systemType: e.t as "C" | "M",
-      hspf2: e.p,
-      seer2: e.e || 0,
-      searchable: `${e.b} ${e.s || ""} ${e.m} ${key}`.toLowerCase(),
-    }))
-    .filter((p) => p.logisVertDollars > 0)
-    .sort((a, b) => a.brand.localeCompare(b.brand) || b.btu - a.btu);
+/* ── Product type for search results ── */
+interface ProductResult {
+  id: string;
+  brand: string;
+  series: string;
+  model: string;
+  slug: string;
+  btu: number;
+  coolingBtu: number;
+  heatingBtu5F: number;
+  isColdClimate: boolean;
+  logisVertDollars: number;
+  systemType: "C" | "M";
+  hspf2: number;
+  seer2: number;
+  searchable: string;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -70,7 +59,7 @@ function getProducts() {
 export function SubventionsClient() {
   const [query, setQuery] = useState("");
   const [showDD, setShowDD] = useState(false);
-  const [selected, setSelected] = useState<ReturnType<typeof getProducts>[number] | null>(null);
+  const [selected, setSelected] = useState<ProductResult | null>(null);
   const [postal, setPostal] = useState("");
   const [city, setCity] = useState("");
   const [date, setDate] = useState("");
@@ -78,24 +67,48 @@ export function SubventionsClient() {
   const [checked, setChecked] = useState(false);
   const [logisVertResult, setLogisVertResult] = useState<LogisVertResult | null>(null);
   const ddRef = useRef<HTMLDivElement>(null);
+  const [filtered, setFiltered] = useState<ProductResult[]>([]);
+  const [searching, setSearching] = useState(false);
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
-  const products = useMemo(() => getProducts(), []);
-  const filtered = useMemo(() => {
-    if (!query) {
-      // Afficher un modèle par marque pour montrer la diversité par défaut
-      const seenBrands = new Set<string>();
-      const defaultList = [];
-      for (const p of products) {
-        if (!seenBrands.has(p.brand)) {
-          seenBrands.add(p.brand);
-          defaultList.push(p);
-        }
-      }
-      return defaultList;
+  // Fetch products from API with debounce
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    
+    if (!query || query.length < 2) {
+      setFiltered([]);
+      return;
     }
-    const q = query.toLowerCase();
-    return products.filter((p) => p.searchable.includes(q)).slice(0, 15);
-  }, [query, products]);
+
+    debounceRef.current = setTimeout(async () => {
+      setSearching(true);
+      try {
+        const res = await fetch(`/api/logisvert?search=${encodeURIComponent(query)}&limit=15`);
+        if (!res.ok) { setFiltered([]); return; }
+        const data = await res.json();
+        const results: ProductResult[] = (data.results || []).map((r: Record<string, unknown>) => ({
+          id: String(r.ahri || ""),
+          brand: String(r.brand || ""),
+          series: String(r.series || ""),
+          model: String(r.outdoorModel || ""),
+          slug: String(r.ahri || ""),
+          btu: Number(r.heatingBtu17F) || 0,
+          coolingBtu: Number(r.coolingBtu) || 0,
+          heatingBtu5F: Number(r.heatingBtu5F) || 0,
+          isColdClimate: Boolean(r.coldClimate),
+          logisVertDollars: Number(r.logisVertDollars) || 0,
+          systemType: (String(r.systemType || "M")) as "C" | "M",
+          hspf2: Number(r.hspf2) || 0,
+          seer2: Number(r.seer2) || 0,
+          searchable: "",
+        }));
+        setFiltered(results);
+      } catch { setFiltered([]); }
+      finally { setSearching(false); }
+    }, 300);
+
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
+  }, [query]);
 
   const postalOk = POSTAL_RE.test(postal.replace(/\s/g, ""));
   const canCheck = !!selected && postalOk;
@@ -110,7 +123,7 @@ export function SubventionsClient() {
     if (!canCheck || !selected) return;
     setLoading(true);
 
-    // Use REAL official LogisVert amount from AHRI-certified government data
+    // Use REAL official LogisVert amount from Hydro-Québec CSV
     const dollars = selected.logisVertDollars;
     const rate = selected.isColdClimate ? 120 : 50;
 
@@ -121,14 +134,14 @@ export function SubventionsClient() {
       isColdClimate: selected.isColdClimate,
       capacityBtuUsed: selected.btu,
       isEstimate: false,
-      disclaimer: "Montant calculé selon la capacité de chauffage certifiée AHRI à -8 °C et les barèmes officiels du programme LogisVert d'Hydro-Québec.",
+      disclaimer: "Montant officiel tiré directement de la liste des thermopompes admissibles d'Hydro-Québec.",
       sourceUrl: "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
       asSubsidyEstimate: {
         programId: "logisvert-hq",
         programName: "LogisVert — Hydro-Québec",
         estimatedAmountCents: dollars * 100,
         currency: "CAD",
-        disclaimer: "Montant basé sur les données certifiées AHRI.",
+        disclaimer: "Montant officiel Hydro-Québec.",
         rulesVerifiedAt: "2026-08-28",
         sourceUrl: "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
       },
