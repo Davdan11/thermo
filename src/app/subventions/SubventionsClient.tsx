@@ -153,8 +153,7 @@ export function SubventionsClient() {
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center right", display: "block" }} />
         <div aria-hidden="true" style={{ position: "absolute", inset: 0,
           background: "linear-gradient(90deg,rgba(2,22,33,.98) 0%,rgba(2,22,33,.90) 31%,rgba(2,22,33,.42) 58%,rgba(2,22,33,.08) 100%)" }} />
-        <div style={{ position: "relative", zIndex: 1, width: "calc(100% - 64px)", maxWidth: 1440, margin: "0 auto",
-          display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", padding: "44px 0" }}>
+        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10 flex flex-col justify-center h-full py-8 sm:py-11">
           <h1 style={{ margin: 0, maxWidth: 680, fontSize: "clamp(42px, 3.5vw, 60px)", fontWeight: 550, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#fff" }}>
             Vérifiez les aides disponibles<br />pour votre thermopompe.
           </h1>
@@ -167,17 +166,20 @@ export function SubventionsClient() {
 
       {/* ═══ MAIN ═══ */}
       <div style={{ padding: "24px 0 20px" }}>
-        <div style={{ width: "calc(100% - 64px)", maxWidth: 1440, marginInline: "auto" }}>
+        <div className="w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10">
 
           {/* ── TOOL CARD ── */}
           <div className="subventions-main-card" style={{
-            display: "grid", gridTemplateColumns: "minmax(480px, 540px) minmax(0,1fr)",
-            overflow: "hidden", background: "rgba(255,255,255,.24)",
+            display: "grid", overflow: "hidden", background: "rgba(255,255,255,.24)",
             border: `1px solid ${BDR}`, borderRadius: 6, minHeight: 0,
           }}>
+            <style>{`
+              .subventions-main-card { grid-template-columns: 1fr; }
+              @media (min-width: 900px) { .subventions-main-card { grid-template-columns: minmax(420px, 540px) minmax(0,1fr); } }
+            `}</style>
 
             {/* ═══ COL 1 — FORM ═══ */}
-            <div style={{ padding: "32px 36px 24px", borderRight: `1px solid #e2d9cc` }}>
+            <div className="p-5 sm:p-8" style={{ borderRight: `1px solid #e2d9cc` }}>
               {/* Heading */}
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
                 <span style={{ display: "grid", width: 32, height: 32, placeItems: "center", flex: "0 0 32px",
@@ -402,7 +404,11 @@ export function SubventionsClient() {
               <div style={{ width: 32, height: 2, marginTop: 14, background: ORG }} />
             </div>
             {/* Grid */}
-            <div className="subventions-verify-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 0, padding: "0 34px 28px" }}>
+            <div className="subventions-verify-grid" style={{ display: "grid", gap: 20, padding: "0 20px 28px" }}>
+              <style>{`
+                .subventions-verify-grid { grid-template-columns: 1fr; }
+                @media (min-width: 768px) { .subventions-verify-grid { grid-template-columns: repeat(3,1fr); gap: 0; padding: 0 34px 28px !important; } }
+              `}</style>
               {/* 1 */}
               <div style={{ display: "grid", gridTemplateColumns: "34px minmax(0,1fr)", gap: 16, paddingRight: 32 }}>
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -465,10 +471,14 @@ export function SubventionsClient() {
 function renderRow(icon: React.ReactNode, name: string, status: React.ReactNode, desc: string, href: string, border: boolean) {
   return (
     <div className="subventions-result-row" style={{
-      display: "grid", gridTemplateColumns: "minmax(220px,1.05fr) minmax(240px,1.35fr) 140px",
-      alignItems: "center", gap: 20, minHeight: 88, padding: "22px 26px",
+      display: "grid",
+      alignItems: "center", gap: 16, minHeight: 88, padding: "22px 20px",
       borderTop: border ? "1px solid #e3dacd" : "none",
     }}>
+      <style>{`
+        .subventions-result-row { grid-template-columns: 1fr; }
+        @media (min-width: 768px) { .subventions-result-row { grid-template-columns: minmax(180px,1.05fr) minmax(200px,1.35fr) 140px; padding: 22px 26px !important; } }
+      `}</style>
       <div style={{ display: "grid", gridTemplateColumns: "34px minmax(0,1fr)", alignItems: "center", gap: 14 }}>
         {icon}
         <div>

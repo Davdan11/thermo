@@ -130,7 +130,7 @@ export default async function ProductPage({
           {brand.name.toUpperCase()}
         </div>
 
-        <div style={{ position: "relative", zIndex: 1, width: "calc(100% - 48px)", maxWidth: 1280, margin: "0 auto" }}>
+        <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10">
 
           {/* Breadcrumb */}
           <nav style={{ paddingTop: 100, paddingBottom: 24 }}>
@@ -231,8 +231,8 @@ export default async function ProductPage({
       {/* ═══════════════════════════════════════════════════════════
           BODY — Two-column layout
           ═══════════════════════════════════════════════════════════ */}
-      <div style={{ width: "calc(100% - 48px)", maxWidth: 1280, margin: "0 auto", padding: "40px 0 60px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 320px", gap: 48 }}>
+      <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 py-8 sm:py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-8 lg:gap-12">
 
           {/* ── MAIN COLUMN ── */}
           <div style={{ display: "flex", flexDirection: "column", gap: 40, minWidth: 0 }}>

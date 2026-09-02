@@ -212,7 +212,7 @@ export default function SoumissionPage() {
       </header>
 
       {/* ── MAIN CONTENT ── */}
-      <div style={{ flex: 1, maxWidth: 1140, width: "100%", margin: "0 auto", padding: "56px 40px", display: "grid", gridTemplateColumns: "1fr 420px", gap: 56, alignItems: "start" }}>
+      <div className="flex-1 max-w-[1140px] w-full mx-auto px-5 sm:px-8 lg:px-10 py-8 sm:py-14 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 items-start">
 
         {/* ── LEFT: Project summary ── */}
         <div>
@@ -228,7 +228,7 @@ export default function SoumissionPage() {
             {(Object.keys(ROW_LABELS) as ProjectKey[]).map((key, idx) => {
               const isBold = key === "modele";
               return (
-                <div key={key} style={{ display: "grid", gridTemplateColumns: "200px 1fr auto", alignItems: "center", gap: 16, padding: "14px 0", borderBottom: idx < Object.keys(ROW_LABELS).length - 1 ? "1px solid #e8e4de" : "none" }}>
+                <div key={key} className="grid grid-cols-1 sm:grid-cols-[200px_1fr_auto] items-center gap-2 sm:gap-4" style={{ padding: "14px 0", borderBottom: idx < Object.keys(ROW_LABELS).length - 1 ? "1px solid #e8e4de" : "none" }}>
                   <span style={{ fontSize: 13, color: "#536873" }}>{ROW_LABELS[key]}</span>
 
                   {editing === key ? (

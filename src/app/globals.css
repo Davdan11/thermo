@@ -193,8 +193,7 @@
    ============================================================== */
 
 html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -206,6 +205,19 @@ body {
   letter-spacing: var(--tracking-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ---- Responsive gutter ---- */
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --page-gutter: 32px;
+  }
 }
 
 /* ---- Headings ---- */

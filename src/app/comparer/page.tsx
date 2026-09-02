@@ -30,7 +30,7 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
     <main style={{ minHeight: "100vh" }}>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section style={{ background: "#0C1821", paddingBottom: 48 }}>
-        <div style={{ width: "calc(100% - 48px)", maxWidth: 1280, margin: "0 auto" }}>
+        <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10">
           <nav style={{ paddingTop: 100, paddingBottom: 0 }}>
             <ol style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: 0, padding: 0, listStyle: "none", fontSize: 12, color: "rgba(255,255,255,.35)" }}>
               <li><Link href="/" style={{ color: "inherit", textDecoration: "none" }}>Accueil</Link></li>
@@ -59,7 +59,7 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
 
       {/* ── Comparison ───────────────────────────────────────── */}
       <section style={{ background: "var(--color-background)" }}>
-        <div style={{ width: "calc(100% - 48px)", maxWidth: 1280, margin: "0 auto", paddingTop: 32, paddingBottom: 80 }}>
+        <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 pt-8 pb-16 sm:pb-20">
           {hasComparison ? (
             <ComparePageClient data={data} maxCompare={MAX_COMPARE} selectableModels={selectableModels} />
           ) : (

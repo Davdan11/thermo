@@ -411,16 +411,9 @@ export default function AProposPage() {
         style={{ width: "100%", backgroundColor: "#f7f4ef" }}
       >
         <div
-          className="experience-inner"
+          className="experience-inner max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10 py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-[minmax(300px,420px)_minmax(0,1fr)] items-center gap-10 lg:gap-16"
           style={{
-            width: "min(100% - 80px, 1440px)",
-            minHeight: "560px",
-            margin: "0 auto",
-            padding: "72px 0",
-            display: "grid",
-            gridTemplateColumns: "minmax(350px, 420px) minmax(0, 1fr)",
-            alignItems: "center",
-            gap: "clamp(55px, 6vw, 100px)",
+            minHeight: "400px",
           }}
         >
           {/* ── Left: copy ── */}

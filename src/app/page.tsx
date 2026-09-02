@@ -348,23 +348,23 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           CTA BANNER — orange
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#e54b17", overflow: "hidden" }} className="py-10 sm:py-16">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] items-center gap-6 sm:gap-10">
-          <div>
-            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, fontWeight: 600, marginBottom: 8 }}>Prêt à trouver la bonne thermopompe ?</p>
-            <h2 style={{ color: "#fff", fontSize: "clamp(24px,2.5vw,36px)", fontWeight: 800, lineHeight: 1.1, margin: 0, letterSpacing: "-0.02em" }}>
+      <section style={{ backgroundColor: "#e54b17", overflow: "hidden", position: "relative", minHeight: 160 }}>
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center" style={{ minHeight: 160 }}>
+          {/* Left: text + button */}
+          <div style={{ padding: "24px 0" }}>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>Prêt à trouver la bonne thermopompe ?</p>
+            <h2 style={{ color: "#fff", fontSize: "clamp(24px,2.8vw,38px)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 18px", letterSpacing: "-0.02em" }}>
               Démarrez par vos critères.<br />On s&apos;occupe du reste.
             </h2>
+            <Link href="/trouver-ma-thermopompe" className="bg-[#0b1b24] hover:bg-[#172126] hover:-translate-y-0.5 transition-all duration-300" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#fff", fontWeight: 700, fontSize: 15, padding: "13px 24px", borderRadius: 4, textDecoration: "none", whiteSpace: "nowrap", boxShadow: "0 4px 14px rgba(0,0,0,0.25)" }}>
+              Commencer maintenant
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </Link>
           </div>
 
-          <Link href="/trouver-ma-thermopompe" className="bg-[#0b1b24] hover:bg-[#172126] hover:-translate-y-0.5 transition-all duration-300" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#fff", fontWeight: 700, fontSize: 15, padding: "15px 28px", borderRadius: 4, textDecoration: "none", whiteSpace: "nowrap", boxShadow: "0 4px 14px rgba(0,0,0,0.25)" }}>
-            Commencer maintenant
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-          </Link>
-
-          {/* Unit photo — hidden on mobile */}
-          <div style={{ width: 160, position: "relative", height: 120 }} className="hidden sm:block">
-            <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="Thermopompe" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} />
+          {/* Right: huge photo filling the whole right side */}
+          <div className="hidden lg:block" style={{ position: "relative", height: "100%", minHeight: 160 }}>
+            <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="Thermopompe" fill style={{ objectFit: "contain", objectPosition: "center right" }} />
           </div>
         </div>
       </section>

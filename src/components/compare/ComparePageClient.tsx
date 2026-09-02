@@ -360,14 +360,15 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       )}
 
       {/* ---- Product columns ---- */}
+      <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch", margin: "0 -20px", padding: "0 20px" }}>
       <div style={{
         display: "grid",
-        gridTemplateColumns: `200px repeat(${products.length}, 1fr)`,
+        gridTemplateColumns: `minmax(140px, 200px) repeat(${products.length}, minmax(180px, 1fr))`,
         gap: 0,
         background: "var(--color-surface)",
         border: "1px solid var(--color-border)",
         borderRadius: "10px 10px 0 0",
-        overflow: "hidden",
+        minWidth: products.length > 2 ? `${products.length * 220 + 200}px` : "auto",
       }}>
         {/* Empty corner cell */}
         <div style={{ padding: 20, borderBottom: "1px solid var(--color-border)" }} />
@@ -618,16 +619,15 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
           </>
         ))}
       </div>
+      </div>{/* end scroll wrapper */}
 
       {/* ---- Trois profils, trois forces ---- */}
       {synthesis.length > 0 && (
         <div style={{
           background: "#0C1821",
           borderRadius: "0 0 10px 10px",
-          padding: "40px 32px",
-          display: "grid",
-          gridTemplateColumns: products.length <= 3 ? `200px repeat(${synthesis.length}, 1fr)` : "1fr",
-          gap: products.length <= 3 ? 0 : 24,
+          padding: "32px 24px",
+          display: "flex", flexDirection: "column", gap: 24,
         }}>
           {/* Label */}
           <div style={{ paddingRight: 24 }}>
@@ -643,8 +643,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
           {/* Synthesis cards */}
           {synthesis.map((s) => (
             <div key={s.label} style={{
-              display: "flex", alignItems: "flex-start", gap: 14, padding: "0 16px",
-              borderLeft: products.length <= 3 ? "1px solid rgba(255,255,255,.1)" : "none",
+              display: "flex", alignItems: "flex-start", gap: 14, padding: "0",
             }}>
               <div style={{
                 width: 36, height: 36, borderRadius: 6,
