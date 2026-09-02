@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import GuidesPageClient from "./GuidesPageClient";
 
 export const metadata: Metadata = {
-  title: "Guides",
-  description: "Guides et articles pour comprendre les thermopompes, l'efficacité énergétique et les choix disponibles au Québec.",
+  title: "Guides & Conseils — Thermopompes au Québec | ThermopompesÀVendre.ca",
+  description:
+    "Guides pratiques pour choisir, comparer et installer votre thermopompe au Québec. BTU, SEER2, prix installé, subventions et marques expliqués clairement.",
 };
 
 export default function GuidesPage() {
-  return (
-    <main>
-      <h1>Guides et ressources</h1>
-    </main>
-  );
+  return <GuidesPageClient />;
 }
