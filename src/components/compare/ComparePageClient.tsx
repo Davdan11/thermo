@@ -84,6 +84,7 @@ const ICONS: Record<string, React.ReactNode> = {
   noise: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6v12M8 9v6M4 10v4M16 8v8M20 10v4" /></svg>,
   features: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>,
   warranty: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>,
+  airflow: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" /></svg>,
 };
 
 /* ---- Verification badge ---- */
@@ -246,6 +247,24 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       label: "Niveau sonore",
       icon: ICONS.noise,
       values: products.map(buildNoiseRow),
+    },
+    {
+      id: "airflow",
+      label: "Débit d'air (CFM)",
+      icon: ICONS.airflow,
+      values: products.map((p) => {
+        const cfg = p.detail.configuration;
+        const min = cfg?.airflowCfmMin;
+        const max = cfg?.airflowCfmMax;
+        if (max != null) {
+          return {
+            rating: min && min !== max ? `${min} – ${max}` : `${max}`,
+            detail: "CFM",
+            color: max >= 500 ? "#16a34a" : max >= 300 ? "#d97706" : "#6b7280",
+          };
+        }
+        return { rating: "—", detail: "", color: "#6b7280" };
+      }),
     },
     {
       id: "features",

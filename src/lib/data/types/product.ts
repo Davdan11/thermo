@@ -129,6 +129,9 @@ export interface IndoorUnit {
   /** Noise range in dB(A) */
   noiseMinDbA?: number | null;
   noiseMaxDbA?: number | null;
+  /** Airflow in CFM (Cubic Feet per Minute) */
+  airflowCfmMin?: number | null;
+  airflowCfmMax?: number | null;
   sources?: SourceLink[];
 }
 
@@ -173,6 +176,9 @@ export interface SystemConfiguration {
   noiseIndoorMaxDbA?: number | null;
   noiseOutdoorDbA?: number | null;
   fanSpeeds?: number | null;
+  /** Airflow in CFM (Cubic Feet per Minute) */
+  airflowCfmMin?: number | null;
+  airflowCfmMax?: number | null;
   hasDehumidification?: boolean | null;
   hasWifi?: boolean | null;
   hasSmartControl?: boolean | null;

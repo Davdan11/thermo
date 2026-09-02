@@ -72,6 +72,17 @@ export function KeySpecs({ detail }: KeySpecsProps) {
     });
   }
 
+  // CFM (Airflow)
+  if (configuration?.airflowCfmMax != null) {
+    const min = configuration.airflowCfmMin;
+    const max = configuration.airflowCfmMax;
+    specs.push({
+      label: "Débit d'air (CFM)",
+      value: min && min !== max ? `${min} – ${max} CFM` : `${max} CFM`,
+      tooltip: "Volume d'air déplacé par la ventilation, en pieds cubes par minute. Un CFM plus élevé couvre une plus grande superficie.",
+    });
+  }
+
   // Wi-Fi
   if (configuration?.hasWifi === true) {
     specs.push({ label: "Wi-Fi", value: "Intégré" });

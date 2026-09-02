@@ -86,6 +86,24 @@ export function TechSpecs({ detail }: TechSpecsProps) {
       groups.push({ title: "Alimentation électrique", rows: elecRows });
     }
 
+    // --- Comfort & Airflow ---
+    const comfortRows: SpecRow[] = [];
+    if (configuration.airflowCfmMin != null || configuration.airflowCfmMax != null) {
+      const min = configuration.airflowCfmMin;
+      const max = configuration.airflowCfmMax;
+      if (min && max && min !== max) {
+        comfortRows.push({ label: "Débit d'air (CFM)", value: `${min} – ${max} CFM` });
+      } else {
+        comfortRows.push({ label: "Débit d'air (CFM)", value: `${max || min} CFM` });
+      }
+    }
+    if (configuration.fanSpeeds != null) {
+      comfortRows.push({ label: "Vitesses de ventilation", value: `${configuration.fanSpeeds}` });
+    }
+    if (comfortRows.length > 0) {
+      groups.push({ title: "Ventilation et débit d'air", rows: comfortRows });
+    }
+
     // --- Installation ---
     const installRows: SpecRow[] = [];
     if (configuration.maxLineLengthM != null) {
@@ -126,6 +144,15 @@ export function TechSpecs({ detail }: TechSpecsProps) {
     }
     if (indoorUnit.weightKg != null) {
       iuRows.push({ label: "Poids", value: `${indoorUnit.weightKg} kg` });
+    }
+    if (indoorUnit.airflowCfmMin != null || indoorUnit.airflowCfmMax != null) {
+      const min = indoorUnit.airflowCfmMin;
+      const max = indoorUnit.airflowCfmMax;
+      if (min && max && min !== max) {
+        iuRows.push({ label: "Débit d'air (CFM)", value: `${min} – ${max} CFM` });
+      } else {
+        iuRows.push({ label: "Débit d'air (CFM)", value: `${max || min} CFM` });
+      }
     }
     groups.push({ title: "Unité intérieure", rows: iuRows });
   }
