@@ -8,7 +8,7 @@ export const brand_xaaeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour XAAE",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_xaaeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP18V SERIES de XAAE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/xaae-xaae-4hp18v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

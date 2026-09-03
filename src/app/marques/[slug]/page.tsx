@@ -2,7 +2,16 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getBrandDetail } from "@/lib/data/queries/brand-detail";
 import { ProductCard } from "@/components/product/ProductCard";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
+import { registry } from "@/lib/data/registry";
+
+/* ── Static generation for all active Quebec brands ── */
+
+export async function generateStaticParams() {
+  return registry.brands
+    .filter((b) => b.activeInQuebec)
+    .map((b) => ({ slug: b.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -20,9 +29,17 @@ export async function generateMetadata({
   const name = brand.name.replace(" [DEV]", "");
 
   return createMetadata({
-    title: `Thermopompes ${name} — Explorez les séries et modèles au Québec`,
-    description: `Découvrez la gamme complète de thermopompes ${name}. Consultez les séries, comparez les modèles et trouvez le système idéal pour votre habitation.`,
+    title: `Thermopompes ${name} — Modèles, prix et caractéristiques au Québec`,
+    description: `Découvrez la gamme complète de thermopompes ${name} au Québec. Consultez les séries, comparez les modèles, vérifiez les subventions et trouvez le système idéal pour votre habitation.`,
+    alternates: { canonical: `${SITE_URL}/marques/${resolvedParams.slug}` },
     robots: { index: true, follow: true },
+    openGraph: {
+      title: `Thermopompes ${name}`,
+      description: `Tous les modèles de thermopompes ${name} disponibles au Québec`,
+      url: `${SITE_URL}/marques/${resolvedParams.slug}`,
+      siteName: "Thermopompe A Vendre.ca",
+      locale: "fr_CA",
+    },
   });
 }
 

@@ -8,7 +8,7 @@ export const brand_keplerDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Kepler",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_keplerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IDU Series de Kepler",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kepler-kepler-idu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_keplerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ODU Series de Kepler",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kepler-kepler-odu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

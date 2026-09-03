@@ -8,7 +8,7 @@ export const brand_arctic_kingDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Arctic King",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_arctic_kingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MOD Series de Arctic King",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arctic-king-arctic-king-mod-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

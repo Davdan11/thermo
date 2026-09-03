@@ -41,7 +41,7 @@
 }
 
 /* ==============================================================
-   ThermopompesÀVendre.ca — Design System
+   Thermopompe A Vendre.ca — Design System
 
    Palette volontairement limitée. Typographie soignée.
    Chaque token a une raison d'exister.
@@ -651,6 +651,12 @@ input[type="radio"]:disabled {
   html {
     @apply font-sans;
     overflow-x: hidden;
+  }
+  .container {
+    width: 100%;
+    max-width: var(--container-main);
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
   }
 }
 

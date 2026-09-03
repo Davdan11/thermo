@@ -8,7 +8,7 @@ export const brand_j_kuDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour J-KU",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_j_kuDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi MULTI Xtreme de J-KU",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/j-ku-j-ku-hi-multi-xtreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

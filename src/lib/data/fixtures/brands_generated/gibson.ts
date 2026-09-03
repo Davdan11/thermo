@@ -8,7 +8,7 @@ export const brand_gibsonDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Gibson",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Lomo de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-lomo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Indoors Eight-way Compact Cassettes de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-multizone-indoors-eight-way-compact-cassettes.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Flex Match de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-flex-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Outdoors de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-multizone-outdoors.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série (19-20.5 SEER2) Minisplits de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-19-205-seer2-minisplits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Side Discharge de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-ultra-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_gibsonDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série GIBSON FSH4BF SERIES de Gibson",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gibson-gibson-gibson-fsh4bf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

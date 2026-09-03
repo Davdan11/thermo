@@ -8,7 +8,7 @@ export const brand_stealth_comfortDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Stealth Comfort",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_stealth_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Extreme Heat de Stealth Comfort",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stealth-comfort-stealth-comfort-extreme-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_stealth_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32 Extreme Heat Unitary de Stealth Comfort",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stealth-comfort-stealth-comfort-r32-extreme-heat-unitary.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_stealth_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Extreme Heat Inverter Rooftop de Stealth Comfort",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stealth-comfort-stealth-comfort-extreme-heat-inverter-rooftop.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_stealth_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Unitary Condensing Unit de Stealth Comfort",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stealth-comfort-stealth-comfort-ultra-heat-unitary-condensing-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

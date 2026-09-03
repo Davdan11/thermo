@@ -8,7 +8,7 @@ export const brand_day_nightDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Day & Night",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC-series de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ConstantComfort 23 VS HP de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-constantcomfort-23-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série QuietComfort 19 SEER2 VS HP de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-quietcomfort-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ConstantComfort 20 VS HP de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-constantcomfort-20-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Mainline 18 SEER2 HP de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-mainline-18-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Dlseries de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-dlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_day_nightDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CONSTANTCOMFORT DELUXE 18 VS HP  2-STAGE de Day & Night",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/day-night-day-night-constantcomfort-deluxe-18-vs-hp-2-stage.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

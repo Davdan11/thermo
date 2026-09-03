@@ -8,7 +8,7 @@ export const brand_american_standard_mitsubishi_electricDataset: BrandDataset = 
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour American Standard / Mitsubishi Electric",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_american_standard_mitsubishi_electricDataset: BrandDataset = 
         "conventional"
       ],
       "description": "Série NV-Series de American Standard / Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-mitsubishi-electric-american-standard-mitsubishi-electric-nv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

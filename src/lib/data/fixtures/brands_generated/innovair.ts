@@ -8,7 +8,7 @@ export const brand_innovairDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Innovair",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHW Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-mhw-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Innovair Elite de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-innovair-elite.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Quantum Hyper Heat de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-quantum-hyper-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOS Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-mos-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Q4 de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-q4.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_innovairDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Q32 de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-q32.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Q4 Multi de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-q4-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MO Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-mo-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Hyper de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-multi-hyper.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MDL Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-mdl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_innovairDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série VIN-series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-vin-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MDH Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-mdh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SWV Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-swv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SHV Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-shv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SAV Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-sav-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Titan de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-titan.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_innovairDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série SOV Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-sov-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Corus de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-corus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Corvus de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-corvus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SH series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-sh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DEV series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-dev-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SEV series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-sev-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SHV Series | SOV Series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-shv-series-sov-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_innovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHD series de Innovair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innovair-innovair-mhd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

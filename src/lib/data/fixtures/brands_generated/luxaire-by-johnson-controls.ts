@@ -8,7 +8,7 @@ export const brand_luxaire_by_johnson_controlsDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour LUXAIRE BY JOHNSON CONTROLS",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",

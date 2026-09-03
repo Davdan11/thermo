@@ -8,7 +8,7 @@ export const brand_enduraDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Endura",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_enduraDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Endura Flex de Endura",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/endura-endura-endura-flex.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_enduraDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HB Endura Flex Multi de Endura",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/endura-endura-hb-endura-flex-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_enduraDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HB Endura Fusion Series de Endura",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/endura-endura-hb-endura-fusion-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_enduraDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HB Endura Masterpak-X de Endura",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/endura-endura-hb-endura-masterpak-x.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

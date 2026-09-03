@@ -39,7 +39,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série O-series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série O-HH Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-o-hh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série O-ES Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-o-es-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MULTI Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-multi-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MULTI de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DIY Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-diy-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DIYP Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-diyp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-a-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série EZ Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-ez-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série EZPRO de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-ezpro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UHP Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-uhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MVP Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-mvp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Universal DC Inverter Packaged Unit de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-universal-dc-inverter-packaged-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DIYH SERIES de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-diyh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Universal Series Inverter Packaged Heat Pump de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-universal-series-inverter-packaged-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CEN Series | CENTRAL Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-cen-series-central-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CENTRAL Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-central-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Universal de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-universal.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CENTRAL de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-central.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MHP170 SERIES de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-mhp170-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MHP17L Series de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-mhp17l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_mrcoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MHP17 SERIES de MRCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mrcool-mrcool-mhp17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

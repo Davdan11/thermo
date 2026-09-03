@@ -8,7 +8,7 @@ export const brand_smartflexDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour SMARTFLEX",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_smartflexDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série X series de SMARTFLEX",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smartflex-smartflex-x-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_smartflexDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M series de SMARTFLEX",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smartflex-smartflex-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_smartflexDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EZI de SMARTFLEX",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smartflex-smartflex-ezi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

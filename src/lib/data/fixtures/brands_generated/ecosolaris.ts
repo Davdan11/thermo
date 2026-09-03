@@ -8,7 +8,7 @@ export const brand_ecosolarisDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ECOSOLARIS",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ecosolarisDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ECO-12K de ECOSOLARIS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecosolaris-ecosolaris-eco-12k.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ecosolarisDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ECO-18K de ECOSOLARIS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecosolaris-ecosolaris-eco-18k.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

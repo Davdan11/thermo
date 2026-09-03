@@ -8,7 +8,7 @@ export const brand_brockDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour BROCK",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_brockDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de BROCK",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/brock-brock-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_brockDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 HP de BROCK",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/brock-brock-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_russellDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour RUSSELL",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_russellDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VANTIX de RUSSELL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/russell-russell-vantix.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_russellDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VANTIX | Vantix de RUSSELL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/russell-russell-vantix-vantix.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_russellDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série K-SERIES de RUSSELL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/russell-russell-k-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_russellDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F Series de RUSSELL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/russell-russell-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_russellDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXYC de RUSSELL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/russell-russell-rhpxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_russellDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXZS de RUSSELL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/russell-russell-rhpxzs.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_navien_incDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Navien, Inc.",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_navien_incDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NAZ17V de Navien, Inc.",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/navien-inc-navien-inc-naz17v.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

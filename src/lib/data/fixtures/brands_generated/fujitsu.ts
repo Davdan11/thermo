@@ -39,7 +39,7 @@ export const brand_fujitsuDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIRSTAGE H-Series de Fujitsu",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujitsu-fujitsu-airstage-h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_fujitsuDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série H-Series de Fujitsu",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujitsu-fujitsu-h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_fujitsuDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série J-7 de Fujitsu",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujitsu-fujitsu-j-7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_fujitsuDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série J-7S de Fujitsu",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujitsu-fujitsu-j-7s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_fujitsuDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F Series de Fujitsu",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujitsu-fujitsu-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_fujitsuDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série W Series de Fujitsu",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujitsu-fujitsu-w-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_fujitsuDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RDFXYC de Fujitsu",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujitsu-fujitsu-rdfxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

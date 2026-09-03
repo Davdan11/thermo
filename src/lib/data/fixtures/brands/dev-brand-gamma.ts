@@ -19,7 +19,7 @@ export const brandGammaDataset: BrandDataset = {
     countryOfOrigin: "KR",
     websiteUrl: null,
     description: "Marque fictive — modèles conventionnels et consoles.",
-    activeInQuebec: true,
+    activeInQuebec: false,
     status: "published",
     createdAt: NOW,
     updatedAt: NOW,
@@ -31,7 +31,7 @@ export const brandGammaDataset: BrandDataset = {
       id: "src-gamma-dev",
       type: "internal",
       title: "DEV — Données fictives Gamma",
-      organization: "ThermopompesÀVendre.ca",
+      organization: "Thermopompe A Vendre.ca",
       url: null,
       consultedAt: NOW,
       language: "fr",
@@ -167,3 +167,4 @@ export const brandGammaDataset: BrandDataset = {
   priceObservations: [],
   editorial: [],
 };
+

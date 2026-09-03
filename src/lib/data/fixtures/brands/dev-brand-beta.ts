@@ -18,7 +18,7 @@ export const brandBetaDataset: BrandDataset = {
     countryOfOrigin: "JP",
     websiteUrl: null,
     description: "Marque fictive de développement — centrales.",
-    activeInQuebec: true,
+    activeInQuebec: false,
     status: "published",
     createdAt: NOW,
     updatedAt: NOW,
@@ -30,7 +30,7 @@ export const brandBetaDataset: BrandDataset = {
       id: "src-beta-dev",
       type: "internal",
       title: "DEV — Données fictives Beta",
-      organization: "ThermopompesÀVendre.ca",
+      organization: "Thermopompe A Vendre.ca",
       url: null,
       consultedAt: NOW,
       language: "fr",
@@ -138,3 +138,4 @@ export const brandBetaDataset: BrandDataset = {
   priceObservations: [],
   editorial: [],
 };
+

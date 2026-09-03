@@ -8,7 +8,7 @@ export const brand_air_tempoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Air Tempo",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_air_tempoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Builder Series de Air Tempo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-tempo-air-tempo-builder-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

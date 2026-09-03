@@ -8,7 +8,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour TRUST AIR CONDITIONERS",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série O-series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série OAH Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-oah-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série OUS Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-ous-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M-series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMU303HV de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-lmu303hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série IS Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-is-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M5 Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-m5-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M3 Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-m3-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M4 Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-m4-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CE series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-ce-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M6 Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-m6-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AA Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-aa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AH Series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-ah-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Infinity de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-infinity.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_trust_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CX series de TRUST AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trust-air-conditioners-trust-air-conditioners-cx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

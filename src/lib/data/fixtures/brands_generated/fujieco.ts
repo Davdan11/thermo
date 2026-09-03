@@ -8,7 +8,7 @@ export const brand_fujiecoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour FUJIECO",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_fujiecoDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série T-PRO de FUJIECO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fujieco-fujieco-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

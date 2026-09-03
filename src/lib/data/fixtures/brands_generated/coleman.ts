@@ -39,7 +39,7 @@ export const brand_colemanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série URAC de Coleman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-coleman-urac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_colemanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UMULTI de Coleman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-coleman-umulti.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_colemanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UPAC de Coleman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-coleman-upac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_colemanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série XDV de Coleman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-coleman-xdv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_colemanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PH9 de Coleman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-coleman-ph9.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_colemanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HMH7 de Coleman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-coleman-hmh7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_colemanDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ECHELON de Coleman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-coleman-echelon.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

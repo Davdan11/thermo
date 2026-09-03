@@ -39,7 +39,7 @@ export const brand_danbyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DA series de Danby",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/danby-danby-da-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

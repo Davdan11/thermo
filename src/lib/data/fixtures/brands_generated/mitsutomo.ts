@@ -8,7 +8,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Mitsutomo",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HO Series de Mitsutomo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsutomo-mitsutomo-ho-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RU Series de Mitsutomo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsutomo-mitsutomo-ru-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RO Series de Mitsutomo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsutomo-mitsutomo-ro-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série B-RU Series de Mitsutomo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsutomo-mitsutomo-b-ru-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série S-RO Series de Mitsutomo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsutomo-mitsutomo-s-ro-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHO Series de Mitsutomo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsutomo-mitsutomo-rho-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_mitsutomoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HW Series de Mitsutomo",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsutomo-mitsutomo-hw-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

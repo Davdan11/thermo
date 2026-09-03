@@ -39,7 +39,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCY-MUB0368HS2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-mcy-mub0368hs2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RAV-BP121AT2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-rav-bp121at2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RAV-BP181AT2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-rav-bp181at2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RAV-BP361AT2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-rav-bp361at2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RAV-BP301AT2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-rav-bp301at2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCY-MUB0488HS2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-mcy-mub0488hs2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RAV-BP241AT2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-rav-bp241at2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MCY-MUB0608HS2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-mcy-mub0608hs2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MCY-MAP0607HS-UL* de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-mcy-map0607hs-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCY-MAP0367HS-UL* de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-mcy-map0367hs-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RAV-BP421AT2P-UL de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-rav-bp421at2p-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MCY-MAP0487HS-UL* de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-mcy-map0487hs-ul.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_toshiba_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Toshiba Mini de TOSHIBA CARRIER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/toshiba-carrier-toshiba-carrier-toshiba-mini.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

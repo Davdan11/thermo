@@ -8,7 +8,7 @@ export const brand_ductlessaireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour DUCTLESSAIRE",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ductlessaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 454 Series de DUCTLESSAIRE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ductlessaire-ductlessaire-454-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ductlessaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DA series de DUCTLESSAIRE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ductlessaire-ductlessaire-da-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

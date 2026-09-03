@@ -8,7 +8,7 @@ export const brand_alsetriaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Alsetria",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOX Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-mox-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M3O Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-m3o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M40 Series | M4O Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-m40-series-m4o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M50 Series | M5O Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-m50-series-m5o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M2O Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-m2o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MOD Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-mod-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M40 Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-m40-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_alsetriaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOE Series de Alsetria",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/alsetria-alsetria-moe-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

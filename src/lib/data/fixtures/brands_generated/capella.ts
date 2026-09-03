@@ -39,7 +39,7 @@ export const brand_capellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CPPB Series de Capella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/capella-capella-cppb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_capellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Energia B de Capella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/capella-capella-energia-b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_capellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SICB Series de Capella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/capella-capella-sicb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_capellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CPIB Series de Capella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/capella-capella-cpib-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_capellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SFCB Series de Capella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/capella-capella-sfcb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_capellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CAHB Series de Capella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/capella-capella-cahb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_capellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CCB Series de Capella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/capella-capella-ccb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

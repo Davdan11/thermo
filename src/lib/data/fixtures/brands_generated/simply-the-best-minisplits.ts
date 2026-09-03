@@ -8,7 +8,7 @@ export const brand_simply_the_best_minisplitsDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Simply The Best Minisplits",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_simply_the_best_minisplitsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SBM series de Simply The Best Minisplits",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/simply-the-best-minisplits-simply-the-best-minisplits-sbm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -33,6 +33,7 @@ export function CatalogueSearch({ variant = "default" }: CatalogueSearchProps) {
     } else {
       params.delete("search");
     }
+    params.delete("page");
     setLocalValue(null); // Sync back to URL-driven
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }

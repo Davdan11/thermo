@@ -8,7 +8,7 @@ export const brand_kadenDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Kaden",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_kadenDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KO Series de Kaden",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kaden-kaden-ko-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_kadenDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KOVH152 de Kaden",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kaden-kaden-kovh152.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

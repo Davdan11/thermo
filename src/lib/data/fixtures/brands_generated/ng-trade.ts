@@ -8,7 +8,7 @@ export const brand_ng_tradeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour NG Trade",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ng_tradeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série OMEG series de NG Trade",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ng-trade-ng-trade-omeg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ng_tradeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série OMS Series de NG Trade",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ng-trade-ng-trade-oms-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ng_tradeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MOB series de NG Trade",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ng-trade-ng-trade-mob-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ng_tradeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série OBMH series de NG Trade",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ng-trade-ng-trade-obmh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ng_tradeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOBMH series de NG Trade",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ng-trade-ng-trade-mobmh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ng_tradeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série EZC Series de NG Trade",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ng-trade-ng-trade-ezc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

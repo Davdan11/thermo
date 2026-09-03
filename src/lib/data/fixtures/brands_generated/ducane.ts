@@ -8,7 +8,7 @@ export const brand_ducaneDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Ducane",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4DHP series de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-4dhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP19V SERIES de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-7hp19v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP19V SERIES | 7HP19V Series de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-7hp19v-series-7hp19v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP18V SERIES de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-4hp18v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 7SCP18V Series de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-7scp18v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 7SHP15V Series de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-7shp15v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-4hp17l.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L SERIES de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-4hp17l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Series de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RPHPV Series de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-rphpv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Seies | 7HP14F Series de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-7hp14f-seies-7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_ducaneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Seies de Ducane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ducane-ducane-7hp14f-seies.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

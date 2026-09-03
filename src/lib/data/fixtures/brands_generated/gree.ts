@@ -39,7 +39,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Airy de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-airy.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Bora de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-bora.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Lomo de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-lomo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Fairy de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-fairy.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pular de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-pular.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Clivia de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-clivia.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Muse de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-muse.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Amber de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-amber.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Glovia de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-glovia.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floor ceiling de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-floor-ceiling.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Charmo de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-charmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_greeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Vireo GEN2 de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-vireo-gen2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ALL MATCH de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-all-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38 SEER Heat Pump de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-38-seer-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 360°air discharge cassette unit de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-360air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Vireo GEN3 de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-vireo-gen3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Sapphire de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-sapphire.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 25 SEER2 115V Mini splits de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-25-seer2-115v-mini-splits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat GMV6 Mini de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-ultra-heat-gmv6-mini.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Console de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-console.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série One-way air discharge cassette unit de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-one-way-air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ducted de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-ducted.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série COSMO de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-cosmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_greeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Multi GEN2 EO de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-multi-gen2-eo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -498,7 +498,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M-Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -515,7 +515,7 @@ export const brand_greeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Free match | M-Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-free-match-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -532,7 +532,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Zone Outdoor de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-multi-zone-outdoor.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -549,7 +549,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi R32 AO de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-multi-r32-ao.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -566,7 +566,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Shimo de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-shimo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -583,7 +583,7 @@ export const brand_greeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série G Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-g-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -600,7 +600,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série J-Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-j-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -617,7 +617,7 @@ export const brand_greeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Vireo GEN1 de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-vireo-gen1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -634,7 +634,7 @@ export const brand_greeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série FLEXX Eco Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-flexx-eco-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -651,7 +651,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Ultra DO de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-multi-ultra-do.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -668,7 +668,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -685,7 +685,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -736,7 +736,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 17 SEER DC inverter rooftop unit de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-17-seer-dc-inverter-rooftop-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -753,7 +753,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Flexx Condenser de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-ultra-heat-flexx-condenser.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -770,7 +770,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FLEXX de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-flexx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -787,7 +787,7 @@ export const brand_greeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série L-Series de GREE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gree-gree-l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

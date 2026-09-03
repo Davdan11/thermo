@@ -8,7 +8,7 @@ export const brand_aprodrDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AproDr",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_aprodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ASG Series de AproDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aprodr-aprodr-asg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_aprodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ALC Series de AproDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aprodr-aprodr-alc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_aprodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 24 SEER2 de AproDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aprodr-aprodr-24-seer2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_aprodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AM Series de AproDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aprodr-aprodr-am-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_aprodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AHU3G Series de AproDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aprodr-aprodr-ahu3g-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_aprodrDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AHU Series de AproDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aprodr-aprodr-ahu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

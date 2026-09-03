@@ -8,7 +8,7 @@ import { EstimatorLoader } from "@/components/pricing/EstimatorLoader";
    ------------------------------------------------------------------ */
 
 export const metadata: Metadata = {
-  title: "Estimateur de prix | ThermopompesÀVendre.ca",
+  title: "Estimateur de prix | Thermopompe A Vendre.ca",
   description:
     "Estimez le coût d'installation d'une thermopompe au Québec. Fourchette indicative selon votre projet, votre habitation et vos contraintes d'installation.",
   alternates: {
@@ -54,3 +54,4 @@ export default function PrixPage() {
     </main>
   );
 }
+

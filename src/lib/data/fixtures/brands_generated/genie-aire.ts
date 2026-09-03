@@ -8,7 +8,7 @@ export const brand_genie_aireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Genie Aire",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_genie_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série GA series de Genie Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/genie-aire-genie-aire-ga-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

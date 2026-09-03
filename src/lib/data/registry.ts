@@ -62,14 +62,33 @@ function mergeDatasets(auto: BrandDataset, manual: BrandDataset): BrandDataset {
     return [...byId.values()];
   };
 
+  const manualModelSignatures = new Set(
+    manual.models
+      .filter((m) => m.seriesId && m.nominalCapacityBtu != null)
+      .map((m) => `${m.seriesId}-${m.nominalCapacityBtu}`)
+  );
+
+  const autoModelsFiltered = auto.models.filter((m) => {
+    if (m.seriesId && m.nominalCapacityBtu != null) {
+      const sig = `${m.seriesId}-${m.nominalCapacityBtu}`;
+      if (manualModelSignatures.has(sig)) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  const validAutoModelIds = new Set(autoModelsFiltered.map(m => m.id));
+  const autoConfigsFiltered = auto.configurations.filter(c => validAutoModelIds.has(c.modelId));
+
   return {
     brand: manual.brand.description ? manual.brand : auto.brand,
     sources: [...(auto.sources || []), ...(manual.sources || [])],
     series: dedup(auto.series, manual.series),
-    models: dedup(auto.models, manual.models),
+    models: dedup(autoModelsFiltered, manual.models),
     outdoorUnits: dedup(auto.outdoorUnits, manual.outdoorUnits),
     indoorUnits: dedup(auto.indoorUnits, manual.indoorUnits),
-    configurations: dedup(auto.configurations, manual.configurations),
+    configurations: dedup(autoConfigsFiltered, manual.configurations),
     performanceProfiles: [...(auto.performanceProfiles || []), ...(manual.performanceProfiles || [])],
     certifications: dedup(auto.certifications || [], manual.certifications || []),
     warranties: [...(auto.warranties || []), ...(manual.warranties || [])],

@@ -6,7 +6,7 @@ export const dellaDataset: BrandDataset = {
     slug: "della",
     name: "DELLA",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: true,
+    activeInQuebec: false,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",

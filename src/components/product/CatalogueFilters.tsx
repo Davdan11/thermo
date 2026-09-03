@@ -22,6 +22,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
     } else {
       params.set(key, value);
     }
+    params.delete("page");
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }
 
@@ -32,6 +33,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
     } else {
       params.set(key, value);
     }
+    params.delete("page");
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }
 
@@ -42,6 +44,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
     } else {
       params.set("coldClimate", "true");
     }
+    params.delete("page");
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }
 
@@ -99,22 +102,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
       {filters.capacities.length > 0 && (
         <div className="pb-6 border-b border-[#E5E5E5]">
           <FilterGroup label="Capacité (BTU)">
-            {/* Visual Slider */}
-            <div className="pt-2 pb-6 px-1">
-              <div className="relative h-[2px] bg-[#E5E5E5]">
-                {/* Active track */}
-                <div className="absolute left-[15%] right-[25%] top-0 bottom-0 bg-[var(--color-accent)]" />
-                {/* Thumbs */}
-                <div className="absolute left-[15%] top-1/2 -translate-y-1/2 -translate-x-1/2 w-[14px] h-[14px] bg-[var(--color-accent)] rounded-full" />
-                <div className="absolute right-[25%] top-1/2 -translate-y-1/2 translate-x-1/2 w-[14px] h-[14px] bg-[var(--color-accent)] rounded-full" />
-              </div>
-              <div className="flex justify-between mt-3 text-[11px] text-[#6B7280] font-medium">
-                <span>9 000</span>
-                <span>36 000</span>
-              </div>
-            </div>
-            
-            <div className="relative">
+            <div className="relative mt-2">
               <select
                 value={activeCapacity}
                 onChange={(e) => setParam("capacity", e.target.value)}
@@ -150,15 +138,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
         </div>
       )}
 
-      {/* Nombre de zones (Static representation based on mockup) */}
-      <div className="pb-6 border-b border-[#E5E5E5]">
-        <FilterGroup label="Nombre de zones">
-          <CustomCheckbox label="1 zone" checked={true} onChange={() => {}} />
-          <CustomCheckbox label="2 zones" checked={false} onChange={() => {}} />
-          <CustomCheckbox label="3 zones" checked={false} onChange={() => {}} />
-          <CustomCheckbox label="4 zones et plus" checked={false} onChange={() => {}} />
-        </FilterGroup>
-      </div>
+
 
       {/* Reset */}
       <div className="pt-2">

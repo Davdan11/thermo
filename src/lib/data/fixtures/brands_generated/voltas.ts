@@ -8,7 +8,7 @@ export const brand_voltasDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Voltas",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_voltasDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MultiMax Vertis Series de Voltas",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/voltas-voltas-multimax-vertis-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_voltasDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Vertis Series de Voltas",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/voltas-voltas-vertis-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_voltasDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Whole House Heat Pump Vertis Series de Voltas",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/voltas-voltas-whole-house-heat-pump-vertis-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_voltasDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Whole House Heat Pump Vertis Series-Coil de Voltas",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/voltas-voltas-whole-house-heat-pump-vertis-series-coil.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_hemaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour HEMA",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_hemaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-Pro de HEMA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hema-hema-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

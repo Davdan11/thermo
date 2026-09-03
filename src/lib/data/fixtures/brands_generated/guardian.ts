@@ -8,7 +8,7 @@ export const brand_guardianDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Guardian",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_guardianDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série URAC de Guardian",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/guardian-guardian-urac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_guardianDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UMULTI de Guardian",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/guardian-guardian-umulti.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_guardianDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UPAC de Guardian",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/guardian-guardian-upac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_guardianDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M series de Guardian",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/guardian-guardian-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_guardianDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ECO de Guardian",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/guardian-guardian-eco.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_guardianDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LX SERIES de Guardian",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/guardian-guardian-lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

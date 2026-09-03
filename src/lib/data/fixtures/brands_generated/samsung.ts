@@ -39,7 +39,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DVM S Mini de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-dvm-s-mini.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WindFree - Premium (RAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-windfree-premium-rac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WindFree - Max heat (RAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-windfree-max-heat-rac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_samsungDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série WindFree IAQ - Standard (RAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-windfree-iaq-standard-rac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_samsungDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série WindFree - Standard (RAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-windfree-standard-rac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Bespoke AI WindFree Pro (RAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-bespoke-ai-windfree-pro-rac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4-Way Cassette (WindFree™) Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-4-way-cassette-windfree-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4-Way Cassette (WindFree™) Standard (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-4-way-cassette-windfree-standard-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FJM (Premium) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-fjm-premium.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 360 Cassette Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-360-cassette-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_samsungDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série FJM (Standard) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-fjm-standard.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 1-Way Cassette (WindFree™) Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-1-way-cassette-windfree-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Mini 4-Way Cassette (WindFree™) Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-mini-4-way-cassette-windfree-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Console - Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-console-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série High-Wall - Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-high-wall-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WindFree™ High-Wall - Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-windfree-high-wall-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Slim Duct (LSP) Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-slim-duct-lsp-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série High-Wall (RAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-high-wall-rac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Duct S (HSP) Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-duct-s-hsp-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-Position Air Handler - Standard (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-multi-position-air-handler-standard-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Duct S (HSP) Standard (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-duct-s-hsp-standard-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-Position Air Handler - Premium (CAC) de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-multi-position-air-handler-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hylex de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-hylex.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_samsungDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hylex - Premium de Samsung",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samsung-samsung-hylex-premium.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

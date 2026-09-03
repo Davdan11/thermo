@@ -8,7 +8,7 @@ export const brand_nordyneDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour NORDYNE",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_nordyneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NORDYNE SH4BF SERIES de NORDYNE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/nordyne-nordyne-nordyne-sh4bf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_ephocaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Ephoca",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO P Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-p-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO V Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO X Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-x-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO D Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-d-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO C Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO S Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-s-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO F Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_ephocaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO W Series de Ephoca",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ephoca-ephoca-aio-w-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

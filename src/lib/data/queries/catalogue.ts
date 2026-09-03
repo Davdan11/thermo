@@ -22,6 +22,8 @@ export interface CatalogueParams {
   capacity?: number;     // nominal BTU
   coldClimate?: boolean;
   sort?: CatalogueSort;
+  page?: number;
+  limit?: number;
 }
 
 export type CatalogueSort =
@@ -40,6 +42,13 @@ export const SORT_OPTIONS: { value: CatalogueSort; label: string }[] = [
 /* ------------------------------------------------------------------
    Enriched model for catalogue display
    ------------------------------------------------------------------ */
+
+export interface PaginatedResult<T> {
+  products: T[];
+  totalCount: number;
+  page: number;
+  totalPages: number;
+}
 
 export interface CatalogueProduct {
   model: ProductModel;
@@ -69,7 +78,11 @@ export interface AvailableFilters {
  * Compute available filter options from published models.
  */
 export function getAvailableFilters(): AvailableFilters {
-  const published = registry.models.filter((m) => m.status === "published" && m.isActive2026);
+  const published = registry.models.filter((m) => {
+    if (m.status !== "published" || !m.isActive2026) return false;
+    const brand = registry.brandById.get(m.brandId);
+    return brand ? brand.activeInQuebec : false;
+  });
 
   // Types
   const typeMap = new Map<SystemType, number>();
@@ -132,8 +145,12 @@ export function getAvailableFilters(): AvailableFilters {
 
 export function getCatalogueModels(
   params: CatalogueParams = {},
-): CatalogueProduct[] {
-  let models = registry.models.filter((m) => m.status === "published" && m.isActive2026);
+): PaginatedResult<CatalogueProduct> {
+  let models = registry.models.filter((m) => {
+    if (m.status !== "published" || !m.isActive2026) return false;
+    const brand = registry.brandById.get(m.brandId);
+    return brand ? brand.activeInQuebec : false;
+  });
 
   // ---- Search ----
   if (params.search) {
@@ -188,8 +205,58 @@ export function getCatalogueModels(
     models = models.filter((m) => m.categories.includes("cold-climate"));
   }
 
+  // ---- Sort (BEFORE Enriching) ----
+  const sort = params.sort ?? "relevance";
+  switch (sort) {
+    case "brand-asc":
+      models.sort((a, b) => {
+        const brandA = registry.brandById.get(a.brandId)?.name || "";
+        const brandB = registry.brandById.get(b.brandId)?.name || "";
+        return brandA.localeCompare(brandB);
+      });
+      break;
+    case "capacity-asc":
+      models.sort(
+        (a, b) =>
+          (a.nominalCapacityBtu ?? 0) -
+          (b.nominalCapacityBtu ?? 0),
+      );
+      break;
+    case "capacity-desc":
+      models.sort(
+        (a, b) =>
+          (b.nominalCapacityBtu ?? 0) -
+          (a.nominalCapacityBtu ?? 0),
+      );
+      break;
+    case "relevance":
+    default:
+      // Stable order: brand name → capacity
+      models.sort((a, b) => {
+        const brandA = registry.brandById.get(a.brandId)?.name || "";
+        const brandB = registry.brandById.get(b.brandId)?.name || "";
+        const brandCmp = brandA.localeCompare(brandB);
+        if (brandCmp !== 0) return brandCmp;
+        return (
+          (a.nominalCapacityBtu ?? 0) -
+          (b.nominalCapacityBtu ?? 0)
+        );
+      });
+      break;
+  }
+
+  // ---- Pagination ----
+  const totalCount = models.length;
+  const page = params.page && params.page > 0 ? params.page : 1;
+  const limit = params.limit && params.limit > 0 ? params.limit : 20;
+  const totalPages = Math.ceil(totalCount / limit) || 1;
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+
+  const paginatedModels = models.slice(startIndex, endIndex);
+
   // ---- Enrich with brand + config ----
-  const products: CatalogueProduct[] = models.map((model) => {
+  const products: CatalogueProduct[] = paginatedModels.map((model) => {
     const brand = registry.brandById.get(model.brandId)!;
     const configuration =
       registry.configurations.find((c) => c.modelId === model.id) ?? null;
@@ -217,41 +284,12 @@ export function getCatalogueModels(
     };
   });
 
-  // ---- Sort ----
-  const sort = params.sort ?? "relevance";
-  switch (sort) {
-    case "brand-asc":
-      products.sort((a, b) => a.brand.name.localeCompare(b.brand.name));
-      break;
-    case "capacity-asc":
-      products.sort(
-        (a, b) =>
-          (a.model.nominalCapacityBtu ?? 0) -
-          (b.model.nominalCapacityBtu ?? 0),
-      );
-      break;
-    case "capacity-desc":
-      products.sort(
-        (a, b) =>
-          (b.model.nominalCapacityBtu ?? 0) -
-          (a.model.nominalCapacityBtu ?? 0),
-      );
-      break;
-    case "relevance":
-    default:
-      // Stable order: brand name → capacity
-      products.sort((a, b) => {
-        const brandCmp = a.brand.name.localeCompare(b.brand.name);
-        if (brandCmp !== 0) return brandCmp;
-        return (
-          (a.model.nominalCapacityBtu ?? 0) -
-          (b.model.nominalCapacityBtu ?? 0)
-        );
-      });
-      break;
-  }
-
-  return products;
+  return {
+    products,
+    totalCount,
+    page,
+    totalPages
+  };
 }
 
 /* ------------------------------------------------------------------
@@ -320,3 +358,46 @@ export function getSelectableModels(): SelectableModelData[] {
   });
 }
 
+/* ------------------------------------------------------------------
+   All catalogue products (no pagination) — for CompareSelector
+   ------------------------------------------------------------------ */
+
+export function getAllCatalogueProducts(): CatalogueProduct[] {
+  const models = registry.models.filter((m) => {
+    if (m.status !== "published" || !m.isActive2026) return false;
+    const brand = registry.brandById.get(m.brandId);
+    return brand ? brand.activeInQuebec : false;
+  });
+
+  return models.map((model) => {
+    const brand = registry.brandById.get(model.brandId)!;
+    const configuration =
+      registry.configurations.find((c) => c.modelId === model.id) ?? null;
+    const series = registry.series.find((s) => s.id === model.seriesId);
+
+    let refrigerant: string | null = null;
+    let outdoorModelNumber: string | null = null;
+    if (configuration) {
+      const outdoorUnit = registry.outdoorUnits.find((u) => u.id === configuration.outdoorUnitId);
+      if (outdoorUnit) {
+        if (outdoorUnit.refrigerant) refrigerant = outdoorUnit.refrigerant as string;
+        if (outdoorUnit.modelNumber) outdoorModelNumber = outdoorUnit.modelNumber;
+      }
+    }
+
+    return {
+      model,
+      brand,
+      configuration,
+      systemTypeLabel: SYSTEM_TYPE_LABELS[model.systemType],
+      isColdClimate: model.categories.includes("cold-climate"),
+      imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
+      refrigerant,
+      outdoorModelNumber,
+    };
+  }).sort((a, b) => {
+    const brandCmp = a.brand.name.localeCompare(b.brand.name);
+    if (brandCmp !== 0) return brandCmp;
+    return (a.model.nominalCapacityBtu ?? 0) - (b.model.nominalCapacityBtu ?? 0);
+  });
+}

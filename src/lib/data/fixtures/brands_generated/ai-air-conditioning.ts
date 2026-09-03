@@ -8,7 +8,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AI AIR CONDITIONING",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AO Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-ao-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AW Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-aw-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A3M Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-a3m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A5M Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-a5m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A4M Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-a4m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A6M Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-a6m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ASO Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-aso-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A2M Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-a2m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AU Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-au-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AS Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-as-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_ai_air_conditioningDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AUO Series de AI AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ai-air-conditioning-ai-air-conditioning-auo-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

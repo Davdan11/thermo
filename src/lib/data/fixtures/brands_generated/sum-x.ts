@@ -8,7 +8,7 @@ export const brand_sum_xDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour SUM X",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_sum_xDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de SUM X",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sum-x-sum-x-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_sum_xDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SM de SUM X",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sum-x-sum-x-sm.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_sum_xDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SM-COIL de SUM X",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sum-x-sum-x-sm-coil.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

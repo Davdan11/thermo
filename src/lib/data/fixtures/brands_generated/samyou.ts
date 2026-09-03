@@ -8,7 +8,7 @@ export const brand_samyouDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour SAMYOU",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_samyouDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VSHP de SAMYOU",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/samyou-samyou-vshp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

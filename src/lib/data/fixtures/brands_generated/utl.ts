@@ -8,7 +8,7 @@ export const brand_utlDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour UTL",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_utlDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AHU de UTL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/utl-utl-ahu.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_utlDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TOP-DISCHARGE de UTL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/utl-utl-top-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_utlDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Wall-Mount AHU de UTL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/utl-utl-wall-mount-ahu.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_utlDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SIDE-DISCHARGE de UTL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/utl-utl-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

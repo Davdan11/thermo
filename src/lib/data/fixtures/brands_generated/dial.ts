@@ -8,7 +8,7 @@ export const brand_dialDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour DIAL",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_dialDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi UNI de DIAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/dial-dial-hi-uni.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_dialDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi MULTI Xtreme de DIAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/dial-dial-hi-multi-xtreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_dialDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi ULTRA HD de DIAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/dial-dial-hi-ultra-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

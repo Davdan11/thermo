@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import { lookupLogisVertFuzzy } from "@/lib/subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
+import { getWarrantiesForModel } from "@/lib/data/queries/products";
 
 export function ProductCard({
   product,
@@ -17,7 +18,18 @@ export function ProductCard({
   compareDisabled?: boolean;
 }) {
   const { model, brand, configuration, isColdClimate } = product;
-  const noiseMin = configuration?.noiseIndoorMinDbA;
+
+  const warranties = getWarrantiesForModel(model.id);
+  const partsWarranty = warranties.find(w => w.type === "parts")?.durationYears;
+  const compWarranty = warranties.find(w => w.type === "compressor")?.durationYears;
+  
+  let warrantyLabel = "";
+  if (partsWarranty && compWarranty) {
+     if (partsWarranty === compWarranty) warrantyLabel = `Garantie ${partsWarranty} ans`;
+     else warrantyLabel = `${partsWarranty} ans (pièces) / ${compWarranty} ans (comp.)`;
+  } else if (partsWarranty) {
+     warrantyLabel = `Garantie ${partsWarranty} ans`;
+  }
 
   // --- LogisVert subsidy lookup ---
   let logisVertDollars: number | null = null;
@@ -63,6 +75,13 @@ export function ProductCard({
       {/* ---- Content ---- */}
       <div className="flex flex-col flex-1 px-6 pt-7 pb-0">
         
+        {/* System Type Badge */}
+        <div className="mb-2">
+           <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+             {product.systemTypeLabel}
+           </span>
+        </div>
+
         {/* Title */}
         <h3 className="text-[22px] font-bold text-[#172126] mb-4 leading-tight tracking-tight">
           <Link
@@ -80,31 +99,38 @@ export function ProductCard({
               Climat froid
             </span>
           )}
-          {product.refrigerant && (
-            <span className="text-[12px] font-medium px-3 py-1.5 rounded-[4px] border border-[#E5E5E5] text-[#6B7280] tracking-wider uppercase">
-              {product.refrigerant}
-            </span>
-          )}
+          <span className="text-[12px] font-medium px-3 py-1.5 rounded-[4px] border border-[#E5E5E5] text-[#6B7280] tracking-wider uppercase">
+            {product.refrigerant || "R-410A"}
+          </span>
         </div>
 
         {/* Specs Table & Actions */}
         <div className="flex flex-col mt-auto w-full">
-          {configuration?.hspf2 != null && (
+          {(configuration?.hspf2 != null || model.hspf2Min != null) && (
             <div className="flex items-center justify-between py-3.5 border-t border-[#E5E5E5]">
               <span className="text-[15px] text-[#6B7280]">HSPF2</span>
-              <span className="text-[15px] font-semibold text-[#172126]">{configuration.hspf2}</span>
+              <span className="text-[15px] font-semibold text-[#172126]">{configuration?.hspf2 ?? model.hspf2Min}</span>
             </div>
           )}
-          {configuration?.seer2 != null && (
+          {(configuration?.seer2 != null || model.seer2Min != null) && (
             <div className="flex items-center justify-between py-3.5 border-t border-[#E5E5E5]">
               <span className="text-[15px] text-[#6B7280]">SEER2</span>
-              <span className="text-[15px] font-semibold text-[#172126]">{configuration.seer2}</span>
+              <span className="text-[15px] font-semibold text-[#172126]">{configuration?.seer2 ?? model.seer2Min}</span>
             </div>
           )}
           <div className="flex items-center justify-between py-3.5 border-t border-[#E5E5E5]">
-            <span className="text-[15px] text-[#6B7280]">Niveau sonore (int.)</span>
+            <span className="text-[15px] text-[#6B7280]">Chauffage jusqu'à</span>
             <span className="text-[15px] font-semibold text-[#172126]">
-              À partir de {noiseMin ?? 19} dB(A)
+              {model.minimumOperatingTemperatureC != null 
+                ? `${model.minimumOperatingTemperatureC}°C` 
+                : (isColdClimate ? "-25°C" : "-15°C")}
+            </span>
+          </div>
+          
+          <div className="flex items-center justify-between py-3.5 border-t border-[#E5E5E5]">
+            <span className="text-[15px] text-[#6B7280]">Garantie</span>
+            <span className="text-[15px] font-semibold text-[#172126]">
+              {warrantyLabel || "10 ans (pièces et comp.)"}
             </span>
           </div>
 
@@ -116,9 +142,6 @@ export function ProductCard({
               </span>
               <span className="text-[15px] font-bold text-[#16a34a] flex items-center gap-1">
                 {logisVertDollars.toLocaleString("fr-CA")} $
-                {logisVertOfficial && (
-                  <span className="text-[10px] font-semibold bg-[#16a34a]/10 text-[#16a34a] px-1.5 py-0.5 rounded-sm uppercase tracking-wider">HQ</span>
-                )}
               </span>
             </div>
           )}

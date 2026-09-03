@@ -8,7 +8,7 @@ export const brand_multimfgDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MULTIMFG",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_multimfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 12SPV0-HP-X-D de MULTIMFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multimfg-multimfg-12spv0-hp-x-d.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_multimfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3036SPV0-HP-X-D de MULTIMFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multimfg-multimfg-3036spv0-hp-x-d.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_multimfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 25SPV0-HP-X-D de MULTIMFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multimfg-multimfg-25spv0-hp-x-d.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

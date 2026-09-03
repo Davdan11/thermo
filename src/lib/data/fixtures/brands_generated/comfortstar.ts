@@ -39,7 +39,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série C series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CHF Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-chf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CPP Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-cpp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T1W Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-t1w-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série C series | CM Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-c-series-cm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CMZ Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-cmz-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CVH Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-cvh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Orbit de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-orbit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CA Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-ca-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CG Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-cg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CPH Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-cph-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CPR Series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-cpr-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AHU series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-ahu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UACP series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-uacp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_comfortstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACP series de ComfortStar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortstar-comfortstar-acp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

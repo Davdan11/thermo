@@ -8,7 +8,7 @@ export const brand_ruudDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Ruud",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Achiever Plus de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-floating-air-achiever-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Pro de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-floating-air-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Pro | Floating Air Pro Ultra Multi-Zone de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-floating-air-pro-floating-air-pro-ultra-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Classic Plus de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-classic-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Floating Air Acheiver de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-floating-air-acheiver.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ULTRA SERIES | Ultra de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-ultra-series-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Ultra de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-floating-air-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ULTRA SERIES de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-ultra-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACHIEVER PLUS de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-achiever-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ULTRA PLUS de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-ultra-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VERSUS de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_ruudDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACHIEVER PLUS | VERSUS de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-achiever-plus-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ACHIEVER SERIES de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-achiever-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ACHIEVER SERIES | Achiever de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-achiever-series-achiever.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Choice | VERSUS de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-choice-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXZS de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-rhpxzs.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_ruudDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXYC de Ruud",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ruud-ruud-rhpxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -39,7 +39,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Diamante Hyperformance de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-diamante-hyperformance.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série YN Series de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-yn-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Diamante Ultra de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-diamante-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Diamante Fresh de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-diamante-fresh.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Diamante Ultra Multi de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-diamante-ultra-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série WS series de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-ws-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Diamante Pro de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-diamante-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_pioneerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DYR Inverter Plus de Pioneer",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/pioneer-pioneer-dyr-inverter-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

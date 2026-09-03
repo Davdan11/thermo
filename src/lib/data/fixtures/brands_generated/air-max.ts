@@ -8,7 +8,7 @@ export const brand_air_maxDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AIR MAX",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_air_maxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIRMAX Free Match de AIR MAX",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-max-air-max-airmax-free-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

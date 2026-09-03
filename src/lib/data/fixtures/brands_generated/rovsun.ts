@@ -8,7 +8,7 @@ export const brand_rovsunDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ROVSUN",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_rovsunDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Tpro 23 de ROVSUN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rovsun-rovsun-tpro-23.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_rovsunDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-PRO de ROVSUN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rovsun-rovsun-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_rovsunDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CASSETTE-single de ROVSUN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rovsun-rovsun-cassette-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_rovsunDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CELLING FLOOR-single de ROVSUN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rovsun-rovsun-celling-floor-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_rovsunDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DUCT-single de ROVSUN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rovsun-rovsun-duct-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_rovsunDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Side Discharge de ROVSUN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rovsun-rovsun-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

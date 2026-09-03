@@ -8,7 +8,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour GE Appliances",
-    "activeInQuebec": true,
+    activeInQuebec: true,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Endure de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-endure.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Endure Single de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-endure-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Altitude Multi de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-altitude-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Caliber 230V de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-caliber-230v.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Endure Multi de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-endure-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MRV 7S de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-mrv-7s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Multilink de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-multilink.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Endure PRO de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-endure-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Caliber 115V de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-caliber-115v.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ASH124TRDF** de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-ash124trdf.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Connect de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-connect.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ASH3036TRDF** de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-ash3036trdf.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_ge_appliancesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Connect 2026 de GE Appliances",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-appliances-ge-appliances-connect-2026.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

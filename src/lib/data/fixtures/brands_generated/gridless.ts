@@ -8,7 +8,7 @@ export const brand_gridlessDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Gridless",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_gridlessDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HYPER HEAT SINGLE ZONE de Gridless",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gridless-gridless-hyper-heat-single-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_gridlessDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Gridless HD de Gridless",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gridless-gridless-gridless-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_gridlessDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Gridless MULTI ZONE de Gridless",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gridless-gridless-gridless-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_gridlessDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Gridless CENTRAL de Gridless",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gridless-gridless-gridless-central.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

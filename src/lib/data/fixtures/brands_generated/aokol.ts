@@ -8,7 +8,7 @@ export const brand_aokolDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AOKOL",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_aokolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série multi zone R454b de AOKOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aokol-aokol-multi-zone-r454b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -39,7 +39,7 @@ export const brand_hitachiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série airCore700 de Hitachi",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hitachi-hitachi-aircore700.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_hitachiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi UNI de Hitachi",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hitachi-hitachi-hi-uni.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_hitachiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série airCore700 LAC de Hitachi",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hitachi-hitachi-aircore700-lac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

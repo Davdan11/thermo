@@ -8,7 +8,7 @@ export const brand_maple_heatDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MAPLE HEAT",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_maple_heatDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NE-T52 Series de MAPLE HEAT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maple-heat-maple-heat-ne-t52-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_maple_heatDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T55 Series de MAPLE HEAT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maple-heat-maple-heat-t55-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

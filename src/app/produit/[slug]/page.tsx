@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
+import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
 import {
   ProductHeader,
   KeySpecs,
@@ -46,17 +47,20 @@ export async function generateMetadata({
     ? ` ${(model.nominalCapacityBtu / 1000).toFixed(0)}\u2009000 BTU`
     : "";
 
+  const imageUrl = model.imageUrl ?? detail.series?.imageUrl ?? null;
+
   return {
     title: `${brand.name} ${model.name} — Fiche technique complète`,
     description: `Consultez la fiche technique complète de la thermopompe ${brand.name} ${series.name} ${model.name}${capacity}. Spécifications, performance climat froid, subvention LogisVert et plus.`,
-    alternates: { canonical: `/produit/${slug}` },
+    alternates: { canonical: `${SITE_URL}/produit/${slug}` },
     robots: { index: true, follow: true },
     openGraph: {
       title: `${brand.name} ${model.name}`,
       description: `Fiche technique ${brand.name} ${model.name}${capacity} — ${detail.systemTypeLabel}`,
-      url: `/produit/${slug}`,
-      siteName: "ThermopompeÀVendre.ca",
+      url: `${SITE_URL}/produit/${slug}`,
+      siteName: "Thermopompe A Vendre.ca",
       locale: "fr_CA",
+      ...(imageUrl ? { images: [{ url: imageUrl, alt: `${brand.name} ${model.name}` }] } : {}),
     },
   };
 }
@@ -75,22 +79,41 @@ export default async function ProductPage({
   const { brand, series, model, configuration, performanceProfile } = detail;
   const imageUrl = model.imageUrl ?? series.imageUrl ?? null;
 
-  /* Schema.org — Product */
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
+  /* Schema.org — Product (enriched) */
+  const additionalProperties: { name: string; value: string }[] = [];
+  if (model.nominalCapacityBtu) additionalProperties.push({ name: "Capacité (BTU)", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU` });
+  if (configuration?.seer2) additionalProperties.push({ name: "SEER2", value: String(configuration.seer2) });
+  if (configuration?.hspf2) additionalProperties.push({ name: "HSPF2", value: String(configuration.hspf2) });
+  if (configuration?.minHeatingTempC != null) additionalProperties.push({ name: "Température minimale de chauffage", value: `${configuration.minHeatingTempC}°C` });
+  if (configuration?.noiseIndoorMinDbA) additionalProperties.push({ name: "Niveau sonore intérieur", value: `${configuration.noiseIndoorMinDbA} dB(A)` });
+
+  const productSchema = getProductSchema({
     name: `${brand.name} ${model.name}`,
-    brand: { "@type": "Brand", name: brand.name },
+    brand: brand.name,
     model: model.modelNumber,
-    category: "Thermopompe",
     description: `Thermopompe ${detail.systemTypeLabel} ${brand.name} ${series.name} ${model.name}`,
-  };
+    imageUrl,
+    slug,
+    category: "Thermopompe",
+    additionalProperties,
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Accueil", url: "/" },
+    { name: "Thermopompes", url: "/thermopompes" },
+    { name: brand.name, url: `/marques/${brand.slug}` },
+    { name: model.name, url: `/produit/${slug}` },
+  ]);
 
   return (
     <main style={{ fontFamily: "var(--font-sans)", minHeight: "100vh", background: "#f8f5f0", color: "#071d2b" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* ═══════════════════════════════════════════════════════════

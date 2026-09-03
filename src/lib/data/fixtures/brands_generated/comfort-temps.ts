@@ -8,7 +8,7 @@ export const brand_comfort_tempsDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Comfort Temps",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_comfort_tempsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-PRO Series de Comfort Temps",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-temps-comfort-temps-t-pro-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_bhiDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour BHI",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_bhiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SmartAir de BHI",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bhi-bhi-smartair.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

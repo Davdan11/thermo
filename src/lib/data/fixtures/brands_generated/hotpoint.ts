@@ -8,7 +8,7 @@ export const brand_hotpointDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Hotpoint",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_hotpointDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hotpoint de Hotpoint",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hotpoint-hotpoint-hotpoint.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

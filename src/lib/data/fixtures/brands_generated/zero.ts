@@ -8,7 +8,7 @@ export const brand_zeroDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ZERO",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ZMSB Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-zmsb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Z-MAX US R32 Hyper Heat Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-z-max-us-r32-hyper-heat-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Z-MAX US R454B Hyper Heat de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-z-max-us-r454b-hyper-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Z4S Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-z4s-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Z3SOV Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-z3sov-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Z6SOV Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-z6sov-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Z5SOV Series | ZMSB Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-z5sov-series-zmsb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_zeroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ZAVA Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-zava-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_zeroDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ZSOU Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-zsou-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_zeroDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ZAV Series de ZERO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zero-zero-zav-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

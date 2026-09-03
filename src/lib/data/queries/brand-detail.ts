@@ -75,7 +75,7 @@ export interface BrandSummary {
 
 export function getPublishedBrandsSummary(): BrandSummary[] {
   const publishedBrands = registry.brands.filter(
-    (b) => b.status === "published",
+    (b) => b.status === "published" && b.activeInQuebec,
   );
 
   return publishedBrands

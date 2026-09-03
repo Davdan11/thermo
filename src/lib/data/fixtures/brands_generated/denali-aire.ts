@@ -8,7 +8,7 @@ export const brand_denali_aireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour DENALI AIRE",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_denali_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de DENALI AIRE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/denali-aire-denali-aire-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

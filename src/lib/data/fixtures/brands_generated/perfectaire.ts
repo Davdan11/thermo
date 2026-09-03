@@ -39,7 +39,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3KA Series de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-3ka-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3PAMS de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-3pams.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4PAM Series de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-4pam-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3PAM series de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-3pam-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3PAMSHH series de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-3pamshh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3PA Series de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-3pa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3PAM de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-3pam.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 1PAMS de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-1pams.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_perfectaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3PAHH series de PerfectAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfectaire-perfectaire-3pahh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_ecotempDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ECOTEMP",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ecotempDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de ECOTEMP",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecotemp-ecotemp-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ecotempDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 17 SEER HP de ECOTEMP",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecotemp-ecotemp-2-stage-17-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

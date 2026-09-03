@@ -1,4 +1,4 @@
-﻿/* ==================================================================
+/* ==================================================================
    ThermoScan — Comparison Builder
    
    Compares a scanned (current) device against a ThermoMatch

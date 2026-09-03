@@ -8,7 +8,7 @@ export const brand_vkinDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour VKIN",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_vkinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de VKIN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/vkin-vkin-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_vkinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-pro de VKIN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/vkin-vkin-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_vkinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AHU de VKIN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/vkin-vkin-ahu.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_vkinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SIDE-DISCHARGE de VKIN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/vkin-vkin-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

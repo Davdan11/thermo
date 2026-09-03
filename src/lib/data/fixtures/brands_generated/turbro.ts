@@ -8,7 +8,7 @@ export const brand_turbroDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour TURBRO",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_turbroDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-Pro de TURBRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/turbro-turbro-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

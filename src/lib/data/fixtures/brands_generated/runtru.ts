@@ -8,7 +8,7 @@ export const brand_runtruDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour RunTru",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_runtruDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 23U Series de RunTru",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/runtru-runtru-23u-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_runtruDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 23U Multi de RunTru",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/runtru-runtru-23u-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_runtruDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CXV de RunTru",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/runtru-runtru-cxv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_runtruDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A5HL5 de RunTru",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/runtru-runtru-a5hl5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_runtruDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E4HL5 de RunTru",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/runtru-runtru-e4hl5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

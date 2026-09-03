@@ -8,7 +8,7 @@ export const brand_premium_levellaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Premium Levella",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_premium_levellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PIAW series de Premium Levella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/premium-levella-premium-levella-piaw-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_premium_levellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PIACWMZ series de Premium Levella",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/premium-levella-premium-levella-piacwmz-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /* ----------------------------------------------------------
-   Footer — ThermopompesÀVendre.ca
+   Footer — Thermopompe A Vendre.ca
    Reproduit fidèlement depuis la maquette.
    ---------------------------------------------------------- */
 
@@ -145,11 +145,23 @@ export function Footer() {
           <div>
             {/* Wordmark */}
             <Link href="/" style={{ textDecoration: "none" }}>
-              <div style={{ lineHeight: 1.1, marginBottom: 6 }}>
-                <p style={{ color: "#fff", fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>Thermopompes</p>
-                <p style={{ color: "#fff", fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>À Vendre</p>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", marginTop: 2, marginBottom: 24 }}>
+                <span style={{ color: "#fff", fontSize: "17px", fontWeight: 900, letterSpacing: "0.06em", lineHeight: "1.1" }}>
+                  THERMOPOMPES
+                </span>
+                <span style={{ position: "relative", color: "#fff", fontSize: "17px", fontWeight: 900, letterSpacing: "0.06em", lineHeight: "1.1" }}>
+                  {/* Red Grave Accent */}
+                  <svg 
+                    width="7" 
+                    height="7" 
+                    viewBox="0 0 10 10" 
+                    style={{ position: "absolute", left: "4px", top: "-3px" }}
+                  >
+                    <path d="M7 0L10 2L4 9L1 7Z" fill="#e54b17" />
+                  </svg>
+                  A VENDRE
+                </span>
               </div>
-              <div style={{ width: 28, height: 2, backgroundColor: "#e54b17", marginTop: 6, marginBottom: 20 }} />
             </Link>
 
             {/* Description */}
@@ -245,7 +257,7 @@ export function Footer() {
       <div className="border-t border-white/[0.07] max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 py-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <p style={{ color: "rgba(255,255,255,0.3)", fontSize: 12, margin: 0 }}>
-            © {year} ThermopompesÀVendre.ca Tous droits réservés.
+            © {year} Thermopompe A Vendre.ca Tous droits réservés.
           </p>
           <div style={{ display: "flex", gap: 24 }}>
             {LEGAL.map((l) => (
@@ -259,3 +271,4 @@ export function Footer() {
     </footer>
   );
 }
+

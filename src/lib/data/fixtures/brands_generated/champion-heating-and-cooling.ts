@@ -8,7 +8,7 @@ export const brand_champion_heating_and_coolingDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour CHAMPION HEATING AND COOLING",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_champion_heating_and_coolingDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LX SERIES de CHAMPION HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/champion-heating-and-cooling-champion-heating-and-cooling-lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_champion_heating_and_coolingDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série XDV de CHAMPION HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/champion-heating-and-cooling-champion-heating-and-cooling-xdv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_champion_heating_and_coolingDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PH9 de CHAMPION HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/champion-heating-and-cooling-champion-heating-and-cooling-ph9.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_champion_heating_and_coolingDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HMH7 de CHAMPION HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/champion-heating-and-cooling-champion-heating-and-cooling-hmh7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_champion_heating_and_coolingDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série XD5 de CHAMPION HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/champion-heating-and-cooling-champion-heating-and-cooling-xd5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_champion_heating_and_coolingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MOMENTUM de CHAMPION HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/champion-heating-and-cooling-champion-heating-and-cooling-momentum.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

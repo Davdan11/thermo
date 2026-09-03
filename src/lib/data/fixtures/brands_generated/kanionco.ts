@@ -8,7 +8,7 @@ export const brand_kanioncoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour KANIONco",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_kanioncoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KWSM series de KANIONco",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kanionco-kanionco-kwsm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_kanioncoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série REX SERIES de KANIONco",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kanionco-kanionco-rex-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_kanioncoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LCAC | PREMIUM SERIES de KANIONco",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kanionco-kanionco-lcac-premium-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_kanioncoDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série K series de KANIONco",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kanionco-kanionco-k-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_kanioncoDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PREMIUM SERIES de KANIONco",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kanionco-kanionco-premium-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_kanioncoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KD series de KANIONco",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kanionco-kanionco-kd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

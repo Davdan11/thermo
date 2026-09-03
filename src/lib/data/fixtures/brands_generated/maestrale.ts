@@ -39,7 +39,7 @@ export const brand_maestraleDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Aquilon  series de Maestrale",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maestrale-maestrale-aquilon-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_maestraleDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Boreas series de Maestrale",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maestrale-maestrale-boreas-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

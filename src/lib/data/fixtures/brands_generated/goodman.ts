@@ -39,7 +39,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSH Series de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-msh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MST Series de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-mst-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série GSZV9 de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-gszv9.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série GZV9SA de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-gzv9sa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 20 Series de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-20-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série GZV7SA de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-gzv7sa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série GZV6SA de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-gzv6sa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série GSZC7 de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-gszc7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série GZV6SA*M de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-gzv6sam.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série GLZS5B de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-glzs5b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_goodmanDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série GSZH5 de Goodman",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/goodman-goodman-gszh5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_garveeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour GARVEE",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_garveeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pro de GARVEE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/garvee-garvee-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_garveeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CA de GARVEE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/garvee-garvee-ca.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

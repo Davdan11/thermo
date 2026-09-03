@@ -8,7 +8,7 @@ export const brand_thermal_zoneDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Thermal Zone",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_thermal_zoneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série TZID Series de Thermal Zone",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/thermal-zone-thermal-zone-tzid-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_thermal_zoneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TZ Series | TZID Series de Thermal Zone",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/thermal-zone-thermal-zone-tz-series-tzid-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_thermal_zoneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série TZ Series de Thermal Zone",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/thermal-zone-thermal-zone-tz-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_thermal_zoneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Series de Thermal Zone",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/thermal-zone-thermal-zone-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_thermal_zoneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Value de Thermal Zone",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/thermal-zone-thermal-zone-value.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_thermal_zoneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CLASSIC PLUS/ACHIEVER PLUS de Thermal Zone",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/thermal-zone-thermal-zone-classic-plusachiever-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

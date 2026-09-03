@@ -8,7 +8,7 @@ export const brand_whirlpoolDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Whirlpool",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_whirlpoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série WHIRLPOOL de Whirlpool",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/whirlpool-whirlpool-whirlpool.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_whirlpoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CLASSIC de Whirlpool",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/whirlpool-whirlpool-classic.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

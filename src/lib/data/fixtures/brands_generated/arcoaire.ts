@@ -8,7 +8,7 @@ export const brand_arcoaireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Arcoaire",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC-series de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 23 VS Heat Pump de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-deluxe-23-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 20 VS Heat Pump de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-deluxe-20-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série QuietComfort 19 SEER2 VS HP de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-quietcomfort-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Mainline 18 SEER2 HP de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-mainline-18-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCS Series de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-dlcs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Dlseries de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-dlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DURACOMFORT DELUXE 18 VS HP  2-STAGE de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-duracomfort-deluxe-18-vs-hp-2-stage.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_arcoaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de Arcoaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/arcoaire-arcoaire-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

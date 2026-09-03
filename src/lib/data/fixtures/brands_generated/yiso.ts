@@ -8,7 +8,7 @@ export const brand_yisoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour YISO",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_yisoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pro de YISO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/yiso-yiso-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_yisoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pro2 de YISO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/yiso-yiso-pro2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_yisoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra de YISO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/yiso-yiso-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

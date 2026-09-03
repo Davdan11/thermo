@@ -39,7 +39,7 @@ export const brand_québecvairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KIT (NORDIC) (AIRY) de QuébecVair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/québecvair-québecvair-kit-nordic-airy.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_québecvairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi de QuébecVair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/québecvair-québecvair-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_québecvairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CHARMO R32 de QuébecVair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/québecvair-québecvair-charmo-r32.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_québecvairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CENTRAL de QuébecVair",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/québecvair-québecvair-central.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

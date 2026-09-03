@@ -8,7 +8,7 @@ export const brand_atomi_smartDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Atomi Smart",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_atomi_smartDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AT2239 de Atomi Smart",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/atomi-smart-atomi-smart-at2239.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_atomi_smartDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AT2239 CA de Atomi Smart",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/atomi-smart-atomi-smart-at2239-ca.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_atomi_smartDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AT2240 de Atomi Smart",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/atomi-smart-atomi-smart-at2240.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_atomi_smartDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AT2240 CA de Atomi Smart",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/atomi-smart-atomi-smart-at2240-ca.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

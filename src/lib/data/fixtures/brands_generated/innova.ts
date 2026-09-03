@@ -39,7 +39,7 @@ export const brand_innovaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO P Series de Innova",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-innova-aio-p-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_innovaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO V Series de Innova",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-innova-aio-v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_innovaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO X Series de Innova",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-innova-aio-x-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_innovaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO D Series de Innova",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-innova-aio-d-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_innovaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO S Series de Innova",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-innova-aio-s-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_innovaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO F Series de Innova",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-innova-aio-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_innovaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO W Series de Innova",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-innova-aio-w-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_kerrDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour KERR",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_kerrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-ZKP Series de KERR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kerr-a-zkp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_kerrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-KZP Series de KERR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kerr-a-kzp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_kerrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A series de KERR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kerr-a-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_kerrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-KHP Series de KERR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kerr-a-khp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_kerrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-KMH Series de KERR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kerr-a-kmh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_kerrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-KSP Series de KERR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kerr-a-ksp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_kerrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KXP Series de KERR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kerr-kxp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

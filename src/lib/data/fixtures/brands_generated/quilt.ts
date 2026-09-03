@@ -8,7 +8,7 @@ export const brand_quiltDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Quilt",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_quiltDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Quilt de Quilt",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/quilt-quilt-quilt.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

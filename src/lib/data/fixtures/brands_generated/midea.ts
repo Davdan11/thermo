@@ -39,7 +39,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5M Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-d5m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSE Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mse-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MP-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-38mp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOX Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mox-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MAR-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-38mar-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 45M Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-45m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MFA Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mfa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MMCM-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mmcm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MG-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOX230 Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mox230-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSEP Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-msep-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37M Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-37m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MO Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mo-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M3O Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-m3o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M40 Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-m40-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MO4 Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mo4-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M4O Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-m4o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCA Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mca-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M6O Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-m6o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M5O Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-m5o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -464,7 +464,7 @@ export const brand_mideaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38M series | 38MG-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-38m-series-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOX430 Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mox430-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -498,7 +498,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MO1 Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mo1-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -515,7 +515,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOD30 Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mod30-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -532,7 +532,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCD Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mcd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -549,7 +549,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MFB Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mfb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -566,7 +566,7 @@ export const brand_mideaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MSG Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-msg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -583,7 +583,7 @@ export const brand_mideaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MOD Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mod-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -600,7 +600,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MH-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-38mh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -617,7 +617,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MASAG de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-masag.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -634,7 +634,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAS-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mas-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -651,7 +651,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MDL Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mdl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -668,7 +668,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MDH Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mdh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -685,7 +685,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MDV Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mdv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -702,7 +702,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série X20H-LGWP de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-x20h-lgwp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -719,7 +719,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOE30 Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-moe30-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -736,7 +736,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAC Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mac-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -753,7 +753,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série X30H-LGWP de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-x30h-lgwp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -770,7 +770,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MRDV-18H de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mrdv-18h.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -787,7 +787,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M5F Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-m5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -804,7 +804,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAU Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mau-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -821,7 +821,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MVBL Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-mvbl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -838,7 +838,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSF Series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-msf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -855,7 +855,7 @@ export const brand_mideaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MB-series de Midea",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/midea-midea-38mb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

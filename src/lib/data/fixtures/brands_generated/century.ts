@@ -8,7 +8,7 @@ export const brand_centuryDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Century",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_centuryDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-ZHP Series de Century",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/century-century-a-zhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_centuryDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-series de Century",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/century-century-a-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_centuryDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-VMH Series de Century",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/century-century-a-vmh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_centuryDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HRG18 SERIES de Century",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/century-century-hrg18-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_centuryDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HSA14 Series de Century",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/century-century-hsa14-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_centuryDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HRG17 SERIES de Century",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/century-century-hrg17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_centuryDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCD series de Century",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/century-century-mcd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

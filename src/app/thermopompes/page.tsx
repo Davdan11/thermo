@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 import { getCatalogueModels, getAvailableFilters } from "@/lib/data/queries/catalogue";
 import type { CatalogueParams, CatalogueSort } from "@/lib/data/queries/catalogue";
@@ -11,6 +12,7 @@ import { CatalogueSortSelect } from "@/components/product/CatalogueSortSelect";
 import { MobileFilterDrawer } from "@/components/product/MobileFilterDrawer";
 import { CompareSelection } from "@/components/product/CompareSelection";
 import { CatalogueEmpty } from "@/components/product/CatalogueEmpty";
+import { CataloguePagination } from "@/components/product/CataloguePagination";
 import { buttonVariants } from "@/components/ui/button";
 
 /* ------------------------------------------------------------------
@@ -18,7 +20,7 @@ import { buttonVariants } from "@/components/ui/button";
    ------------------------------------------------------------------ */
 
 export const metadata = createMetadata({
-  title: "Thermopompes — Explorez les modèles offerts au Québec | ThermopompesÀVendre.ca",
+  title: "Thermopompes — Explorez les modèles offerts au Québec | Thermopompe A Vendre.ca",
   description:
     "Comparez les modèles de thermopompes, les capacités et les performances pour trouver un système adapté à votre habitation au Québec.",
   robots: { index: true, follow: true },
@@ -64,6 +66,9 @@ function parseParams(
     params.sort = sort as CatalogueSort;
   }
 
+  const page = typeof sp.page === "string" ? parseInt(sp.page, 10) : 1;
+  if (!isNaN(page) && page > 0) params.page = page;
+
   return params;
 }
 
@@ -78,30 +83,42 @@ export default async function ThermopompesPage({
 }) {
   const sp = await searchParams;
   const params = parseParams(sp);
-  const products = getCatalogueModels(params);
+  const { products, totalCount, page, totalPages } = getCatalogueModels(params);
   const filters = getAvailableFilters();
 
   const hasActiveFilters = !!(params.type || params.brand || params.capacity || params.coldClimate || params.search);
-  const resultCount = products.length;
+  const resultCount = totalCount;
 
   return (
     <main className="min-h-screen bg-[var(--color-background)]">
       {/* ---- Dark Hero Header ---- */}
-      <div className="relative w-full bg-[#0C1821] py-16 md:py-28 overflow-hidden">
-        {/* Decorative Watermark */}
-        <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
-          <span 
-            className="text-white font-bold leading-none" 
-            style={{ fontSize: "600px", letterSpacing: "-0.05em" }}
-          >
-            pq
-          </span>
+      <div className="relative w-full bg-[#0C1821] overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
+        {/* Background Image (Right Side) */}
+        <div className="absolute inset-0 z-0 flex justify-end pointer-events-none">
+          <div className="relative w-full lg:w-1/2 h-full opacity-30 lg:opacity-100">
+            {/* Gradient mask to blend image into the dark background on desktop */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0C1821] via-[#0C1821]/80 lg:via-transparent to-transparent z-10 hidden lg:block"></div>
+            {/* Gradient mask for bottom blending */}
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0C1821] to-transparent z-10"></div>
+            {/* Top mask */}
+            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0C1821] to-transparent z-10"></div>
+            {/* Left mask for mobile */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0C1821] to-transparent z-10 lg:hidden"></div>
+            
+            <Image
+              src="/images/categorie-murale-daikin-hd.png"
+              alt="Thermopompe Daikin Murale"
+              fill
+              className="object-cover object-right lg:object-right"
+              priority
+            />
+          </div>
         </div>
 
-        <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 flex flex-col lg:flex-row lg:items-center justify-between gap-12 lg:gap-8">
+        <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 py-16 md:py-28 z-10 flex flex-col justify-center">
           
           {/* Text Content */}
-          <div className="max-w-2xl z-10 shrink-0">
+          <div className="max-w-xl">
             <span className="text-[var(--color-accent)] font-bold text-[13px] tracking-widest uppercase mb-6 block">
               CATALOGUE QUÉBÉCOIS
             </span>
@@ -115,18 +132,94 @@ export default async function ThermopompesPage({
             >
               Explorez les<br />thermopompes.
             </h1>
-            <p className="text-white/70 text-lg md:text-xl max-w-md font-medium">
+            <p className="text-white/70 text-lg md:text-xl font-medium mb-10">
               Comparez les marques, les capacités et les performances selon vos besoins.
             </p>
+            
+            {/* Search Bar */}
+            <div className="w-full max-w-lg">
+              <Suspense>
+                <CatalogueSearch variant="dark" />
+              </Suspense>
+            </div>
           </div>
 
-          {/* Search Bar */}
-          <div className="w-full max-w-lg z-10 lg:ml-auto">
-            <Suspense>
-              <CatalogueSearch variant="dark" />
-            </Suspense>
-          </div>
+        </div>
+      </div>
 
+      {/* ---- Featured Brands Strip ---- */}
+      {/* ---- Featured Brands Strip ---- */}
+      <div className="w-full bg-white border-y border-gray-200 shadow-sm relative z-20 hidden md:flex flex-col">
+          {/* Row 1: 6 brands */}
+          <div className="flex items-stretch border-b border-gray-100 h-[90px] w-full">
+            {[
+              { name: "Daikin", slug: "daikin", src: "/images/marques/logo-daikin-bleu-nuit.png" },
+              { name: "Mitsubishi Electric", slug: "mitsubishi-electric", src: "/images/marques/logo-mitsubishi-electric-bleu-nuit.png" },
+              { name: "Fujitsu", slug: "fujitsu", src: "/images/marques/logo-fujitsu-bleu-nuit.png" },
+              { name: "Gree", slug: "gree", src: "/images/marques/logo-gree-bleu-nuit.png" },
+              { name: "Panasonic", slug: "panasonic", src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Panasonic_logo.svg" },
+              { name: "LG", slug: "lg", src: "/images/marques/logo-lg-bleu-nuit.png" },
+            ].map((brand, i) => (
+              <Link 
+                key={brand.slug} 
+                href={`/thermopompes?brand=${brand.slug}`}
+                className={`flex-1 flex items-center justify-center px-4 py-4 hover:bg-gray-50 transition-colors ${i !== 5 ? 'border-r border-gray-100' : ''}`}
+                title={`Voir les thermopompes ${brand.name}`}
+              >
+                <div className="w-[140px] h-[40px] flex items-center justify-center">
+                  <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
+                </div>
+              </Link>
+            ))}
+          </div>
+          {/* Row 2: 7 brands */}
+          <div className="flex items-stretch h-[90px] w-full">
+            {[
+              { name: "Samsung", slug: "samsung", src: "/images/marques/logo-samsung-bleu-nuit.png" },
+              { name: "Tosot", slug: "tosot", src: "/images/marques/logo-tosot-bleu-nuit.png" },
+              { name: "Tempstar", slug: "tempstar", src: "https://upload.wikimedia.org/wikipedia/commons/5/52/Tempstar_Logo.svg" },
+              { name: "Lennox", slug: "lennox", src: "/images/marques/logo-lennox-bleu-nuit.png" },
+              { name: "Moovair", slug: "moovair", src: "/images/marques/logo-moovair-bleu-nuit.png" },
+              { name: "Mainline", slug: "mainline", src: "/images/marques/logo-mainline-bleu-nuit.png" },
+              { name: "Haier", slug: "haier", src: "/images/marques/logo-haier-bleu-nuit.png" },
+            ].map((brand, i) => (
+              <Link 
+                key={brand.slug} 
+                href={`/thermopompes?brand=${brand.slug}`}
+                className={`flex-1 flex items-center justify-center px-4 py-4 hover:bg-gray-50 transition-colors ${i !== 6 ? 'border-r border-gray-100' : ''}`}
+                title={`Voir les thermopompes ${brand.name}`}
+              >
+                <div className="w-[140px] h-[40px] flex items-center justify-center">
+                  <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
+                </div>
+              </Link>
+            ))}
+          </div>
+      </div>
+      
+      {/* Mobile Brands Grid (visible only on small screens) */}
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 mt-6 md:hidden">
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+          {[
+            { name: "Daikin", slug: "daikin", src: "/images/marques/logo-daikin-bleu-nuit.png" },
+            { name: "Mitsubishi", slug: "mitsubishi-electric", src: "/images/marques/logo-mitsubishi-electric-bleu-nuit.png" },
+            { name: "Fujitsu", slug: "fujitsu", src: "/images/marques/logo-fujitsu-bleu-nuit.png" },
+            { name: "Gree", slug: "gree", src: "/images/marques/logo-gree-bleu-nuit.png" },
+            { name: "Panasonic", slug: "panasonic", src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Panasonic_logo.svg" },
+            { name: "LG", slug: "lg", src: "/images/marques/logo-lg-bleu-nuit.png" },
+            { name: "Samsung", slug: "samsung", src: "/images/marques/logo-samsung-bleu-nuit.png" },
+            { name: "Tosot", slug: "tosot", src: "/images/marques/logo-tosot-bleu-nuit.png" },
+          ].map((brand) => (
+            <Link 
+              key={brand.slug} 
+              href={`/thermopompes?brand=${brand.slug}`}
+              className="bg-white border border-gray-200 rounded-md p-3 flex items-center justify-center h-[55px] hover:bg-gray-50 transition-colors"
+            >
+              <div className="w-full h-full flex items-center justify-center">
+                <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 
@@ -181,7 +274,12 @@ export default async function ThermopompesPage({
 
             {/* Grid */}
             {resultCount > 0 ? (
-              <CompareSelection products={products} />
+              <div className="flex flex-col gap-10">
+                <CompareSelection products={products} />
+                {totalPages > 1 && (
+                  <CataloguePagination page={page} totalPages={totalPages} />
+                )}
+              </div>
             ) : (
               <CatalogueEmpty hasFilters={hasActiveFilters} />
             )}
@@ -191,3 +289,4 @@ export default async function ThermopompesPage({
     </main>
   );
 }
+

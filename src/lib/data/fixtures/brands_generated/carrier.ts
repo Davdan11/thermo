@@ -39,7 +39,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37M Series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-37m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 45M Series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-45m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MP-series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38mp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MAR-series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38mar-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC Series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MG-series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_carrierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38M series | 38MG-series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38m-series-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Infinity 23 VS Heat Pump de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-infinity-23-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MH-series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38mh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Infinity 21 VS Cold Climate Heat Pump de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-infinity-21-vs-cold-climate-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série INFINITY 24 HP with GREENSPEED INTELLIGENCE de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-infinity-24-hp-with-greenspeed-intelligence.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB036HDS3-1 de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-37vmb036hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB030HDS3-1 de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-37vmb030hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB048HDS3-1 de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-37vmb048hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB060HDS3-1 de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-37vmb060hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_carrierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38VMB036HDS3-1* de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38vmb036hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5M Series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-d5m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_carrierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MV-series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38mv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCS Series de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-dlcs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -464,7 +464,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38Mseries de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-38mseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_carrierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de Carrier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/carrier-carrier-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

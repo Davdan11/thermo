@@ -8,7 +8,7 @@ export const brand_kanarticDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Kanartic",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_kanarticDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KEOS series de Kanartic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kanartic-kanartic-keos-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

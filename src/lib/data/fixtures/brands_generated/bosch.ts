@@ -39,7 +39,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BMS500 de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-bms500.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BMS Series de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-bms-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BM Series de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-bm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IDS Edge de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-ids-edge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IDS Premium LGWP de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-ids-premium-lgwp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IDS Ultra de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-ids-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IDP Premium LGWP de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-idp-premium-lgwp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IDS Light-LGWP de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-ids-light-lgwp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_boschDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IDP Plus LGWP de Bosch",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bosch-bosch-idp-plus-lgwp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

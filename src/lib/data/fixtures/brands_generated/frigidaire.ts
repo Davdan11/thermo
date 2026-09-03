@@ -39,7 +39,7 @@ export const brand_frigidaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de Frigidaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/frigidaire-frigidaire-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_frigidaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Side Discharge de Frigidaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/frigidaire-frigidaire-ultra-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_frigidaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série FRIGIDAIRE FSH4BF SERIES de Frigidaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/frigidaire-frigidaire-frigidaire-fsh4bf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

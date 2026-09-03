@@ -92,14 +92,14 @@ export function Header() {
             <Link
               href="/"
               className="shrink-0"
-              aria-label="ThermopompesÀVendre.ca — Accueil"
+              aria-label="Thermopompe A Vendre.ca — Accueil"
               style={{ textDecoration: "none" }}
             >
-              <div style={{ lineHeight: 1.1 }}>
-                <p style={{ color: "#0b1b24", fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>Thermopompes</p>
-                <p style={{ color: "#0b1b24", fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>À Vendre</p>
-                <div style={{ width: 24, height: 2, backgroundColor: "#e54b17", marginTop: 4 }} />
-              </div>
+              <img 
+                src="/images/HEADERLOGO.png" 
+                alt="Thermopompes A Vendre" 
+                style={{ height: 72, width: "auto", display: "block" }}
+              />
             </Link>
 
             {/* ── Desktop Navigation ── */}
@@ -133,23 +133,14 @@ export function Header() {
               <div className="hidden sm:block">
                 <Link
                   href="/trouver-ma-thermopompe"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
-                    backgroundColor: "#e54b17",
-                    color: "#fff",
-                    fontWeight: 700,
-                    fontSize: 14,
-                    padding: "10px 20px",
-                    textDecoration: "none",
-                    whiteSpace: "nowrap",
-                  }}
+                  className="group inline-flex items-center gap-3 bg-[#e54b17] text-white font-semibold text-[15px] pl-5 pr-1.5 py-1.5 rounded-full no-underline whitespace-nowrap transition-all duration-300 hover:bg-[#d44315] hover:shadow-md"
                 >
                   Trouver ma thermopompe
-                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
+                  <div className="flex items-center justify-center bg-white text-[#e54b17] rounded-full w-8 h-8 transition-transform duration-300 group-hover:scale-110">
+                    <svg className="transition-transform duration-300 group-hover:translate-x-0.5" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </Link>
               </div>
 
@@ -207,13 +198,18 @@ export function Header() {
             </nav>
 
             <div className="mt-6 pt-6 border-t border-border">
-              <Link
-                href="/trouver-ma-thermopompe"
-                onClick={closeMenu}
-                style={{ display: "block", textAlign: "center", backgroundColor: "#e54b17", color: "#fff", fontWeight: 700, fontSize: 15, padding: "14px 24px", textDecoration: "none" }}
-              >
-                Trouver ma thermopompe
-              </Link>
+                <Link
+                  href="/trouver-ma-thermopompe"
+                  onClick={closeMenu}
+                  className="group flex items-center justify-between bg-[#e54b17] text-white font-semibold text-[16px] pl-6 pr-2 py-2 rounded-full no-underline transition-all duration-300 hover:bg-[#d44315] hover:shadow-md"
+                >
+                  Trouver ma thermopompe
+                  <div className="flex items-center justify-center bg-white text-[#e54b17] rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110">
+                    <svg className="transition-transform duration-300 group-hover:translate-x-0.5" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
             </div>
           </Container>
         </div>
@@ -221,3 +217,4 @@ export function Header() {
     </>
   );
 }
+

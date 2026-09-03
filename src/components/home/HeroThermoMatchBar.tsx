@@ -45,7 +45,7 @@ export function HeroThermoMatchBar() {
         {/* DESKTOP: horizontal bar, md+ */}
         <div
           className="hidden md:flex items-center"
-          style={{ backgroundColor: "#0d1f2d", border: "1px solid rgba(255,255,255,0.18)", width: "100%" }}
+          style={{ backgroundColor: "#0d1f2d", border: "1px solid rgba(255,255,255,0.18)", width: "100%", borderRadius: 12, overflow: "hidden" }}
         >
           {/* Logo block */}
           <div className="flex-1 flex flex-col justify-center items-center py-2 relative h-full">
@@ -161,12 +161,18 @@ export function HeroThermoMatchBar() {
 
       </form>
 
-      {/* Trust badges */}
-      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "6px 0", marginTop: 12 }}>
-        {["Toutes les grandes marques", "Donnees techniques expliquees", "Aides verifiees", "Installation prise en charge"].map((label, i) => (
-          <div key={label} style={{ display: "flex", alignItems: "center" }}>
-            {i > 0 && <span style={{ color: "rgba(255,255,255,0.2)", margin: "0 10px", fontSize: 12 }}>.</span>}
-            <span style={{ color: "rgba(255,255,255,0.4)", fontSize: 12, fontWeight: 500 }}>{label}</span>
+      {/* Trust badges — centered with icons */}
+      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "6px 0", marginTop: 16 }}>
+        {[
+          { label: "Toutes les grandes marques", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> },
+          { label: "Données techniques expliquées", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> },
+          { label: "Aides vérifiées", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> },
+          { label: "Installation prise en charge", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> },
+        ].map((item, i) => (
+          <div key={item.label} style={{ display: "flex", alignItems: "center" }}>
+            {i > 0 && <span style={{ color: "rgba(255,255,255,0.25)", margin: "0 14px", fontSize: 6 }}>{"\u25CF"}</span>}
+            {item.icon}
+            <span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, fontWeight: 500, marginLeft: 6 }}>{item.label}</span>
           </div>
         ))}
       </div>

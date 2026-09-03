@@ -8,7 +8,7 @@ export const brand_turcotteDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour TURCOTTE",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_turcotteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-pro de TURCOTTE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/turcotte-turcotte-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_outesDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour OUTES",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_outesDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32 18 Series de OUTES",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/outes-outes-r32-18-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

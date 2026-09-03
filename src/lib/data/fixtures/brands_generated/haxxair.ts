@@ -39,7 +39,7 @@ export const brand_haxxairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi UNI de HAXXAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haxxair-haxxair-hi-uni.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_haxxairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi MULTI Xtreme de HAXXAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haxxair-haxxair-hi-multi-xtreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_haxxairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra de HAXXAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haxxair-haxxair-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_haxxairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi ULTRA HD de HAXXAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haxxair-haxxair-hi-ultra-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_haxxairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra-Coil de HAXXAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haxxair-haxxair-ultra-coil.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

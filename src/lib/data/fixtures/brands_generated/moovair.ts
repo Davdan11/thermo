@@ -39,7 +39,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSH Series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-msh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DMB series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-dmb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DM-series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-dm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SHC Series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-shc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DMA Series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-dma-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MXH Series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-mxh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DMA12 series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-dma12-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DMC series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-dmc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_moovairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CUB series de MOOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/moovair-moovair-cub-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

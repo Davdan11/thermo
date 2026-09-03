@@ -6,7 +6,7 @@ export const bryantDataset: BrandDataset = {
     slug: "bryant",
     name: "Bryant",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: true,
+    activeInQuebec: false,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",

@@ -8,7 +8,7 @@ export const brand_kwiikDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Kwiik",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_kwiikDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de Kwiik",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kwiik-kwiik-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

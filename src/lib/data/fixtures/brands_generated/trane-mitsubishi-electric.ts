@@ -39,7 +39,7 @@ export const brand_trane_mitsubishi_electricDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série P-Series de Trane / Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-mitsubishi-electric-trane-mitsubishi-electric-p-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_trane_mitsubishi_electricDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M-Series de Trane / Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-mitsubishi-electric-trane-mitsubishi-electric-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_trane_mitsubishi_electricDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NV-Series de Trane / Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-mitsubishi-electric-trane-mitsubishi-electric-nv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

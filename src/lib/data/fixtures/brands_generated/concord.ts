@@ -8,7 +8,7 @@ export const brand_concordDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Concord",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_concordDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4DH SERIES de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-4dh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_concordDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4DHP series de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-4dhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP19V SERIES de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-7hp19v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP19V SERIES | 7HP19V Series de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-7hp19v-series-7hp19v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP18V SERIES de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-4hp18v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_concordDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 7SCP18V Series de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-7scp18v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_concordDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 7SHP15V Series de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-7shp15v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-4hp17l.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L SERIES de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-4hp17l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17 SERIES de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-4hp17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Series de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Seies | 7HP14F Series de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-7hp14f-seies-7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_concordDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Seies de Concord",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/concord-concord-7hp14f-seies.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

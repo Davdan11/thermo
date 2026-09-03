@@ -8,7 +8,7 @@ export const brand_xtronDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour XTRON",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_xtronDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série C-Series de XTRON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/xtron-xtron-c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

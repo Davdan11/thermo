@@ -56,7 +56,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série C28 Series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-c28-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4C22 Series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-4c22-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série C25 Series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-c25-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_canairDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série C22 Series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-c22-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série C23 Series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-c23-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4CDH Series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-4cdh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CDH series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-cdh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAC series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-mac-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_canairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4CD Series de CanAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/canair-canair-4cd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

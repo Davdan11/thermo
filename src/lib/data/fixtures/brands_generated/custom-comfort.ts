@@ -8,7 +8,7 @@ export const brand_custom_comfortDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Custom Comfort",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_custom_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CCO Series de Custom Comfort",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/custom-comfort-custom-comfort-cco-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_custom_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série COOX Series de Custom Comfort",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/custom-comfort-custom-comfort-coox-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_custom_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CCOX Series de Custom Comfort",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/custom-comfort-custom-comfort-ccox-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

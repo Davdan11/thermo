@@ -8,7 +8,7 @@ export const brand_american_standardDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour American Standard",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38 Series de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-38-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 25 Series de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-25-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PLATINUM 20 de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-20.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PLATINUM 20 | XV20I de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-20-xv20i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV20I de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-xv20i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 23 MZ Series de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-23-mz-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Platinum 19 de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-19.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F Series de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PLATINUM 18 de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-18.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV18I de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-xv18i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PLATINUM 18 | XV18I de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-18-xv18i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PLATINUM 18 | PLATINUM XV | XV18I de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-18-platinum-xv-xv18i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PLATINUM 18 | Platinum 18 | XV18I de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-18-platinum-18-xv18i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PLATINUM 17 | Platinum 17 de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-platinum-17-platinum-17.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_american_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série GOLD 17 de American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/american-standard-american-standard-gold-17.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

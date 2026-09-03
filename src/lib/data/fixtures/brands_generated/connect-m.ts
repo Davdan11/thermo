@@ -8,7 +8,7 @@ export const brand_connect_mDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Connect M",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_connect_mDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CNTM Series de Connect M",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/connect-m-connect-m-cntm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

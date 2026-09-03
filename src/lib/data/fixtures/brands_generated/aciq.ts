@@ -8,7 +8,7 @@ export const brand_aciqDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ACIQ",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-aciq.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ Series de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-aciq-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ES Series de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-es-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 23 VS Heat Pump de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-deluxe-23-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Extreme Heat de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-extreme-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 20 VS Heat Pump de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-deluxe-20-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_aciqDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Extreme Heat Inverter Rooftop de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-extreme-heat-inverter-rooftop.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_aciqDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Unitary Condensing Unit de ACIQ",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aciq-aciq-ultra-heat-unitary-condensing-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_allied_commercialDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ALLIED COMMERCIAL",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_allied_commercialDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série E-SERIES de ALLIED COMMERCIAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/allied-commercial-allied-commercial-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

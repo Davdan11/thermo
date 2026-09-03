@@ -39,7 +39,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ULTIMA de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-ultima.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HEATFINITY de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-heatfinity.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floor ceiling de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-floor-ceiling.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 360°air discharge cassette unit de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-360air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série All MATCH de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-all-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Console de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-console.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Charmo de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-charmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ducted de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-ducted.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série One-way air discharge cassette unit de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-one-way-air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MULTI HEAT de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-multi-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MultiHeat de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-multiheat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CENTURION de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-centurion.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi-PRO HD de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-hi-pro-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FLEXX R32 de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-flexx-r32.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Rooftop Series de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-ultra-heat-rooftop-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_willisDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FLEXX High-efficiency Series de Willis",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/willis-willis-flexx-high-efficiency-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

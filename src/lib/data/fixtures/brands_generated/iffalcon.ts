@@ -8,7 +8,7 @@ export const brand_iffalconDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour iFFALCON",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_iffalconDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série free matcht 24S R32 de iFFALCON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/iffalcon-iffalcon-free-matcht-24s-r32.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_iffalconDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BreezeIN R32 23S de iFFALCON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/iffalcon-iffalcon-breezein-r32-23s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_emericDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Emeric",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_emericDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32 18 Series de Emeric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/emeric-emeric-r32-18-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -39,7 +39,7 @@ export const brand_coleman_by_johnson_controlsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série X series de COLEMAN BY JOHNSON CONTROLS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coleman-by-johnson-controls-coleman-by-johnson-controls-x-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

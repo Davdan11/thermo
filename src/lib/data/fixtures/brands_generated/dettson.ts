@@ -8,7 +8,7 @@ export const brand_dettsonDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour DETTSON",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_dettsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EVD series de DETTSON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/dettson-dettson-evd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_dettsonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHD series de DETTSON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/dettson-dettson-mhd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

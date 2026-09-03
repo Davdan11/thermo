@@ -8,7 +8,7 @@ export const brand_cooperhunterDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Cooper&Hunter",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_cooperhunterDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CH series de Cooper&Hunter",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/cooperhunter-cooperhunter-ch-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

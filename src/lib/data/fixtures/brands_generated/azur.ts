@@ -8,7 +8,7 @@ export const brand_azurDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AZUR",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_azurDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi MULTI Xtreme de AZUR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/azur-azur-hi-multi-xtreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_azurDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi ULTRA HD de AZUR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/azur-azur-hi-ultra-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

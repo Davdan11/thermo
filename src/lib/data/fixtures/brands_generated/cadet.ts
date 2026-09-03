@@ -8,7 +8,7 @@ export const brand_cadetDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Cadet",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_cadetDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 500 Series de Cadet",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/cadet-cadet-500-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

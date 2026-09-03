@@ -39,7 +39,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Pro de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-floating-air-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Premier de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-premier.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pro de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Pro | Floating Air Pro X Multi-Zone de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-floating-air-pro-floating-air-pro-x-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Floating  Air Select de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-floating-air-select.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série K SERIES de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-k-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F - SERIES PLUS de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-f-series-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Breeze Select de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-breeze-select.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Breeze de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-breeze.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F - SERIES PLUS | F Series de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-f-series-plus-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série VERSUS de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXYC de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-rhpxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXZS de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-rhpxzs.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RDFXYC de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-rdfxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_friedrichDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série F Series | F-Series de Friedrich",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/friedrich-friedrich-f-series-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

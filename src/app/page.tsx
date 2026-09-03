@@ -3,9 +3,10 @@ import Image from "next/image";
 import { HeroThermoMatchBar } from "@/components/home/HeroThermoMatchBar";
 import { CompareSectionAnimated } from "@/components/home/CompareSectionAnimated";
 import { ModelesADecouvrir } from "@/components/home/ModelesADecouvrir";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 /* ─────────────────────────────────────────────────────────────────────────
-   HOMEPAGE — ThermopompesÀVendre.ca
+   HOMEPAGE — Thermopompe A Vendre.ca
    Reproduced from the design mockup.
    All colours are inlined (hex) so they survive any CSS-variable failure.
 ───────────────────────────────────────────────────────────────────────────*/
@@ -16,7 +17,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           HERO — full-width dark background with winter house photo
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ position: "relative", backgroundColor: "#0b1b24", display: "flex", flexDirection: "column" }} className="min-h-[480px] md:min-h-[600px]">
+      <section style={{ position: "relative", backgroundColor: "#0b1b24", display: "flex", flexDirection: "column" }} className="min-h-[85vh] lg:min-h-[75vh]">
         {/* Background photo — right side, fading to dark on left */}
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
           <Image
@@ -33,15 +34,18 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 w-full flex-1 flex flex-col justify-center max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="pt-20 pb-10 md:pt-24 md:pb-20">
-            <h1 style={{ color: "#fff", fontSize: "clamp(30px, 4.5vw, 62px)", fontWeight: 800, lineHeight: 1.06, letterSpacing: "-0.025em", margin: "0 0 20px 0", maxWidth: 560 }}>
-              La bonne<br />thermopompe.<br />
-              Pour votre maison.<br />
-              Pour le Québec.
-            </h1>
-            <p className="text-sm sm:text-base hidden sm:block" style={{ color: "rgba(255,255,255,0.62)", lineHeight: 1.6, maxWidth: 520, marginBottom: 36 }}>
-              Comparez les modèles selon votre région, votre maison et votre budget. Des données vérifiées, pas de la publicité.
-            </p>
+          <div className="pt-20 pb-10 md:pt-32 md:pb-24">
+            <FadeIn delay={100}>
+              <h1 style={{ color: "#fff", fontSize: "clamp(36px, 5vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", margin: "0 0 24px 0", maxWidth: 720, fontStyle: "italic" }}>
+                Trouvez la thermopompe qui convient vraiment à votre maison.
+              </h1>
+            </FadeIn>
+            
+            <FadeIn delay={300}>
+              <p className="text-sm sm:text-lg hidden sm:block" style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.6, maxWidth: 540, marginBottom: 48 }}>
+                Comparez les modèles selon votre région, votre maison et votre budget. Des données vérifiées, pas de la publicité.
+              </p>
+            </FadeIn>
 
             {/* ThermoMatch bar — includes trust badges below */}
             <HeroThermoMatchBar />
@@ -52,36 +56,41 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           MAGASINEZ — 3 type cards (Murales / Multizones / Centrales)
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#fff", padding: "48px 0 40px" }} className="sm:py-16">
+      <section style={{ backgroundColor: "#fff" }} className="py-16 sm:py-24">
         <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 lg:gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-24 items-center">
             {/* Left label */}
-            <div style={{ maxWidth: 200 }}>
-              <p style={{ color: "#172126", fontSize: "clamp(20px,2vw,26px)", fontWeight: 700, lineHeight: 1.25, margin: 0 }}>
-                Magasinez avec<br />les bonnes<br />informations.
-              </p>
-            </div>
+            <FadeIn direction="left">
+              <div style={{ maxWidth: 280 }}>
+                <p style={{ color: "#172126", fontSize: "clamp(24px,2.5vw,32px)", fontWeight: 800, lineHeight: 1.2, margin: 0, letterSpacing: "-0.01em" }}>
+                  Magasinez avec<br />les bonnes<br />informations.
+                </p>
+                <div className="w-10 h-1 bg-[#e54b17] mt-6 rounded-full" />
+              </div>
+            </FadeIn>
             {/* Right 3 cards */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
                 { label: "Murales", href: "/thermopompes?type=murale", src: "/images/categorie-murale-daikin-hd.png" },
                 { label: "Multizones", href: "/thermopompes?type=multizone", src: "/images/categorie-multizone-mitsubishi-electric-hd.png" },
                 { label: "Centrales", href: "/thermopompes?type=centrale", src: "/images/categorie-centrale-samsung-hd.png" },
-              ].map((t) => (
-                <Link key={t.label} href={t.href} className="group" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#0b1b24", borderRadius: 6, overflow: "hidden", position: "relative", aspectRatio: "4/3", display: "flex", alignItems: "flex-end" }}>
-                    <Image
-                      src={t.src}
-                      alt={t.label}
-                      fill
-                      className="transition-transform duration-500 group-hover:scale-105"
-                      style={{ objectFit: "cover" }}
-                    />
-                    <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1, padding: "12px 16px", background: "linear-gradient(to top, rgba(11,27,36,1) 0%, transparent 100%)" }}>
-                      <p className="text-white group-hover:text-[#e54b17] transition-colors duration-300" style={{ fontWeight: 700, fontSize: 16, margin: 0 }}>{t.label}</p>
+              ].map((t, i) => (
+                <FadeIn key={t.label} delay={150 * (i + 1)}>
+                  <Link href={t.href} className="group block" style={{ textDecoration: "none" }}>
+                    <div className="bg-[#0b1b24] rounded-2xl overflow-hidden relative aspect-[4/3] flex items-end shadow-lg hover:shadow-xl transition-all duration-300">
+                      <Image
+                        src={t.src}
+                        alt={t.label}
+                        fill
+                        className="transition-transform duration-700 group-hover:scale-105"
+                        style={{ objectFit: "cover" }}
+                      />
+                      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1, padding: "20px", background: "linear-gradient(to top, rgba(11,27,36,0.9) 0%, transparent 100%)" }}>
+                        <p className="text-white group-hover:text-[#e54b17] transition-colors duration-300" style={{ fontWeight: 800, fontSize: 18, margin: 0 }}>{t.label}</p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </FadeIn>
               ))}
             </div>
           </div>
@@ -94,20 +103,22 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           TOUTES LES GRANDES MARQUES — brand logos grid
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#fff", borderTop: "1px solid #f0ede8" }} className="py-16 sm:py-20">
+      <section style={{ backgroundColor: "#fff", borderTop: "1px solid #f0ede8" }} className="py-12 sm:py-16">
         <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-24 items-center">
             {/* Left */}
-            <div>
-              <p style={{ color: "#172126", fontSize: "clamp(22px,2.2vw,30px)", fontWeight: 700, lineHeight: 1.3, margin: "0 0 18px" }}>
-                Toutes les grandes<br />marques.<br />Un seul endroit<br />pour les comparer.
-              </p>
-              <div style={{ width: 40, height: 3, backgroundColor: "#e54b17" }} />
-            </div>
+            <FadeIn direction="left">
+              <div>
+                <p style={{ color: "#172126", fontSize: "clamp(24px,2.5vw,32px)", fontWeight: 800, lineHeight: 1.25, margin: "0 0 24px", letterSpacing: "-0.01em", fontStyle: "italic" }}>
+                  Toutes les grandes<br />marques.<br />Un seul endroit<br />pour les comparer.
+                </p>
+                <div style={{ width: 40, height: 4, backgroundColor: "#e54b17", borderRadius: 9999 }} />
+              </div>
+            </FadeIn>
 
             {/* Right: logos 2 rows × 4 cols + cta */}
             <div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-8 sm:gap-x-12 mb-10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8 sm:gap-x-12 mb-12">
                 {[
                   { src: "/images/marques/logo-daikin-bleu-nuit-cropped.png", alt: "Daikin", href: "/marques/daikin" },
                   { src: "/images/marques/logo-mitsubishi-electric-bleu-nuit-cropped.png", alt: "Mitsubishi Electric", href: "/marques/mitsubishi-electric" },
@@ -117,179 +128,256 @@ export default function HomePage() {
                   { src: "/images/marques/logo-lg-light-cropped.png", alt: "LG", href: "/marques/lg" },
                   { src: "/images/marques/logo-samsung-bleu-nuit-cropped.png", alt: "Samsung", href: "/marques/samsung" },
                   { src: "/images/marques/logo-moovair-light-cropped.png", alt: "Moovair", href: "/marques/moovair" },
-                ].map((brand) => (
-                  <Link key={brand.alt} href={brand.href} className="transition-all duration-300 hover:scale-105 hover:opacity-80" style={{ textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", height: 80 }}>
-                    <Image
-                      src={brand.src}
-                      alt={brand.alt}
-                      width={220}
-                      height={70}
-                      style={{ objectFit: "contain", maxHeight: 70, maxWidth: "100%", width: "auto" }}
-                    />
-                  </Link>
+                ].map((brand, i) => (
+                  <FadeIn key={brand.alt} delay={50 * i} direction="none">
+                    <Link href={brand.href} className="transition-all duration-300 hover:scale-110 hover:opacity-100 opacity-70" style={{ textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", height: 80 }}>
+                      <Image
+                        src={brand.src}
+                        alt={brand.alt}
+                        width={220}
+                        height={70}
+                        style={{ objectFit: "contain", maxHeight: 60, maxWidth: "100%", width: "auto" }}
+                      />
+                    </Link>
+                  </FadeIn>
                 ))}
               </div>
-              <Link href="/marques" className="transition-colors duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17]" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600, fontSize: 15, padding: "12px 24px", borderRadius: 4, textDecoration: "none" }}>
-                Voir toutes les marques
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-              </Link>
+              <FadeIn delay={400} direction="up">
+                <Link href="/marques" className="transition-all duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17]" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600, fontSize: 15, padding: "12px 24px", borderRadius: 9999, textDecoration: "none" }}>
+                  Voir toutes les marques
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </Link>
+              </FadeIn>
             </div>
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          THERMOMATCH — app section with steps + mockup screenshots
+          THERMOMATCH — dark section with laptop mockup + 3 steps
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#f7f5f0" }} className="py-12 sm:py-16 lg:py-[72px]">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-          {/* Left: mockup screenshots — hidden on mobile, visible md+ */}
-          <div style={{ position: "relative", display: "flex", gap: 16 }} className="hidden md:flex">
-            {/* Primary mockup card */}
-            <div style={{ flex: 1, backgroundColor: "#fff", border: "1px solid #e5e5e5", borderRadius: 8, overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.08)" }}>
-              <div style={{ backgroundColor: "#0b1b24", padding: "8px 12px", display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ fontSize: 9, fontWeight: 900, color: "#e54b17", letterSpacing: "0.12em", textTransform: "uppercase" }}>ThermoMatch</span>
-              </div>
-              <div style={{ padding: 16 }}>
-                <p style={{ fontSize: 10, fontWeight: 700, color: "#172126", marginBottom: 12 }}>Thermo Match</p>
-                <div style={{ backgroundColor: "#f0ede8", borderRadius: 4, padding: "10px 12px", marginBottom: 10 }}>
-                  <p style={{ fontSize: 9, color: "#6b7280", margin: "0 0 4px" }}>Votre maison</p>
-                  <div style={{ height: 6, backgroundColor: "#e5e5e5", borderRadius: 2 }}><div style={{ height: "100%", width: "70%", backgroundColor: "#e54b17", borderRadius: 2 }} /></div>
-                </div>
-                <div style={{ backgroundColor: "#f0ede8", borderRadius: 4, padding: "10px 12px", marginBottom: 10 }}>
-                  <p style={{ fontSize: 9, color: "#6b7280", margin: "0 0 4px" }}>Vos critères</p>
-                  <div style={{ height: 6, backgroundColor: "#e5e5e5", borderRadius: 2 }}><div style={{ height: "100%", width: "85%", backgroundColor: "#172126", borderRadius: 2 }} /></div>
-                </div>
-                <div style={{ backgroundColor: "#f0ede8", borderRadius: 4, padding: "10px 12px" }}>
-                  <p style={{ fontSize: 9, color: "#6b7280", margin: "0 0 4px" }}>Votre budget</p>
-                  <div style={{ height: 6, backgroundColor: "#e5e5e5", borderRadius: 2 }}><div style={{ height: "100%", width: "55%", backgroundColor: "#172126", borderRadius: 2 }} /></div>
-                </div>
-              </div>
-            </div>
+      <section style={{ backgroundColor: "#0b1b24", overflow: "hidden", position: "relative" }} className="py-10 sm:py-14 lg:py-16">
+        {/* Laptop bleeds to the left edge on desktop */}
+        <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[58%] z-0">
+          <FadeIn direction="left" delay={200} className="h-full flex items-center justify-end">
+            <Image
+              src="/images/thermomatch/thermomatch-hero-device-transparent.png"
+              alt="ThermoMatch — Trouvez la bonne thermopompe"
+              width={1000}
+              height={676}
+              style={{ width: "110%", maxWidth: 920, height: "auto", objectFit: "contain", display: "block", marginLeft: "-5%" }}
+              priority
+            />
+          </FadeIn>
+        </div>
 
-            {/* Secondary smaller card */}
-            <div style={{ width: 120, backgroundColor: "#fff", border: "1px solid #e5e5e5", borderRadius: 8, overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.08)", alignSelf: "flex-start", marginTop: 40 }}>
-              <div style={{ position: "relative", height: 80 }}>
-                <Image src="/images/thermomatch/thermomatch-recommendation-home.png" alt="Maison" fill style={{ objectFit: "cover" }} />
-              </div>
-              <div style={{ padding: 10 }}>
-                <p style={{ fontSize: 9, fontWeight: 600, color: "#172126", margin: "0 0 4px" }}>Résultats</p>
-                <p style={{ fontSize: 8, color: "#6b7280", margin: 0 }}>3 modèles recommandés</p>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[58%_1fr] gap-8 lg:gap-8 items-center">
+            {/* Left: laptop mockup — mobile only (desktop uses absolute) */}
+            <FadeIn direction="left" delay={200} className="lg:hidden">
+              <Image
+                src="/images/thermomatch/thermomatch-hero-device-transparent.png"
+                alt="ThermoMatch — Trouvez la bonne thermopompe"
+                width={800}
+                height={540}
+                style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
+                priority
+              />
+            </FadeIn>
 
-          {/* Right: steps */}
-          <div>
-            <p style={{ color: "#172126", fontSize: "clamp(22px,2.5vw,32px)", fontWeight: 700, lineHeight: 1.2, marginBottom: 8 }}>
-              Votre maison. Vos critères.<br />Les bonnes options.
-            </p>
-            <p style={{ color: "#6b7280", fontSize: 15, lineHeight: 1.6, marginBottom: 36 }}>
-              Répondez à quelques questions — ThermoMatch identifie les systèmes qui correspondent à votre maison, votre région et vos priorités.
-            </p>
+            {/* Spacer for the absolute-positioned laptop on desktop */}
+            <div className="hidden lg:block" />
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 36 }}>
-              {[
-                { n: "1", title: "Dites-lui vos besoins", desc: "Superficie, chauffage actuel, région climatique et type de maison — les bases qui déterminent tout." },
-                { n: "2", title: "On évalue les options", desc: "Nous comparons les modèles disponibles selon vos critères, sans publicité et sans parti pris." },
-                { n: "3", title: "Choisissez votre modèle", desc: "Vous obtenez une liste courte, avec les données qui comptent pour décider en connaissance de cause." },
-              ].map((s) => (
-                <div key={s.n} style={{ display: "flex", gap: 16 }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", backgroundColor: "#e54b17", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <span style={{ color: "#fff", fontSize: 12, fontWeight: 800 }}>{s.n}</span>
-                  </div>
-                  <div>
-                    <p style={{ color: "#172126", fontWeight: 700, fontSize: 15, margin: "0 0 4px", lineHeight: 1.3 }}>{s.title}</p>
-                    <p style={{ color: "#6b7280", fontSize: 14, lineHeight: 1.55, margin: 0 }}>{s.desc}</p>
-                  </div>
+            {/* Right: title + steps */}
+            <FadeIn>
+              <div>
+                <h2 style={{ color: "#fff", fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 16, letterSpacing: "-0.01em" }}>
+                  Votre maison. Vos critères.<br />Les bonnes options.
+                </h2>
+                <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 15, lineHeight: 1.6, marginBottom: 36, maxWidth: 460 }}>
+                  Répondez à quelques questions — ThermoMatch identifie les systèmes qui correspondent à votre maison, votre région et vos priorités.
+                </p>
+
+                {/* 3 Steps — horizontal with connecting lines */}
+                <div className="flex flex-col sm:flex-row gap-6 sm:gap-0 mb-10">
+                  {[
+                    { n: "1", title: "Décrivez votre maison", desc: "Répondez à quelques questions sur votre logement et vos besoins." },
+                    { n: "2", title: "Comparez les options", desc: "Découvrez les modèles qui correspondent et comprenez les différences." },
+                    { n: "3", title: "Obtenez votre prix installé", desc: "Recevez une estimation personnalisée, installation comprise." },
+                  ].map((s, i) => (
+                    <div key={s.n} className="flex-1 flex flex-col items-start sm:items-center text-left sm:text-center relative">
+                      {/* Connecting line (between circles) */}
+                      {i < 2 && (
+                        <div className="hidden sm:block absolute top-[16px] left-[calc(50%+18px)] right-[calc(-50%+18px)] h-[2px] bg-[#1a2d3d]" />
+                      )}
+                      <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#e54b17", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginBottom: 12, position: "relative", zIndex: 2 }}>
+                        <span style={{ color: "#fff", fontSize: 13, fontWeight: 800 }}>{s.n}</span>
+                      </div>
+                      <p style={{ color: "#fff", fontWeight: 700, fontSize: 14, margin: "0 0 6px", lineHeight: 1.3 }}>{s.title}</p>
+                      <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 12, lineHeight: 1.5, margin: 0, maxWidth: 200 }}>{s.desc}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
 
-            <Link href="/trouver-ma-thermopompe" className="bg-[#e54b17] hover:bg-[#d44315] hover:-translate-y-0.5 transition-all duration-300" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#fff", fontWeight: 700, fontSize: 15, padding: "13px 24px", borderRadius: 4, textDecoration: "none", boxShadow: "0 4px 14px rgba(229,75,23,0.2)" }}>
-              Commencer ThermoMatch
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-            </Link>
+                <Link href="/trouver-ma-thermopompe" className="group flex items-center bg-[#e54b17] text-white font-semibold text-[18px] pl-8 pr-6 py-4 rounded-sm no-underline transition-all duration-300 hover:bg-[#d44315] hover:shadow-lg w-fit">
+                  Commencer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch™" className="inline-block h-[40px] ml-3 mr-1 object-contain brightness-0 invert" />
+                  <svg className="ml-2 transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </Link>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          LES AIDES FINANCIÈRES — dark section with unit photo + grant info
+          LES AIDES FINANCIÈRES — light section with unit photo + grant info
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#0b1b24" }} className="py-12 sm:py-16 lg:py-[72px]">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+      <section style={{ backgroundColor: "#f7f5f0", overflow: "hidden", position: "relative" }} className="py-12 sm:py-16 lg:py-20">
+        
+        {/* Right Background Image — bleeds to the right edge with gradient blend */}
+        <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%] z-0">
+          <div style={{ position: "relative", height: "100%", width: "100%" }}>
+            <Image src="/images/thermomatch/thermomatch-cold-climate-photo.png" alt="Thermopompe Mitsubishi Electric" fill style={{ objectFit: "cover", objectPosition: "center center" }} />
+            {/* Gradient blend from left (#f7f5f0) to transparent */}
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #f7f5f0 0%, #f7f5f0 5%, transparent 35%)", zIndex: 1 }} />
+          </div>
+        </div>
+
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
           {/* Left: text */}
           <div>
-            <p style={{ color: "#e54b17", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>LES AIDES FINANCIÈRES</p>
-            <h2 style={{ color: "#fff", fontSize: "clamp(24px,2.5vw,36px)", fontWeight: 700, lineHeight: 1.2, marginBottom: 16 }}>
-              Les aides financières,<br />enfin plus simples.
-            </h2>
-            <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 15, lineHeight: 1.65, marginBottom: 32 }}>
-              Nous vous guidons à travers les programmes d&apos;aide disponibles au Québec pour vous aider à maximiser votre remboursement.
-            </p>
+            <FadeIn direction="up">
+              <h2 style={{ color: "#172126", fontSize: "clamp(32px,4vw,48px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 24, letterSpacing: "-0.01em", fontStyle: "italic" }}>
+                Les aides financières,<br />enfin plus simples.
+              </h2>
+              <div style={{ width: 40, height: 3, backgroundColor: "#e54b17", marginBottom: 24 }} />
+              <p style={{ color: "#536873", fontSize: 16, lineHeight: 1.6, marginBottom: 40, maxWidth: 420 }}>
+                Nous vérifions pour vous les programmes d&apos;aide disponibles au Québec.
+              </p>
 
-            {/* Grant items */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
-              {[
-                "Programme Chauffez Vert",
-                "Rénoclimat — Transition énergétique",
-                "Aides municipales supplémentaires",
-              ].map((item) => (
-                <div key={item} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e54b17" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span style={{ color: "rgba(255,255,255,0.75)", fontSize: 14 }}>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <Link href="/subventions" className="bg-[#e54b17] hover:bg-[#d44315] hover:-translate-y-0.5 transition-all duration-300" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#fff", fontWeight: 700, fontSize: 15, padding: "13px 24px", borderRadius: 4, textDecoration: "none", boxShadow: "0 4px 14px rgba(229,75,23,0.2)" }}>
-              Profiter des programmes
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-            </Link>
-          </div>
-
-          {/* Right: photo + grant card overlay — hidden on mobile */}
-          <div style={{ position: "relative" }} className="hidden lg:block">
-            <div style={{ position: "relative", height: 380, borderRadius: 6, overflow: "hidden" }}>
-              <Image src="/images/thermomatch/thermomatch-cold-climate-photo.png" alt="Thermopompe extérieure en hiver" fill style={{ objectFit: "cover" }} />
-            </div>
-
-            {/* Floating card */}
-            <div style={{ position: "absolute", bottom: -16, left: -24, backgroundColor: "#fff", borderRadius: 8, padding: "20px 24px", boxShadow: "0 16px 48px rgba(0,0,0,0.3)", minWidth: 220 }}>
-              <p style={{ fontSize: 11, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 600, marginBottom: 4 }}>Exemple — Chauffez Vert</p>
-              <p style={{ fontSize: 28, fontWeight: 800, color: "#172126", margin: "0 0 12px", lineHeight: 1 }}>Jusqu&apos;à 5 720 $</p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                {[["Résidentiel", "jusqu&apos;à 5 000 $"], ["Locatif", "jusqu&apos;à 4 000 $"], ["Commercial", "jusqu&apos;à 7 000 $"]].map(([k, v]) => (
-                  <div key={k} style={{ display: "flex", justifyContent: "space-between", gap: 16 }}>
-                    <span style={{ fontSize: 12, color: "#6b7280" }} dangerouslySetInnerHTML={{ __html: k }} />
-                    <span style={{ fontSize: 12, fontWeight: 600, color: "#172126" }} dangerouslySetInnerHTML={{ __html: v }} />
+              {/* Grant items */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 32, marginBottom: 48 }}>
+                {[
+                  {
+                    title: "Programmes vérifiés",
+                    desc: "Données à jour et admissibilité claire.",
+                    icon: (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#172126" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M9 12l2 2 4-4" />
+                      </svg>
+                    )
+                  },
+                  {
+                    title: "Économies maximisées",
+                    desc: "Trouvez les aides qui s'appliquent à votre projet.",
+                    icon: (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#172126" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 1v22" />
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                      </svg>
+                    )
+                  },
+                  {
+                    title: "Moins de paperasse",
+                    desc: "On vous guide à chaque étape.",
+                    icon: (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#172126" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                        <path d="M9 14l2 2 4-4"/>
+                      </svg>
+                    )
+                  },
+                ].map((item) => (
+                  <div key={item.title} style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+                    <div className="mt-1" style={{ color: "#172126" }}>{item.icon}</div>
+                    <div>
+                      <p style={{ color: "#172126", fontSize: 16, fontWeight: 700, margin: "0 0 4px" }}>{item.title}</p>
+                      <p style={{ color: "#536873", fontSize: 14, margin: 0, lineHeight: 1.5, maxWidth: 300 }}>{item.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: 10, color: "#9ca3af", marginTop: 8, marginBottom: 0 }}>Montants indicatifs uniquement, vérifiez sur les sites officiels.</p>
-            </div>
+
+            </FadeIn>
+
+            <FadeIn delay={200}>
+              <Link href="/subventions" className="group flex items-center justify-between bg-[#e54b17] text-white font-semibold text-[15px] pl-6 pr-4 py-3 rounded-sm no-underline transition-all duration-300 hover:bg-[#d44315] hover:shadow-md w-fit">
+                Vérifier les subventions
+                <svg className="ml-4 transition-transform duration-300 group-hover:translate-x-1" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </Link>
+            </FadeIn>
           </div>
+
+          {/* Right: floating card ON TOP of the background image */}
+          <FadeIn direction="left" delay={300} className="relative flex justify-end items-center min-h-[400px]">
+            
+            {/* Mobile Image (shown only on mobile since desktop uses absolute bg) */}
+            <div className="block lg:hidden absolute inset-0 z-0 overflow-hidden rounded-lg">
+              <Image src="/images/thermomatch/thermomatch-cold-climate-photo.png" alt="Thermopompe Mitsubishi Electric" fill style={{ objectFit: "cover" }} className="opacity-30" />
+            </div>
+
+            {/* Floating card — positioned over the background image */}
+            <div style={{ backgroundColor: "rgba(253,252,250,0.97)", borderRadius: 12, padding: "32px", boxShadow: "0 24px 64px rgba(0,0,0,0.12)", width: "100%", maxWidth: 360, zIndex: 10, backdropFilter: "blur(8px)" }}>
+              <p style={{ fontSize: 12, color: "#172126", fontWeight: 600, marginBottom: 8 }}>Admissible à</p>
+              <p style={{ fontSize: 32, fontWeight: 800, color: "#172126", margin: "0 0 4px", lineHeight: 1.1 }}>Jusqu&apos;à 5 720 $</p>
+              <p style={{ fontSize: 13, color: "#536873", margin: "0 0 24px" }}>en aides financières</p>
+              
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
+                {[
+                  ["Rénoclimat", "Jusqu&apos;à 3 000 $"],
+                  ["LogisVert", "Jusqu&apos;à 2 000 $"],
+                  ["Hydro-Québec", "Jusqu&apos;à 720 $"]
+                ].map(([k, v]) => (
+                  <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      <span style={{ fontSize: 13, color: "#172126" }} dangerouslySetInnerHTML={{ __html: k }} />
+                    </div>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: "#172126" }} dangerouslySetInnerHTML={{ __html: v }} />
+                  </div>
+                ))}
+              </div>
+              
+              <div style={{ height: 1, backgroundColor: "#e5e5e5", marginBottom: 16 }} />
+              
+              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <p style={{ fontSize: 11, color: "#6b7280", margin: 0 }}>Montant estimé pour votre projet.</p>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
           COMPRENDRE AVANT DE CHOISIR — 3 editorial guide cards
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#fff" }} className="py-12 sm:py-16 lg:py-[72px]">
+      <section style={{ backgroundColor: "#fff" }} className="py-10 sm:py-14 lg:py-16">
         <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-            <div>
-              <p style={{ color: "#e54b17", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 10 }}>NOS GUIDES</p>
-              <h2 style={{ color: "#172126", fontSize: "clamp(22px,2.2vw,30px)", fontWeight: 700, margin: 0 }}>Comprendre avant de choisir.</h2>
+          <FadeIn direction="down">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+              <div>
+                <p style={{ color: "#e54b17", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>NOS GUIDES</p>
+                <h2 style={{ color: "#172126", fontSize: "clamp(26px,3vw,40px)", fontWeight: 800, margin: 0, letterSpacing: "-0.01em", fontStyle: "italic" }}>Comprendre avant de choisir.</h2>
+              </div>
+              <Link href="/guides" className="transition-all duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17] self-start sm:self-auto flex-shrink-0 bg-white shadow-sm hover:shadow-md" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700, fontSize: 15, padding: "12px 24px", borderRadius: 9999, textDecoration: "none" }}>
+                Voir les guides
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </Link>
             </div>
-            <Link href="/guides" className="transition-colors duration-300 border border-[#e5e5e5] hover:border-[#e54b17] text-[#172126] hover:text-[#e54b17] self-start sm:self-auto flex-shrink-0" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 600, fontSize: 14, padding: "10px 18px", borderRadius: 4, textDecoration: "none" }}>
-              Voir les guides
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-            </Link>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12">
             {[
               { title: "Quelle thermopompe choisir pour mon type de maison ?", cat: "Les bases", img: "/images/thermomatch/thermomatch-hero-winter-home.png", href: "/guides" },
               { title: "Murale, multizone : laquelle est vraiment rentable ?", cat: "Les fiches", img: "/images/thermomatch/thermomatch-recommendation-home.png", href: "/guides" },
@@ -311,36 +399,34 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          DE LA COMPARAISON À L'INSTALLATION — 4 étapes + outdoor photo
+          DE LA COMPARAISON À L'INSTALLATION — compact dark banner
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#f7f5f0" }} className="py-12 sm:py-16 lg:py-[72px]">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-          {/* Left: text + 4 steps */}
-          <div>
-            <p style={{ color: "#e54b17", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>COMMENT ÇA MARCHE</p>
-            <h2 style={{ color: "#172126", fontSize: "clamp(22px,2.2vw,30px)", fontWeight: 700, lineHeight: 1.25, marginBottom: 40 }}>
-              De la comparaison<br />à l&apos;installation.
-            </h2>
+      <section style={{ backgroundColor: "#0b1b24" }} className="py-8 sm:py-10">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
+            {/* Left: title */}
+            <div className="shrink-0 lg:border-r lg:border-[#1a2d3d] lg:pr-12">
+              <h2 style={{ color: "#fff", fontSize: "clamp(20px,2vw,26px)", fontWeight: 800, lineHeight: 1.25, fontStyle: "italic", margin: 0 }}>
+                De la comparaison<br />à l&apos;installation.
+              </h2>
+              <div style={{ width: 32, height: 3, backgroundColor: "#e54b17", marginTop: 12 }} />
+            </div>
 
-            <div className="grid grid-cols-2 gap-6 sm:gap-8">
+            {/* Right: 4 steps in a row */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 flex-1">
               {[
-                { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e54b17" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>, label: "Comparez", desc: "En un seul endroit, sans publicité" },
-                { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e54b17" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>, label: "Comparez", desc: "Les données techniques vérifiées" },
-                { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e54b17" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>, label: "Filtrez", desc: "Choisissez selon vos priorités" },
-                { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e54b17" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>, label: "Installez", desc: "Vérifiez les performances par grand froid" },
+                { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>, label: "Comprendre", desc: "On vous aide à bien cerner vos besoins et les options qui s'offrent à vous." },
+                { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>, label: "Comparer", desc: "Comparez les meilleurs modèles et obtenez un prix juste et transparent." },
+                { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>, label: "Planifier", desc: "Choisissez votre installateur et planifiez l'installation à votre convenance." },
+                { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>, label: "Installer", desc: "Installation professionnelle et service après-vente assuré." },
               ].map((s) => (
-                <div key={s.label + s.desc}>
-                  <div style={{ marginBottom: 10 }}>{s.icon}</div>
-                  <p style={{ color: "#172126", fontWeight: 700, fontSize: 15, margin: "0 0 4px" }}>{s.label}</p>
-                  <p style={{ color: "#6b7280", fontSize: 13, lineHeight: 1.5, margin: 0 }}>{s.desc}</p>
+                <div key={s.label}>
+                  <div style={{ marginBottom: 8 }}>{s.icon}</div>
+                  <p style={{ color: "#fff", fontWeight: 700, fontSize: 14, margin: "0 0 6px" }}>{s.label}</p>
+                  <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, lineHeight: 1.5, margin: 0 }}>{s.desc}</p>
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Right: outdoor unit photo — hidden on mobile */}
-          <div style={{ position: "relative", height: 420, borderRadius: 6, overflow: "hidden" }} className="hidden lg:block">
-            <Image src="/images/thermopompe-exterieure-neige.png" alt="Thermopompe extérieure dans la neige" fill style={{ objectFit: "cover" }} />
           </div>
         </div>
       </section>
@@ -348,23 +434,33 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════════════
           CTA BANNER — orange
       ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#e54b17", overflow: "hidden", position: "relative", minHeight: 160 }}>
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center" style={{ minHeight: 160 }}>
-          {/* Left: text + button */}
-          <div style={{ padding: "24px 0" }}>
-            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>Prêt à trouver la bonne thermopompe ?</p>
-            <h2 style={{ color: "#fff", fontSize: "clamp(24px,2.8vw,38px)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 18px", letterSpacing: "-0.02em" }}>
-              Démarrez par vos critères.<br />On s&apos;occupe du reste.
-            </h2>
-            <Link href="/trouver-ma-thermopompe" className="bg-[#0b1b24] hover:bg-[#172126] hover:-translate-y-0.5 transition-all duration-300" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#fff", fontWeight: 700, fontSize: 15, padding: "13px 24px", borderRadius: 4, textDecoration: "none", whiteSpace: "nowrap", boxShadow: "0 4px 14px rgba(0,0,0,0.25)" }}>
-              Commencer maintenant
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-            </Link>
+      <section style={{ backgroundColor: "#e54b17", overflow: "hidden", position: "relative" }} className="py-12 lg:py-16">
+        {/* Right: transparent thermopompe PNG — big and well positioned */}
+        <FadeIn delay={200} direction="left" className="hidden lg:block absolute right-[-80px] top-[-60px] bottom-[-60px] w-[85%] z-0">
+          <div style={{ position: "relative", height: "100%", width: "100%" }}>
+            <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="Thermopompe" fill style={{ objectFit: "contain", objectPosition: "right bottom" }} />
           </div>
+        </FadeIn>
 
-          {/* Right: huge photo filling the whole right side */}
-          <div className="hidden lg:block" style={{ position: "relative", height: "100%", minHeight: 160 }}>
-            <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="Thermopompe" fill style={{ objectFit: "contain", objectPosition: "center right" }} />
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left: text + button */}
+          <FadeIn direction="up">
+            <div style={{ padding: "24px 0" }}>
+              <p style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, fontWeight: 700, marginBottom: 12, letterSpacing: "0.1em", textTransform: "uppercase" }}>Prêt à trouver la bonne thermopompe ?</p>
+              <h2 style={{ color: "#fff", fontSize: "clamp(32px,4vw,52px)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 32px", letterSpacing: "-0.02em", fontStyle: "italic" }}>
+                Démarrez par vos critères.<br />On s&apos;occupe du reste.
+              </h2>
+              <Link href="/trouver-ma-thermopompe" className="group flex items-center justify-between bg-[#0b1b24] text-white font-semibold text-[16px] pl-6 pr-2 py-2 rounded-full no-underline transition-all duration-300 hover:bg-[#172126] hover:shadow-2xl w-fit">
+                Commencer maintenant
+                <div className="flex items-center justify-center bg-white text-[#0b1b24] rounded-full w-9 h-9 ml-8 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="transition-transform duration-300 group-hover:translate-x-0.5" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            </div>
+          </FadeIn>
           </div>
         </div>
       </section>
@@ -372,3 +468,4 @@ export default function HomePage() {
     </main>
   );
 }
+

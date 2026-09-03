@@ -8,7 +8,7 @@ export const brand_keen_homeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour KEEN Home",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_keen_homeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KEEN Series de KEEN Home",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keen-home-keen-home-keen-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

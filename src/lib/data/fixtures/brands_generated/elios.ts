@@ -39,7 +39,7 @@ export const brand_eliosDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DE-series de Elios",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/elios-elios-de-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_eliosDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ESH Series de Elios",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/elios-elios-esh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_eliosDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DUB series de Elios",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/elios-elios-dub-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_eliosDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EXH Series de Elios",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/elios-elios-exh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_eliosDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DEA series de Elios",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/elios-elios-dea-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_eliosDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSH Series de Elios",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/elios-elios-msh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

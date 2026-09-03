@@ -39,7 +39,7 @@ export const brand_sureDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série VANTIX de Sure",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sure-sure-vantix.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_sureDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VANTIX | Vantix de Sure",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sure-sure-vantix-vantix.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_sureDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série K-SERIES de Sure",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sure-sure-k-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_sureDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NONE | VANTIX de Sure",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sure-sure-none-vantix.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_sureDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RDFXYC de Sure",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sure-sure-rdfxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_sureDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXYC de Sure",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sure-sure-rhpxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

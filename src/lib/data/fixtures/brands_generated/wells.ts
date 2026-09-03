@@ -39,7 +39,7 @@ export const brand_wellsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WOS Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-wos-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_wellsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WSA Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-wsa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_wellsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série WMA Series | WSA Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-wma-series-wsa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_wellsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WOM Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-wom-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_wellsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WSB Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-wsb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_wellsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VMC Series | WMA Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-vmc-series-wma-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_wellsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série WMM Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-wmm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_wellsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WDHP Series de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-wdhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_wellsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Rooftop de Wells",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wells-wells-rooftop.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

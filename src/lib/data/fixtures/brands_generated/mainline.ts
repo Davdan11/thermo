@@ -8,7 +8,7 @@ export const brand_mainlineDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MAINLINE",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_mainlineDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ML Series de MAINLINE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mainline-mainline-ml-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_mainlineDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Elite de MAINLINE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mainline-mainline-elite.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_mainlineDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance de MAINLINE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mainline-mainline-performance.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_mainlineDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CLASSIC PLUS/ACHIEVER PLUS de MAINLINE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mainline-mainline-classic-plusachiever-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_mainlineDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXYC de MAINLINE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mainline-mainline-rhpxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

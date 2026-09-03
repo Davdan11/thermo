@@ -8,7 +8,7 @@ export const brand_blueridgeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour BLUERIDGE",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BXS Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bxs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BMS Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bms-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BM series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série XS4 de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-xs4.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Saphire de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-saphire.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BMM Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bmm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BXM Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bxm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BDM Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bdm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BDS Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bds-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BXL Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bxl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XM2 de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-xm2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série New Multi-zone ODU de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-new-multi-zone-odu.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série BD Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Multi zone de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-ultra-heat-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série BH719M Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bh719m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NG2 de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-ng2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NG3 de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-ng3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BNG Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bng-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BMAH Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bmah-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série BHP17 Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bhp17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série BHP17L SERIES de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bhp17l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_blueridgeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BN Series de BLUERIDGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/blueridge-blueridge-bn-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_the_heat_pumpDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour The Heat Pump",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_the_heat_pumpDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de The Heat Pump",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/the-heat-pump-the-heat-pump-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
