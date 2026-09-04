@@ -47,7 +47,7 @@ export function CataloguePagination({ page, totalPages }: CataloguePaginationPro
       <button
         onClick={() => setPage(page - 1)}
         disabled={page <= 1}
-        className="px-4 py-2 border border-input-border rounded-md text-sm font-medium hover:bg-surface disabled:opacity-50 disabled:pointer-events-none transition-colors"
+        className="w-[105px] flex items-center justify-center py-2 border border-input-border rounded-md text-sm font-medium hover:bg-surface disabled:opacity-50 disabled:pointer-events-none transition-colors"
       >
         Précédent
       </button>
@@ -94,7 +94,7 @@ export function CataloguePagination({ page, totalPages }: CataloguePaginationPro
       <button
         onClick={() => setPage(page + 1)}
         disabled={page >= totalPages}
-        className="px-4 py-2 border border-input-border rounded-md text-sm font-medium hover:bg-surface disabled:opacity-50 disabled:pointer-events-none transition-colors"
+        className="w-[105px] flex items-center justify-center py-2 border border-input-border rounded-md text-sm font-medium hover:bg-surface disabled:opacity-50 disabled:pointer-events-none transition-colors"
       >
         Suivant
       </button>

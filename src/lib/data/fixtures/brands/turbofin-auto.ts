@@ -6,7 +6,7 @@ export const turbofinDataset: BrandDataset = {
     slug: "turbofin",
     name: "TURBOFIN",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: false,
+    activeInQuebec: true,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",
@@ -40,10 +40,10 @@ export const turbofinDataset: BrandDataset = {
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 24000,
       heatingCapacity5FMaxBtu: 24000,
-      seer2Min: 19.5,
-      seer2Max: 20.1,
-      hspf2Min: 11.3,
-      hspf2Max: 9.3,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
       cop5FMin: null,
       cop5FMax: null,
       systemType: "wall-single",
@@ -74,7 +74,12 @@ export const turbofinDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "turbofin-thah-airhandler36",
+      modelNumber: "THAH-AIRHANDLER36",
+      brandId: "turbofin",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -82,7 +87,7 @@ export const turbofinDataset: BrandDataset = {
       slug: "turbofin-standard-wall-single-30000-cfg-1",
       modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-thtu-heatpump24",
-      indoorUnitId: null,
+      indoorUnitId: "turbofin-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -96,7 +101,7 @@ export const turbofinDataset: BrandDataset = {
       slug: "turbofin-standard-wall-single-30000-cfg-2",
       modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-hp36r410a",
-      indoorUnitId: null,
+      indoorUnitId: "turbofin-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -110,7 +115,7 @@ export const turbofinDataset: BrandDataset = {
       slug: "turbofin-standard-wall-single-30000-cfg-3",
       modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-hp36r",
-      indoorUnitId: null,
+      indoorUnitId: "turbofin-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,

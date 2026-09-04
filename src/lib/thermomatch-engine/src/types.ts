@@ -64,6 +64,7 @@ export interface CatalogProduct {
   warranties: WarrantyPolicy[];
   enrichment?: Enrichment;
   zoneCompatibility: "single" | "multi" | "unknown";
+  imageUrl?: string | null;
 }
 
 export interface CatalogManifest {

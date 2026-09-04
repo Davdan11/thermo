@@ -24,8 +24,12 @@ import type {
 } from "./types";
 
 /* ---- Import fixtures ---- */
-// All auto-generated datasets (180 brands from HQ LogisVert)
-import { allAutoDatasets } from "./fixtures/brands/_all-auto";
+import { readFileSync } from "fs";
+import { join } from "path";
+
+// Load JSON dynamically to bypass TypeScript OOM during next build
+const autoDatasetsPath = join(process.cwd(), "src/lib/data/fixtures/brands/all-auto-datasets.json");
+const allAutoDatasets = JSON.parse(readFileSync(autoDatasetsPath, "utf8")) as Record<string, BrandDataset>;
 
 // Manual datasets (curated models with verified specs — these override auto data)
 import { daikinDataset as daikinManual } from "./fixtures/brands/daikin";
@@ -93,7 +97,7 @@ function mergeDatasets(auto: BrandDataset, manual: BrandDataset): BrandDataset {
     certifications: dedup(auto.certifications || [], manual.certifications || []),
     warranties: [...(auto.warranties || []), ...(manual.warranties || [])],
     priceObservations: [...(auto.priceObservations || []), ...(manual.priceObservations || [])],
-    editorialContent: [...(auto.editorialContent || []), ...(manual.editorialContent || [])],
+    editorial: [...(auto.editorial || []), ...(manual.editorial || [])],
   };
 }
 

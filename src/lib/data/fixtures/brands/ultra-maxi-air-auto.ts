@@ -6,7 +6,7 @@ export const ultramaxiairDataset: BrandDataset = {
     slug: "ultra-maxi-air",
     name: "ULTRA MAXI AIR",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: false,
+    activeInQuebec: true,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",
@@ -40,10 +40,10 @@ export const ultramaxiairDataset: BrandDataset = {
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 11500,
       heatingCapacity5FMaxBtu: 11500,
-      seer2Min: 21.0,
-      seer2Max: 26.2,
-      hspf2Min: 8.1,
-      hspf2Max: 9.8,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
       cop5FMin: null,
       cop5FMax: null,
       systemType: "wall-single",
@@ -62,7 +62,12 @@ export const ultramaxiairDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "ultra-maxi-air-lsab-18hrdn1",
+      modelNumber: "LSAB-18HRDN1",
+      brandId: "ultra-maxi-air",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -70,7 +75,7 @@ export const ultramaxiairDataset: BrandDataset = {
       slug: "ultra-maxi-air-standard-wall-single-18000-cfg-1",
       modelId: "ultra-maxi-air-standard-wall-single-18000",
       outdoorUnitId: "ultra-maxi-air-lsab-18hrdn1",
-      indoorUnitId: null,
+      indoorUnitId: "ultra-maxi-air-lsab-18hrdn1",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: null,

@@ -6,7 +6,7 @@ export const k2Dataset: BrandDataset = {
     slug: "k2",
     name: "K2",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: false,
+    activeInQuebec: true,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",
@@ -40,10 +40,10 @@ export const k2Dataset: BrandDataset = {
       coolingCapacityMaxBtu: null,
       heatingCapacity5FMinBtu: 24000,
       heatingCapacity5FMaxBtu: 24000,
-      seer2Min: 22.0,
-      seer2Max: 26.8,
-      hspf2Min: 9.0,
-      hspf2Max: 10.8,
+      seer2Min: null,
+      seer2Max: null,
+      hspf2Min: null,
+      hspf2Max: null,
       cop5FMin: null,
       cop5FMax: null,
       systemType: "wall-single",
@@ -74,7 +74,12 @@ export const k2Dataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "k2-thah-airhandler36",
+      modelNumber: "THAH-AIRHANDLER36",
+      brandId: "k2",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -82,7 +87,7 @@ export const k2Dataset: BrandDataset = {
       slug: "k2-standard-wall-single-30000-cfg-1",
       modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-thtu-heatpump24",
-      indoorUnitId: null,
+      indoorUnitId: "k2-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -96,7 +101,7 @@ export const k2Dataset: BrandDataset = {
       slug: "k2-standard-wall-single-30000-cfg-2",
       modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-hp36r410a",
-      indoorUnitId: null,
+      indoorUnitId: "k2-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -110,7 +115,7 @@ export const k2Dataset: BrandDataset = {
       slug: "k2-standard-wall-single-30000-cfg-3",
       modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-hp36r",
-      indoorUnitId: null,
+      indoorUnitId: "k2-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,

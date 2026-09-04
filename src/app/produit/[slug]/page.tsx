@@ -351,13 +351,14 @@ export default async function ProductPage({
                 <Link
                   href="/trouver-ma-thermopompe"
                   style={{
-                    display: "block", textAlign: "center",
-                    fontSize: 14, fontWeight: 600, padding: "12px 16px",
-                    background: "#071d2b", color: "#fff",
+                    display: "flex", justifyContent: "center", alignItems: "center",
+                    padding: "10px 16px",
+                    background: "#071d2b",
                     textDecoration: "none",
+                    borderRadius: "6px"
                   }}
                 >
-                  Utiliser Thermo Match
+                  <Image src="/images/logo-thermomatch-tm.png" alt="Utiliser Thermo Match" width={140} height={28} className="object-contain" />
                 </Link>
               </div>
 

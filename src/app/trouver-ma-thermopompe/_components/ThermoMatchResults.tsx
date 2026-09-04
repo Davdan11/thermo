@@ -45,18 +45,20 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
 
   return (
     <div className="w-full">
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
-        <div className="inline-flex items-center justify-center bg-[#10b981]/20 text-[#10b981] px-4 py-1.5 rounded-full text-sm font-bold mb-4">
-          <ShieldCheck className="w-4 h-4 mr-2" />
-          Analyse completee - marques premium seulement
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
+        <div className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 text-white px-5 py-2 rounded-full text-sm font-black tracking-widest shadow-lg shadow-orange-500/30 uppercase mb-6">
+          <CheckCircle className="w-4 h-4 mr-2" />
+          Voici vos correspondances
         </div>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">Vos 3 meilleures thermopompes</h2>
+        <h2 className="text-4xl md:text-6xl font-black mb-4 italic" style={{ color: '#ffffff' }}>
+          Les 3 meilleures options pour vous
+        </h2>
         {summaryContext && (
-          <p className="text-[#8e9fae] text-sm max-w-2xl mx-auto">
-            Pour votre maison de {summaryContext.heatedAreaFt2} pi²{summaryContext.floors > 1 ? ` sur ${summaryContext.floors} etages` : ""}{" — "}charge estimee : <strong className="text-white">{Math.round(summaryContext.estimatedLoadBtu / 1000)} 000 BTU/h</strong>
+          <p className="text-lg md:text-xl text-gray-300 font-medium max-w-3xl mx-auto">
+            Basé sur votre {summaryContext.heatedAreaFt2} pi²{summaryContext.floors > 1 ? ` sur ${summaryContext.floors} étages` : ""} — la charge requise est de <strong className="text-white text-2xl ml-1">{Math.round(summaryContext.estimatedLoadBtu / 1000)} 000 BTU</strong>
             {summaryContext.isMultiZone && (
-              <span className="block mt-1 text-[#e54b17] font-semibold">
-                Configuration {summaryContext.requestedZones} zones recommandee - une unite par etage, pas une seule grande murale.
+              <span className="block mt-3 text-orange-400 font-bold bg-orange-500/10 px-4 py-2 rounded-xl border border-orange-500/20 inline-block">
+                Configuration {summaryContext.requestedZones} zones recommandée pour un confort égal partout
               </span>
             )}
           </p>
@@ -78,6 +80,25 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
           const badgeLabel = index === 0 ? "Meilleur Choix" : index === 1 ? "Alternative Premium" : "Excellent Rapport Q/P";
           const badgeColor = index === 0 ? "bg-[#e54b17]" : "bg-[#172126]";
 
+          // Dynamic logo generation
+          const getBrandDomain = (brand: string) => {
+            const b = brand.toLowerCase();
+            if (b.includes("mitsubishi")) return "mitsubishielectric.com";
+            if (b.includes("moovair")) return "moovair.ca";
+            if (b.includes("fujitsu")) return "fujitsugeneral.com";
+            if (b.includes("daikin")) return "daikin.com";
+            if (b.includes("gree")) return "gree.ca";
+            if (b.includes("samsung")) return "samsung.com";
+            if (b.includes("lg")) return "lg.com";
+            if (b.includes("bosch")) return "bosch-homecomfort.com";
+            if (b.includes("napoleon")) return "napoleon.com";
+            if (b.includes("lennox")) return "lennox.com";
+            if (b.includes("trane")) return "trane.com";
+            if (b.includes("rheem")) return "rheem.com";
+            return `${b.replace(/ /g, '')}.com`;
+          };
+          const logoUrl = `https://logo.clearbit.com/${getBrandDomain(product.brand)}`;
+
           return (
             <motion.div key={product.id} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.15 + 0.2 }}
               className={`relative bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col ${isTop ? "ring-4 ring-[#e54b17] transform md:-translate-y-4" : ""}`}
@@ -88,13 +109,16 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                   <span className={`text-xs font-bold text-white px-3 py-1 rounded-full uppercase tracking-wider ${badgeColor}`}>{badgeLabel}</span>
                   {product.coldClimate && <span className="text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-1 rounded-full uppercase tracking-wide">Grand Froid</span>}
                 </div>
-                <div className="text-center mb-4">
-                  <h3 className="text-2xl font-black text-[#0b1b24] mb-1">{product.brand}</h3>
+                <div className="text-center mb-4 flex flex-col items-center">
+                  <div className="flex flex-col items-center justify-center mb-2">
+                    <img src={logoUrl} alt={`${product.brand} logo`} className="h-8 object-contain mb-2" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                    <h3 className="text-2xl font-black text-[#0b1b24]">{product.brand}</h3>
+                  </div>
                   <p className="text-sm text-gray-500 font-medium">{product.series || product.outdoorModel}</p>
                 </div>
                 <div className="relative h-40 w-full mb-4 flex items-center justify-center">
                   <Image
-                    src={product.systemType === "central" ? "/images/categorie-centrale-samsung-hd.png" : summaryContext?.isMultiZone ? "/images/categorie-multizone-mitsubishi-electric-hd.png" : "/images/categorie-murale-daikin-hd.png"}
+                    src={product.imageUrl || (product.systemType === "central" ? "/images/categorie-centrale-samsung-hd.png" : summaryContext?.isMultiZone ? "/images/categorie-multizone-mitsubishi-electric-hd.png" : "/images/categorie-murale-daikin-hd.png")}
                     alt={product.brand} fill className="object-contain"
                   />
                 </div>
@@ -113,7 +137,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-xl font-black text-[#172126]"><CountingNumber number={subsidyEstimate} inView={true} decimalPlaces={0} /> $</p>
+                      <p className="text-xl font-black text-[#10b981]"><CountingNumber number={subsidyEstimate} inView={true} decimalPlaces={0} /> $</p>
                     </div>
                   </div>
                 )}
@@ -132,18 +156,22 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                   </div>
                 </div>
                 {clientReasons.length > 0 && (
-                  <div className="mb-4">
+                  <div className="mb-5 mt-2">
                     <button onClick={() => setExpandedReasons(expandedReasons === index ? null : index)}
-                      className="w-full flex items-center justify-between text-xs font-bold text-[#0b1b24] bg-gray-50 hover:bg-gray-100 transition-colors px-3 py-2 rounded-lg">
-                      <span>Pourquoi ce modele ?</span>
-                      <span className="text-gray-400">{expandedReasons === index ? "v" : ">"}</span>
+                      className="w-full flex items-center justify-between pb-2 border-b border-gray-100 group transition-all">
+                      <span className="text-[11px] font-black uppercase tracking-widest text-[#0b1b24] group-hover:text-[#e54b17] transition-colors">Pourquoi ce modele ?</span>
+                      <div className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-300 ${expandedReasons === index ? "border-[#e54b17] bg-[#e54b17] text-white rotate-180" : "border-gray-200 text-gray-400 group-hover:border-[#0b1b24] group-hover:text-[#0b1b24]"}`}>
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                      </div>
                     </button>
                     {expandedReasons === index && (
-                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-2 space-y-2">
+                      <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="mt-3 space-y-2.5">
                         {clientReasons.map((reason, ri) => (
-                          <div key={ri} className="flex items-start gap-2 bg-gray-50 rounded-lg px-3 py-2">
-                            <CheckCircle className="w-3.5 h-3.5 text-[#10b981] mt-0.5 flex-shrink-0" />
-                            <p className="text-[11px] text-gray-700 leading-relaxed">{reason}</p>
+                          <div key={ri} className="flex items-start gap-3 bg-gradient-to-br from-white to-[#f8fafc] border border-gray-100/80 rounded-xl p-3.5 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_12px_-4px_rgba(0,0,0,0.08)] transition-shadow">
+                            <div className="mt-0.5 w-5 h-5 rounded-full bg-gradient-to-tr from-[#0b1b24] to-[#1a2d3a] flex items-center justify-center flex-shrink-0 shadow-inner">
+                              <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                            <p className="text-xs text-[#334155] leading-relaxed font-medium">{reason}</p>
                           </div>
                         ))}
                       </motion.div>

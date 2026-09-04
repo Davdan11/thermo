@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound, redirect } from 'next/navigation';
 import fs from 'fs/promises';
 import path from 'path';
@@ -153,19 +154,33 @@ export default async function ThermopompeSeoPage(props: PageProps) {
       )}
 
       {/* ── HERO ── */}
-      <section className="pt-28 pb-16 px-6" style={{ backgroundColor: '#061d2a' }}>
-        <div className="max-w-[800px] mx-auto">
-          <Breadcrumbs items={breadcrumbs} />
-          <div className="mt-6">
-            <h1
-              className="font-display font-bold text-white leading-[1.1] mb-5"
-              style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}
-            >
-              {page.h1}
-            </h1>
-            <p className="text-[#a8bbc4] leading-relaxed" style={{ fontSize: 'clamp(16px, 1.2vw, 18px)', maxWidth: '600px' }}>
-              {page.contentBlocks?.hero?.subtitle || page.metaDescription}
-            </p>
+      <section className="pt-24 pb-16 px-6 bg-[var(--color-background)] border-b border-[#e4ddd5] overflow-hidden">
+        <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex-1 w-full">
+            <Breadcrumbs items={breadcrumbs} />
+            <div className="mt-6">
+              <h1
+                className="font-display font-bold text-[#10212b] italic leading-[1.1] mb-5"
+                style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}
+              >
+                {page.h1}
+              </h1>
+              <p className="text-[#536873] leading-relaxed" style={{ fontSize: 'clamp(16px, 1.2vw, 18px)', maxWidth: '600px' }}>
+                {page.contentBlocks?.hero?.subtitle || page.metaDescription}
+              </p>
+            </div>
+          </div>
+          
+          <div className="w-full lg:w-[45%] flex-shrink-0 relative rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={
+                slug.includes('murale') ? '/images/seo/hero-murale.jpg' : 
+                slug.includes('centrale') ? '/images/seo/hero-centrale.jpg' : 
+                '/images/seo/hero-multizone.jpg'
+              } 
+              alt={page.h1} 
+              className="w-full h-auto object-cover aspect-[4/3] rounded-2xl transform hover:scale-105 transition-transform duration-700"
+            />
           </div>
         </div>
       </section>
@@ -313,10 +328,10 @@ export default async function ThermopompeSeoPage(props: PageProps) {
               </p>
               <Link
                 href="/trouver-ma-thermopompe"
-                className="block w-full text-center font-semibold py-3 px-4 rounded-lg transition-all text-sm"
-                style={{ backgroundColor: '#061d2a', color: '#fff' }}
+                className="flex items-center justify-center w-full py-2.5 px-4 rounded-lg transition-all"
+                style={{ backgroundColor: '#061d2a' }}
               >
-                Utiliser Thermo Match
+                <Image src="/images/logo-thermomatch-tm.png" alt="Utiliser Thermo Match" width={140} height={28} className="object-contain" />
               </Link>
             </div>
 

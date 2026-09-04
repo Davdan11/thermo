@@ -6,7 +6,7 @@ export const kanarticDataset: BrandDataset = {
     slug: "kanartic",
     name: "KANARTIC",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: false,
+    activeInQuebec: true,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",
@@ -128,7 +128,24 @@ export const kanarticDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "kanartic-keos-18uhe-na",
+      modelNumber: "KEOS-18UHE-NA",
+      brandId: "kanartic",
+      type: "wall-single",
+    },
+    {
+      id: "kanartic-keos-12uhe-na",
+      modelNumber: "KEOS-12UHE-NA",
+      brandId: "kanartic",
+      type: "wall-single",
+    },
+    {
+      id: "kanartic-keos-09uhe-na",
+      modelNumber: "KEOS-09UHE-NA",
+      brandId: "kanartic",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -136,7 +153,7 @@ export const kanarticDataset: BrandDataset = {
       slug: "kanartic-keos-series-wall-single-18000-cfg-1",
       modelId: "kanartic-keos-series-wall-single-18000",
       outdoorUnitId: "kanartic-keos-18uhe-na",
-      indoorUnitId: null,
+      indoorUnitId: "kanartic-keos-18uhe-na",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 22,
@@ -150,7 +167,7 @@ export const kanarticDataset: BrandDataset = {
       slug: "kanartic-keos-series-wall-single-12000-cfg-1",
       modelId: "kanartic-keos-series-wall-single-12000",
       outdoorUnitId: "kanartic-keos-12uhe-na",
-      indoorUnitId: null,
+      indoorUnitId: "kanartic-keos-12uhe-na",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 23.1,
@@ -164,7 +181,7 @@ export const kanarticDataset: BrandDataset = {
       slug: "kanartic-keos-series-wall-single-9000-cfg-1",
       modelId: "kanartic-keos-series-wall-single-9000",
       outdoorUnitId: "kanartic-keos-09uhe-na",
-      indoorUnitId: null,
+      indoorUnitId: "kanartic-keos-09uhe-na",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 26.4,

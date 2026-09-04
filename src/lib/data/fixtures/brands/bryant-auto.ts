@@ -6,7 +6,7 @@ export const bryantDataset: BrandDataset = {
     slug: "bryant",
     name: "Bryant",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: false,
+    activeInQuebec: true,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",
@@ -68,7 +68,12 @@ export const bryantDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "bryant-619ahbq30xa3",
+      modelNumber: "619AHBQ30XA3",
+      brandId: "bryant",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -76,7 +81,7 @@ export const bryantDataset: BrandDataset = {
       slug: "bryant-38m-series-wall-single-30000-cfg-1",
       modelId: "bryant-38m-series-wall-single-30000",
       outdoorUnitId: "bryant-38marbq30aa3",
-      indoorUnitId: null,
+      indoorUnitId: "bryant-619ahbq30xa3",
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       seer2: 20,
@@ -90,7 +95,7 @@ export const bryantDataset: BrandDataset = {
       slug: "bryant-38m-series-wall-single-30000-cfg-2",
       modelId: "bryant-38m-series-wall-single-30000",
       outdoorUnitId: "bryant-38marbq30aa311",
-      indoorUnitId: null,
+      indoorUnitId: "bryant-619ahbq30xa3",
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       seer2: 20.1,

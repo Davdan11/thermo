@@ -6,7 +6,7 @@ export const denaliaireDataset: BrandDataset = {
     slug: "denali-aire",
     name: "DENALI AIRE",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: false,
+    activeInQuebec: true,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",
@@ -172,7 +172,30 @@ export const denaliaireDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "denali-aire-dnmshqcw12a",
+      modelNumber: "DNMSHQCW12A",
+      brandId: "denali-aire",
+      type: "wall-single",
+    },
+    {
+      id: "denali-aire-dnmshqcw9a",
+      modelNumber: "DNMSHQCW9A",
+      brandId: "denali-aire",
+      type: "wall-single",
+    },
+    {
+      id: "denali-aire-dnmshqcw18",
+      modelNumber: "DNMSHQCW18",
+      brandId: "denali-aire",
+      type: "wall-single",
+    },
+    {
+      id: "denali-aire-dnmshqcw24",
+      modelNumber: "DNMSHQCW24",
+      brandId: "denali-aire",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -180,7 +203,7 @@ export const denaliaireDataset: BrandDataset = {
       slug: "denali-aire-hiultra-wall-single-12000-cfg-1",
       modelId: "denali-aire-hiultra-wall-single-12000",
       outdoorUnitId: "denali-aire-dnmshqco12a",
-      indoorUnitId: null,
+      indoorUnitId: "denali-aire-dnmshqcw12a",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 21.7,
@@ -194,7 +217,7 @@ export const denaliaireDataset: BrandDataset = {
       slug: "denali-aire-hi-multi-wall-single-9000-cfg-1",
       modelId: "denali-aire-hi-multi-wall-single-9000",
       outdoorUnitId: "denali-aire-dnmshqco9a",
-      indoorUnitId: null,
+      indoorUnitId: "denali-aire-dnmshqcw9a",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 18.5,
@@ -208,7 +231,7 @@ export const denaliaireDataset: BrandDataset = {
       slug: "denali-aire-hi-multi-wall-single-18000-cfg-1",
       modelId: "denali-aire-hi-multi-wall-single-18000",
       outdoorUnitId: "denali-aire-dnmshqco18",
-      indoorUnitId: null,
+      indoorUnitId: "denali-aire-dnmshqcw18",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 22.5,
@@ -222,7 +245,7 @@ export const denaliaireDataset: BrandDataset = {
       slug: "denali-aire-hi-multi-wall-single-24000-cfg-1",
       modelId: "denali-aire-hi-multi-wall-single-24000",
       outdoorUnitId: "denali-aire-dnmshqco24",
-      indoorUnitId: null,
+      indoorUnitId: "denali-aire-dnmshqcw24",
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 23000,
       seer2: 20.5,

@@ -9,6 +9,9 @@ import type { ProductModel, SystemConfiguration, Brand } from "../types";
 import type { SystemType } from "../types/enums";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { registry } from "../registry";
+import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
+import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
+import { getWarrantiesForModel } from "./products";
 
 /* ------------------------------------------------------------------
    Catalogue filter params (from URL searchParams)
@@ -61,6 +64,10 @@ export interface CatalogueProduct {
   refrigerant: string | null;
   /** Outdoor unit model number for LogisVert lookup */
   outdoorModelNumber: string | null;
+  /** Pre-fetched warranties to avoid client-side registry imports */
+  warranties: import("../types").Warranty[];
+  /** Pre-calculated LogisVert amount */
+  logisVertDollars: number | null;
 }
 
 /* ------------------------------------------------------------------
@@ -272,6 +279,21 @@ export function getCatalogueModels(
       }
     }
 
+    let logisVertDollars: number | null = null;
+    const officialEntry = outdoorModelNumber
+      ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
+      : lookupLogisVertFuzzy(model.modelNumber, brand.name);
+    
+    if (officialEntry && officialEntry.logisVertDollars > 0) {
+      logisVertDollars = officialEntry.logisVertDollars;
+    } else {
+      const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
+      if (btu > 0) {
+        const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
+        if (result.dollars > 0) logisVertDollars = result.dollars;
+      }
+    }
+
     return {
       model,
       brand,
@@ -281,6 +303,8 @@ export function getCatalogueModels(
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
       outdoorModelNumber,
+      warranties: getWarrantiesForModel(model.id),
+      logisVertDollars,
     };
   });
 
@@ -385,6 +409,21 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       }
     }
 
+    let logisVertDollars: number | null = null;
+    const officialEntry = outdoorModelNumber
+      ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
+      : lookupLogisVertFuzzy(model.modelNumber, brand.name);
+    
+    if (officialEntry && officialEntry.logisVertDollars > 0) {
+      logisVertDollars = officialEntry.logisVertDollars;
+    } else {
+      const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
+      if (btu > 0) {
+        const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
+        if (result.dollars > 0) logisVertDollars = result.dollars;
+      }
+    }
+
     return {
       model,
       brand,
@@ -394,6 +433,8 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
       outdoorModelNumber,
+      warranties: getWarrantiesForModel(model.id),
+      logisVertDollars,
     };
   }).sort((a, b) => {
     const brandCmp = a.brand.name.localeCompare(b.brand.name);

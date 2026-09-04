@@ -2,9 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
-import { lookupLogisVertFuzzy } from "@/lib/subsidies/logisvert-official";
-import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
-import { getWarrantiesForModel } from "@/lib/data/queries/products";
+
+
 
 export function ProductCard({
   product,
@@ -19,9 +18,10 @@ export function ProductCard({
 }) {
   const { model, brand, configuration, isColdClimate } = product;
 
-  const warranties = getWarrantiesForModel(model.id);
-  const partsWarranty = warranties.find(w => w.type === "parts")?.durationYears;
-  const compWarranty = warranties.find(w => w.type === "compressor")?.durationYears;
+  // Warranties should be passed down or accessed safely without importing registry on client
+  const warranties = (product as any).warranties || [];
+  const partsWarranty = warranties.find((w: any) => w.type === "parts")?.durationYears;
+  const compWarranty = warranties.find((w: any) => w.type === "compressor")?.durationYears;
   
   let warrantyLabel = "";
   if (partsWarranty && compWarranty) {
@@ -32,21 +32,8 @@ export function ProductCard({
   }
 
   // --- LogisVert subsidy lookup ---
-  let logisVertDollars: number | null = null;
-  let logisVertOfficial = false;
-  const officialEntry = product.outdoorModelNumber
-    ? lookupLogisVertFuzzy(product.outdoorModelNumber, brand.name)
-    : lookupLogisVertFuzzy(model.modelNumber, brand.name);
-  if (officialEntry && officialEntry.logisVertDollars > 0) {
-    logisVertDollars = officialEntry.logisVertDollars;
-    logisVertOfficial = true;
-  } else {
-    const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
-    if (btu > 0) {
-      const result = calculateLogisVertSimple(btu, isColdClimate);
-      if (result.dollars > 0) logisVertDollars = result.dollars;
-    }
-  }
+  let logisVertDollars: number | null = (product as any).logisVertDollars || null;
+  let logisVertOfficial = logisVertDollars ? true : false;
 
   return (
     <article

@@ -163,10 +163,10 @@ export default async function ThermopompesPage({
               <Link 
                 key={brand.slug} 
                 href={`/thermopompes?brand=${brand.slug}`}
-                className={`flex-1 flex items-center justify-center px-4 py-4 hover:bg-gray-50 transition-colors ${i !== 5 ? 'border-r border-gray-100' : ''}`}
+                className={`flex-1 flex items-center justify-center px-4 py-2 hover:bg-gray-50 transition-colors ${i !== 5 ? 'border-r border-gray-100' : ''}`}
                 title={`Voir les thermopompes ${brand.name}`}
               >
-                <div className="w-[140px] h-[40px] flex items-center justify-center">
+                <div className="w-[180px] h-[65px] flex items-center justify-center">
                   <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
                 </div>
               </Link>
@@ -186,10 +186,10 @@ export default async function ThermopompesPage({
               <Link 
                 key={brand.slug} 
                 href={`/thermopompes?brand=${brand.slug}`}
-                className={`flex-1 flex items-center justify-center px-4 py-4 hover:bg-gray-50 transition-colors ${i !== 6 ? 'border-r border-gray-100' : ''}`}
+                className={`flex-1 flex items-center justify-center px-4 py-2 hover:bg-gray-50 transition-colors ${i !== 6 ? 'border-r border-gray-100' : ''}`}
                 title={`Voir les thermopompes ${brand.name}`}
               >
-                <div className="w-[140px] h-[40px] flex items-center justify-center">
+                <div className="w-[180px] h-[65px] flex items-center justify-center">
                   <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
                 </div>
               </Link>
@@ -213,7 +213,7 @@ export default async function ThermopompesPage({
             <Link 
               key={brand.slug} 
               href={`/thermopompes?brand=${brand.slug}`}
-              className="bg-white border border-gray-200 rounded-md p-3 flex items-center justify-center h-[55px] hover:bg-gray-50 transition-colors"
+              className="bg-white border border-gray-200 rounded-md p-1 flex items-center justify-center h-[55px] hover:bg-gray-50 transition-colors"
             >
               <div className="w-full h-full flex items-center justify-center">
                 <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
@@ -276,15 +276,19 @@ export default async function ThermopompesPage({
             {resultCount > 0 ? (
               <div className="flex flex-col gap-10">
                 <CompareSelection products={products} />
-                {totalPages > 1 && (
-                  <CataloguePagination page={page} totalPages={totalPages} />
-                )}
               </div>
             ) : (
               <CatalogueEmpty hasFilters={hasActiveFilters} />
             )}
           </div>
         </div>
+
+        {/* Global Pagination centered on the entire page */}
+        {resultCount > 0 && totalPages > 1 && (
+          <div className="mt-12">
+            <CataloguePagination page={page} totalPages={totalPages} />
+          </div>
+        )}
       </div>
     </main>
   );

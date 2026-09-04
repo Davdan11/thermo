@@ -9,11 +9,11 @@ const NAV = [
   {
     title: "Explorer",
     links: [
-      { href: "/thermopompes/murales", label: "Thermopompes murales" },
-      { href: "/thermopompes/multizones", label: "Thermopompes multi zones" },
-      { href: "/thermopompes/centrales", label: "Thermopompes centrales" },
+      { href: "/thermopompes/thermopompe-murale", label: "Thermopompes murales" },
+      { href: "/thermopompes/thermopompe-multizone", label: "Thermopompes multi zones" },
+      { href: "/thermopompes/thermopompe-centrale", label: "Thermopompes centrales" },
       { href: "/comparer", label: "Comparer les modèles" },
-      { href: "/trouver-un-installateur", label: "Trouver un installateur" },
+      { href: "/soumission", label: "Trouver un installateur" },
     ],
   },
   {
@@ -21,7 +21,7 @@ const NAV = [
     links: [
       { href: "/guides", label: "Guides et conseils" },
       { href: "/subventions", label: "Aides financières" },
-      { href: "/calculatrice", label: "Calculatrice d'économies" },
+      { href: "/calculateur-economies", label: "Calculatrice d'économies" },
       { href: "/glossaire", label: "Glossaire" },
       { href: "/faq", label: "FAQ" },
     ],
@@ -30,7 +30,7 @@ const NAV = [
     title: "Entreprise",
     links: [
       { href: "/a-propos", label: "À propos" },
-      { href: "/carrieres", label: "Carrières" },
+      { href: "/carriere", label: "Carrières" },
       { href: "/contact", label: "Contact" },
       { href: "/partenaires", label: "Devenir partenaire" },
       { href: "/espace-installateur", label: "Espace installateur" },

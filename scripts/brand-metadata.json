@@ -1,0 +1,1280 @@
+{
+  "carrier": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "bryant heating and cooling systems": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "arcoaire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "heil": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "airquest": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "day & night": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "keeprite": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "tempstar": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "trane": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "comfortmaker": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kenmore": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "champion heating and cooling": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "lennox": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "smart comfort": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "payne heating and cooling": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "coleman": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "york": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "american standard": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "grandaire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "airease": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "armstrong air": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "daikin": {
+    "warranties": {
+      "parts": 12,
+      "compressor": 12
+    },
+    "seriesAliases": {}
+  },
+  "bryant": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "1hvac": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "amana": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "goodman": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "mdv": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ducane": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "midea": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ruud": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "rheem": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "gree": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "adp": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "mitsubishi electric": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "concord": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "allied": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ge appliances": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ac pro": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "bosch": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "friedrich": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "tosot": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "blueridge": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "franklin": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "century": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "comfortstar": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "payne": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "sure": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "cooper&hunter": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "innovair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "russell": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "moovair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "aciq": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ai air conditioning": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "direct air": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "eco-air": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "weathermaker": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ecoer": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "mainline": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "durastar": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "samsung": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "elios": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "fujitsu": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "c&h": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "lps legacy": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kinghome": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "mrcool": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "comfort-aire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "slimair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "breeze33": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kerr": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "viessmann": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "wells": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "diycool": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "hisense": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "sea breeze+": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "polarwave": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "custom comfort": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "comfort aire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "zero": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "multi mfg": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kepler": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "hitachi": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "haier": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ac pro.com": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "napoleon": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "canair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "perfectaire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "eco ac": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "senville": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "stealth": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "lbg products": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "panasonic": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "star air kontrol": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "alsetria": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "continental": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ameristar": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "runtru": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kanionco": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "stelpro": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "toshiba carrier": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "pioneer": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "emi": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "aux": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "tcl": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "capella": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "yonan": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "willis": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ouellet": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "airtemp": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ng trade": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "haxxair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "wabban": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "acd": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "aireforce": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "gibson": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "novair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "forestair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "zephyr": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "karda": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "air-con": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "tgm": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "guardian": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "infinityliving": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "intertherm": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "aurora": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "westinghouse": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ductlessaire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "conforto": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "premium levella": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "thermal zone": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "gridless": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "convectair": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "classic": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "sharp": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "bluefin": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "generallux": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "dettson": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "boreal": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "maxi air": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "eco air": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "azur": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "quebec vair": {
+    "warranties": {
+      "parts": 12,
+      "compressor": 12
+    },
+    "seriesAliases": {
+      "ne-t52-series": "Boréal",
+      "ne-series": "Nordic",
+      "ne-t52-series-wall-single-12000": "Boréal 12k"
+    }
+  },
+  "comfort temps": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "fujieco": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "novair plus": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "sea breeze": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "comfiaire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kerr kapstone": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "generallux  star": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "connect m": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "frigidaire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "coast air": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "iflow": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "della": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "supreme": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "max-r": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "genie aire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "denali aire": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "nortek": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "maxi air central": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "supreme central": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "clima smart": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "hotpoint": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "havells": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "maestrale": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kanartic": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "innova": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "turbofin": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "j-ku": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "valiev": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "\"maxi air central\t\"": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "\"supreme central\t\"": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "zenair technologies": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "kwiik": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "sum x": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "maple heat": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "norton air conditioners": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "danby": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "whynter": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "concerto": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "ultra maxi air": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  },
+  "quilt": {
+    "warranties": {
+      "parts": 10,
+      "compressor": 10
+    },
+    "seriesAliases": {}
+  }
+}

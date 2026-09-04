@@ -6,7 +6,7 @@ export const sumxDataset: BrandDataset = {
     slug: "sum-x",
     name: "SUM X",
     description: "Catalogue officiel issu de la base de données Hydro-Québec LogisVert.",
-    activeInQuebec: false,
+    activeInQuebec: true,
     status: "published",
     createdAt: "2024-01-01T00:00:00Z",
     updatedAt: "2024-01-01T00:00:00Z",
@@ -95,7 +95,18 @@ export const sumxDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "sum-x-sm-12hfo2-wu",
+      modelNumber: "SM-12HFO2-WU",
+      brandId: "sum-x",
+      type: "wall-single",
+    },
+    {
+      id: "sum-x-sm-18hfo2-wu",
+      modelNumber: "SM-18HFO2-WU",
+      brandId: "sum-x",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -103,7 +114,7 @@ export const sumxDataset: BrandDataset = {
       slug: "sum-x-hiultra-wall-single-12000-cfg-1",
       modelId: "sum-x-hiultra-wall-single-12000",
       outdoorUnitId: "sum-x-sm-12hfo2-cu",
-      indoorUnitId: null,
+      indoorUnitId: "sum-x-sm-12hfo2-wu",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 23.5,
@@ -117,7 +128,7 @@ export const sumxDataset: BrandDataset = {
       slug: "sum-x-hiultra-wall-single-18000-cfg-1",
       modelId: "sum-x-hiultra-wall-single-18000",
       outdoorUnitId: "sum-x-sm-18hfo2-cu",
-      indoorUnitId: null,
+      indoorUnitId: "sum-x-sm-18hfo2-wu",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 20.5,

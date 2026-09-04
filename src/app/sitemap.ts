@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/comment-ca-marche`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/soumission`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/trouver-ma-thermopompe`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/calculateur-economies`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   /* ── Product pages ── */

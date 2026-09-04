@@ -14,6 +14,9 @@ import type { SystemType } from "../types/enums";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
+import { getWarrantiesForModel } from "./products";
+import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
+import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
 
 /* ------------------------------------------------------------------
    Brand Detail — everything needed for a brand page
@@ -170,10 +173,29 @@ export function getBrandDetail(slug: string): BrandDetail | null {
         registry.configurations.find((c) => c.modelId === model.id) ?? null;
       const ser = registry.series.find((s) => s.id === model.seriesId);
       let refrigerant: string | null = null;
+      let outdoorModelNumber: string | null = null;
       if (configuration) {
         const outdoorUnit = registry.outdoorUnits.find((u) => u.id === configuration.outdoorUnitId);
         if (outdoorUnit && outdoorUnit.refrigerant) {
           refrigerant = outdoorUnit.refrigerant as string;
+        }
+        if (outdoorUnit && outdoorUnit.modelNumber) {
+          outdoorModelNumber = outdoorUnit.modelNumber;
+        }
+      }
+
+      let logisVertDollars: number | null = null;
+      const officialEntry = outdoorModelNumber
+        ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
+        : lookupLogisVertFuzzy(model.modelNumber, brand.name);
+      
+      if (officialEntry && officialEntry.logisVertDollars > 0) {
+        logisVertDollars = officialEntry.logisVertDollars;
+      } else {
+        const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
+        if (btu > 0) {
+          const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
+          if (result.dollars > 0) logisVertDollars = result.dollars;
         }
       }
 
@@ -185,6 +207,9 @@ export function getBrandDetail(slug: string): BrandDetail | null {
         isColdClimate: model.categories.includes("cold-climate"),
         imageUrl: model.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,
+        outdoorModelNumber,
+        warranties: getWarrantiesForModel(model.id),
+        logisVertDollars,
       };
     },
   );
