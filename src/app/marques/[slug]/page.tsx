@@ -58,8 +58,19 @@ export default async function BrandPage({
   const { brand, series, models, systemTypes, hasColdClimate } = brandDetail;
   const brandName = brand.name.replace(" [DEV]", "");
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Accueil", url: SITE_URL },
+    { name: "Thermopompes", url: `${SITE_URL}/thermopompes` },
+    { name: "Marques", url: `${SITE_URL}/marques` },
+    { name: brandName, url: `${SITE_URL}/marques/${brand.slug}` },
+  ]);
+
   return (
     <main className="min-h-screen bg-[var(--color-background)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* =========================================
           HERO SECTION
           ========================================= */}

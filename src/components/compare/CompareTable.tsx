@@ -181,11 +181,8 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
         ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $`
         : "Non admissible",
     )),
-    row("Taux applique", products.map((p) =>
-      `${p.subsidy.rate} $ / 1 000 BTU/h`,
-    )),
     row("Certification climat froid", products.map((p) =>
-      p.subsidy.isColdClimate ? "Oui (120 $/kBTU)" : "Non (50 $/kBTU)",
+      p.subsidy.isColdClimate ? "Oui" : "Non",
     )),
     row("Capacite utilisee", products.map((p) =>
       p.subsidy.capacityBtu > 0

@@ -4,6 +4,8 @@ import "./globals.css";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { cn } from "@/lib/utils";
 import { getOrganizationSchema, getWebSiteSchema, SITE_URL } from "@/lib/seo";
+import { UTMProvider } from "@/components/providers/UTMProvider";
+import { Suspense } from "react";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -54,6 +56,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSiteSchema()) }}
         />
         <SiteChrome>{children}</SiteChrome>
+        <Suspense fallback={null}>
+          <UTMProvider />
+        </Suspense>
       </body>
     </html>
   );

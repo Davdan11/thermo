@@ -72,12 +72,17 @@ function mergeDatasets(auto: BrandDataset, manual: BrandDataset): BrandDataset {
       .map((m) => `${m.seriesId}-${m.nominalCapacityBtu}`)
   );
 
+  const autoModelSignatures = new Set<string>();
   const autoModelsFiltered = auto.models.filter((m) => {
     if (m.seriesId && m.nominalCapacityBtu != null) {
       const sig = `${m.seriesId}-${m.nominalCapacityBtu}`;
       if (manualModelSignatures.has(sig)) {
         return false;
       }
+      if (autoModelSignatures.has(sig)) {
+        return false; // Deduplicate within auto data
+      }
+      autoModelSignatures.add(sig);
     }
     return true;
   });

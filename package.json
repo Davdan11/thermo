@@ -8,15 +8,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "scrape:logisvert": "node scripts/scrape-logisvert.mjs"
+    "scrape:logisvert": "node scripts/scrape-logisvert.mjs",
+    "prebuild": "npx tsx scripts/build-seo-db.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^10.6.0",
+    "@tailwindcss/typography": "^0.5.20",
     "@types/puppeteer": "^5.4.7",
     "axios": "^1.20.0",
     "cheerio": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "csv-parse": "^7.0.2",
+    "dotenv": "^17.4.2",
     "lucide-react": "^1.37.0",
     "motion": "^13.1.1",
     "next": "16.3.2",
@@ -24,6 +28,7 @@
     "radix-ui": "^1.6.7",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "resend": "^6.26.0",
     "shadcn": "^4.19.0",
     "tailwind-merge": "^3.6.0",
     "tsx": "^4.23.13",

@@ -15,7 +15,7 @@ const T = {
   border: "rgba(16,32,45,0.14)",
 };
 
-const FAQ_ITEMS = [
+export const FAQ_ITEMS = [
   {
     category: "Général & Fonctionnement",
     questions: [

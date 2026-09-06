@@ -1,0 +1,11 @@
+Error: PIPELINE BLOQUÉ: il déduit des garanties depuis des extraits de moteur de recherche et assigne la première image Bing sans confirmer le modèle ni la provenance. Utiliser uniquement des documents fabricants avec URL et correspondance exacte.
+    at main (/Users/daviddanjou/Desktop/thermo/scripts/pipeline-enrichissement/orchestrator.ts:8:9)
+    at <anonymous> (/Users/daviddanjou/Desktop/thermo/scripts/pipeline-enrichissement/orchestrator.ts:36:1)
+    at Object.<anonymous> (/Users/daviddanjou/Desktop/thermo/scripts/pipeline-enrichissement/orchestrator.ts:36:27)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object.transformer (/Users/daviddanjou/Desktop/thermo/node_modules/tsx/dist/register-OY9cqBEN.cjs:9:3619)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at cjsLoader (node:internal/modules/esm/translators:262:5)

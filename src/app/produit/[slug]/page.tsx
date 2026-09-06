@@ -44,19 +44,24 @@ export async function generateMetadata({
 
   const { model, brand, series } = detail;
   const capacity = model.nominalCapacityBtu
-    ? ` ${(model.nominalCapacityBtu / 1000).toFixed(0)}\u2009000 BTU`
+    ? ` ${(model.nominalCapacityBtu / 1000).toFixed(0)} 000 BTU`
     : "";
+
+  const logisVertStr = detail.logisVertDollars ? ` (Subvention LogisVert de ${detail.logisVertDollars} $)` : "";
+
+  const title = `Thermopompe ${brand.name} ${series.name} ${model.name}${capacity} - Prix, Fiche technique & Subvention`;
+  const description = `Fiche technique complète de la thermopompe ${brand.name} ${series.name} ${model.name}${capacity}. Découvrez les spécifications, le prix, la performance climat froid et la subvention LogisVert.`;
 
   const imageUrl = model.imageUrl ?? detail.series?.imageUrl ?? null;
 
   return {
-    title: `${brand.name} ${model.name} — Fiche technique complète`,
-    description: `Consultez la fiche technique complète de la thermopompe ${brand.name} ${series.name} ${model.name}${capacity}. Spécifications, performance climat froid, subvention LogisVert et plus.`,
+    title,
+    description,
     alternates: { canonical: `${SITE_URL}/produit/${slug}` },
     robots: { index: true, follow: true },
     openGraph: {
-      title: `${brand.name} ${model.name}`,
-      description: `Fiche technique ${brand.name} ${model.name}${capacity} — ${detail.systemTypeLabel}`,
+      title: `Thermopompe ${brand.name} ${model.name}${capacity}`,
+      description: `Fiche technique et subvention LogisVert pour la thermopompe ${brand.name} ${model.name}${capacity}.`,
       url: `${SITE_URL}/produit/${slug}`,
       siteName: "Thermopompe A Vendre.ca",
       locale: "fr_CA",
@@ -86,6 +91,7 @@ export default async function ProductPage({
   if (configuration?.hspf2) additionalProperties.push({ name: "HSPF2", value: String(configuration.hspf2) });
   if (configuration?.minHeatingTempC != null) additionalProperties.push({ name: "Température minimale de chauffage", value: `${configuration.minHeatingTempC}°C` });
   if (configuration?.noiseIndoorMinDbA) additionalProperties.push({ name: "Niveau sonore intérieur", value: `${configuration.noiseIndoorMinDbA} dB(A)` });
+  if (detail.logisVertDollars) additionalProperties.push({ name: "Subvention LogisVert", value: `${detail.logisVertDollars} $` });
 
   const productSchema = getProductSchema({
     name: `${brand.name} ${model.name}`,
@@ -99,10 +105,10 @@ export default async function ProductPage({
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Accueil", url: "/" },
-    { name: "Thermopompes", url: "/thermopompes" },
-    { name: brand.name, url: `/marques/${brand.slug}` },
-    { name: model.name, url: `/produit/${slug}` },
+    { name: "Accueil", url: SITE_URL },
+    { name: "Thermopompes", url: `${SITE_URL}/thermopompes` },
+    { name: brand.name, url: `${SITE_URL}/marques/${brand.slug}` },
+    { name: model.name, url: `${SITE_URL}/produit/${slug}` },
   ]);
 
   return (

@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-09-03T23:41:52.623Z",
+  "source": {
+    "path": "/Users/daviddanjou/Desktop/thermo/src/lib/subsidies/logisvert-official-amounts.json",
+    "logisVertRecords": 176627,
+    "normalizedBrands": 180,
+    "outdoorModels": 9998,
+    "indoorModels": 17766,
+    "furnaceModels": 5256,
+    "commercialSeries": 1336
+  },
+  "generated": {
+    "files": 180,
+    "ahriReferences": 9929,
+    "configurationsWithUnknownMinimumTemperature": 9929,
+    "performancePointsAt17F": 9929,
+    "fabricatedDefaultWarrantyRecords": 0,
+    "modelsFalselyMarkedActive2026": 0
+  },
+  "sourceMissingByConfiguration": {
+    "indoorModel": 37,
+    "furnaceModel": 27214,
+    "commercialSeries": 61376,
+    "seer2": 61376,
+    "hspf2": 61376,
+    "eer2": 176627,
+    "copAt5F": 63049,
+    "heatingCapacityAt5F": 63049,
+    "heatingCapacityAt17F": 0
+  },
+  "notPublishedByLogisVert": [
+    "warranty",
+    "product_image",
+    "refrigerant",
+    "minimum_operating_temperature",
+    "sound_level",
+    "cfm",
+    "dimensions",
+    "wifi",
+    "feature_list",
+    "brochure_url"
+  ],
+  "qualityPolicy": {
+    "noInventedDefaults": true,
+    "unavailableFactsRemainNull": true,
+    "commercialAvailabilityRequiresManufacturerEvidence": true,
+    "warrantyRequiresManufacturerEvidencePerModel": true
+  }
+}

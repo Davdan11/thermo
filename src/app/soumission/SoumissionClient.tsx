@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { CheckCircle2, ArrowRight, Zap, Mail, Phone, CalendarCheck } from "lucide-react";
 
 /* ─────────────────────────────────────────────────────────────────────────
    Page /soumission — "Votre projet est prêt à être évalué."
@@ -161,6 +162,7 @@ export default function SoumissionPage() {
           // Notes complètes
           notes: `Emplacement: ${project.emplacement} | Contact préféré: ${contact.methode}${draftNotes ? " | " + draftNotes : ""}`,
           source: "soumission-page",
+          draft: typeof window !== "undefined" ? JSON.parse(sessionStorage.getItem("thermomatch-answers") || "{}") : {}
         }),
       });
       if (!res.ok) throw new Error();
@@ -173,17 +175,83 @@ export default function SoumissionPage() {
   }
 
   /* ── Success screen ── */
-  if (success) return (
-    <div style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <div style={{ maxWidth: 480, textAlign: "center", backgroundColor: "#fff", borderRadius: 16, padding: "56px 40px", boxShadow: "0 4px 40px rgba(0,0,0,0.08)" }}>
-        <div style={{ width: 60, height: 60, borderRadius: "50%", backgroundColor: "#dcfce7", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, margin: "0 auto 24px" }}>✓</div>
-        <h1 style={{ fontSize: 24, fontWeight: 800, color: NAVY, margin: "0 0 12px" }}>Demande reçue !</h1>
-        <p style={{ color: "#536873", fontSize: 15, lineHeight: 1.65, margin: "0 0 28px" }}>Notre équipe analysera votre projet et vous contactera dans les <strong>24 heures</strong>.</p>
-        <a href="tel:4389003224" style={{ display: "block", color: ORANGE, fontWeight: 700, fontSize: 17, marginBottom: 32, textDecoration: "none" }}>438-900-3224</a>
-        <Link href="/" style={{ backgroundColor: ORANGE, color: "#fff", textDecoration: "none", padding: "13px 32px", borderRadius: 8, fontWeight: 700, fontSize: 14, display: "inline-block" }}>Retour à l&apos;accueil</Link>
+  if (success) {
+    const finalDraft = typeof window !== 'undefined' ? JSON.parse(sessionStorage.getItem('thermomatch-answers') || '{}') : {};
+    const tmResult = finalDraft?.thermoMatchResult;
+    
+    return (
+      <div style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 20px" }}>
+        <div style={{ maxWidth: 580, width: "100%", backgroundColor: "#fff", borderRadius: 24, padding: "50px 40px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", position: "relative", overflow: "hidden" }}>
+          
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 6, background: `linear-gradient(90deg, ${ORANGE}, #f77f52)` }} />
+
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 24 }}>
+            <div style={{ width: 64, height: 64, borderRadius: "50%", backgroundColor: "rgba(22, 163, 74, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#16a34a" }}>
+              <CheckCircle2 size={32} strokeWidth={2.5} />
+            </div>
+          </div>
+          
+          <h1 style={{ fontSize: 32, fontWeight: 800, color: NAVY, margin: "0 0 12px", textAlign: "center", letterSpacing: "-0.02em" }}>
+            Merci, {contact.prenom || "Client"} !
+          </h1>
+          <p style={{ color: "#536873", fontSize: 16, lineHeight: 1.65, margin: "0 0 40px", textAlign: "center" }}>
+            Votre dossier ThermoMatch a été transféré avec succès à nos experts certifiés.
+          </p>
+
+          {tmResult?.bestMatch && (
+            <div style={{ backgroundColor: "#f8fafc", borderRadius: 16, padding: 24, marginBottom: 32, border: "1px solid #e2e8f0" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, color: NAVY, fontWeight: 700, fontSize: 14, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                <Zap size={16} color={ORANGE} />
+                Vos Résultats de l'Algorithme
+              </div>
+              
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div>
+                  <p style={{ fontSize: 12, color: "#64748b", margin: "0 0 4px", fontWeight: 600 }}>MARQUE OPTIMALE</p>
+                  <p style={{ fontSize: 16, color: NAVY, fontWeight: 700, margin: 0 }}>{tmResult.bestMatch.brand}</p>
+                </div>
+                <div>
+                  <p style={{ fontSize: 12, color: "#64748b", margin: "0 0 4px", fontWeight: 600 }}>PUISSANCE REQUISE</p>
+                  <p style={{ fontSize: 16, color: NAVY, fontWeight: 700, margin: 0 }}>{tmResult.recommendedBtu} BTU</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 40 }}>
+            <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+              <div style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: "rgba(229, 75, 23, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: ORANGE, flexShrink: 0 }}>
+                <Mail size={20} />
+              </div>
+              <div>
+                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>Surveillez vos courriels</h4>
+                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>Un courriel récapitulatif contenant les détails de votre recommandation vient de vous être envoyé.</p>
+              </div>
+            </div>
+            
+            <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+              <div style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: "rgba(229, 75, 23, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: ORANGE, flexShrink: 0 }}>
+                <Phone size={20} />
+              </div>
+              <div>
+                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>Appel de validation</h4>
+                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>L'expert attitré à votre dossier vous contactera dans les prochaines 24 heures ouvrables.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "center" }}>
+            <Link href="/" style={{ backgroundColor: NAVY, color: "#fff", textDecoration: "none", padding: "16px 32px", borderRadius: 12, fontWeight: 700, fontSize: 15, display: "flex", alignItems: "center", gap: 8, width: "100%", justifyContent: "center", transition: "all 0.2s" }}>
+              Retour à l'accueil <ArrowRight size={18} />
+            </Link>
+            <p style={{ margin: 0, fontSize: 14, color: "#64748b" }}>
+              Besoin d'aide immédiate? <a href="tel:4389003224" style={{ color: ORANGE, fontWeight: 600, textDecoration: "none" }}>438-900-3224</a>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", flexDirection: "column" }}>

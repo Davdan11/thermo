@@ -173,12 +173,16 @@ export function QuoteWizard() {
     setApiError(null);
 
     try {
+      const trackingData = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem("thermomatch_tracking") || "{}") : {};
+
       const response = await fetch("/api/soumission", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
           source: quoteMode === "thermomatch-prefilled" ? "thermomatch" : "direct",
+          tracking: trackingData,
+          draft: draft
         }),
       });
 

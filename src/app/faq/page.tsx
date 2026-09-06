@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { createMetadata } from "@/lib/seo";
-import FAQPageClient from "./FaqClient";
+import { createMetadata, getFaqPageSchema } from "@/lib/seo";
+import FAQPageClient, { FAQ_ITEMS } from "./FaqClient";
 
 export const metadata: Metadata = createMetadata({
   title: "FAQ — Questions fréquentes sur les thermopompes au Québec",
@@ -11,5 +11,18 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function FaqPage() {
-  return <FAQPageClient />;
+  const allQuestions = FAQ_ITEMS.flatMap((cat) =>
+    cat.questions.map((q) => ({ question: q.q, answer: q.a }))
+  );
+  const faqSchema = getFaqPageSchema(allQuestions);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <FAQPageClient />
+    </>
+  );
 }

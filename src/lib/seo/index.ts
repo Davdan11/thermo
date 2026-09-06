@@ -196,3 +196,58 @@ export function getFaqPageSchema(
     })),
   };
 }
+
+/** Service schema */
+export function getServiceSchema(data: {
+  name: string;
+  description: string;
+  serviceType: string;
+  areaServed: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: data.name,
+    description: data.description,
+    serviceType: data.serviceType,
+    areaServed: {
+      "@type": "State",
+      name: data.areaServed,
+    },
+    url: data.url,
+    provider: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    }
+  };
+}
+
+/** Article schema */
+export function getArticleSchema(data: {
+  headline: string;
+  image?: string;
+  datePublished: string;
+  authorName: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: data.headline,
+    image: data.image ? [data.image] : [],
+    datePublished: data.datePublished,
+    author: {
+      "@type": "Organization",
+      name: data.authorName
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/headerlogo.png`
+      }
+    }
+  };
+}
