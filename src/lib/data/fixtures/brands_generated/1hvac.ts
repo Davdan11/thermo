@@ -39,7 +39,7 @@ export const brand_1hvacDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ de 1HVAC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/1hvac-1hvac-aciq.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_1hvacDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ Series de 1HVAC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/1hvac-1hvac-aciq-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_1hvacDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ES Series de 1HVAC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/1hvac-1hvac-es-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_1hvacDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EZ Series de 1HVAC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/1hvac-1hvac-ez-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_1hvacDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Extreme Heat de 1HVAC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/1hvac-1hvac-extreme-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_1hvacDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32 Extreme Heat Unitary de 1HVAC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/1hvac-1hvac-r32-extreme-heat-unitary.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_1hvacDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Unitary Condensing Unit de 1HVAC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/1hvac-1hvac-ultra-heat-unitary-condensing-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

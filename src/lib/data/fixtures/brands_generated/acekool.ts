@@ -8,7 +8,7 @@ export const brand_acekoolDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ACEKOOL",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_acekoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pro de ACEKOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/acekool-acekool-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -75,7 +75,12 @@ export const k2Dataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "k2-thah-airhandler36",
+      modelNumber: "THAH-AIRHANDLER36",
+      brandId: "k2",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -83,7 +88,7 @@ export const k2Dataset: BrandDataset = {
       slug: "k2-standard-wall-single-30000-cfg-1",
       modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-thtu-heatpump24",
-      indoorUnitId: null,
+      indoorUnitId: "k2-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -97,7 +102,7 @@ export const k2Dataset: BrandDataset = {
       slug: "k2-standard-wall-single-30000-cfg-2",
       modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-hp36r410a",
-      indoorUnitId: null,
+      indoorUnitId: "k2-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -111,7 +116,7 @@ export const k2Dataset: BrandDataset = {
       slug: "k2-standard-wall-single-30000-cfg-3",
       modelId: "k2-standard-wall-single-30000",
       outdoorUnitId: "k2-hp36r",
-      indoorUnitId: null,
+      indoorUnitId: "k2-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,

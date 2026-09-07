@@ -137,7 +137,12 @@ export const havellsDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "havells-appareils-sans-conduits",
+      modelNumber: "Appareils sans conduits",
+      brandId: "havells",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -145,7 +150,7 @@ export const havellsDataset: BrandDataset = {
       slug: "havells-standard-wall-single-18000-cfg-1",
       modelId: "havells-standard-wall-single-18000",
       outdoorUnitId: "havells-gsshax7641",
-      indoorUnitId: null,
+      indoorUnitId: "havells-appareils-sans-conduits",
       coolingCapacityMinBtu: 17700,
       coolingCapacityMaxBtu: 17700,
       seer2: null,
@@ -159,7 +164,7 @@ export const havellsDataset: BrandDataset = {
       slug: "havells-standard-wall-single-24000-cfg-1",
       modelId: "havells-standard-wall-single-24000",
       outdoorUnitId: "havells-gsshax7642",
-      indoorUnitId: null,
+      indoorUnitId: "havells-appareils-sans-conduits",
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: null,
@@ -173,7 +178,7 @@ export const havellsDataset: BrandDataset = {
       slug: "havells-standard-wall-single-36000-cfg-1",
       modelId: "havells-standard-wall-single-36000",
       outdoorUnitId: "havells-gsshax7643",
-      indoorUnitId: null,
+      indoorUnitId: "havells-appareils-sans-conduits",
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       seer2: null,
@@ -187,7 +192,7 @@ export const havellsDataset: BrandDataset = {
       slug: "havells-standard-wall-single-36000-cfg-2",
       modelId: "havells-standard-wall-single-36000",
       outdoorUnitId: "havells-gsshax7644",
-      indoorUnitId: null,
+      indoorUnitId: "havells-appareils-sans-conduits",
       coolingCapacityMinBtu: 37000,
       coolingCapacityMaxBtu: 37000,
       seer2: null,

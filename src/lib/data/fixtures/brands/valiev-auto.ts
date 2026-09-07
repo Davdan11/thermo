@@ -97,7 +97,18 @@ export const valievDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "valiev-vwsm-18ir410ahs21",
+      modelNumber: "VWSM-18IR410AHS21",
+      brandId: "valiev",
+      type: "wall-single",
+    },
+    {
+      id: "valiev-vwsm-12ir410ahs21l",
+      modelNumber: "VWSM-12IR410AHS21L",
+      brandId: "valiev",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +116,7 @@ export const valievDataset: BrandDataset = {
       slug: "valiev-standard-wall-single-18000-cfg-1",
       modelId: "valiev-standard-wall-single-18000",
       outdoorUnitId: "valiev-vwsm-18ir410ahs21",
-      indoorUnitId: null,
+      indoorUnitId: "valiev-vwsm-18ir410ahs21",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: null,
@@ -119,7 +130,7 @@ export const valievDataset: BrandDataset = {
       slug: "valiev-standard-wall-single-12000-cfg-1",
       modelId: "valiev-standard-wall-single-12000",
       outdoorUnitId: "valiev-vwsm-12ir410ahs21l",
-      indoorUnitId: null,
+      indoorUnitId: "valiev-vwsm-12ir410ahs21l",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,

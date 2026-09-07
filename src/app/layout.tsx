@@ -3,6 +3,9 @@ import { Inter, Outfit, Geist } from "next/font/google";
 import "./globals.css";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { cn } from "@/lib/utils";
+import { getOrganizationSchema, getWebSiteSchema, SITE_URL } from "@/lib/seo";
+import { UTMProvider } from "@/components/providers/UTMProvider";
+import { Suspense } from "react";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -19,12 +22,19 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    template: "%s | ThermopompesÀVendre.ca",
-    default: "ThermopompesÀVendre.ca — Trouvez la bonne thermopompe. Au bon prix.",
+    template: "%s | Thermopompe A Vendre.ca",
+    default: "Thermopompe A Vendre.ca — Trouvez la bonne thermopompe. Au bon prix.",
   },
   description:
     "Comparez les thermopompes, comprenez les prix et les subventions, et trouvez la machine adaptée à votre propriété au Québec.",
+  openGraph: {
+    type: "website",
+    siteName: "Thermopompe A Vendre.ca",
+    locale: "fr_CA",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
@@ -37,9 +47,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr-CA" data-scroll-behavior="smooth" className={cn(inter.variable, outfit.variable, "font-sans", geist.variable)}>
       <body className="flex flex-col min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getOrganizationSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSiteSchema()) }}
+        />
         <SiteChrome>{children}</SiteChrome>
+        <Suspense fallback={null}>
+          <UTMProvider />
+        </Suspense>
       </body>
     </html>
   );
 }
+
 

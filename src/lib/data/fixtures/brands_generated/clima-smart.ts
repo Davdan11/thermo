@@ -8,7 +8,7 @@ export const brand_clima_smartDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Clima Smart",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_clima_smartDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Clima Smart multi zone de Clima Smart",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/clima-smart-clima-smart-clima-smart-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_clima_smartDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Clima Smart single zone de Clima Smart",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/clima-smart-clima-smart-clima-smart-single-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_clima_smartDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série T-PRO de Clima Smart",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/clima-smart-clima-smart-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

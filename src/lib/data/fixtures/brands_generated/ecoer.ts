@@ -8,7 +8,7 @@ export const brand_ecoerDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ECOER",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TDi Pro de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-tdi-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RTi 2 de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-rti-2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ESi Decades Extreme de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-esi-decades-extreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TDi Select 2 de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-tdi-select-2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série RTi de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-rti.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SDi Extreme 2 de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-sdi-extreme-2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SDi Pro 2 de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-sdi-pro-2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_ecoerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SDi Decades Extreme de ECOER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ecoer-ecoer-sdi-decades-extreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

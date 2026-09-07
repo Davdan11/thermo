@@ -8,7 +8,7 @@ export const brand_bestcoldDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Bestcold",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_bestcoldDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Gable Series de Bestcold",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bestcold-bestcold-gable-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

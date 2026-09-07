@@ -8,7 +8,7 @@ export const brand_live_coolDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Live cool",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_live_coolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-pro de Live cool",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/live-cool-live-cool-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_live_coolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série REX de Live cool",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/live-cool-live-cool-rex.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

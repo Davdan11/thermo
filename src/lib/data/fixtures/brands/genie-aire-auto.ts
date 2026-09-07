@@ -182,7 +182,36 @@ export const genieaireDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "genie-aire-ga-09hp115v-i",
+      modelNumber: "GA-09HP115V/I",
+      brandId: "genie-aire",
+      type: "wall-single",
+    },
+    {
+      id: "genie-aire-ga-12hp115v-i",
+      modelNumber: "GA-12HP115V/I",
+      brandId: "genie-aire",
+      type: "wall-single",
+    },
+    {
+      id: "genie-aire-ga-12hp230v-i",
+      modelNumber: "GA-12HP230V/I",
+      brandId: "genie-aire",
+      type: "wall-single",
+    },
+    {
+      id: "genie-aire-ga-18hp230v-i",
+      modelNumber: "GA-18HP230V/I",
+      brandId: "genie-aire",
+      type: "wall-single",
+    },
+    {
+      id: "genie-aire-ga-24hp230v-i",
+      modelNumber: "GA-24HP230V/I",
+      brandId: "genie-aire",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -190,7 +219,7 @@ export const genieaireDataset: BrandDataset = {
       slug: "genie-aire-ga-series-wall-single-9000-cfg-1",
       modelId: "genie-aire-ga-series-wall-single-9000",
       outdoorUnitId: "genie-aire-ga-09hp115v-o",
-      indoorUnitId: null,
+      indoorUnitId: "genie-aire-ga-09hp115v-i",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 21.5,
@@ -204,7 +233,7 @@ export const genieaireDataset: BrandDataset = {
       slug: "genie-aire-standard-wall-single-12000-cfg-1",
       modelId: "genie-aire-standard-wall-single-12000",
       outdoorUnitId: "genie-aire-ga-12hp115v-o",
-      indoorUnitId: null,
+      indoorUnitId: "genie-aire-ga-12hp115v-i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -218,7 +247,7 @@ export const genieaireDataset: BrandDataset = {
       slug: "genie-aire-standard-wall-single-12000-cfg-2",
       modelId: "genie-aire-standard-wall-single-12000",
       outdoorUnitId: "genie-aire-ga-12hp230v-o",
-      indoorUnitId: null,
+      indoorUnitId: "genie-aire-ga-12hp230v-i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -232,7 +261,7 @@ export const genieaireDataset: BrandDataset = {
       slug: "genie-aire-ga-series-wall-single-18000-cfg-1",
       modelId: "genie-aire-ga-series-wall-single-18000",
       outdoorUnitId: "genie-aire-ga-18hp230v-o",
-      indoorUnitId: null,
+      indoorUnitId: "genie-aire-ga-18hp230v-i",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 19.5,
@@ -246,7 +275,7 @@ export const genieaireDataset: BrandDataset = {
       slug: "genie-aire-standard-wall-single-24000-cfg-1",
       modelId: "genie-aire-standard-wall-single-24000",
       outdoorUnitId: "genie-aire-ga-24hp230v-o",
-      indoorUnitId: null,
+      indoorUnitId: "genie-aire-ga-24hp230v-i",
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: null,

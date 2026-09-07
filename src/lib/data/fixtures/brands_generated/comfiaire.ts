@@ -8,7 +8,7 @@ export const brand_comfiaireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ComfiAire",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_comfiaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Zone de ComfiAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfiaire-comfiaire-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_comfiaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HI-ULTRA HD de ComfiAire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfiaire-comfiaire-hi-ultra-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

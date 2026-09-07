@@ -176,7 +176,24 @@ export const maestraleDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "maestrale-tsa12maqui1j0x24-1",
+      modelNumber: "TSA12MAQUI1J0X24-1",
+      brandId: "maestrale",
+      type: "wall-single",
+    },
+    {
+      id: "maestrale-tsa18maqui1j0x24-1",
+      modelNumber: "TSA18MAQUI1J0X24-1",
+      brandId: "maestrale",
+      type: "wall-single",
+    },
+    {
+      id: "maestrale-appareils-sans-conduits",
+      modelNumber: "Appareils sans conduits",
+      brandId: "maestrale",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -184,7 +201,7 @@ export const maestraleDataset: BrandDataset = {
       slug: "maestrale-standard-wall-single-12000-cfg-1",
       modelId: "maestrale-standard-wall-single-12000",
       outdoorUnitId: "maestrale-tsa12maqui1j0x24-0",
-      indoorUnitId: null,
+      indoorUnitId: "maestrale-tsa12maqui1j0x24-1",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -198,7 +215,7 @@ export const maestraleDataset: BrandDataset = {
       slug: "maestrale-standard-wall-single-18000-cfg-1",
       modelId: "maestrale-standard-wall-single-18000",
       outdoorUnitId: "maestrale-tsa18maqui1j0x24-0",
-      indoorUnitId: null,
+      indoorUnitId: "maestrale-tsa18maqui1j0x24-1",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: null,
@@ -212,7 +229,7 @@ export const maestraleDataset: BrandDataset = {
       slug: "maestrale-boreas-series-wall-single-24000-cfg-1",
       modelId: "maestrale-boreas-series-wall-single-24000",
       outdoorUnitId: "maestrale-tsb24mbor3j0x24",
-      indoorUnitId: null,
+      indoorUnitId: "maestrale-appareils-sans-conduits",
       coolingCapacityMinBtu: 27000,
       coolingCapacityMaxBtu: 27000,
       seer2: 24,
@@ -226,7 +243,7 @@ export const maestraleDataset: BrandDataset = {
       slug: "maestrale-boreas-series-wall-single-36000-cfg-1",
       modelId: "maestrale-boreas-series-wall-single-36000",
       outdoorUnitId: "maestrale-tsb36mbor4j0x24",
-      indoorUnitId: null,
+      indoorUnitId: "maestrale-appareils-sans-conduits",
       coolingCapacityMinBtu: 35000,
       coolingCapacityMaxBtu: 35000,
       seer2: 22.5,

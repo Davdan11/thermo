@@ -8,7 +8,7 @@ export const brand_westinghouseDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Westinghouse",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_westinghouseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi UNI de Westinghouse",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/westinghouse-westinghouse-hi-uni.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_westinghouseDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série S**SZB2 de Westinghouse",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/westinghouse-westinghouse-sszb2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

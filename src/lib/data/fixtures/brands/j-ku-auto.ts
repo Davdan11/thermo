@@ -131,7 +131,24 @@ export const jkuDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "j-ku-jks09hp230v1xe",
+      modelNumber: "JKS09HP230V1XE",
+      brandId: "j-ku",
+      type: "wall-single",
+    },
+    {
+      id: "j-ku-jks12hp230v1xe",
+      modelNumber: "JKS12HP230V1XE",
+      brandId: "j-ku",
+      type: "wall-single",
+    },
+    {
+      id: "j-ku-jks24hp230v1xe",
+      modelNumber: "JKS24HP230V1XE",
+      brandId: "j-ku",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -139,7 +156,7 @@ export const jkuDataset: BrandDataset = {
       slug: "j-ku-standard-wall-single-9000-cfg-1",
       modelId: "j-ku-standard-wall-single-9000",
       outdoorUnitId: "j-ku-jks09hp230v1xc",
-      indoorUnitId: null,
+      indoorUnitId: "j-ku-jks09hp230v1xe",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: null,
@@ -153,7 +170,7 @@ export const jkuDataset: BrandDataset = {
       slug: "j-ku-standard-wall-single-12000-cfg-1",
       modelId: "j-ku-standard-wall-single-12000",
       outdoorUnitId: "j-ku-jks12hp230v1xc",
-      indoorUnitId: null,
+      indoorUnitId: "j-ku-jks12hp230v1xe",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -167,7 +184,7 @@ export const jkuDataset: BrandDataset = {
       slug: "j-ku-standard-wall-single-24000-cfg-1",
       modelId: "j-ku-standard-wall-single-24000",
       outdoorUnitId: "j-ku-jks24hp230v1xc",
-      indoorUnitId: null,
+      indoorUnitId: "j-ku-jks24hp230v1xe",
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 23000,
       seer2: null,

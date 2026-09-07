@@ -63,7 +63,12 @@ export const ultramaxiairDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "ultra-maxi-air-lsab-18hrdn1",
+      modelNumber: "LSAB-18HRDN1",
+      brandId: "ultra-maxi-air",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -71,7 +76,7 @@ export const ultramaxiairDataset: BrandDataset = {
       slug: "ultra-maxi-air-standard-wall-single-18000-cfg-1",
       modelId: "ultra-maxi-air-standard-wall-single-18000",
       outdoorUnitId: "ultra-maxi-air-lsab-18hrdn1",
-      indoorUnitId: null,
+      indoorUnitId: "ultra-maxi-air-lsab-18hrdn1",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: null,

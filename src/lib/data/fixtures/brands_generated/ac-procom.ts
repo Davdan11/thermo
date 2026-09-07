@@ -8,7 +8,7 @@ export const brand_ac_procomDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AC PRO.COM",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ac_procomDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LOMO Plus de AC PRO.COM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-procom-ac-procom-lomo-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ac_procomDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LOMO 25 SEER de AC PRO.COM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-procom-ac-procom-lomo-25-seer.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ac_procomDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Free Match de AC PRO.COM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-procom-ac-procom-free-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

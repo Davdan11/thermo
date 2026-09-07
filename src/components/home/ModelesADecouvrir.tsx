@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const PRODUCTS = [
   {
-    brandLogo: "/images/marques/logo-mitsubishi-electric-bleu-nuit.png",
+    brandLogo: "/images/marques/logo-mitsubishi-electric-bleu-nuit-cropped.png",
     brandName: "Mitsubishi Electric",
     modelName: "Zuba 2.0 Cold Climate",
     seer: "27,5",
@@ -15,7 +15,7 @@ const PRODUCTS = [
     href: "/thermopompes/mitsubishi-zuba-2-cold-climate",
   },
   {
-    brandLogo: "/images/marques/logo-daikin-bleu-nuit.png",
+    brandLogo: "/images/marques/logo-daikin-bleu-nuit-cropped.png",
     brandName: "Daikin",
     modelName: "Fit Cold Climate",
     seer: "28,0",
@@ -24,7 +24,7 @@ const PRODUCTS = [
     href: "/thermopompes/daikin-fit-cold-climate",
   },
   {
-    brandLogo: "/images/marques/logo-fujitsu-bleu-nuit.png",
+    brandLogo: "/images/marques/logo-fujitsu-bleu-nuit-cropped.png",
     brandName: "Fujitsu",
     modelName: "Halcyon XLTH",
     seer: "24,0",
@@ -84,7 +84,7 @@ export function ModelesADecouvrir() {
   }, []);
 
   return (
-    <section ref={ref} style={{ backgroundColor: "#f7f5f0" }} className="py-12 sm:py-16 lg:py-20">
+    <section ref={ref} style={{ backgroundColor: "#f7f5f0" }} className="py-10 sm:py-12 lg:py-14">
       <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 lg:gap-16 items-start">
 
@@ -93,7 +93,7 @@ export function ModelesADecouvrir() {
             <p style={{ color: "#e54b17", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", marginBottom: 16 }}>
               MODÈLES À DÉCOUVRIR
             </p>
-            <h2 style={{ color: "#172126", fontSize: "clamp(24px, 2.2vw, 32px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 20px", letterSpacing: "-0.01em" }}>
+            <h2 style={{ color: "#172126", fontSize: "clamp(24px, 2.2vw, 32px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 20px", letterSpacing: "-0.01em", fontStyle: "italic" }}>
               Une sélection pensée<br />pour le climat<br />québécois.
             </h2>
             {/* Orange accent bar */}
@@ -130,8 +130,8 @@ export function ModelesADecouvrir() {
                 }}
               >
                 {/* Brand logo + model name */}
-                <div style={{ padding: "18px 20px 0" }}>
-                  <div style={{ position: "relative", width: 90, height: 28, marginBottom: 8 }}>
+                <div style={{ padding: "16px 20px 0" }}>
+                  <div style={{ position: "relative", width: 140, height: 40, marginBottom: 8 }}>
                     <Image
                       src={p.brandLogo}
                       alt={p.brandName}

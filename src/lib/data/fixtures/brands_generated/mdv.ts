@@ -8,7 +8,7 @@ export const brand_mdvDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MDV",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSEP Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msep-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSEP seris de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msep-seris.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSOP series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msop-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MFA Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mfa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M3O Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m3o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSAG series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msag-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M4O series | MSEP seris | MTI series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m4o-series-msep-seris-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSEPB de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msepb.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M4O Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m4o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MS11M series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-ms11m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSAB Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msab-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M40 Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m40-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M6O Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m6o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCB Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mcb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCBU series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mcbu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CS Series | MSEP seris | MTIU Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-cs-series-msep-seris-mtiu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M30 Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m30-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MSEP seris | MTIU Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msep-seris-mtiu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MVX Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mvx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M3O series | MSAG series | MTI series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m3o-series-msag-series-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CS Series | MSEP seris de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-cs-series-msep-seris.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M50 Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m50-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -464,7 +464,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MUE series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mue-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M2O series | MSEP seris | MTI series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m2o-series-msep-seris-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -498,7 +498,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MCA series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mca-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -515,7 +515,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M2O Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m2o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -549,7 +549,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M60 Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m60-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -566,7 +566,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MVD Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mvd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -583,7 +583,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M5O series | MSEP seris | MTI series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m5o-series-msep-seris-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -600,7 +600,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CS Series | MSAB series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-cs-series-msab-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -617,7 +617,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M3OK series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m3ok-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -634,7 +634,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MT Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mt-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -651,7 +651,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOX Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mox-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -668,7 +668,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MTI Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -685,7 +685,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M5O series | MSAG series | MTI series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m5o-series-msag-series-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -702,7 +702,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MS Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-ms-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -736,7 +736,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M3OJ series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m3oj-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -753,7 +753,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MVB Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mvb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -770,7 +770,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M4O series | MSAG series | MTI series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m4o-series-msag-series-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -787,7 +787,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M2O series | MSAG series | MTI series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m2o-series-msag-series-mti-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -804,7 +804,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CS Series | MS Series | MTIU Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-cs-series-ms-series-mtiu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -821,7 +821,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MTJ Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mtj-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -838,7 +838,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSAGF de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msagf.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -855,7 +855,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MTIU Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mtiu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -872,7 +872,7 @@ export const brand_mdvDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M4OG series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-m4og-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -889,7 +889,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSEPD de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-msepd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -906,7 +906,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MVC series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mvc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -923,7 +923,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MVBE Series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mvbe-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -940,7 +940,7 @@ export const brand_mdvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MVBL series de MDV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mdv-mdv-mvbl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

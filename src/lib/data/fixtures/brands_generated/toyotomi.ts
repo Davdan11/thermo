@@ -8,7 +8,7 @@ export const brand_toyotomiDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Toyotomi",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_classicDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour CLASSIC",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_classicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MM Series de CLASSIC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/classic-classic-mm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_classicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M series de CLASSIC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/classic-classic-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_classicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MR Series de CLASSIC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/classic-classic-mr-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_classicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Zeno de CLASSIC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/classic-classic-zeno.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_classicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série All MATCH de CLASSIC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/classic-classic-all-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

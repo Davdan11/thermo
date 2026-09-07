@@ -125,7 +125,30 @@ export const nortekDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "nortek-gmh24-msk4dh1",
+      modelNumber: "GMH24-**MSK4DH1",
+      brandId: "nortek",
+      type: "central-ducted",
+    },
+    {
+      id: "nortek-gmh-36msk4dh1",
+      modelNumber: "GMH**-36MSK4DH1",
+      brandId: "nortek",
+      type: "central-ducted",
+    },
+    {
+      id: "nortek-gmh48-msk4dh1",
+      modelNumber: "GMH48-**MSK4DH1",
+      brandId: "nortek",
+      type: "central-ducted",
+    },
+    {
+      id: "nortek-gmh-60msk4dh1",
+      modelNumber: "GMH**-60MSK4DH1",
+      brandId: "nortek",
+      type: "central-ducted",
+    }
   ],
   configurations: [
     {
@@ -133,7 +156,7 @@ export const nortekDataset: BrandDataset = {
       slug: "nortek-ultra-side-discharge-central-ducted-24000-cfg-1",
       modelId: "nortek-ultra-side-discharge-central-ducted-24000",
       outdoorUnitId: "nortek-gxh24-36msk4dh",
-      indoorUnitId: null,
+      indoorUnitId: "nortek-gmh24-msk4dh1",
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: 17,
@@ -147,7 +170,7 @@ export const nortekDataset: BrandDataset = {
       slug: "nortek-ultra-side-discharge-central-ducted-36000-cfg-1",
       modelId: "nortek-ultra-side-discharge-central-ducted-36000",
       outdoorUnitId: "nortek-gxh24-36msk4dh",
-      indoorUnitId: null,
+      indoorUnitId: "nortek-gmh-36msk4dh1",
       coolingCapacityMinBtu: 34000,
       coolingCapacityMaxBtu: 34000,
       seer2: 16,
@@ -161,7 +184,7 @@ export const nortekDataset: BrandDataset = {
       slug: "nortek-ultra-side-discharge-central-ducted-48000-cfg-1",
       modelId: "nortek-ultra-side-discharge-central-ducted-48000",
       outdoorUnitId: "nortek-gxh48-60msk4dh",
-      indoorUnitId: null,
+      indoorUnitId: "nortek-gmh48-msk4dh1",
       coolingCapacityMinBtu: 48000,
       coolingCapacityMaxBtu: 48000,
       seer2: 17,
@@ -175,7 +198,7 @@ export const nortekDataset: BrandDataset = {
       slug: "nortek-ultra-side-discharge-central-ducted-48000-cfg-2",
       modelId: "nortek-ultra-side-discharge-central-ducted-48000",
       outdoorUnitId: "nortek-gxh48-60msk4dh",
-      indoorUnitId: null,
+      indoorUnitId: "nortek-gmh-60msk4dh1",
       coolingCapacityMinBtu: 54000,
       coolingCapacityMaxBtu: 54000,
       seer2: 16,

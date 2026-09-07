@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { registry } from "@/lib/data/registry";
+import { useState, useMemo, useEffect } from "react";
+
 import { Input } from "@/components/ui/Input";
 
 interface ProductSearchProps {
@@ -11,26 +11,34 @@ interface ProductSearchProps {
 
 export function ProductSearch({ value, onChange }: ProductSearchProps) {
   const [query, setQuery] = useState("");
+  const [options, setOptions] = useState<{id: string, label: string}[]>([]);
+  const [selectedOption, setSelectedOption] = useState<{id: string, label: string} | null>(null);
 
-  const options = useMemo(() => {
-    return registry.configurations.map(c => {
-      const model = registry.modelById.get(c.modelId);
-      const brand = model ? registry.brandById.get(model.brandId) : null;
-      return {
-        id: c.id,
-        label: `${brand?.name ?? ""} ${model?.name ?? ""} (${c.slug})`,
-        searchable: `${brand?.name ?? ""} ${model?.name ?? ""} ${c.slug}`.toLowerCase(),
-      };
-    });
-  }, []);
+  useEffect(() => {
+    // Fetch default or searched options
+    const fetchOptions = async () => {
+      try {
+        const res = await fetch(`/api/thermomatch/search?q=${encodeURIComponent(query)}`);
+        if (res.ok) {
+          const data = await res.json();
+          setOptions(data);
+          
+          if (value && !selectedOption) {
+            const match = data.find((d: any) => d.id === value);
+            if (match) setSelectedOption(match);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to search products", err);
+      }
+    };
+    
+    // Simple debounce
+    const timeout = setTimeout(fetchOptions, 300);
+    return () => clearTimeout(timeout);
+  }, [query, value, selectedOption]);
 
-  const filteredOptions = useMemo(() => {
-    if (!query) return options.slice(0, 5); // Show first 5 by default
-    const lowerQuery = query.toLowerCase();
-    return options.filter(o => o.searchable.includes(lowerQuery)).slice(0, 10);
-  }, [query, options]);
-
-  const selectedOption = options.find(o => o.id === value);
+  const filteredOptions = options;
 
   return (
     <div className="space-y-4">

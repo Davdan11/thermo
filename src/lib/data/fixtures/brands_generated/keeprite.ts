@@ -39,7 +39,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC Series de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ProComfort 23 VS HP de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-procomfort-23-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ProComfort 20 VS HP de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-procomfort-20-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série QuietComfort 19 SEER2 VS HP de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-quietcomfort-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Mainline 18 SEER2 HP de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-mainline-18-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCS Series de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-dlcs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_keepriteDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Keeprite",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/keeprite-keeprite-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

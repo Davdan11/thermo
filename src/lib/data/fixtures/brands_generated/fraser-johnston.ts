@@ -8,7 +8,7 @@ export const brand_fraser_johnstonDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Fraser-Johnston",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_fraser_johnstonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LX SERIES de Fraser-Johnston",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fraser-johnston-fraser-johnston-lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_fraser_johnstonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HMH7 de Fraser-Johnston",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fraser-johnston-fraser-johnston-hmh7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_fraser_johnstonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série XD5 de Fraser-Johnston",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fraser-johnston-fraser-johnston-xd5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_fraser_johnstonDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RELIANT de Fraser-Johnston",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/fraser-johnston-fraser-johnston-reliant.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

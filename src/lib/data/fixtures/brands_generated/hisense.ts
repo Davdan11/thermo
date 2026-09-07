@@ -39,7 +39,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi-PRO de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi-ULTRA de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi MULTI Xtreme de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-multi-xtreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HI-EDGE de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-edge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi UNI de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-uni.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série SmartSense de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-smartsense.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi-PRO HD de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-pro-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HI-PAK de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-pak.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi-Ultra HD de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-ultra-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série USIM de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-usim.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi PRO HD-Coil de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-pro-hd-coil.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi ULTRA HD-Coil de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-ultra-hd-coil.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_hisenseDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi Uni-Coil de Hisense",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hisense-hisense-hi-uni-coil.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

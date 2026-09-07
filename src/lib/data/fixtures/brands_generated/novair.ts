@@ -39,7 +39,7 @@ export const brand_novairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LEA SERIES de NOVAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/novair-novair-lea-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

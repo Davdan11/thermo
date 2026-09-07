@@ -8,7 +8,7 @@ export const brand_nortek_global_hvac_llcDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour NORTEK GLOBAL HVAC LLC",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_nortek_global_hvac_llcDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NORTEK GLOBAL HVAC SH4BF SERIES de NORTEK GLOBAL HVAC LLC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/nortek-global-hvac-llc-nortek-global-hvac-llc-nortek-global-hvac-sh4bf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_nortek_global_hvac_llcDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NORTEK GLOBAL HVAC SH3BF SERIES de NORTEK GLOBAL HVAC LLC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/nortek-global-hvac-llc-nortek-global-hvac-llc-nortek-global-hvac-sh3bf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

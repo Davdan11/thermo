@@ -8,7 +8,7 @@ export const brand_airtempDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Airtemp",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série (24-26 SEER2) Minisplits de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-24-26-seer2-minisplits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Lomo de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-lomo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Indoors Eight-way Compact Cassettes de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-multizone-indoors-eight-way-compact-cassettes.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Outdoors de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-multizone-outdoors.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Flex Match de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-flex-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série (19-20.5 SEER2) Minisplits de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-19-205-seer2-minisplits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_airtempDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Side Discharge de Airtemp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airtemp-airtemp-ultra-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

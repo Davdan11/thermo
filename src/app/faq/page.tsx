@@ -1,0 +1,28 @@
+import type { Metadata } from "next";
+import { createMetadata, getFaqPageSchema } from "@/lib/seo";
+import FAQPageClient, { FAQ_ITEMS } from "./FaqClient";
+
+export const metadata: Metadata = createMetadata({
+  title: "FAQ — Questions fréquentes sur les thermopompes au Québec",
+  description:
+    "Réponses aux questions les plus fréquentes sur les thermopompes : fonctionnement, BTU, SEER2, HSPF2, prix, subventions, installation et entretien au Québec.",
+  alternates: { canonical: "/faq" },
+  robots: { index: true, follow: true },
+});
+
+export default function FaqPage() {
+  const allQuestions = FAQ_ITEMS.flatMap((cat) =>
+    cat.questions.map((q) => ({ question: q.q, answer: q.a }))
+  );
+  const faqSchema = getFaqPageSchema(allQuestions);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <FAQPageClient />
+    </>
+  );
+}

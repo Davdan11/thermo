@@ -19,7 +19,7 @@ export const mainlineDataset: BrandDataset = {
     countryOfOrigin: "US",
     websiteUrl: "https://hvacmainline.com",
     description: "Mainline HVAC offre les séries Nexus et Nexus Ultra Heat avec réfrigérant R-454B. Conçues pour le climat froid canadien avec chauffage jusqu'à -30 °C.",
-    activeInQuebec: true,
+    activeInQuebec: false,
     status: "published",
     createdAt: NOW,
     updatedAt: NOW,

@@ -39,7 +39,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Apex Multi Match Hyper Heat | Apex Multi Match Series de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-apex-multi-match-hyper-heat-apex-multi-match-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série free match 27S de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-free-match-27s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série free match 27S HT de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-free-match-27s-ht.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série free matcht 24S R32 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-free-matcht-24s-r32.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EXHEAT de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-exheat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-Pro-25ES de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-t-pro-25es.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-pro de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MULIT ZONE de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-mulit-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BREEZEIN de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-breezein.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TUM24 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-tum24.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série P7 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-p7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VoxIN de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-voxin.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CASSETTE-single de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-cassette-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32-Cassette-21S de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-r32-cassette-21s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Elite de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-elite.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_tclDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série VoxIn 21S de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-voxin-21s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Savein 20S de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-savein-20s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32-X-21S de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-r32-x-21s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-Plus de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-t-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CELLING FLOOR-single de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-celling-floor-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DUCT-single de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-duct-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32-Celing Floor-21S de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-r32-celing-floor-21s.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -498,7 +498,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Apex XS Series Unitary HP de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-apex-xs-series-unitary-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -515,7 +515,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série IVS 18 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-ivs-18.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -549,7 +549,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AHUD24 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-ahud24.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -566,7 +566,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TOP 24 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-top-24.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -583,7 +583,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Front return de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-front-return.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -600,7 +600,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TH24 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-th24.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -617,7 +617,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série THH2 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-thh2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -634,7 +634,7 @@ export const brand_tclDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TS1 de TCL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tcl-tcl-ts1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

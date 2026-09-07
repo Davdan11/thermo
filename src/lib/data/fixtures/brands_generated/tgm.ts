@@ -8,7 +8,7 @@ export const brand_tgmDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour TGM",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_tgmDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M series de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_tgmDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série C series de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_tgmDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MM Series de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-mm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_tgmDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MRS Series de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-mrs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_tgmDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MR Series de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-mr-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_tgmDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Zeno de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-zeno.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_tgmDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série All MATCH de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-all-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_tgmDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Flexx de TGM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tgm-tgm-flexx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

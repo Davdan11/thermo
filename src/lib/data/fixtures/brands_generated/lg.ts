@@ -39,7 +39,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAL091A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusal091a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LAU090HYV3 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lau090hyv3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LAU120HYV3 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lau120hyv3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAL121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusal121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAL151A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusal151a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA301A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa301a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LAU150HYV3 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lau150hyv3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAL181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusal181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LAU180HYV3 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lau180hyv3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAB091A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusab091a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA361A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa361a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ARUM048GSS5 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-arum048gss5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ZRUM048GSS0 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-zrum048gss0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAB181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusab181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ARUB060GSS4 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-arub060gss4.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ZRUM060GSS0 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-zrum060gss0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LAU240HYV3 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lau240hyv3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ARUN060GSS4 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-arun060gss4.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAL241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusal241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ARUM036GSS5 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-arum036gss5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMU183HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu183hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUMXB181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxb181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -464,7 +464,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAB121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusab121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMU243HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu243hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -498,7 +498,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXB091A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxb091a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -515,7 +515,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -532,7 +532,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAP241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusap241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -549,7 +549,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUMXA361A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxa361a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -566,7 +566,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUMXB301A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxb301a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -583,7 +583,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LSU120HSV5 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lsu120hsv5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -600,7 +600,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXB361A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxb361a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -617,7 +617,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LSU181HSV5 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lsu181hsv5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -634,7 +634,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LSU243HLV3 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lsu243hlv3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -651,7 +651,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LMU361HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu361hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -668,7 +668,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMU303HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu303hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -685,7 +685,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXB121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxb121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -702,7 +702,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LMU421HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu421hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -719,7 +719,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA421A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa421a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -736,7 +736,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU360HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu360hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -753,7 +753,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMU363HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu363hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -770,7 +770,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUMXA421A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxa421a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -787,7 +787,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUMXB361A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxb361a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -804,7 +804,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXB481A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxb481a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -821,7 +821,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD181C de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad181c.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -855,7 +855,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXB421A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxb421a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -872,7 +872,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU240HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu240hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -889,7 +889,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU360HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu360hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -906,7 +906,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU090HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu090hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -923,7 +923,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LMU180HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu180hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -940,7 +940,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LMU240HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu240hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -974,7 +974,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAZ181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusaz181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -991,7 +991,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUMXA241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxa241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1008,7 +1008,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAZ091A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusaz091a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1025,7 +1025,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAC181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusac181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1042,7 +1042,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD091A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad091a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1059,7 +1059,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD091D de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad091d.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1076,7 +1076,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD091C de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad091c.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1093,7 +1093,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAC091A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusac091a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1110,7 +1110,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1144,7 +1144,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAC091B de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusac091b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1161,7 +1161,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMU483HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu483hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1178,7 +1178,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA481A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa481a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1212,7 +1212,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMU543HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu543hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1246,7 +1246,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU180HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu180hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1263,7 +1263,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXB181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxb181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1280,7 +1280,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LMU480HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu480hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1314,7 +1314,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUMXA481A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxa481a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1331,7 +1331,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUMXB481A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxb481a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1365,7 +1365,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1399,7 +1399,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ZRUN024GSS0 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-zrun024gss0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1416,7 +1416,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUMXA301A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kumxa301a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1467,7 +1467,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD121D de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad121d.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1484,7 +1484,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD121B de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad121b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1501,7 +1501,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAC121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusac121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1518,7 +1518,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAC121B de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusac121b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1552,7 +1552,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LMU300HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-lmu300hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1569,7 +1569,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAZ241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusaz241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1586,7 +1586,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSAD121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1620,7 +1620,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAZ122A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusaz122a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1637,7 +1637,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAZ121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusaz121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1654,7 +1654,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAD241C de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad241c.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1671,7 +1671,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAD241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusad241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1688,7 +1688,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU240HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu240hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1705,7 +1705,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU180HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu180hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1722,7 +1722,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU420HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu420hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1739,7 +1739,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU420HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu420hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1756,7 +1756,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA482A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa482a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1773,7 +1773,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA422A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa422a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1790,7 +1790,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSUB601A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusub601a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1807,7 +1807,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSUB421A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusub421a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1824,7 +1824,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSUB481A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusub481a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1841,7 +1841,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ARUN024GSS4 de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-arun024gss4.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1858,7 +1858,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSUB121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusub121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1875,7 +1875,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSUB241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusub241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1909,7 +1909,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSUB361A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusub361a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1926,7 +1926,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSUB181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusub181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1943,7 +1943,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAE181A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusae181a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1960,7 +1960,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAE241A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusae241a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1977,7 +1977,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAE091A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusae091a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -1994,7 +1994,7 @@ export const brand_lgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série KUSAE121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusae121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -2011,7 +2011,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU480HHV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu480hhv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -2028,7 +2028,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXB601A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxb601a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -2045,7 +2045,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU601HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu601hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -2062,7 +2062,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KUSXA121A de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-kusxa121a.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -2079,7 +2079,7 @@ export const brand_lgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUU480HV de LG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lg-lg-luu480hv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

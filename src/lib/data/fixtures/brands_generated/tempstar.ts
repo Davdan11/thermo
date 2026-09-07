@@ -39,7 +39,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC Series de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SmartSense 23 VS HP de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-smartsense-23-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SmartSense 20 VS HP de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-smartsense-20-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série QuietComfort 19 SEER2 VS HP de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-quietcomfort-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Mainline 18 SEER2 HP de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-mainline-18-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCS Series de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-dlcs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Dlseries de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-dlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série SMARTCOMFORT DELUXE 18 VS HP de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-smartcomfort-deluxe-18-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_tempstarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de Tempstar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tempstar-tempstar-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

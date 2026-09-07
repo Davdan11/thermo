@@ -97,7 +97,18 @@ export const danbyDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "danby-das090agbahwdb-i",
+      modelNumber: "DAS090AGBAHWDB-I",
+      brandId: "danby",
+      type: "wall-single",
+    },
+    {
+      id: "danby-das120agbahwdb-i",
+      modelNumber: "DAS120AGBAHWDB-I",
+      brandId: "danby",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +116,7 @@ export const danbyDataset: BrandDataset = {
       slug: "danby-da-series-wall-single-9000-cfg-1",
       modelId: "danby-da-series-wall-single-9000",
       outdoorUnitId: "danby-das090agbahwdb-o",
-      indoorUnitId: null,
+      indoorUnitId: "danby-das090agbahwdb-i",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 24.6,
@@ -119,7 +130,7 @@ export const danbyDataset: BrandDataset = {
       slug: "danby-da-series-wall-single-12000-cfg-1",
       modelId: "danby-da-series-wall-single-12000",
       outdoorUnitId: "danby-das120agbahwdb-o",
-      indoorUnitId: null,
+      indoorUnitId: "danby-das120agbahwdb-i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 23.1,

@@ -8,7 +8,7 @@ export const brand_northco_climatcaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour NORTHCO CLIMAT.CA",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_northco_climatcaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Extreme serie de NORTHCO CLIMAT.CA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/northco-climatca-northco-climatca-extreme-serie.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

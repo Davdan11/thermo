@@ -8,7 +8,7 @@ export const brand_infinitylivingDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour InfinityLiving",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_infinitylivingDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EZ Series de InfinityLiving",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/infinityliving-infinityliving-ez-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_infinitylivingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ES SERIES de InfinityLiving",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/infinityliving-infinityliving-es-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

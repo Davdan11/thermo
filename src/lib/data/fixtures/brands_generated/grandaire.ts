@@ -39,7 +39,7 @@ export const brand_grandaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série D5F Series de Grandaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/grandaire-grandaire-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_grandaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Grandaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/grandaire-grandaire-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_grandaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série W5H Series de Grandaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/grandaire-grandaire-w5h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_grandaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de Grandaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/grandaire-grandaire-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_grandaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WDlseries de Grandaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/grandaire-grandaire-wdlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_grandaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 17 SEER HP de Grandaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/grandaire-grandaire-2-stage-17-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_grandaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 HP de Grandaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/grandaire-grandaire-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

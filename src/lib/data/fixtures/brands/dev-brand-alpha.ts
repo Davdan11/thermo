@@ -19,7 +19,7 @@ export const brandAlphaDataset: BrandDataset = {
     countryOfOrigin: "CA",
     websiteUrl: null,
     description: "Marque fictive de développement.",
-    activeInQuebec: true,
+    activeInQuebec: false,
     status: "published",
     createdAt: NOW,
     updatedAt: NOW,
@@ -31,7 +31,7 @@ export const brandAlphaDataset: BrandDataset = {
       id: "src-alpha-dev",
       type: "internal",
       title: "DEV — Données fictives Alpha",
-      organization: "ThermopompesÀVendre.ca",
+      organization: "Thermopompe A Vendre.ca",
       url: null,
       consultedAt: NOW,
       language: "fr",
@@ -307,4 +307,5 @@ export const brandAlphaDataset: BrandDataset = {
     },
   ],
 };
+
 

@@ -39,7 +39,7 @@ export const brand_direct_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DIRM series de DIRECT AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/direct-air-direct-air-dirm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_direct_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de DIRECT AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/direct-air-direct-air-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_direct_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DIR Series de DIRECT AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/direct-air-direct-air-dir-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_direct_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DIRM4 Series de DIRECT AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/direct-air-direct-air-dirm4-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_direct_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MO series de DIRECT AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/direct-air-direct-air-mo-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_direct_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DIRM Series | DIRM4 Series de DIRECT AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/direct-air-direct-air-dirm-series-dirm4-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

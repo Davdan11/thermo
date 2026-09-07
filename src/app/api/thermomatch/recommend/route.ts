@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 import { loadThermoCatalog, runThermoMatch, validateMatchInput } from "@/lib/thermomatch-engine/src/index";
 import type { MatchPolicy, MatchInput, MatchGoal } from "@/lib/thermomatch-engine/src/types";
 import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
+import { lookupLogisVert } from "@/lib/subsidies/logisvert-official";
 
 // Brand reputation context — what we say to clients about each brand
 const BRAND_CONTEXT: Record<string, { reputation: string; keyStrength: string }> = {
@@ -116,6 +117,9 @@ function buildClientReasons(
   return reasons;
 }
 
+import { registry } from "@/lib/data/registry";
+import { CatalogProduct, CertifiedPairing } from "@/lib/thermomatch-engine/src/types";
+
 export async function POST(req: Request) {
   try {
     const { answers } = await req.json();
@@ -145,22 +149,20 @@ export async function POST(req: Request) {
       distribution = "ducts";
     }
 
-    // ── Zone logic — intelligent architecture, not just a number ──────────
-    // KEY RULE: Never propose a single wall unit for a multi-floor home.
-    // 2+ floors without ducts = multi-zone (one head per floor).
+    // ── Zone logic ────────────────────────────────────────────────────────
     const floors = parseInt(answers.floors) || 1;
     let requestedZones = 1;
 
-    if (answers.heatPumpType === "centrale") {
-      requestedZones = 1; // Central = 1 outdoor unit distributes everywhere
+    if (homeType === "condo") {
+      requestedZones = 1; // Condos are typically 1 zone
+    } else if (answers.heatPumpType === "centrale") {
+      requestedZones = 1;
     } else if (answers.heatPumpType === "multizone") {
       requestedZones = Math.max(2, floors);
     } else {
-      // "murale" or default — apply the architecture rule
       if (floors === 1) {
         requestedZones = 1;
       } else {
-        // 2 or 3 floors: one indoor unit per floor is the correct design
         requestedZones = Math.min(floors, 4);
       }
     }
@@ -170,15 +172,16 @@ export async function POST(req: Request) {
     const priorities: string[] = answers.priority ?? [];
     if (priorities.includes("grand-froid")) goal = "electrification";
     else if (priorities.includes("economies")) goal = "savings";
+    else if (priorities.includes("budget") || priorities.includes("prix")) goal = "savings"; // Budget mapping
     else if (priorities.includes("confort")) goal = "comfort";
 
-    // ── Climate zone — derived from postal code ───────────────────────────
-    let climateZone: MatchInput["climateZone"] = "7A"; // Default: Quebec City, Laurentides, most of Quebec
+    // ── Climate zone ──────────────────────────────────────────────────────
+    let climateZone: MatchInput["climateZone"] = "7A";
     const pc = (answers.postalCode ?? "").toUpperCase().trim();
     if (pc.startsWith("H") || pc.startsWith("J4") || pc.startsWith("J3") || pc.startsWith("J7") || pc.startsWith("J8")) {
-      climateZone = "6"; // Greater Montreal area (milder winters)
+      climateZone = "6";
     } else if (pc.startsWith("G") || pc.startsWith("J1") || pc.startsWith("J2") || pc.startsWith("K")) {
-      climateZone = "7A"; // Quebec City / Eastern Townships
+      climateZone = "7A";
     }
 
     // ── Backup heat ───────────────────────────────────────────────────────
@@ -201,22 +204,167 @@ export async function POST(req: Request) {
     };
 
     const input = validateMatchInput(inputData);
-    const catalogPath = path.join(process.cwd(), "src", "lib", "thermomatch-engine", "data", "catalog-2026.json");
     const policyPath = path.join(process.cwd(), "src", "lib", "thermomatch-engine", "config", "match-policy-2026.json");
-
-    const catalog = await loadThermoCatalog(catalogPath);
     const policy = JSON.parse(await fs.readFile(policyPath, "utf8")) as MatchPolicy;
-    policy.maxResults = 3;
+    policy.maxResults = 15; // Increased to allow diversity picking
     policy.maxPerBrand = 1;
+    policy.allowedBrands = []; // ALLOW ALL BRANDS to fix the bug where most choices are removed
 
-    const output = runThermoMatch(input, catalog, policy);
+    // ── Build Live Catalog from Registry ──────────────────────────────────
+    const liveProducts: CatalogProduct[] = registry.models
+      .filter(m => m.isActive2026 && m.thermomatchEligible)
+      .map(m => {
+        const brand = registry.brandById.get(m.brandId);
+        
+        // Find best configuration for specs
+        const configs = registry.configurations.filter(c => c.modelId === m.id);
+        const bestConfig = configs.sort((a, b) => (b.seer2 || 0) - (a.seer2 || 0))[0];
+
+        // Is cold climate? Check certifications or config
+        const isColdClimate = m.categories.includes("cold-climate") || !!configs.some(c => c.minHeatingTempC && c.minHeatingTempC <= -20);
+        const minTemp = bestConfig?.minHeatingTempC ?? (isColdClimate ? -25 : -15);
+        
+        // Estimate capacities from model or config
+        const cap = m.nominalCapacityBtu || 12000;
+        
+        const pairing: CertifiedPairing = {
+          indoorModel: m.name,
+          heatingCapacity5FBtuH: {
+            min: m.heatingCapacity5FMinBtu || cap * 0.4, // Inverters modulate down to ~40%
+            max: m.heatingCapacity5FMaxBtu || cap * 1.05,
+          },
+          cop5F: {
+            min: m.cop5FMin || 1.8,
+            max: m.cop5FMax || 2.2,
+          },
+          seer2: {
+            min: m.seer2Min || bestConfig?.seer2 || 16,
+            max: m.seer2Max || bestConfig?.seer2 || 20,
+          },
+          hspf2: {
+            min: m.hspf2Min || bestConfig?.hspf2 || 9,
+            max: m.hspf2Max || bestConfig?.hspf2 || 10,
+          },
+          ahriReferenceCount: 1,
+        };
+
+        return {
+          id: m.id,
+          commercialKey: m.id,
+          brand: brand?.name || "Unknown",
+          series: m.name,
+          systemType: m.systemType === "central" ? "central" : "ductless",
+          outdoorModel: m.modelNumber || m.name,
+          coldClimate: isColdClimate,
+          heatingCapacity5FBtuH: pairing.heatingCapacity5FBtuH,
+          cop5F: pairing.cop5F,
+          seer2: pairing.seer2,
+          hspf2: pairing.hspf2,
+          refrigerants: [],
+          compressorStaging: ["Continuously variable"], // Assumed for modern mini-splits/premium to boost comfort score
+          connectedCapable: [],
+          firstMarketDate: "2026-01-01",
+          lastMarketDate: "2026-01-01",
+          selectionYear: 2026,
+          sourceUrl: "",
+          pairings: [pairing],
+          warranties: [],
+          enrichment: {
+            minHeatingOutdoorC: minTemp,
+            note: "",
+            confidence: "haute",
+            sourceUrl: ""
+          },
+          zoneCompatibility: m.categories.includes("multi-zone") ? "multi" : "single",
+          imageUrl: m.imageUrl || brand?.logoUrl || null,
+        };
+      });
+
+    const liveCatalog = {
+      manifest: {
+        schemaVersion: "thermomatch-catalog-1" as const,
+        selectionYear: 2026,
+        selectionRule: "last_market_date_year" as const,
+        sourceWorkbook: "registry",
+        importedAt: new Date().toISOString(),
+        sourceRows: liveProducts.length,
+        selectedPairingRows: liveProducts.length,
+        productCount: liveProducts.length,
+        brandCount: new Set(liveProducts.map(p => p.brand)).size,
+        warnings: [],
+      },
+      products: liveProducts,
+    };
+
+    const output = runThermoMatch(input, liveCatalog, policy);
     const targetBtu = output.targetHeatPumpCapacityBtuH;
+
+    // ── Brand Diversity Logic ─────────────────────────────────────────────
+    // We want the absolute best match as #1.
+    // We want a Premium brand as one of the options if possible.
+    // We want a Value brand as one of the options if possible.
+    
+    const premiumBrands = ["daikin", "mitsubishi electric", "fujitsu", "panasonic", "trane", "lennox"];
+    const valueBrands = ["gree", "moovair", "mainline", "quebec vair", "senville", "midea", "direct air", "tosot"];
+    
+    const candidates = output.results;
+    const finalSelection = [];
+    
+    if (candidates.length > 0) {
+      // 1. Always take the #1 absolute best choice
+      const topChoice = candidates[0];
+      finalSelection.push(topChoice);
+      const topBrand = topChoice.product.brand.toLowerCase();
+      
+      const isTopPremium = premiumBrands.includes(topBrand);
+      const isTopValue = valueBrands.includes(topBrand);
+      
+      // 2. Find a diverse second choice
+      let secondChoice = undefined;
+      if (isTopValue) {
+        secondChoice = candidates.find(c => premiumBrands.includes(c.product.brand.toLowerCase()));
+      } else if (isTopPremium) {
+        secondChoice = candidates.find(c => valueBrands.includes(c.product.brand.toLowerCase()));
+      }
+      
+      if (!secondChoice) {
+        secondChoice = candidates.find(c => c.product.id !== topChoice.product.id);
+      }
+      
+      if (secondChoice) {
+        finalSelection.push(secondChoice);
+        
+        // 3. Find a third choice that balances the mix
+        const selectedBrands = finalSelection.map(c => c.product.brand.toLowerCase());
+        const hasPremium = selectedBrands.some(b => premiumBrands.includes(b));
+        const hasValue = selectedBrands.some(b => valueBrands.includes(b));
+        
+        let thirdChoice = undefined;
+        if (!hasPremium) {
+          thirdChoice = candidates.find(c => premiumBrands.includes(c.product.brand.toLowerCase()) && !selectedBrands.includes(c.product.brand.toLowerCase()));
+        } else if (!hasValue) {
+          thirdChoice = candidates.find(c => valueBrands.includes(c.product.brand.toLowerCase()) && !selectedBrands.includes(c.product.brand.toLowerCase()));
+        }
+        
+        if (!thirdChoice) {
+          thirdChoice = candidates.find(c => !selectedBrands.includes(c.product.brand.toLowerCase()));
+        }
+        
+        if (thirdChoice) finalSelection.push(thirdChoice);
+      }
+    }
+    
+    output.results = finalSelection;
 
     // Enrich each result with client-facing context
     const resultsWithContext = output.results.map((rec) => {
       const isColdClimate = rec.product.coldClimate;
-      const btu = rec.suggestedCapacityBtuH;
-      const { dollars } = calculateLogisVertSimple(btu, isColdClimate);
+      
+      // Try to get exact Logis Vert data, otherwise calculate a realistic fallback based on the machine's actual max capacity
+      const officialLogisVert = lookupLogisVert(rec.product.outdoorModel);
+      const fallbackBtu = (rec.product.heatingCapacity5FBtuH?.max ?? rec.suggestedCapacityBtuH) * 0.9; // 0.9 approximates 17F capacity from max
+      const dollars = officialLogisVert?.logisVertDollars ?? calculateLogisVertSimple(fallbackBtu, isColdClimate).dollars;
+      
       const clientReasons = buildClientReasons(rec.product, input, targetBtu, requestedZones, heatedAreaFt2);
 
       return {
@@ -251,3 +399,4 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: false, error: message }, { status: 500 });
   }
 }
+

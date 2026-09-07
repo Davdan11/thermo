@@ -39,7 +39,7 @@ export const brand_stelproDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SEPB Series de Stelpro",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stelpro-stelpro-sepb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_stelproDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Elite B de Stelpro",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stelpro-stelpro-elite-b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_stelproDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SMZ Series de Stelpro",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stelpro-stelpro-smz-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_stelproDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SICB1 Series de Stelpro",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stelpro-stelpro-sicb1-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_stelproDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SFCB1 Series de Stelpro",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stelpro-stelpro-sfcb1-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_stelproDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SAHB Series de Stelpro",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stelpro-stelpro-sahb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_stelproDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SDB Series de Stelpro",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stelpro-stelpro-sdb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

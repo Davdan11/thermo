@@ -8,7 +8,7 @@ export const brand_dellaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour DELLA",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TPH de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-tph.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TC | TCQ de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-tc-tcq.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TP de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-tp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CC de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-cc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TLP de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-tlp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MODU de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-modu.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FC de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-fc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DC de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-dc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_dellaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série TL de DELLA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/della-della-tl.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

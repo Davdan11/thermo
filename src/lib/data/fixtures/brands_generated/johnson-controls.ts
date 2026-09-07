@@ -8,7 +8,7 @@ export const brand_johnson_controlsDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Johnson Controls",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_johnson_controlsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LX SERIES de Johnson Controls",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/johnson-controls-johnson-controls-lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_johnson_controlsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HMH7 de Johnson Controls",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/johnson-controls-johnson-controls-hmh7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_johnson_controlsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MOMENTUM de Johnson Controls",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/johnson-controls-johnson-controls-momentum.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

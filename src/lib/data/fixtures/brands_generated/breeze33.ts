@@ -8,7 +8,7 @@ export const brand_breeze33Dataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Breeze33",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BZ33 series de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-bz33-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HS series de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-hs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-4hp17l.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L SERIES de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-4hp17l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17 SERIES de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-4hp17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Series de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Seies de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-7hp14f-seies.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_breeze33Dataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Seies | 7HP14F Series de Breeze33",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/breeze33-breeze33-7hp14f-seies-7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

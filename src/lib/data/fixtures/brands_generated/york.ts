@@ -39,7 +39,7 @@ export const brand_yorkDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LX SERIES de York",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/york-york-lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_yorkDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série YDV de York",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/york-york-ydv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_yorkDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AFFINITY de York",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/york-york-affinity.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_yorkDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PH9 de York",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/york-york-ph9.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_yorkDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série YDC de York",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/york-york-ydc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_yorkDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HMH7 de York",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/york-york-hmh7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_yorkDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série YD5 de York",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/york-york-yd5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

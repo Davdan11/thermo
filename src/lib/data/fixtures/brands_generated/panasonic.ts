@@ -39,7 +39,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ClimaPure XZ de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-climapure-xz.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe Z de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-deluxe-z.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CS-XE9WKUAW / CU-XE9WKUA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-xe9wkuaw-cu-xe9wkua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CU Series de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CS-XE12WKUAW / CU-XE12WKUA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-xe12wkuaw-cu-xe12wkua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MultiZone de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-multizone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Zone de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Exterios E de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-exterios-e.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CS-E9RKUAW / CU-E9RKUA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-e9rkuaw-cu-e9rkua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CS-E12RKUAW / CU-E12RKUA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-e12rkuaw-cu-e12rkua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CU-3E19RBU-5 de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cu-3e19rbu-5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CU-4E24RBU-5 de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cu-4e24rbu-5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CS-XE15WKUAW / CU-XE15WKUA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-xe15wkuaw-cu-xe15wkua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CS-XE18WKUAW / CU-XE18WKUA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-xe18wkuaw-cu-xe18wkua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CS-E12SD3UAW / CU-E12SD3UA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-e12sd3uaw-cu-e12sd3ua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CS-E18RKUAW / CU-E18RKUA de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-cs-e18rkuaw-cu-e18rkua.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_panasonicDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RE-Pre Series de Panasonic",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/panasonic-panasonic-re-pre-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_lbg_productsDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour LBG Products",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_lbg_productsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LBH series de LBG Products",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lbg-products-lbg-products-lbh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_lbg_productsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LMHB18DO de LBG Products",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lbg-products-lbg-products-lmhb18do.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_lbg_productsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LUH series de LBG Products",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lbg-products-lbg-products-luh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_lbg_productsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LCHB series de LBG Products",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lbg-products-lbg-products-lchb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

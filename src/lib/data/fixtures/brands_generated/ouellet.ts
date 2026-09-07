@@ -39,7 +39,7 @@ export const brand_ouelletDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Olympia de Ouellet",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ouellet-ouellet-olympia.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ouelletDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pacific de Ouellet",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ouellet-ouellet-pacific.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ouelletDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Harmony de Ouellet",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ouellet-ouellet-harmony.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ouelletDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Myriad de Ouellet",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ouellet-ouellet-myriad.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ouelletDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Flexx de Ouellet",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ouellet-ouellet-flexx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

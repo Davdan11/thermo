@@ -8,7 +8,7 @@ export const brand_borealDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour BOREAL",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Kula de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-kula.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pular de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-pular.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NOVO de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-novo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BRISA Multi-zone Series de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-brisa-multi-zone-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_borealDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série G Series de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-g-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BRISA de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-brisa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Enermaxx de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-enermaxx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_borealDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 17 SEER MULTI de BOREAL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/boreal-boreal-17-seer-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

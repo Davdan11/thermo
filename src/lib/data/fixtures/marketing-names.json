@@ -1,0 +1,98 @@
+{
+  "daikin": {
+    "RXL": "Aurora",
+    "FTXL": "Aurora",
+    "RXS": "Oterra",
+    "FTXS": "Oterra",
+    "DZ6": "Fit",
+    "DZ17": "Fit",
+    "DZ14": "Fit",
+    "FTXB": "Atmox",
+    "RZQ": "SkyAir",
+    "2MX": "Cirra / Multi-Zone",
+    "3MX": "Multi-Zone",
+    "4MX": "Multi-Zone",
+    "5MX": "Multi-Zone",
+    "RX": "Oterra",
+    "FTK": "Oterra",
+    "FTX": "Oterra"
+  },
+  "mitsubishi-electric": {
+    "SUZ": "Zuba",
+    "PUZ-HA": "Zuba Central",
+    "PUZ": "Zuba",
+    "MUZ": "Mr. Slim",
+    "MSZ": "Mr. Slim",
+    "MXZ": "Multi-Zone"
+  },
+  "gree": {
+    "GUD": "FLEXX",
+    "GWH": "Clivia / Livo",
+    "LIV": "Livo",
+    "VIR": "Vireo",
+    "SAP": "Sapphire",
+    "GWHD": "MultiPRO / Free Match",
+    "FLEXX": "FLEXX",
+    "CHARMO": "Charmo",
+    "SHIMO": "Shimo"
+  },
+  "moovair": {
+    "DMA": "Central Moov",
+    "FMA": "Central Moov",
+    "V22": "V22",
+    "V33": "V33",
+    "V11": "V11",
+    "MVA": "Central Moov"
+  },
+  "fujitsu": {
+    "AOU": "Halcyon",
+    "ASUG": "Halcyon",
+    "ASU": "Halcyon",
+    "AMUG": "Airstage"
+  },
+  "midea": {
+    "DLCP": "Senville",
+    "SENA": "Aura",
+    "SENL": "Leto",
+    "SEND": "Senville",
+    "38MURA": "MURA",
+    "38MARB": "MARB"
+  },
+  "carrier": {
+    "25VNA": "Infinity",
+    "25HC": "Performance",
+    "38MURA": "Performance",
+    "38MARB": "Comfort",
+    "38MBRC": "Performance"
+  },
+  "lennox": {
+    "ML": "Merit",
+    "EL": "Elite",
+    "XP25": "Dave Lennox Signature",
+    "XP21": "Dave Lennox Signature",
+    "SL": "Dave Lennox Signature",
+    "XP": "Elite",
+    "LRP": "Elite"
+  },
+  "trane": {
+    "4TWV": "XV20i / XV18",
+    "4TWX": "XL18i",
+    "4TWR": "XR16"
+  },
+  "lg": {
+    "LUU": "Art Cool",
+    "LSU": "Art Cool",
+    "LAU": "Art Cool",
+    "LMU": "Multi F"
+  },
+  "senville": {
+    "SENA": "Aura",
+    "SENL": "Leto",
+    "SEN": "Aura"
+  },
+  "tosot": {
+    "TMZZ": "Ultra Heat",
+    "TW": "Lomo",
+    "TU": "Apex"
+  }
+}

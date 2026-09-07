@@ -8,7 +8,7 @@ export const brand_haierDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Haier",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_haierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Arctic de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-arctic.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Arctic Single de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-arctic-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_haierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Flexfit Multi de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-flexfit-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Advanced Plus de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-advanced-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Flexfit Single de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-flexfit-single.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Tempo 230V de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-tempo-230v.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Arctic Multi de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-arctic-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_haierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 3U24MS2HD** de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-3u24ms2hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_haierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2U18MS2HD** de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-2u18ms2hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 1U24TL2HF** de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-1u24tl2hf.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_haierDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Tempo 115V de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-tempo-115v.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 1U3036TL2HF** de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-1u3036tl2hf.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_haierDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Connect 2026 de Haier",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/haier-haier-connect-2026.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

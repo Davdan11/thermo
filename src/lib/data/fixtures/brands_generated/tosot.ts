@@ -39,7 +39,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Airy de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-airy.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Clivia de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-clivia.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pular de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-pular.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AORAKI de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-aoraki.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floor ceiling de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-floor-ceiling.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Charmo de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-charmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 360° air discharge cassette unit de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-360-air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ALL MATCH de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-all-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 360°air discharge cassette unit de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-360air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Lomo de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-lomo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat GMV6 Mini de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-ultra-heat-gmv6-mini.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Console de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-console.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série One-way air discharge cassette unit de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-one-way-air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ducted de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-ducted.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_tosotDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Free match | M-Series de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-free-match-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M-Series de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série COSMO de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-cosmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32 FreeMatch de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-r32-freematch.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-Zone de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_tosotDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Free match de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-free-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_tosotDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série G Series de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-g-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série J-Series de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-j-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Flexx de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-ultra-heat-flexx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FLEXX High-efficiency Series de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-flexx-high-efficiency-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -464,7 +464,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FLEXX Ultra heat Series de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-flexx-ultra-heat-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DC inverter rooftop unit de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-dc-inverter-rooftop-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -498,7 +498,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 17 SEER DC inverter rooftop unit de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-17-seer-dc-inverter-rooftop-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -515,7 +515,7 @@ export const brand_tosotDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi R32 AO de TOSOT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/tosot-tosot-multi-r32-ao.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

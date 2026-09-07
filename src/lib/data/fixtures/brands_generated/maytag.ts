@@ -8,7 +8,7 @@ export const brand_maytagDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Maytag",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_maytagDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MAYTAG PSH4BF SERIES de Maytag",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maytag-maytag-maytag-psh4bf-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

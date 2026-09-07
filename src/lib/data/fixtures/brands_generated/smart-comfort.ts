@@ -8,7 +8,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour SMART COMFORT",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC Series de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Dlseries de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-dlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DL series de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-dl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 HP de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PERFORMANCE 16 SEER2 HP de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-performance-16-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 R SERIES R410A HP de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-15-seer2-r-series-r410a-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_smart_comfortDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PERFORMANCE 15 SEER2 HP de SMART COMFORT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/smart-comfort-smart-comfort-performance-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

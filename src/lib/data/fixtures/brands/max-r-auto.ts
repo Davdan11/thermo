@@ -199,7 +199,30 @@ export const maxrDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "max-r-max-r-9k30-int",
+      modelNumber: "MAX-R/9K30-INT",
+      brandId: "max-r",
+      type: "wall-single",
+    },
+    {
+      id: "max-r-max-r-12k30-int",
+      modelNumber: "MAX-R/12K30-INT",
+      brandId: "max-r",
+      type: "wall-single",
+    },
+    {
+      id: "max-r-max-r-18k20-int",
+      modelNumber: "MAX-R/18K20-INT",
+      brandId: "max-r",
+      type: "wall-single",
+    },
+    {
+      id: "max-r-appareils-sans-conduits",
+      modelNumber: "Appareils sans conduits",
+      brandId: "max-r",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -207,7 +230,7 @@ export const maxrDataset: BrandDataset = {
       slug: "max-r-standard-wall-single-9000-cfg-1",
       modelId: "max-r-standard-wall-single-9000",
       outdoorUnitId: "max-r-max-r-9k30-out",
-      indoorUnitId: null,
+      indoorUnitId: "max-r-max-r-9k30-int",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: null,
@@ -221,7 +244,7 @@ export const maxrDataset: BrandDataset = {
       slug: "max-r-standard-wall-single-12000-cfg-1",
       modelId: "max-r-standard-wall-single-12000",
       outdoorUnitId: "max-r-max-r-12k30-out",
-      indoorUnitId: null,
+      indoorUnitId: "max-r-max-r-12k30-int",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -235,7 +258,7 @@ export const maxrDataset: BrandDataset = {
       slug: "max-r-standard-wall-single-18000-cfg-1",
       modelId: "max-r-standard-wall-single-18000",
       outdoorUnitId: "max-r-max-r-18k20-out",
-      indoorUnitId: null,
+      indoorUnitId: "max-r-max-r-18k20-int",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: null,
@@ -249,7 +272,7 @@ export const maxrDataset: BrandDataset = {
       slug: "max-r-standard-wall-single-30000-cfg-1",
       modelId: "max-r-standard-wall-single-30000",
       outdoorUnitId: "max-r-max-r-mz-27k30",
-      indoorUnitId: null,
+      indoorUnitId: "max-r-appareils-sans-conduits",
       coolingCapacityMinBtu: 28000,
       coolingCapacityMaxBtu: 28000,
       seer2: null,
@@ -263,7 +286,7 @@ export const maxrDataset: BrandDataset = {
       slug: "max-r-standard-wall-single-36000-cfg-1",
       modelId: "max-r-standard-wall-single-36000",
       outdoorUnitId: "max-r-max-r-mz-36k30",
-      indoorUnitId: null,
+      indoorUnitId: "max-r-appareils-sans-conduits",
       coolingCapacityMinBtu: 36000,
       coolingCapacityMaxBtu: 36000,
       seer2: null,

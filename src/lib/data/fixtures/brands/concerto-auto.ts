@@ -63,7 +63,12 @@ export const concertoDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "concerto-msvpc-12hrfn1-mu0w",
+      modelNumber: "MSVPC-12HRFN1-MU0W",
+      brandId: "concerto",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -71,7 +76,7 @@ export const concertoDataset: BrandDataset = {
       slug: "concerto-standard-wall-single-12000-cfg-1",
       modelId: "concerto-standard-wall-single-12000",
       outdoorUnitId: "concerto-mob30-12hfn1-mv0w",
-      indoorUnitId: null,
+      indoorUnitId: "concerto-msvpc-12hrfn1-mu0w",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,

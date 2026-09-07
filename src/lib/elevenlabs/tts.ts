@@ -1,7 +1,7 @@
 /* ─────────────────────────────────────────────────────────────────────────
    src/lib/elevenlabs/tts.ts
    Client ElevenLabs — génère des fichiers audio MP3 ultra-réalistes
-   pour le système IVR téléphonique de ThermopompesÀVendre.ca
+   pour le système IVR téléphonique de Thermopompe A Vendre.ca
 ───────────────────────────────────────────────────────────────────────────*/
 
 const ELEVENLABS_BASE = "https://api.elevenlabs.io/v1";
@@ -88,3 +88,4 @@ export async function listFrenchVoices(): Promise<Array<{ voice_id: string; name
     return accent.includes("french") || lang.includes("french") || lang.includes("fr");
   });
 }
+

@@ -8,7 +8,7 @@ export const brand_forestairDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ForestAir",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_forestairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pular de ForestAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/forestair-forestair-pular.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_forestairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MZ24-ES454 de ForestAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/forestair-forestair-mz24-es454.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_forestairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SZ24-ES454 de ForestAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/forestair-forestair-sz24-es454.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_forestairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Split AHU de ForestAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/forestair-forestair-split-ahu.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_forestairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SIDE-DISCHARGE de ForestAir",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/forestair-forestair-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

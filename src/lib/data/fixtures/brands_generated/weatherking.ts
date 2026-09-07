@@ -8,7 +8,7 @@ export const brand_weatherkingDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour WeatherKing",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_weatherkingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série VERSUS de WeatherKing",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weatherking-weatherking-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_weatherkingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CLASSIC SERIES de WeatherKing",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weatherking-weatherking-classic-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_weatherkingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXZS de WeatherKing",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weatherking-weatherking-rhpxzs.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

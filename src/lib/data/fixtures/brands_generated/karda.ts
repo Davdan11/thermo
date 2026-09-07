@@ -8,7 +8,7 @@ export const brand_kardaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour KARDA",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_kardaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3KA Series de KARDA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/karda-karda-3ka-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_kardaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série KARDA de KARDA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/karda-karda-karda.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_kardaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3PA Series de KARDA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/karda-karda-3pa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

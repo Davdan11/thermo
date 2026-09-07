@@ -11,7 +11,7 @@ import { getCatalogueModels, getAvailableFilters } from "../queries/catalogue";
 
 describe("getCatalogueModels", () => {
   it("returns published products by default", () => {
-    const products = getCatalogueModels();
+    const { products } = getCatalogueModels();
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.model.status).toBe("published");
@@ -19,14 +19,14 @@ describe("getCatalogueModels", () => {
   });
 
   it("excludes draft models", () => {
-    const products = getCatalogueModels();
+    const { products } = getCatalogueModels();
     for (const p of products) {
       expect(p.model.status).not.toBe("draft");
     }
   });
 
   it("excludes archived models", () => {
-    const products = getCatalogueModels();
+    const { products } = getCatalogueModels();
     for (const p of products) {
       expect(p.model.status).not.toBe("archived");
     }
@@ -34,7 +34,7 @@ describe("getCatalogueModels", () => {
 
   // Search
   it("searches by brand name", () => {
-    const products = getCatalogueModels({ search: "Daikin" });
+    const { products } = getCatalogueModels({ search: "Daikin" });
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.brand.name.toLowerCase()).toContain("daikin");
@@ -42,7 +42,7 @@ describe("getCatalogueModels", () => {
   });
 
   it("searches by series name", () => {
-    const products = getCatalogueModels({ search: "Aurora" });
+    const { products } = getCatalogueModels({ search: "Aurora" });
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.model.name.toLowerCase()).toContain("aurora");
@@ -50,31 +50,31 @@ describe("getCatalogueModels", () => {
   });
 
   it("searches by model number", () => {
-    const products = getCatalogueModels({ search: "FTXS18" });
+    const { products } = getCatalogueModels({ search: "FTXS18" });
     expect(products.length).toBeGreaterThanOrEqual(1);
   });
 
   it("search is case-insensitive", () => {
-    const upper = getCatalogueModels({ search: "DAIKIN" });
-    const lower = getCatalogueModels({ search: "daikin" });
+    const { products: upper } = getCatalogueModels({ search: "DAIKIN" });
+    const { products: lower } = getCatalogueModels({ search: "daikin" });
     expect(upper.length).toBe(lower.length);
   });
 
   it("search ignores hyphens and spaces", () => {
-    const with_ = getCatalogueModels({ search: "FTXS-09" });
-    const without_ = getCatalogueModels({ search: "FTXS09" });
+    const { products: with_ } = getCatalogueModels({ search: "FTXS-09" });
+    const { products: without_ } = getCatalogueModels({ search: "FTXS09" });
     expect(with_.length).toBe(without_.length);
   });
 
   it("empty search returns all published", () => {
-    const all = getCatalogueModels();
-    const empty = getCatalogueModels({ search: "" });
+    const { products: all } = getCatalogueModels();
+    const { products: empty } = getCatalogueModels({ search: "" });
     expect(all.length).toBe(empty.length);
   });
 
   // Filters
   it("filters by type", () => {
-    const products = getCatalogueModels({ type: "wall-single" });
+    const { products } = getCatalogueModels({ type: "wall-single" });
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.model.systemType).toBe("wall-single");
@@ -82,7 +82,7 @@ describe("getCatalogueModels", () => {
   });
 
   it("filters by brand slug", () => {
-    const products = getCatalogueModels({ brand: "gree" });
+    const { products } = getCatalogueModels({ brand: "gree" });
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.brand.slug).toBe("gree");
@@ -90,7 +90,7 @@ describe("getCatalogueModels", () => {
   });
 
   it("filters by capacity", () => {
-    const products = getCatalogueModels({ capacity: 18000 });
+    const { products } = getCatalogueModels({ capacity: 18000 });
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.model.nominalCapacityBtu).toBe(18000);
@@ -98,7 +98,7 @@ describe("getCatalogueModels", () => {
   });
 
   it("filters by cold climate", () => {
-    const products = getCatalogueModels({ coldClimate: true });
+    const { products } = getCatalogueModels({ coldClimate: true });
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.isColdClimate).toBe(true);
@@ -107,7 +107,7 @@ describe("getCatalogueModels", () => {
 
   // Combined filters
   it("combines type + brand filters", () => {
-    const products = getCatalogueModels({ type: "wall-single", brand: "daikin" });
+    const { products } = getCatalogueModels({ type: "wall-single", brand: "daikin" });
     expect(products.length).toBeGreaterThan(0);
     for (const p of products) {
       expect(p.model.systemType).toBe("wall-single");
@@ -116,13 +116,13 @@ describe("getCatalogueModels", () => {
   });
 
   it("combined filters that match nothing return empty", () => {
-    const products = getCatalogueModels({ type: "cassette", brand: "daikin" });
+    const { products } = getCatalogueModels({ type: "cassette", brand: "daikin" });
     expect(products.length).toBe(0);
   });
 
   // Sorting
   it("sorts by brand A-Z", () => {
-    const products = getCatalogueModels({ sort: "brand-asc" });
+    const { products } = getCatalogueModels({ sort: "brand-asc" });
     for (let i = 1; i < products.length; i++) {
       expect(
         products[i].brand.name.localeCompare(products[i - 1].brand.name),
@@ -131,7 +131,7 @@ describe("getCatalogueModels", () => {
   });
 
   it("sorts by capacity ascending", () => {
-    const products = getCatalogueModels({ sort: "capacity-asc" });
+    const { products } = getCatalogueModels({ sort: "capacity-asc" });
     for (let i = 1; i < products.length; i++) {
       expect(
         (products[i].model.nominalCapacityBtu ?? 0),
@@ -140,7 +140,7 @@ describe("getCatalogueModels", () => {
   });
 
   it("sorts by capacity descending", () => {
-    const products = getCatalogueModels({ sort: "capacity-desc" });
+    const { products } = getCatalogueModels({ sort: "capacity-desc" });
     for (let i = 1; i < products.length; i++) {
       expect(
         (products[i].model.nominalCapacityBtu ?? 0),
@@ -149,14 +149,14 @@ describe("getCatalogueModels", () => {
   });
 
   it("default sort is stable", () => {
-    const first = getCatalogueModels();
-    const second = getCatalogueModels();
+    const { products: first } = getCatalogueModels();
+    const { products: second } = getCatalogueModels();
     expect(first.map((p) => p.model.id)).toEqual(second.map((p) => p.model.id));
   });
 
   // Enrichment
   it("enriches products with brand info", () => {
-    const products = getCatalogueModels();
+    const { products } = getCatalogueModels();
     for (const p of products) {
       expect(p.brand).toBeDefined();
       expect(p.brand.name).toBeTruthy();
@@ -164,14 +164,14 @@ describe("getCatalogueModels", () => {
   });
 
   it("enriches products with system type label", () => {
-    const products = getCatalogueModels();
+    const { products } = getCatalogueModels();
     for (const p of products) {
       expect(p.systemTypeLabel).toBeTruthy();
     }
   });
 
   it("enriches products with cold climate flag", () => {
-    const products = getCatalogueModels();
+    const { products } = getCatalogueModels();
     for (const p of products) {
       expect(typeof p.isColdClimate).toBe("boolean");
     }
@@ -179,7 +179,7 @@ describe("getCatalogueModels", () => {
 
   // No internal data leaks
   it("does not expose internal notes in products", () => {
-    const products = getCatalogueModels();
+    const { products } = getCatalogueModels();
     for (const p of products) {
       // Brand sources may have internalNotes — components must not render them
       // Just verify the structure is clean
@@ -250,7 +250,7 @@ describe("getAvailableFilters", () => {
   it("type counts match getCatalogueModels filter results", () => {
     const filters = getAvailableFilters();
     for (const t of filters.types) {
-      const products = getCatalogueModels({ type: t.value });
+      const { products } = getCatalogueModels({ type: t.value });
       expect(products.length).toBe(t.count);
     }
   });
@@ -258,7 +258,7 @@ describe("getAvailableFilters", () => {
   it("brand counts match getCatalogueModels filter results", () => {
     const filters = getAvailableFilters();
     for (const b of filters.brands) {
-      const products = getCatalogueModels({ brand: b.slug });
+      const { products } = getCatalogueModels({ brand: b.slug });
       expect(products.length).toBe(b.count);
     }
   });
@@ -273,17 +273,17 @@ describe("param validation", () => {
     // getCatalogueModels with an invalid type should return all published
     // since the page parseParams would strip it — but if passed directly, 
     // no model has type "unknown" so it returns empty
-    const products = getCatalogueModels({ type: "unknown" as never });
+    const { products } = getCatalogueModels({ type: "unknown" as never });
     expect(products.length).toBe(0);
   });
 
   it("ignores unknown brand slug gracefully", () => {
-    const products = getCatalogueModels({ brand: "nonexistent" });
+    const { products } = getCatalogueModels({ brand: "nonexistent" });
     expect(products.length).toBe(0);
   });
 
   it("handles capacity with no matches", () => {
-    const products = getCatalogueModels({ capacity: 99999 });
+    const { products } = getCatalogueModels({ capacity: 99999 });
     expect(products.length).toBe(0);
   });
 });

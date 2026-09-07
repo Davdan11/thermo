@@ -8,7 +8,7 @@ export const brand_confortoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour CONFORTO",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_confortoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MH series de CONFORTO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/conforto-conforto-mh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_confortoDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ADS series de CONFORTO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/conforto-conforto-ads-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_confortoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHAH Series de CONFORTO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/conforto-conforto-mhah-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_confortoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHS Series de CONFORTO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/conforto-conforto-mhs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_wabbanDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour WABBAN",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_wabbanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LOMO Plus de WABBAN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wabban-wabban-lomo-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_wabbanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Pular 25 de WABBAN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wabban-wabban-pular-25.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_wabbanDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-zone de WABBAN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/wabban-wabban-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

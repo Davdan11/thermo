@@ -41,7 +41,7 @@ export function estimateDesignHeatLoadBtuH(input: MatchInput): number {
     detached: 1,
     semi_detached: 0.9,
     townhouse: 0.8,
-    condo: 0.68,
+    condo: 0.45,
     duplex: 0.9,
     triplex: 0.82,
     other: 1,
@@ -94,7 +94,13 @@ function closestPairing(product: CatalogProduct, target: number): CertifiedPairi
 function scoreProduct(product: CatalogProduct, input: MatchInput, target: number): MatchRecommendation {
   const capacity = product.heatingCapacity5FBtuH!;
   const closestCapacity = clamp(target, capacity.min, capacity.max);
-  const capacityError = Math.abs(closestCapacity - target) / Math.max(target, 1);
+  let capacityError = Math.abs(closestCapacity - target) / Math.max(target, 1);
+  
+  // Severe penalty for undersizing (if the max capacity is less than the target load)
+  if (capacity.max < target) {
+    capacityError *= 3; // Triple the penalty to prevent recommending undersized units!
+  }
+
   const capacityScore = round(clamp(40 - capacityError * 55, 0, 40), 1);
 
   const cop = midpoint(product.cop5F);
@@ -108,9 +114,24 @@ function scoreProduct(product: CatalogProduct, input: MatchInput, target: number
   ), 1);
 
   let goalScore = 6;
-  if (input.goal === "savings") goalScore = clamp((hspf ?? 7) - 2, 0, 10);
+  if (input.goal === "savings") {
+    goalScore = clamp((hspf ?? 7) - 2, 0, 10);
+    // Penalty for premium brands if user wants savings
+    const brand = normalize(product.brand);
+    if (["mitsubishi electric", "daikin", "fujitsu", "lennox", "trane"].includes(brand)) {
+      goalScore -= 4; // Penalty to push cheaper brands up
+    }
+  }
   if (input.goal === "comfort") goalScore = product.compressorStaging.some((value) => /variable/i.test(value)) ? 10 : 6;
-  if (input.goal === "electrification") goalScore = product.coldClimate ? 10 : 3;
+  
+  if (input.goal === "electrification") {
+    goalScore = product.coldClimate ? 10 : 3;
+    // Boost for extreme cold performance (-30 or -35)
+    if (product.enrichment?.minHeatingOutdoorC !== undefined && product.enrichment.minHeatingOutdoorC <= -30) {
+      goalScore += 3;
+    }
+  }
+  
   if (input.goal === "balanced") goalScore = (product.coldClimate ? 5 : 2) + (cop && cop >= 2 ? 5 : 3);
   goalScore = round(goalScore, 1);
 
@@ -190,6 +211,13 @@ export function runThermoMatch(input: MatchInput, catalog: ThermoCatalog, policy
 
   const candidates: MatchRecommendation[] = [];
   for (const product of catalog.products) {
+    // If it's a condo, strictly enforce single zone unless user explicitly requested multizone for 2 floors? 
+    // The user said: "Si c'est un condo, oui on veut une zone, pas multizone."
+    if (input.homeType === "condo" && input.requestedZones > 1) {
+       // Filter out multizone products for condos
+       if (product.zoneCompatibility === "multi") continue;
+    }
+
     if (product.selectionYear !== input.selectionYear) continue;
     diagnostics.correctYear += 1;
     if (!systems.includes(product.systemType)) continue;
@@ -201,7 +229,12 @@ export function runThermoMatch(input: MatchInput, catalog: ThermoCatalog, policy
     diagnostics.allowedBrand += 1;
     if (strictColdClimate && !product.coldClimate) continue;
     if (product.enrichment?.minHeatingOutdoorC !== undefined) {
-      const designTemperature = { "6": -23, "7A": -27, "7B": -30, "8": -35 }[input.climateZone];
+      // The user wants -30/-35 for extreme cold. 
+      let designTemperature = { "6": -23, "7A": -27, "7B": -30, "8": -35 }[input.climateZone];
+      if (input.goal === "electrification") {
+         // Force finding models that can go very low if goal is grand-froid
+         designTemperature = Math.min(designTemperature, -30);
+      }
       if (product.enrichment.minHeatingOutdoorC > designTemperature && !input.backupHeatAvailable) continue;
     }
     diagnostics.coldClimateCompatible += 1;

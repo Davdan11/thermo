@@ -39,7 +39,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ATMOSPHERA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-atmosphera.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AURORA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-aurora.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DZ9VC de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dz9vc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Standard Multi de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-standard-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série OTERRA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-oterra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AURORA Multi de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-aurora-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DH9VSA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dh9vsa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Daikin OTERRA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-daikin-oterra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 115V OTERA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-115v-otera.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DH6VSA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dh6vsa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DH7VSA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dh7vsa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Daikin AURORA de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-daikin-aurora.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DZ6VS de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dz6vs.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DZ7TC de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dz7tc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DHH de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dhh.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DH6VSA*M de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dh6vsam.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_daikinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SkyAir de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-skyair.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DH5SE de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dh5se.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_daikinDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DZ5SE de Daikin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/daikin-daikin-dz5se.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

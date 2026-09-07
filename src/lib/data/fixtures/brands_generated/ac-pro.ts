@@ -8,7 +8,7 @@ export const brand_ac_proDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AC PRO",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHPC Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-mhpc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-a-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A series | A4OG Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-a-series-a4og-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A series | A5OG Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-a-series-a5og-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-d-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A7CP21V Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-a7cp21v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AOD Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-aod-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série BH719M Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-bh719m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XB Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-xb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP18V SERIES de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-4hp18v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série X Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-x-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SPHP Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-sphp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AVBL series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-avbl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AOE Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-aoe-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AVC series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-avc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MHP Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-mhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L SERIES de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-4hp17l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17L de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-4hp17l.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AOX Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-aox-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17 SERIES de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-4hp17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série BH714S Series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-bh714s-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AAC series de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-aac-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_ac_proDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série SPHP-M de AC PRO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ac-pro-ac-pro-sphp-m.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

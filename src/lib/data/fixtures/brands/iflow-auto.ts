@@ -171,7 +171,36 @@ export const iflowDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "iflow-70c1824ba",
+      modelNumber: "70C1824BA",
+      brandId: "iflow",
+      type: "wall-single",
+    },
+    {
+      id: "iflow-70c3036ca",
+      modelNumber: "70C3036CA",
+      brandId: "iflow",
+      type: "wall-single",
+    },
+    {
+      id: "iflow-70c3036ba",
+      modelNumber: "70C3036BA",
+      brandId: "iflow",
+      type: "wall-single",
+    },
+    {
+      id: "iflow-70c4248ca",
+      modelNumber: "70C4248CA",
+      brandId: "iflow",
+      type: "wall-single",
+    },
+    {
+      id: "iflow-70c5460da",
+      modelNumber: "70C5460DA",
+      brandId: "iflow",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -179,7 +208,7 @@ export const iflowDataset: BrandDataset = {
       slug: "iflow-standard-wall-single-24000-cfg-1",
       modelId: "iflow-standard-wall-single-24000",
       outdoorUnitId: "iflow-70hpic24a",
-      indoorUnitId: null,
+      indoorUnitId: "iflow-70c1824ba",
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: null,
@@ -193,7 +222,7 @@ export const iflowDataset: BrandDataset = {
       slug: "iflow-standard-wall-single-30000-cfg-1",
       modelId: "iflow-standard-wall-single-30000",
       outdoorUnitId: "iflow-70hpic30a",
-      indoorUnitId: null,
+      indoorUnitId: "iflow-70c3036ca",
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       seer2: null,
@@ -207,7 +236,7 @@ export const iflowDataset: BrandDataset = {
       slug: "iflow-standard-wall-single-36000-cfg-1",
       modelId: "iflow-standard-wall-single-36000",
       outdoorUnitId: "iflow-70hpic36a",
-      indoorUnitId: null,
+      indoorUnitId: "iflow-70c3036ca",
       coolingCapacityMinBtu: 35000,
       coolingCapacityMaxBtu: 35000,
       seer2: null,
@@ -221,7 +250,7 @@ export const iflowDataset: BrandDataset = {
       slug: "iflow-standard-wall-single-36000-cfg-2",
       modelId: "iflow-standard-wall-single-36000",
       outdoorUnitId: "iflow-70hpic36a",
-      indoorUnitId: null,
+      indoorUnitId: "iflow-70c3036ba",
       coolingCapacityMinBtu: 35000,
       coolingCapacityMaxBtu: 35000,
       seer2: null,
@@ -235,7 +264,7 @@ export const iflowDataset: BrandDataset = {
       slug: "iflow-standard-wall-single-48000-cfg-1",
       modelId: "iflow-standard-wall-single-48000",
       outdoorUnitId: "iflow-70hpic48a",
-      indoorUnitId: null,
+      indoorUnitId: "iflow-70c4248ca",
       coolingCapacityMinBtu: 46000,
       coolingCapacityMaxBtu: 46000,
       seer2: null,
@@ -249,7 +278,7 @@ export const iflowDataset: BrandDataset = {
       slug: "iflow-standard-wall-single-48000-cfg-2",
       modelId: "iflow-standard-wall-single-48000",
       outdoorUnitId: "iflow-70hpic60a",
-      indoorUnitId: null,
+      indoorUnitId: "iflow-70c5460da",
       coolingCapacityMinBtu: 53000,
       coolingCapacityMaxBtu: 53000,
       seer2: null,

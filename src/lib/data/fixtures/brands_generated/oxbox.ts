@@ -8,7 +8,7 @@ export const brand_oxboxDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour OXBOX",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_oxboxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Oxbox-J5HP5 de OXBOX",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/oxbox-oxbox-oxbox-j5hp5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

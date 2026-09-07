@@ -8,7 +8,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Armstrong Air",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4DH SERIES de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4dh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4SHP22LX SERIES de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4shp22lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A7CP21V SERIES | A7CP21V Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-a7cp21v-series-a7cp21v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A7HP19V Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-a7hp19v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A7SCP18V Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-a7scp18v-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4SHP18LX SERIES de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4shp18lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4SHP22LX SERIES | 4SHP22LX Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4shp22lx-series-4shp22lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4SHP17LE SERIES de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4shp17le-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HSP17LE Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4hsp17le-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4SHP17LE SERIES | 4SHP17LE Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4shp17le-series-4shp17le-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4SHP17 SERIES de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4shp17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RPHPV Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-rphpv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A7HP14F Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-a7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A7HP14 Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-a7hp14-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4SHP17L SERIES de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-4shp17l-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Series | A7HP14F Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-7hp14f-series-a7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Series | A7HP14 Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-7hp14f-series-a7hp14-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 7HP14F Series | A7HP14 Series | A7HP14F Series de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-7hp14f-series-a7hp14-series-a7hp14f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_armstrong_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A7HP14F Seies de Armstrong Air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/armstrong-air-armstrong-air-a7hp14f-seies.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

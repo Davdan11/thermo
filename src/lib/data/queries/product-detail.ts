@@ -18,7 +18,10 @@ import type {
 } from "../types";
 import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
+import { getWarrantiesForModel } from "./products";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
+import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
+import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
 
 /* ------------------------------------------------------------------
    Product Detail — everything needed for a product page
@@ -135,10 +138,10 @@ export function getProductDetail(slug: string): ProductDetail | null {
   }
 
   const sources: SourceReference[] = [];
-  for (const sid of sourceIds) {
+  sourceIds.forEach((sid) => {
     const src = registry.sourceById.get(sid);
     if (src) sources.push(src);
-  }
+  });
 
   // Series siblings (other models in the same series, excluding current)
   const seriesSiblings = registry.models.filter(
@@ -163,12 +166,32 @@ export function getProductDetail(slug: string): ProductDetail | null {
         registry.configurations.find((c) => c.modelId === m.id) ?? null;
       const ser = registry.series.find((s) => s.id === m.seriesId);
       let refrigerant: string | null = null;
+      let outdoorModelNumber: string | null = null;
       if (cfg) {
         const outdoorUnit = registry.outdoorUnits.find((u) => u.id === cfg.outdoorUnitId);
         if (outdoorUnit && outdoorUnit.refrigerant) {
           refrigerant = outdoorUnit.refrigerant as string;
         }
+        if (outdoorUnit && outdoorUnit.modelNumber) {
+          outdoorModelNumber = outdoorUnit.modelNumber;
+        }
       }
+      
+      let logisVertDollars: number | null = null;
+      const officialEntry = outdoorModelNumber
+        ? lookupLogisVertFuzzy(outdoorModelNumber, b.name)
+        : lookupLogisVertFuzzy(m.modelNumber, b.name);
+      
+      if (officialEntry && officialEntry.logisVertDollars > 0) {
+        logisVertDollars = officialEntry.logisVertDollars;
+      } else {
+        const btu = m.nominalCapacityBtu ?? m.heatingCapacity5FMaxBtu ?? 0;
+        if (btu > 0) {
+          const result = calculateLogisVertSimple(btu, m.categories.includes("cold-climate"));
+          if (result.dollars > 0) logisVertDollars = result.dollars;
+        }
+      }
+
       return {
         model: m,
         brand: b,
@@ -177,6 +200,9 @@ export function getProductDetail(slug: string): ProductDetail | null {
         isColdClimate: m.categories.includes("cold-climate"),
         imageUrl: m.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,
+        outdoorModelNumber,
+        warranties: getWarrantiesForModel(m.id),
+        logisVertDollars,
       };
     });
 

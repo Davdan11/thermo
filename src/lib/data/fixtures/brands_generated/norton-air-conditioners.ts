@@ -8,7 +8,7 @@ export const brand_norton_air_conditionersDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour NORTON AIR CONDITIONERS",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_norton_air_conditionersDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série OHP Series de NORTON AIR CONDITIONERS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/norton-air-conditioners-norton-air-conditioners-ohp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

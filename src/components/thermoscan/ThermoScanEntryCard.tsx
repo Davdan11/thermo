@@ -1,43 +1,25 @@
 "use client";
 import Link from "next/link";
-import { Camera } from "lucide-react";
 
 export function ThermoScanEntryCard() {
   return (
     <Link
       href="/thermoscan"
-      className="group block w-full rounded-xl border transition-all"
-      style={{ borderColor: "rgba(198, 110, 66, 0.3)", background: "rgba(255,255,255,0.04)" }}
+      className="group block w-full rounded-lg border transition-all hover:border-white/20"
+      style={{ borderColor: "rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)" }}
     >
-      <div className="flex flex-col sm:flex-row sm:items-center gap-5 p-5 sm:p-6">
-        <div
-          className="w-12 h-12 rounded-lg flex items-center justify-center text-white flex-shrink-0"
-          style={{ background: "var(--color-accent)" }}
-        >
-          <Camera size={22} />
-        </div>
-
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: "var(--color-accent)" }}>
-              NOUVEAU &bull; ThermoScan&#8482;
-            </span>
-          </div>
-          <p className="font-bold text-white text-base leading-tight mb-1">
+      <div className="flex items-center justify-between gap-4 px-5 py-4">
+        <div className="flex items-center gap-4">
+          <img src="/images/Thermoscan.png" alt="ThermoScan" style={{ height: 30, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.9 }} />
+          <span className="text-white/50 text-sm">
             Comparez avec votre appareil actuel
-          </p>
-          <p className="text-white/50 text-sm leading-snug">
-            Photographiez l&apos;&eacute;tiquette &mdash; notre IA identifie votre mod&egrave;le et vous montre ce que vous gagneriez.
-          </p>
+          </span>
         </div>
 
-        <div
-          className="hidden sm:flex items-center gap-2 flex-shrink-0 px-5 py-3 rounded-lg text-white font-bold text-sm transition-all group-hover:opacity-90"
-          style={{ background: "var(--color-accent)" }}
-        >
-          <Camera size={16} />
-          Scanner mon appareil
-        </div>
+        <span className="text-white/40 text-xs font-medium group-hover:text-white/60 transition-colors flex items-center gap-1">
+          En savoir plus
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </span>
       </div>
     </Link>
   );

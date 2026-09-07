@@ -8,7 +8,7 @@ export const brand_airquestDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Airquest",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC-series de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 23 VS Heat Pump de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-deluxe-23-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 20 VS Heat Pump de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-deluxe-20-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série QuietComfort 19 SEER2 VS HP de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-quietcomfort-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_airquestDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_airquestDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Mainline 18 SEER2 HP de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-mainline-18-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCS Series de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-dlcs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_airquestDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DELUXE 19 VS HP  2-STAGE de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-deluxe-19-vs-hp-2-stage.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_airquestDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Airquest",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/airquest-airquest-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Comfort-Aire",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-ZHP Series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-a-zhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-a-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-VHP Series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-a-vhp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HSA19 Series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-hsa19-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HRG18 SERIES de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-hrg18-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-VXP de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-a-vxp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-SSP Series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-a-ssp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-VHP de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-a-vhp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HRG15 Series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-hrg15-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MXP Series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-mxp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HRG17 SERIES de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-hrg17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HSA14 Series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-hsa14-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MCD series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-mcd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_comfort_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-VCD series de Comfort-Aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfort-aire-comfort-aire-a-vcd-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

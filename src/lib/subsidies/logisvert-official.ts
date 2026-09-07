@@ -112,10 +112,12 @@ export function lookupLogisVert(outdoorModel: string): LogisVertOfficialEntry | 
 
   // Fallback: scan all entries (for backward compat)
   let best: LogisVertOfficialEntry | null = null;
-  for (const [ahri, entry] of Object.entries(data)) {
-    const eModel = ((entry as Record<string, unknown>).m as string || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  for (const ahri in data) {
+    if (!Object.prototype.hasOwnProperty.call(data, ahri)) continue;
+    const entry = data[ahri] as Record<string, unknown>;
+    const eModel = ((entry.m as string) || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     if (eModel === key || eModel.startsWith(key) || key.startsWith(eModel)) {
-      const e = toEntry(ahri, entry as Record<string, unknown>);
+      const e = toEntry(ahri, entry);
       if (!best || e.logisVertDollars > best.logisVertDollars) best = e;
     }
   }
@@ -131,8 +133,9 @@ export function lookupLogisVertFuzzy(modelNumber: string, brand?: string): Logis
 
   const norm = modelNumber.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-  for (const [ahri, entry] of Object.entries(data)) {
-    const e = entry as Record<string, unknown>;
+  for (const ahri in data) {
+    if (!Object.prototype.hasOwnProperty.call(data, ahri)) continue;
+    const e = data[ahri] as Record<string, unknown>;
     const eModel = ((e.m as string) || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     if (eModel.startsWith(norm) || norm.startsWith(eModel)) {
       if (brand && !(e.b as string || "").toLowerCase().includes(brand.toLowerCase())) continue;
@@ -153,8 +156,9 @@ export function searchLogisVert(query: string, limit = 20): LogisVertOfficialEnt
   const results: LogisVertOfficialEntry[] = [];
   const words = q.split(/\s+/);
 
-  for (const [ahri, entry] of Object.entries(data)) {
-    const e = entry as Record<string, unknown>;
+  for (const ahri in data) {
+    if (!Object.prototype.hasOwnProperty.call(data, ahri)) continue;
+    const e = data[ahri] as Record<string, unknown>;
     const searchable = [
       (e.b as string) || "",
       (e.m as string) || "",
@@ -180,8 +184,9 @@ export function getLogisVertByBrand(brandName: string): LogisVertOfficialEntry[]
   const norm = brandName.toLowerCase();
   const results: LogisVertOfficialEntry[] = [];
 
-  for (const [ahri, entry] of Object.entries(data)) {
-    const e = entry as Record<string, unknown>;
+  for (const ahri in data) {
+    if (!Object.prototype.hasOwnProperty.call(data, ahri)) continue;
+    const e = data[ahri] as Record<string, unknown>;
     if (((e.b as string) || "").toLowerCase() === norm) {
       results.push(toEntry(ahri, e));
     }

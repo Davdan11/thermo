@@ -8,7 +8,7 @@ export const brand_reznorDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour REZNOR",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_reznorDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Side Discharge de REZNOR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/reznor-reznor-ultra-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

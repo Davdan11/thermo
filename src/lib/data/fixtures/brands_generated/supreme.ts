@@ -39,7 +39,7 @@ export const brand_supremeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NE-T52 series de SUPREME",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/supreme-supreme-ne-t52-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_supremeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T55 Series de SUPREME",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/supreme-supreme-t55-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_supremeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série YS series de SUPREME",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/supreme-supreme-ys-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

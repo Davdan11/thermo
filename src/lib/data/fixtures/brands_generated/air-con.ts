@@ -8,7 +8,7 @@ export const brand_air_conDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AIR-CON",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_air_conDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Blizzard de AIR-CON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-con-air-con-blizzard.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_air_conDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Blue Series 4 de AIR-CON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-con-air-con-blue-series-4.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_air_conDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Blue Series III de AIR-CON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-con-air-con-blue-series-iii.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_air_conDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Split de AIR-CON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-con-air-con-multi-split.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_air_conDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Sky Pro de AIR-CON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-con-air-con-sky-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_air_conDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série G Series de AIR-CON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-con-air-con-g-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_air_conDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SD Premium de AIR-CON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/air-con-air-con-sd-premium.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

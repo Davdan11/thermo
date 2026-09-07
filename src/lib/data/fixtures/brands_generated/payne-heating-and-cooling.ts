@@ -8,7 +8,7 @@ export const brand_payne_heating_and_coolingDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour PAYNE HEATING AND COOLING",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_payne_heating_and_coolingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de PAYNE HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-heating-and-cooling-payne-heating-and-cooling-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_payne_heating_and_coolingDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de PAYNE HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-heating-and-cooling-payne-heating-and-cooling-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_payne_heating_and_coolingDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 HP de PAYNE HEATING AND COOLING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-heating-and-cooling-payne-heating-and-cooling-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

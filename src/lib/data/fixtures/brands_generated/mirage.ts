@@ -8,7 +8,7 @@ export const brand_mirageDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MIRAGE",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_mirageDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série GALAXY de MIRAGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mirage-mirage-galaxy.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_mirageDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAGNUS de MIRAGE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mirage-mirage-magnus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -1,0 +1,6601 @@
+{
+  "warning": "Candidate filename matches only. Official origin and reuse rights are not proven.",
+  "totalAssets": 1426,
+  "series": 713,
+  "seriesWithCandidate": 415,
+  "rows": [
+    {
+      "brand": "AMANA",
+      "brandSlug": "amana",
+      "series": "Standard",
+      "seriesSlug": "amana-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMANA",
+      "brandSlug": "amana",
+      "series": "ASZV9",
+      "seriesSlug": "amana-aszv9",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMANA",
+      "brandSlug": "amana",
+      "series": "ASZS6",
+      "seriesSlug": "amana-aszs6",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMANA",
+      "brandSlug": "amana",
+      "series": "AZV6SA",
+      "seriesSlug": "amana-azv6sa",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMANA",
+      "brandSlug": "amana",
+      "series": "AZV7SA",
+      "seriesSlug": "amana-azv7sa",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMANA",
+      "brandSlug": "amana",
+      "series": "AZV9SA",
+      "seriesSlug": "amana-azv9sa",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMERISTAR",
+      "brandSlug": "ameristar",
+      "series": "Standard",
+      "seriesSlug": "ameristar-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMERISTAR",
+      "brandSlug": "ameristar",
+      "series": "N-Series",
+      "seriesSlug": "ameristar-n-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMERISTAR",
+      "brandSlug": "ameristar",
+      "series": "E4HL5",
+      "seriesSlug": "ameristar-e4hl5",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMERISTAR",
+      "brandSlug": "ameristar",
+      "series": "23U Series",
+      "seriesSlug": "ameristar-23u-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "AMERISTAR",
+      "brandSlug": "ameristar",
+      "series": "A5HL5",
+      "seriesSlug": "ameristar-a5hl5",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "Standard",
+      "seriesSlug": "bosch-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "BMS series",
+      "seriesSlug": "bosch-bms-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "BMS500",
+      "seriesSlug": "bosch-bms500",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "IDS Premium LGWP",
+      "seriesSlug": "bosch-ids-premium-lgwp",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "IDS Ultra",
+      "seriesSlug": "bosch-ids-ultra",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "IDS Light-LGWP",
+      "seriesSlug": "bosch-ids-light-lgwp",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "IDP Premium LGWP",
+      "seriesSlug": "bosch-idp-premium-lgwp",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "IDP Plus LGWP",
+      "seriesSlug": "bosch-idp-plus-lgwp",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Bosch",
+      "brandSlug": "bosch",
+      "series": "Série à venir",
+      "seriesSlug": "bosch-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "Standard",
+      "seriesSlug": "canair-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "C23 Series",
+      "seriesSlug": "canair-c23-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "C22 Series",
+      "seriesSlug": "canair-c22-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "C28 Series",
+      "seriesSlug": "canair-c28-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "CDH series",
+      "seriesSlug": "canair-cdh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "BZ33 series",
+      "seriesSlug": "canair-bz33-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "C25 Series",
+      "seriesSlug": "canair-c25-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "4CDH Series",
+      "seriesSlug": "canair-4cdh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "4C22 Series",
+      "seriesSlug": "canair-4c22-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "4C Series",
+      "seriesSlug": "canair-4c-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CANAIR",
+      "brandSlug": "canair",
+      "series": "4CD Series",
+      "seriesSlug": "canair-4cd-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "CPIB Series",
+      "seriesSlug": "capella-cpib-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "Standard",
+      "seriesSlug": "capella-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "CPPB Series",
+      "seriesSlug": "capella-cppb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "SICB Series",
+      "seriesSlug": "capella-sicb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "SFCB Series",
+      "seriesSlug": "capella-sfcb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "CPM Series",
+      "seriesSlug": "capella-cpm-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "CAHB Series",
+      "seriesSlug": "capella-cahb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "Energia B",
+      "seriesSlug": "capella-energia-b",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CAPELLA",
+      "brandSlug": "capella",
+      "series": "CCB Series",
+      "seriesSlug": "capella-ccb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "Standard",
+      "seriesSlug": "carrier-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38VMB036HDS3-1*",
+      "seriesSlug": "carrier-38vmb036hds3-1",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38MAR-series",
+      "seriesSlug": "carrier-38mar-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38M series",
+      "seriesSlug": "carrier-38m-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "INFINITY 18VS HEAT PUMP  2-STAGE",
+      "seriesSlug": "carrier-infinity-18vs-heat-pump-2-stage",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "INFINITY 24 HP with GREENSPEED INTELLIGENCE",
+      "seriesSlug": "carrier-infinity-24-hp-with-greenspeed-intelligence",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38MP-series",
+      "seriesSlug": "carrier-38mp-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38MG-series",
+      "seriesSlug": "carrier-38mg-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38MB-series",
+      "seriesSlug": "carrier-38mb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38Mseries",
+      "seriesSlug": "carrier-38mseries",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38MH-series",
+      "seriesSlug": "carrier-38mh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "38MU series",
+      "seriesSlug": "carrier-38mu-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "45M Series",
+      "seriesSlug": "carrier-45m-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "37M Series",
+      "seriesSlug": "carrier-37m-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "D5M Series",
+      "seriesSlug": "carrier-d5m-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "Infinity 21 VS Cold Climate Heat Pump",
+      "seriesSlug": "carrier-infinity-21-vs-cold-climate-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "Infinity 20 VS Heat Pump",
+      "seriesSlug": "carrier-infinity-20-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "Infinity 23 VS Heat Pump",
+      "seriesSlug": "carrier-infinity-23-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CARRIER",
+      "brandSlug": "carrier",
+      "series": "Crossover Heat Pump",
+      "seriesSlug": "carrier-crossover-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COLEMAN",
+      "brandSlug": "coleman",
+      "series": "Standard",
+      "seriesSlug": "coleman-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COLEMAN",
+      "brandSlug": "coleman",
+      "series": "HMH7",
+      "seriesSlug": "coleman-hmh7",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COLEMAN",
+      "brandSlug": "coleman",
+      "series": "LX SERIES",
+      "seriesSlug": "coleman-lx-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COLEMAN",
+      "brandSlug": "coleman",
+      "series": "UPAC",
+      "seriesSlug": "coleman-upac",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COLEMAN",
+      "brandSlug": "coleman",
+      "series": "UMULTI",
+      "seriesSlug": "coleman-umulti",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COLEMAN",
+      "brandSlug": "coleman",
+      "series": "URAC",
+      "seriesSlug": "coleman-urac",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "Standard",
+      "seriesSlug": "comfortmaker-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "DLC-series",
+      "seriesSlug": "comfortmaker-dlc-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "Dlseries",
+      "seriesSlug": "comfortmaker-dlseries",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "SOFTSOUND DELUXE 18 VS HP  2-STAGE",
+      "seriesSlug": "comfortmaker-softsound-deluxe-18-vs-hp-2-stage",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "DL series",
+      "seriesSlug": "comfortmaker-dl-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "D5F Series",
+      "seriesSlug": "comfortmaker-d5f-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "D5C Series",
+      "seriesSlug": "comfortmaker-d5c-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "SoftSound 20 VS Heat Pump",
+      "seriesSlug": "comfortmaker-softsound-20-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "SoftSound 23 VS Heat Pump",
+      "seriesSlug": "comfortmaker-softsound-23-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTMAKER",
+      "brandSlug": "comfortmaker",
+      "series": "Crossover Heat Pump",
+      "seriesSlug": "comfortmaker-crossover-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "Standard",
+      "seriesSlug": "comfortstar-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "C series",
+      "seriesSlug": "comfortstar-c-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CG Series",
+      "seriesSlug": "comfortstar-cg-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CH series",
+      "seriesSlug": "comfortstar-ch-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CM Series",
+      "seriesSlug": "comfortstar-cm-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "AHU series",
+      "seriesSlug": "comfortstar-ahu-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CA Series",
+      "seriesSlug": "comfortstar-ca-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "ACP series",
+      "seriesSlug": "comfortstar-acp-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "UACP series",
+      "seriesSlug": "comfortstar-uacp-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CPH series",
+      "seriesSlug": "comfortstar-cph-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CVH Series",
+      "seriesSlug": "comfortstar-cvh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "T1W Series",
+      "seriesSlug": "comfortstar-t1w-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CPP Series",
+      "seriesSlug": "comfortstar-cpp-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CMZ Series",
+      "seriesSlug": "comfortstar-cmz-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CPR Series",
+      "seriesSlug": "comfortstar-cpr-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "COMFORTSTAR",
+      "brandSlug": "comfortstar",
+      "series": "CHF Series",
+      "seriesSlug": "comfortstar-chf-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CONTINENTAL",
+      "brandSlug": "continental",
+      "series": "Standard",
+      "seriesSlug": "continental-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CONTINENTAL",
+      "brandSlug": "continental",
+      "series": "WSE Series",
+      "seriesSlug": "continental-wse-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CONTINENTAL",
+      "brandSlug": "continental",
+      "series": "Hyper Heat",
+      "seriesSlug": "continental-hyper-heat",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CONTINENTAL",
+      "brandSlug": "continental",
+      "series": "CDHA series",
+      "seriesSlug": "continental-cdha-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CONTINENTAL",
+      "brandSlug": "continental",
+      "series": "CDH Series",
+      "seriesSlug": "continental-cdh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CONVECTAIR",
+      "brandSlug": "convectair",
+      "series": "Standard",
+      "seriesSlug": "convectair-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "CONVECTAIR",
+      "brandSlug": "convectair",
+      "series": "500 Series",
+      "seriesSlug": "convectair-500-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "Standard",
+      "seriesSlug": "daikin-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "DZ9VC",
+      "seriesSlug": "daikin-dz9vc",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "Daikin AURORA",
+      "seriesSlug": "daikin-daikin-aurora",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "Daikin OTERRA",
+      "seriesSlug": "daikin-daikin-oterra",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "SkyAir",
+      "seriesSlug": "daikin-skyair",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "DZ6VS",
+      "seriesSlug": "daikin-dz6vs",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "OTERRA",
+      "seriesSlug": "daikin-oterra",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "Standard Multi",
+      "seriesSlug": "daikin-standard-multi",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "AURORA Multi",
+      "seriesSlug": "daikin-aurora-multi",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "DH6VSA",
+      "seriesSlug": "daikin-dh6vsa",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "DH7VSA",
+      "seriesSlug": "daikin-dh7vsa",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "115V OTERA",
+      "seriesSlug": "daikin-115v-otera",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "DH9VSA",
+      "seriesSlug": "daikin-dh9vsa",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "Aurora",
+      "seriesSlug": "daikin-aurora",
+      "registryImageUrl": "https://daikincomfort.com/images/default-source/products/heating-and-cooling/single-zone-systems/heat-pumps/aurorawall.png",
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "FIT Aurora",
+      "seriesSlug": "daikin-fit-aurora",
+      "registryImageUrl": "https://daikincomfort.com/images/default-source/home-solutions/home-additions/daikin-fit-unit.png",
+      "candidateImages": []
+    },
+    {
+      "brand": "Daikin",
+      "brandSlug": "daikin",
+      "series": "Atmosphera",
+      "seriesSlug": "daikin-atmosphera",
+      "registryImageUrl": "https://daikincomfort.com/images/default-source/products/heating-and-cooling/single-zone-systems/heat-pumps/aurorawall.png",
+      "candidateImages": []
+    },
+    {
+      "brand": "DANBY",
+      "brandSlug": "danby",
+      "series": "DA series",
+      "seriesSlug": "danby-da-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "MVB Series",
+      "seriesSlug": "direct-air-mvb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "Standard",
+      "seriesSlug": "direct-air-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "M3O Series",
+      "seriesSlug": "direct-air-m3o-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "MO series",
+      "seriesSlug": "direct-air-mo-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "M5O Series",
+      "seriesSlug": "direct-air-m5o-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "HiULTRA",
+      "seriesSlug": "direct-air-hiultra",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "DIRM series",
+      "seriesSlug": "direct-air-dirm-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "DIR Series",
+      "seriesSlug": "direct-air-dir-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DIRECT AIR",
+      "brandSlug": "direct-air",
+      "series": "DIRM4 Series",
+      "seriesSlug": "direct-air-dirm4-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "DRA1",
+      "seriesSlug": "durastar-dra1",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "DRA2",
+      "seriesSlug": "durastar-dra2",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "DRA3",
+      "seriesSlug": "durastar-dra3",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "DRA Series",
+      "seriesSlug": "durastar-dra-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "Standard",
+      "seriesSlug": "durastar-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "DRA4",
+      "seriesSlug": "durastar-dra4",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "DRA5",
+      "seriesSlug": "durastar-dra5",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "DURASTAR",
+      "brandSlug": "durastar",
+      "series": "DRU Series",
+      "seriesSlug": "durastar-dru-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "Standard",
+      "seriesSlug": "elios-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "DE-series",
+      "seriesSlug": "elios-de-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "DEA series",
+      "seriesSlug": "elios-dea-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "DM Series",
+      "seriesSlug": "elios-dm-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "DUB series",
+      "seriesSlug": "elios-dub-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "ESH Series",
+      "seriesSlug": "elios-esh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "EXH Series",
+      "seriesSlug": "elios-exh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "MAH Series",
+      "seriesSlug": "elios-mah-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "ELIOS",
+      "brandSlug": "elios",
+      "series": "MSH Series",
+      "seriesSlug": "elios-msh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRANKLIN",
+      "brandSlug": "franklin",
+      "series": "MSH Series",
+      "seriesSlug": "franklin-msh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRANKLIN",
+      "brandSlug": "franklin",
+      "series": "MST Series",
+      "seriesSlug": "franklin-mst-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRANKLIN",
+      "brandSlug": "franklin",
+      "series": "Standard",
+      "seriesSlug": "franklin-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRANKLIN",
+      "brandSlug": "franklin",
+      "series": "GSZV9",
+      "seriesSlug": "franklin-gszv9",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRANKLIN",
+      "brandSlug": "franklin",
+      "series": "ASZV9",
+      "seriesSlug": "franklin-aszv9",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Standard",
+      "seriesSlug": "friedrich-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Premier",
+      "seriesSlug": "friedrich-premier",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Pro",
+      "seriesSlug": "friedrich-pro",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Breeze",
+      "seriesSlug": "friedrich-breeze",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "F - SERIES PLUS",
+      "seriesSlug": "friedrich-f-series-plus",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "F Series",
+      "seriesSlug": "friedrich-f-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "K-SERIES",
+      "seriesSlug": "friedrich-k-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Floating  Air Select",
+      "seriesSlug": "friedrich-floating-air-select",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Floating Air Pro",
+      "seriesSlug": "friedrich-floating-air-pro",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Floating Air Pro X",
+      "seriesSlug": "friedrich-floating-air-pro-x",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIEDRICH",
+      "brandSlug": "friedrich",
+      "series": "Breeze Select",
+      "seriesSlug": "friedrich-breeze-select",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIGIDAIRE",
+      "brandSlug": "frigidaire",
+      "series": "Ultra Side Discharge",
+      "seriesSlug": "frigidaire-ultra-side-discharge",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "FRIGIDAIRE",
+      "brandSlug": "frigidaire",
+      "series": "E Series",
+      "seriesSlug": "frigidaire-e-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Fujitsu",
+      "brandSlug": "fujitsu",
+      "series": "H-Series",
+      "seriesSlug": "fujitsu-h-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Fujitsu",
+      "brandSlug": "fujitsu",
+      "series": "Standard",
+      "seriesSlug": "fujitsu-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Fujitsu",
+      "brandSlug": "fujitsu",
+      "series": "AIRSTAGE H series",
+      "seriesSlug": "fujitsu-airstage-h-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Fujitsu",
+      "brandSlug": "fujitsu",
+      "series": "J-7S",
+      "seriesSlug": "fujitsu-j-7s",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Fujitsu",
+      "brandSlug": "fujitsu",
+      "series": "AIRSTAGE Orion XLTH",
+      "seriesSlug": "fujitsu-xlth",
+      "registryImageUrl": "/images/products/fujitsu-xlth-12k.webp",
+      "candidateImages": []
+    },
+    {
+      "brand": "GE",
+      "brandSlug": "ge",
+      "series": "NS18H SERIES",
+      "seriesSlug": "ge-ns18h-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE",
+      "brandSlug": "ge",
+      "series": "Standard",
+      "seriesSlug": "ge-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE",
+      "brandSlug": "ge",
+      "series": "NS22H SERIES",
+      "seriesSlug": "ge-ns22h-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE",
+      "brandSlug": "ge",
+      "series": "NS22 Series",
+      "seriesSlug": "ge-ns22-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE",
+      "brandSlug": "ge",
+      "series": "Connect",
+      "seriesSlug": "ge-connect",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Altitude",
+      "seriesSlug": "ge-appliances-altitude",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Standard",
+      "seriesSlug": "ge-appliances-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Connect",
+      "seriesSlug": "ge-appliances-connect",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Endure",
+      "seriesSlug": "ge-appliances-endure",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Multilink",
+      "seriesSlug": "ge-appliances-multilink",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "ASH324JCDD**",
+      "seriesSlug": "ge-appliances-ash324jcdd",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "ASH124TRDF**",
+      "seriesSlug": "ge-appliances-ash124trdf",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "ASH3036TRDF**",
+      "seriesSlug": "ge-appliances-ash3036trdf",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Endure PRO",
+      "seriesSlug": "ge-appliances-endure-pro",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Caliber 115V",
+      "seriesSlug": "ge-appliances-caliber-115v",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Endure Single",
+      "seriesSlug": "ge-appliances-endure-single",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Altitude Single",
+      "seriesSlug": "ge-appliances-altitude-single",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Altitude Multi",
+      "seriesSlug": "ge-appliances-altitude-multi",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Endure Multi",
+      "seriesSlug": "ge-appliances-endure-multi",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GE APPLIANCES",
+      "brandSlug": "ge-appliances",
+      "series": "Caliber 230V",
+      "seriesSlug": "ge-appliances-caliber-230v",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Goodman",
+      "brandSlug": "goodman",
+      "series": "Standard",
+      "seriesSlug": "goodman-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Goodman",
+      "brandSlug": "goodman",
+      "series": "MSH Series",
+      "seriesSlug": "goodman-msh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Goodman",
+      "brandSlug": "goodman",
+      "series": "GSZV9",
+      "seriesSlug": "goodman-gszv9",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/goodman-goodman-gszv9.jpg"
+      ]
+    },
+    {
+      "brand": "Goodman",
+      "brandSlug": "goodman",
+      "series": "MST Series",
+      "seriesSlug": "goodman-mst-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/goodman-goodman-mst-series.jpg"
+      ]
+    },
+    {
+      "brand": "Goodman",
+      "brandSlug": "goodman",
+      "series": "GZV6SA",
+      "seriesSlug": "goodman-gzv6sa",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/goodman-goodman-gzv6sa.jpg",
+        "images/series/goodman-goodman-gzv6sam.jpg"
+      ]
+    },
+    {
+      "brand": "Goodman",
+      "brandSlug": "goodman",
+      "series": "GZV7SA",
+      "seriesSlug": "goodman-gzv7sa",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/goodman-goodman-gzv7sa.jpg"
+      ]
+    },
+    {
+      "brand": "Goodman",
+      "brandSlug": "goodman",
+      "series": "Série à venir",
+      "seriesSlug": "goodman-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GRANDAIRE",
+      "brandSlug": "grandaire",
+      "series": "WDlseries",
+      "seriesSlug": "grandaire-wdlseries",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/grandaire-grandaire-wdlseries.jpg"
+      ]
+    },
+    {
+      "brand": "GRANDAIRE",
+      "brandSlug": "grandaire",
+      "series": "Standard",
+      "seriesSlug": "grandaire-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "GRANDAIRE",
+      "brandSlug": "grandaire",
+      "series": "D5F Series",
+      "seriesSlug": "grandaire-d5f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/grandaire-grandaire-d5f-series.jpg"
+      ]
+    },
+    {
+      "brand": "GRANDAIRE",
+      "brandSlug": "grandaire",
+      "series": "D5C Series",
+      "seriesSlug": "grandaire-d5c-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/grandaire-grandaire-d5c-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Standard",
+      "seriesSlug": "gree-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Lomo",
+      "seriesSlug": "gree-lomo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-lomo.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Bora",
+      "seriesSlug": "gree-bora",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-bora.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Vireo GEN1",
+      "seriesSlug": "gree-vireo-gen1",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-vireo-gen1.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Sapphire",
+      "seriesSlug": "gree-sapphire",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-sapphire.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "J-Series",
+      "seriesSlug": "gree-j-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-j-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Multi Ultra DO",
+      "seriesSlug": "gree-multi-ultra-do",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-multi-ultra-do.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "FLEXX High-efficiency Series",
+      "seriesSlug": "gree-flexx-high-efficiency-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "L-Series",
+      "seriesSlug": "gree-l-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-l-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Pular",
+      "seriesSlug": "gree-pular",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-pular.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Vireo GEN2",
+      "seriesSlug": "gree-vireo-gen2",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-vireo-gen2.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Muse",
+      "seriesSlug": "gree-muse",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-muse.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "M-Series",
+      "seriesSlug": "gree-m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-free-match-m-series.jpg",
+        "images/series/gree-gree-m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Charmo",
+      "seriesSlug": "gree-charmo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-charmo.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Vireo GEN3",
+      "seriesSlug": "gree-vireo-gen3",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-vireo-gen3.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Multi GEN2 EO",
+      "seriesSlug": "gree-multi-gen2-eo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-multi-gen2-eo.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "All MATCH",
+      "seriesSlug": "gree-all-match",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-all-match.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Ultra Heat GMV6 Mini",
+      "seriesSlug": "gree-ultra-heat-gmv6-mini",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-ultra-heat-gmv6-mini.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "FLEXX",
+      "seriesSlug": "gree-flexx",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-flexx-eco-series.jpg",
+        "images/series/gree-gree-flexx.jpg",
+        "images/series/gree-gree-ultra-heat-flexx-condenser.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Clivia",
+      "seriesSlug": "gree-clivia",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-clivia.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "E Series",
+      "seriesSlug": "gree-e-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-e-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Shimo",
+      "seriesSlug": "gree-shimo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-shimo.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Airy",
+      "seriesSlug": "gree-airy",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-airy.jpg",
+        "images/series/gree-gree-fairy.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Multi R32 AO",
+      "seriesSlug": "gree-multi-r32-ao",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-multi-r32-ao.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Ducted",
+      "seriesSlug": "gree-ducted",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-ducted.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "360°air discharge cassette unit",
+      "seriesSlug": "gree-360-air-discharge-cassette-unit",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "One-way air discharge cassette unit",
+      "seriesSlug": "gree-one-way-air-discharge-cassette-unit",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-one-way-air-discharge-cassette-unit.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Floor ceiling",
+      "seriesSlug": "gree-floor-ceiling",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-floor-ceiling.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Console",
+      "seriesSlug": "gree-console",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-console.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "F Series",
+      "seriesSlug": "gree-f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-f-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "COSMO",
+      "seriesSlug": "gree-cosmo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-cosmo.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "ZENO",
+      "seriesSlug": "gree-zeno",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "G Series",
+      "seriesSlug": "gree-g-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-g-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "FLEXX Eco Series",
+      "seriesSlug": "gree-flexx-eco-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-flexx-eco-series.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Ultra Heat Flexx Condenser",
+      "seriesSlug": "gree-ultra-heat-flexx-condenser",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-ultra-heat-flexx-condenser.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "25 SEER2 115V Mini splits",
+      "seriesSlug": "gree-25-seer2-115v-mini-splits",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-25-seer2-115v-mini-splits.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "25 SEER2 208/230V Mini splits",
+      "seriesSlug": "gree-25-seer2-208-230v-mini-splits",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "38 SEER Heat Pump",
+      "seriesSlug": "gree-38-seer-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-38-seer-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Multi Zone Outdoor",
+      "seriesSlug": "gree-multi-zone-outdoor",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/gree-gree-multi-zone-outdoor.jpg"
+      ]
+    },
+    {
+      "brand": "Gree",
+      "brandSlug": "gree",
+      "series": "Crown",
+      "seriesSlug": "gree-crown",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "HAXXAIR",
+      "brandSlug": "haxxair",
+      "series": "Standard",
+      "seriesSlug": "haxxair-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "HAXXAIR",
+      "brandSlug": "haxxair",
+      "series": "Hi UNI",
+      "seriesSlug": "haxxair-hi-uni",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/haxxair-haxxair-hi-uni.jpg"
+      ]
+    },
+    {
+      "brand": "HAXXAIR",
+      "brandSlug": "haxxair",
+      "series": "Hi MULTI Xtreme",
+      "seriesSlug": "haxxair-hi-multi-xtreme",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/haxxair-haxxair-hi-multi-xtreme.jpg"
+      ]
+    },
+    {
+      "brand": "HAXXAIR",
+      "brandSlug": "haxxair",
+      "series": "Hi ULTRA HD",
+      "seriesSlug": "haxxair-hi-ultra-hd",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/haxxair-haxxair-hi-ultra-hd.jpg"
+      ]
+    },
+    {
+      "brand": "HAXXAIR",
+      "brandSlug": "haxxair",
+      "series": "Ultra",
+      "seriesSlug": "haxxair-ultra",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/haxxair-haxxair-hi-ultra-hd.jpg",
+        "images/series/haxxair-haxxair-ultra-coil.jpg",
+        "images/series/haxxair-haxxair-ultra.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Standard",
+      "seriesSlug": "hisense-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "HiULTRA",
+      "seriesSlug": "hisense-hiultra",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hiultra.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Hi MULTI Xtreme",
+      "seriesSlug": "hisense-hi-multi-xtreme",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-multi-xtreme.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Hi UNI",
+      "seriesSlug": "hisense-hi-uni",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-uni-coil.jpg",
+        "images/series/hisense-hisense-hi-uni.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Hi ULTRA HD",
+      "seriesSlug": "hisense-hi-ultra-hd",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-ultra-hd-coil.jpg",
+        "images/series/hisense-hisense-hi-ultra-hd.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Hi ULTRA HD-Coil",
+      "seriesSlug": "hisense-hi-ultra-hd-coil",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-ultra-hd-coil.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Hi-PRO HD",
+      "seriesSlug": "hisense-hi-pro-hd",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-pro-hd-coil.jpg",
+        "images/series/hisense-hisense-hi-pro-hd.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "SmartSense",
+      "seriesSlug": "hisense-smartsense",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-smartsense.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Hi-ULTRA",
+      "seriesSlug": "hisense-hi-ultra",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-ultra-hd-coil.jpg",
+        "images/series/hisense-hisense-hi-ultra-hd.jpg",
+        "images/series/hisense-hisense-hi-ultra.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "Hi-PRO",
+      "seriesSlug": "hisense-hi-pro",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-pro-hd-coil.jpg",
+        "images/series/hisense-hisense-hi-pro-hd.jpg",
+        "images/series/hisense-hisense-hi-pro.jpg"
+      ]
+    },
+    {
+      "brand": "HISENSE",
+      "brandSlug": "hisense",
+      "series": "HI-EDGE",
+      "seriesSlug": "hisense-hi-edge",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hisense-hisense-hi-edge.jpg"
+      ]
+    },
+    {
+      "brand": "HITACHI",
+      "brandSlug": "hitachi",
+      "series": "Standard",
+      "seriesSlug": "hitachi-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "HITACHI",
+      "brandSlug": "hitachi",
+      "series": "Hi UNI",
+      "seriesSlug": "hitachi-hi-uni",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hitachi-hitachi-hi-uni.jpg"
+      ]
+    },
+    {
+      "brand": "HITACHI",
+      "brandSlug": "hitachi",
+      "series": "airCore700",
+      "seriesSlug": "hitachi-aircore700",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/hitachi-hitachi-aircore700-lac.jpg",
+        "images/series/hitachi-hitachi-aircore700.jpg"
+      ]
+    },
+    {
+      "brand": "INNOVA",
+      "brandSlug": "innova",
+      "series": "Standard",
+      "seriesSlug": "innova-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "Standard",
+      "seriesSlug": "keeprite-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "DLC-series",
+      "seriesSlug": "keeprite-dlc-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/keeprite-keeprite-dlc-series.jpg"
+      ]
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "Dlseries",
+      "seriesSlug": "keeprite-dlseries",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "SOFTSOUND DELUXE 18 VS HP  2-STAGE",
+      "seriesSlug": "keeprite-softsound-deluxe-18-vs-hp-2-stage",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "PROCOMFORT DELUXE 18 VS HP  2-STAGE",
+      "seriesSlug": "keeprite-procomfort-deluxe-18-vs-hp-2-stage",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "DL series",
+      "seriesSlug": "keeprite-dl-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "D5F Series",
+      "seriesSlug": "keeprite-d5f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/keeprite-keeprite-d5f-series.jpg"
+      ]
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "D5C Series",
+      "seriesSlug": "keeprite-d5c-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/keeprite-keeprite-d5c-series.jpg"
+      ]
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "SoftSound 20 VS Heat Pump",
+      "seriesSlug": "keeprite-softsound-20-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "ProComfort 20 VS HP",
+      "seriesSlug": "keeprite-procomfort-20-vs-hp",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/keeprite-keeprite-procomfort-20-vs-hp.jpg"
+      ]
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "ProComfort 23 VS HP",
+      "seriesSlug": "keeprite-procomfort-23-vs-hp",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/keeprite-keeprite-procomfort-23-vs-hp.jpg"
+      ]
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "SoftSound 23 VS Heat Pump",
+      "seriesSlug": "keeprite-softsound-23-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KEEPRITE",
+      "brandSlug": "keeprite",
+      "series": "Crossover Heat Pump",
+      "seriesSlug": "keeprite-crossover-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "Standard",
+      "seriesSlug": "kenmore-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "DLC-series",
+      "seriesSlug": "kenmore-dlc-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "Dlseries",
+      "seriesSlug": "kenmore-dlseries",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "DELUXE 18 VS HP  2-STAGE",
+      "seriesSlug": "kenmore-deluxe-18-vs-hp-2-stage",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "DL series",
+      "seriesSlug": "kenmore-dl-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "D5F Series",
+      "seriesSlug": "kenmore-d5f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kenmore-kenmore-d5f-series.jpg"
+      ]
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "D5C Series",
+      "seriesSlug": "kenmore-d5c-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kenmore-kenmore-d5c-series.jpg"
+      ]
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "Deluxe 20 VS Heat Pump",
+      "seriesSlug": "kenmore-deluxe-20-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kenmore-kenmore-deluxe-20-vs-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "Deluxe 23 VS Heat Pump",
+      "seriesSlug": "kenmore-deluxe-23-vs-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kenmore-kenmore-deluxe-23-vs-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "KENMORE",
+      "brandSlug": "kenmore",
+      "series": "LX SERIES",
+      "seriesSlug": "kenmore-lx-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kenmore-kenmore-lx-series.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Standard",
+      "seriesSlug": "kinghome-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Jasmine",
+      "seriesSlug": "kinghome-jasmine",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-jasmine.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "J-Series",
+      "seriesSlug": "kinghome-j-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-j-series.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "ULTRANIXX",
+      "seriesSlug": "kinghome-ultranixx",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-cee-ultranixx.jpg",
+        "images/series/kinghome-kinghome-ultranixx.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Sunflower",
+      "seriesSlug": "kinghome-sunflower",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-sunflower.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "M-Series",
+      "seriesSlug": "kinghome-m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-free-match-m-series.jpg",
+        "images/series/kinghome-kinghome-m-series.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Charmo",
+      "seriesSlug": "kinghome-charmo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-charmo.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Cosmo",
+      "seriesSlug": "kinghome-cosmo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-cosmo.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "17 SEER DC inverter rooftop unit",
+      "seriesSlug": "kinghome-17-seer-dc-inverter-rooftop-unit",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-17-seer-dc-inverter-rooftop-unit.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Airy",
+      "seriesSlug": "kinghome-airy",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-airy.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Pular",
+      "seriesSlug": "kinghome-pular",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Clivia",
+      "seriesSlug": "kinghome-clivia",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-clivia.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "CEE Ultranixx",
+      "seriesSlug": "kinghome-cee-ultranixx",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-cee-ultranixx.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "G Series",
+      "seriesSlug": "kinghome-g-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-g-series.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "360°air discharge cassette unit",
+      "seriesSlug": "kinghome-360-air-discharge-cassette-unit",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-360-air-discharge-cassette-unit.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "One-way air discharge cassette unit",
+      "seriesSlug": "kinghome-one-way-air-discharge-cassette-unit",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-one-way-air-discharge-cassette-unit.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Floor ceiling",
+      "seriesSlug": "kinghome-floor-ceiling",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-floor-ceiling.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Console",
+      "seriesSlug": "kinghome-console",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-console.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "Ducted",
+      "seriesSlug": "kinghome-ducted",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-ducted.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "All MATCH",
+      "seriesSlug": "kinghome-all-match",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-all-match.jpg"
+      ]
+    },
+    {
+      "brand": "KINGHOME",
+      "brandSlug": "kinghome",
+      "series": "E Series",
+      "seriesSlug": "kinghome-e-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/kinghome-kinghome-e-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Standard",
+      "seriesSlug": "lennox-standard",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-multi-position-air-handler-standard-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "M series",
+      "seriesSlug": "lennox-m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "DAVE LENNOX SIGNATURE SL25XPV SERIES",
+      "seriesSlug": "lennox-dave-lennox-signature-sl25xpv-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-dave-lennox-signature-sl25xpv-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "ELITE EL22XPV SERIES",
+      "seriesSlug": "lennox-elite-el22xpv-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-elite-el22xpv-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "MMA series",
+      "seriesSlug": "lennox-mma-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-mma-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Lennox Real",
+      "seriesSlug": "lennox-lennox-real",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-lennox-real.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "MMLD Mini-Split",
+      "seriesSlug": "lennox-mmld-mini-split",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-mmld-mini-split.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "MMPD Mini-Split",
+      "seriesSlug": "lennox-mmpd-mini-split",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-mmpd-mini-split.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "DAVE LENNOX SIGNATURE DLSC SL22KLV SERIES",
+      "seriesSlug": "lennox-dave-lennox-signature-dlsc-sl22klv-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-dave-lennox-signature-dlsc-sl22klv-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "MWHD Mini-Split",
+      "seriesSlug": "lennox-mwhd-mini-split",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-mwhd-mini-split.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "1-Way Cassette (WindFree™) Premium (CAC)",
+      "seriesSlug": "lennox-1-way-cassette-windfree-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-1-way-cassette-windfree-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Slim Duct (LSP) Premium (CAC)",
+      "seriesSlug": "lennox-slim-duct-lsp-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Duct S (HSP) Premium (CAC)",
+      "seriesSlug": "lennox-duct-s-hsp-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-duct-s-hsp-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Mini 4-Way Cassette (WindFree™) Premium (CAC)",
+      "seriesSlug": "lennox-mini-4-way-cassette-windfree-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-mini-4-way-cassette-windfree-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Console - Premium (CAC)",
+      "seriesSlug": "lennox-console-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-console-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Multi-Position Air Handler - Premium (CAC)",
+      "seriesSlug": "lennox-multi-position-air-handler-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-multi-position-air-handler-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Multi-Position Air Handler - Standard (CAC)",
+      "seriesSlug": "lennox-multi-position-air-handler-standard-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-multi-position-air-handler-standard-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Elite EL18KSLV Series",
+      "seriesSlug": "lennox-elite-el18kslv-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-el18kslv-series-elite-el18kslv-series.jpg",
+        "images/series/lennox-lennox-elite-el18kslv-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "MMPD Multi-Zone",
+      "seriesSlug": "lennox-mmpd-multi-zone",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-mmpd-multi-zone.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "MMLD Multi-Zone",
+      "seriesSlug": "lennox-mmld-multi-zone",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-mmld-multi-zone.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "DAVE LENNOX SIGNATURE SL22KLV SERIES",
+      "seriesSlug": "lennox-dave-lennox-signature-sl22klv-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-dave-lennox-signature-sl22klv-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Elite EL21KLV SERIES",
+      "seriesSlug": "lennox-elite-el21klv-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lennox-lennox-elite-el21klv-series.jpg"
+      ]
+    },
+    {
+      "brand": "Lennox",
+      "brandSlug": "lennox",
+      "series": "Série à venir",
+      "seriesSlug": "lennox-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "Standard",
+      "seriesSlug": "lg-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ARUN048GSS4",
+      "seriesSlug": "lg-arun048gss4",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ARUB060GSS4",
+      "seriesSlug": "lg-arub060gss4",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-arub060gss4.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ARUN024GSS4",
+      "seriesSlug": "lg-arun024gss4",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-arun024gss4.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU180HHV",
+      "seriesSlug": "lg-lmu180hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu180hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU240HHV",
+      "seriesSlug": "lg-lmu240hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu240hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU300HHV",
+      "seriesSlug": "lg-lmu300hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu300hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ARUN060GSS4",
+      "seriesSlug": "lg-arun060gss4",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-arun060gss4.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LSU090HSV5",
+      "seriesSlug": "lg-lsu090hsv5",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LSU120HSV5",
+      "seriesSlug": "lg-lsu120hsv5",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lsu120hsv5.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LAU090HYV3",
+      "seriesSlug": "lg-lau090hyv3",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lau090hyv3.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LAU120HYV3",
+      "seriesSlug": "lg-lau120hyv3",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lau120hyv3.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LAU150HYV3",
+      "seriesSlug": "lg-lau150hyv3",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lau150hyv3.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LAU180HYV3",
+      "seriesSlug": "lg-lau180hyv3",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lau180hyv3.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LAU240HYV3",
+      "seriesSlug": "lg-lau240hyv3",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lau240hyv3.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LSU243HLV3",
+      "seriesSlug": "lg-lsu243hlv3",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lsu243hlv3.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU180HHV",
+      "seriesSlug": "lg-luu180hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu180hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU240HHV",
+      "seriesSlug": "lg-luu240hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu240hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU420HHV",
+      "seriesSlug": "lg-luu420hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu420hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU360HHV",
+      "seriesSlug": "lg-luu360hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu360hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU480HHV",
+      "seriesSlug": "lg-luu480hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu480hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ARUM048GSS5",
+      "seriesSlug": "lg-arum048gss5",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-arum048gss5.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ARUM036GSS5",
+      "seriesSlug": "lg-arum036gss5",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-arum036gss5.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU421HHV",
+      "seriesSlug": "lg-lmu421hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu421hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU480HHV",
+      "seriesSlug": "lg-lmu480hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu480hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU601HV",
+      "seriesSlug": "lg-lmu601hv",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU361HHV",
+      "seriesSlug": "lg-lmu361hhv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu361hhv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LSU181HSV5",
+      "seriesSlug": "lg-lsu181hsv5",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lsu181hsv5.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU183HV",
+      "seriesSlug": "lg-lmu183hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu183hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU243HV",
+      "seriesSlug": "lg-lmu243hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu243hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU303HV",
+      "seriesSlug": "lg-lmu303hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu303hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU363HV",
+      "seriesSlug": "lg-lmu363hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu363hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU483HV",
+      "seriesSlug": "lg-lmu483hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu483hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LMU543HV",
+      "seriesSlug": "lg-lmu543hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-lmu543hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU090HV",
+      "seriesSlug": "lg-luu090hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu090hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU120HV",
+      "seriesSlug": "lg-luu120hv",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU180HV",
+      "seriesSlug": "lg-luu180hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu180hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU240HV",
+      "seriesSlug": "lg-luu240hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu240hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU360HV",
+      "seriesSlug": "lg-luu360hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu360hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU420HV",
+      "seriesSlug": "lg-luu420hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu420hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "LUU480HV",
+      "seriesSlug": "lg-luu480hv",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-luu480hv.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA181A",
+      "seriesSlug": "lg-kusxa181a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa181a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA241A",
+      "seriesSlug": "lg-kusxa241a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa241a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB181A",
+      "seriesSlug": "lg-kusxb181a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxb181a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB241A",
+      "seriesSlug": "lg-kusxb241a",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB301A",
+      "seriesSlug": "lg-kusxb301a",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB121A",
+      "seriesSlug": "lg-kusxb121a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxb121a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA361A",
+      "seriesSlug": "lg-kusxa361a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa361a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB421A",
+      "seriesSlug": "lg-kusxb421a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxb421a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB091A",
+      "seriesSlug": "lg-kusxb091a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxb091a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA301A",
+      "seriesSlug": "lg-kusxa301a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa301a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB481A",
+      "seriesSlug": "lg-kusxb481a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxb481a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB361A",
+      "seriesSlug": "lg-kusxb361a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxb361a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA421A",
+      "seriesSlug": "lg-kusxa421a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa421a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA481A",
+      "seriesSlug": "lg-kusxa481a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa481a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXA181A",
+      "seriesSlug": "lg-kumxa181a",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXA241A",
+      "seriesSlug": "lg-kumxa241a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxa241a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXA301A",
+      "seriesSlug": "lg-kumxa301a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxa301a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXB181A",
+      "seriesSlug": "lg-kumxb181a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxb181a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXB241A",
+      "seriesSlug": "lg-kumxb241a",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ZRUM060GSS0",
+      "seriesSlug": "lg-zrum060gss0",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-zrum060gss0.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ZRUM048GSS0",
+      "seriesSlug": "lg-zrum048gss0",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-zrum048gss0.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ZRUM036GSS0",
+      "seriesSlug": "lg-zrum036gss0",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "ZRUN024GSS0",
+      "seriesSlug": "lg-zrun024gss0",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-zrun024gss0.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXB301A",
+      "seriesSlug": "lg-kumxb301a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxb301a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXB361A",
+      "seriesSlug": "lg-kumxb361a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxb361a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXB481A",
+      "seriesSlug": "lg-kumxb481a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxb481a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXB541A",
+      "seriesSlug": "lg-kumxb541a",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXB601A",
+      "seriesSlug": "lg-kumxb601a",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXA361A",
+      "seriesSlug": "lg-kumxa361a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxa361a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXA421A",
+      "seriesSlug": "lg-kumxa421a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxa421a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUMXA481A",
+      "seriesSlug": "lg-kumxa481a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kumxa481a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAB091A",
+      "seriesSlug": "lg-kusab091a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusab091a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAB121A",
+      "seriesSlug": "lg-kusab121a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusab121a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAB181A",
+      "seriesSlug": "lg-kusab181a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusab181a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA121A",
+      "seriesSlug": "lg-kusxa121a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa121a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXB601A",
+      "seriesSlug": "lg-kusxb601a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxb601a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA422A",
+      "seriesSlug": "lg-kusxa422a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa422a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSXA482A",
+      "seriesSlug": "lg-kusxa482a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusxa482a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAP241A",
+      "seriesSlug": "lg-kusap241a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusap241a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAL241A",
+      "seriesSlug": "lg-kusal241a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusal241a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAL151A",
+      "seriesSlug": "lg-kusal151a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusal151a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAL181A",
+      "seriesSlug": "lg-kusal181a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusal181a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAL091A",
+      "seriesSlug": "lg-kusal091a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusal091a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "KUSAL121A",
+      "seriesSlug": "lg-kusal121a",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/lg-lg-kusal121a.jpg"
+      ]
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "Art Cool Mirror (LGRED°)",
+      "seriesSlug": "lg-art-cool-mirror",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "LG",
+      "brandSlug": "lg",
+      "series": "Standard LGRED°",
+      "seriesSlug": "lg-standard-lgred",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Maestrale",
+      "brandSlug": "maestrale",
+      "series": "Standard",
+      "seriesSlug": "maestrale-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Maestrale",
+      "brandSlug": "maestrale",
+      "series": "Boreas series",
+      "seriesSlug": "maestrale-boreas-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/maestrale-maestrale-boreas-series.jpg"
+      ]
+    },
+    {
+      "brand": "MAXI AIR",
+      "brandSlug": "maxi-air",
+      "series": "YS series",
+      "seriesSlug": "maxi-air-ys-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/maxi-air-maxi-air-ys-series.jpg"
+      ]
+    },
+    {
+      "brand": "MAXI AIR",
+      "brandSlug": "maxi-air",
+      "series": "MAXS series",
+      "seriesSlug": "maxi-air-maxs-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/maxi-air-maxi-air-maxs-series.jpg"
+      ]
+    },
+    {
+      "brand": "MAXI AIR",
+      "brandSlug": "maxi-air",
+      "series": "NE series",
+      "seriesSlug": "maxi-air-ne-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/maxi-air-maxi-air-ne-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "M3O Series",
+      "seriesSlug": "midea-m3o-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-m3o-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "Standard",
+      "seriesSlug": "midea-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "DLC-series",
+      "seriesSlug": "midea-dlc-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-dlc-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "38MAR-series",
+      "seriesSlug": "midea-38mar-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-38mar-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "38MG-series",
+      "seriesSlug": "midea-38mg-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-38m-series-38mg-series.jpg",
+        "images/series/midea-midea-38mg-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "Dlseries",
+      "seriesSlug": "midea-dlseries",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "38Mseries",
+      "seriesSlug": "midea-38mseries",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MVC series",
+      "seriesSlug": "midea-mvc-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MASAG",
+      "seriesSlug": "midea-masag",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-masag.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "DL series",
+      "seriesSlug": "midea-dl-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mdl-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "38M series",
+      "seriesSlug": "midea-38m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-38m-series-38mg-series.jpg",
+        "images/series/midea-midea-38m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "38MU series",
+      "seriesSlug": "midea-38mu-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MOX Series",
+      "seriesSlug": "midea-mox-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mox-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MOD Series",
+      "seriesSlug": "midea-mod-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mod-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MVBL Series",
+      "seriesSlug": "midea-mvbl-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mvbl-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "45M Series",
+      "seriesSlug": "midea-45m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-45m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "37M Series",
+      "seriesSlug": "midea-37m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-37m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "D5F Series",
+      "seriesSlug": "midea-d5f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-d5f-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "D5C Series",
+      "seriesSlug": "midea-d5c-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-d5c-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "D5M Series",
+      "seriesSlug": "midea-d5m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-d5m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "M5F Series",
+      "seriesSlug": "midea-m5f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-m5f-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MAU Series",
+      "seriesSlug": "midea-mau-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mau-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MO1 Series",
+      "seriesSlug": "midea-mo1-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mo1-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MAC Series",
+      "seriesSlug": "midea-mac-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mac-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MCD Series",
+      "seriesSlug": "midea-mcd-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mcd-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MAS Series",
+      "seriesSlug": "midea-mas-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mas-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MSF Series",
+      "seriesSlug": "midea-msf-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-msf-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MSG Series",
+      "seriesSlug": "midea-msg-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-msg-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MSE Series",
+      "seriesSlug": "midea-mse-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mse-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MCA Series",
+      "seriesSlug": "midea-mca-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mca-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MDL Series",
+      "seriesSlug": "midea-mdl-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mdl-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MDH Series",
+      "seriesSlug": "midea-mdh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mdh-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MFA Series",
+      "seriesSlug": "midea-mfa-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mfa-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MFB Series",
+      "seriesSlug": "midea-mfb-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mfb-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MO Series",
+      "seriesSlug": "midea-mo-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mo-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MDV Series",
+      "seriesSlug": "midea-mdv-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mdv-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "ATOM X",
+      "seriesSlug": "midea-atom-x",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MSEP Series",
+      "seriesSlug": "midea-msep-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-msep-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MOX230 Series",
+      "seriesSlug": "midea-mox230-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mox230-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MOX430 Series",
+      "seriesSlug": "midea-mox430-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mox430-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MOD30 Series",
+      "seriesSlug": "midea-mod30-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-mod30-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "MOE30 Series",
+      "seriesSlug": "midea-moe30-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-moe30-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "DLF Series",
+      "seriesSlug": "midea-dlf-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "M6O Series",
+      "seriesSlug": "midea-m6o-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-m6o-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "M5O Series",
+      "seriesSlug": "midea-m5o-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-m5o-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "M4O Series",
+      "seriesSlug": "midea-m4o-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/midea-midea-m4o-series.jpg"
+      ]
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "All Easy Pro Extreme Heat",
+      "seriesSlug": "midea-mission",
+      "registryImageUrl": "/images/products/midea-mission-12k.webp",
+      "candidateImages": []
+    },
+    {
+      "brand": "Midea",
+      "brandSlug": "midea",
+      "series": "EVOX G3",
+      "seriesSlug": "midea-evox-g3",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Mitsubishi Electric",
+      "brandSlug": "mitsubishi-electric",
+      "series": "P series",
+      "seriesSlug": "mitsubishi-electric-p-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mitsubishi-electric-mitsubishi-electric-p-series.jpg"
+      ]
+    },
+    {
+      "brand": "Mitsubishi Electric",
+      "brandSlug": "mitsubishi-electric",
+      "series": "M series",
+      "seriesSlug": "mitsubishi-electric-m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mitsubishi-electric-mitsubishi-electric-m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Mitsubishi Electric",
+      "brandSlug": "mitsubishi-electric",
+      "series": "Standard",
+      "seriesSlug": "mitsubishi-electric-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Mitsubishi Electric",
+      "brandSlug": "mitsubishi-electric",
+      "series": "FS Deluxe (H2i)",
+      "seriesSlug": "mitsubishi-fs-deluxe",
+      "registryImageUrl": "https://dw2p0k56b2hr9.cloudfront.net/ME_FS_FH_Front_copy_9dd3c80ea6.webp",
+      "candidateImages": []
+    },
+    {
+      "brand": "Mitsubishi Electric",
+      "brandSlug": "mitsubishi-electric",
+      "series": "FH Standard (H2i)",
+      "seriesSlug": "mitsubishi-fh-standard",
+      "registryImageUrl": "https://dw2p0k56b2hr9.cloudfront.net/ME_FS_FH_Front_copy_9dd3c80ea6.webp",
+      "candidateImages": []
+    },
+    {
+      "brand": "Mitsubishi Electric",
+      "brandSlug": "mitsubishi-electric",
+      "series": "LN Design Premium",
+      "seriesSlug": "mitsubishi-ln-premium",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "Standard",
+      "seriesSlug": "moovair-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "DM series",
+      "seriesSlug": "moovair-dm-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-dm-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "DMA12 series",
+      "seriesSlug": "moovair-dma12-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-dma12-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "CUB series",
+      "seriesSlug": "moovair-cub-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-cub-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "DMB series",
+      "seriesSlug": "moovair-dmb-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-dmb-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "DMA series",
+      "seriesSlug": "moovair-dma-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-dma-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "DMC series",
+      "seriesSlug": "moovair-dmc-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-dmc-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "SHC Series",
+      "seriesSlug": "moovair-shc-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-shc-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "MSH Series",
+      "seriesSlug": "moovair-msh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-msh-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "MAH Series",
+      "seriesSlug": "moovair-mah-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "MXH Series",
+      "seriesSlug": "moovair-mxh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/moovair-moovair-mxh-series.jpg"
+      ]
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "Meridian HEAT+",
+      "seriesSlug": "moovair-meridian",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "Mistral",
+      "seriesSlug": "moovair-mistral",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Moovair",
+      "brandSlug": "moovair",
+      "series": "Morelis",
+      "seriesSlug": "moovair-morelis",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "Standard",
+      "seriesSlug": "mrcool-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "O-series",
+      "seriesSlug": "mrcool-o-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-o-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "DIY-series",
+      "seriesSlug": "mrcool-diy-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-diy-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "A-series",
+      "seriesSlug": "mrcool-a-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-a-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "O-ES series",
+      "seriesSlug": "mrcool-o-es-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-o-es-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "MULTI",
+      "seriesSlug": "mrcool-multi",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-multi-series.jpg",
+        "images/series/mrcool-mrcool-multi.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "CENTRAL",
+      "seriesSlug": "mrcool-central",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-cen-series-central-series.jpg",
+        "images/series/mrcool-mrcool-central-series.jpg",
+        "images/series/mrcool-mrcool-central.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "CENTRAL SERIES",
+      "seriesSlug": "mrcool-central-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-cen-series-central-series.jpg",
+        "images/series/mrcool-mrcool-central-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "DIYH SERIES",
+      "seriesSlug": "mrcool-diyh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-diyh-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "Universal",
+      "seriesSlug": "mrcool-universal",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-universal-dc-inverter-packaged-unit.jpg",
+        "images/series/mrcool-mrcool-universal-series-inverter-packaged-heat-pump.jpg",
+        "images/series/mrcool-mrcool-universal.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "MVP-series",
+      "seriesSlug": "mrcool-mvp-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-mvp-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "Universal Series Inverter Packaged Heat Pump",
+      "seriesSlug": "mrcool-universal-series-inverter-packaged-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-universal-series-inverter-packaged-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "EZ Series",
+      "seriesSlug": "mrcool-ez-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-ez-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "O-HH Series",
+      "seriesSlug": "mrcool-o-hh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-o-hh-series.jpg"
+      ]
+    },
+    {
+      "brand": "MRCOOL",
+      "brandSlug": "mrcool",
+      "series": "MULTI Series",
+      "seriesSlug": "mrcool-multi-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/mrcool-mrcool-multi-series.jpg"
+      ]
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "Standard",
+      "seriesSlug": "napoleon-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "NH series",
+      "seriesSlug": "napoleon-nh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/napoleon-napoleon-nh-series.jpg"
+      ]
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "NDH series",
+      "seriesSlug": "napoleon-ndh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/napoleon-napoleon-ndh-series.jpg"
+      ]
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "NDHA Series",
+      "seriesSlug": "napoleon-ndha-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/napoleon-napoleon-ndha-series.jpg"
+      ]
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "WSE Series",
+      "seriesSlug": "napoleon-wse-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/napoleon-napoleon-wse-series.jpg"
+      ]
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "Hyper Heat",
+      "seriesSlug": "napoleon-hyper-heat",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/napoleon-napoleon-hyper-heat.jpg"
+      ]
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "CDH Series",
+      "seriesSlug": "napoleon-cdh-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "CDHA Series",
+      "seriesSlug": "napoleon-cdha-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "F Series",
+      "seriesSlug": "napoleon-f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/napoleon-napoleon-f-series.jpg"
+      ]
+    },
+    {
+      "brand": "Napoleon",
+      "brandSlug": "napoleon",
+      "series": "Série à venir",
+      "seriesSlug": "napoleon-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "NOVAIR",
+      "brandSlug": "novair",
+      "series": "LEA SERIES",
+      "seriesSlug": "novair-lea-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/novair-novair-lea-series.jpg"
+      ]
+    },
+    {
+      "brand": "NOVAIR",
+      "brandSlug": "novair",
+      "series": "Standard",
+      "seriesSlug": "novair-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "OUELLET",
+      "brandSlug": "ouellet",
+      "series": "Flexx",
+      "seriesSlug": "ouellet-flexx",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/ouellet-ouellet-flexx.jpg"
+      ]
+    },
+    {
+      "brand": "OUELLET",
+      "brandSlug": "ouellet",
+      "series": "Myriad",
+      "seriesSlug": "ouellet-myriad",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/ouellet-ouellet-myriad.jpg"
+      ]
+    },
+    {
+      "brand": "OUELLET",
+      "brandSlug": "ouellet",
+      "series": "Olympia",
+      "seriesSlug": "ouellet-olympia",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/ouellet-ouellet-olympia.jpg"
+      ]
+    },
+    {
+      "brand": "OUELLET",
+      "brandSlug": "ouellet",
+      "series": "Pacific",
+      "seriesSlug": "ouellet-pacific",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/ouellet-ouellet-pacific.jpg"
+      ]
+    },
+    {
+      "brand": "OUELLET",
+      "brandSlug": "ouellet",
+      "series": "Harmony",
+      "seriesSlug": "ouellet-harmony",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/ouellet-ouellet-harmony.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "Exterios E",
+      "seriesSlug": "panasonic-exterios-e",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-exterios-e.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "Standard",
+      "seriesSlug": "panasonic-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "Multizone",
+      "seriesSlug": "panasonic-multizone",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-multizone.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "CS-XE9WKUAW / CU-XE9WKUA",
+      "seriesSlug": "panasonic-cs-xe9wkuaw-cu-xe9wkua",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-cs-xe9wkuaw-cu-xe9wkua.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "CS-XE12WKUAW / CU-XE12WKUA",
+      "seriesSlug": "panasonic-cs-xe12wkuaw-cu-xe12wkua",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-cs-xe12wkuaw-cu-xe12wkua.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "CS-XE15WKUAW / CU-XE15WKUA",
+      "seriesSlug": "panasonic-cs-xe15wkuaw-cu-xe15wkua",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-cs-xe15wkuaw-cu-xe15wkua.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "CS-XE18WKUAW / CU-XE18WKUA",
+      "seriesSlug": "panasonic-cs-xe18wkuaw-cu-xe18wkua",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-cs-xe18wkuaw-cu-xe18wkua.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "CU series",
+      "seriesSlug": "panasonic-cu-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-cu-series.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "Climapure XZ",
+      "seriesSlug": "panasonic-climapure-xz",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-climapure-xz.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "Deluxe Z",
+      "seriesSlug": "panasonic-deluxe-z",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/panasonic-panasonic-deluxe-z.jpg"
+      ]
+    },
+    {
+      "brand": "Panasonic",
+      "brandSlug": "panasonic",
+      "series": "EXTERIOS Z",
+      "seriesSlug": "panasonic-exterios-z",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "Standard",
+      "seriesSlug": "perfectaire-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "HiULTRA",
+      "seriesSlug": "perfectaire-hiultra",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-hiultra.jpg"
+      ]
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "KARDA",
+      "seriesSlug": "perfectaire-karda",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "Hi MULTI Xtreme",
+      "seriesSlug": "perfectaire-hi-multi-xtreme",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "1PAMS",
+      "seriesSlug": "perfectaire-1pams",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-1pams.jpg"
+      ]
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "3PAMS",
+      "seriesSlug": "perfectaire-3pams",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-3pams.jpg",
+        "images/series/perfectaire-perfectaire-3pamshh-series.jpg"
+      ]
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "3PAM",
+      "seriesSlug": "perfectaire-3pam",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-3pam-series.jpg",
+        "images/series/perfectaire-perfectaire-3pam.jpg",
+        "images/series/perfectaire-perfectaire-3pams.jpg",
+        "images/series/perfectaire-perfectaire-3pamshh-series.jpg"
+      ]
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "3PAHH series",
+      "seriesSlug": "perfectaire-3pahh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-3pahh-series.jpg"
+      ]
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "3PAM series",
+      "seriesSlug": "perfectaire-3pam-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-3pam-series.jpg"
+      ]
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "3PAMSHH series",
+      "seriesSlug": "perfectaire-3pamshh-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-3pamshh-series.jpg"
+      ]
+    },
+    {
+      "brand": "PERFECTAIRE",
+      "brandSlug": "perfectaire",
+      "series": "4PAM Series",
+      "seriesSlug": "perfectaire-4pam-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/perfectaire-perfectaire-4pam-series.jpg"
+      ]
+    },
+    {
+      "brand": "PIONEER",
+      "brandSlug": "pioneer",
+      "series": "Standard",
+      "seriesSlug": "pioneer-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "PIONEER",
+      "brandSlug": "pioneer",
+      "series": "DYR Inverter Plus",
+      "seriesSlug": "pioneer-dyr-inverter-plus",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/pioneer-pioneer-dyr-inverter-plus.jpg"
+      ]
+    },
+    {
+      "brand": "PIONEER",
+      "brandSlug": "pioneer",
+      "series": "YN series",
+      "seriesSlug": "pioneer-yn-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/pioneer-pioneer-yn-series.jpg"
+      ]
+    },
+    {
+      "brand": "POLARWAVE",
+      "brandSlug": "polarwave",
+      "series": "ACIQ",
+      "seriesSlug": "polarwave-aciq",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/polarwave-polarwave-aciq-series.jpg",
+        "images/series/polarwave-polarwave-aciq.jpg"
+      ]
+    },
+    {
+      "brand": "POLARWAVE",
+      "brandSlug": "polarwave",
+      "series": "Standard",
+      "seriesSlug": "polarwave-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "POLARWAVE",
+      "brandSlug": "polarwave",
+      "series": "ES SERIES",
+      "seriesSlug": "polarwave-es-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/polarwave-polarwave-es-series.jpg"
+      ]
+    },
+    {
+      "brand": "POLARWAVE",
+      "brandSlug": "polarwave",
+      "series": "ACIQ series",
+      "seriesSlug": "polarwave-aciq-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/polarwave-polarwave-aciq-series.jpg"
+      ]
+    },
+    {
+      "brand": "POLARWAVE",
+      "brandSlug": "polarwave",
+      "series": "EZ Series",
+      "seriesSlug": "polarwave-ez-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/polarwave-polarwave-ez-series.jpg"
+      ]
+    },
+    {
+      "brand": "QUEBEC VAIR",
+      "brandSlug": "quebec-vair",
+      "series": "NE-T52 series",
+      "seriesSlug": "quebec-vair-ne-t52-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/quebec-vair-quebec-vair-ne-t52-series.jpg"
+      ]
+    },
+    {
+      "brand": "QUEBEC VAIR",
+      "brandSlug": "quebec-vair",
+      "series": "NE series",
+      "seriesSlug": "quebec-vair-ne-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/quebec-vair-quebec-vair-ne-series.jpg"
+      ]
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "Standard",
+      "seriesSlug": "rheem-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "PRESTIGE SERIES",
+      "seriesSlug": "rheem-prestige-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/rheem-rheem-classic-plus-prestige-series.jpg",
+        "images/series/rheem-rheem-prestige-series.jpg"
+      ]
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "Classic Plus",
+      "seriesSlug": "rheem-classic-plus",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/rheem-rheem-classic-plus-prestige-series.jpg",
+        "images/series/rheem-rheem-classic-plus-versus.jpg",
+        "images/series/rheem-rheem-classic-plus.jpg",
+        "images/series/rheem-rheem-floating-air-classic-plus.jpg"
+      ]
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "F - SERIES PLUS",
+      "seriesSlug": "rheem-f-series-plus",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "F Series",
+      "seriesSlug": "rheem-f-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "K-SERIES",
+      "seriesSlug": "rheem-k-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "Floating Air Classic",
+      "seriesSlug": "rheem-floating-air-classic",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/rheem-rheem-floating-air-classic-plus.jpg",
+        "images/series/rheem-rheem-floating-air-classic.jpg"
+      ]
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "Floating  Air Select",
+      "seriesSlug": "rheem-floating-air-select",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/rheem-rheem-floating-air-select.jpg"
+      ]
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "Floating Air Pro",
+      "seriesSlug": "rheem-floating-air-pro",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/rheem-rheem-floating-air-prestige-multi-zone-floating-air-pro.jpg",
+        "images/series/rheem-rheem-floating-air-pro.jpg"
+      ]
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "Floating Air Classic Plus",
+      "seriesSlug": "rheem-floating-air-classic-plus",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/rheem-rheem-floating-air-classic-plus.jpg"
+      ]
+    },
+    {
+      "brand": "RHEEM",
+      "brandSlug": "rheem",
+      "series": "Floating Air Prestige",
+      "seriesSlug": "rheem-floating-air-prestige",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/rheem-rheem-floating-air-prestige-multi-zone-floating-air-pro.jpg",
+        "images/series/rheem-rheem-floating-air-prestige.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Standard",
+      "seriesSlug": "samsung-standard",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-4-way-cassette-windfree-standard-cac.jpg",
+        "images/series/samsung-samsung-duct-s-hsp-standard-cac.jpg",
+        "images/series/samsung-samsung-fjm-standard.jpg",
+        "images/series/samsung-samsung-multi-position-air-handler-standard-cac.jpg",
+        "images/series/samsung-samsung-windfree-iaq-standard-rac.jpg",
+        "images/series/samsung-samsung-windfree-standard-rac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Hylex",
+      "seriesSlug": "samsung-hylex",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-hylex-premium.jpg",
+        "images/series/samsung-samsung-hylex.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "4-Way Cassette (WindFree™) Premium (CAC)",
+      "seriesSlug": "samsung-4-way-cassette-windfree-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-4-way-cassette-windfree-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "1-Way Cassette (WindFree™) Premium (CAC)",
+      "seriesSlug": "samsung-1-way-cassette-windfree-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-1-way-cassette-windfree-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "360 Cassette Premium (CAC)",
+      "seriesSlug": "samsung-360-cassette-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-360-cassette-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Duct S (HSP) Premium (CAC)",
+      "seriesSlug": "samsung-duct-s-hsp-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-duct-s-hsp-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Mini 4-Way Cassette (WindFree™) Premium (CAC)",
+      "seriesSlug": "samsung-mini-4-way-cassette-windfree-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-mini-4-way-cassette-windfree-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Slim Duct (LSP) Premium (CAC)",
+      "seriesSlug": "samsung-slim-duct-lsp-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-slim-duct-lsp-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "WindFree - Max heat (RAC)",
+      "seriesSlug": "samsung-windfree-max-heat-rac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-windfree-max-heat-rac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "WindFree - Premium (RAC)",
+      "seriesSlug": "samsung-windfree-premium-rac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-windfree-premium-rac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "WindFree - Standard (RAC)",
+      "seriesSlug": "samsung-windfree-standard-rac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-windfree-standard-rac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "WindFree IAQ - Standard (RAC)",
+      "seriesSlug": "samsung-windfree-iaq-standard-rac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-windfree-iaq-standard-rac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "4-Way Cassette (WindFree™) Standard (CAC)",
+      "seriesSlug": "samsung-4-way-cassette-windfree-standard-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-4-way-cassette-windfree-standard-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Duct S (HSP) Standard (CAC)",
+      "seriesSlug": "samsung-duct-s-hsp-standard-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-duct-s-hsp-standard-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "DVM S Mini",
+      "seriesSlug": "samsung-dvm-s-mini",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-dvm-s-mini.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "FJM (Standard)",
+      "seriesSlug": "samsung-fjm-standard",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-fjm-standard.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "FJM (Premium)",
+      "seriesSlug": "samsung-fjm-premium",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-fjm-premium.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Console - Premium (CAC)",
+      "seriesSlug": "samsung-console-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-console-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "WindFree™ High-Wall - Premium (CAC)",
+      "seriesSlug": "samsung-windfree-high-wall-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-windfree-high-wall-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "High-Wall - Premium (CAC)",
+      "seriesSlug": "samsung-high-wall-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-high-wall-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Multi-Position Air Handler - Premium (CAC)",
+      "seriesSlug": "samsung-multi-position-air-handler-premium-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-multi-position-air-handler-premium-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "Multi-Position Air Handler - Standard (CAC)",
+      "seriesSlug": "samsung-multi-position-air-handler-standard-cac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-multi-position-air-handler-standard-cac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "High-Wall (RAC)",
+      "seriesSlug": "samsung-high-wall-rac",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/samsung-samsung-high-wall-rac.jpg"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "brandSlug": "samsung",
+      "series": "WindFree MaxHeat",
+      "seriesSlug": "samsung-windfree-maxheat",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Senville",
+      "brandSlug": "senville",
+      "series": "Standard",
+      "seriesSlug": "senville-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Senville",
+      "brandSlug": "senville",
+      "series": "SEN series",
+      "seriesSlug": "senville-sen-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/senville-senville-sen-series.jpg"
+      ]
+    },
+    {
+      "brand": "Senville",
+      "brandSlug": "senville",
+      "series": "SENDC",
+      "seriesSlug": "senville-sendc",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/senville-senville-sendc-series.jpg",
+        "images/series/senville-senville-sendc.jpg"
+      ]
+    },
+    {
+      "brand": "Senville",
+      "brandSlug": "senville",
+      "series": "SENA Series",
+      "seriesSlug": "senville-sena-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/senville-senville-sena-series.jpg"
+      ]
+    },
+    {
+      "brand": "Senville",
+      "brandSlug": "senville",
+      "series": "SENL Series",
+      "seriesSlug": "senville-senl-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/senville-senville-senl-series.jpg"
+      ]
+    },
+    {
+      "brand": "Senville",
+      "brandSlug": "senville",
+      "series": "SENDC Series",
+      "seriesSlug": "senville-sendc-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/senville-senville-sendc-series.jpg"
+      ]
+    },
+    {
+      "brand": "Senville",
+      "brandSlug": "senville",
+      "series": "Série à venir",
+      "seriesSlug": "senville-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Sharp",
+      "brandSlug": "sharp",
+      "series": "Standard",
+      "seriesSlug": "sharp-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Sharp",
+      "brandSlug": "sharp",
+      "series": "Single Zone series",
+      "seriesSlug": "sharp-single-zone-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/sharp-sharp-single-zone-series.jpg"
+      ]
+    },
+    {
+      "brand": "Sharp",
+      "brandSlug": "sharp",
+      "series": "Multi Zone series",
+      "seriesSlug": "sharp-multi-zone-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/sharp-sharp-multi-zone-series.jpg"
+      ]
+    },
+    {
+      "brand": "Sharp",
+      "brandSlug": "sharp",
+      "series": "Série à venir",
+      "seriesSlug": "sharp-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "SAHB Series",
+      "seriesSlug": "stelpro-sahb-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/stelpro-stelpro-sahb-series.jpg"
+      ]
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "SINB Series",
+      "seriesSlug": "stelpro-sinb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "Standard",
+      "seriesSlug": "stelpro-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "SEPB Series",
+      "seriesSlug": "stelpro-sepb-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/stelpro-stelpro-sepb-series.jpg"
+      ]
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "SICB1 Series",
+      "seriesSlug": "stelpro-sicb1-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/stelpro-stelpro-sicb1-series.jpg"
+      ]
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "SFCB1 Series",
+      "seriesSlug": "stelpro-sfcb1-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/stelpro-stelpro-sfcb1-series.jpg"
+      ]
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "Elite B",
+      "seriesSlug": "stelpro-elite-b",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/stelpro-stelpro-elite-b.jpg"
+      ]
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "SMZ Series",
+      "seriesSlug": "stelpro-smz-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/stelpro-stelpro-smz-series.jpg"
+      ]
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "CAHB Series",
+      "seriesSlug": "stelpro-cahb-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "STELPRO",
+      "brandSlug": "stelpro",
+      "series": "SDB Series",
+      "seriesSlug": "stelpro-sdb-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/stelpro-stelpro-sdb-series.jpg"
+      ]
+    },
+    {
+      "brand": "SUPREME",
+      "brandSlug": "supreme",
+      "series": "Standard",
+      "seriesSlug": "supreme-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "SUPREME",
+      "brandSlug": "supreme",
+      "series": "YS series",
+      "seriesSlug": "supreme-ys-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/supreme-supreme-ys-series.jpg"
+      ]
+    },
+    {
+      "brand": "SUPREME",
+      "brandSlug": "supreme",
+      "series": "NE series",
+      "seriesSlug": "supreme-ne-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "SURE",
+      "brandSlug": "sure",
+      "series": "VANTIX",
+      "seriesSlug": "sure-vantix",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/sure-sure-none-vantix.jpg",
+        "images/series/sure-sure-vantix-vantix.jpg",
+        "images/series/sure-sure-vantix.jpg"
+      ]
+    },
+    {
+      "brand": "SURE",
+      "brandSlug": "sure",
+      "series": "F - SERIES PLUS",
+      "seriesSlug": "sure-f-series-plus",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "SURE",
+      "brandSlug": "sure",
+      "series": "F Series",
+      "seriesSlug": "sure-f-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "SURE",
+      "brandSlug": "sure",
+      "series": "K-SERIES",
+      "seriesSlug": "sure-k-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/sure-sure-k-series.jpg"
+      ]
+    },
+    {
+      "brand": "SURE",
+      "brandSlug": "sure",
+      "series": "Standard",
+      "seriesSlug": "sure-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "T-Pro",
+      "seriesSlug": "tcl-t-pro",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-t-pro-25es.jpg",
+        "images/series/tcl-tcl-t-pro.jpg"
+      ]
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "Elite",
+      "seriesSlug": "tcl-elite",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-elite.jpg"
+      ]
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "TS1",
+      "seriesSlug": "tcl-ts1",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-ts1.jpg"
+      ]
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "Standard",
+      "seriesSlug": "tcl-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "BREEZEIN",
+      "seriesSlug": "tcl-breezein",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-breezein.jpg"
+      ]
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "MULIT ZONE",
+      "seriesSlug": "tcl-mulit-zone",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-mulit-zone.jpg"
+      ]
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "IVS 18",
+      "seriesSlug": "tcl-ivs-18",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-ivs-18.jpg"
+      ]
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "EXHEAT",
+      "seriesSlug": "tcl-exheat",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-exheat.jpg"
+      ]
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "FreshIn",
+      "seriesSlug": "tcl-freshin",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TCL",
+      "brandSlug": "tcl",
+      "series": "CELLING FLOOR-single",
+      "seriesSlug": "tcl-celling-floor-single",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tcl-tcl-celling-floor-single.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "Standard",
+      "seriesSlug": "tempstar-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "DLC-series",
+      "seriesSlug": "tempstar-dlc-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-dlc-series.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "Dlseries",
+      "seriesSlug": "tempstar-dlseries",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-dlseries.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "SMARTCOMFORT DELUXE 18 VS HP",
+      "seriesSlug": "tempstar-smartcomfort-deluxe-18-vs-hp",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-smartcomfort-deluxe-18-vs-hp.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "DL series",
+      "seriesSlug": "tempstar-dl-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "D5F Series",
+      "seriesSlug": "tempstar-d5f-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-d5f-series.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "D5C Series",
+      "seriesSlug": "tempstar-d5c-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-d5c-series.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "SmartSense 20 VS HP",
+      "seriesSlug": "tempstar-smartsense-20-vs-hp",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-smartsense-20-vs-hp.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "SmartSense 23 VS HP",
+      "seriesSlug": "tempstar-smartsense-23-vs-hp",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-smartsense-23-vs-hp.jpg"
+      ]
+    },
+    {
+      "brand": "TEMPSTAR",
+      "brandSlug": "tempstar",
+      "series": "Crossover Heat Pump",
+      "seriesSlug": "tempstar-crossover-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tempstar-tempstar-crossover-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "Standard",
+      "seriesSlug": "toshiba-carrier-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "MCY-MAP0367HS-UL",
+      "seriesSlug": "toshiba-carrier-mcy-map0367hs-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-mcy-map0367hs-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "MCY-MAP0487HS-UL*",
+      "seriesSlug": "toshiba-carrier-mcy-map0487hs-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-mcy-map0487hs-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "MCY-MAP0607HS-UL*",
+      "seriesSlug": "toshiba-carrier-mcy-map0607hs-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-mcy-map0607hs-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "RAV-BP121AT2P-UL",
+      "seriesSlug": "toshiba-carrier-rav-bp121at2p-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-rav-bp121at2p-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "RAV-BP181AT2P-UL",
+      "seriesSlug": "toshiba-carrier-rav-bp181at2p-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-rav-bp181at2p-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "RAV-BP241AT2P-UL",
+      "seriesSlug": "toshiba-carrier-rav-bp241at2p-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-rav-bp241at2p-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "RAV-BP301AT2P-UL",
+      "seriesSlug": "toshiba-carrier-rav-bp301at2p-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-rav-bp301at2p-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "RAV-BP361AT2P-UL",
+      "seriesSlug": "toshiba-carrier-rav-bp361at2p-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-rav-bp361at2p-ul.jpg"
+      ]
+    },
+    {
+      "brand": "TOSHIBA CARRIER",
+      "brandSlug": "toshiba-carrier",
+      "series": "RAV-BP421AT2P-UL",
+      "seriesSlug": "toshiba-carrier-rav-bp421at2p-ul",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/toshiba-carrier-toshiba-carrier-rav-bp421at2p-ul.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Standard",
+      "seriesSlug": "tosot-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Lomo",
+      "seriesSlug": "tosot-lomo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-lomo.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "J-Series",
+      "seriesSlug": "tosot-j-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-j-series.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "FLEXX High-efficiency Series",
+      "seriesSlug": "tosot-flexx-high-efficiency-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-flexx-high-efficiency-series.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Charmo",
+      "seriesSlug": "tosot-charmo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-charmo.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Pular",
+      "seriesSlug": "tosot-pular",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-pular.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "M-Series",
+      "seriesSlug": "tosot-m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-free-match-m-series.jpg",
+        "images/series/tosot-tosot-m-series.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "All MATCH",
+      "seriesSlug": "tosot-all-match",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-all-match.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "17 SEER DC inverter rooftop unit",
+      "seriesSlug": "tosot-17-seer-dc-inverter-rooftop-unit",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-17-seer-dc-inverter-rooftop-unit.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "COSMO",
+      "seriesSlug": "tosot-cosmo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-cosmo.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "FLEXX Ultra heat Series",
+      "seriesSlug": "tosot-flexx-ultra-heat-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-flexx-ultra-heat-series.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Multi-Zone",
+      "seriesSlug": "tosot-multi-zone",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-multi-zone.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Clivia",
+      "seriesSlug": "tosot-clivia",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-clivia.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Console",
+      "seriesSlug": "tosot-console",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-console.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Ducted",
+      "seriesSlug": "tosot-ducted",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-ducted.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Airy",
+      "seriesSlug": "tosot-airy",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-airy.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "R32 FreeMatch",
+      "seriesSlug": "tosot-r32-freematch",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-r32-freematch.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "G Series",
+      "seriesSlug": "tosot-g-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-g-series.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "360°air discharge cassette unit",
+      "seriesSlug": "tosot-360-air-discharge-cassette-unit",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-360-air-discharge-cassette-unit.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "One-way air discharge cassette unit",
+      "seriesSlug": "tosot-one-way-air-discharge-cassette-unit",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-one-way-air-discharge-cassette-unit.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Floor ceiling",
+      "seriesSlug": "tosot-floor-ceiling",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-floor-ceiling.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "AORAKI",
+      "seriesSlug": "tosot-aoraki",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-aoraki.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Ultra Heat Flexx",
+      "seriesSlug": "tosot-ultra-heat-flexx",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-ultra-heat-flexx.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "E Series",
+      "seriesSlug": "tosot-e-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/tosot-tosot-e-series.jpg"
+      ]
+    },
+    {
+      "brand": "Tosot",
+      "brandSlug": "tosot",
+      "series": "Série à venir",
+      "seriesSlug": "tosot-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "Standard",
+      "seriesSlug": "trane-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "XV20I",
+      "seriesSlug": "trane-xv20i",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-xv20i.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "38 Series",
+      "seriesSlug": "trane-38-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-38-series.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "XV19",
+      "seriesSlug": "trane-xv19",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-xv19.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "23 MZ Series",
+      "seriesSlug": "trane-23-mz-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-23-mz-series.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "XV18I",
+      "seriesSlug": "trane-xv18i",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-xv18-xv18i.jpg",
+        "images/series/trane-trane-xv18i.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "25 Series",
+      "seriesSlug": "trane-25-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-25-series.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "Resolute",
+      "seriesSlug": "trane-resolute",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "M-Series",
+      "seriesSlug": "trane-m-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-mitsubishi-electric-trane-mitsubishi-electric-m-series.jpg",
+        "images/series/trane-trane-m-series.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "XV18",
+      "seriesSlug": "trane-xv18",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-xv18-xv18i.jpg",
+        "images/series/trane-trane-xv18.jpg",
+        "images/series/trane-trane-xv18i.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "Quest",
+      "seriesSlug": "trane-quest",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "XV17",
+      "seriesSlug": "trane-xv17",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-xv17.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "18 TruComfort Variable Speed Heat Pump",
+      "seriesSlug": "trane-18-trucomfort-variable-speed-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-18-trucomfort-variable-speed-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "20 TruComfort Variable Speed Heat Pump with WeatherGuard Top",
+      "seriesSlug": "trane-20-trucomfort-variable-speed-heat-pump-with-weatherguard-top",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-20-trucomfort-variable-speed-heat-pump-with-weatherguard-top.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "20 TruComfort Variable Speed Heat Pump",
+      "seriesSlug": "trane-20-trucomfort-variable-speed-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-20-trucomfort-variable-speed-heat-pump-with-weatherguard-top.jpg",
+        "images/series/trane-trane-20-trucomfort-variable-speed-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "17 Multi-Speed Heat Pump",
+      "seriesSlug": "trane-17-multi-speed-heat-pump",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/trane-trane-17-multi-speed-heat-pump.jpg"
+      ]
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "17 Multi-Speed Heat Pump with WeatherGuard Top",
+      "seriesSlug": "trane-17-multi-speed-heat-pump-with-weatherguard-top",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "5HCL5 Cold Climate",
+      "seriesSlug": "trane-5hcl5-cold-climate",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "TRANE",
+      "brandSlug": "trane",
+      "series": "5HPL5",
+      "seriesSlug": "trane-5hpl5",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WSA Series",
+      "seriesSlug": "wells-wsa-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-wma-series-wsa-series.jpg",
+        "images/series/wells-wells-wsa-series.jpg"
+      ]
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WMA Series",
+      "seriesSlug": "wells-wma-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-vmc-series-wma-series.jpg",
+        "images/series/wells-wells-wma-series-wsa-series.jpg"
+      ]
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WMM Series",
+      "seriesSlug": "wells-wmm-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-wmm-series.jpg"
+      ]
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "Standard",
+      "seriesSlug": "wells-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "VMC Series",
+      "seriesSlug": "wells-vmc-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-vmc-series-wma-series.jpg"
+      ]
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WUA Series",
+      "seriesSlug": "wells-wua-series",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WSB Series",
+      "seriesSlug": "wells-wsb-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-wsb-series.jpg"
+      ]
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WOS Series",
+      "seriesSlug": "wells-wos-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-wos-series.jpg"
+      ]
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WDHP Series",
+      "seriesSlug": "wells-wdhp-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-wdhp-series.jpg"
+      ]
+    },
+    {
+      "brand": "WELLS",
+      "brandSlug": "wells",
+      "series": "WOM Series",
+      "seriesSlug": "wells-wom-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/wells-wells-wom-series.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "Standard",
+      "seriesSlug": "willis-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "FLEXX High-efficiency Series",
+      "seriesSlug": "willis-flexx-high-efficiency-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-flexx-high-efficiency-series.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "Heatfinity",
+      "seriesSlug": "willis-heatfinity",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-heatfinity.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "Charmo",
+      "seriesSlug": "willis-charmo",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-charmo.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "MultiHeat",
+      "seriesSlug": "willis-multiheat",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-multiheat.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "FLEXX R32",
+      "seriesSlug": "willis-flexx-r32",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-flexx-r32.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "MULTI HEAT",
+      "seriesSlug": "willis-multi-heat",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-multi-heat.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "CENTURION",
+      "seriesSlug": "willis-centurion",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-centurion.jpg"
+      ]
+    },
+    {
+      "brand": "WILLIS",
+      "brandSlug": "willis",
+      "series": "ULTIMA",
+      "seriesSlug": "willis-ultima",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/willis-willis-ultima.jpg"
+      ]
+    },
+    {
+      "brand": "YORK",
+      "brandSlug": "york",
+      "series": "Standard",
+      "seriesSlug": "york-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "YORK",
+      "brandSlug": "york",
+      "series": "AFFINITY",
+      "seriesSlug": "york-affinity",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/york-york-affinity.jpg"
+      ]
+    },
+    {
+      "brand": "YORK",
+      "brandSlug": "york",
+      "series": "HMH7",
+      "seriesSlug": "york-hmh7",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/york-york-hmh7.jpg"
+      ]
+    },
+    {
+      "brand": "YORK",
+      "brandSlug": "york",
+      "series": "LX SERIES",
+      "seriesSlug": "york-lx-series",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/york-york-lx-series.jpg"
+      ]
+    },
+    {
+      "brand": "Zephyr",
+      "brandSlug": "zephyr",
+      "series": "Standard",
+      "seriesSlug": "zephyr-standard",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Zephyr",
+      "brandSlug": "zephyr",
+      "series": "Hi MULTI Xtreme",
+      "seriesSlug": "zephyr-hi-multi-xtreme",
+      "registryImageUrl": null,
+      "candidateImages": []
+    },
+    {
+      "brand": "Zephyr",
+      "brandSlug": "zephyr",
+      "series": "Hi ULTRA HD",
+      "seriesSlug": "zephyr-hi-ultra-hd",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/zephyr-zephyr-hi-ultra-hd.jpg"
+      ]
+    },
+    {
+      "brand": "Zephyr",
+      "brandSlug": "zephyr",
+      "series": "Ultra",
+      "seriesSlug": "zephyr-ultra",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/zephyr-zephyr-hi-ultra-hd.jpg",
+        "images/series/zephyr-zephyr-hiultra.jpg",
+        "images/series/zephyr-zephyr-ultra-coil.jpg",
+        "images/series/zephyr-zephyr-ultra.jpg"
+      ]
+    },
+    {
+      "brand": "Zephyr",
+      "brandSlug": "zephyr",
+      "series": "HiULTRA",
+      "seriesSlug": "zephyr-hiultra",
+      "registryImageUrl": null,
+      "candidateImages": [
+        "images/series/zephyr-zephyr-hiultra.jpg"
+      ]
+    },
+    {
+      "brand": "Zephyr",
+      "brandSlug": "zephyr",
+      "series": "Série à venir",
+      "seriesSlug": "zephyr-placeholder",
+      "registryImageUrl": null,
+      "candidateImages": []
+    }
+  ]
+}

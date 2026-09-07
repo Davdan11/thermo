@@ -8,7 +8,7 @@ export const brand_thermofluxDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour THERMOFLUX",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_thermofluxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série High heat split de THERMOFLUX",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/thermoflux-thermoflux-high-heat-split.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

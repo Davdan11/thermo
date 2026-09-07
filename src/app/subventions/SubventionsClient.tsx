@@ -220,20 +220,27 @@ export function SubventionsClient() {
                       background: "#fff", border: `1px solid ${BDR}`, borderTop: "none",
                       borderRadius: "0 0 5px 5px", maxHeight: 280, overflowY: "auto",
                       boxShadow: "0 8px 24px rgba(0,0,0,.08)" }}>
-                      {filtered.length === 0 ? (
+                      
+                      {query.length < 2 ? (
+                        <div style={{ padding: 16, textAlign: "center", fontSize: 14, color: MUT }}>Tapez au moins 2 caractères pour rechercher...</div>
+                      ) : searching ? (
+                        <div style={{ padding: 16, textAlign: "center", fontSize: 14, color: MUT }}>Recherche en cours...</div>
+                      ) : filtered.length === 0 ? (
                         <div style={{ padding: 16, textAlign: "center", fontSize: 14, color: MUT }}>Aucun modèle trouvé.</div>
-                      ) : filtered.map((p) => (
-                        <button key={p.id} type="button"
-                          onClick={() => { setSelected(p); setShowDD(false); setQuery(""); setChecked(false); }}
-                          style={{ width: "100%", textAlign: "left", padding: "12px 16px", border: "none",
-                            background: "transparent", cursor: "pointer", fontSize: 14, color: INK,
-                            borderBottom: `1px solid #eee` }}
-                          onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#f5f3ee"; }}
-                          onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>
-                          <strong>{p.brand}</strong>{p.series ? ` ${p.series}` : ""} — <span style={{ fontWeight: 400 }}>{p.model}</span>
-                          <br /><span style={{ fontSize: 12, color: MUT }}>{p.btu.toLocaleString()} BTU à -8°C · LogisVert: <strong style={{ color: "#16a34a" }}>{p.logisVertDollars.toLocaleString()} $</strong> · {p.isColdClimate ? "❄️ Climat froid" : "Standard"} · {p.systemType === "C" ? "Central" : "Mini/Multi"}</span>
-                        </button>
-                      ))}
+                      ) : (
+                        filtered.map((p) => (
+                          <button key={p.id} type="button"
+                            onClick={() => { setSelected(p); setShowDD(false); setQuery(""); setChecked(false); }}
+                            style={{ width: "100%", textAlign: "left", padding: "12px 16px", border: "none",
+                              background: "transparent", cursor: "pointer", fontSize: 14, color: INK,
+                              borderBottom: `1px solid #eee` }}
+                            onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#f5f3ee"; }}
+                            onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>
+                            <strong>{p.brand}</strong>{p.series ? ` ${p.series}` : ""} — <span style={{ fontWeight: 400 }}>{p.model}</span>
+                            <br /><span style={{ fontSize: 12, color: MUT }}>{p.btu.toLocaleString()} BTU à -8°C · LogisVert: <strong style={{ color: "#16a34a" }}>{p.logisVertDollars.toLocaleString()} $</strong> · {p.isColdClimate ? "❄️ Climat froid" : "Standard"} · {p.systemType === "C" ? "Central" : "Mini/Multi"}</span>
+                          </button>
+                        ))
+                      )}
                     </div>
                   )}
                 </div>
@@ -468,7 +475,7 @@ export function SubventionsClient() {
               </svg>
               <span>
                 L&apos;admissibilité finale est déterminée par l&apos;organisme responsable.
-                ThermopompesÀVendre.ca n&apos;est pas responsable des décisions d&apos;admissibilité ou du versement des aides financières.
+                Thermopompe A Vendre.ca n&apos;est pas responsable des décisions d&apos;admissibilité ou du versement des aides financières.
               </span>
             </div>
           </div>
@@ -511,3 +518,4 @@ function renderRow(icon: React.ReactNode, name: string, status: React.ReactNode,
     </div>
   );
 }
+

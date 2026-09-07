@@ -8,7 +8,7 @@ export const brand_kerr_kapstoneDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Kerr Kapstone",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_kerr_kapstoneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A-KZP Series de Kerr Kapstone",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kerr-kapstone-kerr-kapstone-a-kzp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

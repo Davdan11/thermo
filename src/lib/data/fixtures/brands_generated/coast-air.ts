@@ -8,7 +8,7 @@ export const brand_coast_airDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Coast air",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_coast_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série A-series de Coast air",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/coast-air-coast-air-a-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

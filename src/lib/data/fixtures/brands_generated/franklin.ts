@@ -39,7 +39,7 @@ export const brand_franklinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSH Series de Franklin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/franklin-franklin-msh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_franklinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MST Series de Franklin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/franklin-franklin-mst-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

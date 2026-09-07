@@ -97,7 +97,18 @@ export const mapleheatDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "maple-heat-ne-t52-mheat3018i",
+      modelNumber: "NE-T52-MHEAT3018I",
+      brandId: "maple-heat",
+      type: "wall-single",
+    },
+    {
+      id: "maple-heat-ne-t52-mheat3012i",
+      modelNumber: "NE-T52-MHEAT3012I",
+      brandId: "maple-heat",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +116,7 @@ export const mapleheatDataset: BrandDataset = {
       slug: "maple-heat-ne-t52-series-wall-single-18000-cfg-1",
       modelId: "maple-heat-ne-t52-series-wall-single-18000",
       outdoorUnitId: "maple-heat-ne-t52-mheat3018e",
-      indoorUnitId: null,
+      indoorUnitId: "maple-heat-ne-t52-mheat3018i",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 21.5,
@@ -119,7 +130,7 @@ export const mapleheatDataset: BrandDataset = {
       slug: "maple-heat-ne-t52-series-wall-single-12000-cfg-1",
       modelId: "maple-heat-ne-t52-series-wall-single-12000",
       outdoorUnitId: "maple-heat-ne-t52-mheat3012e",
-      indoorUnitId: null,
+      indoorUnitId: "maple-heat-ne-t52-mheat3012i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 25.5,

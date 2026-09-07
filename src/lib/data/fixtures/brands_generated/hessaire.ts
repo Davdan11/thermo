@@ -8,7 +8,7 @@ export const brand_hessaireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Hessaire",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_hessaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-Split de Hessaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hessaire-hessaire-multi-split.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_hessaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ES de Hessaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hessaire-hessaire-es.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_hessaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ULTRA de Hessaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hessaire-hessaire-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_hessaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Energy Star de Hessaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hessaire-hessaire-energy-star.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_hessaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série H SERIES de Hessaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/hessaire-hessaire-h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

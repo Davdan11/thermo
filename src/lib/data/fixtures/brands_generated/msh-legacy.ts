@@ -8,7 +8,7 @@ export const brand_msh_legacyDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MSH LEGACY",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_msh_legacyDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Quiet Comfort HP de MSH LEGACY",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/msh-legacy-msh-legacy-quiet-comfort-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_msh_legacyDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PERFORMANCE 15 SEER2 HP de MSH LEGACY",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/msh-legacy-msh-legacy-performance-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

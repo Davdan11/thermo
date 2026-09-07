@@ -8,7 +8,7 @@ export const brand_bluefinDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Bluefin",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_bluefinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série BFM Series de Bluefin",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bluefin-bluefin-bfm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

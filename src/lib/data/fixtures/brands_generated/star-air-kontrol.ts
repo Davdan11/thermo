@@ -8,7 +8,7 @@ export const brand_star_air_kontrolDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Star Air Kontrol",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_star_air_kontrolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SAK Series de Star Air Kontrol",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/star-air-kontrol-star-air-kontrol-sak-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

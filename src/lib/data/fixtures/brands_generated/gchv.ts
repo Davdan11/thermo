@@ -8,7 +8,7 @@ export const brand_gchvDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour GCHV",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_gchvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série COT-D36HNR8-EA01(J0) de GCHV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gchv-gchv-cot-d36hnr8-ea01j0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_gchvDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série COT-D60HNR8-GA01(J0) de GCHV",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/gchv-gchv-cot-d60hnr8-ga01j0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

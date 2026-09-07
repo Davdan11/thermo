@@ -119,15 +119,20 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
                     href={`/marques/${brand.slug}`} 
                     className="group bg-white flex flex-col items-center justify-center relative p-8 h-48 sm:h-56 transition-colors duration-300 hover:bg-[#fafafa]"
                   >
-                    {/* Logo or Text */}
-                    <div className="flex-1 flex items-center justify-center w-full relative mb-6">
+                    {/* Logo or Text — fixed box so every logo looks the same size */}
+                    <div className="flex-1 flex items-center justify-center w-full mb-6">
                       {hasLogo ? (
-                        <Image
+                        <img
                           src={`/images/marques/${logoPath}`}
                           alt={`Logo ${cleanName}`}
-                          fill
-                          className="object-contain transition-transform duration-300 group-hover:scale-105"
-                          style={{ padding: '0 24px' }}
+                          className="transition-transform duration-300 group-hover:scale-105"
+                          style={{
+                            maxWidth: 160,
+                            maxHeight: 64,
+                            width: "auto",
+                            height: "auto",
+                            objectFit: "contain",
+                          }}
                         />
                       ) : (
                         <span className="text-2xl font-black text-[#172126] uppercase tracking-wide group-hover:scale-105 transition-transform duration-300">

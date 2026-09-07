@@ -56,7 +56,7 @@ export const brand_ameristarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 23U Multi de Ameristar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ameristar-ameristar-23u-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_ameristarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CXV de Ameristar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ameristar-ameristar-cxv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_ameristarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série N-Series de Ameristar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ameristar-ameristar-n-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_ameristarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série A5HL5 de Ameristar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ameristar-ameristar-a5hl5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_ameristarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E4HL5 de Ameristar",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ameristar-ameristar-e4hl5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

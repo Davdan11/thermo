@@ -8,7 +8,7 @@ export const brand_invertercoolDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Invertercool",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_invertercoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32 Heat Pump de Invertercool",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/invertercool-invertercool-r32-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

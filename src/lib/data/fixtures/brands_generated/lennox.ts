@@ -39,7 +39,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MMPD Mini-Split de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-mmpd-mini-split.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MMLD Mini-Split de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-mmld-mini-split.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LI series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-li-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MMLD Multi-Zone de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-mmld-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DVM S Mini de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-dvm-s-mini.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DAVE LENNOX SIGNATURE SL25XPV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-dave-lennox-signature-sl25xpv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MMPD Multi-Zone de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-mmpd-multi-zone.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 1-Way Cassette (WindFree™) Premium (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-1-way-cassette-windfree-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Mini 4-Way Cassette (WindFree™) Premium (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-mini-4-way-cassette-windfree-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4-Way Cassette (WindFree™) Maxheat de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-4-way-cassette-windfree-maxheat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MWHD Mini-Split de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-mwhd-mini-split.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Console - Premium (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-console-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Elite EL21KLV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-elite-el21klv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DAVE LENNOX SIGNATURE SL22KLV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-dave-lennox-signature-sl22klv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WindFree™ High-Wall - Premium (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-windfree-high-wall-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Lennox Real de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-lennox-real.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DVM S Mini | Mini-VRF de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-dvm-s-mini-mini-vrf.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Elite EL19KPV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-elite-el19kpv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DAVE LENNOX SIGNATURE DLSC SL22KLV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-dave-lennox-signature-dlsc-sl22klv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série High-Wall - Premium (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-high-wall-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 3WPD Mini-Split de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-3wpd-mini-split.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 4-Way Cassette (WindFree™) DLX de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-4-way-cassette-windfree-dlx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -464,7 +464,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EL18KSLV Series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-el18kslv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -481,7 +481,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ELITE EL22XPV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-elite-el22xpv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -498,7 +498,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-Position Air Handler - Premium (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-multi-position-air-handler-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -515,7 +515,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-Position Air Handler - Standard (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-multi-position-air-handler-standard-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -532,7 +532,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Elite EL18KSLV Series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-elite-el18kslv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -549,7 +549,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Duct S (HSP) Premium (CAC) de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-duct-s-hsp-premium-cac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -566,7 +566,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MMA series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-mma-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -583,7 +583,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Merit ML16KP2 SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-merit-ml16kp2-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -600,7 +600,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EL18KSLV Series | Elite EL18KSLV Series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-el18kslv-series-elite-el18kslv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -617,7 +617,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ML15KSPV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-ml15kspv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -634,7 +634,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ELITE EL17XP1 Series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-elite-el17xp1-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -651,7 +651,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ELITE EL17XP1 SERIES | Elite EL17XP1 Series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-elite-el17xp1-series-elite-el17xp1-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -668,7 +668,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MERIT ML17XP1 Series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-merit-ml17xp1-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -685,7 +685,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MERIT ML17XP1 SERIES | Merit ML17XP1 Series de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-merit-ml17xp1-series-merit-ml17xp1-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -702,7 +702,7 @@ export const brand_lennoxDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Merit ML15KSPV SERIES de Lennox",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lennox-lennox-merit-ml15kspv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

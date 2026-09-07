@@ -8,7 +8,7 @@ export const brand_mammothDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MAMMOTH",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_mammothDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Side Discharge de MAMMOTH",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mammoth-mammoth-ultra-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_olmoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour OLMO",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_olmoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SIERRA de OLMO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/olmo-olmo-sierra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_olmoDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CH series de OLMO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/olmo-olmo-ch-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_olmoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série OS series de OLMO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/olmo-olmo-os-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_olmoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi ULTRA HD de OLMO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/olmo-olmo-hi-ultra-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

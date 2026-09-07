@@ -39,7 +39,7 @@ export const brand_sharpDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Single Zone series de Sharp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sharp-sharp-single-zone-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_sharpDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Zone series de Sharp",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sharp-sharp-multi-zone-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

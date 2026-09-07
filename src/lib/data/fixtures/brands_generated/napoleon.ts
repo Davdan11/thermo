@@ -39,7 +39,7 @@ export const brand_napoleonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NDH series de Napoleon",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/napoleon-napoleon-ndh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_napoleonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NDHA Series de Napoleon",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/napoleon-napoleon-ndha-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_napoleonDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NH series de Napoleon",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/napoleon-napoleon-nh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_napoleonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F Series de Napoleon",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/napoleon-napoleon-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_napoleonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WSE Series de Napoleon",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/napoleon-napoleon-wse-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_napoleonDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Hyper Heat de Napoleon",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/napoleon-napoleon-hyper-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_napoleonDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WSC Series de Napoleon",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/napoleon-napoleon-wsc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

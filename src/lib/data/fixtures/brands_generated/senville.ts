@@ -39,7 +39,7 @@ export const brand_senvilleDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SENE Series de Senville",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/senville-senville-sene-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_senvilleDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SEN series de Senville",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/senville-senville-sen-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_senvilleDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SENA Series de Senville",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/senville-senville-sena-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_senvilleDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série SENL Series de Senville",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/senville-senville-senl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_senvilleDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SENDC Series de Senville",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/senville-senville-sendc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_senvilleDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SENDC de Senville",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/senville-senville-sendc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

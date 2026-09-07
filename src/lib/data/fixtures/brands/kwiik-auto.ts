@@ -97,7 +97,18 @@ export const kwiikDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "kwiik-kkca-12wa2-scu",
+      modelNumber: "KKCA-12WA2-SCU",
+      brandId: "kwiik",
+      type: "wall-single",
+    },
+    {
+      id: "kwiik-kkca-18wa2-scu",
+      modelNumber: "KKCA-18WA2-SCU",
+      brandId: "kwiik",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +116,7 @@ export const kwiikDataset: BrandDataset = {
       slug: "kwiik-hiultra-wall-single-12000-cfg-1",
       modelId: "kwiik-hiultra-wall-single-12000",
       outdoorUnitId: "kwiik-kkca-12ex2-scu",
-      indoorUnitId: null,
+      indoorUnitId: "kwiik-kkca-12wa2-scu",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 23,
@@ -119,7 +130,7 @@ export const kwiikDataset: BrandDataset = {
       slug: "kwiik-hiultra-wall-single-18000-cfg-1",
       modelId: "kwiik-hiultra-wall-single-18000",
       outdoorUnitId: "kwiik-kkca-18ex2-scu",
-      indoorUnitId: null,
+      indoorUnitId: "kwiik-kkca-18wa2-scu",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 21,

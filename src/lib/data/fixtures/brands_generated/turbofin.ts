@@ -8,7 +8,7 @@ export const brand_turbofinDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour TURBOFIN",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_turbofinDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-pro de TURBOFIN",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/turbofin-turbofin-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

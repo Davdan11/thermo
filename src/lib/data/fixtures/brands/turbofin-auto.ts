@@ -75,7 +75,12 @@ export const turbofinDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "turbofin-thah-airhandler36",
+      modelNumber: "THAH-AIRHANDLER36",
+      brandId: "turbofin",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -83,7 +88,7 @@ export const turbofinDataset: BrandDataset = {
       slug: "turbofin-standard-wall-single-30000-cfg-1",
       modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-thtu-heatpump24",
-      indoorUnitId: null,
+      indoorUnitId: "turbofin-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -97,7 +102,7 @@ export const turbofinDataset: BrandDataset = {
       slug: "turbofin-standard-wall-single-30000-cfg-2",
       modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-hp36r410a",
-      indoorUnitId: null,
+      indoorUnitId: "turbofin-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -111,7 +116,7 @@ export const turbofinDataset: BrandDataset = {
       slug: "turbofin-standard-wall-single-30000-cfg-3",
       modelId: "turbofin-standard-wall-single-30000",
       outdoorUnitId: "turbofin-hp36r",
-      indoorUnitId: null,
+      indoorUnitId: "turbofin-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,

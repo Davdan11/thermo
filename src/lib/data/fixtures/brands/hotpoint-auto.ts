@@ -165,7 +165,30 @@ export const hotpointDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "hotpoint-hw09hn2da",
+      modelNumber: "HW09HN2DA**",
+      brandId: "hotpoint",
+      type: "wall-single",
+    },
+    {
+      id: "hotpoint-hw12hn2da",
+      modelNumber: "HW12HN2DA**",
+      brandId: "hotpoint",
+      type: "wall-single",
+    },
+    {
+      id: "hotpoint-hw18hn2da",
+      modelNumber: "HW18HN2DA**",
+      brandId: "hotpoint",
+      type: "wall-single",
+    },
+    {
+      id: "hotpoint-hw24hn2da",
+      modelNumber: "HW24HN2DA**",
+      brandId: "hotpoint",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -173,7 +196,7 @@ export const hotpointDataset: BrandDataset = {
       slug: "hotpoint-hotpoint-wall-single-9000-cfg-1",
       modelId: "hotpoint-hotpoint-wall-single-9000",
       outdoorUnitId: "hotpoint-1h09hn2da",
-      indoorUnitId: null,
+      indoorUnitId: "hotpoint-hw09hn2da",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 18,
@@ -187,7 +210,7 @@ export const hotpointDataset: BrandDataset = {
       slug: "hotpoint-hotpoint-wall-single-12000-cfg-1",
       modelId: "hotpoint-hotpoint-wall-single-12000",
       outdoorUnitId: "hotpoint-1h12hn2da",
-      indoorUnitId: null,
+      indoorUnitId: "hotpoint-hw12hn2da",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 18,
@@ -201,7 +224,7 @@ export const hotpointDataset: BrandDataset = {
       slug: "hotpoint-hotpoint-wall-single-18000-cfg-1",
       modelId: "hotpoint-hotpoint-wall-single-18000",
       outdoorUnitId: "hotpoint-1h18hn2da",
-      indoorUnitId: null,
+      indoorUnitId: "hotpoint-hw18hn2da",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 18,
@@ -215,7 +238,7 @@ export const hotpointDataset: BrandDataset = {
       slug: "hotpoint-hotpoint-wall-single-24000-cfg-1",
       modelId: "hotpoint-hotpoint-wall-single-24000",
       outdoorUnitId: "hotpoint-1h24hn2da",
-      indoorUnitId: null,
+      indoorUnitId: "hotpoint-hw24hn2da",
       coolingCapacityMinBtu: 24000,
       coolingCapacityMaxBtu: 24000,
       seer2: 18,

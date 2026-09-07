@@ -221,7 +221,36 @@ export const supremeDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "supreme-ys25m-12hrdn1",
+      modelNumber: "YS25M-12HRDN1",
+      brandId: "supreme",
+      type: "wall-single",
+    },
+    {
+      id: "supreme-ys25e-12hrdn1",
+      modelNumber: "YS25E-12HRDN1",
+      brandId: "supreme",
+      type: "wall-single",
+    },
+    {
+      id: "supreme-ys25e-18hrdn1",
+      modelNumber: "YS25E-18HRDN1",
+      brandId: "supreme",
+      type: "wall-single",
+    },
+    {
+      id: "supreme-ne-t52-supae12i",
+      modelNumber: "NE-T52-SUPAE12I",
+      brandId: "supreme",
+      type: "wall-single",
+    },
+    {
+      id: "supreme-ne-t52-supae18i",
+      modelNumber: "NE-T52-SUPAE18I",
+      brandId: "supreme",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -229,7 +258,7 @@ export const supremeDataset: BrandDataset = {
       slug: "supreme-standard-wall-single-12000-cfg-1",
       modelId: "supreme-standard-wall-single-12000",
       outdoorUnitId: "supreme-ys25m-12hrdn1",
-      indoorUnitId: null,
+      indoorUnitId: "supreme-ys25m-12hrdn1",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -243,7 +272,7 @@ export const supremeDataset: BrandDataset = {
       slug: "supreme-ys-series-wall-single-12000-cfg-1",
       modelId: "supreme-ys-series-wall-single-12000",
       outdoorUnitId: "supreme-ys25e-12hrdn1",
-      indoorUnitId: null,
+      indoorUnitId: "supreme-ys25e-12hrdn1",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 24.6,
@@ -257,7 +286,7 @@ export const supremeDataset: BrandDataset = {
       slug: "supreme-ys-series-wall-single-18000-cfg-1",
       modelId: "supreme-ys-series-wall-single-18000",
       outdoorUnitId: "supreme-ys25e-18hrdn1",
-      indoorUnitId: null,
+      indoorUnitId: "supreme-ys25e-18hrdn1",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 23.5,
@@ -271,7 +300,7 @@ export const supremeDataset: BrandDataset = {
       slug: "supreme-ne-series-wall-single-12000-cfg-1",
       modelId: "supreme-ne-series-wall-single-12000",
       outdoorUnitId: "supreme-ne-t52-supae12e",
-      indoorUnitId: null,
+      indoorUnitId: "supreme-ne-t52-supae12i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 25.5,
@@ -285,7 +314,7 @@ export const supremeDataset: BrandDataset = {
       slug: "supreme-ne-series-wall-single-18000-cfg-1",
       modelId: "supreme-ne-series-wall-single-18000",
       outdoorUnitId: "supreme-ne-t52-supae18e",
-      indoorUnitId: null,
+      indoorUnitId: "supreme-ne-t52-supae18i",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 21.5,

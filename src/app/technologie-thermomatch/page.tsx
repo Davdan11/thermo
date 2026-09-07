@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ThermoMatchTechClient } from "./ThermoMatchTechClient";
 
 export const metadata: Metadata = {
-  title: "Technologie ThermoMatch — Recommandations personnalisées | ThermopompesÀVendre.ca",
+  title: "Technologie ThermoMatch — Recommandations personnalisées | Thermopompe A Vendre.ca",
   description:
     "Découvrez comment ThermoMatch analyse votre propriété, votre climat et vos priorités pour vous recommander les thermopompes les mieux adaptées au Québec.",
   alternates: {
@@ -17,3 +17,4 @@ export default function TechThermoMatchPage() {
     </main>
   );
 }
+

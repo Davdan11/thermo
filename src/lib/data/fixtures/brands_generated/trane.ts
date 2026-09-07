@@ -39,7 +39,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38 Series de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-38-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_traneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 25 Series de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-25-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 20 TruComfort Variable Speed Heat Pump with WeatherGuard Top de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-20-trucomfort-variable-speed-heat-pump-with-weatherguard-top.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M-Series de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 20 TruComfort Variable Speed Heat Pump de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-20-trucomfort-variable-speed-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_traneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV20I de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-xv20i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 23 MZ Series de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-23-mz-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_traneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV19 de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-xv19.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F Series de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 18 TruComfort Variable Speed Heat Pump de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-18-trucomfort-variable-speed-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_traneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV18 de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-xv18.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_traneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV18 | XV18I de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-xv18-xv18i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_traneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV18I de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-xv18i.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_traneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série XV17 de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-xv17.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_traneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 17 Multi-Speed Heat Pump de Trane",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/trane-trane-17-multi-speed-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

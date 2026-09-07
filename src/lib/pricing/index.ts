@@ -4,7 +4,8 @@
 
 export { calculateEstimate } from "./engine";
 export { formatCents, formatRange, roundToNearest50 } from "./format";
-export { postalCodeToRegion, getPriceObservations, getPriceObservationsByCategory } from "./queries";
+export { getPriceObservations, getPriceObservationsByCategory } from "./queries";
+export { postalCodeToRegion } from "./regions";
 export type { PriceQueryResult } from "./queries";
 export { METHOD_VERSION, TAX_RATES, GENERALLY_INCLUDED, GENERALLY_EXCLUDED, VARIABLE_FACTORS } from "./factors";
 

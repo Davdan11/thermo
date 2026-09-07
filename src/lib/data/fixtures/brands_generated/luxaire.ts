@@ -8,7 +8,7 @@ export const brand_luxaireDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Luxaire",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série URAC de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-urac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UMULTI de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-umulti.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LX SERIES de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série UPAC de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-upac.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série XDV de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-xdv.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série PH9 de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-ph9.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HMH7 de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-hmh7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série XD5 de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-xd5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_luxaireDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ACCLIMATE de Luxaire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/luxaire-luxaire-acclimate.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

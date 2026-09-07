@@ -8,7 +8,7 @@ export const brand_royaltonDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ROYALTON",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_royaltonDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 4HP17 Series de ROYALTON",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/royalton-royalton-4hp17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

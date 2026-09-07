@@ -39,7 +39,7 @@ export const brand_rheemDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Classic Plus de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-floating-air-classic-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_rheemDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Pro de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-floating-air-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_rheemDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Prestige Multi-Zone | Floating Air Pro de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-floating-air-prestige-multi-zone-floating-air-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_rheemDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Classic Plus de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-classic-plus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PRESTIGE SERIES de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-prestige-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Floating  Air Select de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-floating-air-select.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_rheemDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floating Air Prestige de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-floating-air-prestige.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Floating Air Classic de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-floating-air-classic.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_rheemDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CLASSIC PLUS | Prestige Series de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-classic-plus-prestige-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série VERSUS de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_rheemDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CLASSIC PLUS | VERSUS de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-classic-plus-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CLASSIC SERIES de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-classic-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CLASSIC SERIES | Classic de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-classic-series-classic.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Select | VERSUS de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-select-versus.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXZS de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-rhpxzs.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RDFXYC de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-rdfxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_rheemDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXYC de Rheem",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/rheem-rheem-rhpxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

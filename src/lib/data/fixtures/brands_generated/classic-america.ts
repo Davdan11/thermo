@@ -8,7 +8,7 @@ export const brand_classic_americaDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour CLASSIC AMERICA",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_classic_americaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DUET Series de CLASSIC AMERICA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/classic-america-classic-america-duet-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_classic_americaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DUET Series classic America de CLASSIC AMERICA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/classic-america-classic-america-duet-series-classic-america.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

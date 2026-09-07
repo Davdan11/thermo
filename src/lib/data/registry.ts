@@ -24,8 +24,12 @@ import type {
 } from "./types";
 
 /* ---- Import fixtures ---- */
-// All auto-generated datasets (180 brands from HQ LogisVert)
-import { allAutoDatasets } from "./fixtures/brands/_all-auto";
+import { readFileSync } from "fs";
+import { join } from "path";
+
+// Load JSON dynamically to bypass TypeScript OOM during next build
+const autoDatasetsPath = join(process.cwd(), "src/lib/data/fixtures/brands/all-auto-datasets.json");
+const allAutoDatasets = JSON.parse(readFileSync(autoDatasetsPath, "utf8")) as Record<string, BrandDataset>;
 
 // Manual datasets (curated models with verified specs — these override auto data)
 import { daikinDataset as daikinManual } from "./fixtures/brands/daikin";
@@ -62,19 +66,43 @@ function mergeDatasets(auto: BrandDataset, manual: BrandDataset): BrandDataset {
     return [...byId.values()];
   };
 
+  const manualModelSignatures = new Set(
+    manual.models
+      .filter((m) => m.seriesId && m.nominalCapacityBtu != null)
+      .map((m) => `${m.seriesId}-${m.nominalCapacityBtu}`)
+  );
+
+  const autoModelSignatures = new Set<string>();
+  const autoModelsFiltered = auto.models.filter((m) => {
+    if (m.seriesId && m.nominalCapacityBtu != null) {
+      const sig = `${m.seriesId}-${m.nominalCapacityBtu}`;
+      if (manualModelSignatures.has(sig)) {
+        return false;
+      }
+      if (autoModelSignatures.has(sig)) {
+        return false; // Deduplicate within auto data
+      }
+      autoModelSignatures.add(sig);
+    }
+    return true;
+  });
+
+  const validAutoModelIds = new Set(autoModelsFiltered.map(m => m.id));
+  const autoConfigsFiltered = auto.configurations.filter(c => validAutoModelIds.has(c.modelId));
+
   return {
     brand: manual.brand.description ? manual.brand : auto.brand,
     sources: [...(auto.sources || []), ...(manual.sources || [])],
     series: dedup(auto.series, manual.series),
-    models: dedup(auto.models, manual.models),
+    models: dedup(autoModelsFiltered, manual.models),
     outdoorUnits: dedup(auto.outdoorUnits, manual.outdoorUnits),
     indoorUnits: dedup(auto.indoorUnits, manual.indoorUnits),
-    configurations: dedup(auto.configurations, manual.configurations),
+    configurations: dedup(autoConfigsFiltered, manual.configurations),
     performanceProfiles: [...(auto.performanceProfiles || []), ...(manual.performanceProfiles || [])],
     certifications: dedup(auto.certifications || [], manual.certifications || []),
     warranties: [...(auto.warranties || []), ...(manual.warranties || [])],
     priceObservations: [...(auto.priceObservations || []), ...(manual.priceObservations || [])],
-    editorialContent: [...(auto.editorialContent || []), ...(manual.editorialContent || [])],
+    editorial: [...(auto.editorial || []), ...(manual.editorial || [])],
   };
 }
 

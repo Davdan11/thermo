@@ -8,7 +8,7 @@ export const brand_traneamerican_standardDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Trane/American Standard",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_traneamerican_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série P series de Trane/American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/traneamerican-standard-traneamerican-standard-p-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_traneamerican_standardDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M series de Trane/American Standard",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/traneamerican-standard-traneamerican-standard-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

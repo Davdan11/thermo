@@ -1,0 +1,172 @@
+[
+  {
+    "rank": 1,
+    "phase": "Phase 1 — Fondation",
+    "cluster": "Core transactionnel",
+    "primaryKeyword": "thermopompe à vendre",
+    "secondaryKeywords": [
+      "thermopompe à vendre Québec",
+      "prix",
+      "installation",
+      "soumission"
+    ],
+    "pageType": "Landing service / catégorie",
+    "intent": "Transactionnel",
+    "funnel": "BOFU",
+    "urlSlug": "/thermopompes/thermopompe-a-vendre/",
+    "seoTitle": "Thermopompe À Vendre | ThermopompeAVendre.ca",
+    "h1": "Thermopompe À Vendre",
+    "contentSpec": "Répondre à l'intention d'achat: choix, bénéfices, critères, processus, prix indicatifs sourcés, subventions pertinentes et CTA.",
+    "primaryCta": "Obtenir mon Thermo Match / Demander une soumission",
+    "schemaType": "Service + BreadcrumbList",
+    "internalLinkHub": "/thermopompes/"
+  },
+  {
+    "rank": 31,
+    "phase": "Phase 1 — Fondation",
+    "cluster": "Prix et coûts",
+    "primaryKeyword": "prix thermopompe Québec",
+    "secondaryKeywords": [
+      "prix thermopompe Québec 2026",
+      "prix thermopompe Québec installation",
+      "estimation thermopompe"
+    ],
+    "pageType": "Guide prix / calculateur",
+    "intent": "Commercial",
+    "funnel": "MOFU/BOFU",
+    "urlSlug": "/prix/prix-thermopompe-quebec/",
+    "seoTitle": "Prix Thermopompe Québec | Guide de prix Québec",
+    "h1": "Prix Thermopompe Québec : combien prévoir?",
+    "contentSpec": "Tableaux de fourchettes, facteurs de coût, exemple de scénario, ce qui est inclus/exclu, subvention, CTA calculateur.",
+    "primaryCta": "Estimer mon prix / Recevoir 3 options Thermo Match",
+    "schemaType": "Article + BreadcrumbList",
+    "internalLinkHub": "/prix/"
+  },
+  {
+    "rank": 55,
+    "phase": "Phase 1 — Fondation",
+    "cluster": "Subventions et financement public",
+    "primaryKeyword": "subvention thermopompe Québec",
+    "secondaryKeywords": [
+      "subvention thermopompe Québec Hydro-Québec",
+      "LogisVert",
+      "aide financière thermopompe"
+    ],
+    "pageType": "Guide programme / calculateur",
+    "intent": "Commercial + informationnel",
+    "funnel": "MOFU/BOFU",
+    "urlSlug": "/subventions/subvention-thermopompe-quebec/",
+    "seoTitle": "Subvention Thermopompe Québec | Guide Québec à jour",
+    "h1": "Subvention Thermopompe Québec : admissibilité, montant et étapes",
+    "contentSpec": "Source officielle prioritaire, critères, documents, étapes, exemples prudents, liens Hydro-Québec, CTA d'admissibilité.",
+    "primaryCta": "Vérifier mon admissibilité / Calculer l'aide potentielle",
+    "schemaType": "Article + BreadcrumbList",
+    "internalLinkHub": "/subventions/"
+  },
+  {
+    "rank": 73,
+    "phase": "Phase 1 — Fondation",
+    "cluster": "SEO local Québec",
+    "primaryKeyword": "thermopompe Montréal",
+    "secondaryKeywords": [
+      "installation thermopompe Montréal",
+      "prix thermopompe Montréal",
+      "installateur thermopompe Montréal"
+    ],
+    "pageType": "Landing locale",
+    "intent": "Local transactionnel",
+    "funnel": "BOFU",
+    "urlSlug": "/regions/montreal/thermopompe/",
+    "seoTitle": "Thermopompe à Montréal | Prix, aides et partenaires",
+    "h1": "Thermopompe à Montréal : comparez les options et l'installation",
+    "contentSpec": "Climat/localité, types d'habitations, délais/couverture partenaires, exemples locaux réels, FAQ locale, subventions, CTA.",
+    "primaryCta": "Trouver un partenaire dans ma région / Obtenir une soumission",
+    "schemaType": "Service + BreadcrumbList (pas LocalBusiness sans établissement réel)",
+    "internalLinkHub": "/regions/"
+  },
+  {
+    "rank": 103,
+    "phase": "Phase 1 — Fondation",
+    "cluster": "BTU et dimensionnement",
+    "primaryKeyword": "combien de BTU thermopompe",
+    "secondaryKeywords": [
+      "combien de BTU thermopompe Québec",
+      "calcul thermopompe",
+      "BTU maison"
+    ],
+    "pageType": "Guide dimensionnement / outil",
+    "intent": "Commercial + informationnel",
+    "funnel": "MOFU",
+    "urlSlug": "/dimensionnement/combien-de-btu-thermopompe/",
+    "seoTitle": "Combien De Btu Thermopompe | Dimensionnement au Québec",
+    "h1": "Combien De Btu Thermopompe : guide de dimensionnement",
+    "contentSpec": "Explication des facteurs de charge, exemples, climat, isolation, fenêtres, étages, limites des estimations, CTA.",
+    "primaryCta": "Calculer la puissance recommandée / Valider avec un conseiller",
+    "schemaType": "Article + BreadcrumbList",
+    "internalLinkHub": "/dimensionnement/"
+  },
+  {
+    "rank": 118,
+    "phase": "Phase 1 — Fondation",
+    "cluster": "Marques",
+    "primaryKeyword": "thermopompe Mitsubishi",
+    "secondaryKeywords": [
+      "thermopompe Mitsubishi Québec",
+      "thermopompe Mitsubishi prix",
+      "thermopompe Mitsubishi avis"
+    ],
+    "pageType": "Guide marque",
+    "intent": "Commercial",
+    "funnel": "MOFU",
+    "urlSlug": "/marques/thermopompe-mitsubishi/",
+    "seoTitle": "Thermopompe Mitsubishi | Prix, avis et modèles au Québec",
+    "h1": "Thermopompe Mitsubishi au Québec",
+    "contentSpec": "Positionnement, gammes, climat froid, garanties, disponibilité des pièces, prix indicatifs, modèles, alternatives, CTA.",
+    "primaryCta": "Comparer cette marque dans Thermo Match",
+    "schemaType": "Article/CollectionPage + BreadcrumbList",
+    "internalLinkHub": "/marques/"
+  },
+  {
+    "rank": 293,
+    "phase": "Phase 3 — Expansion",
+    "cluster": "Comparatifs",
+    "primaryKeyword": "thermopompe Mitsubishi vs Daikin",
+    "secondaryKeywords": [
+      "thermopompe Mitsubishi vs Daikin Québec",
+      "comparatif thermopompe Mitsubishi vs Daikin",
+      "meilleur choix thermopompe"
+    ],
+    "pageType": "Comparatif",
+    "intent": "Commercial",
+    "funnel": "MOFU",
+    "urlSlug": "/comparatifs/thermopompe-mitsubishi-vs-daikin/",
+    "seoTitle": "Thermopompe Mitsubishi Vs Daikin | Comparatif Québec",
+    "h1": "Thermopompe Mitsubishi Vs Daikin : lequel choisir au Québec?",
+    "contentSpec": "Tableau comparatif, prix, performance froid, garantie, bruit, efficacité, profils d'acheteurs, verdict nuancé.",
+    "primaryCta": "Comparer selon ma maison / Recevoir une recommandation",
+    "schemaType": "Article + BreadcrumbList",
+    "internalLinkHub": "/comparatifs/"
+  },
+  {
+    "rank": 328,
+    "phase": "Phase 3 — Expansion",
+    "cluster": "Cas d'usage et types de propriétés",
+    "primaryKeyword": "thermopompe pour bungalow",
+    "secondaryKeywords": [
+      "thermopompe pour bungalow Québec",
+      "installation",
+      "prix",
+      "dimensionnement"
+    ],
+    "pageType": "Guide solution",
+    "intent": "Commercial",
+    "funnel": "MOFU",
+    "urlSlug": "/solutions/thermopompe-pour-bungalow/",
+    "seoTitle": "Thermopompe Pour Bungalow | Solutions pour le Québec",
+    "h1": "Thermopompe Pour Bungalow : quelle configuration choisir?",
+    "contentSpec": "Contexte du bâtiment, contraintes, configurations possibles, erreurs à éviter, fourchette de budget, CTA.",
+    "primaryCta": "Trouver la configuration adaptée",
+    "schemaType": "Service/Article + BreadcrumbList",
+    "internalLinkHub": "/solutions/"
+  }
+]

@@ -75,7 +75,12 @@ export const innovaDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "innova-thah-airhandler36",
+      modelNumber: "THAH-AIRHANDLER36",
+      brandId: "innova",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -83,7 +88,7 @@ export const innovaDataset: BrandDataset = {
       slug: "innova-standard-wall-single-30000-cfg-1",
       modelId: "innova-standard-wall-single-30000",
       outdoorUnitId: "innova-thtu-heatpump24",
-      indoorUnitId: null,
+      indoorUnitId: "innova-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -97,7 +102,7 @@ export const innovaDataset: BrandDataset = {
       slug: "innova-standard-wall-single-30000-cfg-2",
       modelId: "innova-standard-wall-single-30000",
       outdoorUnitId: "innova-hp36r410a",
-      indoorUnitId: null,
+      indoorUnitId: "innova-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,
@@ -111,7 +116,7 @@ export const innovaDataset: BrandDataset = {
       slug: "innova-standard-wall-single-30000-cfg-3",
       modelId: "innova-standard-wall-single-30000",
       outdoorUnitId: "innova-hp36r",
-      indoorUnitId: null,
+      indoorUnitId: "innova-thah-airhandler36",
       coolingCapacityMinBtu: 27600,
       coolingCapacityMaxBtu: 27600,
       seer2: null,

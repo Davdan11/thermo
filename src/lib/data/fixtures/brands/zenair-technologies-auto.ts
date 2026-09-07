@@ -97,7 +97,18 @@ export const zenairtechnologiesDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "zenair-technologies-zen-wm12hp23s-i",
+      modelNumber: "ZEN-WM12HP23S/I",
+      brandId: "zenair-technologies",
+      type: "wall-single",
+    },
+    {
+      id: "zenair-technologies-zen-pc48hp20s-i",
+      modelNumber: "ZEN-PC48HP20S/I",
+      brandId: "zenair-technologies",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +116,7 @@ export const zenairtechnologiesDataset: BrandDataset = {
       slug: "zenair-technologies-standard-wall-single-12000-cfg-1",
       modelId: "zenair-technologies-standard-wall-single-12000",
       outdoorUnitId: "zenair-technologies-zen-wm12hp23s-o",
-      indoorUnitId: null,
+      indoorUnitId: "zenair-technologies-zen-wm12hp23s-i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -119,7 +130,7 @@ export const zenairtechnologiesDataset: BrandDataset = {
       slug: "zenair-technologies-standard-wall-single-48000-cfg-1",
       modelId: "zenair-technologies-standard-wall-single-48000",
       outdoorUnitId: "zenair-technologies-zen-pc48hp20s-o",
-      indoorUnitId: null,
+      indoorUnitId: "zenair-technologies-zen-pc48hp20s-i",
       coolingCapacityMinBtu: 47000,
       coolingCapacityMaxBtu: 47000,
       seer2: null,

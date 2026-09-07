@@ -8,7 +8,7 @@ export const brand_marathermDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour MARATHERM",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_marathermDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de MARATHERM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maratherm-maratherm-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_marathermDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PERFORMANCE 16 SEER2 HP de MARATHERM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maratherm-maratherm-performance-16-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_marathermDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 HP de MARATHERM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maratherm-maratherm-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_marathermDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Quiet Comfort HP de MARATHERM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maratherm-maratherm-quiet-comfort-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_marathermDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PERFORMANCE 15 SEER2 HP de MARATHERM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maratherm-maratherm-performance-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_marathermDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 R SERIES R410A HP de MARATHERM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maratherm-maratherm-15-seer2-r-series-r410a-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

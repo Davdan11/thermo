@@ -8,7 +8,7 @@ export const brand_homcomDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour HOMCOM",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_homcomDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M series de HOMCOM",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/homcom-homcom-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

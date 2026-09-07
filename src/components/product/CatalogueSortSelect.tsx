@@ -1,8 +1,14 @@
 "use client";
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { SORT_OPTIONS } from "@/lib/data/queries/catalogue";
 import type { CatalogueSort } from "@/lib/data/queries/catalogue";
+
+export const SORT_OPTIONS: { value: CatalogueSort; label: string }[] = [
+  { value: "relevance", label: "Pertinence" },
+  { value: "brand-asc", label: "Marque (A-Z)" },
+  { value: "capacity-asc", label: "Capacité (croissante)" },
+  { value: "capacity-desc", label: "Capacité (décroissante)" },
+];
 
 /* ------------------------------------------------------------------
    CatalogueSortSelect — sort dropdown with URL sync

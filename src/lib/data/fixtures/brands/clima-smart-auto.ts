@@ -148,7 +148,30 @@ export const climasmartDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "clima-smart-mch12-cs-s23-i",
+      modelNumber: "MCH12-CS-S23-I",
+      brandId: "clima-smart",
+      type: "wall-single",
+    },
+    {
+      id: "clima-smart-mch12-cs-s23-230v-i",
+      modelNumber: "MCH12-CS-S23-230V-I",
+      brandId: "clima-smart",
+      type: "wall-single",
+    },
+    {
+      id: "clima-smart-mch18-cs-s23-i",
+      modelNumber: "MCH18-CS-S23-I",
+      brandId: "clima-smart",
+      type: "wall-single",
+    },
+    {
+      id: "clima-smart-mch24-cs-s23-i",
+      modelNumber: "MCH24-CS-S23-I",
+      brandId: "clima-smart",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -156,7 +179,7 @@ export const climasmartDataset: BrandDataset = {
       slug: "clima-smart-standard-wall-single-12000-cfg-1",
       modelId: "clima-smart-standard-wall-single-12000",
       outdoorUnitId: "clima-smart-mch12-cs-s23-o",
-      indoorUnitId: null,
+      indoorUnitId: "clima-smart-mch12-cs-s23-i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -170,7 +193,7 @@ export const climasmartDataset: BrandDataset = {
       slug: "clima-smart-standard-wall-single-12000-cfg-2",
       modelId: "clima-smart-standard-wall-single-12000",
       outdoorUnitId: "clima-smart-mch12-cs-s23-230v-o",
-      indoorUnitId: null,
+      indoorUnitId: "clima-smart-mch12-cs-s23-230v-i",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,
@@ -184,7 +207,7 @@ export const climasmartDataset: BrandDataset = {
       slug: "clima-smart-t-pro-wall-single-18000-cfg-1",
       modelId: "clima-smart-t-pro-wall-single-18000",
       outdoorUnitId: "clima-smart-mch18-cs-s23-o",
-      indoorUnitId: null,
+      indoorUnitId: "clima-smart-mch18-cs-s23-i",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 22,
@@ -198,7 +221,7 @@ export const climasmartDataset: BrandDataset = {
       slug: "clima-smart-t-pro-wall-single-24000-cfg-1",
       modelId: "clima-smart-t-pro-wall-single-24000",
       outdoorUnitId: "clima-smart-mch24-cs-s23-o",
-      indoorUnitId: null,
+      indoorUnitId: "clima-smart-mch24-cs-s23-i",
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 23000,
       seer2: 20,

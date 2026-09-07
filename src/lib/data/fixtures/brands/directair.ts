@@ -8,7 +8,7 @@ export const directairDataset: BrandDataset = {
     countryOfOrigin: "CA",
     websiteUrl: null,
     description: "Marque en cours de documentation.",
-    activeInQuebec: true,
+    activeInQuebec: false,
     status: "published",
     createdAt: "2026-08-29",
     updatedAt: "2026-08-29",

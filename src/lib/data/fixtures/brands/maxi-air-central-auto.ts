@@ -97,7 +97,24 @@ export const maxiaircentralDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "maxi-air-central-ahan3615",
+      modelNumber: "AHAN3615",
+      brandId: "maxi-air-central",
+      type: "wall-single",
+    },
+    {
+      id: "maxi-air-central-f45-spltah36",
+      modelNumber: "F45-SPLTAH36� � �",
+      brandId: "maxi-air-central",
+      type: "wall-single",
+    },
+    {
+      id: "maxi-air-central-f45-spltcc30",
+      modelNumber: "F45-SPLTCC30",
+      brandId: "maxi-air-central",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +122,7 @@ export const maxiaircentralDataset: BrandDataset = {
       slug: "maxi-air-central-standard-wall-single-36000-cfg-1",
       modelId: "maxi-air-central-standard-wall-single-36000",
       outdoorUnitId: "maxi-air-central-class36cc",
-      indoorUnitId: null,
+      indoorUnitId: "maxi-air-central-ahan3615",
       coolingCapacityMinBtu: 33600,
       coolingCapacityMaxBtu: 33600,
       seer2: null,
@@ -119,7 +136,7 @@ export const maxiaircentralDataset: BrandDataset = {
       slug: "maxi-air-central-standard-wall-single-30000-cfg-1",
       modelId: "maxi-air-central-standard-wall-single-30000",
       outdoorUnitId: "maxi-air-central-class30cc",
-      indoorUnitId: null,
+      indoorUnitId: "maxi-air-central-ahan3615",
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       seer2: null,
@@ -133,7 +150,7 @@ export const maxiaircentralDataset: BrandDataset = {
       slug: "maxi-air-central-standard-wall-single-30000-cfg-2",
       modelId: "maxi-air-central-standard-wall-single-30000",
       outdoorUnitId: "maxi-air-central-class30cc",
-      indoorUnitId: null,
+      indoorUnitId: "maxi-air-central-f45-spltah36",
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       seer2: null,
@@ -147,7 +164,7 @@ export const maxiaircentralDataset: BrandDataset = {
       slug: "maxi-air-central-standard-wall-single-30000-cfg-3",
       modelId: "maxi-air-central-standard-wall-single-30000",
       outdoorUnitId: "maxi-air-central-class30cc",
-      indoorUnitId: null,
+      indoorUnitId: "maxi-air-central-f45-spltcc30",
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,
       seer2: null,

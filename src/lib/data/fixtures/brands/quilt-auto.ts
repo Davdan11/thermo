@@ -63,7 +63,12 @@ export const quiltDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "quilt-qi1-m09-n-na",
+      modelNumber: "QI1-M09-N-NA",
+      brandId: "quilt",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -71,7 +76,7 @@ export const quiltDataset: BrandDataset = {
       slug: "quilt-quilt-wall-single-15000-cfg-1",
       modelId: "quilt-quilt-wall-single-15000",
       outdoorUnitId: "quilt-qo1-m2z18-nc-na",
-      indoorUnitId: null,
+      indoorUnitId: "quilt-qi1-m09-n-na",
       coolingCapacityMinBtu: 16000,
       coolingCapacityMaxBtu: 16000,
       seer2: 25,

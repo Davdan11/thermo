@@ -1,347 +1,241 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { notFound, redirect } from 'next/navigation';
-import fs from 'fs/promises';
-import path from 'path';
-import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { getProductDetail } from '@/lib/data/queries/product-detail';
-
-interface FaqItem {
-  q: string;
-  a: string;
-}
-
-interface SeoPage {
-  id: string;
-  slug: string;
-  cluster: string;
-  primaryKeyword: string;
-  pageType: string;
-  intent: string;
-  seoTitle: string;
-  metaDescription: string;
-  h1: string;
-  indexGate: { isApproved: boolean };
-  canonicalUrl: string;
-  schemaTypes: string[];
-  contentBlocks: {
-    hero: { subtitle: string };
-    intro?: string;
-    benefits?: { title: string; desc: string }[];
-    steps?: { title: string; desc: string }[];
-    forWho?: string[];
-    notForWho?: string[];
-    grants?: { name: string; conditions: string; source: string }[];
-    faq?: FaqItem[];
-    relatedLinks?: { label: string; href: string }[];
-  };
-}
-
-interface PageProps {
-  params: Promise<{ slug: string }>;
-}
+import { notFound } from "next/navigation";
+import { getSeoPagesByPrefix, getSeoPageBySlug } from "@/lib/seo/registry";
+import { createMetadata, getArticleSchema, getBreadcrumbSchema } from "@/lib/seo";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { CheckCircle2, ShieldCheck, ThermometerSnowflake, User, Calendar, Clock, ChevronRight, Calculator } from "lucide-react";
 
 export async function generateStaticParams() {
-  const seoSlugs: { slug: string }[] = [];
-  try {
-    const dataPath = path.join(process.cwd(), 'src/data/seo/thermopompes.json');
-    const pages: SeoPage[] = JSON.parse(await fs.readFile(dataPath, 'utf8'));
-    for (const p of pages) {
-      if (p.indexGate?.isApproved) seoSlugs.push({ slug: p.slug });
-    }
-  } catch {
-    // no SEO pages
-  }
-
-  // Also include product model slugs so /thermopompes/[model-slug] works
-  const { registry } = await import('@/lib/data/registry');
-  const productSlugs = registry.models
-    .filter((m) => m.status === 'published')
-    .map((m) => ({ slug: m.slug }));
-
-  // Merge, deduplicate
-  const seen = new Set(seoSlugs.map((s) => s.slug));
-  for (const ps of productSlugs) {
-    if (!seen.has(ps.slug)) seoSlugs.push(ps);
-  }
-  return seoSlugs;
+  const pages = getSeoPagesByPrefix("/thermopompes/");
+  return pages.map((p) => {
+    const slug = p.urlSlug.replace("/thermopompes/", "").replace(/\/$/, "");
+    return { slug };
+  });
 }
 
-async function getPageData(slug: string): Promise<SeoPage | null> {
-  try {
-    const dataPath = path.join(process.cwd(), 'src/data/seo/thermopompes.json');
-    const pages: SeoPage[] = JSON.parse(await fs.readFile(dataPath, 'utf8'));
-    return pages.find((p) => p.slug === slug) ?? null;
-  } catch {
-    return null;
-  }
-}
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const fullSlug = `/thermopompes/${slug}/`;
+  const page = getSeoPageBySlug(fullSlug);
 
-export async function generateMetadata(props: PageProps): Promise<Metadata> {
-  const { slug } = await props.params;
-  const page = await getPageData(slug);
-  if (page) {
-    return {
-      title: page.seoTitle,
-      description: page.metaDescription,
-      alternates: { canonical: page.canonicalUrl },
-      robots: page.indexGate?.isApproved ? 'index, follow' : 'noindex, nofollow',
-      openGraph: {
-        title: page.seoTitle,
-        description: page.metaDescription,
-        url: page.canonicalUrl,
-        siteName: 'ThermopompeAVendre.ca',
-        locale: 'fr_CA',
-      },
-    };
-  }
-
-  // Fallback: product model metadata
-  const detail = getProductDetail(slug);
-  if (detail) {
-    const { model, brand, series } = detail;
-    return {
-      title: `${brand.name} ${model.name} — Fiche technique complète`,
-      description: `Consultez la fiche technique de la thermopompe ${brand.name} ${series.name} ${model.name}. Spécifications, subvention LogisVert et plus.`,
-      alternates: { canonical: `/produit/${slug}` },
-      robots: { index: true, follow: true },
-    };
-  }
-
-  return {};
-}
-
-export default async function ThermopompeSeoPage(props: PageProps) {
-  const { slug } = await props.params;
-  const page = await getPageData(slug);
-
-  // If no SEO page, check if it's a product model → redirect to /produit/
   if (!page) {
-    const detail = getProductDetail(slug);
-    if (detail) {
-      redirect(`/produit/${slug}`);
-    }
+    return {};
+  }
+
+  return createMetadata({
+    title: page.seoTitle,
+    description: `Découvrez notre guide complet sur l'achat et l'installation pour "${page.primaryKeyword}". Apprenez comment comparer les modèles et obtenir vos subventions au Québec.`,
+  });
+}
+
+export default async function TransactionalBlogPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const fullSlug = `/thermopompes/${slug}/`;
+  const page = getSeoPageBySlug(fullSlug);
+
+  if (!page) {
     notFound();
   }
 
-  const breadcrumbs = [
-    { label: 'Thermopompes', href: '/thermopompes' },
-    { label: page.primaryKeyword, href: `/thermopompes/${page.slug}` },
-  ];
+  const currentDate = new Date().toLocaleDateString("fr-CA", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
-  const faqSchema = page.contentBlocks?.faq?.length
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: page.contentBlocks.faq.map((item) => ({
-          '@type': 'Question',
-          name: item.q,
-          acceptedAnswer: { '@type': 'Answer', text: item.a },
-        })),
-      }
-    : null;
-
-  const relatedLinks = page.contentBlocks?.relatedLinks ?? [
-    { label: 'Subventions disponibles', href: '/subventions' },
-    { label: 'Comparer les marques', href: '/marques' },
+  const jsonLd = [
+    getBreadcrumbSchema([
+      { name: "Accueil", url: "https://thermopompeavendre.ca" },
+      { name: "Guides Thermopompes", url: "https://thermopompeavendre.ca/thermopompes" },
+      { name: page.h1, url: `https://thermopompeavendre.ca${page.urlSlug}` }
+    ]),
+    getArticleSchema({
+      headline: page.h1,
+      image: "https://thermopompeavendre.ca/images/thermomatch/thermomatch-hero-winter-home.png",
+      datePublished: new Date().toISOString(),
+      authorName: "L'équipe d'experts ThermoMatch"
+    })
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      {faqSchema && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      )}
+    <main className="min-h-screen bg-[#f8f5f0] text-[#071d2b]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
+      {/* Blog Hero Header */}
+      <section className="relative w-full bg-[#0C1821] pt-32 pb-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[url('/images/thermomatch/thermomatch-hero-winter-home.png')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0C1821] to-transparent"></div>
+        
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-blue-200/80 mb-8 font-medium">
+            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
+            <ChevronRight className="w-4 h-4" />
+            <Link href="/thermopompes" className="hover:text-white transition-colors">Thermopompes</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-white">Guide d'achat</span>
+          </div>
 
-      {/* ── HERO ── */}
-      <section className="pt-28 pb-16 px-6" style={{ backgroundColor: '#061d2a' }}>
-        <div className="max-w-[800px] mx-auto">
-          <Breadcrumbs items={breadcrumbs} />
-          <div className="mt-6">
-            <h1
-              className="font-display font-bold text-white leading-[1.1] mb-5"
-              style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}
-            >
-              {page.h1}
-            </h1>
-            <p className="text-[#a8bbc4] leading-relaxed" style={{ fontSize: 'clamp(16px, 1.2vw, 18px)', maxWidth: '600px' }}>
-              {page.contentBlocks?.hero?.subtitle || page.metaDescription}
-            </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-8">
+            {page.h1}
+          </h1>
+
+          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 font-medium">
+            <div className="flex items-center gap-2">
+              <User className="w-4 h-4" />
+              <span>L'équipe ThermoMatch</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              <span>Mis à jour le {currentDate}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              <span>5 min de lecture</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── CORPS ── */}
-      <div className="max-w-[800px] mx-auto px-6 py-14 grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-16">
-
-        {/* ── TEXTE PRINCIPAL ── */}
-        <article className="space-y-12 min-w-0">
-
-          {/* Intro */}
-          {page.contentBlocks?.intro && (
-            <p className="text-[#374a52] leading-[1.85] text-[17px]">
-              {page.contentBlocks.intro}
+      {/* Blog Content & Sidebar Layout */}
+      <section className="container mx-auto px-6 py-12 max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          {/* Main Article Content */}
+          <article className="lg:col-span-8 prose prose-lg md:prose-xl prose-slate max-w-none prose-headings:font-black prose-headings:text-[#0C1821] prose-a:text-[#d94b12]">
+            <p className="lead text-xl md:text-2xl text-slate-600 font-medium leading-relaxed">
+              Si vous êtes à la recherche de la meilleure solution pour {page.primaryKeyword.toLowerCase()}, vous êtes au bon endroit. L'achat d'un système de chauffage et climatisation au Québec représente un investissement majeur qui nécessite une réflexion approfondie.
             </p>
-          )}
 
-          {/* Avantages — format éditorial, pas de cards */}
-          {page.contentBlocks?.benefits && (
-            <section>
-              <h2 className="font-display font-bold text-[#10212b] mb-6" style={{ fontSize: 'clamp(20px, 2vw, 26px)' }}>
-                Ce qu&apos;il faut savoir
-              </h2>
-              <div className="space-y-6">
-                {page.contentBlocks.benefits.map((b, i) => (
-                  <div key={i}>
-                    <p className="font-semibold text-[#10212b] mb-1">{b.title}</p>
-                    <p className="text-[#536873] leading-relaxed text-[15px]">{b.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Processus */}
-          {page.contentBlocks?.steps && (
-            <section>
-              <h2 className="font-display font-bold text-[#10212b] mb-6" style={{ fontSize: 'clamp(20px, 2vw, 26px)' }}>
-                Comment ça se déroule
-              </h2>
-              <ol className="space-y-5 border-l-2 border-[#e4ddd5] pl-6">
-                {page.contentBlocks.steps.map((s, i) => (
-                  <li key={i} className="relative">
-                    <span className="absolute -left-[33px] top-0.5 w-5 h-5 rounded-full bg-[#061d2a] text-white flex items-center justify-center text-[10px] font-bold">{i + 1}</span>
-                    <p className="font-semibold text-[#10212b] mb-1">{s.title}</p>
-                    <p className="text-[#536873] text-[15px] leading-relaxed">{s.desc}</p>
-                  </li>
-                ))}
-              </ol>
-            </section>
-          )}
-
-          {/* Pour qui / Pas pour qui — simple liste */}
-          {(page.contentBlocks?.forWho || page.contentBlocks?.notForWho) && (
-            <section>
-              <h2 className="font-display font-bold text-[#10212b] mb-6" style={{ fontSize: 'clamp(20px, 2vw, 26px)' }}>
-                Est-ce fait pour vous ?
-              </h2>
-              {page.contentBlocks.forWho && (
-                <>
-                  <p className="text-sm font-semibold text-[#10212b] uppercase tracking-wide mb-3">Bonne option si…</p>
-                  <ul className="space-y-2 mb-8">
-                    {page.contentBlocks.forWho.map((item, i) => (
-                      <li key={i} className="flex gap-3 text-[15px] text-[#536873]">
-                        <span className="text-[#e54b17] mt-0.5">→</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-              {page.contentBlocks.notForWho && (
-                <>
-                  <p className="text-sm font-semibold text-[#10212b] uppercase tracking-wide mb-3">Moins adapté si…</p>
-                  <ul className="space-y-2">
-                    {page.contentBlocks.notForWho.map((item, i) => (
-                      <li key={i} className="flex gap-3 text-[15px] text-[#536873]">
-                        <span className="text-[#aab5ba] mt-0.5">—</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </section>
-          )}
-
-          {/* Subventions — mention éditoriale uniquement, pas de montants */}
-          {page.contentBlocks?.grants && (
-            <section className="border-t border-[#e4ddd5] pt-10">
-              <h2 className="font-display font-bold text-[#10212b] mb-3" style={{ fontSize: 'clamp(20px, 2vw, 26px)' }}>
-                Programmes d&apos;aide financière applicables
-              </h2>
-              <p className="text-[#536873] text-[15px] mb-6 leading-relaxed">
-                Certains programmes gouvernementaux pourraient réduire votre coût d&apos;installation. Les conditions varient et les montants changent régulièrement — vérifiez directement sur les sites officiels.
-              </p>
-              <div className="space-y-5">
-                {page.contentBlocks.grants.map((g, i) => (
-                  <div key={i} className="border-l-2 border-[#e4ddd5] pl-4">
-                    <p className="font-semibold text-[#10212b] mb-1">{g.name}</p>
-                    <p className="text-[#536873] text-[14px] leading-relaxed">{g.conditions}</p>
-                    {g.source && (
-                      <a href={g.source} target="_blank" rel="noopener noreferrer" className="text-[#e54b17] text-[13px] hover:underline mt-1 inline-block">
-                        Voir les conditions officielles →
-                      </a>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* FAQ */}
-          {page.contentBlocks?.faq && (
-            <section className="border-t border-[#e4ddd5] pt-10">
-              <h2 className="font-display font-bold text-[#10212b] mb-6" style={{ fontSize: 'clamp(20px, 2vw, 26px)' }}>
-                Questions fréquentes
-              </h2>
-              <div className="space-y-0 divide-y divide-[#e4ddd5]">
-                {page.contentBlocks.faq.map((item, i) => (
-                  <details key={i} className="group py-5">
-                    <summary className="flex justify-between items-start gap-4 font-semibold text-[#10212b] cursor-pointer list-none text-[15px]">
-                      {item.q}
-                      <svg className="w-4 h-4 shrink-0 text-[#aab5ba] mt-0.5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
-                      </svg>
-                    </summary>
-                    <p className="pt-3 text-[#536873] leading-relaxed text-[15px]">{item.a}</p>
-                  </details>
-                ))}
-              </div>
-            </section>
-          )}
-
-        </article>
-
-        {/* ── SIDEBAR ── */}
-        <aside className="hidden lg:block">
-          <div className="sticky top-28 space-y-8">
-
-            <div className="border border-[#e4ddd5] rounded-xl p-6 bg-white">
-              <p className="font-semibold text-[#10212b] mb-3 text-[15px]">Trouver le bon modèle</p>
-              <p className="text-[#536873] text-sm mb-5 leading-relaxed">
-                Répondez à quelques questions sur votre maison — Thermo Match analyse votre besoin et vous oriente vers les bonnes options.
-              </p>
-              <Link
-                href="/trouver-ma-thermopompe"
-                className="block w-full text-center font-semibold py-3 px-4 rounded-lg transition-all text-sm"
-                style={{ backgroundColor: '#061d2a', color: '#fff' }}
-              >
-                Utiliser Thermo Match
-              </Link>
+            <div className="my-10 p-6 md:p-8 bg-white rounded-2xl border border-slate-200 shadow-sm not-prose">
+              <h3 className="text-2xl font-black text-[#0C1821] mb-4 flex items-center gap-3">
+                <ShieldCheck className="w-7 h-7 text-green-500" />
+                L'essentiel à retenir
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-600 font-medium">Une sélection basée sur <strong>{page.primaryKeyword}</strong> doit toujours prioriser le rendement en climat froid.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-600 font-medium">Les subventions LogisVert et Chauffez-Vert peuvent couvrir jusqu'à 7 000$ du coût total.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-600 font-medium">L'installation doit obligatoirement être réalisée par un entrepreneur certifié RBQ.</span>
+                </li>
+              </ul>
             </div>
 
-            {relatedLinks.length > 0 && (
-              <div>
-                <p className="text-xs font-semibold text-[#aab5ba] uppercase tracking-wider mb-4">Sur ce site</p>
-                <ul className="space-y-3">
-                  {relatedLinks.map((link, i) => (
-                    <li key={i}>
-                      <Link
-                        href={link.href}
-                        className="text-[14px] text-[#536873] hover:text-[#e54b17] transition-colors flex items-start gap-2"
-                      >
-                        <span className="text-[#e4ddd5] mt-0.5">›</span>
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <h2>Pourquoi l'intérêt grandissant pour {page.primaryKeyword} ?</h2>
+            <p>
+              Avec l'augmentation des coûts de l'énergie et les hivers rigoureux que nous connaissons au Québec, de plus en plus de propriétaires se tournent vers des solutions efficaces. Les requêtes comme <em>"{page.primaryKeyword}"</em> ou <em>"{page.secondaryKeywords[0] || 'subventions thermopompes'}"</em> ont explosé cette année. 
+            </p>
+            <p>
+              La raison est simple : une thermopompe moderne peut réduire votre facture de chauffage de 30% à 40% tout en vous offrant un confort inégalé en été grâce à la climatisation.
+            </p>
 
-          </div>
-        </aside>
-      </div>
+            <h2>Les critères pour faire le bon choix</h2>
+            <p>
+              Face à une multitude de marques (Daikin, Fujitsu, Mitsubishi, Gree, etc.), il est facile de s'y perdre. Voici ce qu'il faut absolument regarder :
+            </p>
+            <ul>
+              <li><strong>Le HSPF (Heating Seasonal Performance Factor) :</strong> Visez un score élevé pour garantir des économies d'énergie en hiver.</li>
+              <li><strong>La capacité de chauffage à basse température :</strong> La machine doit pouvoir chauffer efficacement même à -25°C ou -30°C.</li>
+              <li><strong>La certification NEEP :</strong> Indispensable pour être admissible aux subventions gouvernementales au Québec.</li>
+            </ul>
+
+            <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden my-12 not-prose">
+              <Image 
+                src="/images/thermomatch/thermomatch-recommendation-home.png"
+                alt={`Sélection pour ${page.primaryKeyword}`}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <h2>L'importance de comparer avant d'acheter</h2>
+            <p>
+              Beaucoup de consommateurs se précipitent lorsqu'ils cherchent <strong>{page.primaryKeyword}</strong>. Or, le prix de l'équipement n'est qu'une partie de l'équation. La qualité de l'installation est souvent responsable de 80% des problèmes rencontrés par la suite.
+            </p>
+            <p>
+              C'est pour cette raison que chez ThermoMatch, nous ne faisons pas que lister des machines. Nous avons développé un algorithme qui croise les données de votre propriété avec le catalogue complet des thermopompes approuvées au Québec.
+            </p>
+
+            <div className="bg-[#0C1821] text-white p-10 rounded-3xl my-12 not-prose text-center">
+              <ThermometerSnowflake className="w-12 h-12 text-blue-400 mx-auto mb-6" />
+              <h3 className="text-3xl font-black mb-4">Trouvez la vôtre en 2 minutes</h3>
+              <p className="text-blue-100 mb-8 text-lg">
+                Arrêtez de chercher à l'aveugle. Obtenez une recommandation sur mesure, le calcul de vos subventions et des soumissions d'installateurs certifiés.
+              </p>
+              <Link href="/questionnaire">
+                <Button size="lg" className="h-16 px-10 text-xl font-bold bg-[#d94b12] hover:bg-[#b83808] text-white shadow-xl rounded-full w-full sm:w-auto">
+                  Calculer mon Thermo Match
+                </Button>
+              </Link>
+            </div>
+            
+            <p className="text-sm text-slate-400 italic">
+              Les informations contenues dans ce guide ({page.secondaryKeywords.slice(0, 3).join(", ")}) sont mises à jour régulièrement pour refléter les normes actuelles de l'industrie au Québec.
+            </p>
+
+          </article>
+
+          {/* Sticky Sidebar */}
+          <aside className="lg:col-span-4">
+            <div className="sticky top-32 space-y-8">
+              
+              {/* Tool Widget */}
+              <div className="bg-white p-6 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 text-center">
+                <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Calculator className="w-8 h-8 text-blue-600" />
+                </div>
+                <h4 className="text-xl font-bold text-[#0C1821] mb-2">Simulateur de prix</h4>
+                <p className="text-slate-600 text-sm mb-6">
+                  Découvrez combien coûtera votre installation, subventions incluses.
+                </p>
+                <Link href="/questionnaire">
+                  <Button className="w-full bg-[#0C1821] hover:bg-slate-800 text-white font-bold h-12 rounded-xl">
+                    Faire le test gratuit
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Related keywords / Tags */}
+              <div className="bg-white p-6 rounded-2xl border border-slate-100">
+                <h4 className="text-lg font-bold text-[#0C1821] mb-4">Sujets associés</h4>
+                <div className="flex flex-wrap gap-2">
+                  {page.secondaryKeywords.map((kw, idx) => (
+                    <span key={idx} className="inline-block px-3 py-1.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-lg">
+                      {kw}
+                    </span>
+                  ))}
+                  <span className="inline-block px-3 py-1.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-lg">
+                    {page.primaryKeyword}
+                  </span>
+                </div>
+              </div>
+
+              {/* Trust Badge */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100">
+                <h4 className="text-lg font-bold text-green-900 mb-2 flex items-center gap-2">
+                  <ShieldCheck className="w-5 h-5 text-green-600" />
+                  Garantie Qualité
+                </h4>
+                <p className="text-green-800 text-sm leading-relaxed">
+                  Tous les installateurs affiliés à ThermoMatch détiennent une licence RBQ valide et sont évalués en continu par notre réseau.
+                </p>
+              </div>
+
+            </div>
+          </aside>
+          
+        </div>
+      </section>
     </main>
   );
 }

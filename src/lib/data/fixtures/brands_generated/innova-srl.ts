@@ -8,7 +8,7 @@ export const brand_innova_srlDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Innova Srl",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_innova_srlDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AIO P Series de Innova Srl",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-srl-innova-srl-aio-p-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_innova_srlDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 2.0 Series de Innova Srl",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/innova-srl-innova-srl-20-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

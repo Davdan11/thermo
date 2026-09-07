@@ -108,25 +108,7 @@ export function CompareSelection({ products }: CompareSelectionProps) {
         })}
       </div>
 
-      {/* Pagination (Static representation based on mockup) */}
-      <div className="flex items-center justify-center gap-4 mt-16 pb-12 text-[13px] font-medium text-[#172126]">
-        <button className="flex items-center justify-center text-[#172126] hover:opacity-80 px-2">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-        <button className="w-8 h-8 flex items-center justify-center bg-[var(--color-accent)] text-white font-semibold rounded-[4px]">1</button>
-        <button className="w-8 h-8 flex items-center justify-center hover:bg-black/5 rounded-[4px]">2</button>
-        <button className="w-8 h-8 flex items-center justify-center hover:bg-black/5 rounded-[4px]">3</button>
-        <button className="w-8 h-8 flex items-center justify-center hover:bg-black/5 rounded-[4px]">4</button>
-        <span className="w-8 h-8 flex items-center justify-center text-[#6B7280]">..</span>
-        <button className="w-8 h-8 flex items-center justify-center hover:bg-black/5 rounded-[4px]">15</button>
-        <button className="flex items-center justify-center text-[#172126] hover:opacity-80 px-2">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
-      </div>
+
 
       {/* Floating compare bar */}
       {selectedIds.size > 0 && (

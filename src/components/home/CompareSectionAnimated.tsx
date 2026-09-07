@@ -59,28 +59,29 @@ export function CompareSectionAnimated() {
         </Link>
       </div>
 
-      {/* DESKTOP: full 3-column layout with product images */}
+      {/* DESKTOP: full layout with product images */}
       <div
         className="hidden lg:grid"
         style={{
           maxWidth: 1360,
           margin: "0 auto",
-          padding: "48px 48px 0",
-          gridTemplateColumns: "260px 1fr 260px",
+          padding: "40px 48px 0",
+          gridTemplateColumns: "220px 1fr 200px",
           alignItems: "center",
-          gap: 40,
+          gap: 32,
         }}
       >
         {/* ── LEFT: title + orange line + button ── */}
-        <div style={{ paddingBottom: 48 }}>
+        <div style={{ paddingBottom: 40 }}>
           <h2
             style={{
               color: "#fff",
               fontSize: "clamp(22px,2vw,30px)",
               fontWeight: 800,
               lineHeight: 1.2,
-              margin: "0 0 20px",
+              margin: "0 0 16px",
               letterSpacing: "-0.02em",
+              fontStyle: "italic",
             }}
           >
             Comparez les modèles<br />qui comptent.
@@ -91,7 +92,7 @@ export function CompareSectionAnimated() {
             style={{
               height: 3,
               backgroundColor: "rgba(255,255,255,0.08)",
-              marginBottom: 32,
+              marginBottom: 28,
               overflow: "hidden",
               width: "100%",
             }}
@@ -115,8 +116,8 @@ export function CompareSectionAnimated() {
               backgroundColor: "#e54b17",
               color: "#fff",
               fontWeight: 700,
-              fontSize: 15,
-              padding: "13px 24px",
+              fontSize: 13,
+              padding: "10px 18px",
               textDecoration: "none",
               borderRadius: 2,
             }}
@@ -128,51 +129,30 @@ export function CompareSectionAnimated() {
           </Link>
         </div>
 
-        {/* ── CENTER: 3 units aligned at bottom ── */}
+        {/* ── CENTER: 3 units — ALL SAME HEIGHT ── */}
         <div
           style={{
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "center",
-            gap: 20,
-            transform: "translateY(-20px)", // Remonte les images qui semblaient "trop bas"
+            gap: 24,
           }}
         >
-          {/* Daikin — left, smaller */}
-          <div style={{ position: "relative", width: 260, flexShrink: 0, transform: "translateY(8px)" }}>
-            <Image
-              src="/images/marques/thermopompe-daikin-transparente.png"
-              alt="Thermopompe Daikin"
-              width={260}
-              height={260}
-              style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
-              unoptimized
-            />
-          </div>
-
-          {/* Mitsubishi — center, tallest */}
-          <div style={{ position: "relative", width: 340, flexShrink: 0, zIndex: 10, transform: "translateY(16px)" }}>
-            <Image
-              src="/images/marques/thermopompe-mitsubishi-electric-transparente.png"
-              alt="Thermopompe Mitsubishi Electric"
-              width={340}
-              height={340}
-              style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
-              unoptimized
-            />
-          </div>
-
-          {/* Fujitsu — right, smaller */}
-          <div style={{ position: "relative", width: 260, flexShrink: 0, transform: "translateY(3px)" }}>
-            <Image
-              src="/images/marques/thermopompe-fujitsu-transparente.png"
-              alt="Thermopompe Fujitsu"
-              width={260}
-              height={260}
-              style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
-              unoptimized
-            />
-          </div>
+          {[
+            { src: "/images/marques/thermopompe-daikin-transparente.png", alt: "Thermopompe Daikin", w: 220 },
+            { src: "/images/marques/thermopompe-mitsubishi-electric-transparente.png", alt: "Thermopompe Mitsubishi Electric", w: 260 },
+            { src: "/images/marques/thermopompe-fujitsu-transparente.png", alt: "Thermopompe Fujitsu", w: 220 },
+          ].map((unit, i) => (
+            <div key={unit.alt} style={{ position: "relative", width: unit.w, height: 220, flexShrink: 0, zIndex: i === 1 ? 10 : 1 }}>
+              <Image
+                src={unit.src}
+                alt={unit.alt}
+                fill
+                style={{ objectFit: "contain", objectPosition: "bottom center" }}
+                unoptimized
+              />
+            </div>
+          ))}
         </div>
 
         {/* ── RIGHT: animated metric bars ── */}
@@ -180,8 +160,8 @@ export function CompareSectionAnimated() {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: 24,
-            paddingBottom: 48,
+            gap: 20,
+            paddingBottom: 40,
           }}
         >
           {bars.map((bar, i) => (
@@ -192,7 +172,7 @@ export function CompareSectionAnimated() {
                   color: "#fff",
                   fontSize: 14,
                   fontWeight: 600,
-                  marginBottom: 10,
+                  marginBottom: 8,
                 }}
               >
                 {bar.label}

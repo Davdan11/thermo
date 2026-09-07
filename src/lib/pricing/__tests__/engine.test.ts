@@ -5,7 +5,7 @@
 import { describe, it, expect } from "vitest";
 import { calculateEstimate } from "../engine";
 import { formatCents, formatRange, roundToNearest50 } from "../format";
-import { postalCodeToRegion } from "../queries";
+import { postalCodeToRegion } from "../regions";
 import type { EstimatorInput } from "../types";
 import {
   ALPHA_GLACIER_18K_PRICES,

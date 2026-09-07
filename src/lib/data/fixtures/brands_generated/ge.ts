@@ -39,7 +39,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS22H SERIES de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns22h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS21H Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns21h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS21H SERIES | NS21H Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns21h-series-ns21h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS19H Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns19h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS22 Series | NS22H SERIES de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns22-series-ns22h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS22 Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns22-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS18H Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns18h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS22 Series | NS22H SERIES | NS22H Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns22-series-ns22h-series-ns22h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS17 Series | NS17H Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns17-series-ns17h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS17 Series | NS17H | NS17H SERIES de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns17-series-ns17h-ns17h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS17H de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns17h.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS17 Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns17-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NP15H de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-np15h.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_geDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série NS16H Series de GE",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ge-ge-ns16h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -36,7 +36,7 @@ import {
   MIN_OBSERVATIONS,
   MAX_OBSERVATION_AGE_DAYS,
 } from "./factors";
-import { postalCodeToRegion } from "./queries";
+import { postalCodeToRegion } from "./regions";
 import { roundToNearest50 } from "./format";
 
 /* ------------------------------------------------------------------

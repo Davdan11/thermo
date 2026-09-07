@@ -8,7 +8,7 @@ export const brand_aurusDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AURUS",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_aurusDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Star de AURUS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aurus-aurus-star.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

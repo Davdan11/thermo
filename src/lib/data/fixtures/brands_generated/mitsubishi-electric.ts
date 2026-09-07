@@ -39,7 +39,7 @@ export const brand_mitsubishi_electricDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M-Series de Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsubishi-electric-mitsubishi-electric-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_mitsubishi_electricDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série P-Series de Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsubishi-electric-mitsubishi-electric-p-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_mitsubishi_electricDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série S-Series de Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsubishi-electric-mitsubishi-electric-s-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_mitsubishi_electricDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série City Multi de Mitsubishi Electric",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/mitsubishi-electric-mitsubishi-electric-city-multi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

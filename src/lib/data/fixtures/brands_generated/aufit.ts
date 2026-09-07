@@ -8,7 +8,7 @@ export const brand_aufitDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AUFIT",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_aufitDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série C-Series de AUFIT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aufit-aufit-c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_aufitDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M-Series de AUFIT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aufit-aufit-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_aufitDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HI EFFICIENCY de AUFIT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aufit-aufit-hi-efficiency.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_aufitDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Q Series de AUFIT",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aufit-aufit-q-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

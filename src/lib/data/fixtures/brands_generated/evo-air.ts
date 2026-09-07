@@ -8,7 +8,7 @@ export const brand_evo_airDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour EVO AIR",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_evo_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EVOAIR A SERIES de EVO AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/evo-air-evo-air-evoair-a-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_evo_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EVOAIR B SERIES de EVO AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/evo-air-evo-air-evoair-b-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

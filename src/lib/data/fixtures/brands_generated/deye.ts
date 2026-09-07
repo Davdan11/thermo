@@ -8,7 +8,7 @@ export const brand_deyeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Deye",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_deyeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACDC de Deye",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/deye-deye-acdc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_deyeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EVI HEAT de Deye",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/deye-deye-evi-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_deyeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACDC  EVI de Deye",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/deye-deye-acdc-evi.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

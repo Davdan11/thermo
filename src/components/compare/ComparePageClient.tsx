@@ -724,9 +724,9 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                     ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $`
                     : "N/A"}
                 </p>
-                <p style={{ margin: "4px 0 0", fontSize: 11, color: "var(--color-muted)" }}>
-                  {p.subsidy.isColdClimate ? "Climat froid (120 $/kBTU)" : "Standard (50 $/kBTU)"}
-                </p>
+                <div style={{ fontSize: 13, color: "var(--color-muted)", marginTop: 4 }}>
+                  {p.subsidy.isColdClimate ? "Climat froid" : "Standard"}
+                </div>
               </div>
             ))}
           </div>

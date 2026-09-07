@@ -8,7 +8,7 @@ export const brand_aireforceDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour AireForce",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série (24-26 SEER2) Minisplits de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-24-26-seer2-minisplits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Lomo de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-lomo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Indoors Eight-way Compact Cassettes de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-multizone-indoors-eight-way-compact-cassettes.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Outdoors de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-multizone-outdoors.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Flex Match de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-flex-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série (19-20.5 SEER2) Minisplits de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-19-205-seer2-minisplits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_aireforceDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Side Discharge de AireForce",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/aireforce-aireforce-ultra-side-discharge.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -177,7 +177,42 @@ export const dellaDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "della-048-tp-9k1v-23s-in",
+      modelNumber: "048-TP-9K1V-23S-IN",
+      brandId: "della",
+      type: "wall-single",
+    },
+    {
+      id: "della-048-tp-9k2v-23s-in",
+      modelNumber: "048-TP-9K2V-23S-IN",
+      brandId: "della",
+      type: "wall-single",
+    },
+    {
+      id: "della-048-tp-12k1v-22s-in",
+      modelNumber: "048-TP-12K1V-22S-IN",
+      brandId: "della",
+      type: "wall-single",
+    },
+    {
+      id: "della-048-tp-12k2v-23s-in",
+      modelNumber: "048-TP-12K2V-23S-IN",
+      brandId: "della",
+      type: "wall-single",
+    },
+    {
+      id: "della-048-tp-18k2v-22s-in",
+      modelNumber: "048-TP-18K2V-22S-IN",
+      brandId: "della",
+      type: "wall-single",
+    },
+    {
+      id: "della-048-tp-24k2v-20s-in",
+      modelNumber: "048-TP-24K2V-20S-IN",
+      brandId: "della",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -185,7 +220,7 @@ export const dellaDataset: BrandDataset = {
       slug: "della-tp-wall-single-9000-cfg-1",
       modelId: "della-tp-wall-single-9000",
       outdoorUnitId: "della-048-tp-9k1v-23s-out",
-      indoorUnitId: null,
+      indoorUnitId: "della-048-tp-9k1v-23s-in",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 23,
@@ -199,7 +234,7 @@ export const dellaDataset: BrandDataset = {
       slug: "della-tp-wall-single-9000-cfg-2",
       modelId: "della-tp-wall-single-9000",
       outdoorUnitId: "della-048-tp-9k2v-23s-out",
-      indoorUnitId: null,
+      indoorUnitId: "della-048-tp-9k2v-23s-in",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 23.5,
@@ -213,7 +248,7 @@ export const dellaDataset: BrandDataset = {
       slug: "della-tp-wall-single-12000-cfg-1",
       modelId: "della-tp-wall-single-12000",
       outdoorUnitId: "della-048-tp-12k1v-22s-out",
-      indoorUnitId: null,
+      indoorUnitId: "della-048-tp-12k1v-22s-in",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 22,
@@ -227,7 +262,7 @@ export const dellaDataset: BrandDataset = {
       slug: "della-tp-wall-single-12000-cfg-2",
       modelId: "della-tp-wall-single-12000",
       outdoorUnitId: "della-048-tp-12k2v-23s-out",
-      indoorUnitId: null,
+      indoorUnitId: "della-048-tp-12k2v-23s-in",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 23,
@@ -241,7 +276,7 @@ export const dellaDataset: BrandDataset = {
       slug: "della-tp-wall-single-18000-cfg-1",
       modelId: "della-tp-wall-single-18000",
       outdoorUnitId: "della-048-tp-18k2v-22s-out",
-      indoorUnitId: null,
+      indoorUnitId: "della-048-tp-18k2v-22s-in",
       coolingCapacityMinBtu: 18000,
       coolingCapacityMaxBtu: 18000,
       seer2: 22,
@@ -255,7 +290,7 @@ export const dellaDataset: BrandDataset = {
       slug: "della-tp-wall-single-24000-cfg-1",
       modelId: "della-tp-wall-single-24000",
       outdoorUnitId: "della-048-tp-24k2v-20s-out",
-      indoorUnitId: null,
+      indoorUnitId: "della-048-tp-24k2v-20s-in",
       coolingCapacityMinBtu: 23000,
       coolingCapacityMaxBtu: 23000,
       seer2: 20,

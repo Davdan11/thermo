@@ -8,7 +8,7 @@ export const brand_acdDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ACD",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_acdDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LOMO 38SEER de ACD",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/acd-acd-lomo-38seer.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_acdDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Free Match de ACD",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/acd-acd-free-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_acdDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra heat free match de ACD",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/acd-acd-ultra-heat-free-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_acdDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Flexx de ACD",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/acd-acd-flexx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

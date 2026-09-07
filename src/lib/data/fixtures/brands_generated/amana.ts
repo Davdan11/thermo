@@ -39,7 +39,7 @@ export const brand_amanaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AZV9SA de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-azv9sa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_amanaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ASZV9 de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-aszv9.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_amanaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AZV6SA de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-azv6sa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_amanaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AZV7SA de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-azv7sa.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_amanaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ASZS6 de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-aszs6.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_amanaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ASZC7 de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-aszc7.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_amanaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ALZS5B de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-alzs5b.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_amanaDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ASZH5 de Amana",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/amana-amana-aszh5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

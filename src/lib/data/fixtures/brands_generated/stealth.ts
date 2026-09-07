@@ -8,7 +8,7 @@ export const brand_stealthDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour STEALTH",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_stealthDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ de STEALTH",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stealth-stealth-aciq.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_stealthDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ES SERIES de STEALTH",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stealth-stealth-es-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_stealthDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ series de STEALTH",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/stealth-stealth-aciq-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

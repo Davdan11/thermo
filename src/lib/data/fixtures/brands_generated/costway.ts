@@ -8,7 +8,7 @@ export const brand_costwayDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour COSTWAY",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_costwayDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série X-PRO de COSTWAY",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/costway-costway-x-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_costwayDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-Pro de COSTWAY",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/costway-costway-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_costwayDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série GREENFORCE de COSTWAY",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/costway-costway-greenforce.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_costwayDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FP10982US de COSTWAY",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/costway-costway-fp10982us.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_costwayDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série FP10983US de COSTWAY",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/costway-costway-fp10983us.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_eco_acDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ECO AC",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Airy 30SEER de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-airy-30seer.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Premium efficiency series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-premium-efficiency-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EHP series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-ehp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Clivia 27SEER de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-clivia-27seer.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série High efficiency series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-high-efficiency-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E-series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Charmo de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-charmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EHS series | EMH series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-ehs-series-emh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi Zone high efficiency series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-multi-zone-high-efficiency-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi-Zone Outdoor de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-multi-zone-outdoor.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Charmo 21SEER de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-charmo-21seer.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série EMH series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-emh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Standard efficiency series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-standard-efficiency-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultranixx de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-ultranixx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EHI series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-ehi-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_eco_acDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ION+ series de ECO AC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-ac-eco-ac-ion-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

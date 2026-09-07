@@ -8,7 +8,7 @@ export const brand_sea_breezeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Sea Breeze",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_sea_breezeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 9H Series de Sea Breeze",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sea-breeze-sea-breeze-9h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_sea_breezeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 30H Series de Sea Breeze",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sea-breeze-sea-breeze-30h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_sea_breezeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 18H Series de Sea Breeze",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sea-breeze-sea-breeze-18h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_sea_breezeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 24H Series de Sea Breeze",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sea-breeze-sea-breeze-24h-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

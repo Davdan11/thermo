@@ -7,6 +7,7 @@ import type { ProductDetail } from "./product-detail";
 import { computeHighlights } from "@/lib/compare/highlights";
 import type { ComparisonHighlights } from "@/lib/compare/highlights";
 import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
+import { lookupLogisVertFuzzy } from "@/lib/subsidies/logisvert-official";
 
 /* ------------------------------------------------------------------
    Types
@@ -82,13 +83,28 @@ export function getComparisonData(slugs: string[]): ComparisonData {
       d.model.heatingCapacity5FMaxBtu ??
       d.model.coolingCapacityMaxBtu ??
       0;
-    const logis = calculateLogisVertSimple(nominalBtu, d.isColdClimate);
+    
+    let logisDollars = 0;
+    let logisRate = 0;
+    
+    // Exact official amount based on HQ database
+    const officialLogis = lookupLogisVertFuzzy(d.model.modelNumber, d.brand.name);
+    if (officialLogis) {
+      logisDollars = officialLogis.logisVertDollars;
+      logisRate = nominalBtu > 0 ? Math.round(logisDollars / (nominalBtu / 1000)) : 0;
+    } else {
+      // Fallback estimate
+      const fallback = calculateLogisVertSimple(nominalBtu, d.isColdClimate);
+      logisDollars = fallback.dollars;
+      logisRate = fallback.rate;
+    }
+
     return {
       detail: d,
       imageUrl,
       subsidy: {
-        dollars: logis.dollars,
-        rate: logis.rate,
+        dollars: logisDollars,
+        rate: logisRate,
         isColdClimate: d.isColdClimate,
         capacityBtu: nominalBtu,
       },

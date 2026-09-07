@@ -8,7 +8,7 @@ export const brand_chDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour C&H",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_chDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CH series de C&H",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/ch-ch-ch-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

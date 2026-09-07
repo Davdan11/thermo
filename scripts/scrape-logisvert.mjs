@@ -152,6 +152,7 @@ async function main() {
       b: entry.b,
       m: entry.m,
       im: entry.im,
+      f: entry.f,
       a: entry.a,            // REAL HQ amount
       h17: entry.h17,        // BTU @ -8°C
       hn: entry.hn,          // nominal
@@ -175,6 +176,8 @@ async function main() {
       if (es.cop_at_5_f) final.cop5 = parseFloat(es.cop_at_5_f);
       if (es.heating_capacity_at_5_f_btu_h) final.h5 = parseInt(es.heating_capacity_at_5_f_btu_h);
       if (es.cooling_capacity_btu_h) final.c = parseInt(es.cooling_capacity_btu_h);
+      // Keep the broad HQ/ENERGY STAR family only. "Mini-Split" does not prove
+      // wall-mounted or single-zone; that distinction requires a product sheet.
       if (es.product_type && !final.t) final.t = es.product_type.includes("Mini") ? "M" : "C";
     }
 

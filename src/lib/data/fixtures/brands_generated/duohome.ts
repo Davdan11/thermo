@@ -8,7 +8,7 @@ export const brand_duohomeDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour DUOHOME",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_duohomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DOT-D24HNR8-EA01(J0) de DUOHOME",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/duohome-duohome-dot-d24hnr8-ea01j0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_duohomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DOT-D36HNR8-EA01(J0) de DUOHOME",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/duohome-duohome-dot-d36hnr8-ea01j0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_duohomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DOT-D48HNR8-GA01(J0) de DUOHOME",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/duohome-duohome-dot-d48hnr8-ga01j0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_duohomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DOT-D60HNR8-GA01(J0) de DUOHOME",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/duohome-duohome-dot-d60hnr8-ga01j0.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

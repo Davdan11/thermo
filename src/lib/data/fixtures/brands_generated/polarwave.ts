@@ -39,7 +39,7 @@ export const brand_polarwaveDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ de PolarWave",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/polarwave-polarwave-aciq.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_polarwaveDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ES SERIES de PolarWave",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/polarwave-polarwave-es-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_polarwaveDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EZ Series de PolarWave",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/polarwave-polarwave-ez-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_polarwaveDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ series de PolarWave",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/polarwave-polarwave-aciq-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

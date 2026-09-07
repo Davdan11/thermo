@@ -39,7 +39,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC-series de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SoftSound 23 VS Heat Pump de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-softsound-23-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Performance 19 SEER2 VS HP de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-performance-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série SoftSound 20 VS Heat Pump de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-softsound-20-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série QuietComfort 19 SEER2 VS HP de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-quietcomfort-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Mainline 18 SEER2 HP de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-mainline-18-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCS Series de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-dlcs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Dlseries de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-dlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_comfortmakerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série SOFTSOUND DELUXE 18 VS HP  2-STAGE de Comfortmaker",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comfortmaker-comfortmaker-softsound-deluxe-18-vs-hp-2-stage.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

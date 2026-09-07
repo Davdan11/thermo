@@ -39,7 +39,7 @@ export const brand_quebec_vairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NE series de QUEBEC VAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/quebec-vair-quebec-vair-ne-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_quebec_vairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NE-T52 Series de QUEBEC VAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/quebec-vair-quebec-vair-ne-t52-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_quebec_vairDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T55 Series de QUEBEC VAIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/quebec-vair-quebec-vair-t55-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

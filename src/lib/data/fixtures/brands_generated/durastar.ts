@@ -39,7 +39,7 @@ export const brand_durastarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DRA Series de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-dra-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_durastarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DRA3 de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-dra3.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_durastarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DRA5 de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-dra5.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_durastarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DRA2 de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-dra2.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_durastarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DRA4 de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-dra4.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_durastarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DRU Series de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-dru-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_durastarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série DRHP de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-drhp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_durastarDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Series de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_durastarDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série RHPXYC de DuraSTAR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/durastar-durastar-rhpxyc.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

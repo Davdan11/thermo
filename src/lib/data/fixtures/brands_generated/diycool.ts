@@ -8,7 +8,7 @@ export const brand_diycoolDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour DIYCOOL",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_diycoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ de DIYCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/diycool-diycool-aciq.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_diycoolDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ES SERIES de DIYCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/diycool-diycool-es-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_diycoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EZ Series de DIYCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/diycool-diycool-ez-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_diycoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ACIQ series de DIYCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/diycool-diycool-aciq-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_diycoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série R32 Extreme Heat Unitary de DIYCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/diycool-diycool-r32-extreme-heat-unitary.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_diycoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Extreme Heat Inverter Rooftop de DIYCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/diycool-diycool-extreme-heat-inverter-rooftop.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_diycoolDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat Unitary Condensing Unit de DIYCOOL",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/diycool-diycool-ultra-heat-unitary-condensing-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

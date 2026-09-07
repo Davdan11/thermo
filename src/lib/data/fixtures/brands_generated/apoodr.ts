@@ -8,7 +8,7 @@ export const brand_apoodrDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ApooDr",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_apoodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AS Series de ApooDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/apoodr-apoodr-as-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_apoodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série AL Series de ApooDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/apoodr-apoodr-al-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_apoodrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-PRO de ApooDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/apoodr-apoodr-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_apoodrDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AM Series de ApooDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/apoodr-apoodr-am-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_apoodrDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AA Series de ApooDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/apoodr-apoodr-aa-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_apoodrDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série AHU Series de ApooDr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/apoodr-apoodr-ahu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_championDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Champion",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_championDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série X series de Champion",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/champion-champion-x-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

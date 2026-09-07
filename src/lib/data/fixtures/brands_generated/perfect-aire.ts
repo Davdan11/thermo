@@ -39,7 +39,7 @@ export const brand_perfect_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de Perfect aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfect-aire-perfect-aire-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_perfect_aireDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi MULTI Xtreme de Perfect aire",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/perfect-aire-perfect-aire-hi-multi-xtreme.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

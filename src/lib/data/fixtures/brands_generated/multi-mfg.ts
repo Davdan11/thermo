@@ -8,7 +8,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Multi MFG",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSH Series de Multi MFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multi-mfg-multi-mfg-msh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MPC Series de Multi MFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multi-mfg-multi-mfg-mpc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MSU Series de Multi MFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multi-mfg-multi-mfg-msu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HMHP de Multi MFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multi-mfg-multi-mfg-hmhp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HHS Series de Multi MFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multi-mfg-multi-mfg-hhs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MEZ Series de Multi MFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multi-mfg-multi-mfg-mez-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_multi_mfgDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série HES Series de Multi MFG",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/multi-mfg-multi-mfg-hes-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

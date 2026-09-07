@@ -8,7 +8,7 @@ export const brand_emiDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour EMI",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_emiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EMX Series de EMI",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/emi-emi-emx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_emiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ECO Series de EMI",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/emi-emi-eco-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_emiDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ADS series de EMI",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/emi-emi-ads-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_emiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHAH Series de EMI",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/emi-emi-mhah-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_emiDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MHS Series de EMI",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/emi-emi-mhs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -8,7 +8,7 @@ export const brand_payneDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Payne",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5M Series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-d5m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MP-series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MAR-series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mar-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 45M Series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-45m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MG-series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37M Series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-37m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_payneDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38M series | 38MG-series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38m-series-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MH-series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MB-series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MV-series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38Mseries de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_payneDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MU series de Payne",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/payne-payne-38mu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

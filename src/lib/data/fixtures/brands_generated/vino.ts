@@ -8,7 +8,7 @@ export const brand_vinoDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour VINO",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_vinoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Nora de VINO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/vino-vino-nora.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_vinoDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série VSHP de VINO",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/vino-vino-vshp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

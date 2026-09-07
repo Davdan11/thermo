@@ -39,7 +39,7 @@ export const brand_kenmoreDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de Kenmore",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kenmore-kenmore-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_kenmoreDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Kenmore",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kenmore-kenmore-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_kenmoreDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Kenmore",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kenmore-kenmore-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_kenmoreDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 23 VS Heat Pump de Kenmore",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kenmore-kenmore-deluxe-23-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_kenmoreDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série LX SERIES de Kenmore",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kenmore-kenmore-lx-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_kenmoreDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Deluxe 20 VS Heat Pump de Kenmore",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kenmore-kenmore-deluxe-20-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

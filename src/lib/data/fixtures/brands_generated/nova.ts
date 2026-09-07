@@ -39,7 +39,7 @@ export const brand_novaDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T-Pro de NOVA",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/nova-nova-t-pro.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

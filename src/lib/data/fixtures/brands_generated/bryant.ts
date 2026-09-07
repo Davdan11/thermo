@@ -8,7 +8,7 @@ export const brand_bryantDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Bryant",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 615 Series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-615-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37M Series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-37m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MP-series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MAR-series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mar-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 45M Series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-45m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MG-series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_bryantDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38M series | 38MG-series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38m-series-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MH-series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB036HDS3-1 de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-37vmb036hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB048HDS3-1 de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-37vmb048hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_bryantDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38VMB036HDS3-1* de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38vmb036hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5M Series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-d5m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MB-series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MV-series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCS Series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-dlcs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38Mseries de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_bryantDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MU series de Bryant",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-bryant-38mu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

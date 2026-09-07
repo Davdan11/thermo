@@ -97,7 +97,18 @@ export const whynterDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "whynter-msi-009h11522-01esag",
+      modelNumber: "MSI-009H11522-01ESAG",
+      brandId: "whynter",
+      type: "wall-single",
+    },
+    {
+      id: "whynter-msi-012h11522-01esag",
+      modelNumber: "MSI-012H11522-01ESAG",
+      brandId: "whynter",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +116,7 @@ export const whynterDataset: BrandDataset = {
       slug: "whynter-standard-wall-single-9000-cfg-1",
       modelId: "whynter-standard-wall-single-9000",
       outdoorUnitId: "whynter-mso-009h11522-01esag",
-      indoorUnitId: null,
+      indoorUnitId: "whynter-msi-009h11522-01esag",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: null,
@@ -119,7 +130,7 @@ export const whynterDataset: BrandDataset = {
       slug: "whynter-standard-wall-single-12000-cfg-1",
       modelId: "whynter-standard-wall-single-12000",
       outdoorUnitId: "whynter-mso-012h11522-01esag",
-      indoorUnitId: null,
+      indoorUnitId: "whynter-msi-012h11522-01esag",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: null,

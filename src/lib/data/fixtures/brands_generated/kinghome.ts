@@ -39,7 +39,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Airy de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-airy.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Jasmine de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-jasmine.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Clivia de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-clivia.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Sunflower de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-sunflower.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Glovia de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-glovia.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Floor ceiling de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-floor-ceiling.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série POLARIS de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-polaris.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ALL MATCH de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-all-match.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 360° air discharge cassette unit de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-360-air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 360°air discharge cassette unit de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-360air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Console de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-console.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra Heat GMV6 Mini de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-ultra-heat-gmv6-mini.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série One-way air discharge cassette unit de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-one-way-air-discharge-cassette-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ducted de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-ducted.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Charmo de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-charmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -311,7 +311,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M-Series de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -328,7 +328,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Free match | M-Series de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-free-match-m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -345,7 +345,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série CEE Ultranixx de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-cee-ultranixx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -362,7 +362,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série G Series de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-g-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -379,7 +379,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série J-Series de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-j-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -396,7 +396,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série E Series de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-e-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -413,7 +413,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série COSMO de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-cosmo.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -430,7 +430,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DC inverter rooftop unit de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-dc-inverter-rooftop-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -447,7 +447,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 17 SEER DC inverter rooftop unit de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-17-seer-dc-inverter-rooftop-unit.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -464,7 +464,7 @@ export const brand_kinghomeDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ULTRANIXX de Kinghome",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/kinghome-kinghome-ultranixx.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

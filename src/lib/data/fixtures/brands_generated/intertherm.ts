@@ -8,7 +8,7 @@ export const brand_interthermDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Intertherm",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_interthermDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série (24-26 SEER2) Minisplits de Intertherm",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/intertherm-intertherm-24-26-seer2-minisplits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_interthermDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Indoors Eight-way Compact Cassettes de Intertherm",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/intertherm-intertherm-multizone-indoors-eight-way-compact-cassettes.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_interthermDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multizone Outdoors de Intertherm",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/intertherm-intertherm-multizone-outdoors.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_interthermDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série (19-20.5 SEER2) Minisplits de Intertherm",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/intertherm-intertherm-19-205-seer2-minisplits.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

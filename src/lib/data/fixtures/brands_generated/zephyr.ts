@@ -39,7 +39,7 @@ export const brand_zephyrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série HiULTRA de Zephyr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zephyr-zephyr-hiultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_zephyrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra de Zephyr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zephyr-zephyr-ultra.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_zephyrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Hi ULTRA HD de Zephyr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zephyr-zephyr-hi-ultra-hd.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_zephyrDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Ultra-Coil de Zephyr",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/zephyr-zephyr-ultra-coil.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

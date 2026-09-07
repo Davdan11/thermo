@@ -8,7 +8,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour LPS Legacy",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5F Series de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-d5f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC-series de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Dlseries de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-dlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M Series de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DL series de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-dl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 17 SEER HP de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-2-stage-17-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_lps_legacyDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Mainline 17 SEER2 HP de LPS Legacy",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/lps-legacy-lps-legacy-mainline-17-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

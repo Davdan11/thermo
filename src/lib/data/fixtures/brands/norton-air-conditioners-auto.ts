@@ -97,7 +97,18 @@ export const nortonairconditionersDataset: BrandDataset = {
     }
   ],
   indoorUnits: [
-
+    {
+      id: "norton-air-conditioners-dhp-12-12-u-a",
+      modelNumber: "DHP-12-12-U-A",
+      brandId: "norton-air-conditioners",
+      type: "wall-single",
+    },
+    {
+      id: "norton-air-conditioners-dhp-09-12-u-a",
+      modelNumber: "DHP-09-12-U-A",
+      brandId: "norton-air-conditioners",
+      type: "wall-single",
+    }
   ],
   configurations: [
     {
@@ -105,7 +116,7 @@ export const nortonairconditionersDataset: BrandDataset = {
       slug: "norton-air-conditioners-ohp-series-wall-single-12000-cfg-1",
       modelId: "norton-air-conditioners-ohp-series-wall-single-12000",
       outdoorUnitId: "norton-air-conditioners-ohp-12-22-23-a",
-      indoorUnitId: null,
+      indoorUnitId: "norton-air-conditioners-dhp-12-12-u-a",
       coolingCapacityMinBtu: 12000,
       coolingCapacityMaxBtu: 12000,
       seer2: 25.5,
@@ -119,7 +130,7 @@ export const nortonairconditionersDataset: BrandDataset = {
       slug: "norton-air-conditioners-ohp-series-wall-single-9000-cfg-1",
       modelId: "norton-air-conditioners-ohp-series-wall-single-9000",
       outdoorUnitId: "norton-air-conditioners-ohp-09-22-23-a",
-      indoorUnitId: null,
+      indoorUnitId: "norton-air-conditioners-dhp-09-12-u-a",
       coolingCapacityMinBtu: 9000,
       coolingCapacityMaxBtu: 9000,
       seer2: 24.6,

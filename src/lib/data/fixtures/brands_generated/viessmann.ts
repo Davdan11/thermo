@@ -8,7 +8,7 @@ export const brand_viessmannDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour Viessmann",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_viessmannDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLC-series de Viessmann",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/viessmann-viessmann-dlc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_viessmannDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série D5C Series de Viessmann",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/viessmann-viessmann-d5c-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_viessmannDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DLCP series de Viessmann",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/viessmann-viessmann-dlcp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_viessmannDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Dlseries de Viessmann",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/viessmann-viessmann-dlseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_viessmannDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de Viessmann",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/viessmann-viessmann-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_viessmannDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série DL series de Viessmann",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/viessmann-viessmann-dl-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

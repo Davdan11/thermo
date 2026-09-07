@@ -39,7 +39,7 @@ export const brand_continentalDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CDH Series de Continental",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/continental-continental-cdh-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_continentalDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série CDHA series de Continental",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/continental-continental-cdha-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_continentalDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série F Series de Continental",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/continental-continental-f-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_continentalDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Hyper Heat de Continental",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/continental-continental-hyper-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_continentalDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WSE Series de Continental",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/continental-continental-wse-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_continentalDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série WSC Series de Continental",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/continental-continental-wsc-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

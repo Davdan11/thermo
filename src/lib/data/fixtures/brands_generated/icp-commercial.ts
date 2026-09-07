@@ -8,7 +8,7 @@ export const brand_icp_commercialDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ICP Commercial",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_icp_commercialDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB036HDS3-1 de ICP Commercial",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/icp-commercial-icp-commercial-37vmb036hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_icp_commercialDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37VMB060HDS3-1 de ICP Commercial",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/icp-commercial-icp-commercial-37vmb060hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_icp_commercialDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38VMB036HDS3-1* de ICP Commercial",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/icp-commercial-icp-commercial-38vmb036hds3-1.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_icp_commercialDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série Quiet Comfort HP de ICP Commercial",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/icp-commercial-icp-commercial-quiet-comfort-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

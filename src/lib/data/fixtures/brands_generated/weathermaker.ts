@@ -8,7 +8,7 @@ export const brand_weathermakerDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour WEATHERMAKER",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MP-series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38mp-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MAR-series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38mar-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 45M Series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-45m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MG-series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38M series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 37M Series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-37m-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 38M series | 38MG-series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38m-series-38mg-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MB-series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38mb-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38MV-series de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38mv-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série 38Mseries de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-38mseries.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 17 SEER HP de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-2-stage-17-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -294,7 +294,7 @@ export const brand_weathermakerDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 HP de WEATHERMAKER",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/weathermaker-weathermaker-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

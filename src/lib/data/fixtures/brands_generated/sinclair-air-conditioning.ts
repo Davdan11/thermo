@@ -8,7 +8,7 @@ export const brand_sinclair_air_conditioningDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour SINCLAIR AIR CONDITIONING",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_sinclair_air_conditioningDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série BH714S Series de SINCLAIR AIR CONDITIONING",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/sinclair-air-conditioning-sinclair-air-conditioning-bh714s-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

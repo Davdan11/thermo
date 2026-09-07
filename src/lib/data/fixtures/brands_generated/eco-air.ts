@@ -8,7 +8,7 @@ export const brand_eco_airDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour ECO-AIR",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOX Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-mox-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EDM Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-edm-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M3O Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-m3o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M40 Series | M4O Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-m40-series-m4o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série M50 Series | M5O Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-m50-series-m5o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M2O Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-m2o-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -158,7 +158,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série MOD Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-mod-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série M40 Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-m40-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MOE Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-moe-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ECU Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-ecu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -226,7 +226,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ECC Series | ECU Series | ECUO Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-ecc-series-ecu-series-ecuo-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -243,7 +243,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ECC Series | ECU Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-ecc-series-ecu-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -260,7 +260,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série ECU Series | ECUO Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-ecu-series-ecuo-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -277,7 +277,7 @@ export const brand_eco_airDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série ECUO Series de ECO-AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/eco-air-eco-air-ecuo-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

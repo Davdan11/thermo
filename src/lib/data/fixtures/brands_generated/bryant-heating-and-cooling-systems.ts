@@ -8,7 +8,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour BRYANT HEATING AND COOLING SYSTEMS",
-    "activeInQuebec": true,
+    activeInQuebec: false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Evolution 23 VS Heat Pump de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-evolution-23-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Evolution 21 VS Cold Climate Heat Pump de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-evolution-21-vs-cold-climate-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série EVOLUTION  Extreme 24 HP de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-evolution-extreme-24-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Evolution 20 VS Heat Pump de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-evolution-20-vs-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Preferred 19 SEER2 VS HP de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-preferred-19-seer2-vs-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 2-STAGE 18 SEER HP de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-2-stage-18-seer-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -141,7 +141,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Crossover Heat Pump de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-crossover-heat-pump.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -175,7 +175,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série LEGACY 15 SEER2 HP de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-legacy-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -192,7 +192,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série 15 SEER2 HP de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-15-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -209,7 +209,7 @@ export const brand_bryant_heating_and_cooling_systemsDataset: BrandDataset = {
         "conventional"
       ],
       "description": "Série PREFERRED 16 SEER2 HP de BRYANT HEATING AND COOLING SYSTEMS",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/bryant-heating-and-cooling-systems-bryant-heating-and-cooling-systems-preferred-16-seer2-hp.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

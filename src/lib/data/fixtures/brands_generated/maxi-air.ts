@@ -39,7 +39,7 @@ export const brand_maxi_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série NE series de MAXI AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maxi-air-maxi-air-ne-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -56,7 +56,7 @@ export const brand_maxi_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série T55 Series de MAXI AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maxi-air-maxi-air-t55-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -73,7 +73,7 @@ export const brand_maxi_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série YS series de MAXI AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maxi-air-maxi-air-ys-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -90,7 +90,7 @@ export const brand_maxi_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAS Series de MAXI AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maxi-air-maxi-air-mas-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -107,7 +107,7 @@ export const brand_maxi_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAXS series de MAXI AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maxi-air-maxi-air-maxs-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
@@ -124,7 +124,7 @@ export const brand_maxi_airDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série MAX Series de MAXI AIR",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/maxi-air-maxi-air-max-series.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

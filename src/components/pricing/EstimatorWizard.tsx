@@ -11,11 +11,9 @@ import {
 } from "./EstimatorSteps";
 import type { EstimatorStep } from "./EstimatorSteps";
 import { EstimatorResultView } from "./EstimatorResult";
-import {
-  calculateEstimate,
-  getPriceObservations,
-} from "@/lib/pricing";
-import type { EstimatorInput, EstimatorResult, ProjectType, AccessComplexity } from "@/lib/pricing";
+import { calculateEstimate } from "@/lib/pricing/engine";
+import { fetchPriceObservationsAction } from "@/lib/pricing/actions";
+import type { EstimatorInput, EstimatorResult, ProjectType, AccessComplexity } from "@/lib/pricing/types";
 
 /* ------------------------------------------------------------------
    Constants
@@ -138,13 +136,13 @@ export function EstimatorWizard() {
   /* ---- Handlers — declared in dependency order ---- */
 
   const advanceStep = useCallback(
-    (newAnswers: Answers, fromStep: number, stepsCount: number) => {
+    async (newAnswers: Answers, fromStep: number, stepsCount: number) => {
       if (fromStep < stepsCount - 1) {
         setCurrentStep(fromStep + 1);
       } else {
         // Last step — calculate
         const input = answersToInput(newAnswers);
-        const priceData = getPriceObservations({
+        const priceData = await fetchPriceObservationsAction({
           modelId: input.modelId,
           configurationId: input.configurationId,
         });

@@ -8,7 +8,7 @@ export const brand_comformaticDataset: BrandDataset = {
     "countryOfOrigin": "Unknown",
     "websiteUrl": "",
     "description": "Catalogue importé pour COMFORMATIC",
-    "activeInQuebec": true,
+    "activeInQuebec": false,
     "status": "published",
     "createdAt": "2026-08-28",
     "updatedAt": "2026-08-28",
@@ -39,7 +39,7 @@ export const brand_comformaticDataset: BrandDataset = {
         "cold-climate"
       ],
       "description": "Série Multi super heat de COMFORMATIC",
-      "imageUrl": "/images/placeholder-heatpump.png",
+      "imageUrl": "/images/series/comformatic-comformatic-multi-super-heat.jpg",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",
