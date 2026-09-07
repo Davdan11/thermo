@@ -65,11 +65,32 @@ export default async function BrandPage({
     { name: brandName, url: `${SITE_URL}/marques/${brand.slug}` },
   ]);
 
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `Thermopompes ${brandName}`,
+    description: `Découvrez tous les modèles et séries de thermopompes ${brandName} au Québec.`,
+    url: `${SITE_URL}/marques/${brand.slug}`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: models.map((model, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${SITE_URL}/produit/${model.slug}`,
+        name: `${brandName} ${model.name}`,
+      })).slice(0, 50) // Limit to 50 to avoid massive JSON-LD
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[var(--color-background)]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
       {/* =========================================
           HERO SECTION
