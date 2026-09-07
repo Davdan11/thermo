@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, getFaqPageSchema } from "@/lib/seo";
-import FAQPageClient, { FAQ_ITEMS } from "./FaqClient";
+import FAQPageClient from "./FaqClient";
+import { FAQ_ITEMS } from "./faqData";
 
 export const metadata: Metadata = createMetadata({
   title: "FAQ — Questions fréquentes sur les thermopompes au Québec",
