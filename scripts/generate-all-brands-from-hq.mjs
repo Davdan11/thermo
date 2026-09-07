@@ -13,6 +13,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const HQ_DATA_PATH = join(__dirname, "../src/lib/subsidies/logisvert-official-amounts.json");
+const MAPPING_FILE = join(__dirname, "../src/lib/data/fixtures/documents/brochures-mapping.json");
 const OUT_DIR = join(__dirname, "../src/lib/data/fixtures/brands");
 
 function cleanSlug(s) {
@@ -60,6 +61,12 @@ function main() {
   const hqData = JSON.parse(readFileSync(HQ_DATA_PATH, "utf8"));
   const entries = Object.entries(hqData);
   console.log(`   Total HQ entries: ${entries.length}`);
+
+  let brochuresMapping = {};
+  if (existsSync(MAPPING_FILE)) {
+    brochuresMapping = JSON.parse(readFileSync(MAPPING_FILE, "utf8"));
+    console.log(`   Loaded brochures mapping with ${Object.keys(brochuresMapping).length} models.`);
+  }
 
   // ── Step 1: Group by brand ─────────────────────────────────────────
   const brandMap = new Map(); // brandName → { entries: [...] }
@@ -173,6 +180,20 @@ function main() {
         stats.series++;
       }
 
+      // Track outdoor units for brochure lookup
+      const currentRangeOutdoorIds = new Set();
+      for (const e of rangeEntries) {
+        if (e.m) currentRangeOutdoorIds.add(cleanSlug(`${brandSlug}-${escStr(e.m)}`));
+      }
+
+      let matchedBrochureUrl = "null";
+      for (const ouId of currentRangeOutdoorIds) {
+        if (brochuresMapping[ouId]) {
+          matchedBrochureUrl = `"${brochuresMapping[ouId]}"`;
+          break;
+        }
+      }
+
       // Model (one per range)
       modelsArr.push(`    {
       id: "${rangeSlug}",
@@ -184,6 +205,7 @@ function main() {
       normalizedModelNumber: "${cleanSlug(seriesName)}-${capacityBtu}",
       isActive2026: true,
       thermomatchEligible: true,
+      brochureUrl: ${matchedBrochureUrl},
       nominalCapacityBtu: ${capacityBtu},
       coolingCapacityMinBtu: ${minCool === Infinity ? "null" : minCool},
       coolingCapacityMaxBtu: ${maxCool === -Infinity ? "null" : maxCool},

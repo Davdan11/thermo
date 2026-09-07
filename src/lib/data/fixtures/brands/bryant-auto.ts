@@ -35,6 +35,7 @@ export const bryantDataset: BrandDataset = {
       normalizedModelNumber: "38m-series-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      brochureUrl: null,
       nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: 30000,
       coolingCapacityMaxBtu: 30000,

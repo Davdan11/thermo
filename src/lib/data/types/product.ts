@@ -26,6 +26,8 @@ export interface ProductSeries {
   description?: string | null;
   /** URL to official manufacturer product image */
   imageUrl?: string | null;
+  /** URL to official brochure PDF */
+  brochureUrl?: string | null;
   status: PublicationStatus;
   sources?: SourceLink[];
   createdAt: string;
@@ -86,6 +88,8 @@ export interface ProductModel {
   replacedByModelId?: string | null;
   /** URL to official manufacturer product image */
   imageUrl?: string | null;
+  /** URL to official brochure PDF */
+  brochureUrl?: string | null;
   sources?: SourceLink[];
   createdAt: string;
   updatedAt: string;

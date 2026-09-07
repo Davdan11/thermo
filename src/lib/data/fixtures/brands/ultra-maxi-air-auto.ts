@@ -35,6 +35,7 @@ export const ultramaxiairDataset: BrandDataset = {
       normalizedModelNumber: "standard-18000",
       isActive2026: true,
       thermomatchEligible: true,
+      brochureUrl: null,
       nominalCapacityBtu: 18000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,

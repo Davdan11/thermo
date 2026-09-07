@@ -35,6 +35,7 @@ export const k2Dataset: BrandDataset = {
       normalizedModelNumber: "standard-30000",
       isActive2026: true,
       thermomatchEligible: true,
+      brochureUrl: null,
       nominalCapacityBtu: 30000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,

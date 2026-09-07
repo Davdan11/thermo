@@ -35,6 +35,7 @@ export const concertoDataset: BrandDataset = {
       normalizedModelNumber: "standard-12000",
       isActive2026: true,
       thermomatchEligible: true,
+      brochureUrl: null,
       nominalCapacityBtu: 12000,
       coolingCapacityMinBtu: null,
       coolingCapacityMaxBtu: null,

@@ -35,6 +35,7 @@ export const quiltDataset: BrandDataset = {
       normalizedModelNumber: "quilt-15000",
       isActive2026: true,
       thermomatchEligible: true,
+      brochureUrl: null,
       nominalCapacityBtu: 15000,
       coolingCapacityMinBtu: 16000,
       coolingCapacityMaxBtu: 16000,

@@ -173,9 +173,21 @@ export function TechSpecs({ detail }: TechSpecsProps) {
 
   return (
     <section id="specifications" aria-labelledby="specifications-title">
-      <h2 id="specifications-title" className="text-xl font-bold text-foreground mb-4">
-        Spécifications techniques
-      </h2>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+        <h2 id="specifications-title" className="text-xl font-bold text-foreground">
+          Spécifications techniques
+        </h2>
+        {model.brochureUrl && (
+          <a
+            href={model.brochureUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+          >
+            📄 Télécharger la fiche technique officielle
+          </a>
+        )}
+      </div>
       <div className="space-y-6">
         {groups.map((group) => (
           <div key={group.title}>
