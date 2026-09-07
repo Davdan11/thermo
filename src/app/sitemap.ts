@@ -3,7 +3,7 @@ import { registry } from "@/lib/data/registry";
 
 const BASE = "https://thermopompeavendre.ca";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
 
   /* ── Static pages ── */
@@ -67,5 +67,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...seoPages, ...brandPages, ...productPages];
+  /* ── Guide pages (Markdown) ── */
+  const { getAllGuides } = await import("@/lib/markdown");
+  const guides = getAllGuides();
+  const guidePages: MetadataRoute.Sitemap = guides.map((g) => ({
+    url: `${BASE}/guides/${g.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...seoPages, ...brandPages, ...productPages, ...guidePages];
 }
