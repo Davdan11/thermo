@@ -216,6 +216,15 @@ async function main() {
   const indexPath = join(__dirname, "../src/lib/subsidies/logisvert-model-index.json");
   writeFileSync(indexPath, JSON.stringify(modelIndex, null, 0));
   
+  // Write metadata
+  const metaPath = join(__dirname, "../src/lib/subsidies/logisvert-metadata.json");
+  const now = new Date().toISOString();
+  writeFileSync(metaPath, JSON.stringify({
+    updatedAt: now,
+    sourceFile: latestCsv,
+    count: Object.keys(result).length
+  }, null, 2));
+  
   const sizeKB = Math.round(readFileSync(OUTPUT_PATH).length / 1024);
   const indexSizeKB = Math.round(readFileSync(indexPath).length / 1024);
   

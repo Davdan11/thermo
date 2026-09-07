@@ -4,6 +4,7 @@ import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
 import Image from "next/image";
 import styles from "./LogisVertBadge.module.css";
 import { CountingNumber } from "@/components/ui/counting-number";
+import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 
 /* ------------------------------------------------------------------
    LogisVertBadge — official certified subsidy display
@@ -117,6 +118,10 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
         >
           Consultez les conditions complètes sur le portail LogisVert
         </a>.
+        <br />
+        <span style={{ opacity: 0.6, fontSize: "0.85em", marginTop: "4px", display: "inline-block" }}>
+          * Dernière mise à jour de la base de données : {new Date(logisvertMetadata.updatedAt).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </span>
       </p>
     </section>
   );
