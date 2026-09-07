@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import type { GuideMetadata } from "@/lib/markdown";
 
 /* ─────────────────────────────────────────────────────────────────────────
    Données — catégories et guides
@@ -19,73 +20,19 @@ const CATEGORIES = [
 
 type CategoryId = typeof CATEGORIES[number]["id"];
 
-const GUIDES: {
-  slug: string;
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  category: CategoryId;
-}[] = [
-  {
-    slug: "btu-quelle-capacite-choisir",
-    title: "12 000 ou 18 000 BTU?",
-    description: "Comment choisir la bonne capacité pour un confort optimal.",
-    image: "/images/guides/card-interior-living-room.jpg",
-    imageAlt: "Salon moderne avec thermopompe murale",
-    category: "choisir",
-  },
-  {
-    slug: "murale-ou-centrale",
-    title: "Thermopompe murale ou centrale?",
-    description: "Avantages, différences et cas d'usage pour faire le bon choix.",
-    image: "/images/guides/card-outdoor-unit.jpg",
-    imageAlt: "Unité extérieure sur mur de pierre",
-    category: "choisir",
-  },
-  {
-    slug: "comprendre-seer2-hspf2",
-    title: "Comprendre le SEER2 et le HSPF2",
-    description: "Les indices qui comptent vraiment pour votre confort et vos économies.",
-    image: "/images/guides/card-outdoor-unit.jpg",
-    imageAlt: "Gros plan d'une unité extérieure Mitsubishi Electric",
-    category: "choisir",
-  },
-  {
-    slug: "gree-daikin-fujitsu-comparatif",
-    title: "Gree, Daikin ou Fujitsu?",
-    description: "Comparatif des grandes marques et de leurs forces.",
-    image: "/images/guides/card-interior-living-room.jpg",
-    imageAlt: "Unités extérieures Daikin et Fujitsu",
-    category: "comparer",
-  },
-  {
-    slug: "ce-qui-influence-le-prix-installe",
-    title: "Ce qui influence le prix installé",
-    description: "Les facteurs qui font varier la facture et comment mieux prévoir.",
-    image: "/images/guides/guide-hero-bg.jpg",
-    imageAlt: "Maison moderne en hiver avec thermopompe",
-    category: "prix",
-  },
-  {
-    slug: "preparer-son-projet-installation",
-    title: "Préparer son projet avant l'installation",
-    description: "Les étapes clés pour une installation sans surprise.",
-    image: "/images/guides/card-interior-living-room.jpg",
-    imageAlt: "Atelier organisé avec thermopompe murale",
-    category: "installation",
-  },
-];
-
 /* ─────────────────────────────────────────────────────────────────────────
    Composant principal
 ───────────────────────────────────────────────────────────────────────────*/
 
-export default function GuidesPageClient() {
+interface Props {
+  initialGuides: GuideMetadata[];
+}
+
+export default function GuidesPageClient({ initialGuides }: Props) {
   const [activeCategory, setActiveCategory] = useState<CategoryId>("choisir");
 
-  const filtered = GUIDES.filter((g) => g.category === activeCategory);
-  const displayed = filtered.length > 0 ? filtered : GUIDES;
+  const filtered = initialGuides.filter((g) => g.category === activeCategory);
+  const displayed = filtered.length > 0 ? filtered : initialGuides;
 
   return (
     <div className="guides-page">
@@ -169,8 +116,8 @@ export default function GuidesPageClient() {
                 {/* wrapper with explicit inline position so Next.js Image fill detects it */}
                 <div style={{ position: 'absolute', inset: 0 }}>
                   <Image
-                    src={guide.image}
-                    alt={guide.imageAlt}
+                    src={guide.coverImage}
+                    alt={guide.title}
                     fill
                     className="guides-card__img"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

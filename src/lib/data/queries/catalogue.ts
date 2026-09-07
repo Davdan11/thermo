@@ -238,16 +238,54 @@ export function getCatalogueModels(
       break;
     case "relevance":
     default:
-      // Stable order: brand name → capacity
+      // Smart order: Premium/Popular brands first, then alphabetical, then capacity
       models.sort((a, b) => {
-        const brandA = registry.brandById.get(a.brandId)?.name || "";
-        const brandB = registry.brandById.get(b.brandId)?.name || "";
-        const brandCmp = brandA.localeCompare(brandB);
-        if (brandCmp !== 0) return brandCmp;
-        return (
-          (a.nominalCapacityBtu ?? 0) -
-          (b.nominalCapacityBtu ?? 0)
-        );
+        const brandA = registry.brandById.get(a.brandId);
+        const brandB = registry.brandById.get(b.brandId);
+        
+        // Tier list (lower is better)
+        const getTier = (slug?: string) => {
+          switch (slug) {
+            case "daikin":
+            case "mitsubishi-electric":
+            case "fujitsu":
+              return 1;
+            case "bosch":
+            case "gree":
+            case "samsung":
+            case "lg":
+            case "panasonic":
+              return 2;
+            case "moovair":
+            case "tosot":
+            case "lennox":
+            case "sharp":
+            case "senville":
+              return 3;
+            default:
+              return 4; // Everything else (like 1hvac, directair, etc.)
+          }
+        };
+
+        const tierA = getTier(brandA?.slug);
+        const tierB = getTier(brandB?.slug);
+
+        if (tierA !== tierB) {
+          return tierA - tierB; // Sort by tier first
+        }
+
+        // To interleave brands and show a variety on the first page,
+        // we sort by capacity FIRST, then system type, then brand.
+        const capA = a.nominalCapacityBtu ?? 0;
+        const capB = b.nominalCapacityBtu ?? 0;
+        if (capA !== capB) return capA - capB;
+
+        const typeA = a.systemType.localeCompare(b.systemType);
+        if (typeA !== 0) return typeA;
+
+        const nameA = brandA?.name || "";
+        const nameB = brandB?.name || "";
+        return nameA.localeCompare(nameB);
       });
       break;
   }

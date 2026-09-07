@@ -324,23 +324,114 @@ function CompareView({
   currentMatch: CatalogMatch | null; recommendations: any[]; onReset: () => void;
 }) {
   const [tab, setTab] = useState(0);
+  const [manualRecs, setManualRecs] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<CatalogMatch[]>([]);
+  const [searchLoading, setSearchLoading] = useState(false);
+
+  const allRecs = [...recommendations, ...manualRecs];
+
+  useEffect(() => {
+    if (searchQuery.trim().length < 3) {
+      setSearchResults([]);
+      return;
+    }
+    const timer = setTimeout(async () => {
+      setSearchLoading(true);
+      try {
+        const res = await fetch(`/api/thermoscan/search?model=${encodeURIComponent(searchQuery)}`);
+        const data = await res.json();
+        if (data.success && data.matches) {
+          setSearchResults(data.matches.slice(0, 5));
+        }
+      } catch (e) {
+        console.error("Erreur de recherche", e);
+      } finally {
+        setSearchLoading(false);
+      }
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  const handleSelectManual = (match: CatalogMatch) => {
+    const newRec = {
+      product: {
+        brand: match.brand,
+        outdoorModel: match.outdoorModel,
+        series: match.outdoorModel,
+        coldClimate: match.coldClimate,
+        refrigerant: match.refrigerant,
+        hspf2: match.hspf2,
+      },
+      subsidyEstimate: match.coldClimate ? 500 : 0, 
+    };
+    setManualRecs(prev => [...prev, newRec]);
+    setIsSearching(false);
+    setSearchQuery("");
+    setTab(allRecs.length);
+  };
+
   const btnPrimary = "flex items-center justify-center gap-2 w-full px-4 py-3.5 rounded-lg font-bold text-sm text-white transition-opacity hover:opacity-90";
   const btnSecondary = "flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg font-semibold text-sm border transition-colors hover:bg-gray-50";
 
-  if (!recommendations.length) return (
+  if (allRecs.length === 0 && !isSearching) return (
     <div className="text-center py-12">
       <CheckCircle size={32} className="text-green-600 mx-auto mb-4" />
       <p className="font-bold text-[var(--color-foreground)] text-lg mb-2">{currentBrand} {currentModel}</p>
       <p className="text-sm text-[var(--color-muted)] mb-6 max-w-sm mx-auto">
-        Faites le questionnaire ThermoMatch pour obtenir vos recommandations personnalisees.
+        Obtenez des recommandations automatiques ou cherchez un modele specifique a comparer.
       </p>
-      <a href="/trouver-ma-thermopompe" className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-bold text-sm text-white" style={{ background: "var(--color-accent)" }}>
-        Faire le questionnaire <ArrowRight size={16} />
-      </a>
+      <div className="flex flex-col gap-3 max-w-sm mx-auto">
+        <a href="/trouver-ma-thermopompe" className="inline-flex justify-center items-center gap-2 px-5 py-3 rounded-lg font-bold text-sm text-white" style={{ background: "var(--color-accent)" }}>
+          Faire le questionnaire <ArrowRight size={16} />
+        </a>
+        <button onClick={() => setIsSearching(true)} className={btnSecondary} style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}>
+          <Search size={16} /> Chercher un modele a comparer
+        </button>
+      </div>
     </div>
   );
 
-  const rec = recommendations[tab];
+  if (isSearching) return (
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-bold text-[var(--color-foreground)] text-lg">Rechercher un modele</h3>
+        <button onClick={() => setIsSearching(false)} className="p-2 text-[var(--color-muted)] hover:bg-gray-100 rounded-full transition-colors"><X size={18} /></button>
+      </div>
+      <div className="relative">
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-muted)]" size={18} />
+        <input 
+          type="text" 
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Ex: Daikin Aurora, Moovair..."
+          className="w-full pl-10 pr-4 py-3 rounded-xl border outline-none text-sm focus:border-[var(--color-accent)]"
+          style={{ borderColor: "var(--color-border)", background: "var(--color-surface)", color: "var(--color-foreground)" }}
+          autoFocus
+        />
+      </div>
+      {searchLoading && <p className="text-xs text-[var(--color-muted)] text-center py-4">Recherche...</p>}
+      {!searchLoading && searchQuery.trim().length >= 3 && searchResults.length === 0 && (
+        <p className="text-xs text-[var(--color-muted)] text-center py-4">Aucun modele trouve pour "{searchQuery}".</p>
+      )}
+      {!searchLoading && searchResults.length > 0 && (
+        <div className="flex flex-col gap-2 mt-2">
+          {searchResults.map((m, i) => (
+            <button key={i} onClick={() => handleSelectManual(m)} className="flex flex-col text-left p-3 rounded-lg border transition-colors hover:bg-gray-50" style={{ borderColor: "var(--color-border)", background: "white" }}>
+              <p className="font-bold text-sm text-[var(--color-foreground)]">{m.brand} <span className="font-mono text-xs">{m.outdoorModel}</span></p>
+              <p className="text-xs text-[var(--color-muted)] mt-1 flex items-center gap-2">
+                <span>SEER2: {m.seer2 ?? "N/D"}</span>
+                {m.coldClimate && <span className="text-blue-600 bg-blue-50 border border-blue-200 px-1.5 py-0.5 rounded font-semibold text-[10px] uppercase">Climat Froid</span>}
+              </p>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  const rec = allRecs[tab];
   const rp = rec?.product;
 
   const curHspf2 = currentMatch?.hspf2 ? (typeof currentMatch.hspf2 === "object" ? currentMatch.hspf2.max : Number(currentMatch.hspf2)) : null;
@@ -402,22 +493,23 @@ function CompareView({
         </h3>
       </div>
 
-      {recommendations.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto pb-1">
-          {recommendations.map((r, i) => (
-            <button key={i} onClick={() => setTab(i)}
-              className="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold transition-colors"
-              style={{
-                background: tab === i ? "var(--color-foreground)" : "white",
-                color: tab === i ? "white" : "var(--color-muted)",
-                border: `1px solid ${tab === i ? "var(--color-foreground)" : "var(--color-border)"}`,
-              }}
-            >
-              {i + 1}. {r.product?.brand}
-            </button>
-          ))}
-        </div>
-      )}
+      <div className="flex gap-2 overflow-x-auto pb-1 items-center">
+        {allRecs.map((r, i) => (
+          <button key={i} onClick={() => setTab(i)}
+            className="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold transition-colors"
+            style={{
+              background: tab === i ? "var(--color-foreground)" : "white",
+              color: tab === i ? "white" : "var(--color-muted)",
+              border: `1px solid ${tab === i ? "var(--color-foreground)" : "var(--color-border)"}`,
+            }}
+          >
+            {i < recommendations.length ? `${i + 1}. ${r.product?.brand}` : `Manuel: ${r.product?.brand}`}
+          </button>
+        ))}
+        <button onClick={() => setIsSearching(true)} className="flex-shrink-0 px-3 py-2 rounded-lg text-sm font-bold transition-colors border flex items-center gap-1 hover:bg-gray-50" style={{ borderColor: "var(--color-border)", color: "var(--color-muted)", background: "white" }}>
+          <Search size={14} /> + Modele
+        </button>
+      </div>
 
       {bigWins.length > 0 && (
         <div className="rounded-xl p-4 border border-green-200 bg-green-50">

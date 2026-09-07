@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { guidesData } from "@/lib/data/guides-content";
+import { getAllGuides, getGuideBySlug } from "@/lib/markdown";
 import { createMetadata, SITE_URL } from "@/lib/seo";
 
 interface GuidePageProps {
@@ -10,12 +10,13 @@ interface GuidePageProps {
 }
 
 export async function generateStaticParams() {
-  return Object.keys(guidesData).map((slug) => ({ slug }));
+  const guides = getAllGuides();
+  return guides.map((guide) => ({ slug: guide.slug }));
 }
 
 export async function generateMetadata({ params }: GuidePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const guide = guidesData[slug];
+  const guide = await getGuideBySlug(slug);
   
   if (!guide) return createMetadata({ title: "Guide introuvable" });
 
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 
 export default async function GuideDetailPage({ params }: GuidePageProps) {
   const { slug } = await params;
-  const guide = guidesData[slug];
+  const guide = await getGuideBySlug(slug);
 
   if (!guide) {
     notFound();
@@ -108,7 +109,7 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
           <div className="text-xl md:text-2xl font-medium text-[#49545b] mb-12 leading-relaxed">
             {guide.description}
           </div>
-          {guide.content}
+          <div dangerouslySetInnerHTML={{ __html: guide.contentHtml }} />
         </article>
       </section>
     </main>

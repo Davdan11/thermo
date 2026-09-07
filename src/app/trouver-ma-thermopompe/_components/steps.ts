@@ -14,7 +14,7 @@ export interface Step {
   question: string;
   subtitle?: string;
   type: StepType;
-  options?: StepOption[];
+  options?: StepOption[] | ((answers: Record<string, any>) => StepOption[]);
   placeholder?: string;
   validate?: (value: string | string[]) => string | null;
 }
@@ -61,8 +61,7 @@ export const STEPS: Step[] = [
       { value: "maison", label: "Maison unifamiliale" },
       { value: "condo", label: "Condo" },
       { value: "duplex", label: "Duplex" },
-      { value: "triplex", label: "Triplex" },
-      { value: "autre", label: "Autre" },
+      { value: "triplex", label: "Triplex / Autre" },
     ],
   },
   {
@@ -106,12 +105,31 @@ export const STEPS: Step[] = [
     question: "Quel type de thermopompe recherchez-vous?",
     subtitle: "Si vous ne savez pas, nous vous guiderons.",
     type: "radio",
-    options: [
-      { value: "murale", label: "Murale (split)" },
-      { value: "centrale", label: "Centrale (ducted)" },
-      { value: "multizone", label: "Multizone" },
-      { value: "ne-sais-pas", label: "Je ne sais pas" },
-    ],
+    options: (answers) => {
+      const sys = answers.currentSystem;
+      // Si fournaise, on propose centrale (conduits existants)
+      if (sys === "fournaise-gaz" || sys === "fournaise-mazout") {
+        return [
+          { value: "centrale", label: "Centrale (conduits existants)" },
+          { value: "ne-sais-pas", label: "Je ne sais pas" },
+        ];
+      }
+      // Si plinthes électriques, on limite à murale / multizone car pas de conduits
+      if (sys === "electrique") {
+        return [
+          { value: "murale", label: "Murale (sans conduits)" },
+          { value: "multizone", label: "Multizone (sans conduits)" },
+          { value: "ne-sais-pas", label: "Je ne sais pas" },
+        ];
+      }
+      // Par défaut
+      return [
+        { value: "murale", label: "Murale (split)" },
+        { value: "centrale", label: "Centrale (ducted)" },
+        { value: "multizone", label: "Multizone" },
+        { value: "ne-sais-pas", label: "Je ne sais pas" },
+      ];
+    },
   },
   {
     id: "priority",
@@ -131,14 +149,28 @@ export const STEPS: Step[] = [
     question: "Quel est votre budget approximatif?",
     subtitle: "Installation incluse. Une estimation suffit.",
     type: "radio",
-    options: [
-      { value: "<5000", label: "Moins de 5 000 $" },
-      { value: "5000-8000", label: "5 000 $ \u00E0 8 000 $" },
-      { value: "8000-12000", label: "8 000 $ \u00E0 12 000 $" },
-      { value: "12000-15000", label: "12 000 $ \u00E0 15 000 $" },
-      { value: "15000+", label: "Plus de 15 000 $" },
-      { value: "ne-sais-pas", label: "Je ne sais pas encore" },
-    ],
+    options: (answers) => {
+      const hpType = answers.heatPumpType;
+      const isCentral = hpType === "centrale" || answers.currentSystem === "fournaise-gaz" || answers.currentSystem === "fournaise-mazout";
+      
+      if (isCentral) {
+        return [
+          { value: "<6000", label: "Moins de 6 000 $" },
+          { value: "6000-10000", label: "6 000 $ \u00E0 10 000 $" },
+          { value: "10000-15000", label: "10 000 $ \u00E0 15 000 $" },
+          { value: "15000+", label: "Plus de 15 000 $" },
+          { value: "ne-sais-pas", label: "Je ne sais pas encore" },
+        ];
+      } else {
+        return [
+          { value: "<3000", label: "Moins de 3 000 $" },
+          { value: "3000-5000", label: "3 000 $ \u00E0 5 000 $" },
+          { value: "5000-7000", label: "5 000 $ \u00E0 7 000 $" },
+          { value: "7000+", label: "Plus de 7 000 $" },
+          { value: "ne-sais-pas", label: "Je ne sais pas encore" },
+        ];
+      }
+    },
   },
   {
     id: "financing",

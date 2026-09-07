@@ -57,32 +57,28 @@ const STEP_BG_IMAGES: Record<string, string> = {
 
 /* Option thumbnail images for propertyType */
 const PROPERTY_IMAGES: Record<string, string> = {
-  maison:
-    "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=400&auto=format&fit=crop",
-  condo:
-    "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=400&auto=format&fit=crop",
-  duplex:
-    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop",
-  triplex:
-    "https://images.unsplash.com/photo-1555636222-cae831e670b3?q=80&w=400&auto=format&fit=crop",
-  autre:
-    "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop",
+  maison: "/images/maison.jpg",
+  condo: "/images/condo.jpg",
+  duplex: "/images/duplex.jpg",
+  triplex: "/images/triplex.jpg",
+  autre: "/images/triplex.jpg",
 };
 
 /* ----------------------------------------------------------
    Helpers
    ---------------------------------------------------------- */
 
-function getLabelForValue(step: Step, value: string): string {
-  return step.options?.find((o) => o.value === value)?.label ?? value;
+function getLabelForValue(step: Step, value: string, answers: Answers = {}): string {
+  const stepOptions = typeof step.options === "function" ? step.options(answers) : step.options;
+  return stepOptions?.find((o) => o.value === value)?.label ?? value;
 }
 
-function formatAnswer(step: Step, value: string | string[] | undefined): string {
+function formatAnswer(step: Step, value: string | string[] | undefined, answers: Answers = {}): string {
   if (!value) return "—";
   if (Array.isArray(value)) {
-    return value.map((v) => getLabelForValue(step, v)).join(", ") || "—";
+    return value.map((v) => getLabelForValue(step, v, answers)).join(", ") || "—";
   }
-  if (step.type === "radio") return getLabelForValue(step, value);
+  if (step.type === "radio") return getLabelForValue(step, value, answers);
   return value;
 }
 
@@ -554,6 +550,7 @@ export function ThermoMatch() {
   const currentValue = answers[step.id];
   const bgImage = STEP_BG_IMAGES[step.id] ?? STEP_BG_IMAGES.postalCode;
   const hasPropertyImages = step.id === "propertyType";
+  const stepOptions = typeof step.options === "function" ? step.options(answers) : step.options;
 
   return (
     <div className="min-h-screen bg-[#0D1117] text-white flex flex-col">
@@ -593,13 +590,13 @@ export function ThermoMatch() {
             )}
 
             {/* ---- Radio: with property images ---- */}
-            {step.type === "radio" && step.options && hasPropertyImages && (
+            {step.type === "radio" && stepOptions && hasPropertyImages && (
               <div
                 className="mt-6 border border-white/10 overflow-hidden"
                 role="radiogroup"
                 aria-label={step.question}
               >
-                {step.options.map((option, idx) => {
+                {stepOptions.map((option, idx) => {
                   const isSelected = currentValue === option.value;
                   const imgUrl = PROPERTY_IMAGES[option.value];
                   return (
@@ -656,13 +653,13 @@ export function ThermoMatch() {
             )}
 
             {/* ---- Radio: standard list (no images) ---- */}
-            {step.type === "radio" && step.options && !hasPropertyImages && (
+            {step.type === "radio" && stepOptions && !hasPropertyImages && (
               <div
                 className="mt-6 space-y-2"
                 role="radiogroup"
                 aria-label={step.question}
               >
-                {step.options.map((option) => {
+                {stepOptions.map((option) => {
                   const isSelected = currentValue === option.value;
                   return (
                     <button
@@ -705,10 +702,10 @@ export function ThermoMatch() {
             )}
 
             {/* ---- Multi select ---- */}
-            {step.type === "multi" && step.options && (
+            {step.type === "multi" && stepOptions && (
               <div>
                 <div className="mt-6 space-y-2" role="group" aria-label={step.question}>
-                  {step.options.map((option) => {
+                  {stepOptions.map((option) => {
                     const selected = Array.isArray(currentValue)
                       ? currentValue.includes(option.value)
                       : false;
@@ -831,7 +828,7 @@ export function ThermoMatch() {
                     <div key={s.id} className="flex items-center justify-between py-2.5 text-sm">
                       <span className="text-white/50 text-sm">{s.id === "postalCode" ? "Ville" : s.id === "propertyType" ? "Projet" : s.question.replace("?", "")}</span>
                       <div className="flex items-center gap-3">
-                        <span className="font-semibold text-white text-sm">{formatAnswer(s, val)}</span>
+                        <span className="font-semibold text-white text-sm">{formatAnswer(s, val, answers)}</span>
                         <button
                           onClick={() => {
                             setCurrentStep(i);

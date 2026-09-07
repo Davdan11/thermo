@@ -102,12 +102,17 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
                 const { brand, systemTypes, hasLogo } = summary;
                 const logoPath = `logo-${brand.slug}-bleu-nuit.png`;
                 
-                const systemTypesText = systemTypes.length > 0
-                  ? systemTypes.map(st => {
+                let filteredTypes = systemTypes.filter(st => st.value !== "other");
+                if (filteredTypes.length === 0 && systemTypes.length > 0) {
+                  filteredTypes = systemTypes; // Fallback
+                }
+                
+                const systemTypesText = filteredTypes.length > 0
+                  ? filteredTypes.map(st => {
                       if (st.value === "wall-single") return "Murales";
                       if (st.value === "multi-zone") return "Multizones";
                       if (st.value === "central-ducted") return "Centrales";
-                      return st.label;
+                      return st.label === "Autre" ? "Modèles variés" : st.label;
                     }).join(" • ")
                   : "Modèles variés";
 

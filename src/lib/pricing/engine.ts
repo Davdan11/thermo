@@ -85,14 +85,8 @@ export function calculateEstimate(
     region,
   );
 
-  // If insufficient, still return the structure but flag it
-  if (confidence === "insufficient" && priceObservations.length === 0) {
-    return buildRefusal(
-      input,
-      now,
-      "Les données de prix disponibles sont insuffisantes pour produire une estimation crédible.",
-    );
-  }
+  // On permet au moteur de continuer avec les bandes de prix par catégorie (fallback)
+  // même si on n'a aucune observation spécifique pour le modèle.
 
   // ---- 4. Build adjustments ----
   const adjustments = buildAdjustments(input);

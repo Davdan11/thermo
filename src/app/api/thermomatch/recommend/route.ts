@@ -207,12 +207,21 @@ export async function POST(req: Request) {
     const policyPath = path.join(process.cwd(), "src", "lib", "thermomatch-engine", "config", "match-policy-2026.json");
     const policy = JSON.parse(await fs.readFile(policyPath, "utf8")) as MatchPolicy;
     policy.maxResults = 15; // Increased to allow diversity picking
-    policy.maxPerBrand = 1;
+    policy.maxPerBrand = 3; // Allow up to 3 per brand so we have fallbacks
     policy.allowedBrands = []; // ALLOW ALL BRANDS to fix the bug where most choices are removed
+
+    // ── Quality Priority Logic ────────────────────────────────────────────
+    if (priorities.includes("qualite")) {
+      policy.allowedBrands = ["daikin", "mitsubishi electric", "fujitsu", "panasonic", "trane", "lennox", "bosch", "samsung", "lg"];
+    }
 
     // ── Build Live Catalog from Registry ──────────────────────────────────
     const liveProducts: CatalogProduct[] = registry.models
-      .filter(m => m.isActive2026 && m.thermomatchEligible)
+      .filter(m => {
+        if (!m.isActive2026 || !m.thermomatchEligible) return false;
+        const brand = registry.brandById.get(m.brandId);
+        return brand ? brand.activeInQuebec : false;
+      })
       .map(m => {
         const brand = registry.brandById.get(m.brandId);
         
@@ -328,6 +337,11 @@ export async function POST(req: Request) {
       }
       
       if (!secondChoice) {
+        secondChoice = candidates.find(c => c.product.id !== topChoice.product.id && c.product.brand.toLowerCase() !== topBrand);
+      }
+      
+      // FALLBACK: If we still don't have a second choice, just pick ANY other model
+      if (!secondChoice) {
         secondChoice = candidates.find(c => c.product.id !== topChoice.product.id);
       }
       
@@ -336,6 +350,7 @@ export async function POST(req: Request) {
         
         // 3. Find a third choice that balances the mix
         const selectedBrands = finalSelection.map(c => c.product.brand.toLowerCase());
+        const selectedIds = finalSelection.map(c => c.product.id);
         const hasPremium = selectedBrands.some(b => premiumBrands.includes(b));
         const hasValue = selectedBrands.some(b => valueBrands.includes(b));
         
@@ -348,6 +363,11 @@ export async function POST(req: Request) {
         
         if (!thirdChoice) {
           thirdChoice = candidates.find(c => !selectedBrands.includes(c.product.brand.toLowerCase()));
+        }
+        
+        // FALLBACK: Just pick any model not already selected (e.g. if only Samsung matches)
+        if (!thirdChoice) {
+          thirdChoice = candidates.find(c => !selectedIds.includes(c.product.id));
         }
         
         if (thirdChoice) finalSelection.push(thirdChoice);

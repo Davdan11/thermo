@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import GuidesPageClient from "./GuidesPageClient";
+import { getAllGuides } from "@/lib/markdown";
 
 export const metadata: Metadata = {
   title: "Guides & Conseils — Thermopompes au Québec",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function GuidesPage() {
-  return <GuidesPageClient />;
+  const guides = getAllGuides();
+  return <GuidesPageClient initialGuides={guides} />;
 }
 

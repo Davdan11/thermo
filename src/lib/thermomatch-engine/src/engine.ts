@@ -28,7 +28,9 @@ export function estimateDesignHeatLoadBtuH(input: MatchInput): number {
     return Math.round(input.designHeatLoadBtuH / 1_000) * 1_000;
   }
 
-  const climateFactor: Record<ClimateZone, number> = { "6": 25, "7A": 31, "7B": 37, "8": 44 };
+  // Facteurs ajustés : 16 BTU/pi² pour Montréal (Zone 6), 20 pour Québec (Zone 7A), etc.
+  // Les anciens facteurs (25 à 44) causaient un surdimensionnement massif (ex: 25k BTU pour 800 pi²).
+  const climateFactor: Record<ClimateZone, number> = { "6": 16, "7A": 20, "7B": 24, "8": 28 };
   const constructionFactor = {
     pre_1960: 1.25,
     "1960_1980": 1.12,
