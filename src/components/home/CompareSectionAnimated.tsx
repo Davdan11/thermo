@@ -18,7 +18,7 @@ const BARS = [
   { label: "Efficacité", pct: 82 },
 ];
 
-/* Photos officielles détourées (1200 × 900, contenu de hauteur identique) */
+/* Photos officielles détourées (1200 × 900, machine alignée en bas ; provenance dans public/images/marques/SOURCES.json) */
 const UNITS = [
   { src: "/images/marques/thermopompe-daikin-transparente.png", alt: "Unité extérieure Daikin" },
   { src: "/images/marques/thermopompe-mitsubishi-electric-transparente.png", alt: "Unité extérieure Mitsubishi Electric" },
