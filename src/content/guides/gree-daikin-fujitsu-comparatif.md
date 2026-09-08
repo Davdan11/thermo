@@ -1,36 +1,61 @@
 ---
-title: "Gree, Daikin ou Fujitsu : Comparatif des Marques"
-description: "Comparatif des grandes marques de thermopompes, de leurs forces et de leur positionnement sur le marché."
+title: "Gree, Daikin ou Fujitsu : comparatif sur données certifiées"
+description: "Trois marques très vendues au Québec, comparées sur ce que publient ENERGY STAR et Hydro-Québec : nombre de modèles, certification climat froid, HSPF2, COP à -15 °C, montants LogisVert. Pas d'avis sponsorisé."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-05-02"
-coverImage: "/images/guides/card-interior-living-room.jpg"
-readTime: "9 min de lecture"
+updatedAt: "2026-09-08"
+coverImage: "/images/categorie-murale-daikin-hd.png"
 category: "comparer"
+keywords: ["Gree ou Daikin", "Daikin ou Fujitsu", "meilleure marque thermopompe Québec", "comparatif marques thermopompe"]
+related: ["quelle-thermopompe-choisir-hiver-quebecois", "comprendre-seer2-hspf2", "subvention-logisvert-guide-complet"]
+faq:
+  - q: "Quelle est la meilleure marque de thermopompe au Québec?"
+    a: "Il n'y a pas de meilleure marque, il y a de meilleures machines pour une charge donnée. Chaque marque a des modèles excellents et des modèles ordinaires. Comparez les appariements sur la capacité certifiée à -15 °C, le COP et le HSPF2, puis le prix installé et la garantie."
+  - q: "Les marques chinoises sont-elles moins fiables?"
+    a: "Les données certifiées ne mesurent pas la fiabilité, et nous n'inventons pas de taux de panne. Ce que les données montrent : plusieurs marques fabriquent des machines aux performances certifiées équivalentes aux marques japonaises. La garantie et le réseau de service local pèsent alors davantage que le pays d'origine."
+  - q: "Daikin et Fujitsu vendent-elles les mêmes machines que d'autres marques?"
+    a: "Notre base repère les appariements aux données certifiées identiques vendus sous plusieurs marques. C'est fréquent pour Gree et Midea, qui fabriquent pour d'autres étiquettes ; plus rare pour Daikin et Fujitsu. Chaque fiche liste les « autres marques » quand c'est le cas."
 ---
 
-Le marché de la thermopompe est dominé par quelques mastodontes mondiaux. Au Québec, le débat se résume souvent au duel historique : *Japonaises vs Chinoises*. Voici un comparatif objectif des forces en présence.
+Au Québec, la conversation sur les marques tourne souvent en duel : les japonaises (Daikin, Fujitsu, Mitsubishi Electric) contre les chinoises (Gree, Midea, TOSOT). Ce comparatif prend un autre angle : ce que publient ENERGY STAR et Hydro-Québec, appariement par appariement, et rien d'autre. Le tableau en bas de page se met à jour avec la liste officielle.
 
-## Daikin : Le Leader Mondial (Japon)
+## Ce que nous comparons, et ce que nous ne comparons pas
 
-Daikin est le plus grand fabricant de systèmes CVC (climatisation, ventilation, chauffage) au monde. Ils fabriquent non seulement les machines, mais aussi le réfrigérant, ce qui est unique dans l'industrie.
+Nous comparons des données certifiées : nombre de modèles vendus au Québec, part certifiée climat froid, HSPF2 moyen et maximum, COP moyen à -15 °C, montants LogisVert. Nous ne comparons pas la fiabilité, le service après-vente ni le prix, parce qu'aucune source publique et vérifiable ne les mesure de façon comparable. Ces trois points comptent énormément ; ils relèvent de votre installateur et de la garantie écrite.
 
-* **La force :** Innovation, silence de roulement exceptionnel, garantie prolongée inégalée de 12 ans sur presque tout (pièces et compresseur). Leurs modèles *Aurora* sont légendaires au Québec pour le chauffage hivernal.
-* **La faiblesse :** Le prix d'achat est dans la fourchette supérieure.
+## Daikin
 
-## Fujitsu : L'Expert du Froid (Japon)
+Daikin est le plus gros fabricant mondial de climatisation. Au Québec, sa gamme couvre les murales, les multizones et les centrales, avec des séries climat froid bien représentées dans la liste LogisVert. Sur les données certifiées, Daikin se distingue par la largeur de sa gamme centrale et par des HSPF2 solides sur ses murales haut de gamme. Ses machines sont rarement rebadgées sous d'autres marques.
 
-Fujitsu (qui fabrique aussi sous la marque Halcyon) est un concurrent direct de Daikin et Mitsubishi. Ils sont réputés pour la fiabilité inébranlable de leurs compresseurs par temps très froid.
+Points à vérifier sur une fiche Daikin : la capacité certifiée à -15 °C de la série précise (les gammes d'entrée et les gammes climat froid diffèrent beaucoup), et la garantie applicable au Québec selon l'installateur.
 
-* **La force :** Les séries XLTH (Extra Low Temp Heating) sont capables de performer à -26°C. L'efficacité énergétique (SEER/HSPF) est souvent dans les plus hautes de l'industrie.
-* **La faiblesse :** Un design de l'unité intérieure un peu plus carré et conservateur par rapport à la concurrence, et des pièces de remplacement parfois coûteuses.
+## Fujitsu
 
-## Gree : Le Géant de la Production (Chine)
+Fujitsu General est reconnue pour ses murales climat froid ; ses séries à basse température figurent régulièrement dans nos classements par COP à -15 °C. La gamme québécoise est plus concentrée sur le mural que celle de Daikin. Sur les données certifiées, Fujitsu affiche parmi les meilleurs ratios de capacité conservée entre -8 °C et -15 °C.
 
-Une thermopompe sur trois vendues dans le monde est fabriquée dans une usine Gree. Ils produisent même des machines pour d'autres grandes marques américaines sous étiquette blanche.
+Points à vérifier : l'appariement exact (les têtes intérieures changent le HSPF2), et la disponibilité des pièces dans votre région.
 
-* **La force :** Le rapport qualité-prix. Une thermopompe Gree de la série Lomo ou Extreme offre d'excellentes performances en climat froid pour un prix nettement inférieur (parfois 20 à 30% moins cher) aux marques japonaises.
-* **La faiblesse :** La garantie est souvent standard (10 ans compresseur, 1 an main-d'œuvre), et certains installateurs notent une plus grande variation dans la qualité du plastique des boîtiers extérieurs.
+## Gree
 
-## Verdict
+Gree est un des plus gros producteurs mondiaux et fabrique aussi pour d'autres marques. Au Québec, sa gamme est large, avec de nombreux modèles certifiés climat froid et des HSPF2 certifiés qui rivalisent avec les japonaises sur plusieurs classes de capacité. Notre base repère fréquemment des machines Gree identiques vendues sous d'autres étiquettes ; la fiche l'indique.
 
-Si vous prévoyez rester dans votre maison plus de 10 ans et recherchez la tranquillité d'esprit absolue et le silence, investissez dans **Daikin** ou **Fujitsu**. Si vous avez un budget serré mais voulez quand même réduire votre facture Hydro-Québec significativement, **Gree** représente un choix extrêmement pragmatique.
+Points à vérifier : la série (les écarts de performance entre séries Gree sont importants), la garantie main-d'œuvre, et le réseau de service de l'installateur.
+
+## Lire le tableau
+
+Le tableau ci-dessous donne, pour chaque marque, le nombre de modèles vendus au Québec dans notre base, le nombre certifié climat froid, le HSPF2 moyen et le COP moyen à -15 °C sur les modèles dont ENERGY STAR publie la valeur, et le montant LogisVert maximal observé. Trois mises en garde :
+
+1. Une moyenne cache les extrêmes. Une marque avec beaucoup de modèles d'entrée de gamme aura une moyenne plus basse sans que ses meilleures machines soient moins bonnes.
+2. Le montant LogisVert maximal reflète surtout la présence de grosses centrales climat froid dans la gamme.
+3. Les machines rebadgées sont comptées une fois, sous la marque la plus connue au Québec.
+
+Pour un duel précis, nos pages de comparaison (Daikin contre Mitsubishi Electric, Gree contre Daikin, etc.) présentent le top 5 de chaque marque par COP à -15 °C.
+
+## Comment choisir, concrètement
+
+1. Calculez votre charge (ThermoMatch le fait en deux minutes).
+2. Retenez les machines dont la capacité certifiée à -15 °C couvre cette charge.
+3. Classez-les sur le COP à -15 °C et le HSPF2.
+4. Comparez ensuite, et seulement ensuite, le prix installé, la garantie et le service local.
+
+À cette étape, la marque devient un critère parmi d'autres, et la réponse est souvent différente de ce que la réputation laissait prévoir. Les trois machines que ThermoMatch propose viennent de marques différentes précisément pour cette raison.

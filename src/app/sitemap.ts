@@ -73,7 +73,7 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
   if (id === "guides") {
     const { getAllGuides } = await import("@/lib/markdown");
     return [
-      ...getAllGuides().map((g) => entry(`/guides/${g.slug}`, g.publishedAt ?? CONTENT_DATE, "monthly", 0.7)),
+      ...getAllGuides().map((g) => entry(`/guides/${g.slug}`, g.updatedAt ?? g.publishedAt ?? CONTENT_DATE, "monthly", 0.8)),
       ...getLandingPages().map((p) => entry(`/thermopompes/${p.slug}`, CONTENT_DATE, "monthly", 0.8)),
       ...getCapacityClasses().map((c) => entry(`/thermopompes/${c.slug}`, DATA_DATE, "weekly", 0.8)),
     ];
