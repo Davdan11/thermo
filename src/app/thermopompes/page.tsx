@@ -24,6 +24,7 @@ export const metadata = createMetadata({
   description:
     "Comparez les modèles de thermopompes, les capacités et les performances pour trouver un système adapté à votre habitation au Québec.",
   robots: { index: true, follow: true },
+  canonicalPath: "/thermopompes",
 });
 
 /* ------------------------------------------------------------------

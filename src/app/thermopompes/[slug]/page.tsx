@@ -1,241 +1,291 @@
+/* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getSeoPagesByPrefix, getSeoPageBySlug } from "@/lib/seo/registry";
-import { createMetadata, getArticleSchema, getBreadcrumbSchema } from "@/lib/seo";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { CheckCircle2, ShieldCheck, ThermometerSnowflake, User, Calendar, Clock, ChevronRight, Calculator } from "lucide-react";
+import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
+import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/landings";
+import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
+import { estimateLoad } from "@/lib/thermomatch/sizing";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const pages = getSeoPagesByPrefix("/thermopompes/");
-  return pages.map((p) => {
-    const slug = p.urlSlug.replace("/thermopompes/", "").replace(/\/$/, "");
-    return { slug };
-  });
+  return [
+    ...getLandingPages().map((p) => ({ slug: p.slug })),
+    ...getCapacityClasses().map((c) => ({ slug: c.slug })),
+  ];
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const fullSlug = `/thermopompes/${slug}/`;
-  const page = getSeoPageBySlug(fullSlug);
-
-  if (!page) {
-    return {};
+  const landing = getLandingPage(slug);
+  if (landing) {
+    return createMetadata({
+      title: landing.seoTitle,
+      description: landing.metaDescription,
+      canonicalPath: `/thermopompes/${landing.slug}`,
+    });
   }
-
-  return createMetadata({
-    title: page.seoTitle,
-    description: `Découvrez notre guide complet sur l'achat et l'installation pour "${page.primaryKeyword}". Apprenez comment comparer les modèles et obtenir vos subventions au Québec.`,
-  });
+  const cap = getCapacityClass(slug);
+  if (cap) {
+    return createMetadata({
+      title: `Thermopompe ${cap.label} : ${cap.models.length} modèles, capacité réelle à -15 °C et subvention LogisVert`,
+      description: `Toutes les thermopompes ${cap.label} vendues au Québec (${cap.wallCount} murales, ${cap.centralCount} centrales) avec capacité certifiée à -15 °C, HSPF2, SEER2 et montant LogisVert officiel. Pour quelle superficie? Réponse chiffrée.`,
+      canonicalPath: `/thermopompes/${cap.slug}`,
+    });
+  }
+  return createMetadata({ title: "Page introuvable" });
 }
 
-export default async function TransactionalBlogPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ThermopompesSlugPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const fullSlug = `/thermopompes/${slug}/`;
-  const page = getSeoPageBySlug(fullSlug);
+  const landing = getLandingPage(slug);
+  if (landing) return <LandingView page={landing} />;
+  const cap = getCapacityClass(slug);
+  if (cap) return <CapacityView cap={cap} />;
+  notFound();
+}
 
-  if (!page) {
-    notFound();
-  }
+/* ------------------------------------------------------------------
+   Page éditoriale (contenu rédigé)
+   ------------------------------------------------------------------ */
 
-  const currentDate = new Date().toLocaleDateString("fr-CA", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+function LandingView({ page }: { page: LandingPage }) {
+  const raw = page.contentBlocks ?? ({} as LandingPage["contentBlocks"]);
+  const cb = {
+    hero: raw.hero ?? { subtitle: page.metaDescription },
+    intro: raw.intro ?? "",
+    benefits: raw.benefits ?? [],
+    steps: raw.steps ?? [],
+    forWho: raw.forWho ?? [],
+    notForWho: raw.notForWho ?? [],
+    grants: raw.grants ?? [],
+    faq: raw.faq ?? [],
+    relatedLinks: raw.relatedLinks ?? [],
+  };
+  const faq = cb.faq.map((f) => ({ question: f.q, answer: f.a }));
+  const cold = getRanking("grand-froid", 6)!;
+  const classes = getCapacityClasses();
 
-  const jsonLd = [
-    getBreadcrumbSchema([
-      { name: "Accueil", url: "https://thermopompeavendre.ca" },
-      { name: "Guides Thermopompes", url: "https://thermopompeavendre.ca/thermopompes" },
-      { name: page.h1, url: `https://thermopompeavendre.ca${page.urlSlug}` }
-    ]),
-    getArticleSchema({
-      headline: page.h1,
-      image: "https://thermopompeavendre.ca/images/thermomatch/thermomatch-hero-winter-home.png",
-      datePublished: new Date().toISOString(),
-      authorName: "L'équipe d'experts ThermoMatch"
-    })
+  return (
+    <main className="bg-[#f8f5f0] text-[#071d2b]">
+      <JsonLd
+        data={getBreadcrumbSchema([
+          { name: "Accueil", url: "/" },
+          { name: "Thermopompes", url: "/thermopompes" },
+          { name: page.h1, url: `/thermopompes/${page.slug}` },
+        ])}
+      />
+      <SeoHero
+        eyebrow={page.pageType}
+        title={page.h1}
+        intro={cb.hero.subtitle}
+        breadcrumbs={[
+          { label: "Thermopompes", href: "/thermopompes" },
+          { label: page.h1, href: `/thermopompes/${page.slug}` },
+        ]}
+      />
+      <Prose>
+        {cb.intro && <p className="text-[18px]">{cb.intro}</p>}
+
+        {cb.benefits.length > 0 && (
+          <>
+            <h2>Ce qu'il faut savoir</h2>
+            {cb.benefits.map((b) => (
+              <div key={b.title}>
+                <h3>{b.title}</h3>
+                <p>{b.desc}</p>
+              </div>
+            ))}
+          </>
+        )}
+
+        {cb.steps.length > 0 && (
+          <>
+            <h2>Les étapes d'un projet réussi</h2>
+            <ol className="list-decimal pl-6 mb-4 space-y-2">
+              {cb.steps.map((s) => (
+                <li key={s.title}>
+                  <strong>{s.title}.</strong> {s.desc}
+                </li>
+              ))}
+            </ol>
+          </>
+        )}
+
+        {(cb.forWho.length > 0 || cb.notForWho.length > 0) && (
+          <>
+            <h2>Pour qui, et pour qui pas</h2>
+            {cb.forWho.length > 0 && (
+              <>
+                <h3>Un bon choix si</h3>
+                <ul>{cb.forWho.map((x) => <li key={x}>{x}</li>)}</ul>
+              </>
+            )}
+            {cb.notForWho.length > 0 && (
+              <>
+                <h3>À reconsidérer si</h3>
+                <ul>{cb.notForWho.map((x) => <li key={x}>{x}</li>)}</ul>
+              </>
+            )}
+          </>
+        )}
+
+        {cb.grants.length > 0 && (
+          <>
+            <h2>Subventions applicables</h2>
+            {cb.grants.map((g) => (
+              <div key={g.name}>
+                <h3>{g.name}</h3>
+                <p>
+                  {g.conditions}
+                  {g.source && (
+                    <>
+                      {" "}
+                      <a href={g.source} rel="noopener noreferrer nofollow" target="_blank">Source officielle</a>.
+                    </>
+                  )}
+                </p>
+              </div>
+            ))}
+            <p>
+              Les montants LogisVert exacts par appareil sont dans notre <Link href="/subventions/logisvert">tableau par marque</Link>, tiré de la liste
+              officielle d'Hydro-Québec et mis à jour automatiquement.
+            </p>
+          </>
+        )}
+      </Prose>
+
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-4">
+        <h2 className="text-[26px] font-bold text-[#172126] mb-2">Les machines les plus performantes par grand froid</h2>
+        <p className="text-[#536873] mb-5">Classement sur le COP certifié à -15 °C, toutes marques confondues.</p>
+        <ModelTable models={cold.models} showRank metric={{ label: cold.def.metricLabel, value: cold.def.value }} />
+        <p className="mt-3 text-sm"><Link href="/meilleures-thermopompes" className="text-[#e54b17] font-semibold">Tous les classements →</Link></p>
+      </section>
+
+      <CtaThermoMatch />
+
+      <RelatedLinks title="Par capacité" links={classes.map((c) => ({ href: `/thermopompes/${c.slug}`, label: `Thermopompe ${c.label}`, hint: `${c.models.length} machines` }))} />
+      <RelatedLinks title="Voir aussi" links={cb.relatedLinks.map((l) => ({ href: l.href, label: l.label }))} />
+      <FaqBlock items={faq} />
+    </main>
+  );
+}
+
+/* ------------------------------------------------------------------
+   Page par classe de capacité (données)
+   ------------------------------------------------------------------ */
+
+function areaRangeFor(btu: number): { min: number; max: number } {
+  // Inverse du calcul de charge ThermoMatch pour une maison standard (1981-2000, isolation standard).
+  const perFt2 = estimateLoad({ heatedAreaFt2: 1000, homeType: "detached", floors: 1, systemKind: "any", zones: 1, backupHeatAvailable: false, priorities: [], budget: "unknown" }).loadBtuH / 1000;
+  const ideal = btu / perFt2;
+  return { min: Math.round((ideal * 0.8) / 50) * 50, max: Math.round((ideal * 1.05) / 50) * 50 };
+}
+
+function CapacityView({ cap }: { cap: CapacityClass }) {
+  const classes = getCapacityClasses();
+  const idx = classes.findIndex((c) => c.slug === cap.slug);
+  const prev = classes[idx - 1];
+  const next = classes[idx + 1];
+  const area = areaRangeFor(cap.btu);
+  const walls = cap.models.filter((m) => m.kind === "murale");
+  const centrals = cap.models.filter((m) => m.kind === "centrale");
+  const certified = cap.models.filter((m) => m.h5Btu !== null);
+  const h5Values = certified.map((m) => m.h5Btu as number).sort((a, b) => a - b);
+  const h5Min = h5Values[0];
+  const h5Max = h5Values[h5Values.length - 1];
+  const brands = [...new Set(cap.models.map((m) => m.brand))];
+
+  const faq = [
+    {
+      question: `Une thermopompe ${cap.label} chauffe quelle superficie?`,
+      answer: `Pour une maison unifamiliale standard (construction 1981-2000, isolation normale), notre calcul de charge situe une ${cap.label} entre ${area.min.toLocaleString("fr-CA")} et ${area.max.toLocaleString("fr-CA")} pi². Une maison plus ancienne ou mal isolée demande plus ; un condo ou une maison neuve demande moins. ThermoMatch fait ce calcul pour votre maison précise.`,
+    },
+    {
+      question: `Combien de BTU fournit réellement une ${cap.label} à -15 °C?`,
+      answer: h5Values.length
+        ? `Selon les fiches ENERGY STAR de ${certified.length} machines, entre ${h5Min.toLocaleString("fr-CA")} et ${h5Max.toLocaleString("fr-CA")} BTU/h. L'écart est énorme : c'est pour cela que la capacité nominale ne suffit pas pour choisir.`
+        : `Aucune donnée certifiée à -15 °C n'est publiée pour cette classe dans la liste actuelle.`,
+    },
+    {
+      question: `Quelle subvention LogisVert pour une ${cap.label}?`,
+      answer: cap.maxLogisVert > 0
+        ? `Jusqu'à ${cap.maxLogisVert.toLocaleString("fr-CA")} $ selon l'appariement, d'après la liste officielle d'Hydro-Québec. Les montants exacts sont dans le tableau.`
+        : `Aucun montant LogisVert n'est publié pour cette classe.`,
+    },
+    {
+      question: `Murale ou centrale en ${cap.label}?`,
+      answer: `${walls.length} murales et ${centrals.length} centrales existent dans cette classe. La centrale demande des conduits existants ; la murale s'installe sans conduits. Le choix dépend de votre maison, pas de la capacité.`,
+    },
   ];
 
   return (
-    <main className="min-h-screen bg-[#f8f5f0] text-[#071d2b]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    <main className="bg-[#f8f5f0] text-[#071d2b]">
+      <JsonLd
+        data={[
+          getBreadcrumbSchema([
+            { name: "Accueil", url: "/" },
+            { name: "Thermopompes", url: "/thermopompes" },
+            { name: `Thermopompe ${cap.label}`, url: `/thermopompes/${cap.slug}` },
+          ]),
+          getItemListSchema({ name: `Thermopompes ${cap.label}`, items: cap.models.slice(0, 50).map((m) => ({ name: `${m.brand} ${m.name}`, url: `/produit/${m.canonicalSlug}` })) }),
+        ]}
       />
-      
-      {/* Blog Hero Header */}
-      <section className="relative w-full bg-[#0C1821] pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/images/thermomatch/thermomatch-hero-winter-home.png')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0C1821] to-transparent"></div>
-        
-        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
-          <div className="flex flex-wrap items-center gap-2 text-sm text-blue-200/80 mb-8 font-medium">
-            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
-            <ChevronRight className="w-4 h-4" />
-            <Link href="/thermopompes" className="hover:text-white transition-colors">Thermopompes</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-white">Guide d'achat</span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-8">
-            {page.h1}
-          </h1>
-
-          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 font-medium">
-            <div className="flex items-center gap-2">
-              <User className="w-4 h-4" />
-              <span>L'équipe ThermoMatch</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <span>Mis à jour le {currentDate}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>5 min de lecture</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Content & Sidebar Layout */}
-      <section className="container mx-auto px-6 py-12 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          {/* Main Article Content */}
-          <article className="lg:col-span-8 prose prose-lg md:prose-xl prose-slate max-w-none prose-headings:font-black prose-headings:text-[#0C1821] prose-a:text-[#d94b12]">
-            <p className="lead text-xl md:text-2xl text-slate-600 font-medium leading-relaxed">
-              Si vous êtes à la recherche de la meilleure solution pour {page.primaryKeyword.toLowerCase()}, vous êtes au bon endroit. L'achat d'un système de chauffage et climatisation au Québec représente un investissement majeur qui nécessite une réflexion approfondie.
-            </p>
-
-            <div className="my-10 p-6 md:p-8 bg-white rounded-2xl border border-slate-200 shadow-sm not-prose">
-              <h3 className="text-2xl font-black text-[#0C1821] mb-4 flex items-center gap-3">
-                <ShieldCheck className="w-7 h-7 text-green-500" />
-                L'essentiel à retenir
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-600 font-medium">Une sélection basée sur <strong>{page.primaryKeyword}</strong> doit toujours prioriser le rendement en climat froid.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-600 font-medium">Les subventions LogisVert et Chauffez-Vert peuvent couvrir jusqu'à 7 000$ du coût total.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-600 font-medium">L'installation doit obligatoirement être réalisée par un entrepreneur certifié RBQ.</span>
-                </li>
-              </ul>
-            </div>
-
-            <h2>Pourquoi l'intérêt grandissant pour {page.primaryKeyword} ?</h2>
-            <p>
-              Avec l'augmentation des coûts de l'énergie et les hivers rigoureux que nous connaissons au Québec, de plus en plus de propriétaires se tournent vers des solutions efficaces. Les requêtes comme <em>"{page.primaryKeyword}"</em> ou <em>"{page.secondaryKeywords[0] || 'subventions thermopompes'}"</em> ont explosé cette année. 
-            </p>
-            <p>
-              La raison est simple : une thermopompe moderne peut réduire votre facture de chauffage de 30% à 40% tout en vous offrant un confort inégalé en été grâce à la climatisation.
-            </p>
-
-            <h2>Les critères pour faire le bon choix</h2>
-            <p>
-              Face à une multitude de marques (Daikin, Fujitsu, Mitsubishi, Gree, etc.), il est facile de s'y perdre. Voici ce qu'il faut absolument regarder :
-            </p>
-            <ul>
-              <li><strong>Le HSPF (Heating Seasonal Performance Factor) :</strong> Visez un score élevé pour garantir des économies d'énergie en hiver.</li>
-              <li><strong>La capacité de chauffage à basse température :</strong> La machine doit pouvoir chauffer efficacement même à -25°C ou -30°C.</li>
-              <li><strong>La certification NEEP :</strong> Indispensable pour être admissible aux subventions gouvernementales au Québec.</li>
-            </ul>
-
-            <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden my-12 not-prose">
-              <Image 
-                src="/images/thermomatch/thermomatch-recommendation-home.png"
-                alt={`Sélection pour ${page.primaryKeyword}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <h2>L'importance de comparer avant d'acheter</h2>
-            <p>
-              Beaucoup de consommateurs se précipitent lorsqu'ils cherchent <strong>{page.primaryKeyword}</strong>. Or, le prix de l'équipement n'est qu'une partie de l'équation. La qualité de l'installation est souvent responsable de 80% des problèmes rencontrés par la suite.
-            </p>
-            <p>
-              C'est pour cette raison que chez ThermoMatch, nous ne faisons pas que lister des machines. Nous avons développé un algorithme qui croise les données de votre propriété avec le catalogue complet des thermopompes approuvées au Québec.
-            </p>
-
-            <div className="bg-[#0C1821] text-white p-10 rounded-3xl my-12 not-prose text-center">
-              <ThermometerSnowflake className="w-12 h-12 text-blue-400 mx-auto mb-6" />
-              <h3 className="text-3xl font-black mb-4">Trouvez la vôtre en 2 minutes</h3>
-              <p className="text-blue-100 mb-8 text-lg">
-                Arrêtez de chercher à l'aveugle. Obtenez une recommandation sur mesure, le calcul de vos subventions et des soumissions d'installateurs certifiés.
-              </p>
-              <Link href="/questionnaire">
-                <Button size="lg" className="h-16 px-10 text-xl font-bold bg-[#d94b12] hover:bg-[#b83808] text-white shadow-xl rounded-full w-full sm:w-auto">
-                  Calculer mon Thermo Match
-                </Button>
-              </Link>
-            </div>
-            
-            <p className="text-sm text-slate-400 italic">
-              Les informations contenues dans ce guide ({page.secondaryKeywords.slice(0, 3).join(", ")}) sont mises à jour régulièrement pour refléter les normes actuelles de l'industrie au Québec.
-            </p>
-
-          </article>
-
-          {/* Sticky Sidebar */}
-          <aside className="lg:col-span-4">
-            <div className="sticky top-32 space-y-8">
-              
-              {/* Tool Widget */}
-              <div className="bg-white p-6 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 text-center">
-                <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Calculator className="w-8 h-8 text-blue-600" />
-                </div>
-                <h4 className="text-xl font-bold text-[#0C1821] mb-2">Simulateur de prix</h4>
-                <p className="text-slate-600 text-sm mb-6">
-                  Découvrez combien coûtera votre installation, subventions incluses.
-                </p>
-                <Link href="/questionnaire">
-                  <Button className="w-full bg-[#0C1821] hover:bg-slate-800 text-white font-bold h-12 rounded-xl">
-                    Faire le test gratuit
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Related keywords / Tags */}
-              <div className="bg-white p-6 rounded-2xl border border-slate-100">
-                <h4 className="text-lg font-bold text-[#0C1821] mb-4">Sujets associés</h4>
-                <div className="flex flex-wrap gap-2">
-                  {page.secondaryKeywords.map((kw, idx) => (
-                    <span key={idx} className="inline-block px-3 py-1.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-lg">
-                      {kw}
-                    </span>
-                  ))}
-                  <span className="inline-block px-3 py-1.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-lg">
-                    {page.primaryKeyword}
-                  </span>
-                </div>
-              </div>
-
-              {/* Trust Badge */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100">
-                <h4 className="text-lg font-bold text-green-900 mb-2 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-green-600" />
-                  Garantie Qualité
-                </h4>
-                <p className="text-green-800 text-sm leading-relaxed">
-                  Tous les installateurs affiliés à ThermoMatch détiennent une licence RBQ valide et sont évalués en continu par notre réseau.
-                </p>
-              </div>
-
-            </div>
-          </aside>
-          
-        </div>
-      </section>
+      <SeoHero
+        eyebrow="Par capacité"
+        title={`Thermopompe ${cap.label}`}
+        intro={`${cap.models.length} machines distinctes de ${brands.length} marques, avec leur capacité certifiée à -15 °C, leur efficacité et leur subvention LogisVert. Pour une maison standard de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi².`}
+        breadcrumbs={[
+          { label: "Thermopompes", href: "/thermopompes" },
+          { label: `Thermopompe ${cap.label}`, href: `/thermopompes/${cap.slug}` },
+        ]}
+        stats={[
+          { label: "Murales / centrales", value: `${walls.length} / ${centrals.length}` },
+          { label: "Certifiées grand froid", value: String(cap.coldClimateCount) },
+          { label: "À -15 °C (certifié)", value: h5Values.length ? `${h5Min.toLocaleString("fr-CA")} à ${h5Max.toLocaleString("fr-CA")}` : "—" },
+          { label: "LogisVert jusqu'à", value: cap.maxLogisVert > 0 ? `${cap.maxLogisVert.toLocaleString("fr-CA")} $` : "—" },
+        ]}
+      />
+      <Prose>
+        <h2>« {cap.label} » ne veut pas dire {cap.label} en hiver</h2>
+        <p>
+          La capacité nominale est mesurée à 8 °C. Au Québec, ce qui compte est la capacité certifiée à -15 °C : dans cette classe, elle va de{" "}
+          {h5Values.length ? <><strong>{h5Min.toLocaleString("fr-CA")}</strong> à <strong>{h5Max.toLocaleString("fr-CA")} BTU/h</strong></> : "valeurs non publiées"} selon la machine.
+          Deux « {cap.label} » peuvent donc chauffer très différemment quand il fait froid.
+        </p>
+        <p>
+          Pour une maison unifamiliale standard, une {cap.label} convient à environ {area.min.toLocaleString("fr-CA")} à {area.max.toLocaleString("fr-CA")} pi². Ce repère vient du
+          calcul de charge de <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> (15 BTU/h par pi², ajusté selon l'âge, l'isolation, la fenestration et le sous-sol) et doit être
+          confirmé sur place par un calcul CSA F280.
+        </p>
+      </Prose>
+      {walls.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-10">
+          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Murales {cap.label}</h2>
+          <ModelTable models={walls} caption="Triées par qualité des données certifiées, tenue de capacité au froid, HSPF2 puis subvention." />
+        </section>
+      )}
+      {centrals.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-10">
+          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Centrales {cap.label}</h2>
+          <ModelTable models={centrals} />
+        </section>
+      )}
+      <CtaThermoMatch title={`Une ${cap.label} est-elle le bon calibre pour votre maison?`} />
+      <RelatedLinks
+        title="Autres capacités"
+        links={[
+          ...(prev ? [{ href: `/thermopompes/${prev.slug}`, label: `Thermopompe ${prev.label}`, hint: "calibre inférieur" }] : []),
+          ...(next ? [{ href: `/thermopompes/${next.slug}`, label: `Thermopompe ${next.label}`, hint: "calibre supérieur" }] : []),
+          { href: "/meilleures-thermopompes", label: "Classements sur données certifiées" },
+          { href: "/thermopompes/thermopompe-murale", label: "Guide : thermopompe murale" },
+          { href: "/thermopompes/thermopompe-centrale", label: "Guide : thermopompe centrale" },
+          { href: "/subventions/logisvert", label: "LogisVert par marque" },
+        ]}
+      />
+      <FaqBlock items={faq} />
     </main>
   );
 }

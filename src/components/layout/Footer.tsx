@@ -12,6 +12,8 @@ const NAV = [
       { href: "/thermopompes/thermopompe-murale", label: "Thermopompes murales" },
       { href: "/thermopompes/thermopompe-multizone", label: "Thermopompes multi zones" },
       { href: "/thermopompes/thermopompe-centrale", label: "Thermopompes centrales" },
+      { href: "/meilleures-thermopompes", label: "Meilleures thermopompes" },
+      { href: "/thermopompe", label: "Thermopompe par ville" },
       { href: "/comparer", label: "Comparer les modèles" },
       { href: "/soumission", label: "Trouver un installateur" },
     ],
@@ -21,6 +23,8 @@ const NAV = [
     links: [
       { href: "/guides", label: "Guides et conseils" },
       { href: "/subventions", label: "Aides financières" },
+      { href: "/subventions/logisvert", label: "LogisVert par marque" },
+      { href: "/prix", label: "Prix et estimation" },
       { href: "/calculateur-economies", label: "Calculatrice d'économies" },
       { href: "/glossaire", label: "Glossaire" },
       { href: "/faq", label: "FAQ" },

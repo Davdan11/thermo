@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Glossaire de la Thermopompe — Thermopompe A Vendre",
+  title: "Glossaire de la thermopompe : SEER2, HSPF2, COP, Inverter, LogisVert expliqués",
   description: "Le dictionnaire complet du CVAC au Québec. Des définitions exhaustives pour SEER2, HSPF2, Inverter, BTU, COP, Plénum, et bien plus.",
   alternates: { canonical: "/glossaire" },
+  openGraph: { title: "Glossaire de la thermopompe", description: "Définitions claires des termes du chauffage et de la climatisation au Québec.", type: "website" },
   robots: { index: true, follow: true },
 };
 
@@ -18,6 +19,16 @@ const T = {
   orange: "#d94b12",
   border: "rgba(16,32,45,0.14)",
 };
+
+function slugifyTerm(term: string): string {
+  return term
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\(.*?\)/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
 
 const GLOSSARY_TERMS = [
   { term: "AHRI (Air-Conditioning, Heating, and Refrigeration Institute)", definition: "Un organisme indépendant qui certifie les performances (BTU, SEER2, HSPF2) des équipements de chauffage et de climatisation. Un numéro de certification AHRI est indispensable pour prouver l'efficacité d'un système lors d'une demande de subvention gouvernementale." },
@@ -61,6 +72,23 @@ export default function GlossairePage() {
 
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: "white", minHeight: "100vh" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "DefinedTermSet",
+            name: "Glossaire de la thermopompe",
+            inLanguage: "fr-CA",
+            hasDefinedTerm: sortedTerms.map((t) => ({
+              "@type": "DefinedTerm",
+              name: t.term,
+              description: t.definition,
+              url: `https://thermopompeavendre.ca/glossaire#${slugifyTerm(t.term)}`,
+            })),
+          }),
+        }}
+      />
       
       {/* ── HEADER ── */}
       <section style={{ backgroundColor: T.inkDeep, padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 64px)", textAlign: "center" }}>
@@ -101,7 +129,7 @@ export default function GlossairePage() {
                   <div style={{ position: "relative", zIndex: 1 }}>
                     {items.map((item, i) => (
                       <div key={i} style={{ marginBottom: i === items.length - 1 ? 0 : "48px" }}>
-                        <h2 style={{ color: T.ink, fontSize: "24px", fontWeight: 750, letterSpacing: "-0.02em", margin: "0 0 16px" }}>
+                        <h2 id={slugifyTerm(item.term)} style={{ color: T.ink, fontSize: "24px", fontWeight: 750, letterSpacing: "-0.02em", margin: "0 0 16px", scrollMarginTop: 96 }}>
                           {item.term}
                         </h2>
                         <p style={{ color: T.text, fontSize: "17px", lineHeight: 1.7, maxWidth: "700px" }}>

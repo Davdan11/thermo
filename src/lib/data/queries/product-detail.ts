@@ -152,14 +152,27 @@ export function getProductDetail(slug: string): ProductDetail | null {
   );
 
   // Similar models — same type, different model, published
-  const similarModels: CatalogueProduct[] = registry.models
-    .filter(
-      (m) =>
-        m.id !== model.id &&
-        m.status === "published" &&
-        m.systemType === model.systemType,
-    )
+  const targetBtu = model.nominalCapacityBtu ?? 0;
+  const similarPool = registry.models.filter(
+    (m) =>
+      m.id !== model.id &&
+      m.status === "published" &&
+      m.isActive2026 &&
+      m.systemType === model.systemType &&
+      (registry.brandById.get(m.brandId)?.activeInQuebec ?? false),
+  );
+  // Pertinence : même capacité d'abord, puis capacité voisine ; autres marques avant la même marque ; une seule fiche par marque.
+  const seenBrands = new Set<string>();
+  const similarModels: CatalogueProduct[] = similarPool
+    .map((m) => ({ m, d: Math.abs((m.nominalCapacityBtu ?? 0) - targetBtu), same: m.brandId === model.brandId ? 1 : 0 }))
+    .sort((a, b) => a.d - b.d || a.same - b.same || a.m.slug.localeCompare(b.m.slug))
+    .filter(({ m }) => {
+      if (seenBrands.has(m.brandId)) return false;
+      seenBrands.add(m.brandId);
+      return true;
+    })
     .slice(0, 4)
+    .map(({ m }) => m)
     .map((m) => {
       const b = registry.brandById.get(m.brandId)!;
       const cfg =

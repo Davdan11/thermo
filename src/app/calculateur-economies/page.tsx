@@ -7,6 +7,7 @@ export const metadata = createMetadata({
   title: "Calculateur d'Économies Thermopompe",
   description: "Calculez rapidement combien d'argent vous pouvez économiser chaque année sur votre facture d'électricité en installant une thermopompe.",
   robots: { index: true, follow: true },
+  canonicalPath: "/calculateur-economies",
 });
 
 export default function CalculateurEconomiesPage() {

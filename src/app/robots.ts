@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/seo";
+import { sitemapIds } from "@/lib/seo/sitemaps";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,15 +8,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: [
-          "/api/",
-          "/styleguide",
-          "/espace-installateur",
-          "/soumission/confirmation",
-          "/_next/",
-        ],
+        disallow: ["/api/", "/styleguide", "/espace-installateur", "/soumission/confirmation"],
       },
     ],
-    sitemap: "https://thermopompeavendre.ca/sitemap.xml",
+    sitemap: sitemapIds().map((id) => `${SITE_URL}/sitemap/${id}.xml`),
+    host: SITE_URL,
   };
 }

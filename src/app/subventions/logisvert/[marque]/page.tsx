@@ -1,0 +1,111 @@
+/* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
+import { getAllBrandStats, getBrandStats } from "@/lib/seo/programmatic";
+import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  return getAllBrandStats().filter((b) => b.maxLogisVert > 0).map((b) => ({ marque: b.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ marque: string }> }): Promise<Metadata> {
+  const { marque } = await params;
+  const b = getBrandStats(marque);
+  if (!b || b.maxLogisVert <= 0) return createMetadata({ title: "Marque introuvable" });
+  return createMetadata({
+    title: `Subvention LogisVert ${b.name} ${new Date().getFullYear()} : montants officiels par modèle (${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $)`,
+    description: `Montants LogisVert d'Hydro-Québec pour les thermopompes ${b.name} : ${b.models.filter((m) => m.logisVertDollars > 0).length} modèles admissibles, de ${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $, tirés de la liste officielle.`,
+    canonicalPath: `/subventions/logisvert/${b.slug}`,
+  });
+}
+
+export default async function BrandSubsidyPage({ params }: { params: Promise<{ marque: string }> }) {
+  const { marque } = await params;
+  const b = getBrandStats(marque);
+  if (!b || b.maxLogisVert <= 0) notFound();
+  const updated = (logisVertMetadata as { updatedAt?: string }).updatedAt?.slice(0, 10) ?? null;
+  const subsidised = b.canonicalModels.filter((m) => m.logisVertDollars > 0).sort((a, z) => z.logisVertDollars - a.logisVertDollars);
+  const walls = subsidised.filter((m) => m.kind === "murale");
+  const centrals = subsidised.filter((m) => m.kind === "centrale");
+  const others = getAllBrandStats().filter((x) => x.slug !== b.slug && x.maxLogisVert > 0).slice(0, 12);
+
+  const faq = [
+    {
+      question: `Combien donne LogisVert pour une thermopompe ${b.name}?`,
+      answer: `Selon la liste officielle d'Hydro-Québec${updated ? ` du ${updated}` : ""}, les montants pour ${b.name} vont de ${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $. Le montant dépend de l'appariement exact entre l'unité extérieure et l'unité intérieure (référence AHRI), pas seulement du modèle.`,
+    },
+    {
+      question: "Comment être certain du montant pour mon installation?",
+      answer: "Demandez à votre installateur la référence AHRI de l'appariement proposé, puis vérifiez-la sur notre page Subventions ou directement sur le site d'Hydro-Québec. Le montant affiché ici correspond à l'appariement de référence de chaque fiche.",
+    },
+    {
+      question: "Les montants changent-ils?",
+      answer: "Oui. Hydro-Québec met la liste à jour régulièrement. Notre base est resynchronisée automatiquement chaque jour et la date de la liste utilisée est indiquée sur cette page.",
+    },
+  ];
+
+  return (
+    <main className="bg-[#f8f5f0] text-[#071d2b]">
+      <JsonLd
+        data={[
+          getBreadcrumbSchema([
+            { name: "Accueil", url: "/" },
+            { name: "Subventions", url: "/subventions" },
+            { name: "LogisVert par marque", url: "/subventions/logisvert" },
+            { name: b.name, url: `/subventions/logisvert/${b.slug}` },
+          ]),
+          getItemListSchema({ name: `Thermopompes ${b.name} admissibles à LogisVert`, items: subsidised.slice(0, 50).map((m) => ({ name: `${b.name} ${m.name}`, url: `/produit/${m.canonicalSlug}` })) }),
+        ]}
+      />
+      <SeoHero
+        eyebrow="Subvention Hydro-Québec"
+        title={`Subvention LogisVert ${b.name}`}
+        intro={`Montants officiels de la liste LogisVert d'Hydro-Québec pour chaque thermopompe ${b.name} admissible, par appariement certifié AHRI. Mise à jour automatique${updated ? `, liste du ${updated}` : ""}.`}
+        breadcrumbs={[
+          { label: "Subventions", href: "/subventions" },
+          { label: "LogisVert par marque", href: "/subventions/logisvert" },
+          { label: b.name, href: `/subventions/logisvert/${b.slug}` },
+        ]}
+        stats={[
+          { label: "Modèles admissibles", value: String(subsidised.length) },
+          { label: "Montant minimum", value: `${b.minLogisVert.toLocaleString("fr-CA")} $` },
+          { label: "Montant maximum", value: `${b.maxLogisVert.toLocaleString("fr-CA")} $` },
+          { label: "Certifiés grand froid", value: String(b.coldClimateCount) },
+        ]}
+      />
+      {walls.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
+          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Murales {b.name} : montants LogisVert</h2>
+          <ModelTable models={walls} showBrand={false} />
+        </section>
+      )}
+      {centrals.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
+          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Centrales {b.name} : montants LogisVert</h2>
+          <ModelTable models={centrals} showBrand={false} />
+        </section>
+      )}
+      <Prose>
+        <h2>Comment le montant est calculé</h2>
+        <p>
+          Hydro-Québec fixe le montant selon la capacité de chauffage certifiée et la performance de l'appariement. Les thermopompes certifiées
+          climat froid et les grosses centrales reçoivent les montants les plus élevés. Pour {b.name}, l'appariement le plus subventionné de notre base
+          est {b.bestSubsidy ? <Link href={`/produit/${b.bestSubsidy.canonicalSlug}`}>{b.bestSubsidy.name} ({b.bestSubsidy.outdoorModel})</Link> : "indiqué dans le tableau"} avec{" "}
+          {b.maxLogisVert.toLocaleString("fr-CA")} $.
+        </p>
+        <p>
+          Voir aussi la <Link href={`/marques/${b.slug}`}>gamme complète {b.name}</Link> et le classement des{" "}
+          <Link href="/meilleures-thermopompes/subvention-logisvert">thermopompes les plus subventionnées</Link>.
+        </p>
+      </Prose>
+      <CtaThermoMatch title={`Quelle ${b.name} pour votre maison?`} />
+      <RelatedLinks title="LogisVert pour les autres marques" links={others.map((x) => ({ href: `/subventions/logisvert/${x.slug}`, label: `Subvention LogisVert ${x.name}`, hint: `jusqu'à ${x.maxLogisVert.toLocaleString("fr-CA")} $` }))} />
+      <FaqBlock items={faq} />
+    </main>
+  );
+}

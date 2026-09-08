@@ -136,7 +136,7 @@ export function ProductCard({
           {/* Actions - Now part of the bottom list */}
           <div className="flex items-center justify-between py-4 border-t border-[#E5E5E5] relative z-20">
             <Link
-              href={`/thermopompes/${model.slug}`}
+              href={`/produit/${model.slug}`}
               className="text-[15px] font-bold text-[var(--color-accent)] hover:opacity-80 transition-opacity flex items-center"
             >
               Voir le modèle

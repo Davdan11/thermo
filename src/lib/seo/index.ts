@@ -11,10 +11,9 @@ import type { Metadata } from "next";
    ------------------------------------------------------------------ */
 
 export const SITE_NAME = "Thermopompe A Vendre.ca";
-export const SITE_URL = "https://thermopompeavendre.ca";
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://thermopompeavendre.ca").replace(/\/$/, "");
 const SITE_DESCRIPTION =
   "Comparez les thermopompes, comprenez les prix et les subventions, et trouvez la machine adaptée à votre propriété au Québec.";
-const DEFAULT_OG_IMAGE = "/images/og-default.png";
 
 /* ------------------------------------------------------------------
    createMetadata — unified metadata generator
@@ -72,13 +71,11 @@ export function createMetadata(overrides: MetadataOverrides = {}): Metadata {
       type: "website",
       siteName: SITE_NAME,
       locale: "fr_CA",
-      url: canonical ?? SITE_URL,
+      ...rest.openGraph,
+      url: rest.openGraph?.url ?? canonical ?? SITE_URL,
       title: ogTitle,
       description: ogDesc,
-      images: rest.openGraph?.images ?? [
-        { url: `${SITE_URL}${DEFAULT_OG_IMAGE}`, width: 1200, height: 630, alt: SITE_NAME },
-      ],
-      ...rest.openGraph,
+      // Pas d'image par défaut ici : l'image OG racine (src/app/opengraph-image.tsx) s'applique automatiquement.
     },
     twitter: {
       card: "summary_large_image",
@@ -101,10 +98,12 @@ export function getOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/images/headerlogo.png`,
+    // À compléter avec les URL réelles des profils sociaux quand ils existeront.
     sameAs: [],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
+      telephone: "+1-438-900-3224",
       areaServed: "CA-QC",
       availableLanguage: "French",
     },
@@ -249,5 +248,34 @@ export function getArticleSchema(data: {
         url: `${SITE_URL}/images/headerlogo.png`
       }
     }
+  };
+}
+
+/** ItemList schema (listes de modèles, palmarès, villes) */
+export function getItemListSchema(data: { name: string; items: { name: string; url: string }[] }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: data.name,
+    numberOfItems: data.items.length,
+    itemListElement: data.items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      url: it.url.startsWith("http") ? it.url : `${SITE_URL}${it.url}`,
+    })),
+  };
+}
+
+/** CollectionPage schema (page hub) */
+export function getCollectionPageSchema(data: { name: string; description: string; url: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: data.name,
+    description: data.description,
+    url: data.url.startsWith("http") ? data.url : `${SITE_URL}${data.url}`,
+    inLanguage: "fr-CA",
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
   };
 }

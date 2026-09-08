@@ -76,8 +76,8 @@ export default function ContactPageClient() {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Courriel</p>
-                      <a href="mailto:info@thermopompesavendre.ca" className="text-lg font-bold text-[#0b1b24] hover:text-[#e54b17] transition-colors break-all">
-                        info@thermopompesavendre.ca
+                      <a href="mailto:info@thermopompeavendre.ca" className="text-lg font-bold text-[#0b1b24] hover:text-[#e54b17] transition-colors break-all">
+                        info@thermopompeavendre.ca
                       </a>
                     </div>
                   </div>

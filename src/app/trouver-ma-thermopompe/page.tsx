@@ -12,6 +12,14 @@ export const metadata: Metadata = {
 export default function TrouverMaThermopompePage() {
   return (
     <main>
+      <div className="sr-only">
+        <h1>Trouver ma thermopompe avec ThermoMatch</h1>
+        <p>
+          Répondez à 13 questions sur votre maison (superficie, année de construction, isolation, système actuel, budget). ThermoMatch calcule
+          votre charge de chauffage et compare toutes les marques vendues au Québec avec les données certifiées d'Hydro-Québec pour proposer
+          trois machines réellement adaptées, avec leur subvention LogisVert.
+        </p>
+      </div>
       <ThermoMatchLoader />
     </main>
   );

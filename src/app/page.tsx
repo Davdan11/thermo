@@ -4,6 +4,14 @@ import { HeroThermoMatchBar } from "@/components/home/HeroThermoMatchBar";
 import { CompareSectionAnimated } from "@/components/home/CompareSectionAnimated";
 import { ModelesADecouvrir } from "@/components/home/ModelesADecouvrir";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
+  title: { absolute: "Thermopompe à vendre au Québec : comparez toutes les marques, prix et subvention LogisVert" },
+  description:
+    "Comparez toutes les thermopompes vendues au Québec avec les données certifiées d'Hydro-Québec : capacité réelle à -15 °C, HSPF2, subvention LogisVert. ThermoMatch trouve les 3 bonnes machines pour votre maison en 2 minutes.",
+  canonicalPath: "/",
+});
 
 /* ─────────────────────────────────────────────────────────────────────────
    HOMEPAGE — Thermopompe A Vendre.ca

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Camera, Cpu, BarChart3, Lock, Zap, Target, Leaf } from "lucide-react";
 
 export const metadata: Metadata = createMetadata({
-  title: "ThermoScan \u2014 Identifiez votre thermopompe actuelle | ThermopompesAVendre.ca",
+  title: "ThermoScan \u2014 Identifiez votre thermopompe actuelle | Thermopompe A Vendre.ca",
   description: "Photographiez l'etiquette de votre thermopompe actuelle. Notre IA l'identifie en quelques secondes et compare ses performances avec les meilleurs modeles.",
   alternates: { canonical: "/thermoscan" },
   robots: { index: true, follow: true },

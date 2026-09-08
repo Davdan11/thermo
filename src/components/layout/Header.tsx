@@ -13,8 +13,8 @@ import { Container } from "./Container";
 const NAV_LINKS = [
   { href: "/thermopompes", label: "Thermopompes" },
   { href: "/marques", label: "Marques" },
+  { href: "/meilleures-thermopompes", label: "Classements" },
   { href: "/comparer", label: "Comparer" },
-  { href: "/prix", label: "Prix" },
   { href: "/subventions", label: "Subventions" },
   { href: "/guides", label: "Guides" },
 ] as const;

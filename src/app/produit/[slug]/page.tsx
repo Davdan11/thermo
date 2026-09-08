@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
 import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
+import { getSeoModel } from "@/lib/seo/programmatic";
+import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
 import {
   ProductHeader,
   KeySpecs,
@@ -42,31 +44,39 @@ export async function generateMetadata({
   const detail = getProductDetail(slug);
   if (!detail) return {};
 
-  const { model, brand, series } = detail;
-  const capacity = model.nominalCapacityBtu
-    ? ` ${(model.nominalCapacityBtu / 1000).toFixed(0)} 000 BTU`
-    : "";
+  const { model, brand } = detail;
+  const seo = getSeoModel(slug);
+  const canonicalSlug = seo?.canonicalSlug ?? slug;
+  const indexable = brand.activeInQuebec && model.status === "published";
 
-  const logisVertStr = detail.logisVertDollars ? ` (Subvention LogisVert de ${detail.logisVertDollars} $)` : "";
+  const facts: string[] = [];
+  if (seo?.h5Btu) facts.push(`${seo.h5Btu.toLocaleString("fr-CA")} BTU/h à -15 °C`);
+  if (seo?.hspf2) facts.push(`HSPF2 ${seo.hspf2.toLocaleString("fr-CA")}`);
+  if (seo?.seer2) facts.push(`SEER2 ${seo.seer2.toLocaleString("fr-CA")}`);
+  if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
+  const title = `Thermopompe ${brand.name} ${model.name} : fiche, capacité au froid et subvention`;
+  const description = (facts.length
+    ? `${brand.name} ${model.name} (${model.modelNumber}) : ${facts.join(", ")}. Données officielles Hydro-Québec et ENERGY STAR.`
+    : `${brand.name} ${model.name} (${model.modelNumber}) : fiche technique, type ${detail.systemTypeLabel.toLowerCase()}, admissibilité LogisVert. Données officielles Hydro-Québec.`
+  ).slice(0, 158);
 
-  const title = `Thermopompe ${brand.name} ${series.name} ${model.name}${capacity} - Prix, Fiche technique & Subvention`;
-  const description = `Fiche technique complète de la thermopompe ${brand.name} ${series.name} ${model.name}${capacity}. Découvrez les spécifications, le prix, la performance climat froid et la subvention LogisVert.`;
-
-  const imageUrl = model.imageUrl ?? detail.series?.imageUrl ?? null;
+  const ogImage = `${SITE_URL}/api/og?type=produit&slug=${encodeURIComponent(slug)}`;
 
   return {
     title,
     description,
-    alternates: { canonical: `${SITE_URL}/produit/${slug}` },
-    robots: { index: true, follow: true },
+    alternates: { canonical: `${SITE_URL}/produit/${canonicalSlug}` },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
-      title: `Thermopompe ${brand.name} ${model.name}${capacity}`,
-      description: `Fiche technique et subvention LogisVert pour la thermopompe ${brand.name} ${model.name}${capacity}.`,
-      url: `${SITE_URL}/produit/${slug}`,
+      title: `Thermopompe ${brand.name} ${model.name}`,
+      description,
+      url: `${SITE_URL}/produit/${canonicalSlug}`,
       siteName: "Thermopompe A Vendre.ca",
       locale: "fr_CA",
-      ...(imageUrl ? { images: [{ url: imageUrl, alt: `${brand.name} ${model.name}` }] } : {}),
+      type: "website",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: `${brand.name} ${model.name}` }],
     },
+    twitter: { card: "summary_large_image", title: `Thermopompe ${brand.name} ${model.name}`, description, images: [ogImage] },
   };
 }
 
@@ -294,6 +304,8 @@ export default async function ProductPage({
 
             {/* Sources */}
             <SourcesSection sources={detail.sources} />
+
+            <ProductSeoLinks slug={slug} />
           </div>
 
           {/* ── SIDEBAR ── */}
@@ -367,6 +379,39 @@ export default async function ProductPage({
                   <Image src="/images/logo-thermomatch-tm.png" alt="Utiliser Thermo Match" width={140} height={28} className="object-contain" />
                 </Link>
               </div>
+
+              {/* Brochure Download */}
+              {(series.brochureUrl || model.brochureUrl) && (
+                <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
+                  <p style={{ margin: "0 0 8px", fontSize: 14, fontWeight: 700, color: "#071d2b" }}>📄 Brochure officielle</p>
+                  <p style={{ margin: "0 0 16px", fontSize: 13, color: "#6b7b80", lineHeight: 1.55 }}>
+                    Téléchargez la documentation technique officielle du fabricant {brand.name}.
+                  </p>
+                  <a
+                    href={model.brochureUrl || series.brochureUrl || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                    style={{
+                      display: "flex", justifyContent: "center", alignItems: "center", gap: 8,
+                      padding: "10px 16px",
+                      background: "linear-gradient(135deg, #1b6b3a, #0d4423)",
+                      color: "#fff",
+                      fontSize: 13, fontWeight: 600,
+                      textDecoration: "none",
+                      borderRadius: "6px",
+                      transition: "opacity .2s",
+                    }}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Télécharger la brochure (PDF)
+                  </a>
+                </div>
+              )}
 
               {/* Links */}
               <div>

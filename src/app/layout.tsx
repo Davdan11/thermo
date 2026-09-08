@@ -7,7 +7,7 @@ import { getOrganizationSchema, getWebSiteSchema, SITE_URL } from "@/lib/seo";
 import { UTMProvider } from "@/components/providers/UTMProvider";
 import { Suspense } from "react";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
 const inter = Inter({
   variable: "--font-inter",

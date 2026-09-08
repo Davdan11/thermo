@@ -12,7 +12,7 @@ const PRODUCTS = [
     seer: "27,5",
     noise: "19",
     imgPos: "left center",
-    href: "/thermopompes/mitsubishi-zuba-2-cold-climate",
+    href: "/marques/mitsubishi-electric",
   },
   {
     brandLogo: "/images/marques/logo-daikin-bleu-nuit-cropped.png",
@@ -21,7 +21,7 @@ const PRODUCTS = [
     seer: "28,0",
     noise: "20",
     imgPos: "center center",
-    href: "/thermopompes/daikin-fit-cold-climate",
+    href: "/marques/daikin",
   },
   {
     brandLogo: "/images/marques/logo-fujitsu-bleu-nuit-cropped.png",
@@ -30,7 +30,7 @@ const PRODUCTS = [
     seer: "24,0",
     noise: "22",
     imgPos: "right center",
-    href: "/thermopompes/fujitsu-halcyon-xlth",
+    href: "/marques/fujitsu",
   },
 ];
 

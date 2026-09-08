@@ -8,7 +8,7 @@ import { ThermoScanEntryCard } from "@/components/thermoscan/ThermoScanEntryCard
 import Link from "next/link";
 
 export const metadata: Metadata = createMetadata({
-  title: "Comparateur de thermopompes | ThermopompesAVendre.ca",
+  title: "Comparateur de thermopompes | Thermopompe A Vendre.ca",
   description: "Comparez cote a cote les performances, l'efficacite, le silence et la garantie des thermopompes.",
   alternates: { canonical: "/comparer" },
   robots: { index: true, follow: true },

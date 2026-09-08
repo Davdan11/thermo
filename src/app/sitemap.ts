@@ -1,81 +1,115 @@
+/* ==================================================================
+   Sitemaps segmentés (/sitemap/[id].xml)
+
+   - pages        : pages fixes et hubs
+   - guides       : guides éditoriaux, pages d'atterrissage, classes de capacité
+   - marques      : marques actives + pages marque × type + LogisVert par marque
+   - villes       : pages locales
+   - classements  : palmarès et comparatifs de marques
+   - produits-N   : fiches produit canoniques uniquement (une par machine
+                    réellement distincte, marques actives au Québec)
+
+   Les URL sont listées dans robots.txt (src/app/robots.ts).
+   ================================================================== */
+
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/seo";
 import { registry } from "@/lib/data/registry";
+import { getCanonicalModels, getAllBrandStats, getCapacityClasses, getBrandPairs, RANKINGS } from "@/lib/seo/programmatic";
+import { getCities } from "@/lib/seo/cities";
+import { getLandingPages } from "@/lib/seo/landings";
+import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 
-const BASE = "https://thermopompeavendre.ca";
+import { PRODUCTS_PER_SITEMAP, sitemapIds } from "@/lib/seo/sitemaps";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date().toISOString();
+const DATA_DATE = ((logisVertMetadata as { updatedAt?: string }).updatedAt ?? "2026-09-01").slice(0, 10);
+const CONTENT_DATE = "2026-09-08";
 
-  /* ── Static pages ── */
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: `${BASE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE}/thermopompes`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/comparer`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/marques`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/prix`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/subventions`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/guides`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/glossaire`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE}/thermoscan`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/technologie-thermomatch`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/a-propos`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${BASE}/comment-ca-marche`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE}/soumission`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/trouver-ma-thermopompe`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/calculateur-economies`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-  ];
+const entry = (path: string, lastModified: string, changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"], priority: number): MetadataRoute.Sitemap[number] => ({
+  url: `${SITE_URL}${path}`,
+  lastModified,
+  changeFrequency,
+  priority,
+});
 
-  /* ── Product pages ── */
-  const publishedModels = registry.models.filter(
-    (m) => m.status === "published" && m.isActive2026
-  );
-  const productPages: MetadataRoute.Sitemap = publishedModels.map((m) => ({
-    url: `${BASE}/produit/${m.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+export async function generateSitemaps() {
+  return sitemapIds().map((id) => ({ id }));
+}
 
-  /* ── Brand pages ── */
-  const activeBrands = registry.brands.filter((b) => b.activeInQuebec);
-  const brandPages: MetadataRoute.Sitemap = activeBrands.map((b) => ({
-    url: `${BASE}/marques/${b.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+export default async function sitemap(props: { id: Promise<string> }): Promise<MetadataRoute.Sitemap> {
+  const id = await props.id;
 
-  /* ── SEO category pages (thermopompes/[slug]) ── */
-  const seoSlugs = [
-    "thermopompe-murale",
-    "thermopompe-centrale",
-    "thermopompe-multizone",
-    "thermopompe-a-vendre",
-    "installation-thermopompe",
-    "remplacement-thermopompe",
-    "thermopompe-climat-froid",
-    "thermopompe-haute-efficacite",
-    "soumission-thermopompe",
-    "comparateur-thermopompe",
-  ];
-  const seoPages: MetadataRoute.Sitemap = seoSlugs.map((slug) => ({
-    url: `${BASE}/thermopompes/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }));
+  if (id === "pages") {
+    return [
+      entry("/", CONTENT_DATE, "weekly", 1.0),
+      entry("/trouver-ma-thermopompe", CONTENT_DATE, "monthly", 0.9),
+      entry("/thermopompes", DATA_DATE, "weekly", 0.9),
+      entry("/marques", DATA_DATE, "weekly", 0.8),
+      entry("/meilleures-thermopompes", DATA_DATE, "weekly", 0.9),
+      entry("/thermopompe", CONTENT_DATE, "monthly", 0.8),
+      entry("/subventions", DATA_DATE, "weekly", 0.9),
+      entry("/subventions/logisvert", DATA_DATE, "weekly", 0.8),
+      entry("/comparer", CONTENT_DATE, "monthly", 0.7),
+      entry("/prix", CONTENT_DATE, "monthly", 0.7),
+      entry("/prix/prix-thermopompe-quebec", CONTENT_DATE, "monthly", 0.7),
+      entry("/calculateur-economies", CONTENT_DATE, "monthly", 0.7),
+      entry("/guides", CONTENT_DATE, "monthly", 0.7),
+      entry("/faq", CONTENT_DATE, "monthly", 0.7),
+      entry("/glossaire", CONTENT_DATE, "monthly", 0.6),
+      entry("/thermoscan", CONTENT_DATE, "monthly", 0.6),
+      entry("/technologie-thermomatch", CONTENT_DATE, "monthly", 0.6),
+      entry("/comment-ca-marche", CONTENT_DATE, "monthly", 0.5),
+      entry("/a-propos", CONTENT_DATE, "yearly", 0.4),
+      entry("/contact", CONTENT_DATE, "yearly", 0.4),
+      entry("/partenaires", CONTENT_DATE, "yearly", 0.4),
+      entry("/carriere", CONTENT_DATE, "yearly", 0.3),
+      entry("/soumission", CONTENT_DATE, "yearly", 0.5),
+      entry("/confidentialite", CONTENT_DATE, "yearly", 0.2),
+      entry("/conditions", CONTENT_DATE, "yearly", 0.2),
+      entry("/accessibilite", CONTENT_DATE, "yearly", 0.2),
+    ];
+  }
 
-  /* ── Guide pages (Markdown) ── */
-  const { getAllGuides } = await import("@/lib/markdown");
-  const guides = getAllGuides();
-  const guidePages: MetadataRoute.Sitemap = guides.map((g) => ({
-    url: `${BASE}/guides/${g.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  if (id === "guides") {
+    const { getAllGuides } = await import("@/lib/markdown");
+    return [
+      ...getAllGuides().map((g) => entry(`/guides/${g.slug}`, g.publishedAt ?? CONTENT_DATE, "monthly", 0.7)),
+      ...getLandingPages().map((p) => entry(`/thermopompes/${p.slug}`, CONTENT_DATE, "monthly", 0.8)),
+      ...getCapacityClasses().map((c) => entry(`/thermopompes/${c.slug}`, DATA_DATE, "weekly", 0.8)),
+    ];
+  }
 
-  return [...staticPages, ...seoPages, ...brandPages, ...productPages, ...guidePages];
+  if (id === "marques") {
+    const out: MetadataRoute.Sitemap = [];
+    for (const b of getAllBrandStats()) {
+      if (!registry.brandBySlug.get(b.slug)?.activeInQuebec) continue;
+      out.push(entry(`/marques/${b.slug}`, DATA_DATE, "weekly", 0.7));
+      if (b.wallCount > 0) out.push(entry(`/marques/${b.slug}/murales`, DATA_DATE, "weekly", 0.6));
+      if (b.centralCount > 0) out.push(entry(`/marques/${b.slug}/centrales`, DATA_DATE, "weekly", 0.6));
+      if (b.maxLogisVert > 0) out.push(entry(`/subventions/logisvert/${b.slug}`, DATA_DATE, "weekly", 0.7));
+    }
+    return out;
+  }
+
+  if (id === "villes") {
+    return getCities().map((c) => entry(`/thermopompe/${c.slug}`, CONTENT_DATE, "monthly", 0.7));
+  }
+
+  if (id === "classements") {
+    return [
+      ...RANKINGS.map((r) => entry(`/meilleures-thermopompes/${r.slug}`, DATA_DATE, "weekly", 0.8)),
+      ...getBrandPairs().map((p) => entry(`/comparer/${p.slug}`, DATA_DATE, "monthly", 0.6)),
+    ];
+  }
+
+  const match = /^produits-(\d+)$/.exec(id);
+  if (match) {
+    const index = Number(match[1]);
+    const start = index * PRODUCTS_PER_SITEMAP;
+    return getCanonicalModels()
+      .slice(start, start + PRODUCTS_PER_SITEMAP)
+      .map((m) => entry(`/produit/${m.slug}`, DATA_DATE, "monthly", m.h5Btu !== null ? 0.6 : 0.4));
+  }
+
+  return [];
 }

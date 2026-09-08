@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getSeoPagesByPrefix, getSeoPageBySlug } from "@/lib/seo/registry";
-import { createMetadata, getArticleSchema, getBreadcrumbSchema } from "@/lib/seo";
+import { createMetadata, getArticleSchema, getBreadcrumbSchema, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return createMetadata({
+    canonicalPath: `/prix/${slug}`,
     title: page.seoTitle,
     description: `Découvrez les vrais prix au Québec pour "${page.primaryKeyword}". Obtenez une estimation claire incluant l'installation et calculez vos subventions.`,
   });
@@ -46,16 +47,16 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
 
   const jsonLd = [
     getBreadcrumbSchema([
-      { name: "Accueil", url: "https://thermopompeavendre.ca" },
-      { name: "Prix et Coûts", url: "https://thermopompeavendre.ca/prix" },
-      { name: page.h1, url: `https://thermopompeavendre.ca${page.urlSlug}` }
+      { name: "Accueil", url: "/" },
+      { name: "Prix et Coûts", url: "/prix" },
+      { name: page.h1, url: page.urlSlug.replace(/\/$/, "") },
     ]),
     getArticleSchema({
       headline: page.h1,
-      image: "https://thermopompeavendre.ca/images/hero_calculator_bg_1788447325499.jpg",
-      datePublished: new Date().toISOString(),
-      authorName: "L'équipe d'experts ThermoMatch"
-    })
+      image: `${SITE_URL}/images/hero_calculator_bg_1788447325499.jpg`,
+      datePublished: "2026-09-03",
+      authorName: "L'équipe d'experts ThermoMatch",
+    }),
   ];
 
   return (
@@ -137,7 +138,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
               <p className="text-emerald-800 mb-8 text-lg max-w-xl mx-auto">
                 Notre algorithme calcule instantanément le coût du matériel, l'estimation de l'installation dans votre région, et déduit automatiquement vos subventions admissibles.
               </p>
-              <Link href="/questionnaire">
+              <Link href="/trouver-ma-thermopompe">
                 <Button size="lg" className="h-16 px-10 text-xl font-bold bg-[#d94b12] hover:bg-[#b83808] text-white shadow-xl shadow-[#d94b12]/20 rounded-full w-full sm:w-auto">
                   Démarrer le calculateur gratuit
                 </Button>
@@ -168,7 +169,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
                 <p className="text-slate-400 text-sm mb-6">
                   Découvrez le montant exact que le gouvernement peut vous rembourser pour ce projet.
                 </p>
-                <Link href="/questionnaire">
+                <Link href="/trouver-ma-thermopompe">
                   <Button className="w-full bg-[#d94b12] hover:bg-[#b83808] text-white font-bold h-14 rounded-xl text-lg">
                     Calculer mes aides
                   </Button>
