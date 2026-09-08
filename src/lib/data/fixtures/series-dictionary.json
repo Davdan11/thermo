@@ -1,0 +1,519 @@
+{
+  "$doc": "Dictionnaire des séries par marque. aliases : clé normalisée (minuscules, alphanumérique) d'une valeur trouvée dans la liste Hydro-Québec/ENERGY STAR → nom d'affichage. prefixes : préfixe de numéro de modèle → série, utilisé SEULEMENT quand la liste officielle ne donne aucune série ; verified=false = héritage non vérifié contre une brochure, verified=true = confirmé (indiquer la source).",
+  "carrier": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "38MURA",
+        "series": "Performance",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "38MARB",
+        "series": "Comfort",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "38MBRC",
+        "series": "Performance",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "25VNA",
+        "series": "Infinity",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "25HC",
+        "series": "Performance",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "daikin": {
+    "aliases": {
+      "daikinoterra": "Oterra",
+      "115votera": "Oterra",
+      "115voterra": "Oterra",
+      "oterra": "Oterra",
+      "daikinaurora": "Aurora",
+      "aurora": "Aurora",
+      "standardmulti": "Multi-Zone",
+      "skyair": "SkyAir"
+    },
+    "prefixes": [
+      {
+        "prefix": "FTXL",
+        "series": "Aurora",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "FTXS",
+        "series": "Oterra",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "DZ17",
+        "series": "Fit",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "DZ14",
+        "series": "Fit",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "FTXB",
+        "series": "Atmox",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "RXL",
+        "series": "Aurora",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "RXS",
+        "series": "Oterra",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "DZ6",
+        "series": "Fit",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "RZQ",
+        "series": "SkyAir",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "2MX",
+        "series": "Cirra / Multi-Zone",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "3MX",
+        "series": "Multi-Zone",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "4MX",
+        "series": "Multi-Zone",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "5MX",
+        "series": "Multi-Zone",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "FTK",
+        "series": "Oterra",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "FTX",
+        "series": "Oterra",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "RX",
+        "series": "Oterra",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "fujitsu": {
+    "aliases": {
+      "h": "Airstage H-Series",
+      "airstageh": "Airstage H-Series"
+    },
+    "prefixes": [
+      {
+        "prefix": "ASUG",
+        "series": "Halcyon",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "AMUG",
+        "series": "Airstage",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "AOU",
+        "series": "Halcyon",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "ASU",
+        "series": "Halcyon",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "gree": {
+    "aliases": {
+      "flexxhighefficiency": "FLEXX",
+      "flexx": "FLEXX",
+      "allmatch": "All Match",
+      "e": "E-Series",
+      "m": "M-Series",
+      "multizoneoutdoor": "Multi-Zone",
+      "multir32ao": "Multi R32"
+    },
+    "prefixes": [
+      {
+        "prefix": "CHARMO",
+        "series": "Charmo",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "FLEXX",
+        "series": "FLEXX",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SHIMO",
+        "series": "Shimo",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "GWHD",
+        "series": "MultiPRO / Free Match",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "GUD",
+        "series": "FLEXX",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "GWH",
+        "series": "Clivia / Livo",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "LIV",
+        "series": "Livo",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "VIR",
+        "series": "Vireo",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SAP",
+        "series": "Sapphire",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "lennox": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "XP25",
+        "series": "Dave Lennox Signature",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "XP21",
+        "series": "Dave Lennox Signature",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "LRP",
+        "series": "Elite",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "ML",
+        "series": "Merit",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "EL",
+        "series": "Elite",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SL",
+        "series": "Dave Lennox Signature",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "XP",
+        "series": "Elite",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "lg": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "LUU",
+        "series": "Art Cool",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "LSU",
+        "series": "Art Cool",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "LAU",
+        "series": "Art Cool",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "LMU",
+        "series": "Multi F",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "midea": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "38MURA",
+        "series": "MURA",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "38MARB",
+        "series": "MARB",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "DLCP",
+        "series": "Senville",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SENA",
+        "series": "Aura",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SENL",
+        "series": "Leto",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SEND",
+        "series": "Senville",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "mitsubishi-electric": {
+    "aliases": {
+      "m": "M-Series",
+      "p": "P-Series",
+      "s": "S-Series"
+    },
+    "prefixes": [
+      {
+        "prefix": "PUZ-HA",
+        "series": "Zuba Central",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SUZ",
+        "series": "Zuba",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "PUZ",
+        "series": "Zuba",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "MUZ",
+        "series": "Mr. Slim",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "MSZ",
+        "series": "Mr. Slim",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "MXZ",
+        "series": "Multi-Zone",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "moovair": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "DMA",
+        "series": "Central Moov",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "FMA",
+        "series": "Central Moov",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "V22",
+        "series": "V22",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "V33",
+        "series": "V33",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "V11",
+        "series": "V11",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "MVA",
+        "series": "Central Moov",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "senville": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "SENA",
+        "series": "Aura",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SENL",
+        "series": "Leto",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "SEN",
+        "series": "Aura",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "tosot": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "TMZZ",
+        "series": "Ultra Heat",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "TW",
+        "series": "Lomo",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "TU",
+        "series": "Apex",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  },
+  "trane": {
+    "aliases": {},
+    "prefixes": [
+      {
+        "prefix": "4TWV",
+        "series": "XV20i / XV18",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "4TWX",
+        "series": "XL18i",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      },
+      {
+        "prefix": "4TWR",
+        "series": "XR16",
+        "verified": false,
+        "source": "marketing-names.json (héritage, à confirmer avec la brochure)"
+      }
+    ]
+  }
+}

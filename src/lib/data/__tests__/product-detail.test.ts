@@ -78,8 +78,12 @@ describe("getProductDetail — published model with full data", () => {
   });
 
   it("finds series siblings", () => {
-    // Aurora series has 9K, 12K, 15K, 18K, 24K — siblings of 18K are the other 4
-    expect(detail!.seriesSiblings.length).toBe(4);
+    // La série Aurora contient les fiches curées 9K à 24K plus les unités Aurora de la liste LogisVert.
+    expect(detail!.seriesSiblings.length).toBeGreaterThanOrEqual(4);
+    for (const sib of detail!.seriesSiblings) {
+      expect(sib.seriesId).toBe(detail!.model.seriesId);
+      expect(sib.id).not.toBe(detail!.model.id);
+    }
     expect(detail!.seriesSiblings.some((m) => m.slug === "daikin-aurora-9k")).toBe(true);
     expect(detail!.seriesSiblings.some((m) => m.slug === "daikin-aurora-12k")).toBe(true);
   });

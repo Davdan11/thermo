@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "scrape:logisvert": "node scripts/scrape-logisvert.mjs"
+    "scrape:logisvert": "node scripts/scrape-logisvert.mjs",
+    "build:catalogue": "node scripts/build-catalogue.mjs",
+    "test": "vitest run"
   },
   "dependencies": {
     "@faker-js/faker": "^10.6.0",

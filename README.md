@@ -42,8 +42,9 @@ design-system/              système de design généré (UI/UX Pro Max) et son 
 ### Flux de données
 
 1. `scripts/scrape-logisvert.mjs` télécharge la liste Hydro-Québec, l'enrichit avec ENERGY STAR et écrit `src/lib/subsidies/logisvert-official-amounts.json`, l'index et les métadonnées.
-2. `scripts/generate-all-brands-from-hq.mjs` produit le catalogue (`src/lib/data/fixtures/brands/all-auto-datasets.json`), fusionné au chargement avec les fixtures manuelles par `src/lib/data/registry.ts`.
-3. `scripts/cron-logisvert.sh` (cron quotidien) valide la nouvelle liste et la pousse sur la branche `logisvert-update` pour revue ; rien n'est publié automatiquement sur `main`.
+2. `npm run build:catalogue` (`scripts/build-catalogue.mjs`) reconstruit le catalogue `src/lib/data/fixtures/brands/all-auto-datasets.json` : une fiche par unité extérieure (numéro de modèle = clé unique), jumelages certifiés comptés et résumés, série prise dans la liste officielle ou dans `src/lib/data/fixtures/series-dictionary.json`, sinon « Série non identifiée ». Le générateur est déterministe, valide sa sortie (identifiants et noms uniques, capacités plausibles, volume) et écrit un rapport `catalogue-build-report.json`. Le registre (`src/lib/data/registry.ts`) fusionne ensuite les fixtures manuelles : une fiche curée remplace la fiche auto de la même unité extérieure.
+3. `scripts/cron-logisvert.sh` (cron quotidien) valide la nouvelle liste, reconstruit le catalogue et pousse le tout sur la branche `logisvert-update` pour revue ; rien n'est publié automatiquement sur `main`.
+4. `src/lib/data/__tests__/catalogue-integrity.test.ts` bloque toute régression : doublons, astérisques, capacités absurdes, séries fantômes.
 
 ### ThermoMatch
 

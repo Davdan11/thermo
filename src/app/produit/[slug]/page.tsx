@@ -57,8 +57,8 @@ export async function generateMetadata({
   if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
   const title = `Thermopompe ${brand.name} ${model.name} : fiche, capacité au froid et subvention`;
   const description = (facts.length
-    ? `${brand.name} ${model.name} (${model.modelNumber}) : ${facts.join(", ")}. Données officielles Hydro-Québec et ENERGY STAR.`
-    : `${brand.name} ${model.name} (${model.modelNumber}) : fiche technique, type ${detail.systemTypeLabel.toLowerCase()}, admissibilité LogisVert. Données officielles Hydro-Québec.`
+    ? `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : ${facts.join(", ")}. Données officielles Hydro-Québec et ENERGY STAR.`
+    : `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : fiche technique, type ${detail.systemTypeLabel.toLowerCase()}, admissibilité LogisVert. Données officielles Hydro-Québec.`
   ).slice(0, 158);
 
   const ogImage = `${SITE_URL}/api/og?type=produit&slug=${encodeURIComponent(slug)}`;

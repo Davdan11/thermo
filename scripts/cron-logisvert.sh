@@ -66,7 +66,16 @@ git stash push -q --include-untracked -- "$AMOUNTS" "$INDEX" "$META" >/dev/null 
 git fetch -q origin
 git checkout -q -B "$BRANCH" origin/main 2>/dev/null || git checkout -q -B "$BRANCH"
 git stash pop -q || true
-git add "$AMOUNTS" "$INDEX" "$META"
+# Reconstruction du catalogue (une fiche par unité extérieure) : le générateur valide tout et refuse d'écrire en cas d'anomalie.
+CATALOGUE="src/lib/data/fixtures/brands/all-auto-datasets.json"
+CATALOGUE_REPORT="src/lib/data/fixtures/brands/catalogue-build-report.json"
+if ! node scripts/build-catalogue.mjs 2>&1 | tee -a "$LOG_FILE"; then
+  log "Reconstruction du catalogue refusée : liste LogisVert conservée, catalogue inchangé."
+  restore_backup
+  exit 1
+fi
+
+git add "$AMOUNTS" "$INDEX" "$META" "$CATALOGUE" "$CATALOGUE_REPORT"
 git commit -q -m "chore(logisvert): liste Hydro-Québec du $(date '+%Y-%m-%d') ($NEW_COUNT entrées)"
 git push -q -u origin "$BRANCH" --force-with-lease
 git checkout -q "$CURRENT"

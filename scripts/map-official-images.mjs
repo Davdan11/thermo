@@ -58,7 +58,7 @@ for (const [brand, re, byCap, seriesImg] of RULES) {
   if (seriesImg && exists(seriesImg)) {
     for (const id of touchedSeries) {
       const s = seriesById.get(id);
-      if (s && !s.imageUrl && !/s[ée]rie standard/i.test(s.name)) { s.imageUrl = seriesImg; series++; }
+      if (s && !s.imageUrl && !/s[ée]rie standard|s[ée]rie non identifi/i.test(s.name)) { s.imageUrl = seriesImg; series++; }
     }
   }
 }

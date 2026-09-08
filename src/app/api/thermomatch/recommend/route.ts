@@ -13,6 +13,7 @@
 
 import { NextResponse } from "next/server";
 import { registry } from "@/lib/data/registry";
+import { seriesDisplayName } from "@/lib/data/series-label";
 import { getLogisVertVariants } from "@/lib/subsidies/logisvert-official";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
@@ -27,6 +28,7 @@ let eligibleModels: SourceModel[] | null = null;
 
 function getEligibleModels(): SourceModel[] {
   if (eligibleModels) return eligibleModels;
+  const seriesById = new Map(registry.series.map((s) => [s.id, s]));
   eligibleModels = registry.models
     .filter((m) => {
       if (!m.isActive2026 || !m.thermomatchEligible) return false;
@@ -37,7 +39,8 @@ function getEligibleModels(): SourceModel[] {
     .map((m) => ({
       id: m.id,
       brandName: registry.brandById.get(m.brandId)?.name ?? "Inconnue",
-      name: m.name,
+      // Nom de série affiché sous la fiche : la vraie série, sinon le numéro de modèle (jamais une série inventée).
+      name: seriesDisplayName(seriesById.get(m.seriesId)?.name, seriesById.get(m.seriesId)?.slug) ?? m.modelNumber,
       modelNumber: m.modelNumber,
       systemType: m.systemType,
       nominalCapacityBtu: m.nominalCapacityBtu ?? null,

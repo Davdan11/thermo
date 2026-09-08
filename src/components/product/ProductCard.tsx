@@ -69,7 +69,7 @@ export function ProductCard({
         </div>
 
         {/* Title */}
-        <h3 className="text-[22px] font-bold text-[#172126] mb-4 leading-tight tracking-tight">
+        <h3 className="text-[22px] font-bold text-[#172126] mb-2 leading-tight tracking-tight">
           <Link
             href={`/produit/${model.slug}`}
             className="after:absolute after:inset-0 focus-visible:outline-none focus-visible:underline"
@@ -77,6 +77,10 @@ export function ProductCard({
             {brand.name} {model.name}
           </Link>
         </h3>
+        <p className="text-[13px] text-[#6B7280] mb-4">
+          {model.nominalCapacityBtu ? `${Math.round(model.nominalCapacityBtu / 1000)}\u2009000 BTU` : "Capacité non publiée"}
+          {model.certifiedPairings ? ` · ${model.certifiedPairings} jumelage${model.certifiedPairings > 1 ? "s" : ""} certifié${model.certifiedPairings > 1 ? "s" : ""}` : ""}
+        </p>
 
         {/* Badges */}
         <div className="flex flex-wrap items-center gap-2 mb-6">

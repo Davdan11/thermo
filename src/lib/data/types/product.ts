@@ -77,6 +77,8 @@ export interface ProductModel {
 
   /** Nominal capacity in BTU/h — fallback or typical figure if range is not applicable */
   nominalCapacityBtu?: number | null;
+  /** Nombre de jumelages (unité extérieure + intérieure) certifiés AHRI dans la liste LogisVert */
+  certifiedPairings?: number | null;
   /** Number of indoor zones supported */
   zones?: number | null;
   systemType: SystemType;

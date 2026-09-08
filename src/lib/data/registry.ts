@@ -66,24 +66,21 @@ function mergeDatasets(auto: BrandDataset, manual: BrandDataset): BrandDataset {
     return [...byId.values()];
   };
 
-  const manualModelSignatures = new Set(
-    manual.models
-      .filter((m) => m.seriesId && m.nominalCapacityBtu != null)
-      .map((m) => `${m.seriesId}-${m.nominalCapacityBtu}`)
-  );
+  // Une fiche manuelle (curée) remplace la fiche auto de la même unité extérieure.
+  // Clé : numéro de modèle normalisé (unité extérieure des configurations manuelles
+  // ou numéro principal du modèle manuel). On ne jette jamais une machine différente.
+  const normModel = (v: string | null | undefined) => (v ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const manualUnitKeys = new Set<string>();
+  for (const ou of manual.outdoorUnits) manualUnitKeys.add(normModel(ou.modelNumber));
+  for (const m of manual.models) manualUnitKeys.add(normModel(m.modelNumber));
+  manualUnitKeys.delete("");
 
-  const autoModelSignatures = new Set<string>();
+  const seenAutoUnits = new Set<string>();
   const autoModelsFiltered = auto.models.filter((m) => {
-    if (m.seriesId && m.nominalCapacityBtu != null) {
-      const sig = `${m.seriesId}-${m.nominalCapacityBtu}`;
-      if (manualModelSignatures.has(sig)) {
-        return false;
-      }
-      if (autoModelSignatures.has(sig)) {
-        return false; // Deduplicate within auto data
-      }
-      autoModelSignatures.add(sig);
-    }
+    const key = normModel(m.modelNumber);
+    if (key && manualUnitKeys.has(key)) return false;
+    if (key && seenAutoUnits.has(key)) return false;
+    if (key) seenAutoUnits.add(key);
     return true;
   });
 

@@ -47,7 +47,7 @@ for (const [brand, rel, name] of PICKS) {
     if (!m.imageUrl) { m.imageUrl = outRel; n++; }
     touched.add(m.seriesId);
   }
-  for (const s of b.series) if (touched.has(s.id) && !s.imageUrl && !/s[ée]rie standard/i.test(s.name)) { s.imageUrl = outRel; series++; }
+  for (const s of b.series) if (touched.has(s.id) && !s.imageUrl && !/s[ée]rie standard|s[ée]rie non identifi/i.test(s.name)) { s.imageUrl = outRel; series++; }
   models += n;
   console.log(`${name}: ${n} modèles (pdf ${pdfBase}, ${modelsForPdf.length} numéros)`);
 }
