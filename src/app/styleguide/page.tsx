@@ -91,7 +91,7 @@ export default function StyleguidePage() {
             className="font-semibold tracking-wide text-muted uppercase mb-3"
             style={{ fontSize: "var(--text-caption)", letterSpacing: "var(--tracking-wide)" }}
           >
-            Thermopompe A Vendre.ca
+            Thermopompes À Vendre.ca
           </p>
           <h1
             className="font-semibold text-foreground"
@@ -204,7 +204,7 @@ export default function StyleguidePage() {
           <div>
             <p className="text-caption text-muted mb-1">body</p>
             <p className="max-w-prose">
-              Thermopompe A Vendre.ca vous aide à comparer les modèles, comprendre les performances
+              Thermopompes À Vendre.ca vous aide à comparer les modèles, comprendre les performances
               et obtenir un service clé en main pour votre installation.
               Du choix à l&apos;installation, nous nous occupons de tout.
             </p>

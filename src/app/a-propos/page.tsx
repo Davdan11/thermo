@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "À propos de Thermopompe A Vendre.ca",
+  title: "À propos de Thermopompes À Vendre.ca",
   description:
     "Nous construisons une meilleure façon de découvrir, comparer et acheter les systèmes offerts au Québec.",
   alternates: { canonical: "/a-propos" },

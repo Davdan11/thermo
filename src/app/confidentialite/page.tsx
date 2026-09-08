@@ -6,7 +6,7 @@ import { JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
 
 export const metadata: Metadata = createMetadata({
   title: "Politique de confidentialité",
-  description: "Quels renseignements personnels Thermopompe A Vendre.ca recueille, pourquoi, avec qui ils sont partagés et comment exercer vos droits en vertu de la Loi 25.",
+  description: "Quels renseignements personnels Thermopompes À Vendre.ca recueille, pourquoi, avec qui ils sont partagés et comment exercer vos droits en vertu de la Loi 25.",
   canonicalPath: "/confidentialite",
   robots: { index: true, follow: true },
 });
@@ -26,7 +26,7 @@ export default function ConfidentialitePage() {
       <Prose>
         <h2>1. Qui nous sommes</h2>
         <p>
-          Thermopompe A Vendre.ca (« nous ») exploite ce site de comparaison et de sélection de thermopompes au Québec. Nous agissons comme
+          Thermopompes À Vendre.ca (« nous ») exploite ce site de comparaison et de sélection de thermopompes au Québec. Nous agissons comme
           responsable des renseignements personnels recueillis par le site. Pour toute question, utilisez la <Link href="/contact">page Contact</Link>.
         </p>
 

@@ -17,7 +17,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://thermopompeavendre.ca${item.href}`
+      "item": `https://thermopompesavendre.ca${item.href}`
     }))
   };
 

@@ -37,7 +37,7 @@ export async function generateMetadata({
       title: `Thermopompes ${name}`,
       description: `Tous les modèles de thermopompes ${name} disponibles au Québec`,
       url: `${SITE_URL}/marques/${resolvedParams.slug}`,
-      siteName: "Thermopompe A Vendre.ca",
+      siteName: "Thermopompes À Vendre.ca",
       locale: "fr_CA",
     },
   });

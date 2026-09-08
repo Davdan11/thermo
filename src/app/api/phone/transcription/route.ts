@@ -55,7 +55,7 @@ async function sendConfirmationSMS(to: string): Promise<void> {
 
   if (!SID || !TOKEN) return;
 
-  const body = `Bonjour! Nous avons bien reçu votre message vocal. Un conseiller de Thermopompe A Vendre.ca vous rappelle dans les 24h. Urgent: 438-900-3224`;
+  const body = `Bonjour! Nous avons bien reçu votre message vocal. Un conseiller de Thermopompes À Vendre.ca vous rappelle dans les 24h. Urgent: 438-900-3224`;
 
   await fetch(`https://api.twilio.com/2010-04-01/Accounts/${SID}/Messages.json`, {
     method: "POST",

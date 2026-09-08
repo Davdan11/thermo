@@ -92,7 +92,7 @@ export function Header() {
             <Link
               href="/"
               className="shrink-0"
-              aria-label="Thermopompe A Vendre.ca — Accueil"
+              aria-label="Thermopompes À Vendre.ca — Accueil"
               style={{ textDecoration: "none" }}
             >
               <img 

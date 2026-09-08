@@ -42,7 +42,7 @@
 }
 
 /* ==============================================================
-   Thermopompe A Vendre.ca — Design System
+   Thermopompes À Vendre.ca — Design System
 
    Palette volontairement limitée. Typographie soignée.
    Chaque token a une raison d'exister.
@@ -984,4 +984,5 @@ input[type="radio"]:disabled {
   }
   .guides-cta-banner__divider { display: none; }
   .guides-cta-banner__btn { width: 100%; justify-content: center; }
-}
+}
+

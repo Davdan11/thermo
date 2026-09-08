@@ -31,7 +31,7 @@ export const brandGammaDataset: BrandDataset = {
       id: "src-gamma-dev",
       type: "internal",
       title: "DEV — Données fictives Gamma",
-      organization: "Thermopompe A Vendre.ca",
+      organization: "Thermopompes À Vendre.ca",
       url: null,
       consultedAt: NOW,
       language: "fr",

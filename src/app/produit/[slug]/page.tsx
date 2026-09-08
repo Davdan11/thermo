@@ -71,7 +71,7 @@ export async function generateMetadata({
       title: `Thermopompe ${brand.name} ${model.name}`,
       description,
       url: `${SITE_URL}/produit/${canonicalSlug}`,
-      siteName: "Thermopompe A Vendre.ca",
+      siteName: "Thermopompes À Vendre.ca",
       locale: "fr_CA",
       type: "website",
       images: [{ url: ogImage, width: 1200, height: 630, alt: `${brand.name} ${model.name}` }],

@@ -20,7 +20,7 @@ import { buttonVariants } from "@/components/ui/button";
    ------------------------------------------------------------------ */
 
 export const metadata = createMetadata({
-  title: "Thermopompes — Explorez les modèles offerts au Québec | Thermopompe A Vendre.ca",
+  title: "Thermopompes — Explorez les modèles offerts au Québec | Thermopompes À Vendre.ca",
   description:
     "Comparez les modèles de thermopompes, les capacités et les performances pour trouver un système adapté à votre habitation au Québec.",
   robots: { index: true, follow: true },

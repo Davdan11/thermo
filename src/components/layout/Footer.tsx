@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /* ----------------------------------------------------------
-   Footer — Thermopompe A Vendre.ca
+   Footer — Thermopompes À Vendre.ca
    Reproduit fidèlement depuis la maquette.
    ---------------------------------------------------------- */
 
@@ -261,7 +261,7 @@ export function Footer() {
       <div className="border-t border-white/[0.07] max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 py-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <p style={{ color: "rgba(255,255,255,0.3)", fontSize: 12, margin: 0 }}>
-            © {year} Thermopompe A Vendre.ca Tous droits réservés.
+            © {year} Thermopompes À Vendre.ca Tous droits réservés.
           </p>
           <div style={{ display: "flex", gap: 24 }}>
             {LEGAL.map((l) => (

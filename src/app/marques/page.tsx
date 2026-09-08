@@ -10,7 +10,7 @@ import { BrandDirectoryClient, type BrandSummaryWithLogo } from "@/components/br
    ------------------------------------------------------------------ */
 
 export const metadata: Metadata = createMetadata({
-  title: "Marques de thermopompes | Thermopompe A Vendre.ca",
+  title: "Marques de thermopompes | Thermopompes À Vendre.ca",
   description:
     "Explorez les marques et les modèles de thermopompes présents dans notre catalogue. Comparez leurs capacités, performances et garanties.",
   alternates: { canonical: "/marques" },

@@ -475,7 +475,7 @@ export function SubventionsClient() {
               </svg>
               <span>
                 L&apos;admissibilité finale est déterminée par l&apos;organisme responsable.
-                Thermopompe A Vendre.ca n&apos;est pas responsable des décisions d&apos;admissibilité ou du versement des aides financières.
+                Thermopompes À Vendre.ca n&apos;est pas responsable des décisions d&apos;admissibilité ou du versement des aides financières.
               </span>
             </div>
           </div>

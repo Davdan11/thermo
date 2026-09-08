@@ -14,7 +14,7 @@ export const metadata = createMetadata({
 });
 
 /* ─────────────────────────────────────────────────────────────────────────
-   HOMEPAGE — Thermopompe A Vendre.ca
+   HOMEPAGE — Thermopompes À Vendre.ca
    Reproduced from the design mockup.
    All colours are inlined (hex) so they survive any CSS-variable failure.
 ───────────────────────────────────────────────────────────────────────────*/

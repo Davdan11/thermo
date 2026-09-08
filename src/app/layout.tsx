@@ -24,14 +24,14 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    template: "%s | Thermopompe A Vendre.ca",
-    default: "Thermopompe A Vendre.ca — Trouvez la bonne thermopompe. Au bon prix.",
+    template: "%s | Thermopompes À Vendre.ca",
+    default: "Thermopompes À Vendre.ca — Trouvez la bonne thermopompe. Au bon prix.",
   },
   description:
     "Comparez les thermopompes, comprenez les prix et les subventions, et trouvez la machine adaptée à votre propriété au Québec.",
   openGraph: {
     type: "website",
-    siteName: "Thermopompe A Vendre.ca",
+    siteName: "Thermopompes À Vendre.ca",
     locale: "fr_CA",
   },
   twitter: { card: "summary_large_image" },

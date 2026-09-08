@@ -10,8 +10,8 @@ import type { Metadata } from "next";
    Constants
    ------------------------------------------------------------------ */
 
-export const SITE_NAME = "Thermopompe A Vendre.ca";
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://thermopompeavendre.ca").replace(/\/$/, "");
+export const SITE_NAME = "Thermopompes À Vendre.ca";
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://thermopompesavendre.ca").replace(/\/$/, "");
 const SITE_DESCRIPTION =
   "Comparez les thermopompes, comprenez les prix et les subventions, et trouvez la machine adaptée à votre propriété au Québec.";
 

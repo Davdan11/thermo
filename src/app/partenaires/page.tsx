@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Devenir Partenaire Installateur — Thermopompe A Vendre.ca",
+  title: "Devenir Partenaire Installateur — Thermopompes À Vendre.ca",
   description: "Rejoignez le réseau d'installateurs d'élite du Québec. Accédez à une clientèle éduquée et des projets haut de gamme.",
   alternates: { canonical: "/partenaires" },
   robots: { index: true, follow: true },

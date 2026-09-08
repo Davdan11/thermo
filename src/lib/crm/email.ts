@@ -4,7 +4,7 @@ import { getWelcomeEmailHTML, type WelcomeEmailData } from "./templates/welcome-
 import { getRdvEmailHTML, type RdvEmailData } from "./templates/rdv-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY || 're_mock_key');
-const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || 'info@thermopompeavendre.ca';
+const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || 'info@thermopompesavendre.ca';
 
 export async function sendLeadEmail(quote: QuoteRequest, region: string) {
   if (!process.env.RESEND_API_KEY) {
@@ -14,7 +14,7 @@ export async function sendLeadEmail(quote: QuoteRequest, region: string) {
 
   try {
     await resend.emails.send({
-      from: 'ThermoMatch <leads@thermopompeavendre.ca>',
+      from: 'ThermoMatch <leads@thermopompesavendre.ca>',
       to: [NOTIFICATION_EMAIL],
       subject: `🔥 Nouveau prospect ${region} : ${quote.firstName} ${quote.lastName}`,
       html: `
@@ -54,7 +54,7 @@ export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailDa
     const html = getWelcomeEmailHTML(data);
     
     await resend.emails.send({
-      from: 'L\'équipe ThermoMatch <bonjour@thermopompeavendre.ca>',
+      from: 'L\'équipe ThermoMatch <bonjour@thermopompesavendre.ca>',
       to: [email],
       subject: `Votre dossier ThermoMatch est ouvert, ${data.firstName}`,
       html: html,
@@ -74,7 +74,7 @@ export async function sendClientRdvEmail(email: string, data: RdvEmailData) {
     const html = getRdvEmailHTML(data);
     
     await resend.emails.send({
-      from: 'L\'équipe ThermoMatch <bonjour@thermopompeavendre.ca>',
+      from: 'L\'équipe ThermoMatch <bonjour@thermopompesavendre.ca>',
       to: [email],
       subject: `Confirmation de votre rendez-vous ThermoMatch`,
       html: html,

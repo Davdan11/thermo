@@ -6,7 +6,7 @@ import { JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
 
 export const metadata: Metadata = createMetadata({
   title: "Accessibilité",
-  description: "Notre engagement d'accessibilité : ce que nous faisons pour que Thermopompe A Vendre.ca soit utilisable par tous, et comment nous signaler un obstacle.",
+  description: "Notre engagement d'accessibilité : ce que nous faisons pour que Thermopompes À Vendre.ca soit utilisable par tous, et comment nous signaler un obstacle.",
   canonicalPath: "/accessibilite",
   robots: { index: true, follow: true },
 });

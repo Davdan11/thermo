@@ -27,7 +27,7 @@ export function getRdvEmailHTML(data: RdvEmailData): string {
               <!-- Header -->
               <tr>
                 <td style="background-color: ${dark}; padding: 40px 40px 30px 40px; text-align: center;">
-                  <img src="https://thermopompeavendre.ca/images/logo-thermomatch-tm.png" alt="ThermoMatch" width="180" style="display: block; margin: 0 auto; filter: brightness(0) invert(1);" />
+                  <img src="https://thermopompesavendre.ca/images/logo-thermomatch-tm.png" alt="ThermoMatch" width="180" style="display: block; margin: 0 auto; filter: brightness(0) invert(1);" />
                 </td>
               </tr>
               

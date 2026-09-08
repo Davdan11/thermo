@@ -68,7 +68,7 @@ export function getWelcomeEmailHTML(data: WelcomeEmailData): string {
               <!-- Header -->
               <tr>
                 <td style="background-color: ${dark}; padding: 40px 40px 30px 40px; text-align: center;">
-                  <img src="https://thermopompeavendre.ca/images/logo-thermomatch-tm.png" alt="ThermoMatch" width="180" style="display: block; margin: 0 auto; filter: brightness(0) invert(1);" />
+                  <img src="https://thermopompesavendre.ca/images/logo-thermomatch-tm.png" alt="ThermoMatch" width="180" style="display: block; margin: 0 auto; filter: brightness(0) invert(1);" />
                 </td>
               </tr>
               
@@ -93,7 +93,7 @@ export function getWelcomeEmailHTML(data: WelcomeEmailData): string {
                   <table width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
                       <td align="center">
-                        <a href="https://thermopompeavendre.ca/guides" style="display: inline-block; padding: 14px 28px; background-color: ${primary}; color: #ffffff; font-weight: 600; text-decoration: none; border-radius: 8px; font-size: 16px;">
+                        <a href="https://thermopompesavendre.ca/guides" style="display: inline-block; padding: 14px 28px; background-color: ${primary}; color: #ffffff; font-weight: 600; text-decoration: none; border-radius: 8px; font-size: 16px;">
                           Lire nos guides d'achat
                         </a>
                       </td>

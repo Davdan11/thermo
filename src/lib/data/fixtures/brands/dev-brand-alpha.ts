@@ -31,7 +31,7 @@ export const brandAlphaDataset: BrandDataset = {
       id: "src-alpha-dev",
       type: "internal",
       title: "DEV — Données fictives Alpha",
-      organization: "Thermopompe A Vendre.ca",
+      organization: "Thermopompes À Vendre.ca",
       url: null,
       consultedAt: NOW,
       language: "fr",

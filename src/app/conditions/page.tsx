@@ -6,7 +6,7 @@ import { JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
 
 export const metadata: Metadata = createMetadata({
   title: "Conditions d'utilisation",
-  description: "Conditions d'utilisation du site Thermopompe A Vendre.ca : nature des recommandations, sources des données, limites de responsabilité.",
+  description: "Conditions d'utilisation du site Thermopompes À Vendre.ca : nature des recommandations, sources des données, limites de responsabilité.",
   canonicalPath: "/conditions",
   robots: { index: true, follow: true },
 });
@@ -24,7 +24,7 @@ export default function ConditionsPage() {
       <Prose>
         <h2>1. Nature du service</h2>
         <p>
-          Thermopompe A Vendre.ca est un outil d'information et de présélection. ThermoMatch, ThermoScan, le calculateur d'économies et les pages
+          Thermopompes À Vendre.ca est un outil d'information et de présélection. ThermoMatch, ThermoScan, le calculateur d'économies et les pages
           de comparaison produisent des estimations à partir de données publiques et de vos réponses. Ils ne constituent ni un devis, ni un calcul de
           charge thermique conforme à la norme CSA F280, ni une garantie d'admissibilité à une subvention.
         </p>

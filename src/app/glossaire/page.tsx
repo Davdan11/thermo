@@ -84,7 +84,7 @@ export default function GlossairePage() {
               "@type": "DefinedTerm",
               name: t.term,
               description: t.definition,
-              url: `https://thermopompeavendre.ca/glossaire#${slugifyTerm(t.term)}`,
+              url: `https://thermopompesavendre.ca/glossaire#${slugifyTerm(t.term)}`,
             })),
           }),
         }}

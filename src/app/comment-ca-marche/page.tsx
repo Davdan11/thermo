@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comment ça marche — Thermopompe A Vendre.ca",
-  description: "Comprenez comment Thermopompe A Vendre.ca vous aide à trouver et installer la bonne thermopompe au Québec.",
+  title: "Comment ça marche — Thermopompes À Vendre.ca",
+  description: "Comprenez comment Thermopompes À Vendre.ca vous aide à trouver et installer la bonne thermopompe au Québec.",
   alternates: { canonical: "/comment-ca-marche" },
   robots: { index: true, follow: true },
 };

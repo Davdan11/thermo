@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Carrières — Thermopompe A Vendre.ca",
+  title: "Carrières — Thermopompes À Vendre.ca",
   description: "Rejoignez notre équipe pour transformer l'achat d'équipements de confort au Québec.",
   alternates: { canonical: "/carriere" },
   robots: { index: true, follow: true },

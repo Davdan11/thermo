@@ -106,7 +106,7 @@ export default function EspaceInstallateurPage() {
         </div>
 
         <div style={{ marginTop: "auto", textAlign: "center", color: T.muted, fontSize: "13px" }}>
-          © {new Date().getFullYear()} Thermopompe A Vendre.ca
+          © {new Date().getFullYear()} Thermopompes À Vendre.ca
         </div>
       </div>
 
