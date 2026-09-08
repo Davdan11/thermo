@@ -22,6 +22,11 @@ export function FadeIn({
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Respect de « réduire les animations » : contenu affiché immédiatement, sans transition.
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const frame = requestAnimationFrame(() => setIsVisible(true));
+      return () => cancelAnimationFrame(frame);
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

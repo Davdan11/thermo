@@ -36,7 +36,7 @@ export function CataloguePagination({ page, totalPages }: CataloguePaginationPro
   }
   for (let i = startPage; i <= endPage; i++) pages.push(i);
 
-  const btn = "w-10 h-10 inline-flex items-center justify-center border rounded-md text-sm font-medium transition-colors";
+  const btn = "w-11 h-11 inline-flex items-center justify-center border rounded-md text-sm font-medium transition-colors";
   const nav = "w-[105px] inline-flex items-center justify-center py-2 border border-input-border rounded-md text-sm font-medium hover:bg-surface transition-colors";
 
   return (

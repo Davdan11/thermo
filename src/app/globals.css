@@ -258,6 +258,16 @@ a {
   outline-offset: 2px;
 }
 
+/* ---- Le focus clavier ne doit jamais être masqué par l'en-tête fixe ni par la barre CTA mobile (WCAG 2.2, 2.4.11) ---- */
+html {
+  scroll-padding-top: 96px;
+}
+@media (max-width: 767px) {
+  html {
+    scroll-padding-bottom: 88px;
+  }
+}
+
 /* ---- Scrollbar (subtle, Webkit only) ---- */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }

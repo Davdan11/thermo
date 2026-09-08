@@ -383,7 +383,7 @@ export default async function ProductPage({
               {/* Brochure Download */}
               {(series.brochureUrl || model.brochureUrl) && (
                 <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
-                  <p style={{ margin: "0 0 8px", fontSize: 14, fontWeight: 700, color: "#071d2b" }}>📄 Brochure officielle</p>
+                  <p style={{ margin: "0 0 8px", fontSize: 14, fontWeight: 700, color: "#071d2b" }}><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: "inline-block", verticalAlign: "-3px", marginRight: 6 }}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></svg>Brochure officielle</p>
                   <p style={{ margin: "0 0 16px", fontSize: 13, color: "#6b7b80", lineHeight: 1.55 }}>
                     Téléchargez la documentation technique officielle du fabricant {brand.name}.
                   </p>

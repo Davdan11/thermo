@@ -19,6 +19,28 @@ export function JsonLd({ data }: { data: object | object[] }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
 
+/** Bande de preuve (pattern « Trust & Authority + Conversion » : Hero → Preuve → Solution → CTA). */
+export function TrustStrip() {
+  const items = [
+    { label: "Liste LogisVert d'Hydro-Québec", hint: "montants officiels, mise à jour automatique" },
+    { label: "Certifications AHRI et ENERGY STAR", hint: "capacités et COP mesurés, jamais estimés sans le dire" },
+    { label: "Toutes les marques vendues au Québec", hint: "aucune marque favorisée, aucun avis sponsorisé" },
+    { label: "Installateurs licenciés RBQ", hint: "la soumission finale vient d'un entrepreneur licencié" },
+  ];
+  return (
+    <section aria-label="Sources et garanties" className="border-y border-[#e4ddd5] bg-white">
+      <ul className="mx-auto max-w-6xl px-5 sm:px-8 py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {items.map((it) => (
+          <li key={it.label} className="flex items-start gap-2.5 text-[13px] leading-snug">
+            <svg aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-[#1b6b3a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+            <span><span className="font-semibold text-[#071d2b]">{it.label}</span><span className="block text-[#536873]">{it.hint}</span></span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function SeoHero({
   eyebrow,
   title,
@@ -33,6 +55,7 @@ export function SeoHero({
   stats?: Array<{ label: string; value: string }>;
 }) {
   return (
+    <>
     <section className="bg-[#0C1821] text-white pt-28 pb-14">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="[&_a]:text-white/60 [&_a:hover]:text-white [&_span]:text-white/90 [&_.text-gray-400]:text-white/30">
@@ -53,6 +76,8 @@ export function SeoHero({
         )}
       </div>
     </section>
+    <TrustStrip />
+    </>
   );
 }
 
@@ -151,6 +176,17 @@ export function FaqBlock({ items, title = "Questions fréquentes" }: { items: Fa
   );
 }
 
+/** Barre d'appel à l'action fixée en bas sur mobile ; le contenu garde un dégagement (scroll-padding-bottom) pour ne jamais masquer le focus clavier. */
+export function MobileStickyCta() {
+  return (
+    <div className="md:hidden fixed inset-x-0 bottom-0 z-40 border-t border-[#e4ddd5] bg-white/95 backdrop-blur px-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))]">
+      <Link href="/trouver-ma-thermopompe" className="flex min-h-[48px] items-center justify-center rounded-xl bg-[#e54b17] hover:bg-[#d44315] text-white font-bold text-[15px] transition-colors">
+        Trouver ma thermopompe en 2 min
+      </Link>
+    </div>
+  );
+}
+
 export function CtaThermoMatch({
   title = "Trouvez la bonne thermopompe en 2 minutes",
   text = "Répondez à 13 questions sur votre maison. ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
@@ -161,17 +197,18 @@ export function CtaThermoMatch({
   compact?: boolean;
 }) {
   return (
-    <section className={`mx-auto max-w-6xl px-5 sm:px-8 ${compact ? "py-8" : "py-14"}`}>
+    <section className={`mx-auto max-w-6xl px-5 sm:px-8 ${compact ? "py-8" : "py-14"} pb-24 md:pb-14`}>
+      <MobileStickyCta />
       <div className="rounded-2xl bg-[#0C1821] text-white p-8 sm:p-10 flex flex-col md:flex-row md:items-center gap-6">
         <div className="flex-1">
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight">{title}</h2>
           <p className="mt-3 text-white/70 leading-relaxed max-w-2xl">{text}</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/trouver-ma-thermopompe" className="inline-flex justify-center items-center bg-[#e54b17] hover:bg-[#d44315] text-white font-bold px-6 py-3.5 rounded-xl transition-colors">
+          <Link href="/trouver-ma-thermopompe" className="inline-flex min-h-[48px] justify-center items-center bg-[#e54b17] hover:bg-[#d44315] text-white font-bold px-6 py-3.5 rounded-xl transition-colors">
             Lancer ThermoMatch
           </Link>
-          <Link href="/soumission" className="inline-flex justify-center items-center border border-white/20 hover:bg-white/10 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors">
+          <Link href="/soumission" className="inline-flex min-h-[48px] justify-center items-center border border-white/20 hover:bg-white/10 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors">
             Demander une soumission
           </Link>
         </div>
