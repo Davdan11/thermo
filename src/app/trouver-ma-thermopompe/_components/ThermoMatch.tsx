@@ -404,7 +404,7 @@ export function ThermoMatch() {
         <div className="min-h-screen bg-[#0D1117] flex flex-col items-center justify-center text-white">
           <div className="w-12 h-12 border-4 border-white/20 border-t-[#C66E42] rounded-full animate-spin mb-6" />
           <h2 className="text-2xl font-bold mb-2">Analyse en cours...</h2>
-          <p className="text-[#9CA3AF]">Recherche parmi plus de 1 200 modèles au Québec</p>
+          <p className="text-[#9CA3AF]">Analyse de près de 4 000 modèles certifiés par Hydro-Québec</p>
         </div>
       );
     }

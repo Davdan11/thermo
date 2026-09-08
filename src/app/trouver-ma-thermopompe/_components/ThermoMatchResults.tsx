@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ShieldCheck, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
-import { CountingNumber } from "@/components/ui/counting-number";
 
 interface ThermoMatchResultsProps {
   results: any[];
@@ -33,7 +32,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Aucun modele trouve pour vos criteres</h3>
         <p className="text-[#8e9fae] mb-8 max-w-md mx-auto">
-          Nos marques premium ne couvrent pas cette combinaison exacte. Nos conseillers peuvent vous aider directement.
+          Aucune machine de la base officielle ne respecte tous vos critères. Nous préférons ne rien proposer plutôt que de proposer un appareil inadapté. Nos conseillers peuvent vous aider directement.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button onClick={onRetry} className="bg-white text-[#0b1b24] px-6 py-3 rounded-md font-bold">Refaire le test</button>
@@ -55,13 +54,70 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
         </h2>
         {summaryContext && (
           <p className="text-lg md:text-xl text-gray-300 font-medium max-w-3xl mx-auto">
-            Basé sur votre {summaryContext.heatedAreaFt2} pi²{summaryContext.floors > 1 ? ` sur ${summaryContext.floors} étages` : ""} — la charge requise est de <strong className="text-white text-2xl ml-1">{Math.round(summaryContext.estimatedLoadBtu / 1000)} 000 BTU</strong>
+            Basé sur votre {summaryContext.heatedAreaFt2} pi²{summaryContext.floors > 1 ? ` sur ${summaryContext.floors} étages` : ""} — la charge estimée est de <strong className="text-white text-2xl ml-1">{Math.round(summaryContext.estimatedLoadBtu).toLocaleString("fr-CA")} BTU/h</strong>
+            {typeof summaryContext.uncertaintyPct === "number" && (
+              <span className="text-gray-400 text-base ml-2">(±{summaryContext.uncertaintyPct} %)</span>
+            )}
             {summaryContext.isMultiZone && (
               <span className="block mt-3 text-orange-400 font-bold bg-orange-500/10 px-4 py-2 rounded-xl border border-orange-500/20 inline-block">
                 Configuration {summaryContext.requestedZones} zones recommandée pour un confort égal partout
               </span>
             )}
           </p>
+        )}
+        {summaryContext?.notices?.length > 0 && (
+          <div className="mt-6 max-w-3xl mx-auto space-y-2">
+            {summaryContext.notices.map((n: string, ni: number) => (
+              <p key={ni} className="text-xs text-gray-400 bg-white/5 border border-white/10 rounded-lg px-4 py-2 leading-relaxed">{n}</p>
+            ))}
+          </div>
+        )}
+        {summaryContext?.loadFactors && (
+          <details className="mt-4 max-w-3xl mx-auto text-left bg-white/5 border border-white/10 rounded-xl px-5 py-3">
+            <summary className="cursor-pointer text-sm font-bold text-white/90 select-none">Comment ThermoMatch a calculé</summary>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 text-xs text-gray-300">
+              <div>
+                <p className="font-bold text-white/80 uppercase tracking-wider text-[10px] mb-2">Charge de chauffage</p>
+                <ul className="space-y-1">
+                  <li>Base : {summaryContext.loadFactors.baseBtuPerFt2} BTU/h par pi² × {summaryContext.heatedAreaFt2} pi²</li>
+                  <li>Type de propriété : × {summaryContext.loadFactors.homeType}</li>
+                  <li>Étages : × {summaryContext.loadFactors.floors}</li>
+                  <li>Année de construction : × {summaryContext.loadFactors.construction}</li>
+                  <li>Isolation : × {summaryContext.loadFactors.insulation}</li>
+                  <li>Fenestration : × {summaryContext.loadFactors.windows}</li>
+                  <li>Sous-sol : × {summaryContext.loadFactors.basement}</li>
+                  <li className="pt-1 font-bold text-white">= {Math.round(summaryContext.estimatedLoadBtu).toLocaleString("fr-CA")} BTU/h à -15 °C (±{summaryContext.uncertaintyPct} %)</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold text-white/80 uppercase tracking-wider text-[10px] mb-2">Pondération du score (sur 100)</p>
+                {summaryContext.weights && (
+                  <ul className="space-y-1">
+                    {[
+                      ["Adéquation à la charge", summaryContext.weights.fit],
+                      ["Performance par grand froid", summaryContext.weights.cold],
+                      ["Efficacité (HSPF2, SEER2)", summaryContext.weights.efficiency],
+                      ["Subvention LogisVert", summaryContext.weights.subsidy],
+                      ["Budget", summaryContext.weights.budget],
+                      ["Qualité des données", summaryContext.weights.dataQuality],
+                    ].map(([label, w]) => (
+                      <li key={String(label)} className="flex items-center gap-2">
+                        <span className="w-44 shrink-0">{label}</span>
+                        <span className="h-1.5 bg-[#e54b17] rounded-full" style={{ width: `${Math.round(Number(w))}%` }} />
+                        <span className="text-white/70">{Math.round(Number(w))}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {typeof summaryContext.candidatesEvaluated === "number" && (
+                  <p className="mt-3 text-gray-400">
+                    {summaryContext.candidatesEvaluated.toLocaleString("fr-CA")} machines évaluées, {summaryContext.candidatesRetained?.toLocaleString("fr-CA")} de calibre compatible, 3 retenues.
+                    {summaryContext.logisVertUpdatedAt ? ` Liste LogisVert du ${String(summaryContext.logisVertUpdatedAt).slice(0, 10)}.` : ""}
+                  </p>
+                )}
+              </div>
+            </div>
+          </details>
         )}
       </motion.div>
 
@@ -73,31 +129,15 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
           const subsidyEstimate = candidate.subsidyEstimate || 0;
           const seer = pairing?.seer2?.min ?? "-";
           const hspf = pairing?.hspf2?.min ?? "-";
-          const minTempC = product.coldClimate ? (product.brand === "Mitsubishi Electric" || product.brand === "Fujitsu" ? "-30" : "-25") : "-20";
-          const warrantyParts = product.warranties?.[0]?.partsYears;
+          const h5 = product.heatingCapacity5FBtuH?.min ?? null;
+          const h5Label = h5 ? `${Math.round(h5).toLocaleString("fr-CA")} BTU/h ${product.h5Certified === false ? "(estimé)" : "(certifié)"}` : "-";
+          const nominalLabel = product.nominalBtu ? `${Math.round(product.nominalBtu).toLocaleString("fr-CA")} BTU/h` : "-";
+          const alsoSoldAs: string[] = product.alsoSoldAs ?? [];
           const clientReasons: string[] = candidate.clientReasons ?? candidate.reasons ?? [];
+          const resultWarnings: string[] = candidate.warnings ?? [];
           const architectureNote: string | null = candidate.architectureNote ?? null;
-          const badgeLabel = index === 0 ? "Meilleur Choix" : index === 1 ? "Alternative Premium" : "Excellent Rapport Q/P";
+          const badgeLabel: string = candidate.badge ?? (index === 0 ? "Meilleur choix" : "Alternative");
           const badgeColor = index === 0 ? "bg-[#e54b17]" : "bg-[#172126]";
-
-          // Dynamic logo generation
-          const getBrandDomain = (brand: string) => {
-            const b = brand.toLowerCase();
-            if (b.includes("mitsubishi")) return "mitsubishielectric.com";
-            if (b.includes("moovair")) return "moovair.ca";
-            if (b.includes("fujitsu")) return "fujitsugeneral.com";
-            if (b.includes("daikin")) return "daikin.com";
-            if (b.includes("gree")) return "gree.ca";
-            if (b.includes("samsung")) return "samsung.com";
-            if (b.includes("lg")) return "lg.com";
-            if (b.includes("bosch")) return "bosch-homecomfort.com";
-            if (b.includes("napoleon")) return "napoleon.com";
-            if (b.includes("lennox")) return "lennox.com";
-            if (b.includes("trane")) return "trane.com";
-            if (b.includes("rheem")) return "rheem.com";
-            return `${b.replace(/ /g, '')}.com`;
-          };
-          const logoUrl = `https://logo.clearbit.com/${getBrandDomain(product.brand)}`;
 
           return (
             <motion.div key={product.id} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.15 + 0.2 }}
@@ -111,10 +151,10 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                 </div>
                 <div className="text-center mb-4 flex flex-col items-center">
                   <div className="flex flex-col items-center justify-center mb-2">
-                    <img src={logoUrl} alt={`${product.brand} logo`} className="h-8 object-contain mb-2" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                     <h3 className="text-2xl font-black text-[#0b1b24]">{product.brand}</h3>
                   </div>
                   <p className="text-sm text-gray-500 font-medium">{product.series || product.outdoorModel}</p>
+                  <p className="text-[11px] text-gray-400 font-mono mt-1">{product.outdoorModel}{product.indoorModel ? ` + ${product.indoorModel}` : ""}</p>
                 </div>
                 <div className="relative h-40 w-full mb-4 flex items-center justify-center">
                   <Image
@@ -137,24 +177,37 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-xl font-black text-[#10b981]"><CountingNumber number={subsidyEstimate} inView={true} decimalPlaces={0} /> $</p>
+                      <p className="text-xl font-black text-[#10b981]">{Math.round(subsidyEstimate).toLocaleString("fr-CA")} $</p>
                     </div>
                   </div>
                 )}
                 <div className="flex flex-col gap-0 mb-4 border-t border-gray-100">
                   <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-xs text-gray-500 font-medium">Chauffage garanti</span>
-                    <span className="text-xs font-bold text-[#0b1b24]">Jusqu&apos;a {minTempC} C</span>
+                    <span className="text-xs text-gray-500 font-medium">Chauffage à -15 °C</span>
+                    <span className="text-xs font-bold text-[#0b1b24]">{h5Label}</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-xs text-gray-500 font-medium">Capacité nominale</span>
+                    <span className="text-xs font-bold text-[#0b1b24]">{nominalLabel}</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-100">
                     <span className="text-xs text-gray-500 font-medium">SEER2 / HSPF2</span>
                     <span className="text-xs font-bold text-[#0b1b24]">{seer} / {hspf}</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-xs text-gray-500 font-medium">Garantie pieces</span>
-                    <span className="text-xs font-bold text-[#0b1b24]">{warrantyParts ? `${warrantyParts} ans` : "Standard"}</span>
-                  </div>
+                  {alsoSoldAs.length > 0 && (
+                    <div className="flex justify-between items-center py-2 border-b border-gray-100 gap-3">
+                      <span className="text-xs text-gray-500 font-medium">Aussi vendue sous</span>
+                      <span className="text-xs font-bold text-[#0b1b24] text-right">{alsoSoldAs.join(", ")}</span>
+                    </div>
+                  )}
                 </div>
+                {resultWarnings.length > 0 && (
+                  <ul className="mb-4 space-y-1">
+                    {resultWarnings.map((w, wi) => (
+                      <li key={wi} className="text-[11px] text-amber-800 bg-amber-50 border border-amber-200 rounded-md px-2.5 py-1.5 leading-snug">{w}</li>
+                    ))}
+                  </ul>
+                )}
                 {clientReasons.length > 0 && (
                   <div className="mb-5 mt-2">
                     <button onClick={() => setExpandedReasons(expandedReasons === index ? null : index)}

@@ -89,7 +89,7 @@ const FAQ_ITEMS = [
   {
     id: "faq-2",
     question: "D'où viennent les données?",
-    answer: "Les informations techniques proviennent des documents des fabricants et des sources officielles utilisées par la plateforme. Chaque donnée conserve sa source et sa date de vérification.",
+    answer: "Les capacités de chauffage à -15 °C, les COP, HSPF2, SEER2 et les montants de subvention proviennent de la liste officielle LogisVert d'Hydro-Québec, bâtie sur les appariements certifiés AHRI et ENERGY STAR. Chaque recommandation cite la référence AHRI de l'appariement et la date de la liste utilisée. Quand une donnée n'est pas certifiée, nous l'indiquons comme estimée.",
   },
   {
     id: "faq-3",
@@ -256,7 +256,7 @@ export function ThermoMatchTechClient() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[17px] mb-1" style={{ color: 'var(--tm-ink)' }}>Votre propriété</h3>
-                  <p className="text-[14px] leading-relaxed" style={{ color: 'var(--tm-muted)' }}>Superficie, isolation, fenêtres, orientation et plus.</p>
+                  <p className="text-[14px] leading-relaxed" style={{ color: 'var(--tm-muted)' }}>Superficie, type de propriété, étages, année de construction, isolation, fenestration et sous-sol.</p>
                 </div>
               </div>
               <div className="tm-diagram-card">
@@ -267,8 +267,8 @@ export function ThermoMatchTechClient() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[17px] mb-1" style={{ color: 'var(--tm-ink)' }}>Le climat de votre région</h3>
-                  <p className="text-[14px] leading-relaxed" style={{ color: 'var(--tm-muted)' }}>Températures hivernales, grands froids et humidité.</p>
+                  <h3 className="font-semibold text-[17px] mb-1" style={{ color: 'var(--tm-ink)' }}>Un vrai hiver, partout au Québec</h3>
+                  <p className="text-[14px] leading-relaxed" style={{ color: 'var(--tm-muted)' }}>Nous dimensionnons pour le froid québécois, peu importe votre ville. Votre code postal sert à trouver les installateurs près de chez vous.</p>
                 </div>
               </div>
               <div className="tm-diagram-card">
@@ -507,10 +507,10 @@ export function ThermoMatchTechClient() {
                 <text className="t smallh" x="16" y="30">Options retenues pour vous</text>
                 <circle className="green" cx="22" cy="70" r="7"/>
                 <path className="green" d="m18 70 3 3 5-6"/>
-                <text className="t small" x="38" y="74">38 modèles évalués</text>
+                <text className="t small" x="38" y="74">Près de 4 000 modèles évalués</text>
                 <circle className="green" cx="22" cy="110" r="7"/>
                 <path className="green" d="m18 110 3 3 5-6"/>
-                <text className="t smallh" x="38" y="114">7 modèles retenus</text>
+                <text className="t smallh" x="38" y="114">3 machines retenues</text>
               </g>
             </g>
             <g transform="translate(722 86)">
@@ -603,10 +603,10 @@ export function ThermoMatchTechClient() {
                       <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="16" y="30">Options retenues pour vous</text>
                       <circle fill="none" stroke="#15a267" strokeWidth="1.5" cx="22" cy="70" r="7"/>
                       <path fill="none" stroke="#15a267" strokeWidth="1.5" d="m18 70 3 3 5-6"/>
-                      <text fontFamily="Inter,Arial,sans-serif" fontSize="10" fill="#536873" x="38" y="74">38 modèles évalués</text>
+                      <text fontFamily="Inter,Arial,sans-serif" fontSize="10" fill="#536873" x="38" y="74">Près de 4 000 modèles évalués</text>
                       <circle fill="none" stroke="#15a267" strokeWidth="1.5" cx="22" cy="110" r="7"/>
                       <path fill="none" stroke="#15a267" strokeWidth="1.5" d="m18 110 3 3 5-6"/>
-                      <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="38" y="114">7 modèles retenus</text>
+                      <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="38" y="114">3 machines retenues</text>
                     </svg>
                   )
                 },
