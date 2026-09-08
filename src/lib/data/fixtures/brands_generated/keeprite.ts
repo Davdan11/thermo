@@ -91,6 +91,7 @@ export const brand_keepriteDataset: BrandDataset = {
       ],
       "description": "Série D5C Series de Keeprite",
       "imageUrl": "/images/series/keeprite-keeprite-d5c-series.jpg",
+      "brochureUrl": "/documents/brochures/keeprite/d5c-series.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

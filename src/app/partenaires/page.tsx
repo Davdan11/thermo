@@ -236,7 +236,7 @@ export default function PartenairesPage() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
               <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Quelles marques installez-vous principalement ?</label>
-              <input required type="text" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: T.surface, outline: "none", placeholder: "ex: Daikin, Fujitsu, Mitsubishi..." }} />
+              <input required type="text" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: T.surface, outline: "none" }} placeholder="ex: Daikin, Fujitsu, Mitsubishi..." />
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>

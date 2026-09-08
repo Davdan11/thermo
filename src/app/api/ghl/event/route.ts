@@ -1,53 +1,44 @@
+/* ==================================================================
+   POST /api/ghl/event — événement comportemental anonyme (questionnaire)
+   - même origine uniquement, liste blanche d'événements, limite de débit
+   - aucune adresse IP ni referrer transmis : l'événement reste anonyme
+   ================================================================== */
+
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { sendWebhook } from "@/lib/ghl/client";
+import { SITE_URL } from "@/lib/seo";
+import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 
-/* ─────────────────────────────────────────────────────────────────────────
-   POST /api/ghl/event
-   Enregistre un événement comportemental anonyme dans GHL.
-   Utilisé pour : code postal saisi dans hero, quiz démarré, résultats vus.
-   Ces événements déclenchent des automations GHL sans identité connue.
-   ──────────────────────────────────────────────────────────────────────── */
+const ALLOWED_EVENTS = new Set(["hero_postal_clicked", "thermomatch_started", "thermomatch_completed", "results_viewed"]);
 
-export interface GHLEventPayload {
-  event: string;              // "hero_postal_clicked" | "thermomatch_started" | "results_viewed"
-  postalCode?: string;
-  municipality?: string;
-  province?: string;
-  zone?: string;
-  designTemp?: string;
-  quizAnswers?: Record<string, unknown>;
-  source?: string;
-  userAgent?: string;
+function sameOrigin(req: NextRequest): boolean {
+  const origin = req.headers.get("origin") ?? req.headers.get("referer") ?? "";
+  if (!origin) return false;
+  if (process.env.NODE_ENV !== "production" && /^https?:\/\/localhost(:\d+)?/.test(origin)) return true;
+  return origin.startsWith(SITE_URL);
 }
 
 export async function POST(req: NextRequest) {
+  if (!sameOrigin(req)) return NextResponse.json({ error: "Origine refusée." }, { status: 403 });
+  if (!rateLimit(req, { name: "ghl-event", limit: 30, windowMs: 10 * 60 * 1000 })) return tooManyRequests();
+
   try {
-    const body: GHLEventPayload = await req.json();
+    const body = (await req.json()) as Record<string, unknown>;
+    const event = typeof body.event === "string" ? body.event : "";
+    if (!ALLOWED_EVENTS.has(event)) return NextResponse.json({ error: "Événement inconnu." }, { status: 400 });
 
-    if (!body.event) {
-      return NextResponse.json({ error: "event requis" }, { status: 400 });
-    }
-
-    // Enrichir avec le user agent (pour analytics GHL)
     const payload = {
-      ...body,
-      userAgent: req.headers.get("user-agent") ?? "",
-      ip: req.headers.get("x-forwarded-for") ?? "",
-      referrer: req.headers.get("referer") ?? "",
+      type: "anonymous_event",
+      event,
+      source: typeof body.source === "string" ? body.source.slice(0, 40) : undefined,
+      postalCode: typeof body.postalCode === "string" ? body.postalCode.slice(0, 3).toUpperCase() : undefined, // RTA seulement
+      quizAnswers: typeof body.quizAnswers === "object" && body.quizAnswers ? body.quizAnswers : undefined,
+      at: new Date().toISOString(),
     };
-
-    // Envoyer au webhook GHL (non-bloquant)
-    sendWebhook({ type: "anonymous_event", ...payload }).catch(() => {});
-
-    // Log en dev
-    if (process.env.NODE_ENV === "development") {
-      console.log("[GHL Event]", payload);
-    }
-
+    sendWebhook(payload).catch(() => {});
     return NextResponse.json({ received: true });
-  } catch (err) {
-    console.error("[/api/ghl/event] Erreur:", err);
-    return NextResponse.json({ error: "Erreur serveur." }, { status: 500 });
+  } catch {
+    return NextResponse.json({ error: "Corps invalide." }, { status: 400 });
   }
 }

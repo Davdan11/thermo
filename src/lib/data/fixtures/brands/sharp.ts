@@ -18,7 +18,7 @@ export const sharpDataset: BrandDataset = {
   series: [
     {
       id: "series-sharp-placeholder",
-      slug: "sharp-placeholder",
+      slug: "sharp-serie-placeholder",
       name: "Série à venir",
       brandId: "sharp",
       systemType: "wall-single",

@@ -69,7 +69,7 @@ export function SubventionsClient() {
   const ddRef = useRef<HTMLDivElement>(null);
   const [filtered, setFiltered] = useState<ProductResult[]>([]);
   const [searching, setSearching] = useState(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   // Fetch products from API with debounce
   useEffect(() => {

@@ -33,14 +33,17 @@ const mitsFs12k = loadDetail("mitsubishi-fs-12k");
 
 describe("highestSeer2", () => {
   it("returns null when fewer than 2 have data", () => {
-    const result = highestSeer2([aurora18k, aurora9k]);
-    // Only aurora18k has SEER2
+    const withSeer = { ...aurora18k, configuration: { ...aurora18k.configuration!, seer2: 22 } };
+    const without = { ...aurora9k, configuration: { ...aurora9k.configuration!, seer2: null } };
+    const result = highestSeer2([withSeer, without]);
     expect(result.bestIndex).toBeNull();
     expect(result.dataCount).toBe(1);
   });
 
   it("returns null when no products have data", () => {
-    const result = highestSeer2([aurora9k, flexx36k]);
+    const a = { ...aurora9k, configuration: { ...aurora9k.configuration!, seer2: null } };
+    const b = { ...flexx36k, configuration: { ...flexx36k.configuration!, seer2: null } };
+    const result = highestSeer2([a, b]);
     expect(result.bestIndex).toBeNull();
     expect(result.dataCount).toBe(0);
   });
@@ -59,8 +62,9 @@ describe("lowestIndoorNoise", () => {
   });
 
   it("returns null when only 1 has data", () => {
-    const result = lowestIndoorNoise([aurora18k, flexx36k]);
-    // Only aurora18k has noise data
+    const withNoise = { ...aurora18k, configuration: { ...aurora18k.configuration!, noiseIndoorMinDbA: 20 } };
+    const without = { ...flexx36k, configuration: { ...flexx36k.configuration!, noiseIndoorMinDbA: null } };
+    const result = lowestIndoorNoise([withNoise, without]);
     expect(result.bestIndex).toBeNull();
     expect(result.dataCount).toBe(1);
   });
@@ -142,10 +146,10 @@ describe("computeHighlights", () => {
   });
 
   it("does not produce false winners with partial data", () => {
-    const h = computeHighlights([aurora18k, flexx36k]);
-    // SEER2: only aurora18k has it → null
+    const a = { ...aurora18k, configuration: { ...aurora18k.configuration!, seer2: 22, noiseIndoorMinDbA: 20 } };
+    const b = { ...flexx36k, configuration: { ...flexx36k.configuration!, seer2: null, noiseIndoorMinDbA: null } };
+    const h = computeHighlights([a, b]);
     expect(h.seer2.bestIndex).toBeNull();
-    // Noise: only aurora18k → null
     expect(h.noiseIndoor.bestIndex).toBeNull();
   });
 

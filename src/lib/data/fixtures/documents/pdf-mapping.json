@@ -1,0 +1,2689 @@
+{
+  "AC PRO": [
+    {
+      "serie": "4HP17 SERIES",
+      "model": "4HP17L42P-**A",
+      "url": "https://cdn.gateway.acpro.com/documents/A-Series_4HP17L_Product_Specifications.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "SPHP Series",
+      "model": "SPHP-Y-V018BB",
+      "url": "https://cdn.acpro.com/documents/SS-10184EN-C_-_SPHP-Y-V018BB_Submittal_Data_Sheet.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF"
+    },
+    {
+      "serie": "SPHP Series",
+      "model": "SPHP-Z-V018BB",
+      "url": "https://cdn.acpro.com/documents/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche produit PDF fabricant"
+    },
+    {
+      "serie": "SPHP Series",
+      "model": "SPHP-Z-V024BB",
+      "url": "https://cdn.acpro.com/documents/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche produit PDF fabricant"
+    },
+    {
+      "serie": "SPHP Series",
+      "model": "SPHP-Z-V036BB",
+      "url": "https://cdn.acpro.com/documents/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche produit PDF fabricant"
+    },
+    {
+      "serie": "SPHP Series",
+      "model": "SPHP-Z-V048BB",
+      "url": "https://cdn.acpro.com/documents/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche produit PDF fabricant"
+    },
+    {
+      "serie": "SPHP Series",
+      "model": "SPHP-Z-V060BB",
+      "url": "https://cdn.acpro.com/documents/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche produit PDF fabricant"
+    }
+  ],
+  "American Standard": [
+    {
+      "serie": "38 Series",
+      "model": "4TXK3818A10NU**",
+      "url": "https://www.americanstandardair.com/assets/product-brochures/heat-pumps/TT_10-1113-R-42_AMSD_Heat_Pump-Brochure_SV.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure officielle de gamme"
+    },
+    {
+      "serie": "GOLD 17",
+      "model": "5A6H7024A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/GOLD-17-MS-HP/5A6H7024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "GOLD 17",
+      "model": "5A6H7036A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/GOLD-17-MS-HP/5A6H7024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "GOLD 17",
+      "model": "5A6H7048A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/GOLD-17-MS-HP/5A6H7024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "GOLD 17",
+      "model": "5A6H7060A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/GOLD-17-MS-HP/5A6H7024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "PLATINUM 18",
+      "model": "5A6V8X48A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/PLATINUM-18-HP/5A6V8X48A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "Silver 15",
+      "model": "5A6H5024A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/SILVER-15-HP/5A6H5024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "Silver 15",
+      "model": "5A6H5030A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/SILVER-15-HP/5A6H5024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "Silver 15",
+      "model": "5A6H5036A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/SILVER-15-HP/5A6H5024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "Silver 15",
+      "model": "5A6H5042A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/SILVER-15-HP/5A6H5024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "Silver 15",
+      "model": "5A6H5048A1",
+      "url": "https://www.americanstandardair.com/assets/energy-guide/heat-pumps/SILVER-15-HP/5A6H5024A1000A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "EnergyGuide fabricant"
+    },
+    {
+      "serie": "Silver 16",
+      "model": "5A6H6024A1",
+      "url": "https://www.americanstandardair.com/assets/product-brochures/heat-pumps/TT_10-1113-R-42_AMSD_Heat_Pump-Brochure_SV.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure officielle de gamme"
+    },
+    {
+      "serie": "Silver 16",
+      "model": "5A6H6030A1",
+      "url": "https://www.americanstandardair.com/assets/product-brochures/heat-pumps/TT_10-1113-R-42_AMSD_Heat_Pump-Brochure_SV.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure officielle de gamme"
+    },
+    {
+      "serie": "Silver 16",
+      "model": "5A6H6036A1",
+      "url": "https://www.americanstandardair.com/assets/product-brochures/heat-pumps/TT_10-1113-R-42_AMSD_Heat_Pump-Brochure_SV.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure officielle de gamme"
+    },
+    {
+      "serie": "Silver 16",
+      "model": "5A6H6042A1",
+      "url": "https://www.americanstandardair.com/assets/product-brochures/heat-pumps/TT_10-1113-R-42_AMSD_Heat_Pump-Brochure_SV.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure officielle de gamme"
+    },
+    {
+      "serie": "Silver 16",
+      "model": "5A6H6048A1",
+      "url": "https://www.americanstandardair.com/assets/product-brochures/heat-pumps/TT_10-1113-R-42_AMSD_Heat_Pump-Brochure_SV.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure officielle de gamme"
+    },
+    {
+      "serie": "Silver 16",
+      "model": "5A6H6060A1",
+      "url": "https://www.americanstandardair.com/assets/product-brochures/heat-pumps/TT_10-1113-R-42_AMSD_Heat_Pump-Brochure_SV.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure officielle de gamme"
+    }
+  ],
+  "Bosch": [
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-24MTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-24RTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-24RTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-36MTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-36MTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-36RTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-36RTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-60MTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-60MTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-60RTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "IDS Edge",
+      "model": "BOHA-60RTB-M18S",
+      "url": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ids_edge_series_condensing_unit_product_specification_en_01.2026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    }
+  ],
+  "Daikin": [
+    {
+      "serie": "AURORA Multi",
+      "model": "3MXT24AVJU*",
+      "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-SiUS122410EA.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF 2026"
+    },
+    {
+      "serie": "AURORA Multi",
+      "model": "3MXTH24AVJU*",
+      "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-SiUS122410EA.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF 2026"
+    },
+    {
+      "serie": "AURORA Multi",
+      "model": "4MXT36AVJU*",
+      "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-SiUS122410EA.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF 2026"
+    },
+    {
+      "serie": "AURORA Multi",
+      "model": "4MXTH36AVJU*",
+      "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-SiUS122410EA.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF 2026"
+    },
+    {
+      "serie": "AURORA Multi",
+      "model": "5MXT40AVJU*",
+      "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-SiUS122410EA.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF 2026"
+    },
+    {
+      "serie": "AURORA Multi",
+      "model": "5MXTH40AVJU*",
+      "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-SiUS122410EA.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF 2026"
+    },
+    {
+      "serie": "DH5SE",
+      "model": "DH5SEA1810A*",
+      "url": "https://dwt-front-prod.daikincomfort.com/docs/default-source/dh5se/ss-dh5se-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH5SE",
+      "model": "DH5SEA2410A*",
+      "url": "https://dwt-front-prod.daikincomfort.com/docs/default-source/dh5se/ss-dh5se-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH5SE",
+      "model": "DH5SEA3010A*",
+      "url": "https://dwt-front-prod.daikincomfort.com/docs/default-source/dh5se/ss-dh5se-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH5SE",
+      "model": "DH5SEA3610A*",
+      "url": "https://dwt-front-prod.daikincomfort.com/docs/default-source/dh5se/ss-dh5se-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH5SE",
+      "model": "DH5SEA4210A*",
+      "url": "https://dwt-front-prod.daikincomfort.com/docs/default-source/dh5se/ss-dh5se-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH5SE",
+      "model": "DH5SEA4810A*",
+      "url": "https://dwt-front-prod.daikincomfort.com/docs/default-source/dh5se/ss-dh5se-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH5SE",
+      "model": "DH5SEA6010A*",
+      "url": "https://dwt-front-prod.daikincomfort.com/docs/default-source/dh5se/ss-dh5se-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH6VSA*M",
+      "model": "DH6VSA121MA*",
+      "url": "https://daikincomfort.com/docs/default-source/daikin-fit-multi-family/ss-dh6vs-mf-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH6VSA*M",
+      "model": "DH6VSA181MA*",
+      "url": "https://daikincomfort.com/docs/default-source/daikin-fit-multi-family/ss-dh6vs-mf-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH7VSA",
+      "model": "DH7VSA2410A*",
+      "url": "https://daikincomfort.com/docs/default-source/daikin-fit-heat-pump---dh7vs/ss-dh7vs-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "DH7VSA",
+      "model": "DH7VSA3610A*",
+      "url": "https://daikincomfort.com/docs/default-source/daikin-fit-heat-pump---dh7vs/ss-dh7vs-r32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "Standard Multi",
+      "model": "5MXM48AVJU*",
+      "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-SiUS122410EA.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF 2026"
+    }
+  ],
+  "Fujitsu": [
+    {
+      "serie": "AIRSTAGE H series",
+      "model": "AOUH09KMAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H series",
+      "model": "AOUH09KPAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H series",
+      "model": "AOUH12KMAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H series",
+      "model": "AOUH12KPAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H series",
+      "model": "AOUH18KPAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H series",
+      "model": "AOUH24KPAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH09KTAP1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH09KZAH1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH12KTAP1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH12KZAH1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH15KTAP1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH15KZAH1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH18KZAH1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH24KZAH1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH30KPAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    },
+    {
+      "serie": "AIRSTAGE H-Series",
+      "model": "AOUH36KPAS1",
+      "url": "https://www.fujitsugeneral.com/us/resources/pdf/support/downloads/pdf-fcus-support-ctlg-626fg2028-2026-03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF"
+    }
+  ],
+  "GE Appliances": [
+    {
+      "serie": "Altitude Single",
+      "model": "1G09AD2BE**",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Altitude Single",
+      "model": "1G12AD2BE**",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Altitude Single",
+      "model": "1G18AD2BE**",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Connect 2026",
+      "model": "NS15H18HA5***",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Connect 2026",
+      "model": "NS15H24HA5***",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Connect 2026",
+      "model": "NS15H30HA5***",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Connect",
+      "model": "NS18H24HA5***",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Connect",
+      "model": "NS18H36HA5***",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Connect",
+      "model": "NS18H60HA5***",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Endure Single",
+      "model": "1G09ED2BE**",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Endure Single",
+      "model": "1G12ED2BE**",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "Endure Single",
+      "model": "1G18ED2BE**",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "MRV 7S",
+      "model": "MWHQ036NC2AA*",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "MRV 7S",
+      "model": "MWHQ048NC2AA*",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    },
+    {
+      "serie": "MRV 7S",
+      "model": "MWHQ060NC2AA*",
+      "url": "https://www.geapplianceshvacandwater.ca/content/pdf/26-U2201_GE_Ductless_homeowner_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant Canada"
+    }
+  ],
+  "Goodman": [
+    {
+      "serie": "GZV7SA",
+      "model": "GZV7SA2410A*",
+      "url": "https://apps.goodmanmfg.com/brochures/files/68ee64f3ed182SS-GZV7S-R32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "GZV7SA",
+      "model": "GZV7SA3610A*",
+      "url": "https://apps.goodmanmfg.com/brochures/files/68ee64f3ed182SS-GZV7S-R32.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    }
+  ],
+  "GREE": [
+    {
+      "serie": "FLEXX High-efficiency Series",
+      "model": "GUD36W/A-D(U)",
+      "url": "https://www.greecomfort.com/assets/our-products/flexx/documents/flexx-sales-brochure-a.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Free match | M-Series",
+      "model": "GS6M60HP230V1MO",
+      "url": "https://www.greecomfort.com/assets/our-products/multi-r32/documents/multi-r32-submittal-60mbh-a.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF"
+    },
+    {
+      "serie": "Free match | M-Series",
+      "model": "GWHD(60)ND6MO",
+      "url": "https://www.greecomfort.com/assets/our-products/multi-r32/documents/multi-r32-submittal-60mbh-a.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF"
+    },
+    {
+      "serie": "Free match | M-Series",
+      "model": "MUL60HP230V1R32AO",
+      "url": "https://www.greecomfort.com/assets/our-products/multi-r32/documents/multi-r32-submittal-60mbh-a.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF"
+    },
+    {
+      "serie": "Multi Zone Outdoor",
+      "model": "WLWHD(18)ND3PO",
+      "url": "https://truenorthbygree.ca/wp-content/uploads/2025/12/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF officielle régionale"
+    },
+    {
+      "serie": "Multi Zone Outdoor",
+      "model": "WLWHD(24)ND3MO",
+      "url": "https://truenorthbygree.ca/wp-content/uploads/2025/12/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF officielle régionale"
+    },
+    {
+      "serie": "Multi Zone Outdoor",
+      "model": "WLWHD(30)ND3MO",
+      "url": "https://truenorthbygree.ca/wp-content/uploads/2025/12/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF officielle régionale"
+    },
+    {
+      "serie": "Multi Zone Outdoor",
+      "model": "WLWHD(36)ND3MO",
+      "url": "https://truenorthbygree.ca/wp-content/uploads/2025/12/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF officielle régionale"
+    },
+    {
+      "serie": "Multi Zone Outdoor",
+      "model": "WLWHD(42)ND3MO",
+      "url": "https://truenorthbygree.ca/wp-content/uploads/2025/12/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF officielle régionale"
+    }
+  ],
+  "Heil": [
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH18AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH24AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH30AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH36AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH18AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH24AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH30AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH36AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/05/DLS-045-HL-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    }
+  ],
+  "Hisense": [
+    {
+      "serie": "HI-EDGE",
+      "model": "AO-09U3R25E",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HI-EDGE",
+      "model": "AO-09U3R26E2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HI-EDGE",
+      "model": "AO-18U3R25E",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HI-EDGE",
+      "model": "AO-18U3R26E2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HI-EDGE",
+      "model": "AO-30U3R25E",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HI-EDGE",
+      "model": "AO-30U3R26E2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-PRO",
+      "model": "AO-09U3T25P",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-PRO",
+      "model": "AO-09U3T26P2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-PRO",
+      "model": "AO-12U3T25P",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-PRO",
+      "model": "AO-12U3T26P2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-PRO",
+      "model": "AO-15U3T25P",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-PRO",
+      "model": "AO-15U3T26P2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-Pro",
+      "model": "AS-09UW3TBW00",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-Pro",
+      "model": "AS-12UW3TBW00",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-Pro",
+      "model": "AS-15UW3TBW00",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-09U3T25U",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-09U3T26U2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-12U3T25U",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-12U3T26U2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-18U3T25U",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-18U3T26U2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-24U3T25U",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Hi-ULTRA",
+      "model": "AO-24U3T26U2",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HiULTRA",
+      "model": "AS-09UW1TXU00",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HiULTRA",
+      "model": "AS-12UW1TXU00",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "HiULTRA",
+      "model": "AS-30UW3RKZ00",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "SmartSense",
+      "model": "AO-09U3R26SS",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "SmartSense",
+      "model": "AO-18U3R26SS",
+      "url": "https://www.hisensecomfort.com/professionals/upload/accessory/20254/R454B%20Hi%20PRO%20Wall%20Mount%209K.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Submittal PDF fabricant"
+    }
+  ],
+  "Innovair": [
+    {
+      "serie": "Corvus",
+      "model": "PXV36H2A*",
+      "url": "https://innovair.com/wp-content/uploads/2025/06/Innovair-CORVUS-Package-Uniter-Submittals-125A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF"
+    },
+    {
+      "serie": "MOS Series",
+      "model": "MOS18H2BH0A",
+      "url": "https://innovair.com/wp-content/uploads/2026/03/Innovair-M4-Floor-Ceiling-Heat-Pump-System-Submittals_0326A-1.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF 2026"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS09H1BM5A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS09H2BH0A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS12H1BM5A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS12H2BH0A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS12H2BM0A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS18H2BH0A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS18H2BM0A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS24H2BH0A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Q4+",
+      "model": "QOS24H2BM0A",
+      "url": "https://innovair.com/wp-content/uploads/2024/11/Innovair-Q4-Heat-Pump-Mni-Split-Brochure-10.24B.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    },
+    {
+      "serie": "Titan",
+      "model": "TPV24H2XA",
+      "url": "https://innovair.com/wp-content/uploads/2026/06/Innovair-Titan-Inverter-Package-Unit-Submittals-0626C.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Titan",
+      "model": "TPV36H2XA",
+      "url": "https://innovair.com/wp-content/uploads/2026/06/Innovair-Titan-Inverter-Package-Unit-Submittals-0626C.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Titan",
+      "model": "TPV48H2XA",
+      "url": "https://innovair.com/wp-content/uploads/2026/06/Innovair-Titan-Inverter-Package-Unit-Submittals-0626C.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "Titan",
+      "model": "TPV60H2XA",
+      "url": "https://innovair.com/wp-content/uploads/2026/06/Innovair-Titan-Inverter-Package-Unit-Submittals-0626C.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF fabricant"
+    }
+  ],
+  "Johnson Controls": [
+    {
+      "serie": "LX SERIES",
+      "model": "HH836E2S11",
+      "url": "https://tigard.yorknow.com/pub/media/documentation/hh8_techguide.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "HH860E2S11",
+      "url": "https://tigard.yorknow.com/pub/media/documentation/hh8_techguide.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide technique PDF"
+    }
+  ],
+  "Keeprite": [
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH18AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH24AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH30AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH36AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH18AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH24AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH30AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH36AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/03/DLS-045-KR-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    }
+  ],
+  "Lennox": [
+    {
+      "serie": "4-Way Cassette (WindFree™) DLX",
+      "model": "MMPD036S6S-1P",
+      "url": "https://www.lennox.com/dA/4c7b25a116/sbmtl_mmpd036s6s-1p_mmd036s6-1p_2501.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "4-Way Cassette (WindFree™) DLX",
+      "model": "MMPD048S6S-1P",
+      "url": "https://www.lennox.com/dA/4c7b25a116/sbmtl_mmpd036s6s-1p_mmd036s6-1p_2501.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Submittal PDF fabricant"
+    },
+    {
+      "serie": "4-Way Cassette (WindFree™) Maxheat",
+      "model": "MMLD036S6S-1P",
+      "url": "https://www.lennox.com/dA/2d38d38e7c/ehb_mmld_single_outdoor_2503.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF fabricant"
+    },
+    {
+      "serie": "4-Way Cassette (WindFree™) Maxheat",
+      "model": "MMLD048S6S-1P",
+      "url": "https://www.lennox.com/dA/2d38d38e7c/ehb_mmld_single_outdoor_2503.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF fabricant"
+    },
+    {
+      "serie": "Elite EL21KLV SERIES",
+      "model": "EL21KLV-036-230A**",
+      "url": "https://www.lennox.com/dA/2dc8e19589/ehb_el21klv_2606.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "Elite EL21KLV SERIES",
+      "model": "EL21KLV-048-230A**",
+      "url": "https://www.lennox.com/dA/2dc8e19589/ehb_el21klv_2606.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "High-Wall - Premium (CAC)",
+      "model": "MMLD036S6S-1P",
+      "url": "https://www.lennox.com/dA/2d38d38e7c/ehb_mmld_single_outdoor_2503.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF fabricant"
+    },
+    {
+      "serie": "WindFree™ High-Wall - Premium (CAC)",
+      "model": "MMLD018S6S-1P",
+      "url": "https://www.lennox.com/dA/2d38d38e7c/ehb_mmld_single_outdoor_2503.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF fabricant"
+    },
+    {
+      "serie": "WindFree™ High-Wall - Premium (CAC)",
+      "model": "MMLD024S6S-1P",
+      "url": "https://www.lennox.com/dA/2d38d38e7c/ehb_mmld_single_outdoor_2503.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF fabricant"
+    }
+  ],
+  "LG": [
+    {
+      "serie": "KUSXA121A",
+      "model": "KUSXA121A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA121A",
+      "model": "KUSXA121A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA181A",
+      "model": "KUSXA181A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA181A",
+      "model": "KUSXA181A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA241A",
+      "model": "KUSXA241A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA241A",
+      "model": "KUSXA241A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA301A",
+      "model": "KUSXA301A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA301A",
+      "model": "KUSXA301A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA361A",
+      "model": "KUSXA361A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA361A",
+      "model": "KUSXA361A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA421A",
+      "model": "KUSXA421A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA422A",
+      "model": "KUSXA422A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA422A",
+      "model": "KUSXA422A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA481A",
+      "model": "KUSXA481A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA482A",
+      "model": "KUSXA482A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXA482A",
+      "model": "KUSXA482A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB091A",
+      "model": "KUSXB091A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB121A",
+      "model": "KUSXB121A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB121A",
+      "model": "KUSXB121A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB181A",
+      "model": "KUSXB181A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB181A",
+      "model": "KUSXB181A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB241A",
+      "model": "KUSXB241A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB241A",
+      "model": "KUSXB241A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB301A",
+      "model": "KUSXB301A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB301A",
+      "model": "KUSXB301A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB361A",
+      "model": "KUSXB361A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB361A",
+      "model": "KUSXB361A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB421A",
+      "model": "KUSXB421A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB421A",
+      "model": "KUSXB421A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB481A",
+      "model": "KUSXB481A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB481A",
+      "model": "KUSXB481A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB601A",
+      "model": "KUSXB601A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    },
+    {
+      "serie": "KUSXB601A",
+      "model": "KUSXB601A",
+      "url": "https://media.us.lg.com/m/3cf7b9830b0023a9/original/R-410A-to-R-32-Model-Numbers-02-2025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Table de correspondance PDF fabricant"
+    }
+  ],
+  "Luxaire": [
+    {
+      "serie": "LX SERIES",
+      "model": "HH824E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_HH8series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "HH824E2S12",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_HH8series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "HH836E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_HH8series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "HH836E2S12",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_HH8series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "HH860E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_HH8series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "HH860E2S12",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_HH8series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "XH518E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_XH5series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "XH524E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_XH5series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "XH536E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_XH5series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "XH548E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_XH5series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "XH560E2S11",
+      "url": "https://s3.amazonaws.com/fam.s3.2/damprod/Original/10159/luxaire_XH5series_heatpump_spec.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    }
+  ],
+  "Midea": [
+    {
+      "serie": "ATOM X",
+      "model": "MDV-V24WMN10T(B)",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652051355680837.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF fabricant"
+    },
+    {
+      "serie": "ATOM X",
+      "model": "MDV-V30WMN10T",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652051355680837.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF fabricant"
+    },
+    {
+      "serie": "ATOM X",
+      "model": "MDV-V36WMN10T-H",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652051355680837.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF fabricant"
+    },
+    {
+      "serie": "ATOM X",
+      "model": "MDV-V36WMN10T(B)",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652051355680837.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF fabricant"
+    },
+    {
+      "serie": "ATOM X",
+      "model": "MDV-V36WMN10T",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652051355680837.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF fabricant"
+    },
+    {
+      "serie": "ATOM X",
+      "model": "MDV-V60WMN10T(B)",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652051355680837.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF fabricant"
+    },
+    {
+      "serie": "M152H",
+      "model": "MOVA-42HN10-M152L",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652011735310405.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MDV Series",
+      "model": "MDV-V36WMN10T-H",
+      "url": "https://hvac.midea.com/resources/file/2025/03/07/652051355680837.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Catalogue technique PDF fabricant"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1AE-H24B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1AE-H30B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1AE-H48B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1AE-H60B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1BE-H18B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1BE-H24B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1BE-H30B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1BE-H36B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1BE-H36B-2B",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1BE-H48B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1BE-H60B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1ES-H15B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1HE-H18B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1HE-H24B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1HE-H30B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1HE-H48B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1HE-H60B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1HS-H15B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO1 Series",
+      "model": "MO1SE-H36B-2A",
+      "url": "https://www.mideacomfort.us/images/new/literature/EVOX%20G3.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "MO4 Series",
+      "model": "MO4EX-H27B-2B",
+      "url": "https://www.mideacomfort.us/pdf/new/Leaflet_Multi-zone_2025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Fiche multi-zone fabricant"
+    }
+  ],
+  "Mitsubishi Electric": [
+    {
+      "serie": "City Multi",
+      "model": "PUMY-HL36NKMU***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/Multi-Zone%20Compatibility%20Reference%20Guide%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide compatibilité PDF"
+    },
+    {
+      "serie": "City Multi",
+      "model": "PUMY-HL42NKMU***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/Multi-Zone%20Compatibility%20Reference%20Guide%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide compatibilité PDF"
+    },
+    {
+      "serie": "City Multi",
+      "model": "PUMY-HL48NKMU***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/Multi-Zone%20Compatibility%20Reference%20Guide%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide compatibilité PDF"
+    },
+    {
+      "serie": "City Multi",
+      "model": "PUMY-HL60NKMU***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/Multi-Zone%20Compatibility%20Reference%20Guide%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide compatibilité PDF"
+    },
+    {
+      "serie": "City Multi",
+      "model": "PUMY-L36NKMU***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/Multi-Zone%20Compatibility%20Reference%20Guide%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide compatibilité PDF"
+    },
+    {
+      "serie": "City Multi",
+      "model": "PUMY-L48NKMU***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/Multi-Zone%20Compatibility%20Reference%20Guide%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide compatibilité PDF"
+    },
+    {
+      "serie": "City Multi",
+      "model": "PUMY-L60NKMU***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/Multi-Zone%20Compatibility%20Reference%20Guide%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Guide compatibilité PDF"
+    },
+    {
+      "serie": "M series",
+      "model": "SUZ-AK30NLHZ***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/SM_PUZ_SUZ-AK24_48NLHZ_OCH870A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF"
+    },
+    {
+      "serie": "M series",
+      "model": "SUZ-AK36NLHZ***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/SM_PUZ_SUZ-AK24_48NLHZ_OCH870A.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel service PDF"
+    },
+    {
+      "serie": "M-Series",
+      "model": "MUZ-HX18NL***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/SM_MSZ-HX09_24NL-CA1_OBH965A_FR.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel technique PDF"
+    },
+    {
+      "serie": "M-Series",
+      "model": "MUZ-HX18NLH2***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/SM_MSZ-HX09_24NL-CA1_OBH965A_FR.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel technique PDF"
+    },
+    {
+      "serie": "M-Series",
+      "model": "MUZ-HX24NL***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/SM_MSZ-HX09_24NL-CA1_OBH965A_FR.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel technique PDF"
+    },
+    {
+      "serie": "M-Series",
+      "model": "MUZ-HX24NLH2***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/SM_MSZ-HX09_24NL-CA1_OBH965A_FR.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel technique PDF"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-HP36NKMU2***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-HP36NKMU2",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-HP42NKMU2***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-HP42NKMU2",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-HP48NKMU2***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-HP48NKMU2",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P36NKMU3***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P36NKMU4***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P36NKMU4",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P48NKMU3***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P48NKMU4***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P48NKMU4",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P60NKMU3***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P60NKMU4***",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    },
+    {
+      "serie": "S-Series",
+      "model": "PUMY-P60NKMU4",
+      "url": "https://www.mitsubishitechinfo.ca/sites/default/files/DB_PUMY-%28H%29P-NKMU%282%29%284%29_M-P0891A_202309.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Databook PDF fabricant"
+    }
+  ],
+  "MOOVAIR": [
+    {
+      "serie": "MSH Series",
+      "model": "MSHEA09C2AN*",
+      "url": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "MSH Series",
+      "model": "MSHEA12C2AN*",
+      "url": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "MSH Series",
+      "model": "MSHEA18C2AN*",
+      "url": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "MSH Series",
+      "model": "MSHMA09C2AN*",
+      "url": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "MSH Series",
+      "model": "MSHMA12C2AN*",
+      "url": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "MSH Series",
+      "model": "MSHMA18C2AN*",
+      "url": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    }
+  ],
+  "Napoleon": [
+    {
+      "serie": "F Series",
+      "model": "WSEHV2436BA1-C",
+      "url": "https://www.napoleon.com/sites/default/files/hvac_products/R454B%20%20R410A%20Heat%20Pump%20-Tech%20Sheet_DIGITAL.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "F Series",
+      "model": "WSEHV2436BA1-N",
+      "url": "https://www.napoleon.com/sites/default/files/hvac_products/R454B%20%20R410A%20Heat%20Pump%20-Tech%20Sheet_DIGITAL.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "F Series",
+      "model": "WSEHV4860BA1-N",
+      "url": "https://www.napoleon.com/sites/default/files/hvac_products/R454B%20%20R410A%20Heat%20Pump%20-Tech%20Sheet_DIGITAL.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    }
+  ],
+  "PAYNE HEATING AND COOLING": [
+    {
+      "serie": "Crossover Heat Pump",
+      "model": "37MUHAQ36AA3+KSAIC0701230",
+      "url": "https://www.shareddocs.com/hvac/docs/1010/Public/00/01-DLS-048-PY-01.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant"
+    }
+  ],
+  "QuébecVair": [
+    {
+      "serie": "CENTRAL",
+      "model": "QVCOND24/36KR32",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f505c6fdf5aff22fbe5_NEW%20DESIGN-QcVair-Centrale-WEB.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "CENTRAL",
+      "model": "QVCOND48/60KR32",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f505c6fdf5aff22fbe5_NEW%20DESIGN-QcVair-Centrale-WEB.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "CHARMO R32",
+      "model": "QVCH09*R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c15118f6ccb79e82c105f5_EVO-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "CHARMO R32",
+      "model": "QVCH12*R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c15118f6ccb79e82c105f5_EVO-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "CHARMO R32",
+      "model": "QVCH18*R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c15118f6ccb79e82c105f5_EVO-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "CHARMO R32",
+      "model": "QVCH24*R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c15118f6ccb79e82c105f5_EVO-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "KIT (BORÉAL) (CLIVIA)",
+      "model": "QVBO*12R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f29a39472edccb93097_BOREAL-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "KIT (BORÉAL) (CLIVIA)",
+      "model": "QVBO*18R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f29a39472edccb93097_BOREAL-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "KIT (BORÉAL) (CLIVIA)",
+      "model": "QVBO*24R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f29a39472edccb93097_BOREAL-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "KIT (NORDIC) (AIRY)",
+      "model": "QVNO*12R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f210860759a0dc84a06_NORDIC-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "KIT (NORDIC) (AIRY)",
+      "model": "QVNO*18R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f210860759a0dc84a06_NORDIC-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "KIT (NORDIC) (AIRY)",
+      "model": "QVNO*24R32O",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69b43f210860759a0dc84a06_NORDIC-WEB.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "Multi",
+      "model": "QVMZ18*R32",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c151e0aeb47bace9094c02_MULTI-WEB.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "Multi",
+      "model": "QVMZ24*R32",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c151e0aeb47bace9094c02_MULTI-WEB.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "Multi",
+      "model": "QVMZ30*R32",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c151e0aeb47bace9094c02_MULTI-WEB.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "Multi",
+      "model": "QVMZ36*R32",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c151e0aeb47bace9094c02_MULTI-WEB.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF FR"
+    },
+    {
+      "serie": "Multi",
+      "model": "QVMZ42*R32",
+      "url": "https://cdn.prod.website-files.com/697e129dc46ac70885c062de/69c151e0aeb47bace9094c02_MULTI-WEB.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF FR"
+    }
+  ],
+  "Rheem": [
+    {
+      "serie": "Classic Plus",
+      "model": "RP17AY24AJVC",
+      "url": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/RHM6044-2026-ACD-Rheem-Consumer-Literature-Heat-Pump-RP17AY-R3a-Digtial.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "Classic Plus",
+      "model": "RP17AY36AJVC",
+      "url": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/RHM6044-2026-ACD-Rheem-Consumer-Literature-Heat-Pump-RP17AY-R3a-Digtial.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "Classic Plus",
+      "model": "RP17AY48AJVC",
+      "url": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/RHM6044-2026-ACD-Rheem-Consumer-Literature-Heat-Pump-RP17AY-R3a-Digtial.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    },
+    {
+      "serie": "Classic Plus",
+      "model": "RP17AY60AJVC",
+      "url": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/RHM6044-2026-ACD-Rheem-Consumer-Literature-Heat-Pump-RP17AY-R3a-Digtial.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF 2026"
+    }
+  ],
+  "RunTru": [
+    {
+      "serie": "23U Series",
+      "model": "M5THS2309A11NA*",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/DLR-SVX026A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "23U Series",
+      "model": "M5THS2312A11NA*",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/DLR-SVX026A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "23U Series",
+      "model": "M5THS2318A11NA*",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/DLR-SVX026A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "23U Series",
+      "model": "M5THS2324A11NA*",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/DLR-SVX026A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    }
+  ],
+  "Ruud": [
+    {
+      "serie": "ACHIEVER SERIES | Achiever",
+      "model": "RP14AY42AJ2N",
+      "url": "https://media.ruud.com/blobazrheem/wp-content/uploads/sites/2/2024/05/Ruud_HP_RP14AY_R2b-Digital.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF"
+    }
+  ],
+  "Senville": [
+    {
+      "serie": "SEN Series",
+      "model": "SENDC-48HF-OG",
+      "url": "https://senville.com/content/manuals/central/central-owner-manual.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel PDF"
+    }
+  ],
+  "TCL": [
+    {
+      "serie": "BreezeIN R32 23S",
+      "model": "H09SBH23BQC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "BreezeIN R32 23S",
+      "model": "H09SBH23XQC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "BreezeIN R32 23S",
+      "model": "H12SBH23BQC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "BreezeIN R32 23S",
+      "model": "H12SBH24XQC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "BreezeIN R32 23S",
+      "model": "H18SBH23XQC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "BreezeIN R32 23S",
+      "model": "H24SBH23XQC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "Front return",
+      "model": "H18TDHXPC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/advantage/Advantage%20HVAC%20SpecSheet%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure technique PDF"
+    },
+    {
+      "serie": "Front return",
+      "model": "H24TDHXPC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/advantage/Advantage%20HVAC%20SpecSheet%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure technique PDF"
+    },
+    {
+      "serie": "Front return",
+      "model": "H30TDHXPC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/advantage/Advantage%20HVAC%20SpecSheet%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure technique PDF"
+    },
+    {
+      "serie": "Front return",
+      "model": "H36TDHXPC",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/advantage/Advantage%20HVAC%20SpecSheet%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure technique PDF"
+    },
+    {
+      "serie": "R32-Cassette-21S",
+      "model": "TSH09HDI2NAJ0X25",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "R32-Cassette-21S",
+      "model": "TSH24HDI2NAJ0X25",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Fiche technique PDF"
+    },
+    {
+      "serie": "R32-Duct-21S",
+      "model": "TSH09HDI2NAJ0X25",
+      "url": "https://www.tcl.com/usca/content/dam/tcl/product/hvac/documents/light-commercial/Light%20Commercial%20HVAC%20Spec%20Sheet%202025.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Fiche technique PDF"
+    }
+  ],
+  "Tempstar": [
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH18AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH24AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH30AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CUHAH36AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH18AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH24AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH30AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    },
+    {
+      "serie": "D5C Series",
+      "model": "D5CURAH36AAK",
+      "url": "https://www.shareddocs.com/hvac/docs/1011/Public/00/DLS-053-TS-00.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF de marque"
+    }
+  ],
+  "TOSOT": [
+    {
+      "serie": "Charmo",
+      "model": "SU-COSMO12-230/O",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Charmo",
+      "model": "SU-COSMO24-230/O",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Charmo",
+      "model": "SU-COSMO30-230/O",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Charmo",
+      "model": "TWH12CA32AO",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Charmo",
+      "model": "TWH12JD32AO",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Charmo",
+      "model": "TWH12R32DO",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Charmo",
+      "model": "TWH18R32DO",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "DC inverter rooftop unit",
+      "model": "KH05TCNHA",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "E Series",
+      "model": "TU18-R32WEDU",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "E Series",
+      "model": "TU24-R32WEDU",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "E Series",
+      "model": "TU48-R32WEDU",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "E Series",
+      "model": "TUD18-12W2/NHE-D(U)",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "E Series",
+      "model": "TUD36-24W2/NHE-D(U)",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "E Series",
+      "model": "TUD60-48W2/NHE-D(U)",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Free match | M-Series",
+      "model": "TGWHD-60ND",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Free match | M-Series",
+      "model": "TM60WH21MO",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Free match | M-Series",
+      "model": "TMH60D32MO",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Free match | M-Series",
+      "model": "TMSCI7H4R60",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "G Series",
+      "model": "TUD30-24W2/NHG-D(U)",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "G Series",
+      "model": "TUD36-36W2/NHG-D(U)",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "G Series",
+      "model": "TUD60-48W2/NHG-D(U)",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    },
+    {
+      "serie": "Pular",
+      "model": "TWH12JD32BO",
+      "url": "https://cdn.prod.website-files.com/69b5027b5ea007adabfb305d/69c444f787eee950f185b76d_TOSOT%20Full%20Product%20Catalog%202026.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Catalogue fabricant PDF 2026"
+    }
+  ],
+  "Trane": [
+    {
+      "serie": "16 Single-Stage Heat Pump with WeatherGuard Top",
+      "model": "5TWX6024A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX022A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump with WeatherGuard Top",
+      "model": "5TWX6030A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX022A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump with WeatherGuard Top",
+      "model": "5TWX6036A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX022A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump with WeatherGuard Top",
+      "model": "5TWX6042A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX022A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump with WeatherGuard Top",
+      "model": "5TWX6048A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX022A-EN_12132025.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump",
+      "model": "5TWR6024A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX024B-EN_04172026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump",
+      "model": "5TWR6030A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX024B-EN_04172026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump",
+      "model": "5TWR6036A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX024B-EN_04172026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump",
+      "model": "5TWR6042A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX024B-EN_04172026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump",
+      "model": "5TWR6048A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX024B-EN_04172026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    },
+    {
+      "serie": "16 Single-Stage Heat Pump",
+      "model": "5TWR6060A1",
+      "url": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Installation%20Operation%20and%20Maintenance/ODR-SVX024B-EN_04172026.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Manuel IOM fabricant"
+    }
+  ],
+  "York": [
+    {
+      "serie": "HMH7",
+      "model": "HMH72B341",
+      "url": "https://www.yorknow.com/pub/media/documentation/hmh7tech.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH518E2S11",
+      "url": "https://fife.yorknow.com/pub/media/documentation/yh5_brochure.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure de ligne PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH524E2S11",
+      "url": "https://fife.yorknow.com/pub/media/documentation/yh5_brochure.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure de ligne PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH536E2S11",
+      "url": "https://fife.yorknow.com/pub/media/documentation/yh5_brochure.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure de ligne PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH548E2S11",
+      "url": "https://fife.yorknow.com/pub/media/documentation/yh5_brochure.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure de ligne PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH560E2S11",
+      "url": "https://fife.yorknow.com/pub/media/documentation/yh5_brochure.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure de ligne PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH618E2S11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yh6_techguide.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH624E2S11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yh6_techguide.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH630E2S11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yh6_techguide.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH636E2S11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yh6_techguide.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH648E2S11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yh6_techguide.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH660E2S11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yh6_techguide.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Guide technique PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH936E2C11",
+      "url": "https://fife.yorknow.com/pub/media/documentation/yh5_brochure.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure de ligne PDF"
+    },
+    {
+      "serie": "LX SERIES",
+      "model": "YH960E2C11",
+      "url": "https://fife.yorknow.com/pub/media/documentation/yh5_brochure.pdf",
+      "confidence": "Moyenne",
+      "doc_type": "Brochure de ligne PDF"
+    },
+    {
+      "serie": "YD5",
+      "model": "YD524E2D11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yd5_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant"
+    },
+    {
+      "serie": "YD5",
+      "model": "YD536E2D11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yd5_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant"
+    },
+    {
+      "serie": "YD5",
+      "model": "YD560E2D11",
+      "url": "https://www.yorknow.com/pub/media/documentation/yd5_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant"
+    },
+    {
+      "serie": "YDV",
+      "model": "YDV36E2D11",
+      "url": "https://www.yorknow.com/pub/media/documentation/ydv_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant"
+    },
+    {
+      "serie": "YDV",
+      "model": "YDV60E2D11",
+      "url": "https://www.yorknow.com/pub/media/documentation/ydv_brochure.pdf",
+      "confidence": "Élevée",
+      "doc_type": "Brochure PDF fabricant"
+    }
+  ]
+}

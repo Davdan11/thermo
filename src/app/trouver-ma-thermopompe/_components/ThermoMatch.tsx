@@ -106,7 +106,7 @@ interface PostalTextInputProps {
   value: string;
   placeholder: string;
   error: string | null;
-  inputRef: React.RefObject<HTMLInputElement>;
+  inputRef: React.RefObject<HTMLInputElement | null>;
   onChange: (raw: string) => void;
   onEnter: () => void;
 }

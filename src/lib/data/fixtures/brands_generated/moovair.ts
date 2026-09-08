@@ -40,6 +40,7 @@ export const brand_moovairDataset: BrandDataset = {
       ],
       "description": "Série MSH Series de MOOVAIR",
       "imageUrl": "/images/series/moovair-moovair-msh-series.jpg",
+      "brochureUrl": "/documents/brochures/moovair/msh-series.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

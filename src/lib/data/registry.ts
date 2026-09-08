@@ -87,13 +87,27 @@ function mergeDatasets(auto: BrandDataset, manual: BrandDataset): BrandDataset {
     return true;
   });
 
+  // Une série manuelle (curée) remplace la série auto qui porte le même slug :
+  // les modèles auto sont rattachés à la série manuelle et la série auto disparaît.
+  const manualSeriesBySlug = new Map(manual.series.map((s) => [s.slug, s]));
+  const autoSeriesRemap = new Map<string, string>();
+  const autoSeriesFiltered = auto.series.filter((s) => {
+    const m = manualSeriesBySlug.get(s.slug);
+    if (m && m.id !== s.id) { autoSeriesRemap.set(s.id, m.id); return false; }
+    return true;
+  });
+  for (const m of autoModelsFiltered) {
+    const target = autoSeriesRemap.get(m.seriesId);
+    if (target) m.seriesId = target;
+  }
+
   const validAutoModelIds = new Set(autoModelsFiltered.map(m => m.id));
   const autoConfigsFiltered = auto.configurations.filter(c => validAutoModelIds.has(c.modelId));
 
   return {
     brand: manual.brand.description ? manual.brand : auto.brand,
     sources: [...(auto.sources || []), ...(manual.sources || [])],
-    series: dedup(auto.series, manual.series),
+    series: dedup(autoSeriesFiltered, manual.series),
     models: dedup(autoModelsFiltered, manual.models),
     outdoorUnits: dedup(auto.outdoorUnits, manual.outdoorUnits),
     indoorUnits: dedup(auto.indoorUnits, manual.indoorUnits),

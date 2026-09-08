@@ -1,134 +1,116 @@
+/* ==================================================================
+   POST /api/leads — formulaire de soumission (seul point d'entrée actif)
+
+   - validation Zod (src/lib/validation/lead.ts), pot de miel, limite de débit
+   - consentement Loi 25 obligatoire, horodaté et consigné dans le CRM
+   - toute valeur utilisateur est échappée avant insertion dans la note HTML
+   - alerte interne par courriel + courriel de bienvenue au client
+   ================================================================== */
+
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { findOrCreatePerson, createDeal, PIPEDRIVE_FIELDS, createNote } from "@/lib/crm/pipedrive";
 import { getTerritoryFromPostalCode } from "@/lib/crm/territory";
-import { sendClientWelcomeEmail } from "@/lib/crm/email";
-
-export interface LeadPayload {
-  // Identité
-  firstName: string;
-  lastName?: string;
-  email: string;
-  phone: string;
-  postalCode?: string;
-
-  // Projet
-  typeThermopompe?: string;
-  superficie?: string;
-  chauffageActuel?: string;
-  urgence?: string;
-  modeleSelectionne?: string;
-  budgetEstime?: string;
-
-  // Localisation résolue
-  municipality?: string;
-  province?: string;
-  zoneClimatique?: string;
-  designTempC?: string;
-
-  // Extras
-  notes?: string;
-  source?: string;
-  draft?: any;
-}
+import { sendClientWelcomeEmail, sendInternalLeadAlert } from "@/lib/crm/email";
+import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
+import { escapeHtml } from "@/lib/security/escape";
+import { rateLimit, tooManyRequests, clientIp } from "@/lib/security/rate-limit";
+import { createHash } from "node:crypto";
 
 export async function POST(req: NextRequest) {
+  if (!rateLimit(req, { name: "leads", limit: 5, windowMs: 10 * 60 * 1000 })) return tooManyRequests();
+
+  let json: unknown;
   try {
-    const lead: LeadPayload = await req.json();
+    json = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Corps de requête invalide." }, { status: 400 });
+  }
 
-    // Validation minimale
-    if (!lead.firstName || (!lead.email && !lead.phone)) {
-      return NextResponse.json(
-        { error: "Prénom et (email ou téléphone) requis." },
-        { status: 400 }
-      );
-    }
+  const parsed = leadSchema.safeParse(json);
+  if (!parsed.success) {
+    const first = parsed.error.issues[0];
+    // Le pot de miel rempli ressemble à un succès pour le robot, sans rien créer.
+    if (first?.path?.[0] === "website") return NextResponse.json({ success: true });
+    return NextResponse.json({ error: first?.message ?? "Données invalides.", field: first?.path?.[0] ?? null }, { status: 400 });
+  }
+  const lead = parsed.data;
 
+  try {
     const territory = lead.postalCode ? getTerritoryFromPostalCode(lead.postalCode) : "Autre";
+    const consentAt = new Date().toISOString();
+    // Empreinte non réversible de l'IP : preuve de consentement sans conserver l'adresse en clair.
+    const ipHash = createHash("sha256").update(clientIp(req)).digest("hex").slice(0, 16);
 
-    // Extraire les données du ThermoMatch depuis le 'draft' (s'il est passé)
-    const draft = lead.draft || {};
-    const tmResult = draft.thermoMatchResult || {};
-    
-    let marque = lead.modeleSelectionne || "Aucune";
-    let serie = "Aucune";
-    let btu = lead.superficie ? (parseInt(lead.superficie.replace(/\D/g,'')) * 12).toString() : "0";
-    let subvention = "Inconnue";
+    const marque = lead.modeleSelectionne ?? "Aucune sélection";
+    const btu = lead.superficie ? String(parseInt(lead.superficie.replace(/\D/g, ""), 10) * 15 || "") : "";
 
-    if (tmResult.bestMatch) {
-      marque = tmResult.bestMatch.brand || marque;
-      serie = tmResult.bestMatch.series || "Aucune";
-      btu = tmResult.recommendedBtu?.toString() || btu;
-      subvention = tmResult.logisvertDetails?.totalAmount?.toString() || "Inconnue";
-    }
+    const person = await findOrCreatePerson(lead.email ?? "", lead.phone ?? "", lead.firstName, lead.lastName ?? "");
 
-    // 1. Trouver ou Créer le Contact Pipedrive
-    const person = await findOrCreatePerson(
-      lead.email, 
-      lead.phone, 
-      lead.firstName, 
-      lead.lastName || ""
-    );
-
-    // 2. Créer le Deal
     const customFields = {
       [PIPEDRIVE_FIELDS.REGION]: territory,
-      [PIPEDRIVE_FIELDS.SOURCE]: lead.source || "soumission-page",
-      [PIPEDRIVE_FIELDS.TYPE_PROJET]: lead.typeThermopompe || "Nouveau",
-      [PIPEDRIVE_FIELDS.SQFT]: lead.superficie || "",
+      [PIPEDRIVE_FIELDS.SOURCE]: lead.source ?? "soumission-page",
+      [PIPEDRIVE_FIELDS.TYPE_PROJET]: lead.typeThermopompe ?? "Nouveau",
+      [PIPEDRIVE_FIELDS.SQFT]: lead.superficie ?? "",
       [PIPEDRIVE_FIELDS.BTU_TOTAL]: btu,
-      [PIPEDRIVE_FIELDS.SUBVENTION_ESTIMEE]: subvention,
     };
-    
+
     const deal = await createDeal({
-      title: `${lead.firstName} ${lead.lastName || ""} - Thermopompe`,
+      title: `${lead.firstName} ${lead.lastName ?? ""} - Thermopompe`.trim(),
       person_id: person.id,
-      customFields
+      customFields,
     });
 
-    // 3. Ajouter la note détaillée avec toutes les infos
+    const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;
     const noteHtml = `
-      <h3>Détails du projet (ThermoMatch)</h3>
+      <h3>Détails du projet</h3>
       <ul>
-        <li><b>Ville :</b> ${lead.municipality || "Non spécifié"} ${lead.postalCode ? `(${lead.postalCode})` : ""}</li>
-        <li><b>Type de bâtiment :</b> ${lead.chauffageActuel || "Non spécifié"}</li>
-        <li><b>Type de thermopompe recherchée :</b> ${lead.typeThermopompe || "Non spécifié"}</li>
-        <li><b>Superficie :</b> ${lead.superficie || "Non spécifié"}</li>
-        <li><b>Urgence / Échéancier :</b> ${lead.urgence || "Non spécifié"}</li>
-        <li><b>Budget estimé :</b> ${lead.budgetEstime || "Non spécifié"}</li>
-        ${lead.notes ? `<li><b>Notes supplémentaires :</b> ${lead.notes}</li>` : ""}
+        ${row("Ville", `${lead.municipality ?? "Non spécifié"}${lead.postalCode ? ` (${lead.postalCode})` : ""}`)}
+        ${row("Chauffage actuel", lead.chauffageActuel)}
+        ${row("Type de thermopompe recherchée", lead.typeThermopompe)}
+        ${row("Superficie", lead.superficie)}
+        ${row("Échéancier", lead.urgence)}
+        ${row("Budget estimé", lead.budgetEstime)}
+        ${row("Modèle sélectionné (ThermoMatch)", marque)}
+        ${lead.notes ? row("Notes", lead.notes) : ""}
       </ul>
-      <br/>
-      <h3>Recommandation de l'algorithme</h3>
+      <h3>Consentement (Loi 25)</h3>
       <ul>
-        <li><b>Marque recommandée :</b> ${marque}</li>
-        <li><b>Série suggérée :</b> ${serie}</li>
-        <li><b>BTU Calculé :</b> ${btu} BTU</li>
-        <li><b>Subvention (LogisVert) :</b> ${subvention}$</li>
+        ${row("Traitement des renseignements", `oui, ${consentAt}, version ${CONSENT_VERSION}`)}
+        ${row("Communications marketing", lead.consentMarketing ? "oui" : "non")}
+        ${row("Empreinte de session", ipHash)}
       </ul>
     `;
-    
     await createNote(deal.id, noteHtml);
 
-    // 4. Envoyer le Courriel de bienvenue VIP
-    if (lead.email) {
-      await sendClientWelcomeEmail(lead.email, {
+    await Promise.all([
+      sendInternalLeadAlert({
         firstName: lead.firstName,
-        hasThermoMatch: !!tmResult.bestMatch,
-        recommendedBrand: marque,
-        recommendedBtu: btu,
-        estimatedSubvention: subvention,
-        sqft: lead.superficie || "N/D"
-      });
-    }
+        lastName: lead.lastName,
+        email: lead.email,
+        phone: lead.phone,
+        postalCode: lead.postalCode,
+        territory,
+        typeThermopompe: lead.typeThermopompe,
+        superficie: lead.superficie,
+        modele: marque,
+        dealId: deal.id,
+      }),
+      lead.email
+        ? sendClientWelcomeEmail(lead.email, {
+            firstName: lead.firstName,
+            hasThermoMatch: !!lead.modeleSelectionne,
+            recommendedBrand: marque,
+            recommendedBtu: btu,
+            estimatedSubvention: "voir la fiche",
+            sqft: lead.superficie ?? "N/D",
+          })
+        : Promise.resolve(),
+    ]);
 
-    return NextResponse.json({ success: true, message: "Lead envoyé vers Pipedrive" });
-
-  } catch (err: any) {
+    return NextResponse.json({ success: true, message: "Demande reçue." });
+  } catch (err) {
     console.error("[/api/leads] error:", err);
-    return NextResponse.json(
-      { error: "Internal Server Error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Erreur interne. Appelez-nous au 438-900-3224." }, { status: 500 });
   }
 }

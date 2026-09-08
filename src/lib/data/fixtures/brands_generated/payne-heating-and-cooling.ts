@@ -57,6 +57,7 @@ export const brand_payne_heating_and_coolingDataset: BrandDataset = {
       ],
       "description": "Série Crossover Heat Pump de PAYNE HEATING AND COOLING",
       "imageUrl": "/images/series/payne-heating-and-cooling-payne-heating-and-cooling-crossover-heat-pump.jpg",
+      "brochureUrl": "/documents/brochures/payne-heating-and-cooling/crossover-heat-pump.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -91,6 +91,7 @@ export const brand_heilDataset: BrandDataset = {
       ],
       "description": "Série D5C Series de Heil",
       "imageUrl": "/images/series/heil-heil-d5c-series.jpg",
+      "brochureUrl": "/documents/brochures/heil/d5c-series.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -18,7 +18,7 @@ export const zephyrDataset: BrandDataset = {
   series: [
     {
       id: "series-zephyr-placeholder",
-      slug: "zephyr-placeholder",
+      slug: "zephyr-serie-placeholder",
       name: "Série à venir",
       brandId: "zephyr",
       systemType: "wall-single",

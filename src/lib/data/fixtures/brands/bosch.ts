@@ -18,7 +18,7 @@ export const boschDataset: BrandDataset = {
   series: [
     {
       id: "series-bosch-placeholder",
-      slug: "bosch-placeholder",
+      slug: "bosch-serie-placeholder",
       name: "Série à venir",
       brandId: "bosch",
       systemType: "wall-single",

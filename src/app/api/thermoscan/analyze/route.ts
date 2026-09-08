@@ -598,6 +598,7 @@ export async function POST(req: Request) {
       phases:              geminiResult.phases ?? null,
       refrigerant:         geminiResult.refrigerant ?? null,
       refrigerantChargeG:  geminiResult.refrigerantChargeG ?? null,
+      currentAmp:          geminiResult.currentAmpMax ?? geminiResult.currentAmp ?? null,
       dischargePressureMpa: geminiResult.dischargePressureMpa ?? null,
       suctionPressureMpa:  geminiResult.suctionPressureMpa ?? null,
       weightKg:            geminiResult.weightKg ?? null,

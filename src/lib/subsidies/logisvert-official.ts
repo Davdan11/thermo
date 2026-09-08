@@ -8,7 +8,12 @@
    NOT calculated — taken directly from HQ's published data.
    ================================================================== */
 
-import officialData from "./logisvert-official-amounts.json";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+// Chargé par fs plutôt qu'importé : un import TypeScript d'un JSON de 34 Mo fait
+// exploser la mémoire du vérificateur de types et du lanceur de tests.
+const officialData = JSON.parse(readFileSync(join(process.cwd(), "src/lib/subsidies/logisvert-official-amounts.json"), "utf8")) as Record<string, unknown>;
 
 let modelIndex: Record<string, string[]> | null = null;
 try {

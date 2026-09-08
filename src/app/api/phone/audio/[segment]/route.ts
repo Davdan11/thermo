@@ -38,10 +38,10 @@ const SCRIPTS: Record<string, string> = {
 const audioCache = new Map<string, Buffer>();
 
 export async function GET(
-  req: NextRequest,
-  { params }: { params: { segment: string } }
+  _req: NextRequest,
+  { params }: { params: Promise<{ segment: string }> }
 ) {
-  const segment = params.segment;
+  const { segment } = await params;
   const text = SCRIPTS[segment];
 
   if (!text) {
@@ -62,7 +62,7 @@ export async function GET(
       audioCache.set(segment, audioBuffer);
     }
 
-    return new NextResponse(audioBuffer, {
+    return new NextResponse(new Uint8Array(audioBuffer), {
       headers: {
         "Content-Type": "audio/mpeg",
         "Content-Length": audioBuffer.length.toString(),

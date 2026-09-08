@@ -76,8 +76,8 @@ export default async function BrandPage({
       itemListElement: models.map((model, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `${SITE_URL}/produit/${model.slug}`,
-        name: `${brandName} ${model.name}`,
+        url: `${SITE_URL}/produit/${model.model.slug}`,
+        name: `${brandName} ${model.model.name}`,
       })).slice(0, 50) // Limit to 50 to avoid massive JSON-LD
     }
   };

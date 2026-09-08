@@ -101,7 +101,8 @@ export default async function ProductPage({
   if (configuration?.hspf2) additionalProperties.push({ name: "HSPF2", value: String(configuration.hspf2) });
   if (configuration?.minHeatingTempC != null) additionalProperties.push({ name: "Température minimale de chauffage", value: `${configuration.minHeatingTempC}°C` });
   if (configuration?.noiseIndoorMinDbA) additionalProperties.push({ name: "Niveau sonore intérieur", value: `${configuration.noiseIndoorMinDbA} dB(A)` });
-  if (detail.logisVertDollars) additionalProperties.push({ name: "Subvention LogisVert", value: `${detail.logisVertDollars} $` });
+  const seoModel = getSeoModel(slug);
+  if (seoModel && seoModel.logisVertDollars > 0) additionalProperties.push({ name: "Subvention LogisVert", value: `${seoModel.logisVertDollars} $` });
 
   const productSchema = getProductSchema({
     name: `${brand.name} ${model.name}`,

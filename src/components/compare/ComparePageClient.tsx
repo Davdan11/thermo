@@ -371,7 +371,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             </button>
           </div>
           <CompareSelector
-            models={selectableModels}
+            products={selectableModels}
             initialSlugs={products.map((p) => p.detail.model.slug)}
             maxCompare={maxCompare}
           />

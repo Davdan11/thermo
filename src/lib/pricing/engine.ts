@@ -58,6 +58,16 @@ export function calculateEstimate(
     return buildRefusal(input, now, "Le type de projet n'est pas déterminé.");
   }
 
+  // Aucun prix n'est publié sans observation réelle : les bandes internes ne sont
+  // que des repères de développement et ne doivent jamais être affichées comme une estimation.
+  if (priceObservations.length === 0) {
+    return buildRefusal(
+      input,
+      now,
+      "Aucune observation de prix réelle n'est disponible pour ce type de projet. Demandez une soumission écrite.",
+    );
+  }
+
   const installBase = INSTALLATION_BASE_CENTS[input.projectType];
   if (installBase === null) {
     return buildRefusal(

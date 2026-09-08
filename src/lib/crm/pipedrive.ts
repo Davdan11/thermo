@@ -40,13 +40,15 @@ async function apiCall(endpoint: string, method: string = "GET", body?: any) {
     throw new Error("Missing PIPEDRIVE_API_TOKEN");
   }
 
-  const url = `${API_BASE}${endpoint}${endpoint.includes('?') ? '&' : '?'}api_token=${API_TOKEN}`;
+  const url = `${API_BASE}${endpoint}`;
   
   const response = await fetch(url, {
     method,
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
+      // Jeton en en-tête : jamais dans l'URL (journaux de proxy, historiques).
+      "x-api-token": API_TOKEN,
     },
     body: body ? JSON.stringify(body) : undefined,
   });

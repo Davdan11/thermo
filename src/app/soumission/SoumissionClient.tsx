@@ -73,6 +73,7 @@ export default function SoumissionPage() {
   }>({});
   const [consent1, setConsent1] = useState(false);
   const [consent2, setConsent2] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -109,7 +110,7 @@ export default function SoumissionPage() {
         postalCode: pc,
         municipality: draft.location?.city ?? pc,
         province: draft.location?.province ?? "QC",
-        zoneClimatique: resolved?.climateZone ?? "",
+        zoneClimatique: resolved?.region ?? "",
         designTempC: draft.location?.designTempC ? String(draft.location.designTempC) : "",
         modeleSelectionne: draft.desiredSystem?.selectedBrandName
           ? `${draft.desiredSystem.selectedBrandName} — ${draft.desiredSystem.selectedModelId ?? ""}`
@@ -162,13 +163,19 @@ export default function SoumissionPage() {
           // Notes complètes
           notes: `Emplacement: ${project.emplacement} | Contact préféré: ${contact.methode}${draftNotes ? " | " + draftNotes : ""}`,
           source: "soumission-page",
+          consentProcessing: consent1,
+          consentMarketing: consent2,
+          website: honeypot,
           draft: typeof window !== "undefined" ? JSON.parse(sessionStorage.getItem("thermomatch-answers") || "{}") : {}
         }),
       });
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "");
+      }
       setSuccess(true);
-    } catch {
-      setError("Une erreur est survenue. Appelez le 438-900-3224.");
+    } catch (e) {
+      setError(e instanceof Error && e.message ? e.message : "Une erreur est survenue. Appelez le 438-900-3224.");
     } finally {
       setLoading(false);
     }
@@ -406,11 +413,16 @@ export default function SoumissionPage() {
             ))}
           </div>
 
+          {/* Pot de miel : invisible pour un humain, rempli par les robots */}
+          <div aria-hidden="true" style={{ position: "absolute", left: -9999, width: 1, height: 1, overflow: "hidden" }}>
+            <label>Site web <input type="text" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} /></label>
+          </div>
+
           {/* Checkboxes */}
           <label style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12, cursor: "pointer" }}>
             <input type="checkbox" checked={consent1} onChange={(e) => setConsent1(e.target.checked)} style={{ marginTop: 2, accentColor: ORANGE, flexShrink: 0 }} />
             <span style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
-              J&apos;autorise Thermopompes à vendre à me contacter afin de discuter de mon projet et de ma demande.
+              J&apos;autorise Thermopompes À Vendre.ca à traiter mes renseignements et à me contacter pour discuter de mon projet, conformément à la <a href="/confidentialite" target="_blank" rel="noopener" style={{ color: "inherit", textDecoration: "underline" }}>politique de confidentialité</a>.
             </span>
           </label>
           <label style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 24, cursor: "pointer" }}>

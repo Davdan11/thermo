@@ -18,7 +18,7 @@ export const tosotDataset: BrandDataset = {
   series: [
     {
       id: "series-tosot-placeholder",
-      slug: "tosot-placeholder",
+      slug: "tosot-serie-placeholder",
       name: "Série à venir",
       brandId: "tosot",
       systemType: "wall-single",

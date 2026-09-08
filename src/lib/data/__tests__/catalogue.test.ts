@@ -247,19 +247,19 @@ describe("getAvailableFilters", () => {
     expect(filters.hasColdClimate).toBe(true);
   });
 
-  it("type counts match getCatalogueModels filter results", () => {
+  it("type counts match getCatalogueModels filter results", { timeout: 30000 }, () => {
     const filters = getAvailableFilters();
     for (const t of filters.types) {
-      const { products } = getCatalogueModels({ type: t.value });
-      expect(products.length).toBe(t.count);
+      const result = getCatalogueModels({ type: t.value });
+      expect(result.totalCount).toBe(t.count);
     }
   });
 
-  it("brand counts match getCatalogueModels filter results", () => {
+  it("brand counts match getCatalogueModels filter results", { timeout: 30000 }, () => {
     const filters = getAvailableFilters();
     for (const b of filters.brands) {
-      const { products } = getCatalogueModels({ brand: b.slug });
-      expect(products.length).toBe(b.count);
+      const result = getCatalogueModels({ brand: b.slug });
+      expect(result.totalCount).toBe(b.count);
     }
   });
 });

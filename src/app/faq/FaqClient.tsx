@@ -28,7 +28,7 @@ export default function FAQPage() {
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: T.surface, minHeight: "100vh" }}>
       
       {/* ── HEADER ── */}
-      <section style={{ padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 64px) 0", maxWidth: "1000px", mx: "auto" }}>
+      <section style={{ padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 64px) 0", maxWidth: "1000px", margin: "0 auto" }}>
         <p
           style={{
             margin: "0 0 16px",

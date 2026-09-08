@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-09-06T14:14:18.428Z",
+  "totalUniquePdfs": 63,
+  "downloaded": 51,
+  "failed": 12,
+  "skippedDuplicates": 312,
+  "brandsProcessed": 31,
+  "brochureMapPath": "/Users/daviddanjou/Desktop/thermo/src/lib/data/fixtures/documents/brochure-map.json"
+}

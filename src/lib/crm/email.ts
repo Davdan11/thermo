@@ -1,46 +1,52 @@
 import { Resend } from 'resend';
-import type { QuoteRequest } from "@/lib/quote/types";
+import { escapeHtml } from "@/lib/security/escape";
 import { getWelcomeEmailHTML, type WelcomeEmailData } from "./templates/welcome-email";
 import { getRdvEmailHTML, type RdvEmailData } from "./templates/rdv-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY || 're_mock_key');
 const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || 'info@thermopompesavendre.ca';
 
-export async function sendLeadEmail(quote: QuoteRequest, region: string) {
+export interface InternalLeadAlert {
+  firstName: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  postalCode?: string;
+  territory: string;
+  typeThermopompe?: string;
+  superficie?: string;
+  modele?: string;
+  dealId?: number | string;
+}
+
+/** Alerte interne envoyée à l'équipe pour chaque soumission reçue. */
+export async function sendInternalLeadAlert(lead: InternalLeadAlert) {
   if (!process.env.RESEND_API_KEY) {
-    console.log("Mocking email send, no RESEND_API_KEY found:", quote.id);
+    console.log("[email] RESEND_API_KEY absent : alerte interne non envoyée pour", lead.firstName);
     return;
   }
-
+  const e = escapeHtml;
   try {
     await resend.emails.send({
-      from: 'ThermoMatch <leads@thermopompesavendre.ca>',
+      from: 'Thermopompes À Vendre <leads@thermopompesavendre.ca>',
       to: [NOTIFICATION_EMAIL],
-      subject: `🔥 Nouveau prospect ${region} : ${quote.firstName} ${quote.lastName}`,
+      subject: `Nouvelle soumission ${e(lead.territory)} : ${e(lead.firstName)} ${e(lead.lastName ?? "")}`,
       html: `
-        <h2>Nouveau prospect généré par ThermoMatch</h2>
-        <p><strong>Région :</strong> ${region}</p>
-        <p><strong>Nom :</strong> ${quote.firstName} ${quote.lastName}</p>
-        <p><strong>Téléphone :</strong> ${quote.phone}</p>
-        <p><strong>Email :</strong> ${quote.email}</p>
-        <p><strong>Code postal :</strong> ${quote.postalCode}</p>
-        
-        <hr />
-        
-        <h3>Détails du projet</h3>
+        <h2>Nouvelle soumission</h2>
         <ul>
-          <li><strong>Type de projet :</strong> ${quote.systemIntent === 'replace' ? 'Remplacement' : 'Nouvelle installation'}</li>
-          <li><strong>Besoins :</strong> ${quote.priorities?.join(', ')}</li>
-          <li><strong>Superficie :</strong> ${quote.sqft} pi²</li>
-          <li><strong>Référence :</strong> ${quote.id}</li>
+          <li><strong>Nom :</strong> ${e(lead.firstName)} ${e(lead.lastName ?? "")}</li>
+          <li><strong>Téléphone :</strong> ${e(lead.phone ?? "—")}</li>
+          <li><strong>Courriel :</strong> ${e(lead.email ?? "—")}</li>
+          <li><strong>Code postal :</strong> ${e(lead.postalCode ?? "—")} (${e(lead.territory)})</li>
+          <li><strong>Type :</strong> ${e(lead.typeThermopompe ?? "—")}</li>
+          <li><strong>Superficie :</strong> ${e(lead.superficie ?? "—")}</li>
+          <li><strong>Modèle sélectionné :</strong> ${e(lead.modele ?? "—")}</li>
+          ${lead.dealId ? `<li><strong>Pipedrive :</strong> deal ${e(lead.dealId)}</li>` : ""}
         </ul>
-        
-        <br />
-        <p><em>Consultez Pipedrive pour voir les données UTM et l'attribution complète.</em></p>
       `,
     });
   } catch (error) {
-    console.error("Erreur lors de l'envoi du courriel Resend (Interne):", error);
+    console.error("[email] Erreur d'envoi de l'alerte interne :", error);
   }
 }
 

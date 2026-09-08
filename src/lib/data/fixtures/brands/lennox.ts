@@ -18,7 +18,7 @@ export const lennoxDataset: BrandDataset = {
   series: [
     {
       id: "series-lennox-placeholder",
-      slug: "lennox-placeholder",
+      slug: "lennox-serie-placeholder",
       name: "Série à venir",
       brandId: "lennox",
       systemType: "wall-single",

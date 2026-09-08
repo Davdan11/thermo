@@ -421,7 +421,7 @@ function CompareView({
             <button key={i} onClick={() => handleSelectManual(m)} className="flex flex-col text-left p-3 rounded-lg border transition-colors hover:bg-gray-50" style={{ borderColor: "var(--color-border)", background: "white" }}>
               <p className="font-bold text-sm text-[var(--color-foreground)]">{m.brand} <span className="font-mono text-xs">{m.outdoorModel}</span></p>
               <p className="text-xs text-[var(--color-muted)] mt-1 flex items-center gap-2">
-                <span>SEER2: {m.seer2 ?? "N/D"}</span>
+                <span>SEER2: {m.seer2 ? (typeof m.seer2 === "number" ? m.seer2 : m.seer2.min) : "N/D"}</span>
                 {m.coldClimate && <span className="text-blue-600 bg-blue-50 border border-blue-200 px-1.5 py-0.5 rounded font-semibold text-[10px] uppercase">Climat Froid</span>}
               </p>
             </button>

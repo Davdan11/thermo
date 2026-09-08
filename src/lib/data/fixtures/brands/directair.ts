@@ -18,7 +18,7 @@ export const directairDataset: BrandDataset = {
   series: [
     {
       id: "series-directair-placeholder",
-      slug: "directair-placeholder",
+      slug: "directair-serie-placeholder",
       name: "Série à venir",
       brandId: "directair",
       systemType: "wall-single",

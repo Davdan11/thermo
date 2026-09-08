@@ -125,6 +125,7 @@ export const brand_goodmanDataset: BrandDataset = {
       ],
       "description": "Série GZV7SA de Goodman",
       "imageUrl": "/images/series/goodman-goodman-gzv7sa.jpg",
+      "brochureUrl": "/documents/brochures/goodman/gzv7sa.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -91,6 +91,7 @@ export const brand_tempstarDataset: BrandDataset = {
       ],
       "description": "Série D5C Series de Tempstar",
       "imageUrl": "/images/series/tempstar-tempstar-d5c-series.jpg",
+      "brochureUrl": "/documents/brochures/tempstar/d5c-series.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

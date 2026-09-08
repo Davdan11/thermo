@@ -6,19 +6,29 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ShieldCheck, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
 
+interface SummaryContext {
+  estimatedLoadBtu: number;
+  targetBtu: number;
+  floors: number;
+  requestedZones: number;
+  isMultiZone: boolean;
+  heatedAreaFt2: number;
+  climateZone?: string | null;
+  region?: string | null;
+  uncertaintyPct?: number;
+  loadFactors?: Record<string, number>;
+  weights?: Record<string, number>;
+  notices?: string[];
+  candidatesEvaluated?: number;
+  candidatesRetained?: number;
+  logisVertUpdatedAt?: string | null;
+}
+
 interface ThermoMatchResultsProps {
   results: any[];
   onSelectResult: (result: any) => void;
   onRetry: () => void;
-  summaryContext?: {
-    estimatedLoadBtu: number;
-    targetBtu: number;
-    floors: number;
-    requestedZones: number;
-    isMultiZone: boolean;
-    heatedAreaFt2: number;
-    climateZone: string;
-  };
+  summaryContext?: SummaryContext | null;
 }
 
 export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryContext }: ThermoMatchResultsProps) {
@@ -65,7 +75,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
             )}
           </p>
         )}
-        {summaryContext?.notices?.length > 0 && (
+        {summaryContext?.notices && summaryContext.notices.length > 0 && (
           <div className="mt-6 max-w-3xl mx-auto space-y-2">
             {summaryContext.notices.map((n: string, ni: number) => (
               <p key={ni} className="text-xs text-gray-400 bg-white/5 border border-white/10 rounded-lg px-4 py-2 leading-relaxed">{n}</p>
@@ -111,7 +121,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                 )}
                 {typeof summaryContext.candidatesEvaluated === "number" && (
                   <p className="mt-3 text-gray-400">
-                    {summaryContext.candidatesEvaluated.toLocaleString("fr-CA")} machines évaluées, {summaryContext.candidatesRetained?.toLocaleString("fr-CA")} de calibre compatible, 3 retenues.
+                    {summaryContext.candidatesEvaluated.toLocaleString("fr-CA")} machines évaluées, {(summaryContext.candidatesRetained ?? 0).toLocaleString("fr-CA")} de calibre compatible, 3 retenues.
                     {summaryContext.logisVertUpdatedAt ? ` Liste LogisVert du ${String(summaryContext.logisVertUpdatedAt).slice(0, 10)}.` : ""}
                   </p>
                 )}

@@ -18,7 +18,7 @@ export const senvilleDataset: BrandDataset = {
   series: [
     {
       id: "series-senville-placeholder",
-      slug: "senville-placeholder",
+      slug: "senville-serie-placeholder",
       name: "Série à venir",
       brandId: "senville",
       systemType: "wall-single",

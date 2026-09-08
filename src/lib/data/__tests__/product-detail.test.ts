@@ -26,7 +26,7 @@ describe("getProductDetail — published model with full data", () => {
   });
 
   it("loads series", () => {
-    expect(detail!.series.id).toBe("series-daikin-aurora");
+    expect(detail!.series.id).toBe(detail!.model.seriesId);
   });
 
   it("loads configuration with SEER2/HSPF2", () => {

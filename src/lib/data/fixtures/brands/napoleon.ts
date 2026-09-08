@@ -18,7 +18,7 @@ export const napoleonDataset: BrandDataset = {
   series: [
     {
       id: "series-napoleon-placeholder",
-      slug: "napoleon-placeholder",
+      slug: "napoleon-serie-placeholder",
       name: "Série à venir",
       brandId: "napoleon",
       systemType: "wall-single",

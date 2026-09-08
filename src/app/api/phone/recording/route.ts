@@ -1,36 +1,31 @@
-import { NextRequest, NextResponse } from "next/server";
+/* ==================================================================
+   POST /api/phone/recording — enregistrement d'appel terminé (webhook Twilio signé)
+   → URL de l'enregistrement dans le CRM
+   ================================================================== */
+
 import { captureFullLead } from "@/lib/ghl/client";
+import { twilioForbidden, verifyTwilioRequest } from "@/lib/security/twilio";
 
-/* ─────────────────────────────────────────────────────────────────────────
-   POST /api/phone/recording
-   Webhook Twilio — appelé quand un appel enregistré est terminé
-   → Ajoute l'URL de l'enregistrement dans GHL
-───────────────────────────────────────────────────────────────────────────*/
+export async function POST(req: Request) {
+  const check = await verifyTwilioRequest(req);
+  if (!check.ok) return twilioForbidden(check.reason);
 
-export async function POST(req: NextRequest) {
-  const formData = await req.formData();
-  const recordingUrl = formData.get("RecordingUrl") as string ?? "";
-  const recordingSid = formData.get("RecordingSid") as string ?? "";
-  const callSid = formData.get("CallSid") as string ?? "";
-  const duration = formData.get("RecordingDuration") as string ?? "0";
-  const caller = formData.get("From") as string ?? "";
+  const p = check.params;
+  const recordingUrl = p.get("RecordingUrl") ?? "";
+  const duration = p.get("RecordingDuration") ?? "0";
+  const caller = p.get("From") ?? "";
 
-  console.log(`[Recording] SID: ${recordingSid} | Duration: ${duration}s | Caller: ${caller}`);
+  if (!recordingUrl || !caller || caller === "anonymous") return new Response("OK");
 
-  if (!recordingUrl || !caller || caller === "anonymous") {
-    return new NextResponse("OK", { status: 200 });
-  }
-
-  // Mettre à jour GHL avec l'URL de l'enregistrement
   const dateStr = new Date().toLocaleString("fr-CA", { timeZone: "America/Montreal" });
   await captureFullLead({
     phone: caller,
     customFields: {
-      notes_projet: `Appel enregistré le ${dateStr} — Durée: ${duration}s\nEnregistrement: ${recordingUrl}.mp3`,
+      notes_projet: `Appel enregistré le ${dateStr} — durée ${duration} s\nEnregistrement : ${recordingUrl}.mp3`,
       source_page: "appel-enregistre",
     },
     extraTags: ["appel-enregistre"],
-  }).catch(() => {});
+  }).catch((e) => console.error("[Recording] CRM :", e));
 
-  return new NextResponse("OK", { status: 200 });
+  return new Response("OK");
 }

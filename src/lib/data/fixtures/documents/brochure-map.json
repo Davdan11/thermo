@@ -1,0 +1,132 @@
+{
+  "ac-pro": {
+    "4hp17-series": "/documents/brochures/ac-pro/4hp17-series.pdf",
+    "sphp-series": "/documents/brochures/ac-pro/4hp17-series.pdf"
+  },
+  "american-standard": {
+    "38-series": "/documents/brochures/american-standard/38-series.pdf",
+    "gold-17": "/documents/brochures/american-standard/38-series.pdf",
+    "platinum-18": "/documents/brochures/american-standard/platinum-18.pdf",
+    "silver-15": "/documents/brochures/american-standard/38-series.pdf",
+    "silver-16": "/documents/brochures/american-standard/38-series.pdf"
+  },
+  "bosch": {},
+  "daikin": {
+    "aurora-multi": "/documents/brochures/daikin/aurora-multi.pdf",
+    "dh5se": "/documents/brochures/daikin/aurora-multi.pdf",
+    "dh6vsa-m": "/documents/brochures/daikin/aurora-multi.pdf",
+    "dh7vsa": "/documents/brochures/daikin/aurora-multi.pdf",
+    "standard-multi": "/documents/brochures/daikin/aurora-multi.pdf"
+  },
+  "fujitsu": {
+    "airstage-h-series": "/documents/brochures/fujitsu/airstage-h-series.pdf"
+  },
+  "ge-appliances": {},
+  "goodman": {
+    "gzv7sa": "/documents/brochures/goodman/gzv7sa.pdf"
+  },
+  "gree": {
+    "flexx-high-efficiency-series": "/documents/brochures/gree/flexx-high-efficiency-series.pdf",
+    "free-match-m-series": "/documents/brochures/gree/flexx-high-efficiency-series.pdf",
+    "multi-zone-outdoor": "/documents/brochures/gree/flexx-high-efficiency-series.pdf"
+  },
+  "heil": {
+    "d5c-series": "/documents/brochures/heil/d5c-series.pdf"
+  },
+  "hisense": {},
+  "innovair": {},
+  "johnson-controls": {
+    "lx-series": "/documents/brochures/johnson-controls/lx-series.pdf"
+  },
+  "keeprite": {
+    "d5c-series": "/documents/brochures/keeprite/d5c-series.pdf"
+  },
+  "lennox": {
+    "4-way-cassette-windfree-dlx": "/documents/brochures/lennox/4-way-cassette-windfree-dlx.pdf",
+    "4-way-cassette-windfree-maxheat": "/documents/brochures/lennox/4-way-cassette-windfree-dlx.pdf",
+    "elite-el21klv-series": "/documents/brochures/lennox/4-way-cassette-windfree-dlx.pdf",
+    "high-wall-premium-cac": "/documents/brochures/lennox/4-way-cassette-windfree-dlx.pdf",
+    "windfree-high-wall-premium-cac": "/documents/brochures/lennox/4-way-cassette-windfree-dlx.pdf"
+  },
+  "lg": {
+    "kusxa121a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa181a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa241a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa301a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa361a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa421a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa422a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa481a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxa482a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb091a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb121a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb181a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb241a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb301a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb361a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb421a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb481a": "/documents/brochures/lg/kusxa121a.pdf",
+    "kusxb601a": "/documents/brochures/lg/kusxa121a.pdf"
+  },
+  "luxaire": {
+    "lx-series": "/documents/brochures/luxaire/lx-series.pdf"
+  },
+  "midea": {
+    "atom-x": "/documents/brochures/midea/atom-x.pdf",
+    "m152h": "/documents/brochures/midea/m152h.pdf",
+    "mdv-series": "/documents/brochures/midea/atom-x.pdf",
+    "mo1-series": "/documents/brochures/midea/atom-x.pdf",
+    "mo4-series": "/documents/brochures/midea/mo4-series.pdf"
+  },
+  "mitsubishi-electric": {
+    "m-series": "/documents/brochures/mitsubishi-electric/m-series.pdf",
+    "s-series": "/documents/brochures/mitsubishi-electric/m-series.pdf"
+  },
+  "moovair": {
+    "msh-series": "/documents/brochures/moovair/msh-series.pdf"
+  },
+  "napoleon": {},
+  "payne-heating-and-cooling": {
+    "crossover-heat-pump": "/documents/brochures/payne-heating-and-cooling/crossover-heat-pump.pdf"
+  },
+  "qu-becvair": {
+    "central": "/documents/brochures/qu-becvair/central.pdf",
+    "charmo-r32": "/documents/brochures/qu-becvair/central.pdf",
+    "kit-bor-al-clivia": "/documents/brochures/qu-becvair/central.pdf",
+    "kit-nordic-airy": "/documents/brochures/qu-becvair/central.pdf",
+    "multi": "/documents/brochures/qu-becvair/central.pdf"
+  },
+  "rheem": {
+    "classic-plus": "/documents/brochures/rheem/classic-plus.pdf"
+  },
+  "runtru": {
+    "23u-series": "/documents/brochures/runtru/23u-series.pdf"
+  },
+  "ruud": {
+    "achiever-series-achiever": "/documents/brochures/ruud/achiever-series-achiever.pdf"
+  },
+  "senville": {
+    "sen-series": "/documents/brochures/senville/sen-series.pdf"
+  },
+  "tcl": {},
+  "tempstar": {
+    "d5c-series": "/documents/brochures/tempstar/d5c-series.pdf"
+  },
+  "tosot": {
+    "charmo": "/documents/brochures/tosot/charmo.pdf",
+    "dc-inverter-rooftop-unit": "/documents/brochures/tosot/charmo.pdf",
+    "e-series": "/documents/brochures/tosot/charmo.pdf",
+    "free-match-m-series": "/documents/brochures/tosot/charmo.pdf",
+    "g-series": "/documents/brochures/tosot/charmo.pdf",
+    "pular": "/documents/brochures/tosot/charmo.pdf"
+  },
+  "trane": {
+    "16-single-stage-heat-pump": "/documents/brochures/trane/16-single-stage-heat-pump.pdf"
+  },
+  "york": {
+    "hmh7": "/documents/brochures/york/hmh7.pdf",
+    "lx-series": "/documents/brochures/york/hmh7.pdf",
+    "yd5": "/documents/brochures/york/hmh7.pdf",
+    "ydv": "/documents/brochures/york/hmh7.pdf"
+  }
+}

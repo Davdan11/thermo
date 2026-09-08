@@ -40,6 +40,7 @@ export const brand_johnson_controlsDataset: BrandDataset = {
       ],
       "description": "Série LX SERIES de Johnson Controls",
       "imageUrl": "/images/series/johnson-controls-johnson-controls-lx-series.jpg",
+      "brochureUrl": "/documents/brochures/johnson-controls/lx-series.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

@@ -74,6 +74,7 @@ export const brand_luxaireDataset: BrandDataset = {
       ],
       "description": "Série LX SERIES de Luxaire",
       "imageUrl": "/images/series/luxaire-luxaire-lx-series.jpg",
+      "brochureUrl": "/documents/brochures/luxaire/lx-series.pdf",
       "status": "published",
       "createdAt": "2026-08-28",
       "updatedAt": "2026-08-28",

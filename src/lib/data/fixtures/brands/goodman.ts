@@ -18,7 +18,7 @@ export const goodmanDataset: BrandDataset = {
   series: [
     {
       id: "series-goodman-placeholder",
-      slug: "goodman-placeholder",
+      slug: "goodman-serie-placeholder",
       name: "Série à venir",
       brandId: "goodman",
       systemType: "wall-single",
