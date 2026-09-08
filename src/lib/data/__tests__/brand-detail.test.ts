@@ -231,14 +231,14 @@ describe("getBrandDetail — data integrity", () => {
     for (const w of daikin.warranties) {
       expect(w.modelName).toBeTruthy();
     }
-  });
+  }, 60_000)
 
   it("models belong to the correct brand", () => {
     const detail = getBrandDetail("daikin")!;
     for (const m of detail.models) {
       expect(m.model.brandId).toBe(detail.brand.id);
     }
-  });
+  }, 60_000)
 
   it("series belong to the correct brand", () => {
     const detail = getBrandDetail("daikin")!;

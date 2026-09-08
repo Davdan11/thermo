@@ -107,7 +107,8 @@ const FAQ_ITEMS = [
    MAIN COMPONENT
    ============================================================== */
 
-export function ThermoMatchTechClient() {
+export function ThermoMatchTechClient({ modelCount }: { modelCount: number }) {
+  const modelCountLabel = `Près de ${modelCount.toLocaleString("fr-CA")} modèles évalués`;
   const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   const toggleFaq = (id: string) => {
@@ -507,7 +508,7 @@ export function ThermoMatchTechClient() {
                 <text className="t smallh" x="16" y="30">Options retenues pour vous</text>
                 <circle className="green" cx="22" cy="70" r="7"/>
                 <path className="green" d="m18 70 3 3 5-6"/>
-                <text className="t small" x="38" y="74">Près de 4 000 modèles évalués</text>
+                <text className="t small" x="38" y="74">{modelCountLabel}</text>
                 <circle className="green" cx="22" cy="110" r="7"/>
                 <path className="green" d="m18 110 3 3 5-6"/>
                 <text className="t smallh" x="38" y="114">3 machines retenues</text>
@@ -577,7 +578,7 @@ export function ThermoMatchTechClient() {
                   title: "Décrivez votre maison",
                   desc: "Répondez à quelques questions simples sur votre propriété et vos besoins.",
                   graphic: (
-                    <svg viewBox="0 0 194 220" width="100%" height="auto" fill="none" className="max-w-[220px]">
+                    <svg viewBox="0 0 194 220" width="100%" fill="none" className="max-w-[220px] h-auto">
                       <rect fill="#fffdf9" stroke="#dcd4ca" width="194" height="220" rx="8"/>
                       <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="16" y="26">Quelle est la superficie</text>
                       <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="16" y="40">de votre espace à chauffer?</text>
@@ -598,12 +599,12 @@ export function ThermoMatchTechClient() {
                   title: "ThermoMatch filtre les options",
                   desc: "Les modèles qui ne répondent pas à vos critères essentiels sont écartés.",
                   graphic: (
-                    <svg viewBox="0 0 194 162" width="100%" height="auto" fill="none" className="max-w-[220px]">
+                    <svg viewBox="0 0 194 162" width="100%" fill="none" className="max-w-[220px] h-auto">
                       <rect fill="#fffdf9" stroke="#dcd4ca" width="194" height="162" rx="8"/>
                       <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="16" y="30">Options retenues pour vous</text>
                       <circle fill="none" stroke="#15a267" strokeWidth="1.5" cx="22" cy="70" r="7"/>
                       <path fill="none" stroke="#15a267" strokeWidth="1.5" d="m18 70 3 3 5-6"/>
-                      <text fontFamily="Inter,Arial,sans-serif" fontSize="10" fill="#536873" x="38" y="74">Près de 4 000 modèles évalués</text>
+                      <text fontFamily="Inter,Arial,sans-serif" fontSize="10" fill="#536873" x="38" y="74">{modelCountLabel}</text>
                       <circle fill="none" stroke="#15a267" strokeWidth="1.5" cx="22" cy="110" r="7"/>
                       <path fill="none" stroke="#15a267" strokeWidth="1.5" d="m18 110 3 3 5-6"/>
                       <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="38" y="114">3 machines retenues</text>
@@ -615,7 +616,7 @@ export function ThermoMatchTechClient() {
                   title: "Les modèles sont classés",
                   desc: "Les options restantes sont classées en fonction de ce qui compte le plus pour vous.",
                   graphic: (
-                    <svg viewBox="0 0 194 162" width="100%" height="auto" fill="none" className="max-w-[220px]">
+                    <svg viewBox="0 0 194 162" width="100%" fill="none" className="max-w-[220px] h-auto">
                       <rect fill="#fffdf9" stroke="#dcd4ca" width="194" height="162" rx="8"/>
                       <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="16" y="27">Meilleures options pour vous</text>
                       <g fontFamily="Inter,Arial,sans-serif" fontSize="12" fontWeight="700" fill="#10212b">
@@ -638,7 +639,7 @@ export function ThermoMatchTechClient() {
                   title: "Chaque recommandation est expliquée",
                   desc: "Comprenez pourquoi chaque modèle correspond à votre situation.",
                   graphic: (
-                    <svg viewBox="0 0 220 173" width="100%" height="auto" fill="none" className="max-w-[220px]">
+                    <svg viewBox="0 0 220 173" width="100%" fill="none" className="max-w-[220px] h-auto">
                       <rect fill="#fffdf9" stroke="#dcd4ca" width="220" height="173" rx="8"/>
                       <text fontFamily="Inter,Arial,sans-serif" fontSize="11" fontWeight="700" fill="#10212b" x="16" y="28">Pourquoi ce modèle?</text>
                       <g fill="#e54b17">

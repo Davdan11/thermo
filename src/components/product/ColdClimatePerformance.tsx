@@ -68,7 +68,7 @@ export function ColdClimatePerformance({
             {sorted.map((dp, i) => (
               <tr key={i} className="border-b border-border last:border-b-0">
                 <td className="py-2.5 pr-4 text-foreground tabular-nums">
-                  {dp.outdoorTempC} °C
+                  {dp.outdoorTempC.toLocaleString("fr-CA")} °C
                 </td>
                 <td className="py-2.5 px-4 text-right font-medium text-foreground tabular-nums">
                   {dp.heatingCapacityBtu.toLocaleString("fr-CA")} BTU/h

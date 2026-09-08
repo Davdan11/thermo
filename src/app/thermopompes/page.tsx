@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { brandLogoPath } from "@/lib/data/brand-logos";
 import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 import { getCatalogueModels, getAvailableFilters } from "@/lib/data/queries/catalogue";
@@ -20,7 +21,7 @@ import { buttonVariants } from "@/components/ui/button";
    ------------------------------------------------------------------ */
 
 export const metadata = createMetadata({
-  title: "Thermopompes — Explorez les modèles offerts au Québec | Thermopompes À Vendre.ca",
+  title: "Thermopompes — Explorez les modèles offerts au Québec",
   description:
     "Comparez les modèles de thermopompes, les capacités et les performances pour trouver un système adapté à votre habitation au Québec.",
   robots: { index: true, follow: true },
@@ -154,13 +155,13 @@ export default async function ThermopompesPage({
           {/* Row 1: 6 brands */}
           <div className="flex items-stretch border-b border-gray-100 h-[90px] w-full">
             {[
-              { name: "Daikin", slug: "daikin", src: "/images/marques/logo-daikin-bleu-nuit.png" },
-              { name: "Mitsubishi Electric", slug: "mitsubishi-electric", src: "/images/marques/logo-mitsubishi-electric-bleu-nuit.png" },
-              { name: "Fujitsu", slug: "fujitsu", src: "/images/marques/logo-fujitsu-bleu-nuit.png" },
-              { name: "Gree", slug: "gree", src: "/images/marques/logo-gree-bleu-nuit.png" },
-              { name: "Panasonic", slug: "panasonic", src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Panasonic_logo.svg" },
-              { name: "LG", slug: "lg", src: "/images/marques/logo-lg-bleu-nuit.png" },
-            ].map((brand, i) => (
+              { name: "Daikin", slug: "daikin", src: brandLogoPath("daikin") },
+              { name: "Mitsubishi Electric", slug: "mitsubishi-electric", src: brandLogoPath("mitsubishi-electric") },
+              { name: "Fujitsu", slug: "fujitsu", src: brandLogoPath("fujitsu") },
+              { name: "Gree", slug: "gree", src: brandLogoPath("gree") },
+              { name: "Panasonic", slug: "panasonic", src: brandLogoPath("panasonic") },
+              { name: "LG", slug: "lg", src: brandLogoPath("lg") },
+            ].filter((b) => b.src).map((brand, i) => (
               <Link 
                 key={brand.slug} 
                 href={`/thermopompes?brand=${brand.slug}`}
@@ -168,7 +169,7 @@ export default async function ThermopompesPage({
                 title={`Voir les thermopompes ${brand.name}`}
               >
                 <div className="w-[180px] h-[65px] flex items-center justify-center">
-                  <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
+                  <img src={brand.src ?? ""} alt={brand.name} loading="lazy" className="max-w-full max-h-full object-contain" />
                 </div>
               </Link>
             ))}
@@ -176,14 +177,14 @@ export default async function ThermopompesPage({
           {/* Row 2: 7 brands */}
           <div className="flex items-stretch h-[90px] w-full">
             {[
-              { name: "Samsung", slug: "samsung", src: "/images/marques/logo-samsung-bleu-nuit.png" },
-              { name: "Tosot", slug: "tosot", src: "/images/marques/logo-tosot-bleu-nuit.png" },
-              { name: "Tempstar", slug: "tempstar", src: "https://upload.wikimedia.org/wikipedia/commons/5/52/Tempstar_Logo.svg" },
-              { name: "Lennox", slug: "lennox", src: "/images/marques/logo-lennox-bleu-nuit.png" },
-              { name: "Moovair", slug: "moovair", src: "/images/marques/logo-moovair-bleu-nuit.png" },
-              { name: "Mainline", slug: "mainline", src: "/images/marques/logo-mainline-bleu-nuit.png" },
-              { name: "Haier", slug: "haier", src: "/images/marques/logo-haier-bleu-nuit.png" },
-            ].map((brand, i) => (
+              { name: "Samsung", slug: "samsung", src: brandLogoPath("samsung") },
+              { name: "Tosot", slug: "tosot", src: brandLogoPath("tosot") },
+              { name: "Tempstar", slug: "tempstar", src: brandLogoPath("tempstar") },
+              { name: "Lennox", slug: "lennox", src: brandLogoPath("lennox") },
+              { name: "Moovair", slug: "moovair", src: brandLogoPath("moovair") },
+              { name: "Mainline", slug: "mainline", src: brandLogoPath("mainline") },
+              { name: "Haier", slug: "haier", src: brandLogoPath("haier") },
+            ].filter((b) => b.src).map((brand, i) => (
               <Link 
                 key={brand.slug} 
                 href={`/thermopompes?brand=${brand.slug}`}
@@ -191,7 +192,7 @@ export default async function ThermopompesPage({
                 title={`Voir les thermopompes ${brand.name}`}
               >
                 <div className="w-[180px] h-[65px] flex items-center justify-center">
-                  <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
+                  <img src={brand.src ?? ""} alt={brand.name} loading="lazy" className="max-w-full max-h-full object-contain" />
                 </div>
               </Link>
             ))}
@@ -202,22 +203,22 @@ export default async function ThermopompesPage({
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 mt-6 md:hidden">
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
           {[
-            { name: "Daikin", slug: "daikin", src: "/images/marques/logo-daikin-bleu-nuit.png" },
-            { name: "Mitsubishi", slug: "mitsubishi-electric", src: "/images/marques/logo-mitsubishi-electric-bleu-nuit.png" },
-            { name: "Fujitsu", slug: "fujitsu", src: "/images/marques/logo-fujitsu-bleu-nuit.png" },
-            { name: "Gree", slug: "gree", src: "/images/marques/logo-gree-bleu-nuit.png" },
-            { name: "Panasonic", slug: "panasonic", src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Panasonic_logo.svg" },
-            { name: "LG", slug: "lg", src: "/images/marques/logo-lg-bleu-nuit.png" },
-            { name: "Samsung", slug: "samsung", src: "/images/marques/logo-samsung-bleu-nuit.png" },
-            { name: "Tosot", slug: "tosot", src: "/images/marques/logo-tosot-bleu-nuit.png" },
-          ].map((brand) => (
+            { name: "Daikin", slug: "daikin", src: brandLogoPath("daikin") },
+            { name: "Mitsubishi", slug: "mitsubishi-electric", src: brandLogoPath("mitsubishi-electric") },
+            { name: "Fujitsu", slug: "fujitsu", src: brandLogoPath("fujitsu") },
+            { name: "Gree", slug: "gree", src: brandLogoPath("gree") },
+            { name: "Panasonic", slug: "panasonic", src: brandLogoPath("panasonic") },
+            { name: "LG", slug: "lg", src: brandLogoPath("lg") },
+            { name: "Samsung", slug: "samsung", src: brandLogoPath("samsung") },
+            { name: "Tosot", slug: "tosot", src: brandLogoPath("tosot") },
+          ].filter((b) => b.src).map((brand) => (
             <Link 
               key={brand.slug} 
               href={`/thermopompes?brand=${brand.slug}`}
               className="bg-white border border-gray-200 rounded-md p-1 flex items-center justify-center h-[55px] hover:bg-gray-50 transition-colors"
             >
               <div className="w-full h-full flex items-center justify-center">
-                <img src={brand.src} alt={brand.name} className="max-w-full max-h-full object-contain" />
+                <img src={brand.src ?? ""} alt={brand.name} loading="lazy" className="max-w-full max-h-full object-contain" />
               </div>
             </Link>
           ))}

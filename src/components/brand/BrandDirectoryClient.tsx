@@ -1,5 +1,7 @@
 "use client";
 
+import { brandLogoPath } from "@/lib/data/brand-logos";
+
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -100,7 +102,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
             <div className="bg-[#e3dace] border border-[#e3dace] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px]">
               {filteredBrands.map((summary) => {
                 const { brand, systemTypes, hasLogo } = summary;
-                const logoPath = `logo-${brand.slug}-bleu-nuit.png`;
+                const logoPath = brandLogoPath(brand.slug) ?? "";
                 
                 let filteredTypes = systemTypes.filter(st => st.value !== "other");
                 if (filteredTypes.length === 0 && systemTypes.length > 0) {
@@ -128,7 +130,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
                     <div className="flex-1 flex items-center justify-center w-full mb-6">
                       {hasLogo ? (
                         <img
-                          src={`/images/marques/${logoPath}`}
+                          src={logoPath}
                           alt={`Logo ${cleanName}`}
                           className="transition-transform duration-300 group-hover:scale-105"
                           style={{

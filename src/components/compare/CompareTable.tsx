@@ -40,10 +40,10 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
     title: "Apercu",
     rows: [
       row("Marque", details.map((d) => d.brand.name)),
-      row("Serie", details.map((d) => d.series.name)),
-      row("Numero de modele", details.map((d) => d.model.modelNumber)),
-      row("Type de systeme", details.map((d) => d.systemTypeLabel)),
-      row("Capacite nominale", details.map((d) =>
+      row("Série", details.map((d) => d.series.name)),
+      row("Numéro de modèle", details.map((d) => d.model.modelNumber)),
+      row("Type de système", details.map((d) => d.systemTypeLabel)),
+      row("Capacité nominale", details.map((d) =>
         d.model.nominalCapacityBtu != null
           ? `${d.model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h`
           : null,
@@ -59,7 +59,7 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
 
   // --- PERFORMANCE HIVERNALE ---
   const perfRows: RowDef[] = [
-    { ...row("Temp. min. annoncee", details.map((d) =>
+    { ...row("Temp. min. annoncée", details.map((d) =>
       d.configuration?.minHeatingTempC != null
         ? `${d.configuration.minHeatingTempC} °C`
         : null,
@@ -76,7 +76,7 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
       : temp === -25 ? "capacityMinus25"
       : undefined;
     perfRows.push({
-      ...row(`Capacite a ${temp} °C`, values),
+      ...row(`Capacité à ${temp} °C`, values),
       highlight: highlightKey ? highlights[highlightKey] : undefined,
     });
   }
@@ -105,17 +105,17 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
 
   // --- CONFORT ---
   const comfortRows: RowDef[] = [
-    { ...row("Bruit interieur (min)", details.map((d) =>
+    { ...row("Bruit intérieur (min)", details.map((d) =>
       d.configuration?.noiseIndoorMinDbA != null
         ? `${d.configuration.noiseIndoorMinDbA} dB(A)`
         : null,
     )), highlight: highlights.noiseIndoor },
-    row("Bruit interieur (max)", details.map((d) =>
+    row("Bruit intérieur (max)", details.map((d) =>
       d.configuration?.noiseIndoorMaxDbA != null
         ? `${d.configuration.noiseIndoorMaxDbA} dB(A)`
         : null,
     )),
-    { ...row("Bruit exterieur", details.map((d) =>
+    { ...row("Bruit extérieur", details.map((d) =>
       d.configuration?.noiseOutdoorDbA != null
         ? `${d.configuration.noiseOutdoorDbA} dB(A)`
         : null,
@@ -132,14 +132,14 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
 
   // --- INSTALLATION ---
   const installRows: RowDef[] = [
-    row("Refrigerant", details.map((d) => d.outdoorUnit?.refrigerant ?? null)),
+    row("Réfrigérant", details.map((d) => d.outdoorUnit?.refrigerant ?? null)),
     row("Tension", details.map((d) =>
       d.configuration?.voltage != null ? `${d.configuration.voltage} V` : null,
     )),
     row("Phase", details.map((d) =>
       d.configuration?.phase != null ? `${d.configuration.phase} phase` : null,
     )),
-    row("Frequence", details.map((d) =>
+    row("Fréquence", details.map((d) =>
       d.configuration?.frequencyHz != null ? `${d.configuration.frequencyHz} Hz` : null,
     )),
   ];
@@ -184,7 +184,7 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
     row("Certification climat froid", products.map((p) =>
       p.subsidy.isColdClimate ? "Oui" : "Non",
     )),
-    row("Capacite utilisee", products.map((p) =>
+    row("Capacité utilisée", products.map((p) =>
       p.subsidy.capacityBtu > 0
         ? `${p.subsidy.capacityBtu.toLocaleString("fr-CA")} BTU/h`
         : "N/D",
@@ -196,7 +196,7 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
   const certRows: RowDef[] = [
     row("Certification climat froid", details.map((d) => {
       const cc = d.certifications.find((c) => c.coldClimate);
-      return cc ? "Certifie" : d.isColdClimate ? "A verifier" : "Non applicable";
+      return cc ? "Certifie" : d.isColdClimate ? "A vérifier" : "Non applicable";
     })),
   ];
   sections.push({ title: "Certifications", rows: certRows });
@@ -260,7 +260,7 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
 
       {differencesOnly && filteredSections.length === 0 && (
         <p style={{ fontSize: 13, color: "#9CA3AF", textAlign: "center", padding: "24px 0" }}>
-          Aucune difference detectee avec les donnees disponibles.
+          Aucune difference detectee avec les données disponibles.
         </p>
       )}
     </div>

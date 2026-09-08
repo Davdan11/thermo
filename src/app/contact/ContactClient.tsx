@@ -270,8 +270,7 @@ export default function ContactPageClient() {
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <h3 className="text-lg font-bold text-[#0b1b24] mb-2">Est-ce que je peux obtenir la subvention Logis Vert ?</h3>
               <p className="text-gray-600 leading-relaxed text-sm font-medium">
-                La majorité des systèmes que nous proposons (comme Moovair, Zephyr, Daikin) sont certifiés "Climat Froid" et sont admissibles à la subvention Logis Vert d'Hydro-Québec. Nous nous occupons des papiers pour vous !
-              </p>
+                Chaque fiche de notre catalogue affiche le montant LogisVert officiel d'Hydro-Québec pour le jumelage exact. Toutes les marques sont traitées de la même façon, et l'installateur partenaire s'occupe des documents avec vous.</p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <h3 className="text-lg font-bold text-[#0b1b24] mb-2">Combien de temps faut-il pour l'installation ?</h3>

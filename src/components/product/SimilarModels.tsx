@@ -30,8 +30,8 @@ export function SimilarModels({ models }: SimilarModelsProps) {
               href={`/produit/${product.model.slug}`}
               className="p-4 rounded-lg border border-border bg-surface hover:border-border-hover transition-colors group"
             >
-              {product.imageUrl && (
-                <div className="aspect-[4/3] bg-[#EFECE8] flex items-center justify-center overflow-hidden mb-3 rounded-sm">
+              <div className="aspect-[4/3] bg-[#EFECE8] flex items-center justify-center overflow-hidden mb-3 rounded-sm">
+                {product.imageUrl ? (
                   <Image
                     src={product.imageUrl}
                     alt={`${product.brand.name} ${product.model.name}`}
@@ -39,8 +39,10 @@ export function SimilarModels({ models }: SimilarModelsProps) {
                     height={150}
                     className="object-contain w-full h-full p-2"
                   />
-                </div>
-              )}
+                ) : (
+                  <span className="text-xs text-[#9ca3af]">Image à venir</span>
+                )}
+              </div>
               <p className="text-xs text-muted uppercase tracking-wide">
                 {product.brand.name}
               </p>

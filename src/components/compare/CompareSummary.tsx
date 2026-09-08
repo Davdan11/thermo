@@ -118,7 +118,7 @@ export function CompareSummary({ highlights, products }: CompareSummaryProps) {
         Principales differences
       </h2>
       <p style={{ fontSize: 12, color: "#9CA3AF", marginBottom: 16 }}>
-        Analyse basee sur les specifications du fabricant.
+        Analyse basee sur les spécifications du fabricant.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12 }}>
         {relevant.map((item) => (

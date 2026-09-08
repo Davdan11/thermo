@@ -1,5 +1,7 @@
 "use client";
 
+import { brandLogoPath } from "@/lib/data/brand-logos";
+
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import Link from "next/link";
@@ -21,43 +23,43 @@ interface Props {
 
 /* ---- Qualitative rating system ---- */
 
-type Rating = "Excellente" | "Tres bonne" | "Bonne" | "Standard" | "A confirmer" | "Tres silencieuse" | "Silencieuse" | "Complete" | "Avancee" | "Basique" | "Etendue" | "Limitee";
+type Rating = "Excellente" | "Très bonne" | "Bonne" | "Standard" | "À confirmer" | "Très silencieuse" | "Silencieuse" | "Complète" | "Avancée" | "Basique" | "Étendue" | "Limitée";
 
 function rateColdPerformance(minTemp: number | null | undefined): Rating {
-  if (minTemp == null) return "A confirmer";
+  if (minTemp == null) return "À confirmer";
   if (minTemp <= -30) return "Excellente";
-  if (minTemp <= -25) return "Tres bonne";
+  if (minTemp <= -25) return "Très bonne";
   if (minTemp <= -20) return "Bonne";
   return "Standard";
 }
 
 function rateEfficiency(seer2: number | null | undefined, hspf2: number | null | undefined): Rating {
-  if (seer2 == null && hspf2 == null) return "A confirmer";
+  if (seer2 == null && hspf2 == null) return "À confirmer";
   const s = seer2 ?? 0;
   if (s >= 22) return "Excellente";
-  if (s >= 18) return "Tres bonne";
+  if (s >= 18) return "Très bonne";
   if (s >= 15) return "Bonne";
   return "Standard";
 }
 
 function rateNoise(dbA: number | null | undefined): Rating {
-  if (dbA == null) return "A confirmer";
-  if (dbA <= 19) return "Tres silencieuse";
+  if (dbA == null) return "À confirmer";
+  if (dbA <= 19) return "Très silencieuse";
   if (dbA <= 24) return "Silencieuse";
   return "Standard";
 }
 
 function rateFeatures(p: CompareProduct): Rating {
   const cfg = p.detail.configuration;
-  if (!cfg) return "A confirmer";
+  if (!cfg) return "À confirmer";
   let score = 0;
   if (cfg.hasWifi) score++;
   if (cfg.hasSmartControl) score++;
   if (cfg.hasDehumidification) score++;
   if (cfg.modes && cfg.modes.length >= 4) score++;
   if (cfg.filtration) score++;
-  if (score >= 4) return "Complete";
-  if (score >= 2) return "Avancee";
+  if (score >= 4) return "Complète";
+  if (score >= 2) return "Avancée";
   if (score >= 1) return "Standard";
   return "Basique";
 }
@@ -65,11 +67,11 @@ function rateFeatures(p: CompareProduct): Rating {
 function rateWarranty(p: CompareProduct): Rating {
   const compressor = p.detail.warranties.find((w) => w.type === "compressor");
   const parts = p.detail.warranties.find((w) => w.type === "parts");
-  if (!compressor && !parts) return "Limitee";
+  if (!compressor && !parts) return "Limitée";
   const years = compressor?.durationYears ?? parts?.durationYears ?? 0;
-  if (years >= 10) return "Etendue";
+  if (years >= 10) return "Étendue";
   if (years >= 5) return "Standard";
-  return "Limitee";
+  return "Limitée";
 }
 
 function isVerified(p: CompareProduct): boolean {
@@ -309,7 +311,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
               }}
             >
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8"><line x1="6" y1="1" x2="6" y2="11" /><line x1="1" y1="6" x2="11" y2="6" /></svg>
-              {showAddPanel ? "Fermer" : "Ajouter un modele"}
+              {showAddPanel ? "Fermer" : "Ajouter un modèle"}
             </button>
           )}
           <button type="button" onClick={handleShare} style={{
@@ -321,13 +323,13 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M2 7v4.5a1 1 0 001 1h8a1 1 0 001-1V7" /><polyline points="4.5 4 7 1.5 9.5 4" /><line x1="7" y1="1.5" x2="7" y2="9" />
             </svg>
-            {copied ? "Lien copie!" : "Partager"}
+            {copied ? "Lien copié!" : "Partager"}
           </button>
         </div>
 
         {/* Toggle */}
         <label style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--color-muted)", cursor: "pointer" }}>
-          Afficher seulement les differences
+          Afficher seulement les différences
           <div
             role="switch"
             aria-checked={differencesOnly}
@@ -360,7 +362,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
         }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
             <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: "var(--color-foreground)" }}>
-              Ajouter un modele a la comparaison
+              Ajouter un modèle a la comparaison
             </h3>
             <button
               type="button"
@@ -421,25 +423,20 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
 
             {/* Brand logo */}
             {(() => {
-              const logoPath = `/images/marques/logo-${p.detail.brand.slug}-bleu-nuit.png`;
+              const logoPath = brandLogoPath(p.detail.brand.slug);
               return (
                 <div style={{ height: 80, marginBottom: 16, display: "flex", alignItems: "center" }}>
-                  <Image
-                    src={logoPath}
-                    alt={p.detail.brand.name}
-                    width={240}
-                    height={80}
-                    style={{ objectFit: "contain", objectPosition: "left", height: 80, width: "auto", maxWidth: 240 }}
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.style.display = "none";
-                      const fallback = target.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = "block";
-                    }}
-                  />
-                  <span style={{ display: "none", fontSize: 13, color: "var(--color-muted)", fontWeight: 600 }}>
-                    {p.detail.brand.name}
-                  </span>
+                  {logoPath ? (
+                    <Image
+                      src={logoPath}
+                      alt={p.detail.brand.name}
+                      width={240}
+                      height={80}
+                      style={{ objectFit: "contain", objectPosition: "left", height: 80, width: "auto", maxWidth: 240 }}
+                    />
+                  ) : (
+                    <span style={{ fontSize: 15, color: "var(--color-foreground)", fontWeight: 700 }}>{p.detail.brand.name}</span>
+                  )}
                 </div>
               );
             })()}
@@ -502,7 +499,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             return `${(max ?? min ?? 0).toLocaleString("fr-CA")} BTU`;
           }},
           { label: "Type de système", getter: (p: CompareProduct) => {
-            const types: Record<string, string> = { "central-ducted": "Central gainé", "mini-split": "Murale", "multi-zone": "Multizone" };
+            const types: Record<string, string> = { "wall-single": "Murale simple zone", "central-ducted": "Centrale gainable", "multi-zone": "Multizone", "floor-console": "Console au plancher", cassette: "Cassette", ceiling: "Plafonnier", hybrid: "Système hybride", other: "Autre" };
             return types[p.detail.model.systemType] ?? p.detail.model.systemType;
           }},
         ].map((spec) => (
@@ -568,7 +565,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
           Performance climat froid
         </div>
         {[
-          { label: "Certifié climat froid", getter: (p: CompareProduct) => p.detail.isColdClimate ? "✅ Oui" : "❌ Non" },
+          { label: "Certifié climat froid", getter: (p: CompareProduct) => p.detail.isColdClimate ? "Oui, certifié" : "Non" },
           { label: "Temp. min. opération", getter: (p: CompareProduct) => {
             const t = p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC;
             return t != null ? `${t} °C` : "—";
@@ -653,7 +650,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
               lineHeight: 1.15, fontFamily: "var(--font-display)",
               fontStyle: "italic",
             }}>
-              Trois profils,<br />trois forces.
+              Ce que chaque profil<br />met en avant.
             </h2>
           </div>
 
@@ -678,7 +675,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                   {s.description}
                 </p>
                 <p style={{ margin: "4px 0 0", fontSize: 11, color: "rgba(255,255,255,.35)" }}>
-                  A valider selon la configuration.
+                  À valider selon la configuration exacte.
                 </p>
               </div>
             </div>
@@ -696,10 +693,12 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
           padding: 28,
         }}>
           <h2 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: "var(--color-foreground)" }}>
-            Subventions LogisVert estimees
+            {products.every((p) => p.subsidy.isOfficial || p.subsidy.dollars === 0) ? "Subventions LogisVert officielles" : "Subventions LogisVert (dont estimations)"}
           </h2>
           <p style={{ margin: "4px 0 20px", fontSize: 12, color: "var(--color-muted)" }}>
-            Estimation basee sur la capacite nominale et la certification climat froid. Source: Hydro-Quebec.
+            {products.every((p) => p.subsidy.isOfficial || p.subsidy.dollars === 0)
+              ? "Montant de la liste des appareils admissibles d'Hydro-Québec pour le jumelage de référence de chaque fiche. Le montant final dépend du jumelage exact installé."
+              : "Les montants marqués « estimation » sont calculés par formule faute de jumelage dans la liste officielle d'Hydro-Québec."}
           </p>
           <div style={{ display: "grid", gridTemplateColumns: `repeat(${products.length}, 1fr)`, gap: 12 }}>
             {products.map((p) => (
@@ -719,8 +718,8 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                   fontVariantNumeric: "tabular-nums",
                 }}>
                   {p.subsidy.dollars > 0
-                    ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $`
-                    : "N/A"}
+                    ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $${p.subsidy.isOfficial ? "" : " (estimation)"}`
+                    : "Non admissible"}
                 </p>
                 <div style={{ fontSize: 13, color: "var(--color-muted)", marginTop: 4 }}>
                   {p.subsidy.isColdClimate ? "Climat froid" : "Standard"}
@@ -743,7 +742,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
           margin: 0, fontSize: 22, fontWeight: 700, color: "#fff",
           fontFamily: "var(--font-display)",
         }}>
-          Pret a trouver la thermopompe qui vous convient?
+          Prêt à trouver la thermopompe qui vous convient?
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, marginTop: 20 }}>
           <Link href="/soumission" style={{
@@ -752,7 +751,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             textDecoration: "none", borderRadius: 6,
             display: "inline-flex", alignItems: "center", gap: 6,
           }}>
-            Verifier lequel convient a ma maison
+            Vérifier lequel convient à ma maison
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
           </Link>
           <Link href="/trouver-ma-thermopompe" style={{
@@ -794,8 +793,8 @@ function buildSynthesis(products: CompareProduct[]): SynthesisItem[] {
   }));
   if (coldRatings.some((r) => r.cold)) {
     items.push({
-      label: "Priorite grand froid",
-      description: "Concu pour affronter les hivers rigoureux.",
+      label: "Priorité grand froid",
+      description: "Conçu pour affronter les hivers rigoureux.",
       icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" /></svg>,
       iconBg: "#dc2626",
     });
@@ -805,7 +804,7 @@ function buildSynthesis(products: CompareProduct[]): SynthesisItem[] {
   const hasNoise = products.some((p) => p.detail.configuration?.noiseIndoorMinDbA != null);
   if (hasNoise) {
     items.push({
-      label: "Priorite silence",
+      label: "Priorité silence",
       description: "Confort acoustique au quotidien.",
       icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6v12M8 9v6M4 10v4M16 8v8M20 10v4" /></svg>,
       iconBg: "#0C1821",
@@ -816,8 +815,8 @@ function buildSynthesis(products: CompareProduct[]): SynthesisItem[] {
   const hasEff = products.some((p) => p.detail.configuration?.seer2 != null);
   if (hasEff) {
     items.push({
-      label: "Priorite efficacite",
-      description: "Consommation maitrisee, economies a long terme.",
+      label: "Priorité efficacité",
+      description: "Consommation maîtrisée, économies à long terme.",
       icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
       iconBg: "var(--color-accent)",
     });

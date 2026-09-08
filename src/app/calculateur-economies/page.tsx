@@ -52,7 +52,7 @@ export default function CalculateurEconomiesPage() {
 
           <h3 className="text-2xl font-bold mt-10 mb-4">Mazout et Gaz : Les plus grandes économies</h3>
           <p className="mb-6 text-gray-600">
-            Si votre maison est actuellement chauffée au mazout (huile) ou au gaz naturel, la transition vers une thermopompe centrale ou murale est encore plus rentable. Avec la volatilité du prix des combustibles fossiles, le chauffage électrique par thermopompe stabilise vos coûts tout en réduisant considérablement votre empreinte carbone. Beaucoup de propriétaires divisent leur facture par deux dès la première année.
+            Si votre maison est actuellement chauffée au mazout (huile) ou au gaz naturel, la transition vers une thermopompe centrale ou murale est encore plus rentable. Avec la volatilité du prix des combustibles fossiles, le chauffage électrique par thermopompe stabilise vos coûts tout en réduisant considérablement votre empreinte carbone. L'écart dépend du prix du combustible remplacé et du rendement réel de la machine en hiver.
           </p>
 
           <h3 className="text-2xl font-bold mt-10 mb-4">N'oubliez pas les subventions gouvernementales</h3>

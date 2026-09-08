@@ -18,6 +18,6 @@ const ThermoMatch = dynamic(
   },
 );
 
-export function ThermoMatchLoader() {
-  return <ThermoMatch />;
+export function ThermoMatchLoader({ catalogueCount }: { catalogueCount: number }) {
+  return <ThermoMatch catalogueCount={catalogueCount} />;
 }

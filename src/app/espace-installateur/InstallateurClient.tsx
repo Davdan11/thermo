@@ -76,7 +76,7 @@ export default function EspaceInstallateurPage() {
         </Link>
 
         <div style={{ width: "100%", maxWidth: "400px", margin: "64px auto" }}>
-          <img src="/images/Thermoscan.png" alt="ThermoScan Pro" style={{ height: "48px", width: "auto", marginBottom: "40px" }} />
+          <img src="/images/HEADERLOGO.png" alt="Thermopompes À Vendre" style={{ height: "40px", width: "auto", marginBottom: "40px" }} />
           
           <h1 style={{ color: T.ink, fontSize: "28px", fontWeight: 750, margin: "0 0 8px", letterSpacing: "-0.02em" }}>
             Espace Partenaire

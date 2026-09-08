@@ -18,6 +18,8 @@ export interface CompareSubsidy {
   rate: number;
   isColdClimate: boolean;
   capacityBtu: number;
+  /** true : montant lu dans la liste officielle Hydro-Québec ; false : estimation par formule */
+  isOfficial: boolean;
 }
 
 export interface CompareProduct {
@@ -107,6 +109,7 @@ export function getComparisonData(slugs: string[]): ComparisonData {
         rate: logisRate,
         isColdClimate: d.isColdClimate,
         capacityBtu: nominalBtu,
+        isOfficial: !!officialLogis,
       },
     };
   });

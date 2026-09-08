@@ -2,7 +2,7 @@ import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import { seriesDisplayName } from "@/lib/data/series-label";
 
 /* ------------------------------------------------------------------
-   TechSpecs — grouped technical specifications using DL
+   TechSpecs — grouped technical spécifications using DL
    ------------------------------------------------------------------ */
 
 interface TechSpecsProps {
@@ -173,7 +173,7 @@ export function TechSpecs({ detail }: TechSpecsProps) {
   if (groups.length === 0) return null;
 
   return (
-    <section id="specifications" aria-labelledby="specifications-title">
+    <section id="spécifications" aria-labelledby="specifications-title">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
         <h2 id="specifications-title" className="text-xl font-bold text-foreground">
           Spécifications techniques

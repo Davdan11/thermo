@@ -171,7 +171,7 @@ function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange
    Main component
    ---------------------------------------------------------- */
 
-export function ThermoMatch() {
+export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(() => {
     const s = readSavedState();
@@ -404,7 +404,9 @@ export function ThermoMatch() {
         <div className="min-h-screen bg-[#0D1117] flex flex-col items-center justify-center text-white">
           <div className="w-12 h-12 border-4 border-white/20 border-t-[#C66E42] rounded-full animate-spin mb-6" />
           <h2 className="text-2xl font-bold mb-2">Analyse en cours...</h2>
-          <p className="text-[#9CA3AF]">Analyse de près de 4 000 modèles certifiés par Hydro-Québec</p>
+          <p className="text-[#9CA3AF]">
+            {catalogueCount ? `Analyse de ${catalogueCount.toLocaleString("fr-CA")} fiches certifiées par Hydro-Québec` : "Analyse des fiches certifiées par Hydro-Québec"}
+          </p>
         </div>
       );
     }
@@ -808,7 +810,7 @@ export function ThermoMatch() {
           {/* Gradient on the left edge only */}
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0D1117] to-transparent z-10" />
 
-          {/* Resume panel */}
+          {/* Résumé panel */}
           <div className="relative z-20 flex flex-col justify-end h-full p-8 xl:p-10">
             
             {/* Résumé de votre projet */}

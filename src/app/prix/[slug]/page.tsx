@@ -53,7 +53,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
     ]),
     getArticleSchema({
       headline: page.h1,
-      image: `${SITE_URL}/images/hero_calculator_bg_1788447325499.jpg`,
+      image: `${SITE_URL}/images/hero-a-propos-maison-hiver.png`,
       datePublished: "2026-09-03",
       authorName: "L'équipe d'experts ThermoMatch",
     }),
@@ -68,7 +68,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
       
       {/* Blog Hero Header */}
       <section className="relative w-full bg-[#0C1821] pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/images/hero_calculator_bg_1788447325499.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/images/hero-a-propos-maison-hiver.png')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0C1821] to-transparent"></div>
         
         <div className="container mx-auto px-6 relative z-10 max-w-4xl">
@@ -92,7 +92,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
           <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 font-medium">
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
-              <span>Analyste Financier ThermoMatch</span>
+              <span>Équipe Thermopompes À Vendre</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -129,14 +129,14 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
             <ol>
               <li><strong>Le coût de l'équipement :</strong> L'unité extérieure, les compresseurs et les unités intérieures.</li>
               <li><strong>Les frais d'installation :</strong> La main d'œuvre spécialisée, le filage électrique (parfois nécessitant l'intervention d'un maître électricien) et les supports.</li>
-              <li><strong>Les déductions (Subventions) :</strong> C'est ici que la magie opère. Le programme LogisVert d'Hydro-Québec peut rembourser une part très significative du montant total.</li>
+              <li><strong>Les déductions (Subventions) :</strong> Le programme LogisVert d'Hydro-Québec verse un montant fixé par jumelage certifié, de quelques centaines à plus de deux mille dollars selon la capacité à -8 °C. Les montants exacts sont sur chaque fiche de notre catalogue.</li>
             </ol>
 
             <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 md:p-12 rounded-3xl border border-emerald-100 my-12 text-center not-prose shadow-sm">
               <Calculator className="w-12 h-12 text-emerald-600 mx-auto mb-6" />
               <h3 className="text-3xl font-black text-emerald-900 mb-4">Générez votre soumission exacte</h3>
               <p className="text-emerald-800 mb-8 text-lg max-w-xl mx-auto">
-                Notre algorithme calcule instantanément le coût du matériel, l'estimation de l'installation dans votre région, et déduit automatiquement vos subventions admissibles.
+                Notre estimateur donne une fourchette selon votre projet, à partir des prix réellement observés au Québec. Quand nous n'avons pas de données fiables, il le dit plutôt que d'inventer un chiffre.
               </p>
               <Link href="/trouver-ma-thermopompe">
                 <Button size="lg" className="h-16 px-10 text-xl font-bold bg-[#d94b12] hover:bg-[#b83808] text-white shadow-xl shadow-[#d94b12]/20 rounded-full w-full sm:w-auto">
@@ -151,7 +151,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
             </p>
             <ul>
               <li><strong>Sous-dimensionner la machine :</strong> Acheter une thermopompe moins puissante pour économiser à l'achat vous forcera à utiliser vos plinthes électriques beaucoup plus souvent, annulant ainsi vos économies d'énergie.</li>
-              <li><strong>Ignorer la certification NEEP :</strong> Seules les thermopompes certifiées pour les climats froids sont éligibles aux subventions. Assurez-vous que le modèle choisi figure sur la liste approuvée.</li>
+              <li><strong>Ignorer la liste officielle :</strong> LogisVert n'est versé que pour un jumelage précis (unité extérieure + intérieure) inscrit sur la liste d'Hydro-Québec. Vérifiez que le numéro exact de votre modèle y figure avant de signer.</li>
             </ul>
 
             <p className="text-sm text-slate-400 italic mt-12">

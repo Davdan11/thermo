@@ -464,7 +464,7 @@ export default function SoumissionPage() {
 
       {/* ── BOTTOM: 3-step process strip ── */}
       <div style={{ backgroundColor: "#fff", borderTop: "1px solid #e8e4de", padding: "32px 40px" }}>
-        <div style={{ maxWidth: 1140, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 40 }}>
+        <div style={{ maxWidth: 1140, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 28 }}>
           {[
             { num: 1, title: "Analyse du projet", desc: "Nous examinons vos besoins et les spécificités de votre bâtiment." },
             { num: 2, title: "Validation", desc: "Nous validons la faisabilité technique et les meilleures options pour vous." },

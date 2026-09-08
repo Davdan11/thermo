@@ -1,5 +1,7 @@
 "use client";
 
+import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+
 import { useState, useCallback, useRef, useEffect } from "react";
 import type { LogisVertResult } from "@/lib/subsidies/logisvert-calculator";
 
@@ -142,7 +144,7 @@ export function SubventionsClient() {
         estimatedAmountCents: dollars * 100,
         currency: "CAD",
         disclaimer: "Montant officiel Hydro-Québec.",
-        rulesVerifiedAt: "2026-08-28",
+        rulesVerifiedAt: logisvertMetadata.updatedAt.slice(0, 10),
         sourceUrl: "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
       },
     });
@@ -237,7 +239,7 @@ export function SubventionsClient() {
                             onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#f5f3ee"; }}
                             onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>
                             <strong>{p.brand}</strong>{p.series ? ` ${p.series}` : ""} — <span style={{ fontWeight: 400 }}>{p.model}</span>
-                            <br /><span style={{ fontSize: 12, color: MUT }}>{p.btu.toLocaleString()} BTU à -8°C · LogisVert: <strong style={{ color: "#16a34a" }}>{p.logisVertDollars.toLocaleString()} $</strong> · {p.isColdClimate ? "❄️ Climat froid" : "Standard"} · {p.systemType === "C" ? "Central" : "Mini/Multi"}</span>
+                            <br /><span style={{ fontSize: 12, color: MUT }}>{p.btu.toLocaleString("fr-CA")} BTU/h à -8 °C · LogisVert : <strong style={{ color: "#16a34a" }}>{p.logisVertDollars.toLocaleString("fr-CA")} $</strong> · {p.isColdClimate ? "Climat froid" : "Standard"} · {p.systemType === "C" ? "Centrale" : "Murale / multizone"}</span>
                           </button>
                         ))
                       )}
@@ -261,7 +263,7 @@ export function SubventionsClient() {
                       <div style={{ color: INK, fontSize: 15, fontWeight: 650 }}>
                         {selected.brand}{selected.series ? ` ${selected.series}` : ""} — {selected.model}
                       </div>
-                      <div style={{ marginTop: 4, color: MUT, fontSize: 13 }}>{selected.btu.toLocaleString()} BTU à -8°C · {selected.isColdClimate ? "❄️ Climat froid" : "Standard"} · {selected.systemType === "C" ? "Central" : "Mini/Multi"}</div>
+                      <div style={{ marginTop: 4, color: MUT, fontSize: 13 }}>{selected.btu.toLocaleString("fr-CA")} BTU/h à -8 °C · {selected.isColdClimate ? "Climat froid" : "Standard"} · {selected.systemType === "C" ? "Centrale" : "Murale / multizone"}</div>
                     </div>
                     <button type="button" onClick={() => { setSelected(null); setChecked(false); }}
                       style={{ minWidth: 72, height: 36, color: ORG, background: "transparent",
@@ -367,7 +369,7 @@ export function SubventionsClient() {
                   checked
                     ? (logisVertResult 
                         ? (logisVertResult.estimatedAmountDollars > 0 
-                            ? `Montant estimé (${logisVertResult.capacityBtuUsed.toLocaleString()} BTU à ${logisVertResult.ratePerKBtu} $/kBTU). ${logisVertResult.isColdClimate ? "Taux Climat Froid appliqué." : ""}` 
+                            ? `Montant officiel Hydro-Québec pour ce jumelage certifié (capacité de ${logisVertResult.capacityBtuUsed.toLocaleString("fr-CA")} BTU/h à -8 °C)${logisVertResult.isColdClimate ? ", appareil certifié climat froid" : ""}.` 
                             : "La capacité de ce modèle ne permet pas de se qualifier pour la subvention LogisVert.") 
                         : "Cette configuration pourrait être admissible à un programme provincial en vigueur.")
                     : "Remplissez le formulaire pour consulter les résultats.",
@@ -379,9 +381,9 @@ export function SubventionsClient() {
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
                   </svg>,
                   "Configuration exacte",
-                  checked ? "À vérifier dans la liste officielle" : "En attente",
+                  checked ? "Inscrite sur la liste officielle" : "En attente",
                   checked
-                    ? "Le modèle sélectionné doit figurer dans la liste officielle des équipements admissibles."
+                    ? "Ce jumelage (unité extérieure + unité intérieure) figure dans la liste des appareils admissibles d'Hydro-Québec. L'installateur doit poser exactement cette combinaison."
                     : "Sélectionnez un modèle pour démarrer la vérification.",
                   "https://www.nrcan.gc.ca/energy-efficiency/energy-star-canada",
                   true

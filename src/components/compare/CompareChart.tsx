@@ -87,7 +87,7 @@ export function CompareChart({ products }: CompareChartProps) {
         Diagramme comparatif
       </h2>
       <p style={{ fontSize: 12, color: "#6B7280", marginBottom: 24 }}>
-        Visualisation des specifications cles. Les valeurs sont basees sur les donnees du fabricant.
+        Visualisation des spécifications cles. Les valeurs sont basees sur les données du fabricant.
       </p>
 
       {/* Legend */}

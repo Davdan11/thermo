@@ -221,20 +221,24 @@ body {
   }
 }
 
-/* ---- Headings ---- */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: var(--leading-heading);
-  letter-spacing: var(--tracking-heading);
-  color: inherit;
-  text-wrap: balance;
-}
+/* ---- Headings ----
+   Dans @layer base : une règle hors couche battrait les utilitaires Tailwind
+   (text-white, text-3xl…) et rendait les titres invisibles sur fond sombre. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    color: inherit;
+    text-wrap: balance;
+  }
 
-h1 { font-size: var(--text-h1); }
-h2 { font-size: var(--text-h2); }
-h3 { font-size: var(--text-h3); }
-h4 { font-size: var(--text-h4); }
+  h1 { font-size: var(--text-h1); }
+  h2 { font-size: var(--text-h2); }
+  h3 { font-size: var(--text-h3); }
+  h4 { font-size: var(--text-h4); }
+}
 
 p {
   line-height: var(--leading-body);

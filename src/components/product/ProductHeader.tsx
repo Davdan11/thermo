@@ -15,6 +15,22 @@ interface ProductHeaderProps {
 export function ProductHeader({ detail }: ProductHeaderProps) {
   const { model, brand, series, isColdClimate, systemTypeLabel } = detail;
 
+  // Regroupe les fiches sœurs par capacité ; garde par capacité la fiche la mieux documentée.
+  const capacityChips = (() => {
+    const byCap = new Map<number, { slug: string; modelNumber: string; count: number; score: number }>();
+    for (const sib of detail.seriesSiblings) {
+      const cap = sib.nominalCapacityBtu ?? 0;
+      if (!cap || cap === model.nominalCapacityBtu) continue;
+      const score = (sib.certifiedPairings ?? 0) + (sib.imageUrl ? 1000 : 0) + (sib.seer2Max ? 100 : 0);
+      const cur = byCap.get(cap);
+      if (!cur) byCap.set(cap, { slug: sib.slug, modelNumber: sib.modelNumber, count: 1, score });
+      else { cur.count++; if (score > cur.score) { cur.slug = sib.slug; cur.modelNumber = sib.modelNumber; cur.score = score; } }
+    }
+    return [...byCap.entries()]
+      .sort((a, b) => a[0] - b[0])
+      .map(([cap, v]) => ({ ...v, label: `${(cap / 1000).toFixed(0)}\u2009000 BTU` }));
+  })();
+
   const capacityLabel = model.nominalCapacityBtu
     ? `${(model.nominalCapacityBtu / 1000).toFixed(0)}\u2009000 BTU`
     : null;
@@ -79,24 +95,33 @@ export function ProductHeader({ detail }: ProductHeaderProps) {
           </p>
         )}
 
-        {/* Siblings (other capacities in same series) */}
-        {detail.seriesSiblings.length > 0 && (
+        {/* Autres capacités de la série : une puce par capacité (la fiche la mieux documentée), jamais une par machine */}
+        {capacityChips.length > 0 && (
           <div className="mt-4">
             <p className="text-xs font-medium text-muted mb-2">
               Autres capacités{isGenericSeries(series.name, series.slug) ? "" : ` dans la série ${series.name}`}
+              {detail.seriesSiblings.length > capacityChips.length ? ` · ${detail.seriesSiblings.length + 1} modèles` : ""}
             </p>
             <div className="flex flex-wrap gap-2">
-              {detail.seriesSiblings.map((sibling) => (
+              {capacityChips.map((chip) => (
                 <Link
-                  key={sibling.id}
-                  href={`/produit/${sibling.slug}`}
+                  key={chip.slug}
+                  href={`/produit/${chip.slug}`}
+                  title={chip.count > 1 ? `${chip.count} modèles de ${chip.label} dans cette série` : chip.modelNumber}
                   className="text-xs px-3 py-1.5 rounded-md border border-border bg-surface text-foreground hover:border-border-hover transition-colors"
                 >
-                  {sibling.nominalCapacityBtu
-                    ? `${(sibling.nominalCapacityBtu / 1000).toFixed(0)}\u2009000 BTU`
-                    : sibling.name}
+                  {chip.label}
+                  {chip.count > 1 ? <span className="text-muted"> ×{chip.count}</span> : null}
                 </Link>
               ))}
+              {detail.seriesSiblings.length > capacityChips.length && !isGenericSeries(series.name, series.slug) && (
+                <Link
+                  href={`/thermopompes?brand=${brand.slug}&series=${series.slug}`}
+                  className="text-xs px-3 py-1.5 rounded-md border border-dashed border-border text-muted hover:text-foreground transition-colors"
+                >
+                  Tous les modèles {series.name}
+                </Link>
+              )}
             </div>
           </div>
         )}

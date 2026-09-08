@@ -40,7 +40,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
         <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#e54b17]/10">
           <AlertCircle className="w-8 h-8 text-[#e54b17]" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-4">Aucun modele trouve pour vos criteres</h3>
+        <h3 className="text-2xl font-bold text-white mb-4">Aucun modèle trouvé pour vos critères</h3>
         <p className="text-[#8e9fae] mb-8 max-w-md mx-auto">
           Aucune machine de la base officielle ne respecte tous vos critères. Nous préférons ne rien proposer plutôt que de proposer un appareil inadapté. Nos conseillers peuvent vous aider directement.
         </p>
@@ -222,7 +222,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                   <div className="mb-5 mt-2">
                     <button onClick={() => setExpandedReasons(expandedReasons === index ? null : index)}
                       className="w-full flex items-center justify-between pb-2 border-b border-gray-100 group transition-all">
-                      <span className="text-[11px] font-black uppercase tracking-widest text-[#0b1b24] group-hover:text-[#e54b17] transition-colors">Pourquoi ce modele ?</span>
+                      <span className="text-[11px] font-black uppercase tracking-widest text-[#0b1b24] group-hover:text-[#e54b17] transition-colors">Pourquoi ce modèle ?</span>
                       <div className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-300 ${expandedReasons === index ? "border-[#e54b17] bg-[#e54b17] text-white rotate-180" : "border-gray-200 text-gray-400 group-hover:border-[#0b1b24] group-hover:text-[#0b1b24]"}`}>
                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
                       </div>
@@ -255,9 +255,9 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
       </div>
 
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="text-center mt-10 pb-4">
-        <p className="text-[#8e9fae] text-sm mb-4">Vous voulez comparer ces modeles cote a cote, spec par spec ?</p>
+        <p className="text-[#8e9fae] text-sm mb-4">Vous voulez comparer ces modèles côte à côte, spec par spec ?</p>
         <Link href="/comparer" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all text-sm">
-          Comparer ces modeles en detail
+          Comparer ces modèles en detail
           <ArrowRight className="w-4 h-4" />
         </Link>
       </motion.div>

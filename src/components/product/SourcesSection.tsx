@@ -11,7 +11,10 @@ interface SourcesSectionProps {
 const CONFIDENCE_LABELS: Record<string, string> = {
   verified: "Vérifié",
   manufacturer_claim: "Déclaration du fabricant",
+  estimated: "Estimation",
   placeholder: "À vérifier",
+  needs_review: "À vérifier",
+  deprecated: "Obsolète",
 };
 
 export function SourcesSection({ sources }: SourcesSectionProps) {

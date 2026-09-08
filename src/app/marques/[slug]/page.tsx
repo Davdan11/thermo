@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getBrandDetail } from "@/lib/data/queries/brand-detail";
 import { GENERIC_SERIES_LABEL, isGenericSeries } from "@/lib/data/series-label";
+import { brandLogoPath } from "@/lib/data/brand-logos";
 import { ProductCard } from "@/components/product/ProductCard";
 import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { registry } from "@/lib/data/registry";
@@ -58,6 +59,7 @@ export default async function BrandPage({
 
   const { brand, series, models, systemTypes, hasColdClimate } = brandDetail;
   const brandName = brand.name.replace(" [DEV]", "");
+  const logo = brandLogoPath(brand.slug);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Accueil", url: SITE_URL },
@@ -128,13 +130,14 @@ export default async function BrandPage({
             <span className="text-white">{brandName}</span>
           </nav>
 
-          {/* Logo Placeholder */}
-          <div className="mb-6 flex items-center text-3xl font-black italic tracking-tighter">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
-              <path d="M4 4h16v16H4V4zm2 2v12h12V6H6z" />
-            </svg>
-            {brandName.toUpperCase()}
-          </div>
+          {/* Logo officiel (manifeste brand-logos), sinon le nom en texte */}
+          {logo ? (
+            <div className="mb-6 inline-flex items-center justify-center bg-white rounded-md px-5 py-3 h-16 w-fit">
+              <img src={logo} alt={brandName} className="h-9 w-auto max-w-[200px] object-contain" />
+            </div>
+          ) : (
+            <div className="mb-6 text-2xl font-black tracking-tight">{brandName}</div>
+          )}
 
           <h1 className="text-[40px] sm:text-[56px] font-bold leading-[1.1] tracking-tight mb-4">
             Thermopompes<br />{brandName}
@@ -209,52 +212,46 @@ export default async function BrandPage({
         <h2 className="text-[28px] font-bold text-[#172126] mb-2">Séries documentées</h2>
         <div className="w-12 h-[3px] bg-[#172126] mb-12"></div>
 
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[#E5E5E5] border border-[#E5E5E5]">
           {series.map((sSummary) => {
             const { series: s, capacityRange } = sSummary;
             const seriesName = isGenericSeries(s.name, s.slug) ? GENERIC_SERIES_LABEL : s.name.replace(" [DEV]", "");
             return (
-              <div key={s.id} className="flex flex-col md:flex-row bg-[#EFECE8] w-full border border-[#E5E5E5] overflow-hidden">
-                {/* Text Side (Left) */}
-                <div className="w-full md:w-1/3 p-8 md:p-12 flex flex-col justify-center bg-[#EFECE8]">
-                  <h3 className="text-3xl font-bold text-[#172126] mb-2">{seriesName}</h3>
-                  <p className="text-sm font-semibold text-[#172126] mb-4">{sSummary.systemTypeLabel}</p>
-                  <p className="text-[15px] text-[#172126]/80 leading-relaxed mb-6">
+              <Link
+                key={s.id}
+                href={`/thermopompes?brand=${brand.slug}&series=${s.slug}`}
+                className="group flex flex-col bg-white hover:bg-[#FAF8F4] transition-colors"
+              >
+                <div className="aspect-[16/9] bg-[#EFECE8] flex items-center justify-center overflow-hidden">
+                  {s.imageUrl ? (
+                    <img src={s.imageUrl} alt={`${brandName} ${seriesName}`} loading="lazy" className="max-w-full max-h-full object-contain p-4" />
+                  ) : (
+                    <span className="text-xs uppercase tracking-widest text-[#9ca3af]">{sSummary.systemTypeLabel}</span>
+                  )}
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)] mb-1">{sSummary.systemTypeLabel}</p>
+                  <h3 className="text-xl font-bold text-[#172126] mb-2 group-hover:text-[var(--color-accent)] transition-colors">{seriesName}</h3>
+                  <p className="text-sm text-[#172126]/75 leading-relaxed mb-4">
                     {s.description || `${sSummary.modelCount} modèle${sSummary.modelCount > 1 ? "s" : ""} certifié${sSummary.modelCount > 1 ? "s" : ""}${sSummary.coldClimateCount > 0 ? `, dont ${sSummary.coldClimateCount} climat froid` : ""}.`}
                   </p>
-                  
-                  {capacityRange && (
-                    <div className="mb-8">
-                      <span className="inline-flex items-center border border-[#172126]/20 rounded-[4px] px-3 py-1.5 text-[11px] font-semibold text-[#172126] uppercase tracking-wider">
-                        {capacityRange.min.toLocaleString("fr-CA")} - {capacityRange.max.toLocaleString("fr-CA")} BTU
+                  <div className="mt-auto flex items-center justify-between gap-3">
+                    {capacityRange ? (
+                      <span className="inline-flex items-center border border-[#172126]/20 rounded-[4px] px-2.5 py-1 text-[11px] font-semibold text-[#172126] uppercase tracking-wider">
+                        {capacityRange.min === capacityRange.max
+                          ? `${capacityRange.min.toLocaleString("fr-CA")} BTU`
+                          : `${capacityRange.min.toLocaleString("fr-CA")} – ${capacityRange.max.toLocaleString("fr-CA")} BTU`}
                       </span>
-                    </div>
-                  )}
-
-                  <Link 
-                    href={`/thermopompes?brand=${brand.slug}&series=${s.slug}`} 
-                    className="mt-auto text-sm font-bold text-[var(--color-accent)] hover:opacity-80 transition-opacity flex items-center"
-                  >
-                    Voir les modèles {seriesName}
-                    <svg className="ml-1.5 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-
-                {/* Images Side (Right) */}
-                <div className="w-full md:w-2/3 flex">
-                  {/* Indoor/Lifestyle image */}
-                  <div className="w-1/2 h-full min-h-[320px] bg-cover bg-center border-l border-[#E5E5E5]"
-                       style={{ backgroundImage: "url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop')" }}>
-                  </div>
-                  {/* Outdoor image */}
-                  <div className="w-1/2 h-full min-h-[320px] bg-white bg-cover bg-center flex items-center justify-center p-8 border-l border-[#E5E5E5]">
-                    {/* Placeholder for outdoor unit photo - using a transparent PNG or just a simple image */}
-                    <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop" alt="Unité extérieure" className="max-w-full max-h-full object-contain mix-blend-multiply opacity-80" />
+                    ) : <span />}
+                    <span className="text-sm font-bold text-[var(--color-accent)] flex items-center">
+                      {sSummary.modelCount} modèle{sSummary.modelCount > 1 ? "s" : ""}
+                      <svg className="ml-1.5 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7-7 7" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

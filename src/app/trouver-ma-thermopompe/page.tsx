@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThermoMatchLoader } from "./_components/ThermoMatchLoader";
+import { getEligibleModelCount } from "@/lib/data/queries/stats";
 
 export const metadata: Metadata = {
   title: "Trouver ma thermopompe — ThermoMatch",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function TrouverMaThermopompePage() {
+  const catalogueCount = getEligibleModelCount();
   return (
     <main>
       <div className="sr-only">
@@ -20,7 +22,7 @@ export default function TrouverMaThermopompePage() {
           trois machines réellement adaptées, avec leur subvention LogisVert.
         </p>
       </div>
-      <ThermoMatchLoader />
+      <ThermoMatchLoader catalogueCount={catalogueCount} />
     </main>
   );
 }

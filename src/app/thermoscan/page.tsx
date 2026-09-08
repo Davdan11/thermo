@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Camera, Cpu, BarChart3, Lock, Zap, Target, Leaf } from "lucide-react";
 
 export const metadata: Metadata = createMetadata({
-  title: "ThermoScan \u2014 Identifiez votre thermopompe actuelle | Thermopompes À Vendre.ca",
-  description: "Photographiez l'etiquette de votre thermopompe actuelle. Notre IA l'identifie en quelques secondes et compare ses performances avec les meilleurs modeles.",
+  title: "ThermoScan \u2014 Identifiez votre thermopompe actuelle",
+  description: "Photographiez l'étiquette de votre thermopompe actuelle. Notre IA l'identifie en quelques secondes et compare ses performances avec les meilleurs modèles.",
   alternates: { canonical: "/thermoscan" },
   robots: { index: true, follow: true },
 });
@@ -51,9 +51,9 @@ export default function ThermoScanPage() {
 
           <div className="flex flex-wrap gap-3">
             {[
-              { n: "1", Icon: Camera,   text: "Photographiez l\u2019etiquette" },
-              { n: "2", Icon: Cpu,      text: "L\u2019IA identifie votre modele" },
-              { n: "3", Icon: BarChart3,text: "Comparaison instantanee" },
+              { n: "1", Icon: Camera,   text: "Photographiez l\u2019étiquette" },
+              { n: "2", Icon: Cpu,      text: "L\u2019IA identifie votre modèle" },
+              { n: "3", Icon: BarChart3,text: "Comparaison instantanée" },
             ].map(({ n, Icon, text }) => (
               <div key={n} className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-4 py-2">
                 <span
@@ -128,10 +128,10 @@ export default function ThermoScanPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { Icon: Lock,   title: "Aucune donnee stockee",  desc: "La photo est analysee puis effacee immediatement. Aucune image conservee sur nos serveurs." },
-              { Icon: Zap,    title: "Moins de 30 secondes",   desc: "Gemini Vision lit l'etiquette et compare les specifications en quelques secondes." },
+              { Icon: Lock,   title: "Aucune donnée stockée",  desc: "La photo est analysée puis effacée immédiatement. Aucune image conservée sur nos serveurs." },
+              { Icon: Zap,    title: "Moins de 30 secondes",   desc: "Gemini Vision lit l'étiquette et compare les spécifications en quelques secondes." },
               { Icon: Target, title: "Catalogue certifié",          desc: "Base ENERGY STAR et liste LogisVert d'Hydro-Québec, mise à jour automatiquement." },
-              { Icon: Leaf,   title: "Subventions incluses",   desc: "Estimation Logis Vert integree automatiquement dans chaque comparaison." },
+              { Icon: Leaf,   title: "Subventions incluses",   desc: "Estimation Logis Vert intégrée automatiquement dans chaque comparaison." },
             ].map(({ Icon, title, desc }) => (
               <div
                 key={title}
@@ -151,7 +151,7 @@ export default function ThermoScanPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t flex flex-wrap gap-4 items-center justify-between" style={{ borderColor: "var(--color-border)" }}>
-            <p className="text-[var(--color-muted)] text-sm">Vous preferez comparer des modeles sans scanner ?</p>
+            <p className="text-[var(--color-muted)] text-sm">Vous préférez comparer des modèles sans scanner ?</p>
             <Link
               href="/comparer"
               className="text-sm font-semibold underline underline-offset-4 text-[var(--color-foreground)] hover:text-[var(--color-accent)] transition-colors"

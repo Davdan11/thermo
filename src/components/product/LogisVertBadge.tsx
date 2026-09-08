@@ -3,7 +3,6 @@ import { lookupLogisVertFuzzy } from "@/lib/subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "@/lib/subsidies/logisvert-calculator";
 import Image from "next/image";
 import styles from "./LogisVertBadge.module.css";
-import { CountingNumber } from "@/components/ui/counting-number";
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 
 /* ------------------------------------------------------------------
@@ -91,7 +90,7 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
 
         <div className={styles.amountRight}>
           <p className={styles.amount}>
-            <CountingNumber number={dollars} inView={true} decimalPlaces={0} /> $
+            {dollars.toLocaleString("fr-CA")} $
           </p>
         </div>
       </div>

@@ -64,24 +64,6 @@ export function CompareSelector({ products, initialSlugs = [], maxCompare }: Com
 
   return (
     <div>
-      {selected.size > 0 && (
-        <div className="mb-6 flex items-center justify-between gap-4 px-5 py-3 rounded-lg" style={{ background: "var(--color-surface)", border: "1px solid var(--color-border)" }}>
-          <p className="text-sm" style={{ color: "var(--color-foreground)" }}>
-            <span className="font-bold">{selected.size}</span> modèle{selected.size > 1 ? "s" : ""} sélectionné{selected.size > 1 ? "s" : ""}
-            <span className="ml-2 font-normal" style={{ color: "var(--color-muted)" }}>(min. 2, max. {maxCompare})</span>
-          </p>
-          <div className="flex items-center gap-3">
-            <button type="button" onClick={() => setSelected(new Set())} className="text-sm hover:opacity-80 transition-opacity" style={{ color: "var(--color-muted)" }}>
-              Effacer
-            </button>
-            <Button onClick={handleCompare} disabled={selected.size < 2} size="lg">
-              Comparer maintenant
-              <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      )}
-
       <div className="mb-8">
         <div className="relative max-w-xl">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 pointer-events-none" style={{ color: "var(--color-muted)" }} />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { brandLogoPath } from "@/lib/data/brand-logos";
 import { createMetadata } from "@/lib/seo";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import fs from "fs";
@@ -10,7 +11,7 @@ import { BrandDirectoryClient, type BrandSummaryWithLogo } from "@/components/br
    ------------------------------------------------------------------ */
 
 export const metadata: Metadata = createMetadata({
-  title: "Marques de thermopompes | Thermopompes À Vendre.ca",
+  title: "Marques de thermopompes",
   description:
     "Explorez les marques et les modèles de thermopompes présents dans notre catalogue. Comparez leurs capacités, performances et garanties.",
   alternates: { canonical: "/marques" },
@@ -26,7 +27,7 @@ export default function MarquesPage() {
 
   const brandsWithLogo: BrandSummaryWithLogo[] = brands.map((summary) => ({
     ...summary,
-    hasLogo: fs.existsSync(path.join(logosDir, `logo-${summary.brand.slug}-bleu-nuit.png`))
+    hasLogo: brandLogoPath(summary.brand.slug) !== null
   }));
 
   return <BrandDirectoryClient brands={brandsWithLogo} />;

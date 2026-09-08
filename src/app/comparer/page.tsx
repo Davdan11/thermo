@@ -8,8 +8,8 @@ import { ThermoScanEntryCard } from "@/components/thermoscan/ThermoScanEntryCard
 import Link from "next/link";
 
 export const metadata: Metadata = createMetadata({
-  title: "Comparateur de thermopompes | Thermopompes À Vendre.ca",
-  description: "Comparez cote a cote les performances, l'efficacite, le silence et la garantie des thermopompes.",
+  title: "Comparateur de thermopompes",
+  description: "Comparez côte à côte les performances, l'efficacité, le silence et la garantie des thermopompes.",
   alternates: { canonical: "/comparer" },
   robots: { index: true, follow: true },
 });
@@ -34,7 +34,7 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
         {/* Hero image — right side only */}
         <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%] z-0">
           <img 
-            src="/images/herocomparer.png" 
+            src="/images/categorie-murale-daikin-hd.png" 
             alt="" 
             style={{ 
               width: "100%", 
@@ -87,10 +87,10 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
             <div>
               <div style={{ textAlign: "center", marginBottom: 32, padding: "28px 24px", background: "var(--color-surface)", border: "1px solid var(--color-border)", borderRadius: 10 }}>
                 <h2 style={{ margin: 0, fontSize: 22, fontWeight: 700, color: "var(--color-foreground)" }}>
-                  Selectionnez vos thermopompes a comparer
+                  Sélectionnez vos thermopompes à comparer
                 </h2>
                 <p style={{ margin: "8px 0 0", fontSize: 14, color: "var(--color-muted)", maxWidth: 480, marginLeft: "auto", marginRight: "auto" }}>
-                  Choisissez entre 2 et {MAX_COMPARE} modeles pour les comparer cote a cote.
+                  Choisissez entre 2 et {MAX_COMPARE} modèles pour les comparer côte à côte.
                 </p>
               </div>
               <CompareSelector

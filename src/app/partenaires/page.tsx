@@ -35,7 +35,7 @@ export default function PartenairesPage() {
         }}
       >
         <img
-          src="/images/installateur-premium.jpg"
+          src="/images/about-experience-house.jpg"
           alt="Installateur premium"
           style={{
             position: "absolute",
@@ -147,7 +147,7 @@ export default function PartenairesPage() {
           >
             <div>
               {/* Le logo est blanc, donc il sortira parfaitement sur ce fond sombre (InkDeep) */}
-              <img src="/images/Thermoscan.png" alt="ThermoScan" style={{ height: "48px", width: "auto", marginBottom: "40px", objectFit: "contain" }} />
+              <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" style={{ height: "48px", width: "auto", marginBottom: "40px", objectFit: "contain" }} />
               
               <h2
                 style={{
@@ -165,48 +165,12 @@ export default function PartenairesPage() {
                 Notre mission chez Thermopompe A Vendre est d'accompagner le consommateur à travers le processus de sélection complexe d'une thermopompe. Lorsqu'ils arrivent à vous, le travail d'éducation est déjà fait.
               </p>
               <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "16px", lineHeight: 1.6 }}>
-                Grâce à notre outil ThermoScan, chaque projet qui vous est confié indique clairement les besoins en chauffage, le tonnage requis et les préférences de la résidence. Vous n'êtes plus un vendeur, vous êtes l'expert qui vient réaliser l'installation.
+                Chaque projet qui vous est confié arrive avec les réponses du questionnaire ThermoMatch : superficie, année de construction, isolation, système actuel, budget et les trois machines proposées au client. Vous n'êtes plus un vendeur, vous êtes l'expert qui vient valider le calcul de charge et réaliser l'installation.
               </p>
             </div>
             
             <div style={{ position: "relative", width: "100%", backgroundColor: "rgba(255,255,255,0.03)", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.1)", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
-               <img src="/images/ui-mockup.png" alt="Interface ThermoScan" style={{ width: "100%", height: "auto", display: "block" }} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── IMMERSIVE TESTIMONIAL ── */}
-      <section
-        style={{
-          backgroundColor: "white",
-          color: T.ink,
-          padding: "clamp(80px, 10vw, 140px) clamp(24px, 5vw, 64px)",
-          textAlign: "center",
-          borderTop: `1px solid ${T.border}`,
-          borderBottom: `1px solid ${T.border}`,
-        }}
-      >
-        <div className="max-w-[900px] mx-auto">
-          <p
-            style={{
-              fontSize: "clamp(32px, 4vw, 48px)",
-              fontWeight: 500,
-              lineHeight: 1.2,
-              letterSpacing: "-0.02em",
-              margin: "0 0 40px",
-              fontFamily: "var(--font-sans)",
-            }}
-          >
-            "C'est un véritable partenariat. Les clients nous font déjà confiance car ils ont été accompagnés par Thermopompe A Vendre. Notre taux de conversion est excellent et notre équipe se concentre sur la qualité technique."
-          </p>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
-            <div style={{ width: "64px", height: "64px", borderRadius: "50%", overflow: "hidden", border: `2px solid ${T.border}` }}>
-              <img src="/images/about-experience-house.jpg" alt="Partenaire" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            </div>
-            <div style={{ textAlign: "left" }}>
-              <p style={{ fontWeight: 700, fontSize: "16px", margin: "0 0 4px" }}>Marc-Antoine D.</p>
-              <p style={{ color: T.muted, fontSize: "14px", margin: 0 }}>Maître Installateur Partenaire, Grand Montréal</p>
+               <img src="/images/ui-mockup.png" alt="Interface ThermoMatch" style={{ width: "100%", height: "auto", display: "block" }} />
             </div>
           </div>
         </div>

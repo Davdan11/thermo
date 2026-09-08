@@ -31,7 +31,7 @@ function refrigerantNote(ref: string | null | undefined) {
   if (!ref) return null;
   const r = ref.toUpperCase();
   if (r.includes("R-22") || r.includes("R22"))
-    return { level: "danger" as const, text: "R-22 interdit au Canada depuis 2020. Recharge tres couteuse (200 $/kg). Remplacement prioritaire." };
+    return { level: "danger" as const, text: "R-22 interdit au Canada depuis 2020. Recharge très couteuse (200 $/kg). Remplacement prioritaire." };
   if (r.includes("R-410A") || r.includes("R410A"))
     return { level: "warn" as const, text: "R-410A encore disponible, mais en transition vers des refrigerants a plus faible GWP (R-454B, R-32)." };
   if (r.includes("R-454B") || r.includes("R-32"))
@@ -50,7 +50,7 @@ function ageAlert(year: number | null | undefined) {
 
 /* analyzing animation */
 const STEPS_TXT = [
-  "Lecture de l'etiquette...",
+  "Lecture de l'étiquette...",
   "Extraction des informations...",
   "Recherche dans le catalogue...",
   "Verification des caracteristiques...",
@@ -145,7 +145,7 @@ function WarrantyCard({ warranties }: { warranties: WarrantyEntry[] }) {
       <div className="py-3">
         {hasMultiple && (
           <p className="text-xs text-[var(--color-muted)] mb-3 italic">
-            {warranties.length} options de garantie disponibles selon le modele et l&apos;installateur.
+            {warranties.length} options de garantie disponibles selon le modèle et l&apos;installateur.
           </p>
         )}
         <WarBar years={best.partsYears} label="Pieces" />
@@ -249,16 +249,16 @@ function DeviceSpecCard({
       <SectionCard icon={Thermometer} title="Performance">
         {btu5F ? (
           <SpecRow
-            label={match ? "Capacite chauffage (-15 C)" : "Puissance chauffage"}
+            label={match ? "Capacité chauffage (-15 °C)" : "Puissance chauffage"}
             value={fmtBtu(btu5F)}
-            sub={match ? "Capacite a -15 C (5 F) — conditions hivernales extremes" : "Calcule depuis les Watts de l etiquette"}
+            sub={match ? "Capacite a -15 C (5 F) — conditions hivernales extremes" : "Calcule depuis les Watts de l étiquette"}
           />
         ) : null}
         {!match && coolBtu ? (
-          <SpecRow label="Puissance climatisation" value={fmtBtu(coolBtu)} sub="Calcule depuis les Watts de l etiquette" />
+          <SpecRow label="Puissance climatisation" value={fmtBtu(coolBtu)} sub="Calcule depuis les Watts de l étiquette" />
         ) : null}
-        {heatW ? <SpecRow label="Puissance chaud (etiquette)" value={`${heatW.toLocaleString("fr-CA")} W`} /> : null}
-        {coolW ? <SpecRow label="Puissance froid (etiquette)" value={`${coolW.toLocaleString("fr-CA")} W`} /> : null}
+        {heatW ? <SpecRow label="Puissance chaud (étiquette)" value={`${heatW.toLocaleString("fr-CA")} W`} /> : null}
+        {coolW ? <SpecRow label="Puissance froid (étiquette)" value={`${coolW.toLocaleString("fr-CA")} W`} /> : null}
         {pwrHeatW ? <SpecRow label="Consommation chauffage" value={`${pwrHeatW.toLocaleString("fr-CA")} W`} /> : null}
         {!btu5F && !coolBtu && !heatW && !coolW ? (
           <SpecRow label="Capacite" value="Non disponible" />
@@ -292,8 +292,8 @@ function DeviceSpecCard({
           : match?.source === "catalog-2026"
           ? "Donnees ENERGY STAR Canada 2026"
           : hasLabelW
-          ? "Specs lues directement sur l etiquette par Gemini Vision"
-          : "Donnees de l etiquette — catalogue non disponible pour ce fabricant"}
+          ? "Specs lues directement sur l étiquette par Gemini Vision"
+          : "Donnees de l étiquette — catalogue non disponible pour ce fabricant"}
       </p>
 
       {warranties && warranties.length > 0 && (
@@ -309,7 +309,7 @@ function DeviceSpecCard({
           <a href="/trouver-ma-thermopompe" className={btnPrimary} style={{ background: "var(--color-accent)" }}>
             Obtenir mes recommandations ThermoMatch <ArrowRight size={16} />
           </a>
-          <p className="text-xs text-center text-[var(--color-muted)]">ThermoMatch analyse votre profil pour recommander le modele ideal.</p>
+          <p className="text-xs text-center text-[var(--color-muted)]">ThermoMatch analyse votre profil pour recommander le modèle ideal.</p>
         </div>
       )}
     </div>
@@ -380,14 +380,14 @@ function CompareView({
       <CheckCircle size={32} className="text-green-600 mx-auto mb-4" />
       <p className="font-bold text-[var(--color-foreground)] text-lg mb-2">{currentBrand} {currentModel}</p>
       <p className="text-sm text-[var(--color-muted)] mb-6 max-w-sm mx-auto">
-        Obtenez des recommandations automatiques ou cherchez un modele specifique a comparer.
+        Obtenez des recommandations automatiques ou cherchez un modèle specifique à comparer.
       </p>
       <div className="flex flex-col gap-3 max-w-sm mx-auto">
         <a href="/trouver-ma-thermopompe" className="inline-flex justify-center items-center gap-2 px-5 py-3 rounded-lg font-bold text-sm text-white" style={{ background: "var(--color-accent)" }}>
           Faire le questionnaire <ArrowRight size={16} />
         </a>
         <button onClick={() => setIsSearching(true)} className={btnSecondary} style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}>
-          <Search size={16} /> Chercher un modele a comparer
+          <Search size={16} /> Chercher un modèle à comparer
         </button>
       </div>
     </div>
@@ -396,7 +396,7 @@ function CompareView({
   if (isSearching) return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between mb-2">
-        <h3 className="font-bold text-[var(--color-foreground)] text-lg">Rechercher un modele</h3>
+        <h3 className="font-bold text-[var(--color-foreground)] text-lg">Rechercher un modèle</h3>
         <button onClick={() => setIsSearching(false)} className="p-2 text-[var(--color-muted)] hover:bg-gray-100 rounded-full transition-colors"><X size={18} /></button>
       </div>
       <div className="relative">
@@ -413,7 +413,7 @@ function CompareView({
       </div>
       {searchLoading && <p className="text-xs text-[var(--color-muted)] text-center py-4">Recherche...</p>}
       {!searchLoading && searchQuery.trim().length >= 3 && searchResults.length === 0 && (
-        <p className="text-xs text-[var(--color-muted)] text-center py-4">Aucun modele trouve pour "{searchQuery}".</p>
+        <p className="text-xs text-[var(--color-muted)] text-center py-4">Aucun modèle trouvé pour "{searchQuery}".</p>
       )}
       {!searchLoading && searchResults.length > 0 && (
         <div className="flex flex-col gap-2 mt-2">
@@ -453,13 +453,13 @@ function CompareView({
       recommended: rp?.coldClimate ? "Oui" : "Non",
       better: !currentMatch?.coldClimate && !!rp?.coldClimate,
       note: !currentMatch?.coldClimate && rp?.coldClimate
-        ? "Maintient le chauffage jusqu'a -30 C vs -15 C environ pour votre modele actuel."
+        ? "Maintient le chauffage jusqu'a -30 C vs -15 C environ pour votre modèle actuel."
         : undefined,
     },
     {
       label: "Refrigerant",
       current: currentMatch?.refrigerant ?? "N/D",
-      recommended: rp?.refrigerant ?? "Selon modele",
+      recommended: rp?.refrigerant ?? "Selon modèle",
       better: !!(currentMatch?.refrigerant?.includes("R-22") && !rp?.refrigerant?.includes("R-22")),
       note: currentMatch?.refrigerant?.includes("R-22")
         ? "Remplacement du R-22 (200 $/kg) par un refrigerant moderne (R-454B - 40 $/kg)."
@@ -545,7 +545,7 @@ function CompareView({
       )}
 
       <a href="/soumission" className={btnPrimary} style={{ background: "var(--color-accent)" }}>
-        Obtenir une soumission pour ce modele <ArrowRight size={16} />
+        Obtenir une soumission pour ce modèle <ArrowRight size={16} />
       </a>
       <button onClick={onReset} className={btnSecondary} style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}>
         Scanner un autre appareil
@@ -646,7 +646,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
       setLabelSpecs((s as any).rawLabelSpecs ?? null);
       setWarranties((s as any).brandWarranties ?? null);
       setStep("confirm");
-    } catch { setError("Erreur reseau. Verifiez votre connexion."); setStep("capture"); }
+    } catch { setError("Erreur reseau. Vérifiez votre connexion."); setStep("capture"); }
   }, [file]);
 
   const reset = () => {
@@ -686,7 +686,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
           </div>
           <div>
             <p className="font-bold text-white text-sm">Prendre une photo</p>
-            <p className="text-white/70 text-xs">Ouvre la camera de votre telephone</p>
+            <p className="text-white/70 text-xs">Ouvre la caméra de votre téléphone</p>
           </div>
           <input id="ts-camera" type="file" accept="image/*" capture="environment" className="hidden" onChange={onInput} />
         </label>
@@ -709,7 +709,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
             <Info size={18} className="text-[var(--color-muted)]" />
           </div>
           <div>
-            <p className="font-bold text-[var(--color-foreground)] text-sm">Ou trouver l&apos;etiquette ?</p>
+            <p className="font-bold text-[var(--color-foreground)] text-sm">Où trouver l&apos;étiquette ?</p>
             <p className="text-[var(--color-muted)] text-xs">Guide photos en 30 secondes</p>
           </div>
         </button>
@@ -720,7 +720,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
   if (step === "guide") return (
     <div>
       <Back to="intro" />
-      <h3 className="font-bold text-[var(--color-foreground)] text-lg mb-5">Ou trouver l&apos;etiquette ?</h3>
+      <h3 className="font-bold text-[var(--color-foreground)] text-lg mb-5">Où trouver l&apos;étiquette ?</h3>
       <div className="flex flex-col gap-3 mb-6">
         {[
           { n: 1, title: "Unite interieure (murale)", desc: "Cote ou dessous de l'unite accrochee au mur." },
@@ -742,9 +742,9 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
           <p className="font-bold text-sm text-amber-800">Conseils photo</p>
         </div>
         <ul className="space-y-1 text-xs text-amber-700 list-disc list-inside">
-          <li>Approchez-vous : toute l&apos;etiquette doit etre visible</li>
+          <li>Approchez-vous : toute l&apos;étiquette doit être visible</li>
           <li>Bon eclairage — evitez les reflets et les ombres</li>
-          <li>Le numero de modele doit etre parfaitement net</li>
+          <li>Le numéro de modèle doit être parfaitement net</li>
         </ul>
       </div>
       <label htmlFor="ts-guide-cam" className={`${btnPrimary} cursor-pointer`} style={{ background: "var(--color-accent)" }}>
@@ -757,7 +757,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
   if (step === "capture") return (
     <div>
       <Back to="intro" />
-      <h3 className="font-bold text-[var(--color-foreground)] text-lg mb-4">Verifiez la photo</h3>
+      <h3 className="font-bold text-[var(--color-foreground)] text-lg mb-4">Vérifiez la photo</h3>
       {preview && (
         <div className="relative mb-4 rounded-xl overflow-hidden border" style={{ borderColor: "var(--color-border)" }}>
           <img src={preview} alt="Etiquette" className="w-full max-h-72 object-contain bg-gray-50" />
@@ -771,7 +771,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
       <div className="flex gap-3">
         <button onClick={analyze} disabled={!file} className={`${btnPrimary} flex-1`}
           style={{ background: file ? "var(--color-accent)" : "var(--color-border)", cursor: file ? "pointer" : "not-allowed" }}>
-          <Search size={16} /> Analyser l&apos;etiquette
+          <Search size={16} /> Analyser l&apos;étiquette
         </button>
         <label htmlFor="ts-retake" className={`${btnSecondary} flex-shrink-0 w-auto px-4 cursor-pointer`}
           style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}>
@@ -794,7 +794,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
             ? <CheckCircle size={20} className="text-green-600 flex-shrink-0" />
             : <AlertCircle size={20} className="text-amber-500 flex-shrink-0" />}
           <div>
-            <p className="font-bold text-[var(--color-foreground)] text-base">Verifiez les informations</p>
+            <p className="font-bold text-[var(--color-foreground)] text-base">Vérifiez les informations</p>
             <p className="text-xs text-[var(--color-muted)]">{scan?.statusMessage ?? ""}</p>
           </div>
         </div>
@@ -809,7 +809,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
         )}
         <div className="flex flex-col gap-3 mb-5">
           <Field label="Marque" value={brand} onChange={setBrand} />
-          <Field label="Numero de modele" value={model} onChange={setModel} note={f?.modelNumber.note ?? null} />
+          <Field label="Numéro de modèle" value={model} onChange={setModel} note={f?.modelNumber.note ?? null} />
           <div className="grid grid-cols-2 gap-3">
             <Field label="Annee approx." value={year?.toString() ?? ""}
               onChange={v => setYear(parseInt(v) || undefined)} type="number" placeholder="Ex: 2012" />

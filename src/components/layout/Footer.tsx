@@ -73,68 +73,6 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-// Real Quebec province outline SVG
-const QuebecMap = () => (
-  <svg
-    width="80"
-    height="100"
-    viewBox="0 0 500 620"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="
-        M 248 8
-        L 268 12 L 290 10 L 310 16 L 328 12 L 345 18 L 360 14
-        L 375 22 L 388 18 L 400 28 L 410 24 L 422 35 L 430 32
-        L 440 42 L 448 52 L 452 64 L 458 58 L 464 70 L 470 80
-        L 474 94 L 478 108 L 482 122 L 484 138 L 486 154
-        L 488 170 L 490 188 L 488 205 L 492 222 L 490 238
-        L 492 254 L 490 268 L 488 282 L 486 296 L 480 308
-        L 476 320 L 470 330 L 462 338 L 454 344 L 444 350
-        L 434 354 L 422 356 L 412 360 L 402 364 L 394 372
-        L 386 380 L 378 390 L 370 400 L 364 412 L 358 424
-        L 350 434 L 344 444 L 338 454 L 332 462 L 328 472
-        L 320 480 L 314 488 L 308 496 L 300 504 L 294 512
-        L 286 520 L 278 526 L 270 532 L 260 538 L 250 544
-        L 240 548 L 230 544 L 220 538 L 210 532 L 200 526
-        L 192 520 L 184 512 L 176 504 L 170 496 L 162 488
-        L 156 480 L 150 472 L 144 462 L 138 454 L 132 444
-        L 126 434 L 118 424 L 112 412 L 106 400 L 98 390
-        L 90 380 L 82 372 L 74 364 L 64 360 L 52 356
-        L 42 354 L 30 350 L 20 344 L 10 336 L 6 326
-        L 2 314 L 4 300 L 8 286 L 10 272 L 8 258
-        L 10 244 L 8 230 L 12 216 L 10 202 L 12 188
-        L 14 172 L 16 158 L 18 144 L 20 130 L 22 116
-        L 26 102 L 30 90 L 36 78 L 44 68 L 50 58
-        L 58 48 L 68 40 L 78 34 L 90 28 L 102 22
-        L 116 18 L 130 14 L 145 12 L 160 10 L 175 8
-        L 192 6 L 210 8 L 228 6 L 248 8 Z
-
-        M 248 8 L 232 6 L 216 8 L 200 6
-      "
-      stroke="rgba(255,255,255,0.35)"
-      strokeWidth="3.5"
-      strokeLinejoin="round"
-      strokeLinecap="round"
-      fill="rgba(255,255,255,0.04)"
-    />
-    {/* Hudson Bay / James Bay indent on west side */}
-    <path
-      d="M 10 180 L 22 188 L 30 196 L 26 206 L 14 210 L 8 202 L 10 192 Z"
-      stroke="rgba(255,255,255,0.25)"
-      strokeWidth="2"
-      fill="#0b1b24"
-    />
-    {/* St. Lawrence estuary at bottom */}
-    <path
-      d="M 200 535 L 210 545 L 225 550 L 245 552 L 265 548 L 278 540 L 290 530"
-      stroke="rgba(255,255,255,0.15)"
-      strokeWidth="2"
-      fill="none"
-    />
-  </svg>
-);
 
 const year = new Date().getFullYear();
 
@@ -251,7 +189,6 @@ export function Footer() {
             <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 13, lineHeight: 1.65, margin: "0 0 20px" }}>
               Nous desservons toutes les régions du Québec avec notre réseau d&apos;installateurs certifiés.
             </p>
-            <QuebecMap />
           </div>
 
         </div>

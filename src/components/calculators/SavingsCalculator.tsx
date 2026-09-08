@@ -158,7 +158,7 @@ export function SavingsCalculator() {
               Économies Annuelles
             </h3>
             <div className="text-5xl md:text-6xl font-bold text-[var(--color-accent)]">
-              ${result.savings}
+              {result.savings.toLocaleString("fr-CA")} $
             </div>
             <p className="text-white/60 text-[13px] mt-2">
               Retour sur investissement estimé : <span className="text-white font-medium">{result.roiYears} ans</span>
@@ -168,11 +168,11 @@ export function SavingsCalculator() {
           <div className="space-y-3 border-t border-white/10 pt-8">
             <div className="flex justify-between items-center text-[15px]">
               <span className="text-white/70">Coût actuel estimé</span>
-              <span className="font-semibold text-white/90">${result.currentCost} / an</span>
+              <span className="font-semibold text-white/90">{result.currentCost.toLocaleString("fr-CA")} $ / an</span>
             </div>
             <div className="flex justify-between items-center text-[15px]">
               <span className="text-white/70">Coût avec thermopompe</span>
-              <span className="font-semibold text-white">${result.newCost} / an</span>
+              <span className="font-semibold text-white">{result.newCost.toLocaleString("fr-CA")} $ / an</span>
             </div>
           </div>
 
@@ -184,7 +184,7 @@ export function SavingsCalculator() {
               Demander une soumission
             </Link>
             <p className="text-center text-[12px] text-white/50 mt-3">
-              Basé sur les tarifs moyens d'Hydro-Québec et un coût d'installation estimé à 5000$.
+              Basé sur les tarifs moyens d'Hydro-Québec et un coût d'installation estimé à 5 000 $. Estimation indicative, avant subventions.
             </p>
           </div>
           
