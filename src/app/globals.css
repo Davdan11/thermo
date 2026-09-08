@@ -1000,3 +1000,16 @@ input[type="radio"]:disabled {
   .guides-cta-banner__btn { width: 100%; justify-content: center; }
 }
 
+
+/* ---- Barres de métriques (accueil, section « Comparez les modèles ») ----
+   Remplissage progressif à l'apparition, puis reflet qui parcourt la barre. */
+@keyframes metric-bar-sweep {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(520%); }
+}
+.metric-bar-sweep {
+  animation: metric-bar-sweep 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .metric-bar-sweep { animation: none; }
+}

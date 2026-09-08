@@ -83,6 +83,15 @@ export function getSeoModels(): SeoModel[] {
   if (modelsCache) return modelsCache;
 
   const seriesById = new Map(registry.series.map((s) => [s.id, s]));
+  // Numéro de l'unité extérieure par modèle : les fiches curées portent parfois le numéro
+  // de l'unité intérieure comme numéro principal, or la liste LogisVert est indexée par
+  // unité extérieure.
+  const outdoorById = new Map(registry.outdoorUnits.map((u) => [u.id, u.modelNumber]));
+  const outdoorByModelId = new Map<string, string>();
+  for (const c of registry.configurations) {
+    const ou = outdoorById.get(c.outdoorUnitId);
+    if (ou && !outdoorByModelId.has(c.modelId)) outdoorByModelId.set(c.modelId, ou);
+  }
   const raw: SeoModel[] = [];
 
   for (const m of registry.models) {
@@ -92,7 +101,8 @@ export function getSeoModels(): SeoModel[] {
     const kind = kindOf(m.systemType);
     if (!kind) continue;
 
-    const variants = getLogisVertVariants(m.modelNumber);
+    const outdoorNumber = outdoorByModelId.get(m.id) ?? m.modelNumber;
+    const variants = getLogisVertVariants(outdoorNumber).length > 0 ? getLogisVertVariants(outdoorNumber) : getLogisVertVariants(m.modelNumber);
     const p = referencePairing(variants);
     const nominal = p?.nominalBtu ?? m.nominalCapacityBtu ?? 0;
     if (nominal <= 0) continue;
@@ -112,7 +122,7 @@ export function getSeoModels(): SeoModel[] {
       systemType: m.systemType,
       systemTypeLabel: SYSTEM_TYPE_LABELS[m.systemType],
       kind,
-      outdoorModel: m.modelNumber,
+      outdoorModel: outdoorNumber,
       indoorModel: p?.indoorModel ?? null,
       ahri: p?.ahri ?? null,
       nominalBtu: nominal,
