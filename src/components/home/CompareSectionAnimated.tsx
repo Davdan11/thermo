@@ -149,7 +149,6 @@ export function CompareSectionAnimated() {
                 alt={unit.alt}
                 fill
                 style={{ objectFit: "contain", objectPosition: "bottom center" }}
-                unoptimized
               />
             </div>
           ))}

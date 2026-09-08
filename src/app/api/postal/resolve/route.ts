@@ -15,6 +15,7 @@
    ================================================================== */
 
 import { NextResponse } from "next/server";
+import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 
 export interface PostalResolveResult {
   postalCode: string;
@@ -160,7 +161,10 @@ export async function POST(req: Request) {
   }
 
   const formattedPostal = `${cleaned.slice(0, 3)} ${cleaned.slice(3)}`;
-  const fsaData = lookupFsa(postalCode);
+  const fsaLookup = lookupFsa(postalCode);
+  // Une seule source de vérité pour la température de design : la table des zones (postal-zones.ts).
+  const zone = resolvePostalCode(cleaned);
+  const fsaData = fsaLookup ? { ...fsaLookup, designTempC: zone?.designTempC ?? fsaLookup.designTempC } : null;
   const geo = await resolveViaNominatim(formattedPostal);
 
   let result: PostalResolveResult;
@@ -194,7 +198,7 @@ export async function POST(req: Request) {
       confidence: "medium",
     };
   } else if (geo) {
-    const defaultDesignTemp = geo.province === "QC" ? -25 : -20;
+    const defaultDesignTemp = zone?.designTempC ?? (geo.province === "QC" ? -25 : -20);
     result = {
       postalCode: formattedPostal,
       municipality: geo.municipality,

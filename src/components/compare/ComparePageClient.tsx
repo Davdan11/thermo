@@ -413,7 +413,6 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                   alt={`${p.detail.brand.name} ${p.detail.model.name}`}
                   width={200} height={150}
                   style={{ objectFit: "contain", width: "100%", height: "100%", padding: 8 }}
-                  unoptimized
                 />
               ) : (
                 <span style={{ fontSize: 10, color: "#9CA3AF" }}>Image a venir</span>
@@ -431,7 +430,6 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                     width={240}
                     height={80}
                     style={{ objectFit: "contain", objectPosition: "left", height: 80, width: "auto", maxWidth: 240 }}
-                    unoptimized
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
                       target.style.display = "none";

@@ -6,6 +6,7 @@ import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
 import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
 import { getSeoModel } from "@/lib/seo/programmatic";
+import { seriesDisplayName } from "@/lib/data/series-label";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
 import {
   ProductHeader,
@@ -108,7 +109,7 @@ export default async function ProductPage({
     name: `${brand.name} ${model.name}`,
     brand: brand.name,
     model: model.modelNumber,
-    description: `Thermopompe ${detail.systemTypeLabel} ${brand.name} ${series.name} ${model.name}`,
+    description: `Thermopompe ${detail.systemTypeLabel} ${brand.name} ${seriesDisplayName(series.name, series.slug) ?? ""} ${model.name}`.replace(/\s+/g, " "),
     imageUrl,
     slug,
     category: "Thermopompe",
@@ -188,7 +189,7 @@ export default async function ProductPage({
           {/* Product header — single column centered or full width */}
           <div style={{ display: "flex", flexDirection: "column", gap: 6, maxWidth: 800 }}>
             <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,.5)", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-              {brand.name} · {series.name}
+              {brand.name}{seriesDisplayName(series.name, series.slug) ? ` · ${seriesDisplayName(series.name, series.slug)}` : ""}
             </p>
             <h1 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: "#fff", lineHeight: 1.1, letterSpacing: "-0.025em" }}>
               {model.name}
@@ -217,7 +218,7 @@ export default async function ProductPage({
             {detail.seriesSiblings.length > 0 && (
               <div style={{ marginTop: 16 }}>
                 <p style={{ margin: "0 0 8px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  Autres capacités — {series.name}
+                  Autres capacités{seriesDisplayName(series.name, series.slug) ? ` — ${seriesDisplayName(series.name, series.slug)}` : ""}
                 </p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                   {detail.seriesSiblings.map((sib) => (
@@ -327,7 +328,6 @@ export default async function ProductPage({
                     width={320}
                     height={240}
                     style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
-                    unoptimized
                     priority
                   />
                 </div>
@@ -338,7 +338,7 @@ export default async function ProductPage({
                 <p style={{ margin: "0 0 16px", fontSize: 15, fontWeight: 700, color: "#071d2b" }}>Résumé rapide</p>
                 <dl style={{ margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   <SidebarRow label="Marque" value={brand.name} />
-                  <SidebarRow label="Série" value={series.name} />
+                  {seriesDisplayName(series.name, series.slug) && <SidebarRow label="Série" value={seriesDisplayName(series.name, series.slug)!} />}
                   <SidebarRow label="Type" value={detail.systemTypeLabel} />
                   {model.nominalCapacityBtu && (
                     <SidebarRow label="Capacité" value={`${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h`} />

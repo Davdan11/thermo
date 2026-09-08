@@ -587,6 +587,28 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
   const [bestMatch, setBestMatch] = useState<CatalogMatch | null>(null);
   const [labelSpecs, setLabelSpecs] = useState<any | null>(null);
   const [warranties, setWarranties] = useState<WarrantyEntry[] | null>(null);
+  const [reSearching, setReSearching] = useState(false);
+
+  /* Si le client corrige la marque ou le modèle lu sur l'étiquette, on relance la recherche
+     dans le catalogue au lieu de garder la correspondance de la lecture initiale. */
+  const confirmAndSearch = useCallback(async () => {
+    const scannedModel = scan?.fields.modelNumber.value ?? "";
+    const scannedBrand = scan?.fields.brand.value ?? "";
+    const changed = model.trim() !== scannedModel.trim() || brand.trim() !== scannedBrand.trim();
+    if (changed && model.trim().length >= 3) {
+      setReSearching(true);
+      try {
+        const res = await fetch("/api/thermoscan/search", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ brand: brand.trim(), modelNumber: model.trim() }) });
+        const data = await res.json();
+        if (data?.success) setBestMatch(data.bestMatch ?? null);
+      } catch {
+        /* on garde la correspondance actuelle */
+      } finally {
+        setReSearching(false);
+      }
+    }
+    setStep("speccard");
+  }, [scan, model, brand]);
 
 
   const handleFile = useCallback((f: File) => {
@@ -809,8 +831,8 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
             </div>
           </div>
         )}
-        <button onClick={() => setStep("speccard")} className={btnPrimary} style={{ background: "var(--color-accent)" }}>
-          Voir la fiche technique <ArrowRight size={16} />
+        <button onClick={confirmAndSearch} disabled={reSearching} className={btnPrimary} style={{ background: "var(--color-accent)", opacity: reSearching ? 0.7 : 1 }}>
+          {reSearching ? "Recherche dans le catalogue…" : "Voir la fiche technique"} <ArrowRight size={16} />
         </button>
       </div>
     );

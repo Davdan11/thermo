@@ -4,15 +4,8 @@
  * Formatting (prices, dates), string helpers, classname merging, etc.
  */
 
-import { type ClassValue, clsx } from "clsx";
-
-/**
- * Merge Tailwind classes safely.
- * Lightweight alternative — no twMerge dependency for now.
- */
-export function cn(...inputs: ClassValue[]) {
-  return clsx(inputs);
-}
+// Une seule implémentation de cn (avec tailwind-merge) : src/lib/utils.ts
+export { cn } from "../utils";
 
 /**
  * Format a price in Canadian dollars.

@@ -52,7 +52,6 @@ export function ProductCard({
             width={400}
             height={300}
             className="object-contain w-full h-full p-4"
-            unoptimized
           />
         ) : (
           <span className="text-sm text-[#9ca3af]">Image à venir</span>

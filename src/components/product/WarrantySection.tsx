@@ -31,6 +31,9 @@ export function WarrantySection({ warranties }: WarrantySectionProps) {
     return true;
   });
 
+  // Garanties « estimées » (valeurs par défaut de l'import, non vérifiées auprès du fabricant)
+  const allEstimated = uniqueWarranties.length > 0 && uniqueWarranties.every((w) => (w as { confidence?: string }).confidence === "estimated");
+
   // Fallback if no warranties are specified in the dataset
   const hasFallback = uniqueWarranties.length === 0;
   if (hasFallback) {
@@ -43,8 +46,15 @@ export function WarrantySection({ warranties }: WarrantySectionProps) {
   return (
     <section id="garantie" aria-labelledby="garantie-title">
       <h2 id="garantie-title" className="text-xl font-bold text-foreground mb-4">
-        Garanties {hasFallback && <span className="text-sm font-normal text-muted">(Standard estimé)</span>}
+        Garanties {(hasFallback || allEstimated) && <span className="text-sm font-normal text-muted">(estimation, non vérifiée)</span>}
       </h2>
+
+      {allEstimated && !hasFallback && (
+        <div className="mb-4 p-3 bg-amber-50 border border-amber-200 text-amber-800 rounded-md text-sm">
+          <strong>Note :</strong> Ces durées sont les valeurs habituelles de la marque, pas la garantie confirmée pour ce modèle précis.
+          <br /><strong>Exigez la garantie écrite du fabricant et de l'installateur avant de signer.</strong>
+        </div>
+      )}
       
       {hasFallback && (
         <div className="mb-4 p-3 bg-amber-50 border border-amber-200 text-amber-800 rounded-md text-sm">

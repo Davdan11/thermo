@@ -10,13 +10,14 @@
    - GEMINI_API_KEY never exposed to browser
    - File validated (type, size) before processing
    - Temporary data cleared after response
-   - No EXIF/GPS data forwarded to Gemini
+   - Photo ré-encodée sans métadonnées (EXIF/GPS) avant envoi à Gemini
    ================================================================== */
 
 import { NextResponse } from "next/server";
 import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
+import sharp from "sharp";
 import type { ScanResult, LabelScanData, CatalogMatch, Confidence } from "@/lib/thermoscan/types";
 import {
   normalizeModelNumber,
@@ -340,15 +341,24 @@ export async function POST(req: Request) {
       );
     }
 
-    // ── Convert to base64 (no EXIF forwarding — we send raw pixels) ─
-    const imageBase64 = Buffer.from(imageBuffer).toString("base64");
+    // ── Ré-encodage en JPEG sans métadonnées (EXIF, GPS) avant tout envoi externe ──
+    // sharp ne conserve pas les métadonnées sauf demande explicite : la photo transmise
+    // à Gemini ne contient que les pixels, jamais la position ni l'appareil du client.
+    let cleanBuffer: Buffer;
+    let cleanMime = "image/jpeg";
+    try {
+      cleanBuffer = await sharp(Buffer.from(imageBuffer)).rotate().resize({ width: 2000, height: 2000, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 90 }).toBuffer();
+    } catch {
+      return NextResponse.json({ success: false, error: "Impossible de lire cette photo. Essayez un JPEG ou un PNG." }, { status: 400 });
+    }
+    const imageBase64 = cleanBuffer.toString("base64");
 
     // ── Call Gemini Vision ──────────────────────────────────────────
     let geminiResult: Awaited<ReturnType<typeof callGeminiVision>>;
     const geminiErrors: string[] = [];
 
     try {
-      geminiResult = await callGeminiVision(imageBase64, mimeType);
+      geminiResult = await callGeminiVision(imageBase64, cleanMime);
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Erreur inconnue";
       // Graceful degradation: return empty scan with error

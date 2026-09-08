@@ -42,3 +42,6 @@ next-env.d.ts
 
 Thermomatchengine/node_modules/
 test-*.mjs
+
+# brochures PDF des fabricants (217 Mo, hors dépôt ; les images extraites sont dans public/images/products/brochures)
+/public/documents/brochures

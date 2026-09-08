@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { isGenericSeries, seriesDisplayName } from "@/lib/data/series-label";
 
 import { buttonVariants } from "@/components/ui/button";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
@@ -37,7 +38,7 @@ export function ProductHeader({ detail }: ProductHeaderProps) {
             {brand.name}
           </Link>
           <span className="mx-1.5 text-border">·</span>
-          {series.name}
+          {seriesDisplayName(series.name, series.slug)}
         </p>
 
         {/* Model name */}
@@ -82,7 +83,7 @@ export function ProductHeader({ detail }: ProductHeaderProps) {
         {detail.seriesSiblings.length > 0 && (
           <div className="mt-4">
             <p className="text-xs font-medium text-muted mb-2">
-              Autres capacités dans la série {series.name}
+              Autres capacités{isGenericSeries(series.name, series.slug) ? "" : ` dans la série ${series.name}`}
             </p>
             <div className="flex flex-wrap gap-2">
               {detail.seriesSiblings.map((sibling) => (

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PartnerForm } from "./PartnerForm";
 
 export const metadata: Metadata = {
   title: "Devenir Partenaire Installateur — Thermopompes À Vendre.ca",
@@ -217,45 +218,7 @@ export default function PartenairesPage() {
           <h2 style={{ color: T.ink, fontSize: "32px", fontWeight: 750, margin: "0 0 8px", textAlign: "center" }}>Devenir Partenaire</h2>
           <p style={{ color: T.muted, textAlign: "center", margin: "0 0 40px", lineHeight: 1.6 }}>Nous sélectionnons rigoureusement nos partenaires pour garantir des installations impeccables. Remplissez ce formulaire pour planifier une première rencontre.</p>
           
-          <form style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Nom de l'entreprise</label>
-                <input required type="text" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: T.surface, outline: "none" }} />
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Numéro RBQ</label>
-                <input required type="text" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: T.surface, outline: "none" }} />
-              </div>
-            </div>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Personne contact et Téléphone</label>
-              <input required type="text" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: T.surface, outline: "none" }} />
-            </div>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Quelles marques installez-vous principalement ?</label>
-              <input required type="text" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: T.surface, outline: "none" }} placeholder="ex: Daikin, Fujitsu, Mitsubishi..." />
-            </div>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Volume approximatif annuel (installations)</label>
-              <select style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: T.surface, outline: "none" }}>
-                <option>Moins de 50</option>
-                <option>50 à 150</option>
-                <option>150 à 500</option>
-                <option>Plus de 500</option>
-              </select>
-            </div>
-
-            <button type="button" style={{ marginTop: "16px", width: "100%", height: "56px", backgroundColor: T.inkDeep, color: "white", border: "none", borderRadius: "4px", fontSize: "15px", fontWeight: 600, cursor: "pointer" }}>
-              Envoyer la candidature
-            </button>
-            <p style={{ textAlign: "center", fontSize: "12px", color: T.muted, marginTop: "8px" }}>
-              Vos informations sont confidentielles.
-            </p>
-          </form>
+          <PartnerForm />
         </div>
       </section>
     </main>

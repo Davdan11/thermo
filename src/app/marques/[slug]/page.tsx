@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getBrandDetail } from "@/lib/data/queries/brand-detail";
+import { GENERIC_SERIES_LABEL, isGenericSeries } from "@/lib/data/series-label";
 import { ProductCard } from "@/components/product/ProductCard";
 import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { registry } from "@/lib/data/registry";
@@ -211,15 +212,15 @@ export default async function BrandPage({
         <div className="space-y-6">
           {series.map((sSummary) => {
             const { series: s, capacityRange } = sSummary;
-            const seriesName = s.name.replace(" [DEV]", "");
+            const seriesName = isGenericSeries(s.name, s.slug) ? GENERIC_SERIES_LABEL : s.name.replace(" [DEV]", "");
             return (
               <div key={s.id} className="flex flex-col md:flex-row bg-[#EFECE8] w-full border border-[#E5E5E5] overflow-hidden">
                 {/* Text Side (Left) */}
                 <div className="w-full md:w-1/3 p-8 md:p-12 flex flex-col justify-center bg-[#EFECE8]">
                   <h3 className="text-3xl font-bold text-[#172126] mb-2">{seriesName}</h3>
-                  <p className="text-sm font-semibold text-[#172126] mb-4">Mural haut de gamme</p>
+                  <p className="text-sm font-semibold text-[#172126] mb-4">{sSummary.systemTypeLabel}</p>
                   <p className="text-[15px] text-[#172126]/80 leading-relaxed mb-6">
-                    {s.description || "Efficacité et confort toute l'année. Solution idéale pour le marché résidentiel."}
+                    {s.description || `${sSummary.modelCount} modèle${sSummary.modelCount > 1 ? "s" : ""} certifié${sSummary.modelCount > 1 ? "s" : ""}${sSummary.coldClimateCount > 0 ? `, dont ${sSummary.coldClimateCount} climat froid` : ""}.`}
                   </p>
                   
                   {capacityRange && (

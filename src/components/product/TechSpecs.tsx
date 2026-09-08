@@ -1,4 +1,5 @@
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
+import { seriesDisplayName } from "@/lib/data/series-label";
 
 /* ------------------------------------------------------------------
    TechSpecs — grouped technical specifications using DL
@@ -25,7 +26,7 @@ export function TechSpecs({ detail }: TechSpecsProps) {
   // --- Identification ---
   const idRows: SpecRow[] = [
     { label: "Marque", value: detail.brand.name },
-    { label: "Série", value: detail.series.name },
+    ...(seriesDisplayName(detail.series.name, detail.series.slug) ? [{ label: "Série", value: seriesDisplayName(detail.series.name, detail.series.slug) as string }] : []),
     { label: "Modèle", value: model.name },
     { label: "Numéro de modèle", value: model.modelNumber },
     { label: "Type de système", value: detail.systemTypeLabel },

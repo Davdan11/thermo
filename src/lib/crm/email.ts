@@ -50,6 +50,39 @@ export async function sendInternalLeadAlert(lead: InternalLeadAlert) {
   }
 }
 
+export interface InternalMessage {
+  kind: "contact" | "partenaire";
+  subject: string;
+  replyTo?: string;
+  lines: Array<[string, string]>;
+}
+
+/** Message générique vers l'équipe (contact, candidature). Retourne false si l'envoi est impossible. */
+export async function sendInternalMessage(msg: InternalMessage): Promise<boolean> {
+  if (!process.env.RESEND_API_KEY) {
+    if (process.env.NODE_ENV !== "production") {
+      console.log(`[email] (dev, sans RESEND_API_KEY) ${msg.kind} : ${msg.subject}`, msg.lines);
+      return true;
+    }
+    console.error("[email] RESEND_API_KEY absent : message non envoyé", msg.subject);
+    return false;
+  }
+  try {
+    const e = escapeHtml;
+    await resend.emails.send({
+      from: 'Thermopompes À Vendre <leads@thermopompesavendre.ca>',
+      to: [NOTIFICATION_EMAIL],
+      replyTo: msg.replyTo,
+      subject: msg.subject,
+      html: `<h2>${e(msg.subject)}</h2><ul>${msg.lines.map(([k, v]) => `<li><strong>${e(k)} :</strong> ${e(v).replace(/\n/g, "<br/>")}</li>`).join("")}</ul>`,
+    });
+    return true;
+  } catch (error) {
+    console.error("[email] Erreur d'envoi :", error);
+    return false;
+  }
+}
+
 export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailData) {
   if (!process.env.RESEND_API_KEY) {
     console.log("Mocking client email send, no RESEND_API_KEY found:", email);

@@ -76,7 +76,6 @@ export function CompareHeader({ products, onRemove }: CompareHeaderProps) {
                   width={200}
                   height={150}
                   style={{ objectFit: "contain", width: "100%", height: "100%", padding: 8 }}
-                  unoptimized
                 />
               ) : (
                 <span style={{ fontSize: 10, color: "#9CA3AF" }}>Image a venir</span>

@@ -36,6 +36,7 @@ export default function ThermoScanPage() {
             NOUVEAU &bull; ThermoScan&#8482;
           </span>
 
+          <p style={{ margin: "0 0 12px" }}><span style={{ display: "inline-block", padding: "4px 10px", borderRadius: 999, background: "rgba(229,75,23,0.15)", color: "#e54b17", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>Version bêta</span></p>
           <h1
             className="text-white font-bold tracking-tight mb-5"
             style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: "1.1" }}
@@ -129,7 +130,7 @@ export default function ThermoScanPage() {
             {[
               { Icon: Lock,   title: "Aucune donnee stockee",  desc: "La photo est analysee puis effacee immediatement. Aucune image conservee sur nos serveurs." },
               { Icon: Zap,    title: "Moins de 30 secondes",   desc: "Gemini Vision lit l'etiquette et compare les specifications en quelques secondes." },
-              { Icon: Target, title: "1 681 modeles",          desc: "Catalogue ENERGY STAR 2026 complet. Mis a jour chaque annee." },
+              { Icon: Target, title: "Catalogue certifié",          desc: "Base ENERGY STAR et liste LogisVert d'Hydro-Québec, mise à jour automatiquement." },
               { Icon: Leaf,   title: "Subventions incluses",   desc: "Estimation Logis Vert integree automatiquement dans chaque comparaison." },
             ].map(({ Icon, title, desc }) => (
               <div

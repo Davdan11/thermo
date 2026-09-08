@@ -82,27 +82,18 @@ export default function EspaceInstallateurPage() {
             Espace Partenaire
           </h1>
           <p style={{ color: T.muted, fontSize: "15px", marginBottom: "40px" }}>
-            Connectez-vous pour gérer vos rendez-vous et vos soumissions ThermoScan.
+            Un espace pour gérer vos rendez-vous et vos soumissions est en préparation.
           </p>
 
-          <form style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Courriel professionnel</label>
-              <input type="email" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: "white", outline: "none" }} />
-            </div>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <label style={{ fontSize: "13px", fontWeight: 600, color: T.ink }}>Mot de passe</label>
-                <a href="#" style={{ fontSize: "12px", color: T.orange, textDecoration: "none" }}>Oublié ?</a>
-              </div>
-              <input type="password" style={{ padding: "14px 16px", borderRadius: "4px", border: `1px solid ${T.border}`, backgroundColor: "white", outline: "none" }} />
-            </div>
-
-            <button type="button" onClick={() => alert('Portail en développement')} style={{ marginTop: "16px", width: "100%", height: "52px", backgroundColor: T.ink, color: "white", border: "none", borderRadius: "4px", fontSize: "15px", fontWeight: 600, cursor: "pointer" }}>
-              Connexion
-            </button>
-          </form>
+          <div style={{ padding: "20px 24px", borderRadius: 6, border: `1px solid ${T.border}`, backgroundColor: "white", lineHeight: 1.6 }}>
+            <p style={{ margin: "0 0 8px", fontWeight: 700, color: T.ink }}>Le portail partenaire n'est pas encore ouvert.</p>
+            <p style={{ margin: "0 0 16px", color: T.muted, fontSize: 14 }}>
+              Les rendez-vous et soumissions sont pour l'instant coordonnés directement avec notre équipe. Vous êtes installateur licencié RBQ et voulez rejoindre le réseau?
+            </p>
+            <Link href="/partenaires#candidature" style={{ display: "inline-block", padding: "12px 20px", backgroundColor: T.ink, color: "white", borderRadius: 4, textDecoration: "none", fontWeight: 600, fontSize: 14 }}>
+              Déposer une candidature
+            </Link>
+          </div>
         </div>
 
         <div style={{ marginTop: "auto", textAlign: "center", color: T.muted, fontSize: "13px" }}>

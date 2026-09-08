@@ -38,7 +38,6 @@ export function SimilarModels({ models }: SimilarModelsProps) {
                     width={200}
                     height={150}
                     className="object-contain w-full h-full p-2"
-                    unoptimized
                   />
                 </div>
               )}

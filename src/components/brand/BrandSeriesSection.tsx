@@ -1,3 +1,4 @@
+import { GENERIC_SERIES_LABEL, isGenericSeries } from "@/lib/data/series-label";
 import Link from "next/link";
 import type { SeriesSummary } from "@/lib/data/queries/brand-detail";
 
@@ -20,7 +21,7 @@ export function BrandSeriesSection({ series, brandSlug }: BrandSeriesSectionProp
       </h2>
       <div className="grid gap-3 sm:grid-cols-2">
         {series.map((s) => {
-          const cleanName = s.series.name.replace(" [DEV]", "");
+          const cleanName = isGenericSeries(s.series.name, s.series.slug) ? GENERIC_SERIES_LABEL : s.series.name.replace(" [DEV]", "");
           const capacityLabel = s.capacityRange
             ? s.capacityRange.min === s.capacityRange.max
               ? `${(s.capacityRange.min / 1000).toFixed(0)}\u2009000 BTU`

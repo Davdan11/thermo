@@ -8,14 +8,23 @@ import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, ShieldCheck, Messa
 export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", subject: "question", message: "", website: "" });
+  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setForm({ ...form, [k]: e.target.value });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setIsSubmitting(true); setError("");
+    try {
+      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Envoi impossible.");
       setSubmitted(true);
-    }, 1200);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Envoi impossible. Appelez-nous au 438-900-3224.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -159,15 +168,20 @@ export default function ContactPageClient() {
                             required 
                             type="text" 
                             placeholder="Jean"
+                            autoComplete="given-name"
+                            value={form.firstName}
+                            onChange={set("firstName")}
                             className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all font-medium text-[#0b1b24]" 
                           />
                         </div>
                         <div className="space-y-2">
                           <label className="text-sm font-bold text-[#0b1b24]">Nom</label>
                           <input 
-                            required 
                             type="text" 
                             placeholder="Tremblay"
+                            autoComplete="family-name"
+                            value={form.lastName}
+                            onChange={set("lastName")}
                             className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all font-medium text-[#0b1b24]" 
                           />
                         </div>
@@ -179,13 +193,16 @@ export default function ContactPageClient() {
                           required 
                           type="email" 
                           placeholder="jean.tremblay@exemple.com"
+                          autoComplete="email"
+                          value={form.email}
+                          onChange={set("email")}
                           className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all font-medium text-[#0b1b24]" 
                         />
                       </div>
 
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-[#0b1b24]">Sujet</label>
-                        <select className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all font-medium text-[#0b1b24]">
+                        <select value={form.subject} onChange={set("subject")} className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all font-medium text-[#0b1b24]">
                           <option value="question">Question générale</option>
                           <option value="soumission">Demande d'information sur une soumission</option>
                           <option value="subvention">Information sur les subventions (Logis Vert)</option>
@@ -199,10 +216,16 @@ export default function ContactPageClient() {
                           required 
                           rows={5} 
                           placeholder="Comment pouvons-nous vous aider ?"
+                          value={form.message}
+                          onChange={set("message")}
                           className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all resize-none font-medium text-[#0b1b24]" 
                         />
                       </div>
 
+                      <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+                        <label>Site web <input type="text" name="website" tabIndex={-1} autoComplete="off" value={form.website} onChange={set("website")} /></label>
+                      </div>
+                      {error && <p role="alert" className="text-sm text-red-600 font-medium">{error}</p>}
                       <button 
                         type="submit" 
                         disabled={isSubmitting}
@@ -218,7 +241,7 @@ export default function ContactPageClient() {
                         )}
                       </button>
                       <p className="text-center text-xs text-gray-400 font-medium mt-4">
-                        Vos données sont sécurisées et ne seront jamais partagées avec des tiers.
+                        Vos données servent uniquement à répondre à votre message. Voir notre politique de confidentialité.
                       </p>
                     </form>
                   </>
