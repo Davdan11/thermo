@@ -260,12 +260,5 @@
     "format": "png",
     "width": 960,
     "height": 269
-  },
-  "thermopompe-*-transparente.png": {
-    "source": "Détourage (fond blanc retiré) d'une photo officielle déjà présente dans public/images/products/official ; aucune retouche de la machine.",
-    "daikin": "products/official/daikin-fit-aurora-officiel.webp",
-    "mitsubishi-electric": "products/official/mitsubishi-fs-06-09-12-exterieure-officielle.webp",
-    "fujitsu": "products/official/fujitsu-aouh12kzah1-exterieure-exacte.webp",
-    "date": "2026-09-08"
   }
 }
