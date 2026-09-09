@@ -1,9 +1,10 @@
 /* ==================================================================
-   POST /api/phone/ivr/no-answer — personne ne répond (webhook Twilio signé)
-   → boîte vocale, note CRM « appel manqué »
+   POST /api/phone/ivr/no-answer — transfert non répondu (webhook Twilio signé)
+   → boîte vocale, affaire Pipedrive « appel manqué »
    ================================================================== */
 
-import { captureFullLead } from "@/lib/ghl/client";
+import { capturePhoneLead } from "@/lib/crm/pipedrive";
+import { journalLead } from "@/lib/crm/lead-journal";
 import { SITE_URL } from "@/lib/seo";
 import { twiml, twilioForbidden, verifyTwilioRequest, xml } from "@/lib/security/twilio";
 
@@ -19,19 +20,14 @@ export async function POST(req: Request) {
   if (dialCallStatus === "completed") return twiml(`<Hangup/>`);
 
   if (caller && caller !== "anonymous") {
-    captureFullLead(
-      {
-        phone: caller,
-        customFields: {
-          source_page: "appel-entrant-manque",
-          notes_projet: `Appel manqué le ${new Date().toLocaleString("fr-CA", { timeZone: "America/Montreal" })} — département : ${dept}`,
-          urgence: "À rappeler",
-        },
-        extraTags: ["appel-manque", `dept-${dept}`],
-        pipelineStage: "new",
-      },
-      `Appel manqué — ${caller} — ${dept}`,
-    ).catch((e) => console.error("[IVR no-answer] CRM :", e));
+    const when = new Date().toLocaleString("fr-CA", { timeZone: "America/Montreal" });
+    journalLead("appel-manque", { phone: caller, dept, when }).catch(() => {});
+    capturePhoneLead({
+      phone: caller,
+      title: `Appel manqué — ${caller} — ${dept}`,
+      note: `Appel manqué le ${when} — département : ${dept}\nÀ rappeler.`,
+      source: "appel-manque",
+    }).catch((e) => console.error("[IVR no-answer] CRM :", e));
   }
 
   const q = `?dept=${dept}&amp;caller=${xml(encodeURIComponent(caller))}`;

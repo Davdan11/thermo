@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -45,3 +46,6 @@ test-*.mjs
 
 # brochures PDF des fabricants (217 Mo, hors dépôt ; les images extraites sont dans public/images/products/brochures)
 /public/documents/brochures
+
+# journal local des leads (renseignements personnels, jamais dans le dépôt)
+/data/leads

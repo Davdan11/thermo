@@ -10,7 +10,7 @@ cp .env.example .env.local   # remplir les clés nécessaires (voir le fichier)
 npm run dev                  # http://localhost:3000
 ```
 
-Le site fonctionne sans aucune clé : les envois de courriels et de SMS sont alors simulés dans la console, et ThermoScan affiche « service indisponible ».
+Le site fonctionne sans aucune clé : chaque lead est tout de même conservé dans `data/leads/AAAA-MM.jsonl` (hors dépôt), les envois de courriels et de SMS sont simulés dans la console, et ThermoScan affiche « service indisponible ».
 
 ## Commandes
 
@@ -31,6 +31,7 @@ src/lib/data/               registre du catalogue (all-auto-datasets.json + fixt
 src/lib/subsidies/          liste LogisVert officielle (34 Mo), index par modèle, calculateur
 src/lib/thermomatch/        moteur de recommandation ThermoMatch v2 (dimensionnement, score, sélection, tests)
 src/lib/seo/                SEO programmatique : modèles canoniques, rebadges, villes, classements, sitemaps
+src/lib/crm/                Pipedrive (seul CRM), courriels Resend, journal local des leads, territoires
 src/lib/security/           limite de débit, vérification des signatures Twilio, échappement HTML
 src/lib/validation/         schémas Zod des formulaires
 src/content/guides/         guides (Markdown + frontmatter : FAQ, dates, mots-clés)
@@ -49,6 +50,10 @@ design-system/              système de design généré (UI/UX Pro Max) et son 
 ### ThermoMatch
 
 Questionnaire de 13 questions → `/api/thermomatch/recommend` → `src/lib/thermomatch`. Charge de chauffage uniforme pour le Québec (15 BTU/h par pi² ajusté par type de propriété, étages, année, isolation, fenestration, sous-sol), candidats bâtis sur les capacités certifiées à -15 °C, machines rebadgées fusionnées, score transparent sur 100, trois machines réellement différentes. Le code postal sert à situer le client, jamais à choisir la machine. Tests : `src/lib/thermomatch/__tests__`.
+
+### Leads
+
+Un lead ne doit jamais se perdre. `/api/leads` (formulaire), `/api/phone/*` (appels manqués, messages vocaux, enregistrements Twilio) suivent le même ordre : journal local `data/leads/AAAA-MM.jsonl` d'abord, puis Pipedrive (personne → affaire → note), puis courriels Resend. Chaque appel externe est non bloquant : si Pipedrive est absent ou en panne, la demande est acceptée, l'alerte courriel porte le préfixe `[CRM À SAISIR]` et le journal indique `pipedrive: "non-configure"` ou `"erreur"` avec la référence à ressaisir. Le champ Pipedrive « Site web » et le préfixe de titre `[TAV]` distinguent ce site de bellechasseenergie.com, qui alimente le même pipeline. Variables : `PIPEDRIVE_API_TOKEN`, `PIPEDRIVE_PIPELINE_ID` (3), `PIPEDRIVE_STAGE_RDV_ID` (19), `RESEND_API_KEY`, `NOTIFICATION_EMAIL`, `LEAD_JOURNAL_DIR`.
 
 ### Images
 

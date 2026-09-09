@@ -21,20 +21,6 @@ export function HeroThermoMatchBar() {
     if (postalCode.trim().length < 3) return;
 
     track("thermomatch_started", { source: "hero" });
-    // Envoyer l'événement GHL (fire-and-forget, non-bloquant)
-    fetch("/api/ghl/event", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        event: "hero_postal_clicked",
-        postalCode: postalCode.trim(),
-        municipality: climate?.municipality ?? "",
-        province: climate?.province ?? "",
-        zone: climate?.climateZone ?? "",
-        designTemp: climate?.designTempC ? `${climate.designTempC}°C` : "",
-        source: "hero-bar",
-      }),
-    }).catch(() => {}); // Silencieux — ne bloque jamais la navigation
 
     router.push(`/trouver-ma-thermopompe?pc=${encodeURIComponent(postalCode)}`);
   };

@@ -343,33 +343,6 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
           setSummaryContext(data.summaryContext ?? null);
           track("thermomatch_completed", { results: Array.isArray(data.results) ? data.results.length : 0 });
 
-          // Envoyer l'événement GHL — quiz complété (fire-and-forget)
-          const topResult = data.results?.[0];
-          fetch("/api/ghl/event", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              event: "thermomatch_completed",
-              source: "thermomatch",
-              quizAnswers: {
-                postalCode: answers.postalCode ?? "",
-                propertyType: answers.propertyType ?? "",
-                area: answers.area ?? "",
-                floors: answers.floors ?? "",
-                currentSystem: answers.currentSystem ?? "",
-                heatPumpType: answers.heatPumpType ?? "",
-                priority: answers.priority ?? "",
-                budget: answers.budget ?? "",
-                financing: answers.financing ?? "",
-              },
-              topRecommendation: topResult ? {
-                brand: topResult.product?.brand,
-                model: topResult.product?.series ?? topResult.product?.outdoorModel,
-                systemType: topResult.product?.systemType,
-              } : null,
-              resultsCount: data.results?.length ?? 0,
-            }),
-          }).catch(() => {}); // Silencieux
         } else {
           setCandidates([]);
         }

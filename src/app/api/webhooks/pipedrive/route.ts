@@ -8,8 +8,7 @@
 import { NextResponse } from "next/server";
 import { timingSafeEqual } from "node:crypto";
 import { sendClientRdvEmail } from "@/lib/crm/email";
-
-const STAGE_ID_RDV_CONFIRME = 19;
+import { stageRdvConfirmeId } from "@/lib/crm/pipedrive";
 
 function authorized(request: Request): boolean {
   const user = process.env.PIPEDRIVE_WEBHOOK_USER;
@@ -37,7 +36,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true, message: "Événement ignoré" });
     }
     const { current, previous } = body;
-    const justMovedToRdv = current?.stage_id === STAGE_ID_RDV_CONFIRME && previous?.stage_id !== STAGE_ID_RDV_CONFIRME;
+    const rdvStage = stageRdvConfirmeId();
+    const justMovedToRdv = current?.stage_id === rdvStage && previous?.stage_id !== rdvStage;
 
     if (justMovedToRdv) {
       const personName: string = current.person_name || "Client";

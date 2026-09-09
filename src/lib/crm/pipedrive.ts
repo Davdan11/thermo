@@ -1,9 +1,38 @@
-const API_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
+/* ==================================================================
+   Pipedrive — seul CRM du site.
+
+   Variables d'environnement :
+   PIPEDRIVE_API_TOKEN        jeton API (Paramètres → Personnel → API)
+   PIPEDRIVE_PIPELINE_ID      pipeline des ventes (défaut : 3)
+   PIPEDRIVE_STAGE_RDV_ID     étape « RDV confirmé » (défaut : 19, webhook)
+
+   Sans jeton, `isPipedriveConfigured()` renvoie false et les appelants
+   doivent continuer sans CRM : un lead n'est jamais perdu pour autant,
+   il reste dans le journal local (voir lead-journal.ts) et l'alerte
+   courriel.
+   ================================================================== */
+
 const API_BASE = "https://api.pipedrive.com/v1";
 
-const PIPELINE_ID = 3; // ID for "1. VENTES (Acquisition)"
+function apiToken(): string | undefined {
+  return process.env.PIPEDRIVE_API_TOKEN || undefined;
+}
 
-// Map of our custom fields to their Pipedrive hash keys
+export function isPipedriveConfigured(): boolean {
+  return !!apiToken();
+}
+
+export function pipelineId(): number {
+  const n = parseInt(process.env.PIPEDRIVE_PIPELINE_ID ?? "", 10);
+  return Number.isFinite(n) && n > 0 ? n : 3; // « 1. VENTES (Acquisition) »
+}
+
+export function stageRdvConfirmeId(): number {
+  const n = parseInt(process.env.PIPEDRIVE_STAGE_RDV_ID ?? "", 10);
+  return Number.isFinite(n) && n > 0 ? n : 19;
+}
+
+/** Clés des champs personnalisés de l'affaire (hash Pipedrive). */
 export const PIPEDRIVE_FIELDS = {
   SOURCE: "2b1f6469368a060fc7d77e8a5d8555b27c8371b6",
   UTM_CAMPAIGN: "db6ceaa6abae01fa06b9867ac256600ee50d98a0",
@@ -20,9 +49,47 @@ export const PIPEDRIVE_FIELDS = {
   RAISON_PERTE: "4d891796aed9181981afcdfa37a15a860930c0f2",
   INSTALLATEUR_ASSIGNE: "b4e8ac4a263246b5cd71df79c80e3cb211eba1a6",
   DATE_INSTALLATION: "b214c179dcc86772aa606bc857c9599d23406183",
-};
+  /** Site d'origine de l'affaire (partagé avec bellechasseenergie.com). */
+  SITE: "8f8731ca2d5f38191c457538fb31051581a8af58",
+} as const;
 
-// Values for REGION enum
+/* Options des listes déroulantes du compte « Thermopompe A Vendre »
+   (relevées par l'API le 2026-09-09). Pipedrive exige l'identifiant
+   numérique de l'option : un libellé libre laisse le champ vide. */
+export const PIPEDRIVE_OPTIONS = {
+  SOURCE: { "Meta Ads": 55, "Google Ads": 56, "SEO": 57, "Direct": 58, "Référence": 59 },
+  TYPE_PROJET: { "Murale 1 tête": 60, "Multizone 2+ têtes": 61, "Centrale": 62, "Échangeur d'air": 63 },
+  REGION: { "Montréal": 68, "Laval": 69, "Rive-Nord": 70, "Rive-Sud": 71, "Estrie": 72, "Montérégie": 73, "Laurentides": 74, "Lanaudière": 75, "Autre": 76 },
+  SITE: { "thermopompesavendre.ca": 252, "bellechasseenergie.com": 253 },
+} as const;
+
+/** Ce site, tel qu'il apparaît dans Pipedrive : champ « Site web » et préfixe du titre. */
+export const THIS_SITE = { option: PIPEDRIVE_OPTIONS.SITE["thermopompesavendre.ca"], prefix: "[TAV]" } as const;
+
+function fold(s: string): string {
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
+/** Identifiant d'option par libellé exact (accents et casse ignorés). */
+export function optionId(field: keyof typeof PIPEDRIVE_OPTIONS, label: string | undefined): number | undefined {
+  if (!label) return undefined;
+  const wanted = fold(label);
+  for (const [name, id] of Object.entries(PIPEDRIVE_OPTIONS[field])) if (fold(name) === wanted) return id;
+  return undefined;
+}
+
+/** Type de projet Pipedrive à partir d'une réponse libre du site
+   (« murale », « Thermopompe centrale », « multizone », « Échangeur d'air »…). */
+export function typeProjetOptionId(value: string | undefined): number | undefined {
+  if (!value) return undefined;
+  const v = fold(value);
+  if (/multi|2\+|bizone|trizone/.test(v)) return PIPEDRIVE_OPTIONS.TYPE_PROJET["Multizone 2+ têtes"];
+  if (/central/.test(v)) return PIPEDRIVE_OPTIONS.TYPE_PROJET["Centrale"];
+  if (/echangeur|vrc|hrv|erv/.test(v)) return PIPEDRIVE_OPTIONS.TYPE_PROJET["Échangeur d'air"];
+  if (/mural|mini-?split|mono/.test(v)) return PIPEDRIVE_OPTIONS.TYPE_PROJET["Murale 1 tête"];
+  return undefined;
+}
+
 export const REGIONS_ENUM = {
   "Montréal": "Montréal",
   "Laval": "Laval",
@@ -32,107 +99,162 @@ export const REGIONS_ENUM = {
   "Montérégie": "Montérégie",
   "Laurentides": "Laurentides",
   "Lanaudière": "Lanaudière",
-  "Autre": "Autre"
-};
+  "Autre": "Autre",
+} as const;
 
-async function apiCall(endpoint: string, method: string = "GET", body?: any) {
-  if (!API_TOKEN) {
-    throw new Error("Missing PIPEDRIVE_API_TOKEN");
-  }
+export interface PipedrivePerson {
+  id: number;
+  name?: string;
+}
 
-  const url = `${API_BASE}${endpoint}`;
-  
-  const response = await fetch(url, {
+export interface PipedriveDeal {
+  id: number;
+  title?: string;
+}
+
+interface ApiEnvelope<T> {
+  success?: boolean;
+  data: T;
+}
+
+interface SearchResult<T> {
+  items?: Array<{ item: T }>;
+}
+
+async function apiCall<T>(endpoint: string, method: "GET" | "POST" | "PUT" = "GET", body?: unknown): Promise<ApiEnvelope<T>> {
+  const token = apiToken();
+  if (!token) throw new Error("PIPEDRIVE_API_TOKEN absent");
+
+  const response = await fetch(`${API_BASE}${endpoint}`, {
     method,
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
       // Jeton en en-tête : jamais dans l'URL (journaux de proxy, historiques).
-      "x-api-token": API_TOKEN,
+      "x-api-token": token,
     },
-    body: body ? JSON.stringify(body) : undefined,
+    body: body === undefined ? undefined : JSON.stringify(body),
+    signal: AbortSignal.timeout(10_000),
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    console.error(`Pipedrive API Error (${method} ${endpoint}):`, response.status, errorText);
-    throw new Error(`Pipedrive API Error: ${response.status}`);
+    const errorText = await response.text().catch(() => "");
+    console.error(`[pipedrive] ${method} ${endpoint} → ${response.status}`, errorText.slice(0, 300));
+    throw new Error(`Pipedrive ${response.status}`);
   }
-
-  return response.json();
+  return (await response.json()) as ApiEnvelope<T>;
 }
 
-/**
- * Find a person by email or phone. If not found, create them.
- */
-export async function findOrCreatePerson(email: string, phone: string, firstName: string, lastName: string) {
-  const fullName = `${firstName} ${lastName}`;
-  
-  // 1. Search by email
+/** Cherche une personne par courriel puis par téléphone ; la crée si absente. */
+export async function findOrCreatePerson(email: string, phone: string, firstName: string, lastName: string): Promise<PipedrivePerson> {
   if (email) {
-    const searchRes = await apiCall(`/persons/search?term=${encodeURIComponent(email)}&exact_match=true`);
-    if (searchRes.data && searchRes.data.items && searchRes.data.items.length > 0) {
-      return searchRes.data.items[0].item;
-    }
+    const res = await apiCall<SearchResult<PipedrivePerson>>(`/persons/search?term=${encodeURIComponent(email)}&exact_match=true&fields=email`);
+    const hit = res.data?.items?.[0]?.item;
+    if (hit) return hit;
   }
-
-  // 2. Search by phone
   if (phone) {
-    const searchRes = await apiCall(`/persons/search?term=${encodeURIComponent(phone)}`);
-    if (searchRes.data && searchRes.data.items && searchRes.data.items.length > 0) {
-      return searchRes.data.items[0].item;
-    }
+    const res = await apiCall<SearchResult<PipedrivePerson>>(`/persons/search?term=${encodeURIComponent(phone)}&fields=phone`);
+    const hit = res.data?.items?.[0]?.item;
+    if (hit) return hit;
   }
-
-  // 3. Create if not found
-  const createRes = await apiCall("/persons", "POST", {
-    name: fullName,
+  const created = await apiCall<PipedrivePerson>("/persons", "POST", {
+    name: `${firstName} ${lastName}`.trim() || phone || email,
     email: email ? [{ value: email, primary: true }] : [],
     phone: phone ? [{ value: phone, primary: true }] : [],
   });
-
-  return createRes.data;
+  return created.data;
 }
 
-/**
- * Create a new deal attached to a person.
- */
-export async function createDeal(params: { title: string; person_id: number; customFields: Record<string, any> }) {
-  const payload = {
+export type DealCustomFields = Record<string, string | number | undefined>;
+
+/** Crée une affaire dans la première étape du pipeline des ventes. Les champs vides ne sont pas envoyés. */
+export async function createDeal(params: { title: string; person_id: number; customFields?: DealCustomFields }): Promise<PipedriveDeal> {
+  const fields = Object.fromEntries(Object.entries(params.customFields ?? {}).filter(([, v]) => v !== undefined && v !== ""));
+  const res = await apiCall<PipedriveDeal>("/deals", "POST", {
     title: params.title,
     person_id: params.person_id,
-    pipeline_id: PIPELINE_ID,
-    // By default, it will be placed in the first stage of the pipeline ("Nouveau lead")
-    ...params.customFields
-  };
-
-  const createRes = await apiCall("/deals", "POST", payload);
-  return createRes.data;
-}
-
-/**
- * Create a note attached to a deal.
- */
-export async function createNote(dealId: number, content: string) {
-  const createRes = await apiCall("/notes", "POST", {
-    deal_id: dealId,
-    content: content
+    pipeline_id: pipelineId(),
+    ...fields,
   });
-  return createRes.data;
+  return res.data;
 }
 
-/**
- * Create an activity (Call, Meeting, etc) for a deal
- */
-export async function createActivity(deal_id: number, person_id: number, type: 'call' | 'meeting' | 'task', subject: string) {
-  const payload = {
+export async function createNote(dealId: number, content: string): Promise<unknown> {
+  const res = await apiCall<unknown>("/notes", "POST", { deal_id: dealId, content });
+  return res.data;
+}
+
+export async function createActivity(deal_id: number, person_id: number, type: "call" | "meeting" | "task", subject: string): Promise<unknown> {
+  const res = await apiCall<unknown>("/activities", "POST", {
     subject,
     type,
     deal_id,
     person_id,
-    due_date: new Date().toISOString().split('T')[0], // Due today
-  };
+    due_date: new Date().toISOString().split("T")[0],
+  });
+  return res.data;
+}
 
-  const createRes = await apiCall("/activities", "POST", payload);
-  return createRes.data;
+/* ------------------------------------------------------------------
+   Parcours complets
+   ------------------------------------------------------------------ */
+
+export interface WebLeadInput {
+  firstName: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  title: string;
+  customFields: DealCustomFields;
+  noteHtml: string;
+}
+
+export type CaptureResult = { ok: true; dealId: number; personId: number } | { ok: false; reason: "non-configure" | "erreur"; error?: string };
+
+/** Lead issu du formulaire web : personne → affaire → note. Ne lance jamais. */
+export async function captureWebLead(input: WebLeadInput): Promise<CaptureResult> {
+  if (!isPipedriveConfigured()) return { ok: false, reason: "non-configure" };
+  try {
+    const person = await findOrCreatePerson(input.email ?? "", input.phone ?? "", input.firstName, input.lastName ?? "");
+    const deal = await createDeal({
+      title: `${THIS_SITE.prefix} ${input.title}`,
+      person_id: person.id,
+      customFields: { [PIPEDRIVE_FIELDS.SITE]: THIS_SITE.option, ...input.customFields },
+    });
+    await createNote(deal.id, input.noteHtml).catch((e) => console.error("[pipedrive] note non créée :", e));
+    return { ok: true, dealId: deal.id, personId: person.id };
+  } catch (e) {
+    console.error("[pipedrive] captureWebLead :", e);
+    return { ok: false, reason: "erreur", error: e instanceof Error ? e.message : String(e) };
+  }
+}
+
+export interface PhoneLeadInput {
+  phone: string;
+  title: string;
+  note: string;
+  /** Origine (appel-manque, message-vocal, appel-enregistre) : consignée dans la note. */
+  source: string;
+}
+
+/** Lead téléphonique (Twilio) : personne par numéro → affaire → note. Ne lance jamais. */
+export async function capturePhoneLead(input: PhoneLeadInput): Promise<CaptureResult> {
+  if (!isPipedriveConfigured()) return { ok: false, reason: "non-configure" };
+  try {
+    const person = await findOrCreatePerson("", input.phone, input.phone, "");
+    const deal = await createDeal({
+      title: `${THIS_SITE.prefix} ${input.title}`,
+      person_id: person.id,
+      customFields: { [PIPEDRIVE_FIELDS.SITE]: THIS_SITE.option, [PIPEDRIVE_FIELDS.SOURCE]: PIPEDRIVE_OPTIONS.SOURCE["Direct"] },
+    });
+    await createNote(deal.id, `<pre>${escapeForNote(`Origine : ${input.source}\n${input.note}`)}</pre>`).catch((e) => console.error("[pipedrive] note non créée :", e));
+    return { ok: true, dealId: deal.id, personId: person.id };
+  } catch (e) {
+    console.error("[pipedrive] capturePhoneLead :", e);
+    return { ok: false, reason: "erreur", error: e instanceof Error ? e.message : String(e) };
+  }
+}
+
+function escapeForNote(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }

@@ -19,22 +19,28 @@ export interface InternalLeadAlert {
   /** Moment préféré pour l'appel (matin, après-midi, soir) */
   moment?: string;
   dealId?: number | string;
+  /** État de la synchronisation Pipedrive : ok, non-configure ou erreur. */
+  crmStatus?: "ok" | "non-configure" | "erreur";
+  /** Identifiant de l'entrée dans le journal local (data/leads). */
+  journalId?: string;
 }
 
-/** Alerte interne envoyée à l'équipe pour chaque soumission reçue. */
-export async function sendInternalLeadAlert(lead: InternalLeadAlert) {
+/** Alerte interne envoyée à l'équipe pour chaque soumission reçue. Renvoie true si envoyée. */
+export async function sendInternalLeadAlert(lead: InternalLeadAlert): Promise<boolean> {
   if (!process.env.RESEND_API_KEY) {
     console.log("[email] RESEND_API_KEY absent : alerte interne non envoyée pour", lead.firstName);
-    return;
+    return false;
   }
   const e = escapeHtml;
+  const crmWarning = lead.crmStatus && lead.crmStatus !== "ok";
   try {
     await resend.emails.send({
       from: 'Thermopompes À Vendre <leads@thermopompesavendre.ca>',
       to: [NOTIFICATION_EMAIL],
-      subject: `Nouvelle soumission ${e(lead.territory)} : ${e(lead.firstName)} ${e(lead.lastName ?? "")}`,
+      subject: `${crmWarning ? "[CRM À SAISIR] " : ""}Nouvelle soumission ${e(lead.territory)} : ${e(lead.firstName)} ${e(lead.lastName ?? "")}`,
       html: `
         <h2>Nouvelle soumission</h2>
+        ${crmWarning ? `<p style="color:#b00"><strong>Pipedrive non synchronisé (${e(lead.crmStatus)})</strong> : ce lead doit être saisi à la main. Référence journal : ${e(lead.journalId ?? "—")}.</p>` : ""}
         <ul>
           <li><strong>Nom :</strong> ${e(lead.firstName)} ${e(lead.lastName ?? "")}</li>
           ${lead.moment ? `<li><strong>Moment préféré pour l'appel :</strong> ${e(lead.moment)}</li>` : ""}
@@ -48,8 +54,10 @@ export async function sendInternalLeadAlert(lead: InternalLeadAlert) {
         </ul>
       `,
     });
+    return true;
   } catch (error) {
     console.error("[email] Erreur d'envoi de l'alerte interne :", error);
+    return false;
   }
 }
 

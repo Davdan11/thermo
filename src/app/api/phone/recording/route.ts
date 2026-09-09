@@ -1,9 +1,10 @@
 /* ==================================================================
    POST /api/phone/recording — enregistrement d'appel terminé (webhook Twilio signé)
-   → URL de l'enregistrement dans le CRM
+   → URL de l'enregistrement dans Pipedrive
    ================================================================== */
 
-import { captureFullLead } from "@/lib/ghl/client";
+import { capturePhoneLead } from "@/lib/crm/pipedrive";
+import { journalLead } from "@/lib/crm/lead-journal";
 import { twilioForbidden, verifyTwilioRequest } from "@/lib/security/twilio";
 
 export async function POST(req: Request) {
@@ -18,13 +19,12 @@ export async function POST(req: Request) {
   if (!recordingUrl || !caller || caller === "anonymous") return new Response("OK");
 
   const dateStr = new Date().toLocaleString("fr-CA", { timeZone: "America/Montreal" });
-  await captureFullLead({
+  await journalLead("appel-enregistre", { phone: caller, duration, recordingUrl, when: dateStr }).catch(() => {});
+  await capturePhoneLead({
     phone: caller,
-    customFields: {
-      notes_projet: `Appel enregistré le ${dateStr} — durée ${duration} s\nEnregistrement : ${recordingUrl}.mp3`,
-      source_page: "appel-enregistre",
-    },
-    extraTags: ["appel-enregistre"],
+    title: `Appel enregistré — ${caller}`,
+    note: `Appel enregistré le ${dateStr} — durée ${duration} s\nEnregistrement : ${recordingUrl}.mp3`,
+    source: "appel-enregistre",
   }).catch((e) => console.error("[Recording] CRM :", e));
 
   return new Response("OK");

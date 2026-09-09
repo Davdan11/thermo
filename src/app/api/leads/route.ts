@@ -1,21 +1,29 @@
 /* ==================================================================
    POST /api/leads — formulaire de soumission (seul point d'entrée actif)
 
-   - validation Zod (src/lib/validation/lead.ts), pot de miel, limite de débit
-   - consentement Loi 25 obligatoire, horodaté et consigné dans le CRM
-   - toute valeur utilisateur est échappée avant insertion dans la note HTML
-   - alerte interne par courriel + courriel de bienvenue au client
+   Ordre volontaire, pour ne jamais perdre un lead :
+   1. validation Zod (src/lib/validation/lead.ts), pot de miel, limite de débit
+   2. journal local (data/leads/AAAA-MM.jsonl) — avant tout appel externe
+   3. Pipedrive : personne → affaire → note (non bloquant)
+   4. alerte interne par courriel + courriel de bienvenue (non bloquants)
+   5. succès si au moins une trace existe (journal, affaire ou alerte)
+
+   Consentement Loi 25 obligatoire, horodaté et consigné dans la note.
+   Toute valeur utilisateur est échappée avant insertion dans le HTML.
    ================================================================== */
 
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
-import { findOrCreatePerson, createDeal, PIPEDRIVE_FIELDS, createNote } from "@/lib/crm/pipedrive";
+import { captureWebLead, optionId, typeProjetOptionId, PIPEDRIVE_FIELDS } from "@/lib/crm/pipedrive";
 import { getTerritoryFromPostalCode } from "@/lib/crm/territory";
 import { sendClientWelcomeEmail, sendInternalLeadAlert } from "@/lib/crm/email";
+import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests, clientIp } from "@/lib/security/rate-limit";
 import { createHash } from "node:crypto";
+
+const PHONE_FALLBACK = "438-900-3224";
 
 export async function POST(req: NextRequest) {
   if (!rateLimit(req, { name: "leads", limit: 5, windowMs: 10 * 60 * 1000 })) return tooManyRequests();
@@ -36,83 +44,113 @@ export async function POST(req: NextRequest) {
   }
   const lead = parsed.data;
 
-  try {
-    const territory = lead.postalCode ? getTerritoryFromPostalCode(lead.postalCode) : "Autre";
-    const consentAt = new Date().toISOString();
-    // Empreinte non réversible de l'IP : preuve de consentement sans conserver l'adresse en clair.
-    const ipHash = createHash("sha256").update(clientIp(req)).digest("hex").slice(0, 16);
+  const territory = lead.postalCode ? getTerritoryFromPostalCode(lead.postalCode) : "Autre";
+  const consentAt = new Date().toISOString();
+  // Empreinte non réversible de l'IP : preuve de consentement sans conserver l'adresse en clair.
+  const ipHash = createHash("sha256").update(clientIp(req)).digest("hex").slice(0, 16);
+  const marque = lead.modeleSelectionne ?? "Aucune sélection";
+  const btu = lead.superficie ? String(parseInt(lead.superficie.replace(/\D/g, ""), 10) * 15 || "") : "";
 
-    const marque = lead.modeleSelectionne ?? "Aucune sélection";
-    const btu = lead.superficie ? String(parseInt(lead.superficie.replace(/\D/g, ""), 10) * 15 || "") : "";
+  // 2. Journal local d'abord : même si tout le reste tombe, le lead existe.
+  const journalable: Record<string, unknown> = { ...lead };
+  delete journalable.website; // pot de miel, toujours vide ici
+  delete journalable.draft; // réponses brutes non validées : pas de renseignement personnel à conserver
+  const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash });
 
-    const person = await findOrCreatePerson(lead.email ?? "", lead.phone ?? "", lead.firstName, lead.lastName ?? "");
+  // 3. Pipedrive, non bloquant.
+  const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;
+  const noteHtml = `
+    <h3>Détails du projet</h3>
+    <ul>
+      ${row("Ville", `${lead.municipality ?? "Non spécifié"}${lead.postalCode ? ` (${lead.postalCode})` : ""}`)}
+      ${row("Chauffage actuel", lead.chauffageActuel)}
+      ${row("Type de thermopompe recherchée", lead.typeThermopompe)}
+      ${row("Superficie", lead.superficie)}
+      ${row("Échéancier", lead.urgence)}
+      ${row("Moment préféré pour l'appel", lead.momentContact)}
+      ${row("Budget estimé", lead.budgetEstime)}
+      ${row("Modèle sélectionné (ThermoMatch)", marque)}
+      ${row("Page d'origine", lead.source ?? "soumission-page")}
+      ${lead.notes ? row("Notes", lead.notes) : ""}
+    </ul>
+    <h3>Consentement (Loi 25)</h3>
+    <ul>
+      ${row("Traitement des renseignements", `oui, ${consentAt}, version ${CONSENT_VERSION}`)}
+      ${row("Communications marketing", lead.consentMarketing ? "oui" : "non")}
+      ${row("Empreinte de session", ipHash)}
+      ${row("Référence journal", entry.id)}
+    </ul>
+  `;
 
-    const customFields = {
-      [PIPEDRIVE_FIELDS.REGION]: territory,
-      [PIPEDRIVE_FIELDS.SOURCE]: lead.source ?? "soumission-page",
-      [PIPEDRIVE_FIELDS.TYPE_PROJET]: lead.typeThermopompe ?? "Nouveau",
-      [PIPEDRIVE_FIELDS.SQFT]: lead.superficie ?? "",
+  const crm = await captureWebLead({
+    firstName: lead.firstName,
+    lastName: lead.lastName,
+    email: lead.email,
+    phone: lead.phone,
+    title: `${lead.firstName} ${lead.lastName ?? ""} - Thermopompe`.trim(),
+    customFields: {
+      [PIPEDRIVE_FIELDS.REGION]: optionId("REGION", territory),
+      // Le canal d'acquisition n'est connu que s'il correspond à une option Pipedrive
+      // (SEO, Google Ads…) ; la page d'origine est toujours dans la note.
+      [PIPEDRIVE_FIELDS.SOURCE]: optionId("SOURCE", lead.source),
+      [PIPEDRIVE_FIELDS.TYPE_PROJET]: typeProjetOptionId(lead.typeThermopompe),
+      [PIPEDRIVE_FIELDS.SQFT]: lead.superficie,
       [PIPEDRIVE_FIELDS.BTU_TOTAL]: btu,
-    };
+    },
+    noteHtml,
+  });
+  const dealId = crm.ok ? crm.dealId : undefined;
 
-    const deal = await createDeal({
-      title: `${lead.firstName} ${lead.lastName ?? ""} - Thermopompe`.trim(),
-      person_id: person.id,
-      customFields,
-    });
+  // 4. Courriels, non bloquants.
+  const [alertSent, clientSent] = await Promise.all([
+    sendInternalLeadAlert({
+      firstName: lead.firstName,
+      lastName: lead.lastName,
+      email: lead.email,
+      phone: lead.phone,
+      postalCode: lead.postalCode,
+      territory,
+      typeThermopompe: lead.typeThermopompe,
+      superficie: lead.superficie,
+      modele: marque,
+      moment: lead.momentContact,
+      dealId,
+      crmStatus: crm.ok ? "ok" : crm.reason,
+      journalId: entry.id,
+    }).catch((e) => {
+      console.error("[/api/leads] alerte interne :", e);
+      return false;
+    }),
+    lead.email
+      ? sendClientWelcomeEmail(lead.email, {
+          firstName: lead.firstName,
+          hasThermoMatch: !!lead.modeleSelectionne,
+          recommendedBrand: marque,
+          recommendedBtu: btu,
+          estimatedSubvention: "voir la fiche",
+          sqft: lead.superficie ?? "N/D",
+        }).catch((e) => {
+          console.error("[/api/leads] courriel client :", e);
+          return false;
+        })
+      : Promise.resolve(false),
+  ]);
 
-    const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;
-    const noteHtml = `
-      <h3>Détails du projet</h3>
-      <ul>
-        ${row("Ville", `${lead.municipality ?? "Non spécifié"}${lead.postalCode ? ` (${lead.postalCode})` : ""}`)}
-        ${row("Chauffage actuel", lead.chauffageActuel)}
-        ${row("Type de thermopompe recherchée", lead.typeThermopompe)}
-        ${row("Superficie", lead.superficie)}
-        ${row("Échéancier", lead.urgence)}
-        ${row("Moment préféré pour l'appel", lead.momentContact)}
-        ${row("Budget estimé", lead.budgetEstime)}
-        ${row("Modèle sélectionné (ThermoMatch)", marque)}
-        ${lead.notes ? row("Notes", lead.notes) : ""}
-      </ul>
-      <h3>Consentement (Loi 25)</h3>
-      <ul>
-        ${row("Traitement des renseignements", `oui, ${consentAt}, version ${CONSENT_VERSION}`)}
-        ${row("Communications marketing", lead.consentMarketing ? "oui" : "non")}
-        ${row("Empreinte de session", ipHash)}
-      </ul>
-    `;
-    await createNote(deal.id, noteHtml);
+  await journalOutcome(entry, {
+    pipedrive: crm.ok ? "ok" : crm.reason,
+    dealId,
+    error: crm.ok ? undefined : crm.error,
+    alertEmail: alertSent === true,
+    clientEmail: clientSent === true,
+  });
 
-    const [, emailSent] = await Promise.all([
-      sendInternalLeadAlert({
-        firstName: lead.firstName,
-        lastName: lead.lastName,
-        email: lead.email,
-        phone: lead.phone,
-        postalCode: lead.postalCode,
-        territory,
-        typeThermopompe: lead.typeThermopompe,
-        superficie: lead.superficie,
-        modele: marque,
-        moment: lead.momentContact,
-        dealId: deal.id,
-      }),
-      lead.email
-        ? sendClientWelcomeEmail(lead.email, {
-            firstName: lead.firstName,
-            hasThermoMatch: !!lead.modeleSelectionne,
-            recommendedBrand: marque,
-            recommendedBtu: btu,
-            estimatedSubvention: "voir la fiche",
-            sqft: lead.superficie ?? "N/D",
-          })
-        : Promise.resolve(false),
-    ]);
-
-    return NextResponse.json({ success: true, message: "Demande reçue.", emailSent: emailSent === true });
-  } catch (err) {
-    console.error("[/api/leads] error:", err);
-    return NextResponse.json({ error: "Erreur interne. Appelez-nous au 438-900-3224." }, { status: 500 });
+  // 5. Le lead est « reçu » dès qu'une trace existe quelque part.
+  const captured = written || crm.ok || alertSent === true;
+  if (!captured) {
+    console.error("[/api/leads] AUCUNE trace conservée pour", entry.id, { crm, alertSent });
+    return NextResponse.json({ error: `Erreur interne. Appelez-nous au ${PHONE_FALLBACK}.` }, { status: 500 });
   }
+  if (!crm.ok) console.warn(`[/api/leads] ${entry.id} reçu sans CRM (${crm.reason}) — voir data/leads.`);
+
+  return NextResponse.json({ success: true, message: "Demande reçue.", emailSent: clientSent === true });
 }

@@ -1,11 +1,12 @@
 /* ==================================================================
    POST /api/phone/transcription — transcription d'un message vocal
-   (webhook Twilio signé) → note CRM + SMS de confirmation au client.
-   Le numéro du client vient des paramètres signés de Twilio (From),
+   (webhook Twilio signé) → affaire Pipedrive + SMS de confirmation.
+   Le numéro de l'appelant vient des paramètres signés par Twilio,
    jamais d'un paramètre d'URL modifiable.
    ================================================================== */
 
-import { captureFullLead } from "@/lib/ghl/client";
+import { capturePhoneLead } from "@/lib/crm/pipedrive";
+import { journalLead } from "@/lib/crm/lead-journal";
 import { twilioForbidden, verifyTwilioRequest } from "@/lib/security/twilio";
 
 export async function POST(req: Request) {
@@ -26,21 +27,23 @@ export async function POST(req: Request) {
     `Département : ${dept}`,
     transcription ? `Transcription : « ${transcription.slice(0, 2000)} »` : "(transcription non disponible)",
     recordingUrl ? `Enregistrement : ${recordingUrl}` : "",
+    "À rappeler.",
   ]
     .filter(Boolean)
     .join("\n");
 
-  const result = await captureFullLead(
-    {
-      phone: caller,
-      customFields: { source_page: "message-vocal", notes_projet: note, urgence: "À rappeler — message vocal" },
-      extraTags: ["message-vocal", `dept-${dept}`],
-      pipelineStage: "new",
-    },
-    `Message vocal — ${caller}`,
-  ).catch((e) => ({ ok: false, error: String(e) }));
+  // Journal local d'abord : le message vocal est conservé même si le CRM tombe.
+  const { written } = await journalLead("message-vocal", { phone: caller, dept, transcription: transcription.slice(0, 2000), recordingUrl, when: dateStr });
 
-  if (result.ok) await sendConfirmationSMS(caller);
+  const result = await capturePhoneLead({
+    phone: caller,
+    title: `Message vocal — ${caller}`,
+    note,
+    source: "message-vocal",
+  });
+
+  // On confirme au client dès que son message est conservé quelque part.
+  if (result.ok || written) await sendConfirmationSMS(caller);
   return new Response("OK");
 }
 
