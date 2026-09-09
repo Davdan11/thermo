@@ -62,4 +62,5 @@ Aucune image n'est ajoutée sans source officielle vérifiée. Voir `scripts/map
 
 - Français québécois dans l'interface et les messages de commit.
 - Une donnée inconnue est `null`, jamais `0` ni une valeur inventée ; une valeur estimée est affichée comme telle.
-- Aucun prix de vente n'est affiché sans observation réelle.
+- Aucun prix n'est publié : le prix se fait cas par cas, maison par maison, par un installateur partenaire licencié. Les pages « prix » documentent ce qui fait varier le coût et ce qu'une soumission doit contenir.
+- Mesure d'audience : GA4 en mode consentement (`NEXT_PUBLIC_GA_ID`), bandeau Loi 25, événements de conversion dans `src/lib/analytics/track.ts` (lead, ThermoMatch, appel, comparateur, contact, partenaire, ThermoScan).

@@ -97,7 +97,7 @@ export function KeySpecs({ detail }: KeySpecsProps) {
   if (specs.length === 0) return null;
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-4 py-5 px-5 sm:px-6 bg-surface rounded-lg border border-border">
+    <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-4 py-5 px-5 sm:px-6 bg-surface rounded-lg border border-border m-0">
       {specs.map((spec) => (
         <div key={spec.label} className="min-w-0">
           <dt className="text-xs text-muted mb-0.5 flex items-center gap-1">
@@ -117,6 +117,6 @@ export function KeySpecs({ detail }: KeySpecsProps) {
           </dd>
         </div>
       ))}
-    </div>
+    </dl>
   );
 }

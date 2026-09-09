@@ -6,7 +6,7 @@ import { getCitiesByRegion, getCities } from "@/lib/seo/cities";
 import { CtaThermoMatch, JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
 
 export const metadata: Metadata = createMetadata({
-  title: "Thermopompe par ville au Québec : prix, subvention et modèles grand froid",
+  title: "Thermopompe par ville au Québec : subvention LogisVert et modèles grand froid",
   description:
     "Choisissez votre ville : température de conception, subvention LogisVert d'Hydro-Québec et thermopompes certifiées climat froid pour chaque région du Québec.",
   canonicalPath: "/thermopompe",

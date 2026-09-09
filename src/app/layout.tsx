@@ -5,6 +5,8 @@ import { SiteChrome } from "@/components/layout/SiteChrome";
 import { cn } from "@/lib/utils";
 import { getOrganizationSchema, getWebSiteSchema, SITE_URL } from "@/lib/seo";
 import { UTMProvider } from "@/components/providers/UTMProvider";
+import { Analytics } from "@/components/analytics/Analytics";
+import { ConsentBanner } from "@/components/analytics/ConsentBanner";
 import { Suspense } from "react";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
@@ -25,10 +27,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: "%s | Thermopompes À Vendre.ca",
-    default: "Thermopompes À Vendre.ca — Trouvez la bonne thermopompe. Au bon prix.",
+    default: "Thermopompes À Vendre.ca — Trouvez la bonne thermopompe pour votre maison.",
   },
   description:
-    "Comparez les thermopompes, comprenez les prix et les subventions, et trouvez la machine adaptée à votre propriété au Québec.",
+    "Comparez toutes les thermopompes vendues au Québec avec les données officielles d'Hydro-Québec, vérifiez la subvention LogisVert et obtenez une soumission pour votre maison.",
   openGraph: {
     type: "website",
     siteName: "Thermopompes À Vendre.ca",
@@ -59,6 +61,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Suspense fallback={null}>
           <UTMProvider />
         </Suspense>
+        <Analytics />
+        <ConsentBanner />
       </body>
     </html>
   );

@@ -76,9 +76,9 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
                 style={{ objectFit: "contain" }}
               />
             </div>
-            <h3 id="logisvert-title" className={styles.title}>
+            <h2 id="logisvert-title" className={styles.title}>
               Programme LogisVert — Hydro-Québec
-            </h3>
+            </h2>
           </div>
           <p className={styles.subtitle}>
             {isOfficial
@@ -100,7 +100,7 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
         <span>Capacité : <span className={styles.formulaHighlight}>{btu.toLocaleString("fr-CA")} BTU/h à -8 °C</span></span>
         <span>→</span>
         <span className={styles.formulaResult}>{dollars.toLocaleString("fr-CA")} $</span>
-        {isOfficial && <span style={{ color: "#16a34a", fontWeight: 600, fontSize: 11, marginLeft: 4 }}>✓ Vérifié HQ</span>}
+        {isOfficial && <span style={{ color: "#15803d", fontWeight: 600, fontSize: 12, marginLeft: 4 }}>Vérifié Hydro-Québec</span>}
       </div>
 
       {/* Disclaimer */}

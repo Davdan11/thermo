@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { usePostalResolve } from "@/hooks/usePostalResolve";
+import { track } from "@/lib/analytics/track";
 
 function formatPostalCode(raw: string): string {
   const cleaned = raw.replace(/[^a-zA-Z0-9]/g, "").toUpperCase().slice(0, 6);
@@ -19,6 +20,7 @@ export function HeroThermoMatchBar() {
     e.preventDefault();
     if (postalCode.trim().length < 3) return;
 
+    track("thermomatch_started", { source: "hero" });
     // Envoyer l'événement GHL (fire-and-forget, non-bloquant)
     fetch("/api/ghl/event", {
       method: "POST",
@@ -85,8 +87,8 @@ export function HeroThermoMatchBar() {
           <div style={{ padding: "0 24px", display: "flex", alignItems: "center", gap: 10, flexShrink: 0, borderLeft: "1px solid rgba(255,255,255,0.12)", minWidth: 260 }}>
             {loading ? (
               <>
-                <svg style={{ animation: "spin 1s linear infinite" }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: 12 }}>Identification...</span>
+                <svg style={{ animation: "spin 1s linear infinite" }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                <span style={{ color: "rgba(255,255,255,0.65)", fontSize: 12 }}>Identification...</span>
                 <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
               </>
             ) : climate ? (
@@ -106,10 +108,10 @@ export function HeroThermoMatchBar() {
               </>
             ) : (
               <>
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
-                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: 12, lineHeight: 1.35 }}>
+                <span style={{ color: "rgba(255,255,255,0.65)", fontSize: 12, lineHeight: 1.35 }}>
                   Recommandations<br/>en environ 2 minutes
                 </span>
               </>
@@ -137,7 +139,7 @@ export function HeroThermoMatchBar() {
           </div>
 
           {loading && (
-            <div style={{ color: "rgba(255,255,255,0.4)", fontSize: 12, display: "flex", alignItems: "center", gap: 6 }}>
+            <div style={{ color: "rgba(255,255,255,0.65)", fontSize: 12, display: "flex", alignItems: "center", gap: 6 }}>
               <svg style={{ animation: "spin 1s linear infinite" }} width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
               Identification de la municipalite...
               <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
@@ -150,8 +152,8 @@ export function HeroThermoMatchBar() {
               </svg>
               <div>
                 <span style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>{climate.municipality}</span>
-                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: 13 }}>, {climate.province}</span>
-                <span style={{ display: "block", color: "rgba(255,255,255,0.4)", fontSize: 11 }}>
+                <span style={{ color: "rgba(255,255,255,0.65)", fontSize: 13 }}>, {climate.province}</span>
+                <span style={{ display: "block", color: "rgba(255,255,255,0.65)", fontSize: 11 }}>
                   Zone {climate.climateZone} {String.fromCharCode(8212)} {climate.designTempC}{String.fromCharCode(176)}C de conception
                 </span>
               </div>

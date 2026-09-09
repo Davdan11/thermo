@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics/track";
 
 const T = { ink: "#071b27", inkDeep: "#03141e", surface: "#faf8f4", muted: "#49545b", border: "rgba(16,32,45,0.14)" };
 
@@ -21,6 +22,7 @@ export function PartnerForm() {
       const res = await fetch("/api/partenaires", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Envoi impossible.");
+      track("partner_submitted", { volume: form.volume });
       setStatus("sent");
     } catch (err) {
       setStatus("error"); setError(err instanceof Error ? err.message : "Envoi impossible.");

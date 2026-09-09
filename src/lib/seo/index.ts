@@ -28,11 +28,20 @@ interface MetadataOverrides extends Metadata {
  * Generate page metadata with consistent defaults.
  * Handles title, description, canonical, robots, Open Graph, and Twitter.
  */
+/** Google tronque vers 155–160 caractères : on coupe proprement sur un mot plutôt que de laisser une phrase hachée. */
+export function clampDescription(text: string, max = 158): string {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max - 1);
+  const at = cut.lastIndexOf(" ");
+  return `${cut.slice(0, at > 80 ? at : max - 1).replace(/[,;:\s]+$/, "")}…`;
+}
+
 export function createMetadata(overrides: MetadataOverrides = {}): Metadata {
   const { canonicalPath, ...rest } = overrides;
 
   const title = rest.title ?? SITE_NAME;
-  const description = rest.description ?? SITE_DESCRIPTION;
+  const description = clampDescription(rest.description ?? SITE_DESCRIPTION);
 
   // Build canonical from path or alternates
   let canonical: string | undefined;
@@ -60,9 +69,9 @@ export function createMetadata(overrides: MetadataOverrides = {}): Metadata {
     (typeof description === "string" ? description : SITE_DESCRIPTION);
 
   return {
+    ...rest,
     title,
     description,
-    ...rest,
     alternates: {
       ...rest.alternates,
       ...(canonical ? { canonical } : {}),

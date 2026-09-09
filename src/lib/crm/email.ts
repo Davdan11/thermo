@@ -16,6 +16,8 @@ export interface InternalLeadAlert {
   typeThermopompe?: string;
   superficie?: string;
   modele?: string;
+  /** Moment préféré pour l'appel (matin, après-midi, soir) */
+  moment?: string;
   dealId?: number | string;
 }
 
@@ -35,6 +37,7 @@ export async function sendInternalLeadAlert(lead: InternalLeadAlert) {
         <h2>Nouvelle soumission</h2>
         <ul>
           <li><strong>Nom :</strong> ${e(lead.firstName)} ${e(lead.lastName ?? "")}</li>
+          ${lead.moment ? `<li><strong>Moment préféré pour l'appel :</strong> ${e(lead.moment)}</li>` : ""}
           <li><strong>Téléphone :</strong> ${e(lead.phone ?? "—")}</li>
           <li><strong>Courriel :</strong> ${e(lead.email ?? "—")}</li>
           <li><strong>Code postal :</strong> ${e(lead.postalCode ?? "—")} (${e(lead.territory)})</li>
@@ -83,10 +86,10 @@ export async function sendInternalMessage(msg: InternalMessage): Promise<boolean
   }
 }
 
-export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailData) {
+export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailData): Promise<boolean> {
   if (!process.env.RESEND_API_KEY) {
     console.log("Mocking client email send, no RESEND_API_KEY found:", email);
-    return;
+    return false;
   }
 
   try {
@@ -98,8 +101,10 @@ export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailDa
       subject: `Votre dossier ThermoMatch est ouvert, ${data.firstName}`,
       html: html,
     });
+    return true;
   } catch (error) {
     console.error("Erreur lors de l'envoi du courriel Resend (Client):", error);
+    return false;
   }
 }
 

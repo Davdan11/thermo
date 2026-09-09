@@ -473,7 +473,7 @@ export default function AProposPage() {
                 lineHeight: 1.55,
               }}
             >
-              Nous vous accompagnons à chaque étape : comprendre, comparer, planifier et trouver un professionnel qualifié près de chez vous.
+              Nous documentons, nous comparons, puis nous vous mettons en relation avec un installateur partenaire licencié RBQ de votre région. Nous restons l'intermédiaire entre vous et lui : le prix se fait cas par cas, après évaluation de votre maison, et vos coordonnées ne sont jamais vendues.
             </p>
 
             {/* Button */}

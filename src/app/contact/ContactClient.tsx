@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, ShieldCheck, MessageCircle, Info } from "lucide-react";
+import { track } from "@/lib/analytics/track";
 
 export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,6 +20,7 @@ export default function ContactPageClient() {
       const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Envoi impossible.");
+      track("contact_submitted", { subject: form.subject });
       setSubmitted(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Envoi impossible. Appelez-nous au 438-900-3224.");

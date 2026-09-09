@@ -55,7 +55,7 @@ export const FAQ_ITEMS = [
     questions: [
       {
         q: "Combien coûte une installation complète de thermopompe ?",
-        a: "Pour une thermopompe murale d'entrée de gamme (12 000 BTU), prévoyez entre 3 000 $ et 4 500 $ (installation et équipement inclus). Pour un modèle haut de gamme ou 'Climat Froid', le prix varie de 4 500 $ à 6 500 $. Un système multizone se situe entre 6 000 $ et 10 000 $ selon le nombre de têtes. Enfin, une thermopompe centrale varie de 8 000 $ à plus de 15 000 $. Ces prix sont avant l'application des subventions gouvernementales."
+        a: "Nous ne publions pas de prix : avec plus de 3 500 appareils admissibles dont les prix changent avec les stocks et la saison, un tableau serait vite faux, et le coût installé dépend d'abord de votre maison (distance entre les unités, panneau électrique, conduits, accès). Chaque projet reçoit plutôt un prix écrit, remis par un installateur partenaire licencié RBQ après évaluation, cas par cas, subvention LogisVert incluse. C'est gratuit et sans engagement."
       },
       {
         q: "Combien d'argent vais-je économiser sur ma facture d'Hydro-Québec ?",

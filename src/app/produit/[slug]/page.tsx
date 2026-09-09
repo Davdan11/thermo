@@ -55,7 +55,7 @@ export async function generateMetadata({
   if (seo?.hspf2) facts.push(`HSPF2 ${seo.hspf2.toLocaleString("fr-CA")}`);
   if (seo?.seer2) facts.push(`SEER2 ${seo.seer2.toLocaleString("fr-CA")}`);
   if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
-  const title = `Thermopompe ${brand.name} ${model.name} : fiche, capacité au froid et subvention`;
+  const title = `Thermopompe ${brand.name} ${model.name} : fiche et LogisVert`;
   const description = (facts.length
     ? `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : ${facts.join(", ")}. Données officielles Hydro-Québec et ENERGY STAR.`
     : `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : fiche technique, type ${detail.systemTypeLabel.toLowerCase()}, admissibilité LogisVert. Données officielles Hydro-Québec.`
@@ -156,14 +156,13 @@ export default async function ProductPage({
         <div style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: `url('/images/hero-a-propos-maison-hiver.webp')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           opacity: 0.25,
           maskImage: "linear-gradient(to right, #0C1821 0%, transparent 50%, #0C1821 100%), linear-gradient(to bottom, black 0%, transparent 100%)",
           WebkitMaskImage: "linear-gradient(to right, black 20%, transparent 80%), linear-gradient(to bottom, black 0%, transparent 100%)",
           pointerEvents: "none",
-        }} />
+        }} >
+          <Image src="/images/hero-a-propos-maison-hiver.webp" alt="" fill priority fetchPriority="high" sizes="100vw" quality={60} style={{ objectFit: "cover", objectPosition: "center" }} />
+        </div>
 
         {/* Faint Brand Watermark */}
         <div style={{

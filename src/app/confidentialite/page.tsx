@@ -71,7 +71,10 @@ export default function ConfidentialitePage() {
         <h2>7. Témoins (cookies) et stockage local</h2>
         <p>
           Le site utilise le stockage local de votre navigateur pour mémoriser vos réponses au questionnaire et votre brouillon de projet. Aucun témoin
-          publicitaire tiers n'est déposé. Vous pouvez effacer ces données depuis les paramètres de votre navigateur.
+          publicitaire n'est déposé. Pour mesurer la fréquentation du site, nous pouvons utiliser Google Analytics 4 en mode consentement : tant que vous
+          n'avez pas accepté dans le bandeau prévu à cet effet, aucun témoin de mesure n'est déposé et seuls des signaux anonymes, sans identifiant, sont
+          transmis. Vous pouvez accepter, refuser ou changer d'avis à tout moment par le lien « Témoins » au bas de chaque page, et effacer ces données
+          depuis les paramètres de votre navigateur.
         </p>
 
         <h2>8. Sécurité</h2>

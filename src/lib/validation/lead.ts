@@ -41,6 +41,7 @@ export const leadSchema = z
     province: optionalText(10),
     zoneClimatique: optionalText(80),
     designTempC: optionalText(10),
+    momentContact: optionalText(20),
     notes: optionalText(1500),
     source: optionalText(60),
 

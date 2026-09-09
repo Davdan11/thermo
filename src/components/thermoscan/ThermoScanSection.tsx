@@ -6,6 +6,7 @@ import {
   Shield, TrendingUp, Info,
 } from "lucide-react";
 import type { ScanResult, CatalogMatch, WarrantyEntry } from "@/lib/thermoscan/types";
+import { track } from "@/lib/analytics/track";
 
 
 type Step = "intro" | "guide" | "capture" | "analyzing" | "confirm" | "speccard" | "compare";
@@ -639,6 +640,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
       if (!data.success) { setError(data.error ?? "Erreur inconnue"); setStep("capture"); return; }
       const s: ScanResult = data.result;
       setScan(s);
+      track("thermoscan_analyzed");
       setBrand(s.fields.brand.value ?? "");
       setModel(s.fields.modelNumber.value ?? "");
       setYear(s.fields.manufactureYear.value ?? undefined);

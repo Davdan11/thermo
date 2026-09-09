@@ -11,7 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/styleguide", "/espace-installateur"],
       },
     ],
-    sitemap: sitemapIds().map((id) => `${SITE_URL}/sitemap/${id}.xml`),
+    sitemap: [`${SITE_URL}/sitemap-index.xml`, ...sitemapIds().map((id) => `${SITE_URL}/sitemap/${id}.xml`)],
     host: SITE_URL,
   };
 }

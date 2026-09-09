@@ -244,7 +244,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                 <div className="mt-auto mb-6">
                   <button onClick={() => onSelectResult(candidate)}
                     className={`w-full py-3.5 px-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${isTop ? "bg-[#e54b17] text-white hover:bg-[#d44315] shadow-lg shadow-orange-500/30" : "bg-[#0b1b24] text-white hover:bg-[#1a2d3a]"}`}>
-                    Obtenir le prix exact
+                    Obtenir une soumission
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>

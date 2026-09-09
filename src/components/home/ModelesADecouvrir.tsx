@@ -139,6 +139,7 @@ export function ModelesADecouvrir() {
                       src={p.brandLogo}
                       alt={p.brandName}
                       fill
+                      sizes="140px"
                       style={{ objectFit: "contain", objectPosition: "left bottom" }}
                     />
                   </div>

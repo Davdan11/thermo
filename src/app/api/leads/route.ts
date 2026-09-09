@@ -70,6 +70,7 @@ export async function POST(req: NextRequest) {
         ${row("Type de thermopompe recherchée", lead.typeThermopompe)}
         ${row("Superficie", lead.superficie)}
         ${row("Échéancier", lead.urgence)}
+        ${row("Moment préféré pour l'appel", lead.momentContact)}
         ${row("Budget estimé", lead.budgetEstime)}
         ${row("Modèle sélectionné (ThermoMatch)", marque)}
         ${lead.notes ? row("Notes", lead.notes) : ""}
@@ -83,7 +84,7 @@ export async function POST(req: NextRequest) {
     `;
     await createNote(deal.id, noteHtml);
 
-    await Promise.all([
+    const [, emailSent] = await Promise.all([
       sendInternalLeadAlert({
         firstName: lead.firstName,
         lastName: lead.lastName,
@@ -94,6 +95,7 @@ export async function POST(req: NextRequest) {
         typeThermopompe: lead.typeThermopompe,
         superficie: lead.superficie,
         modele: marque,
+        moment: lead.momentContact,
         dealId: deal.id,
       }),
       lead.email
@@ -105,10 +107,10 @@ export async function POST(req: NextRequest) {
             estimatedSubvention: "voir la fiche",
             sqft: lead.superficie ?? "N/D",
           })
-        : Promise.resolve(),
+        : Promise.resolve(false),
     ]);
 
-    return NextResponse.json({ success: true, message: "Demande reçue." });
+    return NextResponse.json({ success: true, message: "Demande reçue.", emailSent: emailSent === true });
   } catch (err) {
     console.error("[/api/leads] error:", err);
     return NextResponse.json({ error: "Erreur interne. Appelez-nous au 438-900-3224." }, { status: 500 });

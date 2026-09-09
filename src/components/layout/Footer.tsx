@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ConsentLink } from "@/components/analytics/ConsentBanner";
 
 /* ----------------------------------------------------------
    Footer — Thermopompes À Vendre.ca
@@ -24,7 +25,7 @@ const NAV = [
       { href: "/guides", label: "Guides et conseils" },
       { href: "/subventions", label: "Aides financières" },
       { href: "/subventions/logisvert", label: "LogisVert par marque" },
-      { href: "/prix", label: "Prix et estimation" },
+      { href: "/prix", label: "Prix : notre approche" },
       { href: "/calculateur-economies", label: "Calculatrice d'économies" },
       { href: "/glossaire", label: "Glossaire" },
       { href: "/faq", label: "FAQ" },
@@ -111,39 +112,8 @@ export function Footer() {
               La plateforme de comparaison de thermopompes la plus fiable au Québec.
             </p>
             <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 13, lineHeight: 1.65, margin: "0 0 24px" }}>
-              Trouvez la bonne thermopompe.<br />Au bon prix. Pour votre maison.
+              Trouvez la bonne thermopompe.<br />Au bon calibre. Pour votre maison.
             </p>
-
-            {/* Social icons */}
-            <div style={{ display: "flex", gap: 14, marginBottom: 20 }}>
-              {[
-                { href: "https://facebook.com", icon: <FacebookIcon />, label: "Facebook" },
-                { href: "https://instagram.com", icon: <InstagramIcon />, label: "Instagram" },
-                { href: "https://youtube.com", icon: <YoutubeIcon />, label: "YouTube" },
-                { href: "https://linkedin.com", icon: <LinkedInIcon />, label: "LinkedIn" },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  style={{
-                    color: "rgba(255,255,255,0.4)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 32,
-                    height: 32,
-                    border: "1px solid rgba(255,255,255,0.12)",
-                    borderRadius: "50%",
-                    transition: "color 0.15s, border-color 0.15s",
-                  }}
-                >
-                  {s.icon}
-                </a>
-              ))}
-            </div>
 
             {/* Phone */}
             <a
@@ -197,15 +167,16 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/[0.07] max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 py-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <p style={{ color: "rgba(255,255,255,0.3)", fontSize: 12, margin: 0 }}>
+          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 12, margin: 0 }}>
             © {year} Thermopompes À Vendre.ca Tous droits réservés.
           </p>
           <div style={{ display: "flex", gap: 24 }}>
             {LEGAL.map((l) => (
-              <Link key={l.label} href={l.href} style={{ color: "rgba(255,255,255,0.3)", fontSize: 12, textDecoration: "none" }}>
+              <Link key={l.label} href={l.href} style={{ color: "rgba(255,255,255,0.6)", fontSize: 12, textDecoration: "none" }}>
                 {l.label}
               </Link>
             ))}
+            <ConsentLink style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }} />
           </div>
         </div>
       </div>

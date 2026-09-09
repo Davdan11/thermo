@@ -7,9 +7,9 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: { absolute: "Thermopompe à vendre au Québec : comparez toutes les marques, prix et subvention LogisVert" },
+  title: { absolute: "Thermopompe au Québec : comparez toutes les marques | Thermopompes À Vendre.ca" },
   description:
-    "Comparez toutes les thermopompes vendues au Québec avec les données certifiées d'Hydro-Québec : capacité réelle à -15 °C, HSPF2, subvention LogisVert. ThermoMatch trouve les 3 bonnes machines pour votre maison en 2 minutes.",
+    "Toutes les thermopompes vendues au Québec, comparées avec les données certifiées d'Hydro-Québec : capacité à -15 °C, HSPF2, subvention LogisVert. Trois bons choix en 2 minutes.",
   canonicalPath: "/",
 });
 
@@ -33,6 +33,9 @@ export default function HomePage() {
             alt="Maison moderne en hiver avec thermopompe Mitsubishi"
             fill
             priority
+            fetchPriority="high"
+            sizes="100vw"
+            quality={70}
             style={{ objectFit: "cover", objectPosition: "60% center" }}
           />
           {/* Dark overlay gradient — stronger on mobile */}
@@ -88,7 +91,7 @@ export default function HomePage() {
                     <div className="bg-[#0b1b24] rounded-2xl overflow-hidden relative aspect-[4/3] flex items-end shadow-lg hover:shadow-xl transition-all duration-300">
                       <Image
                         src={t.src}
-                        alt={t.label}
+                        alt=""
                         fill
                         className="transition-transform duration-700 group-hover:scale-105"
                         style={{ objectFit: "cover" }}
@@ -173,6 +176,7 @@ export default function HomePage() {
               alt="ThermoMatch — Trouvez la bonne thermopompe"
               width={1000}
               height={676}
+              sizes="(max-width: 1024px) 100vw, 920px"
               style={{ width: "110%", maxWidth: 920, height: "auto", objectFit: "contain", display: "block", marginLeft: "-5%" }}
               priority
             />
@@ -188,6 +192,7 @@ export default function HomePage() {
                 alt="ThermoMatch — Trouvez la bonne thermopompe"
                 width={800}
                 height={540}
+                sizes="100vw"
                 style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
                 priority
               />
@@ -211,7 +216,7 @@ export default function HomePage() {
                   {[
                     { n: "1", title: "Décrivez votre maison", desc: "Répondez à quelques questions sur votre logement et vos besoins." },
                     { n: "2", title: "Comparez les options", desc: "Découvrez les modèles qui correspondent et comprenez les différences." },
-                    { n: "3", title: "Obtenez votre prix installé", desc: "Recevez une estimation personnalisée, installation comprise." },
+                    { n: "3", title: "Recevez une soumission pour votre maison", desc: "Un installateur partenaire licencié évalue votre projet sur place. Le prix se fait cas par cas, jamais au catalogue." },
                   ].map((s, i) => (
                     <div key={s.n} className="flex-1 flex flex-col items-start sm:items-center text-left sm:text-center relative">
                       {/* Connecting line (between circles) */}

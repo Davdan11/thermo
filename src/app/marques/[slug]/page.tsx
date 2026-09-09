@@ -31,7 +31,7 @@ export async function generateMetadata({
   const name = brand.name.replace(" [DEV]", "");
 
   return createMetadata({
-    title: `Thermopompes ${name} — Modèles, prix et caractéristiques au Québec`,
+    title: `Thermopompes ${name} : modèles, capacité au froid et LogisVert`,
     description: `Découvrez la gamme complète de thermopompes ${name} au Québec. Consultez les séries, comparez les modèles, vérifiez les subventions et trouvez le système idéal pour votre habitation.`,
     alternates: { canonical: `${SITE_URL}/marques/${resolvedParams.slug}` },
     robots: { index: true, follow: true },

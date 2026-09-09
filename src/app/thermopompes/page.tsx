@@ -111,8 +111,11 @@ export default async function ThermopompesPage({
               src="/images/categorie-murale-daikin-hd.png"
               alt="Thermopompe Daikin Murale"
               fill
+              sizes="100vw"
+              quality={70}
               className="object-cover object-right lg:object-right"
               priority
+              fetchPriority="high"
             />
           </div>
         </div>
@@ -169,7 +172,7 @@ export default async function ThermopompesPage({
                 title={`Voir les thermopompes ${brand.name}`}
               >
                 <div className="w-[180px] h-[65px] flex items-center justify-center">
-                  <img src={brand.src ?? ""} alt={brand.name} loading="lazy" className="max-w-full max-h-full object-contain" />
+                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="180px" className="max-w-full max-h-full object-contain w-auto h-auto" />
                 </div>
               </Link>
             ))}
@@ -192,7 +195,7 @@ export default async function ThermopompesPage({
                 title={`Voir les thermopompes ${brand.name}`}
               >
                 <div className="w-[180px] h-[65px] flex items-center justify-center">
-                  <img src={brand.src ?? ""} alt={brand.name} loading="lazy" className="max-w-full max-h-full object-contain" />
+                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="180px" className="max-w-full max-h-full object-contain w-auto h-auto" />
                 </div>
               </Link>
             ))}
@@ -218,7 +221,7 @@ export default async function ThermopompesPage({
               className="bg-white border border-gray-200 rounded-md p-1 flex items-center justify-center h-[55px] hover:bg-gray-50 transition-colors"
             >
               <div className="w-full h-full flex items-center justify-center">
-                <img src={brand.src ?? ""} alt={brand.name} loading="lazy" className="max-w-full max-h-full object-contain" />
+                <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="180px" className="max-w-full max-h-full object-contain w-auto h-auto" />
               </div>
             </Link>
           ))}

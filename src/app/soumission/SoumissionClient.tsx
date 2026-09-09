@@ -11,6 +11,7 @@ import { CheckCircle2, ArrowRight, Zap, Mail, Phone, CalendarCheck } from "lucid
 
 import { loadProjectDraft, getProjectSummary } from "@/lib/project/project-draft";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
+import { track } from "@/lib/analytics/track";
 
 
 const ORANGE = "#e54b17";
@@ -60,7 +61,8 @@ export default function SoumissionPage() {
   const [editing, setEditing] = useState<ProjectKey | null>(null);
   const [editVal, setEditVal] = useState("");
 
-  const [contact, setContact] = useState({ prenom: "", telephone: "", courriel: "", methode: "telephone" });
+  const [contact, setContact] = useState({ prenom: "", telephone: "", courriel: "", methode: "telephone", moment: "" });
+  const [emailSent, setEmailSent] = useState(false);
   // Données brutes du draft pour enrichir GHL
   const [draftRaw, setDraftRaw] = useState<{
     postalCode?: string;
@@ -161,7 +163,8 @@ export default function SoumissionPage() {
           budgetEstime: draftRaw.budget ?? "",
 
           // Notes complètes
-          notes: `Emplacement: ${project.emplacement} | Contact préféré: ${contact.methode}${draftNotes ? " | " + draftNotes : ""}`,
+          notes: `Emplacement: ${project.emplacement} | Contact préféré: ${contact.methode}${contact.moment ? " (" + contact.moment + ")" : ""}${draftNotes ? " | " + draftNotes : ""}`,
+          momentContact: contact.moment,
           source: "soumission-page",
           consentProcessing: consent1,
           consentMarketing: consent2,
@@ -173,6 +176,9 @@ export default function SoumissionPage() {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || "");
       }
+      const data = await res.json().catch(() => ({}));
+      setEmailSent(!!data?.emailSent);
+      track("lead_submitted", { method: contact.methode, has_thermomatch: !!(draftRaw.modeleSelectionne || project.modele), moment: contact.moment || "aucun" });
       setSuccess(true);
     } catch (e) {
       setError(e instanceof Error && e.message ? e.message : "Une erreur est survenue. Appelez le 438-900-3224.");
@@ -202,7 +208,7 @@ export default function SoumissionPage() {
             Merci, {contact.prenom || "Client"} !
           </h1>
           <p style={{ color: "#536873", fontSize: 16, lineHeight: 1.65, margin: "0 0 40px", textAlign: "center" }}>
-            Votre dossier ThermoMatch a été transféré avec succès à nos experts certifiés.
+            Votre dossier est entre les mains de notre équipe. Un installateur partenaire licencié RBQ de votre région l'évaluera avec vous, et le prix se fera cas par cas, pour votre maison.
           </p>
 
           {tmResult?.bestMatch && (
@@ -231,8 +237,12 @@ export default function SoumissionPage() {
                 <Mail size={20} />
               </div>
               <div>
-                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>Surveillez vos courriels</h4>
-                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>Un courriel récapitulatif contenant les détails de votre recommandation vient de vous être envoyé.</p>
+                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>{emailSent ? "Surveillez vos courriels" : "Votre demande est enregistrée"}</h4>
+                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>
+                  {emailSent
+                    ? "Un courriel récapitulatif contenant les détails de votre recommandation vient de vous être envoyé."
+                    : "Votre dossier est enregistré avec vos réponses et, s'il y a lieu, la machine retenue par ThermoMatch."}
+                </p>
               </div>
             </div>
             
@@ -241,8 +251,10 @@ export default function SoumissionPage() {
                 <Phone size={20} />
               </div>
               <div>
-                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>Appel de validation</h4>
-                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>L'expert attitré à votre dossier vous contactera dans les prochaines 24 heures ouvrables.</p>
+                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>Appel de validation sous un jour ouvrable</h4>
+                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>
+                  Nous confirmons vos besoins{contact.moment ? ` (${contact.moment.toLowerCase()}, comme demandé)` : ""}, puis un installateur partenaire licencié évalue votre maison et vous remet une soumission écrite : équipement, installation, électricité, garantie et LogisVert. Gratuit et sans engagement.
+                </p>
               </div>
             </div>
           </div>
@@ -375,7 +387,7 @@ export default function SoumissionPage() {
           </div>
 
           {/* Méthode de contact */}
-          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "0 0 10px" }}>Méthode de contact préférée</p>
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", margin: "0 0 10px" }}>Méthode de contact préférée</p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 20 }}>
             {[
               {
@@ -409,6 +421,27 @@ export default function SoumissionPage() {
                 }}
               >
                 {m.icon} {m.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Moment préféré pour l'appel */}
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", margin: "0 0 10px" }}>Meilleur moment pour vous joindre (facultatif)</p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 20 }}>
+            {["Matin", "Après-midi", "Soir"].map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => setContact((c) => ({ ...c, moment: c.moment === m ? "" : m }))}
+                aria-pressed={contact.moment === m}
+                style={{
+                  padding: "11px 8px", borderRadius: 8, fontSize: 13, fontWeight: 600, cursor: "pointer", minHeight: 44,
+                  border: contact.moment === m ? `1.5px solid ${ORANGE}` : "1.5px solid rgba(255,255,255,0.15)",
+                  backgroundColor: contact.moment === m ? "rgba(229,75,23,0.15)" : "rgba(255,255,255,0.05)",
+                  color: contact.moment === m ? "#fff" : "rgba(255,255,255,0.65)",
+                }}
+              >
+                {m}
               </button>
             ))}
           </div>

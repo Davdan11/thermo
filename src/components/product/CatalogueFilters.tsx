@@ -77,6 +77,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
           <FilterGroup label="Marque">
             <div className="relative mt-2">
               <select
+                aria-label="Marque"
                 value={activeBrand}
                 onChange={(e) => setParam("brand", e.target.value)}
                 className="w-full appearance-none bg-[#F9F9F9] border border-[#E5E5E5] rounded-[4px] h-[42px] px-3 text-sm text-[#172126] focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
@@ -104,6 +105,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
           <FilterGroup label="Capacité (BTU)">
             <div className="relative mt-2">
               <select
+                aria-label="Capacité (BTU)"
                 value={activeCapacity}
                 onChange={(e) => setParam("capacity", e.target.value)}
                 className="w-full appearance-none bg-[#F9F9F9] border border-[#E5E5E5] rounded-[4px] h-[42px] px-3 text-sm text-[#172126] focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"

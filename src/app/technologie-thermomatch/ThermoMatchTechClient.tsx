@@ -886,7 +886,7 @@ export function ThermoMatchTechClient({ modelCount }: { modelCount: number }) {
             
             {[
               { num: "01", label: "Votre sélection", desc: "Vous confirmez le modèle qui vous convient.", icon: <path d="m0 12 7 7 15-17"/> },
-              { num: "02", label: "Votre prix installé", desc: "Vous obtenez une estimation claire et détaillée.", icon: <g><circle cx="12" cy="12" r="8"/><path d="M15 7c-2-2-7-1-7 2 0 4 8 2 8 6 0 3-5 4-8 1M12 0v24"/></g> },
+              { num: "02", label: "Votre soumission", desc: "Un installateur partenaire évalue votre maison et vous remet un prix écrit.", icon: <g><circle cx="12" cy="12" r="8"/><path d="M15 7c-2-2-7-1-7 2 0 4 8 2 8 6 0 3-5 4-8 1M12 0v24"/></g> },
               { num: "03", label: "Votre demande", desc: "Vous soumettez votre projet en quelques minutes.", icon: <path d="M0 0h11l8 8v18H0zM11 0v9h8M4 16h11"/> },
               { num: "04", label: "La planification", desc: "Installation planifiée selon vos disponibilités.", icon: <g><rect x="0" y="0" width="18" height="22" rx="2"/><path d="M4 -4v8m10-8v8M0 9h18"/></g> }
             ].map((step, i) => (

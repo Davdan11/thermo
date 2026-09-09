@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   const city = getCity(ville);
   if (!city) return createMetadata({ title: "Ville introuvable" });
   return createMetadata({
-    title: `Thermopompe à ${city.name} : prix, subvention LogisVert et modèles grand froid`,
+    title: `Thermopompe à ${city.name} : subvention LogisVert et modèles grand froid`,
     description: `Quelle thermopompe installer à ${city.name} (${city.region})? Température de conception ${city.designTempC} °C, capacités certifiées à -15 °C, montants LogisVert officiels et comparaison de toutes les marques.`,
     canonicalPath: `/thermopompe/${city.slug}`,
   });
@@ -79,7 +79,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
       <SeoHero
         eyebrow={city.region}
         title={`Thermopompe à ${city.name}`}
-        intro={`Prix, subvention LogisVert et modèles certifiés grand froid pour ${city.name} et ses environs. Toutes les marques comparées avec les données officielles d'Hydro-Québec, sans parti pris.`}
+        intro={`Subvention LogisVert, modèles certifiés grand froid et installation par un partenaire licencié pour ${city.name} et ses environs. Toutes les marques comparées avec les données officielles d'Hydro-Québec, sans parti pris.`}
         breadcrumbs={[
           { label: "Thermopompe par ville", href: "/thermopompe" },
           { label: city.name, href: `/thermopompe/${city.slug}` },

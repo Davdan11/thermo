@@ -75,7 +75,7 @@ export default function CalculateurEconomiesPage() {
                 Prêt à arrêter de chauffer les nuages ?
               </h4>
               <p className="text-lg !text-white/90 leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.9)" }}>
-                Obtenez le prix exact pour l'installation d'une thermopompe certifiée "Climat Froid", parfaitement adaptée à la superficie de votre maison.
+                Obtenez une soumission écrite pour l'installation d'une thermopompe certifiée « Climat Froid », adaptée à votre maison et évaluée cas par cas.
               </p>
               <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm !text-white/80 font-medium" style={{ color: "rgba(255,255,255,0.8)" }}>
                 <li className="flex items-center gap-2">

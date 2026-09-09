@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { Search, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { SelectableModelData } from "@/lib/data/queries/catalogue";
+import { track } from "@/lib/analytics/track";
 
 /* ==================================================================
    CompareSelector — sélection de modèles à comparer
@@ -56,7 +57,10 @@ export function CompareSelector({ products, initialSlugs = [], maxCompare }: Com
   );
 
   const handleCompare = useCallback(() => {
-    if (selected.size >= 2) router.push(`/comparer?models=${[...selected].join(",")}`);
+    if (selected.size >= 2) {
+      track("compare_started", { count: selected.size });
+      router.push(`/comparer?models=${[...selected].join(",")}`);
+    }
   }, [selected, router]);
 
   const compareDisabled = selected.size >= maxCompare;
