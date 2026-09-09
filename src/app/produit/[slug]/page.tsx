@@ -156,7 +156,7 @@ export default async function ProductPage({
         <div style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: `url('/images/hero-a-propos-maison-hiver.png')`,
+          backgroundImage: `url('/images/hero-a-propos-maison-hiver.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 0.25,
@@ -398,7 +398,7 @@ export default async function ProductPage({
                     borderRadius: "6px"
                   }}
                 >
-                  <Image src="/images/logo-thermomatch-tm.png" alt="Utiliser Thermo Match" width={140} height={28} className="object-contain" />
+                  <Image src="/images/logo-thermomatch-tm-720.webp" alt="Utiliser Thermo Match" width={140} height={28} className="object-contain" />
                 </Link>
               </div>
 

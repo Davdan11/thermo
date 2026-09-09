@@ -52,7 +52,7 @@ export default function EspaceInstallateurPage() {
             L'excellence,<br />de la première estimation<br />à l'installation.
           </h2>
           <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-            <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" style={{ height: "24px", width: "auto" }} />
+            <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" style={{ height: "24px", width: "auto" }} />
             <span style={{ fontSize: "14px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", opacity: 0.7 }}>Propulsé par ThermoMatch</span>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function EspaceInstallateurPage() {
         </Link>
 
         <div style={{ width: "100%", maxWidth: "400px", margin: "64px auto" }}>
-          <img src="/images/HEADERLOGO.png" alt="Thermopompes À Vendre" style={{ height: "40px", width: "auto", marginBottom: "40px" }} />
+          <img src="/images/headerlogo-720.webp" alt="Thermopompes À Vendre" style={{ height: "40px", width: "auto", marginBottom: "40px" }} />
           
           <h1 style={{ color: T.ink, fontSize: "28px", fontWeight: 750, margin: "0 0 8px", letterSpacing: "-0.02em" }}>
             Espace Partenaire

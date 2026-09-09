@@ -96,7 +96,7 @@ export function Header() {
               style={{ textDecoration: "none" }}
             >
               <img 
-                src="/images/HEADERLOGO.png" 
+                src="/images/headerlogo-720.webp" 
                 alt="Thermopompes A Vendre" 
                 style={{ height: 72, width: "auto", display: "block" }}
               />

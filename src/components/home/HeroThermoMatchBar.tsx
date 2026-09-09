@@ -50,7 +50,7 @@ export function HeroThermoMatchBar() {
           {/* Logo block */}
           <div className="flex-1 flex flex-col justify-center items-center py-2 relative h-full">
             <div className="absolute inset-y-0 right-0 w-px bg-white/10" />
-            <Image src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" width={160} height={32} className="object-contain" />
+            <Image src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" width={160} height={32} className="object-contain" />
             <span className="text-white/60 text-xs mt-1 uppercase tracking-wider font-semibold">Analyse Intelligente</span>
           </div>
 

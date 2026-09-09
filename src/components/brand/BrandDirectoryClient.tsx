@@ -224,7 +224,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
                   href="/trouver-ma-thermopompe"
                   className="inline-flex items-center justify-center gap-3 bg-[#e54b17] hover:bg-[#d44315] transition-colors duration-300 text-white font-semibold px-6 py-3.5 rounded-sm"
                 >
-                  Commencer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" /> <span>→</span>
+                  Commencer <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" /> <span>→</span>
                 </Link>
               </div>
             </div>

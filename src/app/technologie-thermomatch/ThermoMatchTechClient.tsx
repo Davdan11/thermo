@@ -144,7 +144,7 @@ export function ThermoMatchTechClient({ modelCount }: { modelCount: number }) {
           {/* Left content */}
           <div className="w-full" style={{ maxWidth: 500 }}>
               <div style={{ color: 'var(--tm-orange)', fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase" }} className="font-bold mb-4 flex items-center">
-                Technologie <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[14px] ml-2 object-contain" />
+                Technologie <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[14px] ml-2 object-contain" />
               </div>
             <h1
               className="font-display"
@@ -970,7 +970,7 @@ export function ThermoMatchTechClient({ modelCount }: { modelCount: number }) {
                 href="/trouver-ma-thermopompe"
                 className={buttonVariants({ variant: "default", size: "lg", className: "bg-[var(--tm-navy)] hover:bg-[var(--tm-navy-soft)] border-none text-white" })}
               >
-                Commencer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" />
+                Commencer <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" />
               </Link>
             </div>
 

@@ -143,7 +143,7 @@ export default function GuidesPageClient({ initialGuides }: Props) {
       <section className="guides-cta-section">
         <div className="container">
           <div className="guides-cta-banner">
-            <Image src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" width={160} height={32} className="guides-cta-banner__brand-img" />
+            <Image src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" width={160} height={32} className="guides-cta-banner__brand-img" />
             <div className="guides-cta-banner__divider" />
             <div className="guides-cta-banner__text">
               <p className="guides-cta-banner__heading">

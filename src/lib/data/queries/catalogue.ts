@@ -5,13 +5,37 @@
    Handles filtering, searching, sorting in one orchestrated call.
    ================================================================== */
 
-import type { ProductModel, SystemConfiguration, Brand } from "../types";
+import type { ProductModel, SystemConfiguration, Brand, ProductSeries, OutdoorUnit } from "../types";
 import type { SystemType } from "../types/enums";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { registry } from "../registry";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
 import { getWarrantiesForModel } from "./products";
+
+/* ------------------------------------------------------------------
+   Index construits une seule fois : le registre est statique, et un
+   `.find` par modèle sur 10 000 fiches transformait chaque page en
+   plusieurs secondes de calcul (comparateur : 7 s).
+   ------------------------------------------------------------------ */
+let _configByModelId: Map<string, SystemConfiguration> | null = null;
+let _seriesById: Map<string, ProductSeries> | null = null;
+let _outdoorUnitById: Map<string, OutdoorUnit> | null = null;
+function configByModelId() {
+  if (!_configByModelId) {
+    _configByModelId = new Map();
+    for (const c of registry.configurations) if (!_configByModelId.has(c.modelId)) _configByModelId.set(c.modelId, c);
+  }
+  return _configByModelId;
+}
+function seriesById() {
+  if (!_seriesById) _seriesById = new Map(registry.series.map((s) => [s.id, s]));
+  return _seriesById;
+}
+function outdoorUnitById() {
+  if (!_outdoorUnitById) _outdoorUnitById = new Map(registry.outdoorUnits.map((u) => [u.id, u]));
+  return _outdoorUnitById;
+}
 
 /* ------------------------------------------------------------------
    Catalogue filter params (from URL searchParams)
@@ -304,13 +328,13 @@ export function getCatalogueModels(
   const products: CatalogueProduct[] = paginatedModels.map((model) => {
     const brand = registry.brandById.get(model.brandId)!;
     const configuration =
-      registry.configurations.find((c) => c.modelId === model.id) ?? null;
-    const series = registry.series.find((s) => s.id === model.seriesId);
+      configByModelId().get(model.id) ?? null;
+    const series = seriesById().get(model.seriesId);
 
     let refrigerant: string | null = null;
     let outdoorModelNumber: string | null = null;
     if (configuration) {
-      const outdoorUnit = registry.outdoorUnits.find((u) => u.id === configuration.outdoorUnitId);
+      const outdoorUnit = outdoorUnitById().get(configuration.outdoorUnitId);
       if (outdoorUnit) {
         if (outdoorUnit.refrigerant) refrigerant = outdoorUnit.refrigerant as string;
         if (outdoorUnit.modelNumber) outdoorModelNumber = outdoorUnit.modelNumber;
@@ -383,9 +407,9 @@ export function getSelectableModels(): SelectableModelData[] {
     .map((model) => {
       const brand = registry.brandById.get(model.brandId);
       if (!brand) return null;
-      const series = registry.series.find((s) => s.id === model.seriesId);
+      const series = seriesById().get(model.seriesId);
       const config =
-        registry.configurations.find((c) => c.modelId === model.id) ?? null;
+        configByModelId().get(model.id) ?? null;
       const outdoorUnit = config
         ? registry.outdoorUnits.find((u) => u.id === config.outdoorUnitId) ??
           null
@@ -424,23 +448,26 @@ export function getSelectableModels(): SelectableModelData[] {
    All catalogue products (no pagination) — for CompareSelector
    ------------------------------------------------------------------ */
 
+let _allCatalogueProducts: CatalogueProduct[] | null = null;
+
 export function getAllCatalogueProducts(): CatalogueProduct[] {
+  if (_allCatalogueProducts) return _allCatalogueProducts;
   const models = registry.models.filter((m) => {
     if (m.status !== "published" || !m.isActive2026) return false;
     const brand = registry.brandById.get(m.brandId);
     return brand ? brand.activeInQuebec : false;
   });
 
-  return models.map((model) => {
+  const result = models.map((model) => {
     const brand = registry.brandById.get(model.brandId)!;
     const configuration =
-      registry.configurations.find((c) => c.modelId === model.id) ?? null;
-    const series = registry.series.find((s) => s.id === model.seriesId);
+      configByModelId().get(model.id) ?? null;
+    const series = seriesById().get(model.seriesId);
 
     let refrigerant: string | null = null;
     let outdoorModelNumber: string | null = null;
     if (configuration) {
-      const outdoorUnit = registry.outdoorUnits.find((u) => u.id === configuration.outdoorUnitId);
+      const outdoorUnit = outdoorUnitById().get(configuration.outdoorUnitId);
       if (outdoorUnit) {
         if (outdoorUnit.refrigerant) refrigerant = outdoorUnit.refrigerant as string;
         if (outdoorUnit.modelNumber) outdoorModelNumber = outdoorUnit.modelNumber;
@@ -479,4 +506,6 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
     if (brandCmp !== 0) return brandCmp;
     return (a.model.nominalCapacityBtu ?? 0) - (b.model.nominalCapacityBtu ?? 0);
   });
+  _allCatalogueProducts = result;
+  return result;
 }

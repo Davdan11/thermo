@@ -1,7 +1,23 @@
 import type { NextConfig } from "next";
 
+/* En-têtes de sécurité : HSTS, anti-clickjacking, anti-sniffing, politique de référent et de permissions.
+   Pas de CSP stricte pour l'instant (scripts inline de Next et JSON-LD) ; frame-ancestors couvre le clickjacking. */
+const securityHeaders = [
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Permissions-Policy", value: "camera=(self), microphone=(), geolocation=(), payment=(), usb=()" },
+  { key: "X-DNS-Prefetch-Control", value: "on" },
+];
+
 const nextConfig: NextConfig = {
   staticPageGenerationTimeout: 1000,
+  poweredByHeader: false,
+  async headers() {
+    return [{ source: "/(.*)", headers: securityHeaders }];
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "daikincomfort.com" },

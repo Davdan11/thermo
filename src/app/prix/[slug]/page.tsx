@@ -53,7 +53,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
     ]),
     getArticleSchema({
       headline: page.h1,
-      image: `${SITE_URL}/images/hero-a-propos-maison-hiver.png`,
+      image: `${SITE_URL}/images/hero-a-propos-maison-hiver.webp`,
       datePublished: "2026-09-03",
       authorName: "L'équipe d'experts ThermoMatch",
     }),
@@ -68,7 +68,7 @@ export default async function PrixBlogPage({ params }: { params: Promise<{ slug:
       
       {/* Blog Hero Header */}
       <section className="relative w-full bg-[#0C1821] pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/images/hero-a-propos-maison-hiver.png')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/images/hero-a-propos-maison-hiver.webp')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0C1821] to-transparent"></div>
         
         <div className="container mx-auto px-6 relative z-10 max-w-4xl">

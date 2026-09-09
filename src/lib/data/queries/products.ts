@@ -158,8 +158,17 @@ export function getCertificationsForConfig(
   );
 }
 
+let warrantiesByModel: Map<string, Warranty[]> | null = null;
 export function getWarrantiesForModel(modelId: string): Warranty[] {
-  return registry.warranties.filter((w) => w.modelId === modelId);
+  if (!warrantiesByModel) {
+    warrantiesByModel = new Map();
+    for (const w of registry.warranties) {
+      const list = warrantiesByModel.get(w.modelId);
+      if (list) list.push(w);
+      else warrantiesByModel.set(w.modelId, [w]);
+    }
+  }
+  return warrantiesByModel.get(modelId) ?? [];
 }
 
 export function getPriceObservationsForModel(

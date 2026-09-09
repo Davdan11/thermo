@@ -47,7 +47,7 @@ export default function AProposPage() {
       >
         {/* Full-bleed photo */}
         <img
-          src="/images/hero-a-propos-maison-hiver.png"
+          src="/images/hero-a-propos-maison-hiver.webp"
           alt=""
           aria-hidden="true"
           className="about-hero-image"

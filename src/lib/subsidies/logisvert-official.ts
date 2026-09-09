@@ -64,6 +64,51 @@ export interface LogisVertOfficialEntry {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const data = officialData as Record<string, any>;
 
+
+/* ------------------------------------------------------------------
+   Index normalisé (numéro extérieur → AHRI[]) et clés triées, construits
+   une seule fois à la première recherche. Avant, chaque recherche qui
+   ratait l'index balayait les 176 000 entrées avec une regex : plusieurs
+   secondes par page dès qu'on affichait tout le catalogue.
+   ------------------------------------------------------------------ */
+const normalizeModel = (v: string) => v.toLowerCase().replace(/[^a-z0-9]/g, "");
+let normIndex: { map: Map<string, string[]>; keys: string[] } | null = null;
+function getNormIndex() {
+  if (normIndex) return normIndex;
+  const map = new Map<string, string[]>();
+  for (const ahri in data) {
+    if (!Object.prototype.hasOwnProperty.call(data, ahri)) continue;
+    const key = normalizeModel(((data[ahri] as Record<string, unknown>).m as string) || "");
+    if (!key) continue;
+    const list = map.get(key);
+    if (list) list.push(ahri);
+    else map.set(key, [ahri]);
+  }
+  normIndex = { map, keys: [...map.keys()].sort() };
+  return normIndex;
+}
+/** Première position de `keys` dont la valeur est ≥ `needle` (recherche binaire). */
+function lowerBound(keys: string[], needle: string): number {
+  let lo = 0, hi = keys.length;
+  while (lo < hi) { const mid = (lo + hi) >> 1; if (keys[mid] < needle) lo = mid + 1; else hi = mid; }
+  return lo;
+}
+/**
+ * Numéros d'entrée qui correspondent à `norm` : exact, ou l'un est le préfixe de l'autre
+ * (les fixtures manuelles donnent parfois un numéro tronqué ou une variante).
+ * Exact d'abord, puis les plus longs préfixes.
+ */
+function candidateKeys(norm: string): string[] {
+  const { map, keys } = getNormIndex();
+  const out: string[] = [];
+  if (map.has(norm)) out.push(norm);
+  // Entrées dont le numéro commence par `norm`
+  for (let i = lowerBound(keys, norm); i < keys.length && keys[i].startsWith(norm); i++) if (keys[i] !== norm) out.push(keys[i]);
+  // Entrées qui sont un préfixe de `norm` (au moins 4 caractères pour éviter les faux amis)
+  for (let len = norm.length - 1; len >= 4; len--) { const k = norm.slice(0, len); if (map.has(k)) out.push(k); }
+  return out;
+}
+
 function toEntry(ahri: string, e: Record<string, unknown>): LogisVertOfficialEntry {
   return {
     ahri,
@@ -99,32 +144,16 @@ export function lookupByAHRI(ahriNumber: string): LogisVertOfficialEntry | null 
  * Returns the BEST match (highest subsidy) if multiple AHRI entries exist.
  */
 export function lookupLogisVert(outdoorModel: string): LogisVertOfficialEntry | null {
-  const key = outdoorModel.toLowerCase().replace(/[^a-z0-9]/g, "");
-
-  // Try model index first (fast lookup)
-  if (modelIndex && modelIndex[key]) {
-    const ahriIds = modelIndex[key];
-    let best: LogisVertOfficialEntry | null = null;
-    for (const ahri of ahriIds) {
-      const entry = data[ahri];
-      if (entry) {
-        const e = toEntry(ahri, entry);
-        if (!best || e.logisVertDollars > best.logisVertDollars) best = e;
-      }
-    }
-    if (best) return best;
-  }
-
-  // Fallback: scan all entries (for backward compat)
+  const key = normalizeModel(outdoorModel);
+  if (!key) return null;
+  const { map } = getNormIndex();
   let best: LogisVertOfficialEntry | null = null;
-  for (const ahri in data) {
-    if (!Object.prototype.hasOwnProperty.call(data, ahri)) continue;
-    const entry = data[ahri] as Record<string, unknown>;
-    const eModel = ((entry.m as string) || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-    if (eModel === key || eModel.startsWith(key) || key.startsWith(eModel)) {
-      const e = toEntry(ahri, entry);
+  for (const k of candidateKeys(key)) {
+    for (const ahri of map.get(k) ?? []) {
+      const e = toEntry(ahri, data[ahri]);
       if (!best || e.logisVertDollars > best.logisVertDollars) best = e;
     }
+    if (best && k === key) break; // une correspondance exacte prime sur les préfixes
   }
   return best;
 }
@@ -135,19 +164,17 @@ export function lookupLogisVert(outdoorModel: string): LogisVertOfficialEntry | 
 export function lookupLogisVertFuzzy(modelNumber: string, brand?: string): LogisVertOfficialEntry | null {
   const exact = lookupLogisVert(modelNumber);
   if (exact) return exact;
-
-  const norm = modelNumber.toLowerCase().replace(/[^a-z0-9]/g, "");
-
-  for (const ahri in data) {
-    if (!Object.prototype.hasOwnProperty.call(data, ahri)) continue;
-    const e = data[ahri] as Record<string, unknown>;
-    const eModel = ((e.m as string) || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-    if (eModel.startsWith(norm) || norm.startsWith(eModel)) {
-      if (brand && !(e.b as string || "").toLowerCase().includes(brand.toLowerCase())) continue;
+  const norm = normalizeModel(modelNumber);
+  if (!norm) return null;
+  const { map } = getNormIndex();
+  const brandLc = brand?.toLowerCase();
+  for (const k of candidateKeys(norm)) {
+    for (const ahri of map.get(k) ?? []) {
+      const e = data[ahri] as Record<string, unknown>;
+      if (brandLc && !((e.b as string) || "").toLowerCase().includes(brandLc)) continue;
       return toEntry(ahri, e);
     }
   }
-
   return null;
 }
 

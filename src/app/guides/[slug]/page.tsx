@@ -61,7 +61,7 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
     inLanguage: "fr-CA",
     wordCount: guide.wordCount,
     author: { "@type": "Organization", name: guide.author, url: SITE_URL },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/images/HEADERLOGO.png` } },
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/images/headerlogo-720.webp` } },
     datePublished: guide.publishedAt,
     dateModified: guide.updatedAt ?? guide.publishedAt,
     mainEntityOfPage: `${SITE_URL}/guides/${slug}`,

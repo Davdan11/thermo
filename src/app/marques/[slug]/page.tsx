@@ -104,7 +104,7 @@ export default async function BrandPage({
         <div 
           className="absolute inset-0 z-0 opacity-25 pointer-events-none"
           style={{
-            backgroundImage: "url('/images/hero-a-propos-maison-hiver.png')",
+            backgroundImage: "url('/images/hero-a-propos-maison-hiver.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             maskImage: "linear-gradient(to bottom, black 0%, transparent 100%)",

@@ -228,7 +228,7 @@ export default function HomePage() {
                 </div>
 
                 <Link href="/trouver-ma-thermopompe" className="group flex items-center bg-[#e54b17] text-white font-semibold text-[18px] pl-8 pr-6 py-4 rounded-sm no-underline transition-all duration-300 hover:bg-[#d44315] hover:shadow-lg w-fit">
-                  Commencer <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch™" className="inline-block h-[40px] ml-3 mr-1 object-contain brightness-0 invert" />
+                  Commencer <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch™" className="inline-block h-[40px] ml-3 mr-1 object-contain brightness-0 invert" />
                   <svg className="ml-2 transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M9 18l6-6-6-6" />
                   </svg>

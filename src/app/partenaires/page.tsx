@@ -147,7 +147,7 @@ export default function PartenairesPage() {
           >
             <div>
               {/* Le logo est blanc, donc il sortira parfaitement sur ce fond sombre (InkDeep) */}
-              <img src="/images/logo-thermomatch-tm.png" alt="ThermoMatch" style={{ height: "48px", width: "auto", marginBottom: "40px", objectFit: "contain" }} />
+              <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" style={{ height: "48px", width: "auto", marginBottom: "40px", objectFit: "contain" }} />
               
               <h2
                 style={{

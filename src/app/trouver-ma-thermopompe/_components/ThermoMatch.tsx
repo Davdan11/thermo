@@ -916,7 +916,7 @@ function ThermoMatchHeader({
       {/* Center: Logo + step label */}
       <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4">
         <Image 
-          src="/images/logo-thermomatch-tm.png" 
+          src="/images/logo-thermomatch-tm-720.webp" 
           alt="ThermoMatch" 
           width={120} 
           height={24} 
