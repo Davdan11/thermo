@@ -260,5 +260,12 @@
     "format": "png",
     "width": 960,
     "height": 269
+  },
+  "accueil-modeles-a-decouvrir": {
+    "source": "Photos officielles déjà présentes dans public/images/products/official, fond blanc retiré par remplissage depuis les bords, machine intacte.",
+    "mitsubishi-fs-exterieure-detouree.png": "products/official/mitsubishi-fs-06-09-12-exterieure-officielle.webp",
+    "daikin-fit-aurora-exterieure-detouree.png": "products/official/daikin-fit-aurora-officiel.webp",
+    "fujitsu-aouh12kzah1-exterieure-detouree.png": "products/official/fujitsu-aouh12kzah1-exterieure-exacte.webp",
+    "date": "2026-09-08"
   }
 }

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { HeroThermoMatchBar } from "@/components/home/HeroThermoMatchBar";
 import { CompareSectionAnimated } from "@/components/home/CompareSectionAnimated";
 import { ModelesADecouvrir } from "@/components/home/ModelesADecouvrir";
-import { getFeaturedModels } from "@/lib/data/queries/featured";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { createMetadata } from "@/lib/seo";
 
@@ -20,7 +19,6 @@ export const metadata = createMetadata({
    All colours are inlined (hex) so they survive any CSS-variable failure.
 ───────────────────────────────────────────────────────────────────────────*/
 export default function HomePage() {
-  const featured = getFeaturedModels();
   return (
     <main style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
 
@@ -109,7 +107,7 @@ export default function HomePage() {
 
       <CompareSectionAnimated />
 
-      <ModelesADecouvrir products={featured} />
+      <ModelesADecouvrir />
       {/* ══════════════════════════════════════════════════════════════════
           TOUTES LES GRANDES MARQUES — brand logos grid
       ══════════════════════════════════════════════════════════════════ */}
