@@ -172,9 +172,25 @@ export function getSeoModel(slug: string): SeoModel | null {
   return bySlug?.get(slug) ?? null;
 }
 
-/** Modèles indexables : un par machine réellement distincte. */
+/** Modèles canoniques : un par machine réellement distincte (classements, comparatifs, statistiques). */
 export function getCanonicalModels(): SeoModel[] {
   return getSeoModels().filter((m) => m.canonicalSlug === m.slug);
+}
+
+/**
+ * Adresse indexée d'une fiche. Une machine vendue sous plusieurs marques garde une fiche
+ * indexable par marque (les gens cherchent « Payne », « Tosot », « Elios »…) ; seule une
+ * variante interne à la même marque renvoie à son représentant.
+ */
+export function indexSlug(m: SeoModel): string {
+  if (m.canonicalSlug === m.slug) return m.slug;
+  const rep = getSeoModel(m.canonicalSlug);
+  return rep && rep.brandSlug === m.brandSlug ? rep.slug : m.slug;
+}
+
+/** Fiches listées dans les sitemaps : une par marque et par machine. */
+export function getIndexableModels(): SeoModel[] {
+  return getSeoModels().filter((m) => indexSlug(m) === m.slug);
 }
 
 /* ------------------------------------------------------------------

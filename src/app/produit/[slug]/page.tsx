@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
 import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
-import { getSeoModel } from "@/lib/seo/programmatic";
+import { getSeoModel, indexSlug } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
@@ -51,7 +51,7 @@ export async function generateMetadata({
 
   const { model, brand } = detail;
   const seo = getSeoModel(slug);
-  const canonicalSlug = seo?.canonicalSlug ?? slug;
+  const canonicalSlug = seo ? indexSlug(seo) : slug;
   const indexable = brand.activeInQuebec && model.status === "published";
 
   const facts: string[] = [];

@@ -6,8 +6,9 @@
    - marques      : marques actives + pages marque × type + LogisVert par marque
    - villes-quebec : pages locales
    - classements  : palmarès et comparatifs de marques
-   - produits-N   : fiches produit canoniques uniquement (une par machine
-                    réellement distincte, marques actives au Québec)
+   - produits-N   : fiches produit indexables (une par marque et par machine,
+                    marques actives au Québec ; les variantes internes d'une même
+                    marque renvoient à leur représentant)
 
    Les URL sont listées dans robots.txt (src/app/robots.ts).
    ================================================================== */
@@ -15,7 +16,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 import { registry } from "@/lib/data/registry";
-import { getCanonicalModels, getAllBrandStats, getCapacityClasses, getBrandPairs, RANKINGS } from "@/lib/seo/programmatic";
+import { getIndexableModels, getAllBrandStats, getCapacityClasses, getBrandPairs, RANKINGS } from "@/lib/seo/programmatic";
 import { getCities } from "@/lib/seo/cities";
 import { getLandingPages } from "@/lib/seo/landings";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
@@ -106,7 +107,7 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
   if (match) {
     const index = Number(match[1]);
     const start = index * PRODUCTS_PER_SITEMAP;
-    return getCanonicalModels()
+    return getIndexableModels()
       .slice(start, start + PRODUCTS_PER_SITEMAP)
       .map((m) => entry(`/produit/${m.slug}`, DATA_DATE, "monthly", m.h5Btu !== null ? 0.6 : 0.4));
   }
