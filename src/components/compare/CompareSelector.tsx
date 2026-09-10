@@ -141,7 +141,7 @@ export function CompareSelector({ products, initialSlugs = [], maxCompare }: Com
       )}
 
       {selected.size >= 2 && (
-        <div className="fixed inset-x-0 bottom-0 z-40 p-4 safe-bottom">
+        <div className="fixed inset-x-0 z-50 p-4 safe-bottom bottom-[var(--mobile-bar-offset,0px)]">
           <div className="mx-auto max-w-2xl flex items-center justify-between gap-4 px-5 py-3 bg-surface-dark text-surface-dark-fg rounded-lg shadow-lg">
             <p className="text-sm">
               <span className="font-semibold">{selected.size}</span> modèle{selected.size > 1 ? "s" : ""} sélectionné{selected.size > 1 ? "s" : ""}
@@ -150,7 +150,7 @@ export function CompareSelector({ products, initialSlugs = [], maxCompare }: Com
               <button type="button" onClick={() => setSelected(new Set())} className="text-sm text-surface-dark-muted-fg hover:text-surface-dark-fg transition-colors">
                 Effacer
               </button>
-              <button type="button" onClick={handleCompare} className="h-9 px-4 rounded-md bg-brand text-white text-sm font-medium hover:bg-brand-hover transition-colors">
+              <button type="button" onClick={handleCompare} className="h-10 px-4 rounded-md bg-brand text-white text-sm font-semibold whitespace-nowrap hover:bg-brand-hover transition-colors">
                 Comparer ({selected.size})
               </button>
             </div>

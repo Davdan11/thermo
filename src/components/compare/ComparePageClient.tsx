@@ -385,8 +385,18 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       )}
 
       {/* ---- Product columns ---- */}
+      {/* Sur téléphone : deux colonnes produit tiennent dans l'écran ; au-delà, défilement horizontal avec indication. */}
+      <style>{`@media (max-width: 640px) {
+        #compare-grid { grid-template-columns: 104px repeat(${products.length}, ${products.length > 2 ? "150px" : "minmax(0, 1fr)"}) !important; min-width: ${products.length > 2 ? `${104 + products.length * 150}px` : "0"} !important; }
+        #compare-grid > div { padding: 10px 8px !important; min-width: 0; white-space: normal !important; overflow-wrap: anywhere; }
+        #compare-grid img { max-width: 100% !important; height: auto !important; }
+        #compare-grid > div p, #compare-grid > div span { word-break: break-word; }
+      }`}</style>
+      {products.length > 2 && (
+        <p className="sm:hidden" style={{ margin: "0 0 8px", fontSize: 12, color: "var(--color-muted)" }}>Faites défiler vers la droite pour voir les {products.length} modèles →</p>
+      )}
       <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch", margin: "0 -20px", padding: "0 20px" }}>
-      <div style={{
+      <div id="compare-grid" style={{
         display: "grid",
         gridTemplateColumns: `minmax(140px, 200px) repeat(${products.length}, minmax(180px, 1fr))`,
         gap: 0,
@@ -429,14 +439,14 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             {(() => {
               const logoPath = brandLogoPath(p.detail.brand.slug);
               return (
-                <div style={{ height: 80, marginBottom: 16, display: "flex", alignItems: "center" }}>
+                <div style={{ minHeight: 48, maxHeight: 80, marginBottom: 16, display: "flex", alignItems: "center", overflow: "hidden" }}>
                   {logoPath ? (
                     <Image
                       src={logoPath}
                       alt={p.detail.brand.name}
                       width={240}
                       height={80}
-                      style={{ objectFit: "contain", objectPosition: "left", height: 80, width: "auto", maxWidth: 240 }}
+                      style={{ objectFit: "contain", objectPosition: "left", height: "auto", width: "100%", maxWidth: 240, maxHeight: 80 }}
                     />
                   ) : (
                     <span style={{ fontSize: 15, color: "var(--color-foreground)", fontWeight: 700 }}>{p.detail.brand.name}</span>
