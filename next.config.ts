@@ -17,7 +17,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   async redirects() {
     // Adresse conventionnelle du plan de site : renvoie vers l'index des sitemaps segmentés.
-    return [{ source: "/sitemap.xml", destination: "/sitemap-index.xml", permanent: true }];
+    return [
+      { source: "/sitemap.xml", destination: "/sitemap-index.xml", permanent: true },
+      // Anciennes adresses de sitemaps : redirigées plutôt que 404, pour Google et Bing.
+      { source: "/sitemap/villes.xml", destination: "/sitemap/villes-quebec.xml", permanent: true },
+      { source: "/sitemap/palmares.xml", destination: "/sitemap/classements.xml", permanent: true },
+    ];
   },
   async headers() {
     return [

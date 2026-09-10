@@ -5,7 +5,7 @@
    - guides       : guides éditoriaux, pages d'atterrissage, classes de capacité
    - marques      : marques actives + pages marque × type + LogisVert par marque
    - villes-quebec : pages locales
-   - palmares     : palmarès et comparatifs de marques
+   - classements  : palmarès et comparatifs de marques
    - produits-N   : fiches produit canoniques uniquement (une par machine
                     réellement distincte, marques actives au Québec)
 
@@ -95,7 +95,7 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
     return getCities().map((c) => entry(`/thermopompe/${c.slug}`, CONTENT_DATE, "monthly", 0.7));
   }
 
-  if (id === "palmares") {
+  if (id === "classements") {
     return [
       ...RANKINGS.map((r) => entry(`/meilleures-thermopompes/${r.slug}`, DATA_DATE, "weekly", 0.8)),
       ...getBrandPairs().map((p) => entry(`/comparer/${p.slug}`, DATA_DATE, "monthly", 0.6)),

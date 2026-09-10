@@ -9,8 +9,8 @@ export function productSitemapCount(): number {
 }
 
 export function sitemapIds(): string[] {
-  // « villes-quebec » et « palmares » : Google refusait de lire « villes » et « classements » (URL neuves = nouvelle évaluation)
-  const ids = ["pages", "guides", "marques", "villes-quebec", "palmares"];
+  // « villes-quebec » : Google refusait de lire « villes » (URL neuve = nouvelle évaluation) ; « classements » est lu correctement.
+  const ids = ["pages", "guides", "marques", "villes-quebec", "classements"];
   for (let i = 0; i < productSitemapCount(); i++) ids.push(`produits-${i}`);
   return ids;
 }
