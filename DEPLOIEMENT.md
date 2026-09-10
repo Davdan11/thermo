@@ -48,3 +48,14 @@ précédente : `ln -sfn /var/www/thermopompesavendre.ca/releases/<x> /var/www/th
 Éditer `shared/.env` sur le VPS puis `pm2 restart thermo --update-env`. Indispensables en production :
 `NEXT_PUBLIC_SITE_URL`, `PIPEDRIVE_API_TOKEN`, `TWILIO_AUTH_TOKEN` (sans lui les webhooks téléphoniques
 sont refusés), `RESEND_API_KEY` et `NOTIFICATION_EMAIL` pour les courriels.
+
+
+## Robot LogisVert quotidien
+
+Un cron sur le VPS (`30 5 * * *`, `/var/www/thermopompesavendre.ca/bot/run.sh`) exécute `scripts/logisvert-bot.sh` :
+
+1. synchronise `/var/www/thermopompesavendre.ca/bot/repo` avec GitHub (clé `/root/.ssh/thermo-bot`, à inscrire dans **Settings → Deploy keys** du dépôt avec accès en écriture) ; sans synchronisation, il s'arrête sans rien déployer ;
+2. compare l'empreinte SHA-256 du fichier Hydro-Québec avec `src/lib/subsidies/logisvert-metadata.json` (`node scripts/scrape-logisvert.mjs --check`) ;
+3. si la liste a changé : régénération, `vitest`, commit « LogisVert : liste Hydro-Québec du AAAA-MM-JJ », push, puis déploiement sans interruption par `deploy-vps.sh`.
+
+Journal : `/var/log/thermo-logisvert-bot.log`. Lancement manuel : `bash /var/www/thermopompesavendre.ca/bot/run.sh`.
