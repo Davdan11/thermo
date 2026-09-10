@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import remarkGfm from "remark-gfm";
 
 const contentDirectory = path.join(process.cwd(), "src/content/guides");
 
@@ -91,7 +92,7 @@ export async function getGuideBySlug(slug: string): Promise<Guide | null> {
     const fullPath = path.join(contentDirectory, `${slug}.md`);
     if (!fs.existsSync(fullPath)) return null;
     const raw = matter(fs.readFileSync(fullPath, "utf8"));
-    const processed = await remark().use(html).process(raw.content);
+    const processed = await remark().use(remarkGfm).use(html).process(raw.content);
     return { ...toMetadata(slug, raw), contentHtml: processed.toString() };
   } catch (error) {
     console.error(`Error loading guide ${slug}:`, error);

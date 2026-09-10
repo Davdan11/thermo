@@ -168,7 +168,17 @@ export function GuideDataWidgets({ slug }: { slug: string }) {
       return <BrandsBlock slugs={["gree", "daikin", "fujitsu"]} />;
     case "ce-qui-influence-le-prix-installe":
     case "subvention-logisvert-guide-complet":
+    case "subvention-logisvert-montants-par-calibre":
       return <LogisVertBrandsBlock />;
+    case "meilleure-thermopompe-murale-quebec":
+      return <RankingBlock slug="murales-12000-btu" title="Les meilleures murales de 12 000 BTU au Québec" intro="Classement sur données certifiées (HSPF2, COP et capacité à -15 °C), une ligne par machine réellement distincte." />;
+    case "thermopompe-vs-plinthes-electriques-economies":
+      return <RankingBlock slug="efficacite-hspf2" title="Les machines les plus efficaces sur une saison" intro="Classement par HSPF2 certifié : c'est ce coefficient, avec le COP à -15 °C, qui fixe l'économie annuelle." />;
+    case "installer-thermopompe-en-hiver":
+      return <RankingBlock slug="grand-froid" title="Les machines qui tiennent le mieux le froid" intro="Classement par COP certifié à -15 °C, puis par tenue de capacité : celles qu'on installe en janvier sans inquiétude." />;
+    case "thermopompe-maison-ancienne-avant-1980":
+    case "thermopompe-multizone-bon-choix":
+      return <CapacityTable />;
     default:
       return null;
   }
