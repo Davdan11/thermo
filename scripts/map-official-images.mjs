@@ -50,6 +50,14 @@ const RULES = [
   // Photos extraites des brochures officielles (revues visuellement) : famille complète.
   ["rheem", /^RP17/, null, "/images/products/brochures/rheem/rheem-rp17-exterieure.webp"],
   ["gree", /^MUL(18|24|30|36|42|48|60)HP230V1R32/, null, "/images/products/brochures/gree/gree-multi-r32-60-exterieure.webp"],
+  // TOSOT — catalogue officiel 2026 (public/brochures/tosot), photos par famille de produits :
+  // monozone murale entrée de gamme (p. 5), monozone haut de gamme (p. 8), condenseur multizone (p. 10),
+  // centrales gainables UNIX (p. 22, deux tailles d'unité extérieure).
+  ["tosot", /^(TW|TS-|SU-)/, null, "/images/products/brochures/tosot/tosot-monozone-entree-exterieure.webp"],
+  ["tosot", /^TWH/, null, "/images/products/brochures/tosot/tosot-monozone-haut-de-gamme-exterieure.webp"],
+  ["tosot", /^TM(S|SCI)?\d/, null, "/images/products/brochures/tosot/tosot-multizone-condenseur-exterieure.webp"],
+  ["tosot", /^TUD?(18|24|30|36)/, null, "/images/products/brochures/tosot/tosot-unix-central-exterieure.webp"],
+  ["tosot", /^TUD?(42|48|60)/, null, "/images/products/brochures/tosot/tosot-unix-central-grande-capacite-exterieure.webp"],
 ];
 
 const capK = (m) => Math.round((m.nominalCapacityBtu ?? 0) / 1000);
