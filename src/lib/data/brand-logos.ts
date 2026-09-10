@@ -49,7 +49,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   "tcl": "/images/marques/logo-tcl.png",
   "tempstar": "/images/marques/logo-tempstar-bleu-nuit.png",
   "tosot": "/images/marques/logo-tosot-bleu-nuit.png",
-  "trane": "/images/marques/logo-trane-bleu-nuit.png",
+  "trane": "/images/marques/logo-trane.png",
   "york": "/images/marques/logo-york.png",
   "zephyr": "/images/marques/logo-zephyr-bleu-nuit.png",
 };

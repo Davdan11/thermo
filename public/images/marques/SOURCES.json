@@ -251,15 +251,13 @@
     "height": 320
   },
   "trane": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/TraneTechnologieslogo.svg/960px-TraneTechnologieslogo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "source": "https://en.wikipedia.org/wiki/Trane%20Technologies",
-    "file": "File:TraneTechnologieslogo.svg",
-    "license": "Public domain",
-    "via": "wikipedia-logo-file",
-    "fetchedAt": "2026-09-08",
-    "format": "png",
-    "width": 960,
-    "height": 269
+    "url": "https://www.trane.com/residential/en/",
+    "source": "https://www.trane.com/residential/en/ (en-tête du site résidentiel Trane, SVG en ligne aria-label « Trane Logo »)",
+    "file": "SVG en ligne de l’en-tête résidentiel (id Layer_1, viewBox 0 0 148.4 40), rouge officiel #da2400 du site",
+    "license": "Marque de commerce Trane (Trane Technologies), usage nominatif",
+    "via": "site-header-svg",
+    "fetchedAt": "2026-09-11",
+    "format": "svg"
   },
   "accueil-modeles-a-decouvrir": {
     "source": "Photos officielles déjà présentes dans public/images/products/official, fond blanc retiré par remplissage depuis les bords, machine intacte.",

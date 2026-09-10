@@ -22,6 +22,8 @@ export default function RankingsIndex() {
         ]}
       />
       <SeoHero
+        image="/images/about-process.jpg"
+        imageAlt="Unité extérieure de thermopompe installée sur une maison de bois, en hiver"
         eyebrow="Classements"
         title={`Les meilleures thermopompes au Québec en ${new Date().getFullYear()}`}
         intro="Pas d'avis sponsorisés, pas de « choix de la rédaction » : chaque classement trie les machines vendues au Québec sur une donnée certifiée, publiée par Hydro-Québec et ENERGY STAR."

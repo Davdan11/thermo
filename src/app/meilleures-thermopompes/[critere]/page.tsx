@@ -59,6 +59,8 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
         ]}
       />
       <SeoHero
+        image="/images/about-process.jpg"
+        imageAlt="Unité extérieure de thermopompe installée sur une maison de bois, en hiver"
         eyebrow="Classement sur données certifiées"
         title={r.def.h1}
         intro={r.def.description}

@@ -50,6 +50,8 @@ export function SeoHero({
   breadcrumbs,
   stats,
   answer,
+  image,
+  imageAlt = "",
 }: {
   eyebrow?: string;
   title: string;
@@ -58,11 +60,21 @@ export function SeoHero({
   stats?: Array<{ label: string; value: string }>;
   /** Réponse directe en 40-60 mots, en tête de page : ce qu'un lecteur pressé ou un moteur de réponse doit retenir. */
   answer?: string;
+  /** Photo pleine hauteur à droite, fondue dans le fond sombre (facultatif). */
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
     <>
-    <section className="bg-[#0C1821] text-white pt-28 pb-14">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="relative overflow-hidden bg-[#0C1821] text-white pt-28 pb-14">
+      {image && (
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] pointer-events-none" aria-hidden="true">
+          <Image src={image} alt={imageAlt} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-cover object-center opacity-50 lg:opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0C1821] via-[#0C1821]/80 to-[#0C1821]/25 lg:via-[#0C1821]/55 lg:to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0C1821] to-transparent" />
+        </div>
+      )}
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="[&_a]:text-white/60 [&_a:hover]:text-white [&_span]:text-white/90 [&_.text-gray-400]:text-white/30">
           <Breadcrumbs items={breadcrumbs} />
         </div>
