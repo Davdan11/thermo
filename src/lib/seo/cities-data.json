@@ -1,0 +1,1645 @@
+{
+  "montreal": {
+    "climate": {
+      "hdd18": 4281.2,
+      "janMeanC": -9.2,
+      "janMinC": -13.5,
+      "extremeMinC": -37.8,
+      "extremeMinYear": 1957,
+      "annualMeanC": 7.0,
+      "daysBelowMinus20": 12.0,
+      "station": "MONTREAL TRUDEAU (AIRPORT)",
+      "stationId": "7025250",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+    },
+    "census": {
+      "population2021": 1762949,
+      "dwellings2021": 816338,
+      "builtBefore1981Pct": 66.4,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052466023&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station MONTREAL TRUDEAU (AIRPORT) (ID climatologique 7025250), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Montréal (SDR 2466023), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052466023&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "laval": {
+    "climate": {
+      "hdd18": 4281.2,
+      "janMeanC": -9.2,
+      "janMinC": -13.5,
+      "extremeMinC": -37.8,
+      "extremeMinYear": 1957,
+      "annualMeanC": 7.0,
+      "daysBelowMinus20": 12.0,
+      "station": "MONTREAL TRUDEAU (AIRPORT)",
+      "stationId": "7025250",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+    },
+    "census": {
+      "population2021": 438366,
+      "dwellings2021": 169785,
+      "builtBefore1981Pct": 46.9,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052465005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station MONTREAL TRUDEAU (AIRPORT) (ID climatologique 7025250), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Laval (SDR 2465005), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052465005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "longueuil": {
+    "climate": {
+      "hdd18": 4539.3,
+      "janMeanC": -10.4,
+      "janMinC": -15.1,
+      "extremeMinC": -37.2,
+      "extremeMinYear": 1934,
+      "annualMeanC": 6.2,
+      "daysBelowMinus20": 19.4,
+      "station": "MONTREAL/ST-HUBERT A",
+      "stationId": "7027320",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+    },
+    "census": {
+      "population2021": 254483,
+      "dwellings2021": 113086,
+      "builtBefore1981Pct": 55.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458227&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MONTREAL/ST-HUBERT A (ID climatologique 7027320), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Longueuil (SDR 2458227), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458227&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "brossard": {
+    "climate": {
+      "hdd18": 4539.3,
+      "janMeanC": -10.4,
+      "janMinC": -15.1,
+      "extremeMinC": -37.2,
+      "extremeMinYear": 1934,
+      "annualMeanC": 6.2,
+      "daysBelowMinus20": 19.4,
+      "station": "MONTREAL/ST-HUBERT A",
+      "stationId": "7027320",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+    },
+    "census": {
+      "population2021": 91525,
+      "dwellings2021": 35885,
+      "builtBefore1981Pct": 39.5,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458007&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MONTREAL/ST-HUBERT A (ID climatologique 7027320), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Brossard (SDR 2458007), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458007&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-hubert": {
+    "climate": {
+      "hdd18": 4539.3,
+      "janMeanC": -10.4,
+      "janMinC": -15.1,
+      "extremeMinC": -37.2,
+      "extremeMinYear": 1934,
+      "annualMeanC": 6.2,
+      "daysBelowMinus20": 19.4,
+      "station": "MONTREAL/ST-HUBERT A",
+      "stationId": "7027320",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+    },
+    "census": {
+      "population2021": 254483,
+      "dwellings2021": 113086,
+      "builtBefore1981Pct": 55.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458227&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MONTREAL/ST-HUBERT A (ID climatologique 7027320), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Longueuil (SDR 2458227), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458227&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "boucherville": {
+    "climate": {
+      "hdd18": 4539.3,
+      "janMeanC": -10.4,
+      "janMinC": -15.1,
+      "extremeMinC": -37.2,
+      "extremeMinYear": 1934,
+      "annualMeanC": 6.2,
+      "daysBelowMinus20": 19.4,
+      "station": "MONTREAL/ST-HUBERT A",
+      "stationId": "7027320",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+    },
+    "census": {
+      "population2021": 41743,
+      "dwellings2021": 17291,
+      "builtBefore1981Pct": 49.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458033&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MONTREAL/ST-HUBERT A (ID climatologique 7027320), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027320&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Boucherville (SDR 2458033), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052458033&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "quebec": {
+    "climate": {
+      "hdd18": 4977.2,
+      "janMeanC": -11.9,
+      "janMinC": -16.7,
+      "extremeMinC": -36.7,
+      "extremeMinYear": 2015,
+      "annualMeanC": 4.7,
+      "daysBelowMinus20": 26.5,
+      "station": "QUEBEC JEAN LESAGE (AIRPORT)",
+      "stationId": "7016294",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7016294&dispBack=0"
+    },
+    "census": {
+      "population2021": 549459,
+      "dwellings2021": 265711,
+      "builtBefore1981Pct": 51.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052423027&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station QUEBEC JEAN LESAGE (AIRPORT) (ID climatologique 7016294), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7016294&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Québec (SDR 2423027), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052423027&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "levis": {
+    "climate": {
+      "hdd18": 5017.5,
+      "janMeanC": -12.1,
+      "janMinC": -16.6,
+      "extremeMinC": -39.0,
+      "extremeMinYear": 1994,
+      "annualMeanC": 4.6,
+      "daysBelowMinus20": 25.1,
+      "station": "LAUZON",
+      "stationId": "7024254",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7024254&dispBack=0"
+    },
+    "census": {
+      "population2021": 149683,
+      "dwellings2021": 65751,
+      "builtBefore1981Pct": 40.2,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052425213&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station LAUZON (ID climatologique 7024254), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7024254&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Lévis (SDR 2425213), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052425213&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "gatineau": {
+    "climate": {
+      "hdd18": 4826.7,
+      "janMeanC": -11.2,
+      "janMinC": -16.5,
+      "extremeMinC": -39.4,
+      "extremeMinYear": 1976,
+      "annualMeanC": 5.3,
+      "daysBelowMinus20": 29.1,
+      "station": "ANGERS",
+      "stationId": "7030170",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7030170&dispBack=0"
+    },
+    "census": {
+      "population2021": 291041,
+      "dwellings2021": 126476,
+      "builtBefore1981Pct": 39.8,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052481017&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station ANGERS (ID climatologique 7030170), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7030170&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Gatineau (SDR 2481017), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052481017&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "sherbrooke": {
+    "climate": {
+      "hdd18": 4877.2,
+      "janMeanC": -10.8,
+      "janMinC": -16.5,
+      "extremeMinC": -41.2,
+      "extremeMinYear": 2004,
+      "annualMeanC": 5.1,
+      "daysBelowMinus20": 30.4,
+      "station": "SHERBROOKE",
+      "stationId": "7028123",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028123&dispBack=0"
+    },
+    "census": {
+      "population2021": 172950,
+      "dwellings2021": 80476,
+      "builtBefore1981Pct": 46.6,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052443027&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station SHERBROOKE (ID climatologique 7028123), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028123&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Sherbrooke (SDR 2443027), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052443027&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "magog": {
+    "climate": {
+      "hdd18": 4709.2,
+      "janMeanC": -10.1,
+      "janMinC": -14.6,
+      "extremeMinC": -38.0,
+      "extremeMinYear": 1993,
+      "annualMeanC": 5.6,
+      "daysBelowMinus20": 18.7,
+      "station": "MAGOG",
+      "stationId": "7024440",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7024440&dispBack=0"
+    },
+    "census": {
+      "population2021": 28312,
+      "dwellings2021": 13439,
+      "builtBefore1981Pct": 44.5,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052445072&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MAGOG (ID climatologique 7024440), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7024440&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Magog (SDR 2445072), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052445072&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "trois-rivieres": {
+    "climate": {
+      "hdd18": 4498.0,
+      "janMeanC": -9.9,
+      "janMinC": -14.1,
+      "extremeMinC": -32.3,
+      "extremeMinYear": 2009,
+      "annualMeanC": 6.2,
+      "daysBelowMinus20": 14.9,
+      "station": "TROIS-RIVIERES",
+      "stationId": "7018562",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7018562&dispBack=0"
+    },
+    "census": {
+      "population2021": 139163,
+      "dwellings2021": 66822,
+      "builtBefore1981Pct": 53.5,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052437067&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station TROIS-RIVIERES (ID climatologique 7018562), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7018562&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Trois-Rivières (SDR 2437067), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052437067&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "shawinigan": {
+    "climate": {
+      "hdd18": 4498.0,
+      "janMeanC": -9.9,
+      "janMinC": -14.1,
+      "extremeMinC": -32.3,
+      "extremeMinYear": 2009,
+      "annualMeanC": 6.2,
+      "daysBelowMinus20": 14.9,
+      "station": "TROIS-RIVIERES",
+      "stationId": "7018562",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7018562&dispBack=0"
+    },
+    "census": {
+      "population2021": 49620,
+      "dwellings2021": 25060,
+      "builtBefore1981Pct": 72.2,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052436033&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station TROIS-RIVIERES (ID climatologique 7018562), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7018562&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Shawinigan (SDR 2436033), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052436033&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saguenay": {
+    "climate": {
+      "hdd18": 5532.0,
+      "janMeanC": -15.1,
+      "janMinC": -20.4,
+      "extremeMinC": -43.3,
+      "extremeMinYear": 1943,
+      "annualMeanC": 3.1,
+      "daysBelowMinus20": 43.1,
+      "station": "BAGOTVILLE",
+      "stationId": "7060400",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7060400&dispBack=0"
+    },
+    "census": {
+      "population2021": 144723,
+      "dwellings2021": 67522,
+      "builtBefore1981Pct": 60.4,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052494068&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station BAGOTVILLE (ID climatologique 7060400), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7060400&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saguenay (SDR 2494068), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052494068&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "jonquiere": {
+    "climate": {
+      "hdd18": 5532.0,
+      "janMeanC": -15.1,
+      "janMinC": -20.4,
+      "extremeMinC": -43.3,
+      "extremeMinYear": 1943,
+      "annualMeanC": 3.1,
+      "daysBelowMinus20": 43.1,
+      "station": "BAGOTVILLE",
+      "stationId": "7060400",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7060400&dispBack=0"
+    },
+    "census": {
+      "population2021": 144723,
+      "dwellings2021": 67522,
+      "builtBefore1981Pct": 60.4,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052494068&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station BAGOTVILLE (ID climatologique 7060400), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7060400&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saguenay (SDR 2494068), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052494068&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "alma": {
+    "climate": {
+      "hdd18": 5716.7,
+      "janMeanC": -16.2,
+      "janMinC": -21.4,
+      "extremeMinC": -40.0,
+      "extremeMinYear": 1977,
+      "annualMeanC": 2.7,
+      "daysBelowMinus20": 48.0,
+      "station": "LAC STE CROIX",
+      "stationId": "7063690",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7063690&dispBack=0"
+    },
+    "census": {
+      "population2021": 30331,
+      "dwellings2021": 13815,
+      "builtBefore1981Pct": 59.6,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052493042&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station LAC STE CROIX (ID climatologique 7063690), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7063690&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Alma (SDR 2493042), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052493042&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "roberval": {
+    "climate": {
+      "hdd18": 5619.2,
+      "janMeanC": -15.7,
+      "janMinC": -20.8,
+      "extremeMinC": -40.0,
+      "extremeMinYear": 2014,
+      "annualMeanC": 2.9,
+      "daysBelowMinus20": 44.5,
+      "station": "ROBERVAL",
+      "stationId": "7066685",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7066685&dispBack=0"
+    },
+    "census": {
+      "population2021": 9840,
+      "dwellings2021": 4520,
+      "builtBefore1981Pct": 62.5,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052491025&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station ROBERVAL (ID climatologique 7066685), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7066685&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Roberval (SDR 2491025), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052491025&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-felicien": {
+    "climate": {
+      "hdd18": 5755.9,
+      "janMeanC": -17.0,
+      "janMinC": -23.1,
+      "extremeMinC": -44.5,
+      "extremeMinYear": 1994,
+      "annualMeanC": 2.5,
+      "daysBelowMinus20": 54.9,
+      "station": "ST PRIME",
+      "stationId": "7067658",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7067658&dispBack=0"
+    },
+    "census": {
+      "population2021": 10089,
+      "dwellings2021": 4686,
+      "builtBefore1981Pct": 56.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052491042&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station ST PRIME (ID climatologique 7067658), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7067658&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saint-Félicien (SDR 2491042), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052491042&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "rimouski": {
+    "climate": {
+      "hdd18": 5074.4,
+      "janMeanC": -11.4,
+      "janMinC": -15.4,
+      "extremeMinC": -33.0,
+      "extremeMinYear": 1984,
+      "annualMeanC": 4.4,
+      "daysBelowMinus20": 13.9,
+      "station": "RIMOUSKI",
+      "stationId": "7056480",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7056480&dispBack=0"
+    },
+    "census": {
+      "population2021": 48935,
+      "dwellings2021": 23470,
+      "builtBefore1981Pct": 54.1,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052410043&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station RIMOUSKI (ID climatologique 7056480), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7056480&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Rimouski (SDR 2410043), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052410043&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "riviere-du-loup": {
+    "climate": {
+      "hdd18": 5236.2,
+      "janMeanC": -11.4,
+      "janMinC": -15.5,
+      "extremeMinC": -31.3,
+      "extremeMinYear": 2009,
+      "annualMeanC": 3.8,
+      "daysBelowMinus20": 17.0,
+      "station": "RIVIERE-DU-LOUP/ST-ANTONIN",
+      "stationId": "7056616",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7056616&dispBack=0"
+    },
+    "census": {
+      "population2021": 20118,
+      "dwellings2021": 9482,
+      "builtBefore1981Pct": 54.1,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052412072&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station RIVIERE-DU-LOUP/ST-ANTONIN (ID climatologique 7056616), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7056616&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Rivière-du-Loup (SDR 2412072), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052412072&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "matane": {
+    "climate": {
+      "hdd18": 5215.6,
+      "janMeanC": -11.3,
+      "janMinC": -15.4,
+      "extremeMinC": -34.7,
+      "extremeMinYear": 2014,
+      "annualMeanC": 3.9,
+      "daysBelowMinus20": 16.2,
+      "station": "MONT-JOLI",
+      "stationId": "7055120",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7055120&dispBack=0"
+    },
+    "census": {
+      "population2021": 13987,
+      "dwellings2021": 6996,
+      "builtBefore1981Pct": 70.6,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052408053&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station MONT-JOLI (ID climatologique 7055120), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7055120&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Matane (SDR 2408053), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052408053&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "gaspe": {
+    "climate": {
+      "hdd18": 5388.8,
+      "janMeanC": -11.1,
+      "janMinC": -16.7,
+      "extremeMinC": -35.5,
+      "extremeMinYear": 1984,
+      "annualMeanC": 3.4,
+      "daysBelowMinus20": 27.3,
+      "station": "GASPE",
+      "stationId": "7052601",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7052601&dispBack=0"
+    },
+    "census": {
+      "population2021": 15063,
+      "dwellings2021": 6780,
+      "builtBefore1981Pct": 62.2,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052403005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station GASPE (ID climatologique 7052601), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7052601&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Gaspé (SDR 2403005), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052403005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "rouyn-noranda": {
+    "climate": {
+      "hdd18": 5656.7,
+      "janMeanC": -15.1,
+      "janMinC": -20.1,
+      "extremeMinC": -40.1,
+      "extremeMinYear": 2014,
+      "annualMeanC": 2.7,
+      "daysBelowMinus20": 43.7,
+      "station": "ROUYN",
+      "stationId": "7086716",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7086716&dispBack=0"
+    },
+    "census": {
+      "population2021": 42313,
+      "dwellings2021": 19282,
+      "builtBefore1981Pct": 61.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052486042&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station ROUYN (ID climatologique 7086716), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7086716&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Rouyn-Noranda (SDR 2486042), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052486042&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "val-dor": {
+    "climate": {
+      "hdd18": 5958.9,
+      "janMeanC": -16.3,
+      "janMinC": -22.2,
+      "extremeMinC": -43.9,
+      "extremeMinYear": 1962,
+      "annualMeanC": 1.9,
+      "daysBelowMinus20": 56.6,
+      "station": "VAL-D'OR",
+      "stationId": "7098600",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7098600&dispBack=0"
+    },
+    "census": {
+      "population2021": 32752,
+      "dwellings2021": 15033,
+      "builtBefore1981Pct": 54.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052489008&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station VAL-D'OR (ID climatologique 7098600), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7098600&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Val-d'Or (SDR 2489008), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052489008&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "amos": {
+    "climate": {
+      "hdd18": 6103.5,
+      "janMeanC": -17.2,
+      "janMinC": -22.8,
+      "extremeMinC": -52.8,
+      "extremeMinYear": 1914,
+      "annualMeanC": 1.5,
+      "daysBelowMinus20": 53.1,
+      "station": "AMOS",
+      "stationId": "7090120",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7090120&dispBack=0"
+    },
+    "census": {
+      "population2021": 12675,
+      "dwellings2021": 5760,
+      "builtBefore1981Pct": 61.4,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052488055&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station AMOS (ID climatologique 7090120), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7090120&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Amos (SDR 2488055), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052488055&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "la-sarre": {
+    "climate": {
+      "hdd18": 5656.7,
+      "janMeanC": -15.1,
+      "janMinC": -20.1,
+      "extremeMinC": -40.1,
+      "extremeMinYear": 2014,
+      "annualMeanC": 2.7,
+      "daysBelowMinus20": 43.7,
+      "station": "ROUYN",
+      "stationId": "7086716",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7086716&dispBack=0"
+    },
+    "census": {
+      "population2021": 7358,
+      "dwellings2021": 3493,
+      "builtBefore1981Pct": 71.2,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052487090&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station ROUYN (ID climatologique 7086716), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7086716&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, La Sarre (SDR 2487090), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052487090&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "sept-iles": {
+    "climate": {
+      "hdd18": 6121.6,
+      "janMeanC": -14.5,
+      "janMinC": -20.1,
+      "extremeMinC": -43.3,
+      "extremeMinYear": 1950,
+      "annualMeanC": 1.2,
+      "daysBelowMinus20": 44.8,
+      "station": "SEPT-ILES",
+      "stationId": "7047910",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7047910&dispBack=0"
+    },
+    "census": {
+      "population2021": 24569,
+      "dwellings2021": 11272,
+      "builtBefore1981Pct": 74.6,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052497007&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station SEPT-ILES (ID climatologique 7047910), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7047910&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Sept-Îles (SDR 2497007), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052497007&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "baie-comeau": {
+    "climate": {
+      "hdd18": 5821.7,
+      "janMeanC": -13.4,
+      "janMinC": -18.8,
+      "extremeMinC": -47.2,
+      "extremeMinYear": 1950,
+      "annualMeanC": 2.1,
+      "daysBelowMinus20": 37.8,
+      "station": "BAIE-COMEAU",
+      "stationId": "7040440",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7040440&dispBack=0"
+    },
+    "census": {
+      "population2021": 20687,
+      "dwellings2021": 9554,
+      "builtBefore1981Pct": 78.6,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052496020&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station BAIE-COMEAU (ID climatologique 7040440), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7040440&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Baie-Comeau (SDR 2496020), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052496020&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "drummondville": {
+    "climate": {
+      "hdd18": 4412.4,
+      "janMeanC": -9.7,
+      "janMinC": -14.2,
+      "extremeMinC": -41.7,
+      "extremeMinYear": 1918,
+      "annualMeanC": 6.7,
+      "daysBelowMinus20": 18.6,
+      "station": "DRUMMONDVILLE",
+      "stationId": "7022160",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7022160&dispBack=0"
+    },
+    "census": {
+      "population2021": 79258,
+      "dwellings2021": 36727,
+      "builtBefore1981Pct": 44.7,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052449058&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station DRUMMONDVILLE (ID climatologique 7022160), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7022160&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Drummondville (SDR 2449058), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052449058&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "victoriaville": {
+    "climate": {
+      "hdd18": 4806.3,
+      "janMeanC": -10.8,
+      "janMinC": -15.7,
+      "extremeMinC": -39.0,
+      "extremeMinYear": 2004,
+      "annualMeanC": 5.3,
+      "daysBelowMinus20": 25.1,
+      "station": "ARTHABASKA",
+      "stationId": "7020305",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7020305&dispBack=0"
+    },
+    "census": {
+      "population2021": 47760,
+      "dwellings2021": 21864,
+      "builtBefore1981Pct": 48.2,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052439062&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station ARTHABASKA (ID climatologique 7020305), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7020305&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Victoriaville (SDR 2439062), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052439062&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "granby": {
+    "climate": {
+      "hdd18": 4384.3,
+      "janMeanC": -9.1,
+      "janMinC": -13.4,
+      "extremeMinC": -37.0,
+      "extremeMinYear": 1981,
+      "annualMeanC": 6.6,
+      "daysBelowMinus20": 13.7,
+      "station": "GRANBY",
+      "stationId": "7022800",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7022800&dispBack=0"
+    },
+    "census": {
+      "population2021": 69025,
+      "dwellings2021": 31850,
+      "builtBefore1981Pct": 46.1,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052447017&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station GRANBY (ID climatologique 7022800), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7022800&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Granby (SDR 2447017), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052447017&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-hyacinthe": {
+    "climate": {
+      "hdd18": 4478.8,
+      "janMeanC": -10.4,
+      "janMinC": -15.2,
+      "extremeMinC": -41.0,
+      "extremeMinYear": 1994,
+      "annualMeanC": 6.4,
+      "daysBelowMinus20": 20.9,
+      "station": "ST HYACINTHE 2",
+      "stationId": "7027361",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027361&dispBack=0"
+    },
+    "census": {
+      "population2021": 57239,
+      "dwellings2021": 26870,
+      "builtBefore1981Pct": 55.7,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052454048&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station ST HYACINTHE 2 (ID climatologique 7027361), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027361&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saint-Hyacinthe (SDR 2454048), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052454048&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-jean-sur-richelieu": {
+    "climate": {
+      "hdd18": 4304.4,
+      "janMeanC": -9.0,
+      "janMinC": -13.6,
+      "extremeMinC": -32.5,
+      "extremeMinYear": 2009,
+      "annualMeanC": 6.8,
+      "daysBelowMinus20": 15.4,
+      "station": "L'ACADIE",
+      "stationId": "702LED4",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=702LED4&dispBack=0"
+    },
+    "census": {
+      "population2021": 97873,
+      "dwellings2021": 42913,
+      "builtBefore1981Pct": 46.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052456083&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station L'ACADIE (ID climatologique 702LED4), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=702LED4&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saint-Jean-sur-Richelieu (SDR 2456083), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052456083&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "sorel-tracy": {
+    "climate": {
+      "hdd18": 4502.2,
+      "janMeanC": -10.7,
+      "janMinC": -15.5,
+      "extremeMinC": -41.0,
+      "extremeMinYear": 1981,
+      "annualMeanC": 6.3,
+      "daysBelowMinus20": 19.2,
+      "station": "SOREL",
+      "stationId": "7028200",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028200&dispBack=0"
+    },
+    "census": {
+      "population2021": 35165,
+      "dwellings2021": 17069,
+      "builtBefore1981Pct": 66.7,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052453052&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station SOREL (ID climatologique 7028200), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028200&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Sorel-Tracy (SDR 2453052), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052453052&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "chateauguay": {
+    "climate": {
+      "hdd18": 4281.2,
+      "janMeanC": -9.2,
+      "janMinC": -13.5,
+      "extremeMinC": -37.8,
+      "extremeMinYear": 1957,
+      "annualMeanC": 7.0,
+      "daysBelowMinus20": 12.0,
+      "station": "MONTREAL TRUDEAU (AIRPORT)",
+      "stationId": "7025250",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+    },
+    "census": {
+      "population2021": 50815,
+      "dwellings2021": 19917,
+      "builtBefore1981Pct": 55.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052467050&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station MONTREAL TRUDEAU (AIRPORT) (ID climatologique 7025250), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Châteauguay (SDR 2467050), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052467050&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "salaberry-de-valleyfield": {
+    "climate": {
+      "hdd18": 4359.2,
+      "janMeanC": -9.6,
+      "janMinC": -13.8,
+      "extremeMinC": -38.3,
+      "extremeMinYear": 1957,
+      "annualMeanC": 6.8,
+      "daysBelowMinus20": 13.8,
+      "station": "VALLEYFIELD",
+      "stationId": "7028680",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028680&dispBack=0"
+    },
+    "census": {
+      "population2021": 42787,
+      "dwellings2021": 20073,
+      "builtBefore1981Pct": 61.5,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052470052&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station VALLEYFIELD (ID climatologique 7028680), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028680&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Salaberry-de-Valleyfield (SDR 2470052), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052470052&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "vaudreuil-dorion": {
+    "climate": {
+      "hdd18": 4281.2,
+      "janMeanC": -9.2,
+      "janMinC": -13.5,
+      "extremeMinC": -37.8,
+      "extremeMinYear": 1957,
+      "annualMeanC": 7.0,
+      "daysBelowMinus20": 12.0,
+      "station": "MONTREAL TRUDEAU (AIRPORT)",
+      "stationId": "7025250",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+    },
+    "census": {
+      "population2021": 43268,
+      "dwellings2021": 16713,
+      "builtBefore1981Pct": 26.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052471083&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station MONTREAL TRUDEAU (AIRPORT) (ID climatologique 7025250), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7025250&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Vaudreuil-Dorion (SDR 2471083), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052471083&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "repentigny": {
+    "climate": {
+      "hdd18": 4591.7,
+      "janMeanC": -10.9,
+      "janMinC": -16.0,
+      "extremeMinC": -43.3,
+      "extremeMinYear": 1957,
+      "annualMeanC": 6.0,
+      "daysBelowMinus20": 24.3,
+      "station": "L'ASSOMPTION",
+      "stationId": "7014160",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7014160&dispBack=0"
+    },
+    "census": {
+      "population2021": 86100,
+      "dwellings2021": 34174,
+      "builtBefore1981Pct": 37.7,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052460013&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station L'ASSOMPTION (ID climatologique 7014160), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7014160&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Repentigny (SDR 2460013), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052460013&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "terrebonne": {
+    "climate": {
+      "hdd18": 4591.7,
+      "janMeanC": -10.9,
+      "janMinC": -16.0,
+      "extremeMinC": -43.3,
+      "extremeMinYear": 1957,
+      "annualMeanC": 6.0,
+      "daysBelowMinus20": 24.3,
+      "station": "L'ASSOMPTION",
+      "stationId": "7014160",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7014160&dispBack=0"
+    },
+    "census": {
+      "population2021": 119944,
+      "dwellings2021": 45247,
+      "builtBefore1981Pct": 26.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052464008&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station L'ASSOMPTION (ID climatologique 7014160), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7014160&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Terrebonne (SDR 2464008), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052464008&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "mascouche": {
+    "climate": {
+      "hdd18": 4591.7,
+      "janMeanC": -10.9,
+      "janMinC": -16.0,
+      "extremeMinC": -43.3,
+      "extremeMinYear": 1957,
+      "annualMeanC": 6.0,
+      "daysBelowMinus20": 24.3,
+      "station": "L'ASSOMPTION",
+      "stationId": "7014160",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7014160&dispBack=0"
+    },
+    "census": {
+      "population2021": 51183,
+      "dwellings2021": 19981,
+      "builtBefore1981Pct": 28.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052464015&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station L'ASSOMPTION (ID climatologique 7014160), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7014160&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Mascouche (SDR 2464015), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052464015&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "joliette": {
+    "climate": {
+      "hdd18": 4615.8,
+      "janMeanC": -11.6,
+      "janMinC": -16.3,
+      "extremeMinC": -36.7,
+      "extremeMinYear": 1981,
+      "annualMeanC": 6.0,
+      "daysBelowMinus20": 21.2,
+      "station": "JOLIETTE VILLE",
+      "stationId": "7013362",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7013362&dispBack=0"
+    },
+    "census": {
+      "population2021": 21384,
+      "dwellings2021": 10568,
+      "builtBefore1981Pct": 55.6,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052461025&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station JOLIETTE VILLE (ID climatologique 7013362), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7013362&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Joliette (SDR 2461025), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052461025&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "blainville": {
+    "climate": {
+      "hdd18": 4601.3,
+      "janMeanC": -10.9,
+      "janMinC": -15.9,
+      "extremeMinC": -41.1,
+      "extremeMinYear": 1971,
+      "annualMeanC": 5.9,
+      "daysBelowMinus20": 22.7,
+      "station": "STE THERESE OUEST",
+      "stationId": "7017755",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7017755&dispBack=0"
+    },
+    "census": {
+      "population2021": 59819,
+      "dwellings2021": 22424,
+      "builtBefore1981Pct": 18.8,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052473015&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station STE THERESE OUEST (ID climatologique 7017755), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7017755&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Blainville (SDR 2473015), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052473015&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "boisbriand": {
+    "climate": {
+      "hdd18": 4601.3,
+      "janMeanC": -10.9,
+      "janMinC": -15.9,
+      "extremeMinC": -41.1,
+      "extremeMinYear": 1971,
+      "annualMeanC": 5.9,
+      "daysBelowMinus20": 22.7,
+      "station": "STE THERESE OUEST",
+      "stationId": "7017755",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7017755&dispBack=0"
+    },
+    "census": {
+      "population2021": 28308,
+      "dwellings2021": 11425,
+      "builtBefore1981Pct": 35.6,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052473005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station STE THERESE OUEST (ID climatologique 7017755), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7017755&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Boisbriand (SDR 2473005), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052473005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-eustache": {
+    "climate": {
+      "hdd18": 4601.3,
+      "janMeanC": -10.9,
+      "janMinC": -15.9,
+      "extremeMinC": -41.1,
+      "extremeMinYear": 1971,
+      "annualMeanC": 5.9,
+      "daysBelowMinus20": 22.7,
+      "station": "STE THERESE OUEST",
+      "stationId": "7017755",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7017755&dispBack=0"
+    },
+    "census": {
+      "population2021": 45276,
+      "dwellings2021": 18958,
+      "builtBefore1981Pct": 48.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052472005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station STE THERESE OUEST (ID climatologique 7017755), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7017755&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saint-Eustache (SDR 2472005), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052472005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "mirabel": {
+    "climate": {
+      "hdd18": 4784.8,
+      "janMeanC": -11.5,
+      "janMinC": -16.5,
+      "extremeMinC": -37.0,
+      "extremeMinYear": 1981,
+      "annualMeanC": 5.3,
+      "daysBelowMinus20": 25.3,
+      "station": "MONTREAL/MIRABEL INT'L A",
+      "stationId": "7035290",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7035290&dispBack=0"
+    },
+    "census": {
+      "population2021": 61108,
+      "dwellings2021": 24795,
+      "builtBefore1981Pct": 16.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052474005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MONTREAL/MIRABEL INT'L A (ID climatologique 7035290), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7035290&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Mirabel (SDR 2474005), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052474005&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-jerome": {
+    "climate": {
+      "hdd18": 4761.9,
+      "janMeanC": -11.4,
+      "janMinC": -16.4,
+      "extremeMinC": -41.7,
+      "extremeMinYear": 1957,
+      "annualMeanC": 5.5,
+      "daysBelowMinus20": 23.8,
+      "station": "ST JEROME",
+      "stationId": "7037400",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7037400&dispBack=0"
+    },
+    "census": {
+      "population2021": 80213,
+      "dwellings2021": 37371,
+      "builtBefore1981Pct": 37.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052475017&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station ST JEROME (ID climatologique 7037400), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7037400&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saint-Jérôme (SDR 2475017), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052475017&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "mont-laurier": {
+    "climate": {
+      "hdd18": 5239.2,
+      "janMeanC": -13.3,
+      "janMinC": -19.0,
+      "extremeMinC": -45.0,
+      "extremeMinYear": 1982,
+      "annualMeanC": 4.1,
+      "daysBelowMinus20": 38.5,
+      "station": "MONT LAURIER",
+      "stationId": "7035160",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7035160&dispBack=0"
+    },
+    "census": {
+      "population2021": 14180,
+      "dwellings2021": 6698,
+      "builtBefore1981Pct": 56.1,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052479088&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MONT LAURIER (ID climatologique 7035160), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7035160&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Mont-Laurier (SDR 2479088), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052479088&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-augustin": {
+    "climate": {
+      "hdd18": 4977.2,
+      "janMeanC": -11.9,
+      "janMinC": -16.7,
+      "extremeMinC": -36.7,
+      "extremeMinYear": 2015,
+      "annualMeanC": 4.7,
+      "daysBelowMinus20": 26.5,
+      "station": "QUEBEC JEAN LESAGE (AIRPORT)",
+      "stationId": "7016294",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7016294&dispBack=0"
+    },
+    "census": {
+      "population2021": 19907,
+      "dwellings2021": 8143,
+      "builtBefore1981Pct": 27.1,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052423072&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station QUEBEC JEAN LESAGE (AIRPORT) (ID climatologique 7016294), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7016294&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saint-Augustin-de-Desmaures (SDR 2423072), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052423072&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "baie-saint-paul": {
+    "climate": {
+      "hdd18": 5184.4,
+      "janMeanC": -12.4,
+      "janMinC": -17.9,
+      "extremeMinC": -36.0,
+      "extremeMinYear": 1981,
+      "annualMeanC": 4.0,
+      "daysBelowMinus20": 29.4,
+      "station": "BAIE ST PAUL",
+      "stationId": "7040446",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7040446&dispBack=0"
+    },
+    "census": {
+      "population2021": 7371,
+      "dwellings2021": 3427,
+      "builtBefore1981Pct": 55.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052416013&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station BAIE ST PAUL (ID climatologique 7040446), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7040446&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Baie-Saint-Paul (SDR 2416013), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052416013&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "saint-georges": {
+    "climate": {
+      "hdd18": 4936.6,
+      "janMeanC": -11.4,
+      "janMinC": -16.7,
+      "extremeMinC": -41.7,
+      "extremeMinYear": 1967,
+      "annualMeanC": 4.9,
+      "daysBelowMinus20": 30.5,
+      "station": "ST GEORGES",
+      "stationId": "7027283",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027283&dispBack=0"
+    },
+    "census": {
+      "population2021": 32935,
+      "dwellings2021": 15415,
+      "builtBefore1981Pct": 39.7,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052429073&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station ST GEORGES (ID climatologique 7027283), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7027283&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Saint-Georges (SDR 2429073), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052429073&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "thetford-mines": {
+    "climate": {
+      "hdd18": 5080.5,
+      "janMeanC": -11.5,
+      "janMinC": -16.1,
+      "extremeMinC": -36.0,
+      "extremeMinYear": 1981,
+      "annualMeanC": 4.3,
+      "daysBelowMinus20": 24.7,
+      "station": "THETFORD MINES",
+      "stationId": "7028441",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028441&dispBack=0"
+    },
+    "census": {
+      "population2021": 26072,
+      "dwellings2021": 12216,
+      "builtBefore1981Pct": 77.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052431084&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station THETFORD MINES (ID climatologique 7028441), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7028441&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Thetford Mines (SDR 2431084), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052431084&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "montmagny": {
+    "climate": {
+      "hdd18": 5043.9,
+      "janMeanC": -11.8,
+      "janMinC": -16.6,
+      "extremeMinC": -37.0,
+      "extremeMinYear": 1981,
+      "annualMeanC": 4.5,
+      "daysBelowMinus20": 22.9,
+      "station": "MONTMAGNY",
+      "stationId": "7055210",
+      "normalsPeriod": "1981-2010",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7055210&dispBack=0"
+    },
+    "census": {
+      "population2021": 10999,
+      "dwellings2021": 5464,
+      "builtBefore1981Pct": 68.0,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052418050&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1981-2010, station MONTMAGNY (ID climatologique 7055210), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1981_2010_f.html?searchType=stnProv&lstProvince=QC&climate_id=7055210&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Montmagny (SDR 2418050), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052418050&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  },
+  "chibougamau": {
+    "climate": {
+      "hdd18": 6477.3,
+      "janMeanC": -18.5,
+      "janMinC": -24.1,
+      "extremeMinC": -43.3,
+      "extremeMinYear": 1965,
+      "annualMeanC": 0.4,
+      "daysBelowMinus20": 65.3,
+      "station": "CHAPAIS",
+      "stationId": "7091299",
+      "normalsPeriod": "1991-2020",
+      "sourceUrl": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7091299&dispBack=0"
+    },
+    "census": {
+      "population2021": 7233,
+      "dwellings2021": 3190,
+      "builtBefore1981Pct": 69.3,
+      "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052499025&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    "sources": [
+      {
+        "label": "Normales climatiques canadiennes 1991-2020, station CHAPAIS (ID climatologique 7091299), Environnement et Changement climatique Canada",
+        "url": "https://climat.meteo.gc.ca/climate_normals/results_1991_2020_f.html?searchType=stnProv&lstProvince=QC&climate_id=7091299&dispBack=0"
+      },
+      {
+        "label": "Profil du recensement, Recensement de la population de 2021, Chibougamau (SDR 2499025), Statistique Canada",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=F&DGUIDlist=2021A00052499025&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+      }
+    ]
+  }
+}
