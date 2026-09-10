@@ -92,7 +92,7 @@ export const FAQ_ITEMS = [
     questions: [
       {
         q: "Combien coûte une installation complète de thermopompe ?",
-        a: "Nous ne publions pas de prix : avec plus de 3 500 appareils admissibles dont les prix changent avec les stocks et la saison, un tableau serait vite faux, et le coût installé dépend d'abord de votre maison (distance entre les unités, panneau électrique, conduits, accès). Chaque projet reçoit plutôt un prix écrit, remis par un installateur partenaire licencié RBQ après évaluation, cas par cas, subvention LogisVert incluse. C'est gratuit et sans engagement."
+        a: "Nous publions des fourchettes installées par type, calibre et gamme de marque, tirées des prix publiés au Québec (Protégez-Vous, guides, installateurs) : chaque fiche affiche celle de sa catégorie, avant et après LogisVert. Nous ne publions pas de prix par machine, parce qu'il n'existe pas avant la visite : le coût installé dépend d'abord de votre maison (distance entre les unités, panneau électrique, conduits, accès). Chaque projet reçoit un prix écrit, remis par un installateur partenaire licencié RBQ après évaluation, cas par cas, subvention LogisVert incluse. C'est gratuit et sans engagement."
       },
       {
         q: "Combien d'argent vais-je économiser sur ma facture d'Hydro-Québec ?",

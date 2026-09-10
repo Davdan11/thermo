@@ -68,4 +68,4 @@ LogisVert ne change pas l'économie annuelle, mais il change le temps de retour.
 
 ## Comment obtenir votre chiffre, pas celui d'un exemple
 
-Le questionnaire ThermoMatch applique ce calcul à votre maison : superficie, année de construction, isolation, système actuel et région. Il retient trois machines dont le COP certifié à -15 °C convient à votre climat, avec le montant LogisVert officiel de chacune. Le prix installé, lui, vient d'un installateur licencié RBQ qui a vu la maison : c'est le seul chiffre que nous ne publions pas, parce qu'il n'existe pas avant la visite.
+Le questionnaire ThermoMatch applique ce calcul à votre maison : superficie, année de construction, isolation, système actuel et région. Il retient trois machines dont le COP certifié à -15 °C convient à votre climat, avec le montant LogisVert officiel de chacune. Le prix installé exact, lui, vient d'un installateur licencié RBQ qui a vu la maison ; chaque fiche donne l'ordre de grandeur publié au Québec pour son type, son calibre et sa gamme.

@@ -1,7 +1,7 @@
 /* ==================================================================
    « Prix : notre approche » — contenu partagé par /prix et /prix/[slug].
 
-   Le site ne publie aucun prix : des dizaines de milliers d'appareils admissibles,
+   Le site publie des fourchettes par type et calibre, pas de prix par machine : des dizaines de milliers d'appareils admissibles,
    des prix qui bougent avec les stocks et la saison, et un coût installé
    qui dépend d'abord de la maison. On documente ce qui fait varier le
    prix, ce qu'une soumission complète doit contenir, et comment un
@@ -16,8 +16,8 @@ const nbAppareils = () => getEligibleModelCount().toLocaleString("fr-CA");
 
 export const PRIX_FAQ: Array<{ q: string; a: string }> = [
   {
-    q: "Pourquoi n'affichez-vous pas de prix?",
-    a: `Parce qu'un prix installé dépend de votre maison autant que de la machine : distance entre les unités, panneau électrique, conduits, accès. Avec plus de ${nbAppareils()} appareils admissibles dont les prix changent selon les stocks et la saison, un tableau publié serait faux quelques semaines plus tard. Nous préférons un prix écrit, remis après évaluation.`,
+    q: "Pourquoi des fourchettes plutôt qu'un prix par machine?",
+    a: `Parce qu'un prix installé dépend de votre maison autant que de la machine : distance entre les unités, panneau électrique, conduits, accès. Avec plus de ${nbAppareils()} appareils admissibles dont les prix changent selon les stocks et la saison, un prix par modèle serait faux quelques semaines plus tard. Nous publions donc les fourchettes que le marché québécois documente, par type, calibre et gamme, avec leurs sources et leur date, et un prix écrit remis après évaluation.`,
   },
   {
     q: "Comment obtenir un prix pour ma maison?",
@@ -78,7 +78,7 @@ export function PrixApproche({ keyword = "une thermopompe" }: { keyword?: string
           distributeurs : un tableau de prix pour {keyword} serait faux quelques semaines après sa publication.
         </p>
         <p style={{ fontSize: 17, lineHeight: 1.7, color: "#3d4a53", margin: "0 0 14px" }}>
-          Surtout, le prix installé dépend de votre maison au moins autant que de la machine. C&apos;est pourquoi nous ne publions aucun prix :
+          Surtout, le prix installé dépend de votre maison au moins autant que de la machine. C&apos;est pourquoi nous publions des fourchettes par type et par calibre, jamais un prix par machine :
           chaque projet reçoit un prix écrit, remis par un installateur partenaire licencié après évaluation, cas par cas.
         </p>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: "#536873", margin: 0 }}>

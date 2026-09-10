@@ -1,6 +1,8 @@
 "use client";
 
 import { brandLogoPath } from "@/lib/data/brand-logos";
+import { brandTier } from "@/lib/thermomatch/tiers";
+import { installedPriceRange, money as moneyRange } from "@/lib/prices/grille-installee";
 
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
@@ -335,6 +337,16 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
         { label: "Certifié climat froid", getter: (p) => (p.detail.isColdClimate ? "Oui, certifié" : "Non"), num: (p) => (p.detail.isColdClimate ? 1 : 0) },
         { label: "Temp. min. d'opération", getter: (p) => { const t = p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC; return t != null ? `${t} °C` : "—"; }, num: (p) => p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC ?? null, higherIsBetter: false },
         { label: "Réfrigérant", getter: (p) => p.detail.outdoorUnit?.refrigerant ?? "—" },
+      ],
+    },
+    {
+      title: "Prix installé, ordre de grandeur",
+      specs: [
+        {
+          label: "Fourchette publiée",
+          getter: (p) => { const r = installedPriceRange({ systemType: p.detail.model.systemType, nominalBtu: p.detail.model.nominalCapacityBtu, zones: p.detail.model.zones, brandTier: brandTier(p.detail.brand.name) }); return r ? `${moneyRange(r.min)} – ${moneyRange(r.max)}` : "—"; },
+          note: (p) => { const r = installedPriceRange({ systemType: p.detail.model.systemType, nominalBtu: p.detail.model.nominalCapacityBtu, zones: p.detail.model.zones, brandTier: brandTier(p.detail.brand.name) }); return r ? `${r.matchLabel}, ${r.tierLabel}, avant LogisVert${r.basis === "publie" ? ` · ${r.sources} source${r.sources > 1 ? "s" : ""}` : " · valeur dérivée"}` : null; },
+        },
       ],
     },
     {

@@ -9,6 +9,7 @@ import { getSeoModel, indexSlug } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
+import { PriceSection } from "@/components/product/PriceSection";
 import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
 import {
   ProductHeader,
@@ -334,6 +335,8 @@ export default async function ProductPage({
 
             {/* LogisVert subsidy */}
             <LogisVertBadge detail={detail} />
+
+            <PriceSection detail={detail} logisVertDollars={seoModel?.logisVertDollars ?? 0} />
 
             {/* Good choice */}
             <GoodChoiceSection detail={detail} seo={seoModel} />

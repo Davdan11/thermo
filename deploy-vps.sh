@@ -25,7 +25,7 @@ mv "$SRC" "$REL"
 ln -sfn "$ROOT/shared/.env" "$REL/.env"
 # Pas de lien vers shared/data dans la release : Turbopack refuse un lien qui sort du projet.
 # Le journal des leads est dirigé vers shared/data par LEAD_JOURNAL_DIR dans shared/.env.
-rm -rf "$REL/data"
+rm -rf "$REL/data/leads"
 grep -q "^LEAD_JOURNAL_DIR=" "$ROOT/shared/.env" || echo "LEAD_JOURNAL_DIR=$ROOT/shared/data/leads" >> "$ROOT/shared/.env"
 cd "$REL"
 

@@ -36,7 +36,7 @@ puis `deploy-vps.sh` le transforme en release, construit, bascule `current` et r
 version sert les visiteurs pendant tout le build (≈ 30 min : plusieurs milliers de pages).
 
 ```bash
-tar czf - --exclude=./node_modules --exclude=./.next --exclude=./data --exclude='.env*' --exclude=.git --exclude=.claude .   | ssh root@31.97.98.22 'R=/var/www/thermopompesavendre.ca; rm -rf $R/incoming && mkdir -p $R/incoming && cd $R/incoming && tar xzf -'
+tar czf - --exclude=./node_modules --exclude=./.next --exclude=./data/leads --exclude='.env*' --exclude=.git --exclude=.claude .   | ssh root@31.97.98.22 'R=/var/www/thermopompesavendre.ca; rm -rf $R/incoming && mkdir -p $R/incoming && cd $R/incoming && tar xzf -'
 ssh root@31.97.98.22 'nohup /var/www/thermopompesavendre.ca/incoming/deploy-vps.sh > /var/www/thermopompesavendre.ca/deploy.log 2>&1 < /dev/null & disown'
 ```
 

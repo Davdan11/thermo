@@ -29,7 +29,7 @@ Une murale « meilleure » au Québec n'est pas la plus vendue ni la moins chèr
 2. **consomme le moins pour la fournir** : c'est le COP à -15 °C, de 1,3 à 2,89 sur les 1 090 machines certifiées de notre base ;
 3. **reste efficace sur toute la saison** : c'est le HSPF2, de 7,8 à 16,2 avec une médiane à 9,5.
 
-Le prix installé n'entre pas dans le classement : il dépend de votre maison et de l'installateur, et nous ne le publions pas avant qu'un professionnel licencié ait vu les lieux.
+Le prix installé n'entre pas dans le classement : il dépend de votre maison et de l'installateur. Chaque fiche affiche l'ordre de grandeur publié au Québec pour son calibre et sa gamme ; le prix exact vient d'une soumission.
 
 ## Les marques qui dominent, critère par critère
 

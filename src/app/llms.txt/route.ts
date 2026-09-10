@@ -40,7 +40,7 @@ export async function GET() {
     `- ThermoMatch : ${SITE_URL}/trouver-ma-thermopompe — 13 questions, trois machines réellement différentes, score transparent sur 100 (méthode : ${SITE_URL}/technologie-thermomatch).`,
     `- Demande de soumission gratuite, sans engagement : ${SITE_URL}/soumission — rappel sous un jour ouvrable, un seul installateur partenaire licencié RBQ par dossier.`,
     `- Comment ça marche, gratuité, coordonnées jamais vendues : ${SITE_URL}/comment-ca-marche et ${SITE_URL}/faq`,
-    `- Pourquoi aucun prix n'est affiché : ${SITE_URL}/prix`,
+    `- Prix installés au Québec par type, calibre et gamme (fourchettes publiées, méthode) : ${SITE_URL}/prix`,
     "",
     "## Pages principales",
     `- Accueil : ${SITE_URL}/`,
