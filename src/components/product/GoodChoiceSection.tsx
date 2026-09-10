@@ -119,7 +119,7 @@ export function GoodChoiceSection({ detail, seo }: Props) {
 
       <dl style={{ margin: 0, padding: "8px 28px", display: "grid", gridTemplateColumns: "1fr", rowGap: 0 }}>
         {rows.map((r, i) => (
-          <div key={r.label} style={{ display: "grid", gridTemplateColumns: "minmax(140px, 180px) 1fr", gap: 16, padding: "16px 0", borderBottom: i < rows.length - 1 ? "1px solid #f0ebe4" : "none" }}>
+          <div key={r.label} className="grid grid-cols-1 sm:grid-cols-[minmax(140px,180px)_1fr] gap-1 sm:gap-4" style={{ padding: "16px 0", borderBottom: i < rows.length - 1 ? "1px solid #f0ebe4" : "none" }}>
             <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873", paddingTop: 2 }}>{r.label}</dt>
             <dd style={{ margin: 0 }}>
               <p style={{ margin: 0, fontSize: 17, fontWeight: 700, color: "#071d2b", letterSpacing: "-0.01em" }}>{r.value}</p>
@@ -129,7 +129,7 @@ export function GoodChoiceSection({ detail, seo }: Props) {
         ))}
       </dl>
 
-      <div style={{ borderTop: "1px solid #e4ddd5", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2" style={{ borderTop: "1px solid #e4ddd5" }}>
         <div style={{ padding: "22px 28px" }}>
           <p style={{ margin: "0 0 10px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1b6b3a" }}>Convient si</p>
           <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
@@ -141,7 +141,7 @@ export function GoodChoiceSection({ detail, seo }: Props) {
             ))}
           </ul>
         </div>
-        <div style={{ padding: "22px 28px", borderLeft: "1px solid #e4ddd5" }}>
+        <div className="border-t sm:border-t-0 sm:border-l border-[#e4ddd5]" style={{ padding: "22px 28px" }}>
           <p style={{ margin: "0 0 10px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8a5a00" }}>Moins indiqué si</p>
           <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
             {cons.length ? cons.map((c) => (
