@@ -80,6 +80,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
         eyebrow={city.region}
         title={`Thermopompe à ${city.name}`}
         intro={`Subvention LogisVert, modèles certifiés grand froid et installation par un partenaire licencié pour ${city.name} et ses environs. Toutes les marques comparées avec les données officielles d'Hydro-Québec, sans parti pris.`}
+        answer={`À ${city.name} (${city.region}), la température de conception est de ${city.designTempC} °C : choisissez une thermopompe selon sa capacité certifiée à -15 °C, pas sa capacité nominale. ${coldCount.toLocaleString("fr-CA")} modèles certifiés grand froid sont vendus au Québec, avec une subvention LogisVert jusqu'à ${maxLv.toLocaleString("fr-CA")} $ selon l'appariement. Un installateur licencié RBQ de la région remet le prix écrit, gratuitement.`}
         breadcrumbs={[
           { label: "Thermopompe par ville", href: "/thermopompe" },
           { label: city.name, href: `/thermopompe/${city.slug}` },

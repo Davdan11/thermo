@@ -66,6 +66,7 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
         eyebrow="Subvention Hydro-Québec"
         title={`Subvention LogisVert ${b.name}`}
         intro={`Montants officiels de la liste LogisVert d'Hydro-Québec pour chaque thermopompe ${b.name} admissible, par appariement certifié AHRI. Mise à jour automatique${updated ? `, liste du ${updated}` : ""}.`}
+        answer={`Selon la liste LogisVert d'Hydro-Québec${updated ? ` du ${updated}` : ""}, ${subsidised.length} thermopompes ${b.name} sont admissibles, pour un montant de ${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $ selon l'appariement exact entre l'unité extérieure et l'unité intérieure (référence AHRI). ${b.coldClimateCount} de ces machines sont certifiées grand froid.`}
         breadcrumbs={[
           { label: "Subventions", href: "/subventions" },
           { label: "LogisVert par marque", href: "/subventions/logisvert" },

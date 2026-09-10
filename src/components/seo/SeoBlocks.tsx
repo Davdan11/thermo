@@ -47,12 +47,15 @@ export function SeoHero({
   intro,
   breadcrumbs,
   stats,
+  answer,
 }: {
   eyebrow?: string;
   title: string;
   intro: string;
   breadcrumbs: BreadcrumbItem[];
   stats?: Array<{ label: string; value: string }>;
+  /** Réponse directe en 40-60 mots, en tête de page : ce qu'un lecteur pressé ou un moteur de réponse doit retenir. */
+  answer?: string;
 }) {
   return (
     <>
@@ -64,6 +67,12 @@ export function SeoHero({
         {eyebrow && <p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-[#e54b17]">{eyebrow}</p>}
         <h1 className="mt-3 text-[34px] sm:text-[52px] font-black leading-[1.05] tracking-tight max-w-4xl">{title}</h1>
         <p className="mt-5 text-lg text-white/70 max-w-3xl leading-relaxed">{intro}</p>
+        {answer && (
+          <div className="mt-6 max-w-3xl rounded-xl border border-[#e54b17]/40 bg-white/5 px-5 py-4" role="note" aria-label="En bref">
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#e54b17]">En bref</p>
+            <p className="mt-1.5 text-[15px] leading-relaxed text-white/90">{answer}</p>
+          </div>
+        )}
         <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
           <Link href="/trouver-ma-thermopompe" className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-[#e54b17] hover:bg-[#d44315] px-6 font-bold text-[15px] text-white transition-colors">
             Trouver ma thermopompe en 2 min

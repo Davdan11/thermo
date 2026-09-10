@@ -83,6 +83,7 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
         eyebrow={b.name}
         title={`${k.plural} ${b.name}`}
         intro={`Tous les modèles ${k.label}s ${b.name} vendus au Québec (${k.intro}), avec leurs données certifiées ENERGY STAR et le montant LogisVert officiel d'Hydro-Québec.`}
+        answer={`${b.name} vend ${models.length} ${k.label}s au Québec, soit ${canonical.length} machines distinctes, dont ${certified.length} avec une capacité certifiée à -15 °C publiée${maxLv > 0 ? ` et une subvention LogisVert jusqu'à ${maxLv.toLocaleString("fr-CA")} $` : ""}. Le bon calibre dépend de la charge de chauffage de votre maison, que ThermoMatch calcule en 13 questions.`}
         breadcrumbs={[
           { label: "Marques", href: "/marques" },
           { label: b.name, href: `/marques/${slug}` },

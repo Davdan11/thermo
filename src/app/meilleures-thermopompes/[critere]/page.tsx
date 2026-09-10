@@ -62,6 +62,7 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
         eyebrow="Classement sur données certifiées"
         title={r.def.h1}
         intro={r.def.description}
+        answer={`${r.models.length} machines vendues au Québec, classées sur ${r.def.metricLabel.toLowerCase()} d'après les données d'Hydro-Québec et d'ENERGY STAR${updated ? ` (liste du ${updated})` : ""}.${r.models[0] ? ` En tête : ${r.models[0].brand} ${r.models[0].name}, ${r.def.value(r.models[0])}.` : ""} Un classement compare une seule donnée ; la bonne machine dépend aussi de votre maison, que ThermoMatch prend en compte.`}
         breadcrumbs={[
           { label: "Meilleures thermopompes", href: "/meilleures-thermopompes" },
           { label: r.def.h1, href: `/meilleures-thermopompes/${critere}` },

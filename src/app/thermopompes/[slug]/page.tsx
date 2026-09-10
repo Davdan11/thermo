@@ -237,6 +237,7 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
         eyebrow="Par capacité"
         title={`Thermopompe ${cap.label}`}
         intro={`${cap.models.length} machines distinctes de ${brands.length} marques, avec leur capacité certifiée à -15 °C, leur efficacité et leur subvention LogisVert. Pour une maison standard de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi².`}
+        answer={`${cap.models.length} thermopompes ${cap.label} de ${brands.length} marques sont vendues au Québec : ${walls.length} murales et ${centrals.length} centrales. ${h5Values.length ? `Leur capacité certifiée à -15 °C va de ${h5Min.toLocaleString("fr-CA")} à ${h5Max.toLocaleString("fr-CA")} BTU/h` : "La capacité certifiée à -15 °C n'est pas publiée pour toutes"}${cap.maxLogisVert > 0 ? `, avec une subvention LogisVert jusqu'à ${cap.maxLogisVert.toLocaleString("fr-CA")} $` : ""}. Convient en général à une maison de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi², selon l'isolation.`}
         breadcrumbs={[
           { label: "Thermopompes", href: "/thermopompes" },
           { label: `Thermopompe ${cap.label}`, href: `/thermopompes/${cap.slug}` },
