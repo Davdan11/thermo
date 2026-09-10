@@ -11,7 +11,8 @@
    Usage: node scripts/scrape-logisvert.mjs
    ================================================================== */
 
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, existsSync } from "fs";
+import { createHash } from "crypto";
 import { gunzipSync } from "zlib";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
@@ -47,6 +48,16 @@ async function main() {
   if (!csvRes.ok) throw new Error(`Failed to download CSV: ${csvRes.status}`);
   
   const gzBuffer = Buffer.from(await csvRes.arrayBuffer());
+  const sourceSha256 = createHash("sha256").update(gzBuffer).digest("hex");
+  const metaPathEarly = join(__dirname, "../src/lib/subsidies/logisvert-metadata.json");
+  // Mode --check (robot quotidien) : compare l'empreinte du fichier HQ avec celle de la liste en place.
+  // Sortie 0 = inchangée, 3 = nouvelle liste à intégrer.
+  if (process.argv.includes("--check")) {
+    const prev = existsSync(metaPathEarly) ? JSON.parse(readFileSync(metaPathEarly, "utf8")) : {};
+    const same = prev.sourceSha256 === sourceSha256;
+    console.log(same ? `   Liste inchangée (${sourceSha256.slice(0, 12)}…)` : `   Nouvelle liste : ${sourceSha256.slice(0, 12)}… (en place : ${(prev.sourceSha256 ?? "aucune").slice(0, 12)})`);
+    process.exit(same ? 0 : 3);
+  }
   const csvText = gunzipSync(gzBuffer).toString("utf8");
   const lines = csvText.split("\n").filter(l => l.trim());
   console.log(`   Total lines: ${lines.length - 1}`);
@@ -222,6 +233,8 @@ async function main() {
   writeFileSync(metaPath, JSON.stringify({
     updatedAt: now,
     sourceFile: latestCsv,
+    sourceUrl: csvUrl,
+    sourceSha256,
     count: Object.keys(result).length
   }, null, 2));
   
