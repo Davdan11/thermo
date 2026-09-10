@@ -632,7 +632,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
 
         {/* ---- Qualitative Comparison rows ---- */}
         {filteredRows.map((row) => (
-          <>
+          <React.Fragment key={row.id}>
             {/* Row label */}
             <div key={`${row.id}-label`} style={{
               padding: "14px 16px",
@@ -659,7 +659,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                 </span>
               </div>
             ))}
-          </>
+          </React.Fragment>
         ))}
       </div>
       </div>{/* end scroll wrapper */}
