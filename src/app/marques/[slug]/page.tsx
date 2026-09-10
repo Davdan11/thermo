@@ -6,6 +6,7 @@ import { brandLogoPath } from "@/lib/data/brand-logos";
 import { ProductCard } from "@/components/product/ProductCard";
 import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { registry } from "@/lib/data/registry";
+import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
 
 /* ── Static generation for all active Quebec brands ── */
 
@@ -327,13 +328,21 @@ export default async function BrandPage({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {models.map((product) => (
+          {models.slice(0, 48).map((product) => (
             <ProductCard
               key={product.model.id}
               product={product}
             />
           ))}
         </div>
+        {models.length > 48 && (
+          <p className="mt-8 text-center text-[15px] text-[#536873]">
+            {models.length - 48} autres modèles {brand.name} sont au catalogue.{" "}
+            <Link href={`/thermopompes?brand=${brand.slug}`} className="font-semibold text-[var(--color-accent)] underline">
+              Voir tous les modèles {brand.name}
+            </Link>
+          </p>
+        )}
         
         <div className="mt-8 text-center sm:hidden">
           <Link
@@ -344,6 +353,11 @@ export default async function BrandPage({
           </Link>
         </div>
       </section>
+      <TrustStrip />
+      <CtaThermoMatch
+        title={`Quelle thermopompe ${brand.name} pour votre maison ?`}
+        text={`ThermoMatch compare les modèles ${brand.name} certifiés par Hydro-Québec avec ceux des autres marques, selon votre superficie, votre isolation et votre zone climatique. Trois machines adaptées, sans parti pris.`}
+      />
     </main>
   );
 }

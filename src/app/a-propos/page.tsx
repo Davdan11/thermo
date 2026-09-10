@@ -188,7 +188,7 @@ export default function AProposPage() {
                 margin: 0,
               }}
             >
-              Comprendre<br />avant d&apos;acheter.
+              Comprendre{" "}<br />avant d&apos;acheter.
             </h2>
           </div>
 
@@ -758,7 +758,7 @@ export default function AProposPage() {
               {item.icon}
               <span
                 style={{
-                  color: "rgba(245,241,234,0.38)",
+                  color: "rgba(245,241,234,0.72)",
                   fontSize: "13px",
                   fontWeight: 500,
                   letterSpacing: "0.01em",

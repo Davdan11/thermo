@@ -64,6 +64,16 @@ export function SeoHero({
         {eyebrow && <p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-[#e54b17]">{eyebrow}</p>}
         <h1 className="mt-3 text-[34px] sm:text-[52px] font-black leading-[1.05] tracking-tight max-w-4xl">{title}</h1>
         <p className="mt-5 text-lg text-white/70 max-w-3xl leading-relaxed">{intro}</p>
+        <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+          <Link href="/trouver-ma-thermopompe" className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-[#e54b17] hover:bg-[#d44315] px-6 font-bold text-[15px] text-white transition-colors">
+            Trouver ma thermopompe en 2 min
+          </Link>
+          <a href="tel:4389003224" className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-white/25 px-5 font-semibold text-[15px] text-white hover:bg-white/10 transition-colors">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>
+            438-900-3224
+          </a>
+          <span className="text-[13px] text-white/60">Gratuit, sans engagement. Un installateur licencié RBQ vous rappelle.</span>
+        </div>
         {stats && stats.length > 0 && (
           <dl className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((s) => (
@@ -176,17 +186,6 @@ export function FaqBlock({ items, title = "Questions fréquentes" }: { items: Fa
   );
 }
 
-/** Barre d'appel à l'action fixée en bas sur mobile ; le contenu garde un dégagement (scroll-padding-bottom) pour ne jamais masquer le focus clavier. */
-export function MobileStickyCta() {
-  return (
-    <div className="md:hidden fixed inset-x-0 bottom-0 z-40 border-t border-[#e4ddd5] bg-white/95 backdrop-blur px-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))]">
-      <Link href="/trouver-ma-thermopompe" className="flex min-h-[48px] items-center justify-center rounded-xl bg-[#e54b17] hover:bg-[#d44315] text-white font-bold text-[15px] transition-colors">
-        Trouver ma thermopompe en 2 min
-      </Link>
-    </div>
-  );
-}
-
 export function CtaThermoMatch({
   title = "Trouvez la bonne thermopompe en 2 minutes",
   text = "Répondez à 13 questions sur votre maison. ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
@@ -197,8 +196,7 @@ export function CtaThermoMatch({
   compact?: boolean;
 }) {
   return (
-    <section className={`mx-auto max-w-6xl px-5 sm:px-8 ${compact ? "py-8" : "py-14"} pb-24 md:pb-14`}>
-      <MobileStickyCta />
+    <section className={`mx-auto max-w-6xl px-5 sm:px-8 ${compact ? "py-8" : "py-14"}`}>
       <div className="rounded-2xl bg-[#0C1821] text-white p-8 sm:p-10 flex flex-col md:flex-row md:items-center gap-6">
         <div className="flex-1">
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight">{title}</h2>

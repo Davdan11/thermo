@@ -160,7 +160,7 @@ export function HeroThermoMatchBar() {
           <div key={item.label} style={{ display: "flex", alignItems: "center" }}>
             {i > 0 && <span style={{ color: "rgba(255,255,255,0.25)", margin: "0 14px", fontSize: 6 }}>{"\u25CF"}</span>}
             {item.icon}
-            <span style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, fontWeight: 500, marginLeft: 6 }}>{item.label}</span>
+            <span style={{ color: "rgba(255,255,255,0.72)", fontSize: 12, fontWeight: 500, marginLeft: 6 }}>{item.label}</span>
           </div>
         ))}
       </div>

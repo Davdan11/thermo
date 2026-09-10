@@ -1,7 +1,7 @@
 /* ==================================================================
    « Prix : notre approche » — contenu partagé par /prix et /prix/[slug].
 
-   Le site ne publie aucun prix : plus de 3 500 appareils admissibles,
+   Le site ne publie aucun prix : des dizaines de milliers d'appareils admissibles,
    des prix qui bougent avec les stocks et la saison, et un coût installé
    qui dépend d'abord de la maison. On documente ce qui fait varier le
    prix, ce qu'une soumission complète doit contenir, et comment un
@@ -10,11 +10,14 @@
 
 import Link from "next/link";
 import { SITE_URL } from "@/lib/seo";
+import { getEligibleModelCount } from "@/lib/data/queries/stats";
+
+const nbAppareils = () => getEligibleModelCount().toLocaleString("fr-CA");
 
 export const PRIX_FAQ: Array<{ q: string; a: string }> = [
   {
     q: "Pourquoi n'affichez-vous pas de prix?",
-    a: "Parce qu'un prix installé dépend de votre maison autant que de la machine : distance entre les unités, panneau électrique, conduits, accès. Avec plus de 3 500 appareils admissibles dont les prix changent selon les stocks et la saison, un tableau publié serait faux quelques semaines plus tard. Nous préférons un prix écrit, remis après évaluation.",
+    a: `Parce qu'un prix installé dépend de votre maison autant que de la machine : distance entre les unités, panneau électrique, conduits, accès. Avec plus de ${nbAppareils()} appareils admissibles dont les prix changent selon les stocks et la saison, un tableau publié serait faux quelques semaines plus tard. Nous préférons un prix écrit, remis après évaluation.`,
   },
   {
     q: "Comment obtenir un prix pour ma maison?",
@@ -71,7 +74,7 @@ export function PrixApproche({ keyword = "une thermopompe" }: { keyword?: string
       <section style={{ marginBottom: 48 }}>
         <h2 style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-0.01em", margin: "0 0 16px" }}>Pourquoi nous n&apos;affichons pas de prix</h2>
         <p style={{ fontSize: 17, lineHeight: 1.7, color: "#3d4a53", margin: "0 0 14px" }}>
-          Plus de 3 500 appareils sont admissibles à LogisVert. Leurs prix bougent avec les stocks, la saison et les promotions des
+          Plus de {nbAppareils()} appareils sont admissibles à LogisVert. Leurs prix bougent avec les stocks, la saison et les promotions des
           distributeurs : un tableau de prix pour {keyword} serait faux quelques semaines après sa publication.
         </p>
         <p style={{ fontSize: 17, lineHeight: 1.7, color: "#3d4a53", margin: "0 0 14px" }}>

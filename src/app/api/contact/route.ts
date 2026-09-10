@@ -12,6 +12,8 @@ const schema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis.").max(80),
   lastName: z.string().trim().max(80).optional().or(z.literal("")),
   email: z.string().trim().email("Courriel invalide.").max(160),
+  phone: z.string().trim().max(30).optional().or(z.literal("")).refine((v) => !v || v.replace(/\D/g, "").length >= 10, "Téléphone invalide."),
+  consent: z.literal(true, { message: "Votre autorisation est requise pour traiter votre message." }),
   subject: z.string().trim().max(60).optional().or(z.literal("")),
   message: z.string().trim().min(10, "Écrivez-nous quelques mots.").max(4000),
   website: z.string().max(0).optional().or(z.literal("")),
@@ -33,7 +35,9 @@ export async function POST(req: Request) {
     lines: [
       ["Nom", `${d.firstName} ${d.lastName ?? ""}`.trim()],
       ["Courriel", d.email],
+      ["Téléphone", d.phone || "—"],
       ["Sujet", d.subject || "—"],
+      ["Consentement (Loi 25)", `oui, ${new Date().toISOString()}`],
       ["Message", d.message],
     ],
   });

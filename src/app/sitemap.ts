@@ -23,7 +23,7 @@ import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { PRODUCTS_PER_SITEMAP, sitemapIds } from "@/lib/seo/sitemaps";
 
 const DATA_DATE = ((logisVertMetadata as { updatedAt?: string }).updatedAt ?? "2026-09-01").slice(0, 10);
-const CONTENT_DATE = "2026-09-08";
+const CONTENT_DATE = new Date().toISOString().slice(0, 10); // date du build : le contenu est régénéré à chaque déploiement
 
 const entry = (path: string, lastModified: string, changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"], priority: number): MetadataRoute.Sitemap[number] => ({
   url: `${SITE_URL}${path}`,

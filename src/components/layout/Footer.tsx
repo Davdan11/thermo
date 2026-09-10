@@ -108,17 +108,17 @@ export function Footer() {
             </Link>
 
             {/* Description */}
-            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 13, lineHeight: 1.65, margin: "0 0 10px" }}>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.65, margin: "0 0 10px" }}>
               La plateforme de comparaison de thermopompes la plus fiable au Québec.
             </p>
-            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 13, lineHeight: 1.65, margin: "0 0 24px" }}>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.65, margin: "0 0 24px" }}>
               Trouvez la bonne thermopompe.<br />Au bon calibre. Pour votre maison.
             </p>
 
             {/* Phone */}
             <a
               href="tel:4389003224"
-              style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, fontWeight: 500, textDecoration: "none", letterSpacing: "0.04em" }}
+              style={{ color: "#fff", fontSize: 16, fontWeight: 700, textDecoration: "none", letterSpacing: "0.04em" }}
             >
               438-900-3224
             </a>

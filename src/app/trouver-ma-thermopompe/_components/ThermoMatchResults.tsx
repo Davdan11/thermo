@@ -46,7 +46,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button onClick={onRetry} className="bg-white text-[#0b1b24] px-6 py-3 rounded-md font-bold">Refaire le test</button>
-          <Link href="/soumission" className="bg-[#e54b17] text-white px-6 py-3 rounded-md font-bold">Parler a un conseiller</Link>
+          <Link href="/soumission" className="bg-[#e54b17] text-white px-6 py-3 rounded-md font-bold">Parler à un conseiller</Link>
         </div>
       </div>
     );

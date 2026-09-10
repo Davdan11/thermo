@@ -7,7 +7,7 @@
    ================================================================== */
 
 import Link from "next/link";
-import { capacitySlug, getSeoModel, getSeoModels } from "@/lib/seo/programmatic";
+import { capacitySlug, getSeoModel, getSeoModels, CAPACITY_CLASSES } from "@/lib/seo/programmatic";
 
 export function ProductSeoLinks({ slug }: { slug: string }) {
   const m = getSeoModel(slug);
@@ -62,7 +62,9 @@ export function ProductSeoLinks({ slug }: { slug: string }) {
       )}
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-        <Link href={`/thermopompes/${capacitySlug(m.nominalBtu)}`} style={pill}>Toutes les thermopompes {m.nominalBtu.toLocaleString("fr-CA")} BTU</Link>
+        {(CAPACITY_CLASSES as readonly number[]).includes(m.nominalBtu) && (
+          <Link href={`/thermopompes/${capacitySlug(m.nominalBtu)}`} style={pill}>Toutes les thermopompes {m.nominalBtu.toLocaleString("fr-CA")} BTU</Link>
+        )}
         <Link href={`/marques/${m.brandSlug}/${typeSlug}`} style={pill}>{m.kind === "murale" ? "Murales" : "Centrales"} {m.brand}</Link>
         {m.logisVertDollars > 0 && <Link href={`/subventions/logisvert/${m.brandSlug}`} style={pill}>Subvention LogisVert {m.brand}</Link>}
         {m.coldClimate && <Link href="/meilleures-thermopompes/grand-froid" style={pill}>Classement grand froid</Link>}

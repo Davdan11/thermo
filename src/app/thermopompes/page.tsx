@@ -15,6 +15,7 @@ import { CompareSelection } from "@/components/product/CompareSelection";
 import { CatalogueEmpty } from "@/components/product/CatalogueEmpty";
 import { CataloguePagination } from "@/components/product/CataloguePagination";
 import { buttonVariants } from "@/components/ui/button";
+import { CtaThermoMatch } from "@/components/seo/SeoBlocks";
 
 /* ------------------------------------------------------------------
    Metadata
@@ -295,6 +296,10 @@ export default async function ThermopompesPage({
           </div>
         )}
       </div>
+      <CtaThermoMatch
+        title="Trop de modèles ? Laissez ThermoMatch trier pour vous."
+        text="Répondez à 13 questions sur votre maison. ThermoMatch retient trois machines vraiment adaptées parmi toutes les marques certifiées par Hydro-Québec, sans parti pris."
+      />
     </main>
   );
 }

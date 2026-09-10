@@ -35,6 +35,21 @@ const RULES = [
   ["panasonic", /^CU-XZ(9|12|15|18|24)AKUAC/, (k) => `/images/products/panasonic-climapure-xz-${k}k.webp`, "/images/products/official/panasonic-climapure-xz-exterieure-officielle.webp"],
   ["mainline", /^ML(09|12|18|24)HP230NEX-O/, (k) => `/images/products/mainline-nexus-${k}k.webp`, "/images/products/official/mainline-nexus-officiel.webp"],
   ["mainline", /^ML(09|12|18|24)HP230NEXH-O/, (k) => `/images/products/mainline-nexus-ultra-${k}k.webp`, "/images/products/official/mainline-nexus-ultra-officiel.webp"],
+  // Moovair série M 2025 (brochure officielle) : Morelis = MSHHA, Meridian = MSHMA, Mistral = MSHEA.
+  ["moovair", /^MSHHA(12|18)C2AN/, (k) => `/images/products/moovair-morelis-${k}k.webp`, "/images/products/official/moovair-morelis-exterieure-officielle.webp"],
+  ["moovair", /^MSHMA(09|12|15|18|24|33)C2AN/, (k) => ({ 9: "/images/products/moovair-meridian-9k.webp", 12: "/images/products/moovair-meridian-12k.webp", 18: "/images/products/moovair-meridian-18k.webp", 24: "/images/products/moovair-meridian-24k.webp" }[k] ?? null), "/images/products/official/moovair-meridian-exterieure-officielle.webp"],
+  ["moovair", /^MSHEA(09|12|15|18|24)C2AN/, (k) => ({ 9: "/images/products/moovair-mistral-9k.webp", 12: "/images/products/moovair-mistral-12k.webp" }[k] ?? null), "/images/products/official/moovair-mistral-exterieure-officielle.webp"],
+  // Fujitsu Airstage XLTH (LZAH1) : photo par capacité + photo de famille.
+  ["fujitsu", /^AOUG(09|12|15|18|24)LZAH1/, (k) => `/images/products/fujitsu-xlth-${k}k.webp`, "/images/products/official/fujitsu-xlth-lzah1-officiel.webp"],
+  // Daikin FIT 17 SEER (DZ17VSA) : même famille que la photo FIT ; 18/24/36k par capacité.
+  ["daikin", /^DZ17VSA(18|24|30|36|42|48)/, (k) => ({ 18: "/images/products/daikin-fit-aurora-18k.webp", 24: "/images/products/daikin-fit-aurora-24k.webp", 36: "/images/products/daikin-fit-aurora-36k.webp" }[k] ?? null), "/images/products/official/daikin-fit-aurora-officiel.webp"],
+  // Midea EVOX G3 (gainable, DLC?RBH) : photo officielle + 36k/48k par capacité.
+  ["midea", /^DLC[SE]RBH(18|24|30|36|48|60)/, (k) => ({ 36: "/images/products/midea-evox-36k.webp", 48: "/images/products/midea-evox-48k.webp" }[k] ?? null), "/images/products/official/midea-evox-g3-officiel.webp"],
+  // LG Standard : la règle couvre aussi la révision HSV4.
+  ["lg", /^LSU(090|120)HSV4/, (k) => ({ 9: "/images/products/lg-standard-9k.webp", 12: "/images/products/lg-standard-12k.webp" }[k] ?? null), null],
+  // Photos extraites des brochures officielles (revues visuellement) : famille complète.
+  ["rheem", /^RP17/, null, "/images/products/brochures/rheem/rheem-rp17-exterieure.webp"],
+  ["gree", /^MUL(18|24|30|36|42|48|60)HP230V1R32/, null, "/images/products/brochures/gree/gree-multi-r32-60-exterieure.webp"],
 ];
 
 const capK = (m) => Math.round((m.nominalCapacityBtu ?? 0) / 1000);

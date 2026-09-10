@@ -113,7 +113,11 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
           { href: `/marques/${slug}`, label: `Toute la gamme ${b.name}` },
           ...(hasOther ? [{ href: `/marques/${slug}/${otherType}`, label: `${KINDS[otherType].plural} ${b.name}` }] : []),
           ...(b.maxLogisVert > 0 ? [{ href: `/subventions/logisvert/${slug}`, label: `Subvention LogisVert ${b.name}`, hint: `jusqu'à ${b.maxLogisVert.toLocaleString("fr-CA")} $` }] : []),
-          ...b.sharedWith.slice(0, 3).map((s) => ({ href: `/marques/${s.brandSlug}/${type}`, label: `${k.plural} ${s.brand}`, hint: `${s.count} machines en commun avec ${b.name}` })),
+          // Seulement les partenaires qui ont réellement des machines de ce type (sinon la page n'existe pas).
+          ...b.sharedWith
+            .filter((s) => { const p = getBrandStats(s.brandSlug); return p ? (type === "murales" ? p.wallCount : p.centralCount) > 0 : false; })
+            .slice(0, 3)
+            .map((s) => ({ href: `/marques/${s.brandSlug}/${type}`, label: `${k.plural} ${s.brand}`, hint: `${s.count} machines en commun avec ${b.name}` })),
         ]}
       />
       <FaqBlock items={faq} />

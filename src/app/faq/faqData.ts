@@ -1,5 +1,42 @@
 export const FAQ_ITEMS = [
   {
+    category: "Service, délais et confiance",
+    questions: [
+      {
+        q: "Est-ce que le service est gratuit ?",
+        a: "Oui. ThermoMatch, le comparateur, les fiches et la demande de soumission sont gratuits et sans engagement. Nous sommes rémunérés sur l'installation réalisée par un installateur partenaire, jamais en vendant vos coordonnées."
+      },
+      {
+        q: "Que se passe-t-il après ma demande ?",
+        a: "Vous recevez un appel de validation sous un jour ouvrable. Nous confirmons votre projet, puis nous transmettons votre dossier à un seul installateur partenaire licencié RBQ de votre région. Il visite votre maison, mesure, et vous remet une soumission écrite : équipement, installation, électricité, garantie et subvention LogisVert, noir sur blanc."
+      },
+      {
+        q: "Combien d'installateurs vont m'appeler ?",
+        a: "Un seul. Nous ne sommes pas une place de marché qui vend votre nom à cinq entreprises. Votre dossier va à un installateur partenaire, choisi selon votre région et le type de système. Vous restez libre de refuser sa proposition, sans frais ni relance."
+      },
+      {
+        q: "Allez-vous vendre ou partager mes coordonnées ?",
+        a: "Non. Vos renseignements servent uniquement à traiter votre demande et à la confier à l'installateur partenaire. Nous ne les vendons pas, nous ne les louons pas et vous pouvez demander leur suppression en tout temps, conformément à la Loi 25. Le consentement marketing est une case distincte et facultative."
+      },
+      {
+        q: "Qui installe la thermopompe ?",
+        a: "Un entrepreneur titulaire d'une licence RBQ valide, dans votre région. C'est lui qui signe le contrat d'installation, qui réalise les travaux et qui garantit la main-d'œuvre. Nous vérifions la licence avant de confier un dossier."
+      },
+      {
+        q: "Combien de temps faut-il avant l'installation ?",
+        a: "En général, de une à trois semaines après l'acceptation de la soumission, selon la saison et la disponibilité de l'appareil. Au printemps et à la fin de l'été, les délais s'allongent : c'est le moment de demander sa soumission tôt. La visite d'évaluation, elle, se fait habituellement dans la semaine qui suit votre demande."
+      },
+      {
+        q: "Puis-je financer l'achat et l'installation ?",
+        a: "Souvent, oui. Plusieurs installateurs partenaires offrent des options de financement, et la subvention LogisVert d'Hydro-Québec réduit le montant à financer. Indiquez votre intérêt dans ThermoMatch ou dans votre demande : l'installateur présente les options disponibles avec sa soumission écrite. Nous ne sommes pas un prêteur et ne touchons aucune commission sur le financement."
+      },
+      {
+        q: "D'où viennent les chiffres affichés sur le site ?",
+        a: "De la liste officielle des appareils admissibles à LogisVert publiée par Hydro-Québec, enrichie des données ENERGY STAR : capacité à -15 °C, COP, SEER2, HSPF2. Rien n'est saisi à la main. Une valeur inconnue est affichée comme telle plutôt qu'inventée, et chaque fiche indique ses sources et leur date de consultation."
+      }
+    ]
+  },
+  {
     category: "Général & Fonctionnement",
     questions: [
       {

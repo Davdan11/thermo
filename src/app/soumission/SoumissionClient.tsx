@@ -18,18 +18,29 @@ const ORANGE = "#e54b17";
 const NAVY = "#0b1b24";
 const CREAM = "#f7f5f0";
 
-/* Project summary rows — editable inline */
-const DEFAULT_PROJECT = {
-  ville: "Longueuil",
-  typeBatiment: "Maison unifamiliale",
-  typeThermopompe: "Thermopompe centrale",
-  superficie: "1 500 à 1 999 pi²",
-  emplacement: "Unité intérieure au sous-sol",
-  echeancier: "Dans les 30 prochains jours",
-  modele: "Modèle à déterminer avec vous",
+/* Lignes du récapitulatif, modifiables en place. Vides tant que le visiteur n'a rien dit :
+   on n'affiche jamais un projet inventé à la place du sien. */
+const EMPTY_PROJECT = {
+  ville: "",
+  typeBatiment: "",
+  typeThermopompe: "",
+  superficie: "",
+  emplacement: "",
+  echeancier: "",
+  modele: "",
 };
 
-type ProjectKey = keyof typeof DEFAULT_PROJECT;
+type ProjectKey = keyof typeof EMPTY_PROJECT;
+
+const ROW_HINTS: Record<ProjectKey, string> = {
+  ville: "Ex. : Laval, Longueuil, Sherbrooke",
+  typeBatiment: "Ex. : maison unifamiliale, jumelé, condo, plex",
+  typeThermopompe: "Ex. : murale, multizone, centrale, je ne sais pas",
+  superficie: "Ex. : 1 500 pi²",
+  emplacement: "Ex. : salon, sous-sol, à déterminer",
+  echeancier: "Ex. : dans les 30 jours, ce printemps, je m'informe",
+  modele: "Ex. : Daikin Aurora 12k, ou « à déterminer avec vous »",
+};
 
 const ROW_LABELS: Record<ProjectKey, string> = {
   ville: "Ville",
@@ -56,7 +67,8 @@ const darkInput: React.CSSProperties = {
 };
 
 export default function SoumissionPage() {
-  const [project, setProject] = useState(DEFAULT_PROJECT);
+  const [project, setProject] = useState(EMPTY_PROJECT);
+  const [hasDraft, setHasDraft] = useState(false);
   const [draftNotes, setDraftNotes] = useState("");
   const [editing, setEditing] = useState<ProjectKey | null>(null);
   const [editVal, setEditVal] = useState("");
@@ -83,22 +95,23 @@ export default function SoumissionPage() {
   useEffect(() => {
     const draft = loadProjectDraft();
     if (draft) {
+      setHasDraft(true);
       const cityInfo = draft.location?.designTempC 
         ? `${draft.location.city ?? draft.location.postalCode} (Zone ${draft.location.designTempC}°C)` 
-        : (draft.location.city ?? draft.location.postalCode ?? DEFAULT_PROJECT.ville);
+        : (draft.location.city ?? draft.location.postalCode ?? "");
 
       setProject({
         ville: cityInfo,
-        typeBatiment: draft.property?.type ?? DEFAULT_PROJECT.typeBatiment,
-        typeThermopompe: draft.desiredSystem?.systemType ?? DEFAULT_PROJECT.typeThermopompe,
-        superficie: draft.property?.approximateArea ?? DEFAULT_PROJECT.superficie,
-        emplacement: DEFAULT_PROJECT.emplacement,
-        echeancier: draft.timeline ?? DEFAULT_PROJECT.echeancier,
+        typeBatiment: draft.property?.type ?? "",
+        typeThermopompe: draft.desiredSystem?.systemType ?? "",
+        superficie: draft.property?.approximateArea ?? "",
+        emplacement: "",
+        echeancier: draft.timeline ?? "",
         modele: draft.desiredSystem?.selectedBrandName 
           ? `${draft.desiredSystem.selectedBrandName} (ID: ${draft.desiredSystem.selectedModelId})`
           : draft.location?.designTempC 
             ? `Modèle compatible avec zone ${draft.location.designTempC}°C minimum` 
-            : DEFAULT_PROJECT.modele,
+            : "",
       });
 
       const sum = getProjectSummary(draft).map(i => `${i.label}: ${i.value}`).join(" | ");
@@ -131,7 +144,12 @@ export default function SoumissionPage() {
     setEditing(null);
   }
 
-  const canSubmit = contact.prenom && (contact.telephone || contact.courriel) && consent1;
+  const missing = [
+    !contact.prenom && "votre prénom",
+    !(contact.telephone || contact.courriel) && "un téléphone ou un courriel",
+    !consent1 && "votre autorisation à vous contacter",
+  ].filter(Boolean) as string[];
+  const canSubmit = missing.length === 0;
 
   async function submit() {
     if (!canSubmit) return;
@@ -304,11 +322,20 @@ export default function SoumissionPage() {
         {/* ── LEFT: Project summary ── */}
         <div>
           <h1 style={{ fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: NAVY, lineHeight: 1.15, margin: "0 0 16px", letterSpacing: "-0.02em" }}>
-            Votre projet est prêt<br />à être évalué.
+            {hasDraft ? <>Votre projet est prêt<br />à être évalué.</> : <>Dites-nous où et quoi.<br />On s&apos;occupe du reste.</>}
           </h1>
-          <p style={{ color: "#536873", fontSize: 15, lineHeight: 1.6, margin: "0 0 40px", maxWidth: 420 }}>
-            Vérifiez les renseignements ci-dessous, puis indiquez comment nous pouvons vous joindre.
+          <p style={{ color: "#536873", fontSize: 15, lineHeight: 1.6, margin: "0 0 40px", maxWidth: 440 }}>
+            {hasDraft
+              ? "Vérifiez les renseignements ci-dessous, puis indiquez comment nous pouvons vous joindre."
+              : "Précisez ce que vous savez déjà, même partiellement. Un installateur licencié RBQ de votre région vous rappelle sous un jour ouvrable, gratuitement et sans engagement."}
           </p>
+          {!hasDraft && (
+            <p style={{ margin: "-24px 0 32px", fontSize: 14 }}>
+              <Link href="/trouver-ma-thermopompe" style={{ color: ORANGE, fontWeight: 700, textDecoration: "none" }}>
+                Ou répondez à 13 questions et laissez ThermoMatch remplir ceci pour vous →
+              </Link>
+            </p>
+          )}
 
           {/* Summary table */}
           <div>
@@ -321,21 +348,27 @@ export default function SoumissionPage() {
                   {editing === key ? (
                     <input
                       autoFocus
+                      aria-label={ROW_LABELS[key]}
+                      placeholder={ROW_HINTS[key]}
                       value={editVal}
                       onChange={(e) => setEditVal(e.target.value)}
                       onBlur={() => saveEdit(key)}
                       onKeyDown={(e) => e.key === "Enter" && saveEdit(key)}
-                      style={{ fontSize: 13, fontWeight: isBold ? 700 : 400, color: NAVY, border: `1px solid ${ORANGE}`, borderRadius: 4, padding: "4px 8px", outline: "none", fontFamily: "inherit" }}
+                      style={{ fontSize: 13, fontWeight: isBold ? 700 : 400, color: NAVY, border: `1px solid ${ORANGE}`, borderRadius: 4, padding: "6px 8px", outline: "none", fontFamily: "inherit", minHeight: 36 }}
                     />
-                  ) : (
+                  ) : project[key] ? (
                     <span style={{ fontSize: 13, fontWeight: isBold ? 700 : 400, color: NAVY }}>{project[key]}</span>
+                  ) : (
+                    <span style={{ fontSize: 13, color: "#7d8a91", fontStyle: "italic" }}>Non précisé</span>
                   )}
 
                   <button
+                    type="button"
                     onClick={() => startEdit(key)}
-                    style={{ background: "none", border: "none", cursor: "pointer", color: ORANGE, fontSize: 13, fontWeight: 600, display: "flex", alignItems: "center", gap: 3, padding: 0, whiteSpace: "nowrap" }}
+                    aria-label={`${project[key] ? "Modifier" : "Ajouter"} : ${ROW_LABELS[key]}`}
+                    style={{ background: "none", border: "none", cursor: "pointer", color: ORANGE, fontSize: 13, fontWeight: 600, display: "flex", alignItems: "center", gap: 3, padding: "6px 0", minHeight: 36, whiteSpace: "nowrap" }}
                   >
-                    Modifier <span style={{ fontSize: 15 }}>›</span>
+                    {project[key] ? "Modifier" : "Ajouter"} <span style={{ fontSize: 15 }}>›</span>
                   </button>
                 </div>
               );
@@ -344,14 +377,24 @@ export default function SoumissionPage() {
         </div>
 
         {/* ── RIGHT: Contact card (dark navy) ── */}
-        <div style={{ backgroundColor: NAVY, borderRadius: 14, padding: "32px 28px", color: "#fff" }}>
-          <h2 style={{ fontSize: 18, fontWeight: 800, color: "#fff", margin: "0 0 24px", lineHeight: 1.3 }}>
+        <form
+          onSubmit={(e) => { e.preventDefault(); submit(); }}
+          noValidate
+          aria-labelledby="contact-title"
+          style={{ backgroundColor: NAVY, borderRadius: 14, padding: "32px 28px", color: "#fff", position: "relative" }}
+        >
+          <h2 id="contact-title" style={{ fontSize: 18, fontWeight: 800, color: "#fff", margin: "0 0 24px", lineHeight: 1.3 }}>
             Comment pouvons-nous<br />vous joindre?
           </h2>
 
           {/* Prénom */}
           <div style={{ marginBottom: 12 }}>
+            <label htmlFor="lead-prenom" className="sr-only">Prénom</label>
             <input
+              id="lead-prenom"
+              name="given-name"
+              autoComplete="given-name"
+              required
               value={contact.prenom}
               onChange={(e) => setContact((c) => ({ ...c, prenom: e.target.value }))}
               placeholder="Prénom"
@@ -366,8 +409,13 @@ export default function SoumissionPage() {
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
               </svg>
             </span>
+            <label htmlFor="lead-tel" className="sr-only">Téléphone</label>
             <input
+              id="lead-tel"
               type="tel"
+              name="tel"
+              autoComplete="tel"
+              inputMode="tel"
               value={contact.telephone}
               onChange={(e) => setContact((c) => ({ ...c, telephone: e.target.value }))}
               placeholder="Téléphone"
@@ -377,8 +425,13 @@ export default function SoumissionPage() {
 
           {/* Courriel */}
           <div style={{ marginBottom: 20 }}>
+            <label htmlFor="lead-email" className="sr-only">Courriel</label>
             <input
+              id="lead-email"
               type="email"
+              name="email"
+              autoComplete="email"
+              inputMode="email"
               value={contact.courriel}
               onChange={(e) => setContact((c) => ({ ...c, courriel: e.target.value }))}
               placeholder="Courriel"
@@ -465,12 +518,13 @@ export default function SoumissionPage() {
             </span>
           </label>
 
-          {error && <p style={{ color: "#fca5a5", fontSize: 12, marginBottom: 12 }}>{error}</p>}
+          {error && <p role="alert" style={{ color: "#fca5a5", fontSize: 13, marginBottom: 12 }}>{error}</p>}
 
           {/* CTA */}
           <button
-            onClick={submit}
+            type="submit"
             disabled={!canSubmit || loading}
+            aria-describedby={canSubmit ? undefined : "lead-missing"}
             style={{
               width: "100%", padding: "16px", backgroundColor: canSubmit ? ORANGE : "rgba(229,75,23,0.35)",
               color: "#fff", border: "none", borderRadius: 8, fontSize: 15, fontWeight: 800,
@@ -479,20 +533,25 @@ export default function SoumissionPage() {
           >
             {loading ? "Envoi en cours..." : <>Envoyer ma demande <span style={{ fontSize: 18 }}>→</span></>}
           </button>
+          {!canSubmit && !loading && (
+            <p id="lead-missing" style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", margin: "10px 0 0", lineHeight: 1.5 }}>
+              Il manque {missing.join(", ")}.
+            </p>
+          )}
 
           {/* Trust note */}
           <div style={{ display: "flex", alignItems: "flex-start", gap: 8, marginTop: 16 }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}>
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
-            <p style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", margin: 0, lineHeight: 1.5 }}>
-              Nous analyserons votre projet avant de confirmer le prix et les détails de l&apos;installation.
+            <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", margin: 0, lineHeight: 1.5 }}>
+              Gratuit et sans engagement. Vos coordonnées vont à un seul installateur partenaire licencié RBQ, jamais à des listes de revente. Rappel sous un jour ouvrable.
             </p>
           </div>
-          <Link href="/confidentialite" style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 12, color: "rgba(255,255,255,0.35)", marginTop: 10, textDecoration: "none" }}>
+          <Link href="/confidentialite" style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 12, color: "rgba(255,255,255,0.7)", marginTop: 10, textDecoration: "none" }}>
             Confidentialité <span>→</span>
           </Link>
-        </div>
+        </form>
       </div>
 
       {/* ── BOTTOM: 3-step process strip ── */}

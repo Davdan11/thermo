@@ -8,6 +8,7 @@ import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
 import { getSeoModel } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
+import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
 import {
   ProductHeader,
   KeySpecs,
@@ -29,8 +30,10 @@ import {
 /* ── Static generation ── */
 
 export async function generateStaticParams() {
+  // Une fiche n'existe que pour une marque vendue au Québec : les autres n'ont ni page marque,
+  // ni place au catalogue, ni lien entrant — les générer ne servirait qu'à créer des pages orphelines.
   return registry.models
-    .filter((m) => m.status === "published")
+    .filter((m) => m.status === "published" && registry.brandById.get(m.brandId)?.activeInQuebec)
     .map((m) => ({ slug: m.slug }));
 }
 
@@ -55,7 +58,7 @@ export async function generateMetadata({
   if (seo?.hspf2) facts.push(`HSPF2 ${seo.hspf2.toLocaleString("fr-CA")}`);
   if (seo?.seer2) facts.push(`SEER2 ${seo.seer2.toLocaleString("fr-CA")}`);
   if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
-  const title = `Thermopompe ${brand.name} ${model.name} : fiche et LogisVert`;
+  const title = `Thermopompe ${brand.name} ${model.name}`;
   const description = (facts.length
     ? `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : ${facts.join(", ")}. Données officielles Hydro-Québec et ENERGY STAR.`
     : `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : fiche technique, type ${detail.systemTypeLabel.toLowerCase()}, admissibilité LogisVert. Données officielles Hydro-Québec.`
@@ -122,7 +125,7 @@ export default async function ProductPage({
     name: `${brand.name} ${model.name}`,
     brand: brand.name,
     model: model.modelNumber,
-    description: `Thermopompe ${detail.systemTypeLabel} ${brand.name} ${seriesDisplayName(series.name, series.slug) ?? ""} ${model.name}`.replace(/\s+/g, " "),
+    description: `Thermopompe ${detail.systemTypeLabel.toLowerCase()} ${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`}`.replace(/\s+/g, " "),
     imageUrl,
     slug,
     category: "Thermopompe",
@@ -131,7 +134,7 @@ export default async function ProductPage({
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Accueil", url: SITE_URL },
-    { name: "Thermopompes", url: `${SITE_URL}/thermopompes` },
+    { name: "Marques", url: `${SITE_URL}/marques` },
     { name: brand.name, url: `${SITE_URL}/marques/${brand.slug}` },
     { name: model.name, url: `${SITE_URL}/produit/${slug}` },
   ]);
@@ -204,6 +207,7 @@ export default async function ProductPage({
               {brand.name}{seriesDisplayName(series.name, series.slug) ? ` · ${seriesDisplayName(series.name, series.slug)}` : ""}
             </p>
             <h1 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: "#fff", lineHeight: 1.1, letterSpacing: "-0.025em" }}>
+              <span style={{ display: "block", fontSize: "0.5em", fontWeight: 600, color: "rgba(255,255,255,.7)", letterSpacing: "0", marginBottom: 4 }}>Thermopompe {brand.name}</span>
               {model.name}
             </h1>
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginTop: 8 }}>
@@ -222,7 +226,7 @@ export default async function ProductPage({
                 </span>
               )}
             </div>
-            <p style={{ margin: "6px 0 0", fontSize: 12, color: "rgba(255,255,255,.4)" }}>
+            <p style={{ margin: "6px 0 0", fontSize: 12, color: "rgba(255,255,255,.7)" }}>
               Modèle : <span style={{ fontFamily: "monospace" }}>{model.modelNumber}</span>
             </p>
 
@@ -455,6 +459,11 @@ export default async function ProductPage({
           <SimilarModels models={detail.similarModels} />
         </div>
       </div>
+      <TrustStrip />
+      <CtaThermoMatch
+        title={`Ce ${brand.name} ${model.name} convient-il à votre maison ?`}
+        text="ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec les autres marques. Trois machines vraiment adaptées, gratuitement, sans parti pris."
+      />
     </main>
   );
 }

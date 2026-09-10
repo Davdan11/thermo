@@ -167,7 +167,7 @@
       ],
       "relatedLinks": [
         { "label": "Thermopompe murale — une seule zone", "href": "/thermopompes/thermopompe-murale" },
-        { "label": "Comparer les marques", "href": "/comparatifs" },
+        { "label": "Comparer les marques", "href": "/comparer" },
         { "label": "Subventions disponibles", "href": "/subventions" }
       ]
     }
@@ -322,7 +322,7 @@
         { "q": "Est-ce que je peux quand même avoir un chauffage d'appoint ?", "a": "Oui, et c'est souvent judicieux dans les régions les plus froides (zones 6B, 7). La thermopompe couvre l'essentiel de la saison de chauffage, et le chauffage d'appoint (plinthes, fournaise) prend le relais lors des quelques journées les plus froides, ce qui reste plus économique que de dimensionner excessivement la thermopompe." }
       ],
       "relatedLinks": [
-        { "label": "Comparer les marques (Mitsubishi, Daikin, Fujitsu)", "href": "/comparatifs" },
+        { "label": "Comparer les marques (Mitsubishi, Daikin, Fujitsu)", "href": "/comparer" },
         { "label": "Thermopompe haute efficacité", "href": "/thermopompes/thermopompe-haute-efficacite" },
         { "label": "Utiliser Thermo Match", "href": "/trouver-ma-thermopompe" }
       ]

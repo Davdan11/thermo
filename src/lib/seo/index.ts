@@ -106,7 +106,8 @@ export function getOrganizationSchema() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/headerlogo.png`,
+    logo: `${SITE_URL}/images/headerlogo-720.webp`,
+    areaServed: { "@type": "State", name: "Québec", address: { "@type": "PostalAddress", addressRegion: "QC", addressCountry: "CA" } },
     // À compléter avec les URL réelles des profils sociaux quand ils existeront.
     sameAs: [],
     contactPoint: {
@@ -220,7 +221,7 @@ export function getServiceSchema(data: {
     description: data.description,
     serviceType: data.serviceType,
     areaServed: {
-      "@type": "State",
+      "@type": "City",
       name: data.areaServed,
     },
     url: data.url,
@@ -254,7 +255,7 @@ export function getArticleSchema(data: {
       name: SITE_NAME,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/headerlogo.png`
+        url: `${SITE_URL}/images/headerlogo-720.webp`
       }
     }
   };

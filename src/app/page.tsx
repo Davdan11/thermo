@@ -74,7 +74,7 @@ export default function HomePage() {
             <FadeIn direction="left">
               <div style={{ maxWidth: 280 }}>
                 <p style={{ color: "#172126", fontSize: "clamp(24px,2.5vw,32px)", fontWeight: 800, lineHeight: 1.2, margin: 0, letterSpacing: "-0.01em" }}>
-                  Magasinez avec<br />les bonnes<br />informations.
+                  Magasinez avec{" "}<br />les bonnes{" "}<br />informations.
                 </p>
                 <div className="w-10 h-1 bg-[#e54b17] mt-6 rounded-full" />
               </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
             <FadeIn direction="left">
               <div>
                 <p style={{ color: "#172126", fontSize: "clamp(24px,2.5vw,32px)", fontWeight: 800, lineHeight: 1.25, margin: "0 0 24px", letterSpacing: "-0.01em", fontStyle: "italic" }}>
-                  Toutes les grandes<br />marques.<br />Un seul endroit<br />pour les comparer.
+                  Toutes les grandes{" "}<br />marques.{" "}<br />Un seul endroit{" "}<br />pour les comparer.
                 </p>
                 <div style={{ width: 40, height: 4, backgroundColor: "#e54b17", borderRadius: 9999 }} />
               </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
             <FadeIn>
               <div>
                 <h2 style={{ color: "#fff", fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 16, letterSpacing: "-0.01em" }}>
-                  Votre maison. Vos critères.<br />Les bonnes options.
+                  Votre maison. Vos critères.{" "}<br />Les bonnes options.
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 15, lineHeight: 1.6, marginBottom: 36, maxWidth: 460 }}>
                   Répondez à quelques questions — ThermoMatch identifie les systèmes qui correspondent à votre maison, votre région et vos priorités.
@@ -263,7 +263,7 @@ export default function HomePage() {
           <div>
             <FadeIn direction="up">
               <h2 style={{ color: "#172126", fontSize: "clamp(32px,4vw,48px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 24, letterSpacing: "-0.01em", fontStyle: "italic" }}>
-                Les aides financières,<br />enfin plus simples.
+                Les aides financières,{" "}<br />enfin plus simples.
               </h2>
               <div style={{ width: 40, height: 3, backgroundColor: "#e54b17", marginBottom: 24 }} />
               <p style={{ color: "#536873", fontSize: 16, lineHeight: 1.6, marginBottom: 40, maxWidth: 420 }}>
@@ -420,7 +420,7 @@ export default function HomePage() {
             {/* Left: title */}
             <div className="shrink-0 lg:border-r lg:border-[#1a2d3d] lg:pr-12">
               <h2 style={{ color: "#fff", fontSize: "clamp(20px,2vw,26px)", fontWeight: 800, lineHeight: 1.25, fontStyle: "italic", margin: 0 }}>
-                De la comparaison<br />à l&apos;installation.
+                De la comparaison{" "}<br />à l&apos;installation.
               </h2>
               <div style={{ width: 32, height: 3, backgroundColor: "#e54b17", marginTop: 12 }} />
             </div>
@@ -462,7 +462,7 @@ export default function HomePage() {
             <div style={{ padding: "24px 0" }}>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, fontWeight: 700, marginBottom: 12, letterSpacing: "0.1em", textTransform: "uppercase" }}>Prêt à trouver la bonne thermopompe ?</p>
               <h2 style={{ color: "#fff", fontSize: "clamp(32px,4vw,52px)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 32px", letterSpacing: "-0.02em", fontStyle: "italic" }}>
-                Démarrez par vos critères.<br />On s&apos;occupe du reste.
+                Démarrez par vos critères.{" "}<br />On s&apos;occupe du reste.
               </h2>
               <Link href="/trouver-ma-thermopompe" className="group flex items-center justify-between bg-[#0b1b24] text-white font-semibold text-[16px] pl-6 pr-2 py-2 rounded-full no-underline transition-all duration-300 hover:bg-[#172126] hover:shadow-2xl w-fit">
                 Commencer maintenant

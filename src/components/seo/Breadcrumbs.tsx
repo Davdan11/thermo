@@ -10,23 +10,10 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.label,
-      "item": `https://thermopompesavendre.ca${item.href}`
-    }))
-  };
-
+  // Le balisage BreadcrumbList est émis une seule fois par la page (getBreadcrumbSchema),
+  // avec « Accueil » en tête, pour rester identique au fil affiché ici.
   return (
     <div className="py-4 text-[13px] text-[#667680]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
       <ol className="flex items-center gap-2 flex-wrap">
         <li>
           <Link href="/" className="hover:text-[#e54b17] transition-colors">

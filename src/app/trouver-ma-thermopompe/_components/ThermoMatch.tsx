@@ -37,23 +37,15 @@ interface SavedState {
    ---------------------------------------------------------- */
 
 const STEP_BG_IMAGES: Record<string, string> = {
-  postalCode:
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-  propertyType:
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-  area: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=1200&auto=format&fit=crop",
-  floors:
-    "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop",
-  currentSystem:
-    "https://images.unsplash.com/photo-1548612455-4fea0b7e98cd?q=80&w=1200&auto=format&fit=crop",
-  heatPumpType:
-    "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
-  priority:
-    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
-  budget:
-    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop",
-  financing:
-    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+  postalCode: "/images/thermomatch/postalCode.webp",
+  propertyType: "/images/thermomatch/postalCode.webp",
+  area: "/images/thermomatch/area.webp",
+  floors: "/images/thermomatch/floors.webp",
+  currentSystem: "/images/thermomatch/floors.webp",
+  heatPumpType: "/images/thermomatch/heatPumpType.webp",
+  priority: "/images/thermomatch/priority.webp",
+  budget: "/images/thermomatch/budget.webp",
+  financing: "/images/thermomatch/financing.webp",
 };
 
 /* Option thumbnail images for propertyType */
@@ -453,7 +445,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              Vos 9 réponses ont été enregistrées
+              Vos {STEPS.length} réponses ont été enregistrées
             </div>
 
             <h1 className="text-[40px] sm:text-[52px] font-bold leading-tight tracking-tight mb-4">
@@ -511,7 +503,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
           <div className="hidden lg:block w-[40%] relative">
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop')" }}
+              style={{ backgroundImage: "url('/images/thermomatch/postalCode.webp')" }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0D1117] via-[#0D1117]/40 to-transparent" />
           </div>

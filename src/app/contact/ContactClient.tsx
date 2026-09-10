@@ -10,7 +10,7 @@ export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", subject: "question", message: "", website: "" });
+  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "question", message: "", consent: false, website: "" });
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setForm({ ...form, [k]: e.target.value });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -203,8 +203,8 @@ export default function ContactPageClient() {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-[#0b1b24]">Sujet</label>
-                        <select value={form.subject} onChange={set("subject")} className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all font-medium text-[#0b1b24]">
+                        <label htmlFor="ct-sujet" className="text-sm font-bold text-[#0b1b24]">Sujet</label>
+                        <select id="ct-sujet" value={form.subject} onChange={set("subject")} className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-[#e54b17] focus:ring-4 focus:ring-[#e54b17]/10 outline-none transition-all font-medium text-[#0b1b24]">
                           <option value="question">Question générale</option>
                           <option value="soumission">Demande d'information sur une soumission</option>
                           <option value="subvention">Information sur les subventions (Logis Vert)</option>
@@ -227,6 +227,19 @@ export default function ContactPageClient() {
                       <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
                         <label>Site web <input type="text" name="website" tabIndex={-1} autoComplete="off" value={form.website} onChange={set("website")} /></label>
                       </div>
+                      <label className="flex items-start gap-3 text-sm text-gray-600 font-medium cursor-pointer">
+                        <input
+                          type="checkbox"
+                          required
+                          checked={form.consent}
+                          onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+                          className="mt-1 h-4 w-4 shrink-0 accent-[#e54b17]"
+                        />
+                        <span>
+                          J&apos;autorise Thermopompes À Vendre.ca à traiter mes renseignements pour répondre à mon message, conformément à la{" "}
+                          <a href="/confidentialite" target="_blank" rel="noopener" className="underline text-[#0b1b24]">politique de confidentialité</a>. Rien n&apos;est vendu à des tiers.
+                        </span>
+                      </label>
                       {error && <p role="alert" className="text-sm text-red-600 font-medium">{error}</p>}
                       <button 
                         type="submit" 
@@ -242,8 +255,8 @@ export default function ContactPageClient() {
                           </>
                         )}
                       </button>
-                      <p className="text-center text-xs text-gray-400 font-medium mt-4">
-                        Vos données servent uniquement à répondre à votre message. Voir notre politique de confidentialité.
+                      <p className="text-center text-xs text-gray-500 font-medium mt-4">
+                        Réponse en moins de 24 h ouvrables. Pour un projet précis, <a href="/soumission" className="underline text-[#0b1b24]">demandez plutôt une soumission</a>.
                       </p>
                     </form>
                   </>

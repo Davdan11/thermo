@@ -170,10 +170,10 @@ export function SubventionsClient() {
           background: "linear-gradient(90deg,rgba(2,22,33,.98) 0%,rgba(2,22,33,.90) 31%,rgba(2,22,33,.42) 58%,rgba(2,22,33,.08) 100%)" }} />
         <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10 flex flex-col justify-center h-full py-8 sm:py-11">
           <h1 style={{ margin: 0, maxWidth: 680, fontSize: "clamp(42px, 3.5vw, 60px)", fontWeight: 550, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#fff" }}>
-            Vérifiez les aides disponibles<br />pour votre thermopompe.
+            Vérifiez les aides disponibles{" "}<br />pour votre thermopompe.
           </h1>
           <p style={{ margin: "18px 0 0", maxWidth: 580, fontSize: 17, lineHeight: 1.55, color: "rgba(255,255,255,.8)" }}>
-            Sélectionnez une configuration exacte pour consulter<br />les programmes et les conditions documentées.
+            Sélectionnez une configuration exacte pour consulter{" "}<br />les programmes et les conditions documentées.
           </p>
           <div style={{ width: 40, height: 3, marginTop: 22, background: ORG }} />
         </div>
@@ -512,7 +512,7 @@ function renderRow(icon: React.ReactNode, name: string, status: React.ReactNode,
       <a href={href} target="_blank" rel="noopener noreferrer"
         style={{ display: "inline-flex", alignItems: "center", gap: 8, justifySelf: "start",
           color: "#e34816", fontSize: 13, fontWeight: 500, lineHeight: 1.35, textDecoration: "none" }}>
-        <span>Voir les conditions<br />officielles</span>
+        <span>Voir les conditions{" "}<br />officielles</span>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
         </svg>

@@ -16,9 +16,16 @@ const nextConfig: NextConfig = {
   staticPageGenerationTimeout: 1000,
   poweredByHeader: false,
   async headers() {
-    return [{ source: "/(.*)", headers: securityHeaders }];
+    return [
+      { source: "/(.*)", headers: securityHeaders },
+      // Fichiers statiques versionnés par leur nom : cache long chez le visiteur et les proxys.
+      { source: "/images/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
+      { source: "/brochures/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=2592000" }, { key: "X-Robots-Tag", value: "noindex" }] },
+    ];
   },
   images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       { protocol: "https", hostname: "daikincomfort.com" },
       { protocol: "https", hostname: "www.daikincomfort.com" },

@@ -39,7 +39,7 @@ export function ConsentBanner() {
         position: "fixed",
         left: 16,
         right: 16,
-        bottom: 16,
+        bottom: "calc(16px + var(--mobile-bar-offset, 0px))",
         zIndex: 60,
         maxWidth: 720,
         margin: "0 auto",

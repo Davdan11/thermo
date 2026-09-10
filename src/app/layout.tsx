@@ -26,7 +26,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    template: "%s | Thermopompes À Vendre.ca",
+    template: "%s | TAV.ca",
     default: "Thermopompes À Vendre.ca — Trouvez la bonne thermopompe pour votre maison.",
   },
   description:

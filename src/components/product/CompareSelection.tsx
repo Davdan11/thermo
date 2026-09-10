@@ -90,7 +90,7 @@ export function CompareSelection({ products }: CompareSelectionProps) {
                   
                   <div className="relative z-10 shrink-0 w-full md:w-auto">
                     <button
-                      onClick={() => router.push("/soumission")}
+                      onClick={() => router.push("/trouver-ma-thermopompe")}
                       className="w-full sm:w-auto h-12 px-8 rounded bg-[var(--color-accent)] text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center"
                     >
                       Trouver mes modèles
