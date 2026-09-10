@@ -14,7 +14,8 @@
       et data/blog/publies.json.
 
    Variables : ANTHROPIC_API_KEY (requis), OPENAI_API_KEY ou GEMINI_API_KEY (requis
-   pour la photo), BLOG_BOT_MODEL (défaut claude-sonnet-5).
+   pour la photo), BLOG_BOT_MODEL (défaut claude-sonnet-5), BLOG_BOT_IMAGE_MODEL
+   (défaut gemini-3.1-flash-image quand la clé Gemini est utilisée).
    Usage : node scripts/blog-bot.mjs [--topic <slug>] [--dry-run]
    ================================================================== */
 import { execSync } from "node:child_process";
@@ -149,14 +150,21 @@ async function generateImage(prompt, slug) {
     const data = await res.json();
     png = Buffer.from(data.data[0].b64_json, "base64");
   } else if (process.env.GEMINI_API_KEY) {
-    const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict", {
+    // Modèles d'image Gemini (generateContent avec réponse IMAGE) : flash par défaut, BLOG_BOT_IMAGE_MODEL pour changer.
+    const model = process.env.BLOG_BOT_IMAGE_MODEL || "gemini-3.1-flash-image";
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
       method: "POST",
       headers: { "content-type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY },
-      body: JSON.stringify({ instances: [{ prompt: `${prompt} Photorealistic editorial photograph, no text, no logos, no watermark.` }], parameters: { sampleCount: 1, aspectRatio: "16:9" } }),
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: `${prompt} Photorealistic editorial photograph, 16:9, natural light, no text, no logos, no watermark, no visible brand names.` }] }],
+        generationConfig: { responseModalities: ["IMAGE"], imageConfig: { aspectRatio: "16:9" } },
+      }),
     });
-    if (!res.ok) throw new Error(`Imagen ${res.status} : ${(await res.text()).slice(0, 300)}`);
+    if (!res.ok) throw new Error(`Gemini image ${res.status} : ${(await res.text()).slice(0, 300)}`);
     const data = await res.json();
-    png = Buffer.from(data.predictions[0].bytesBase64Encoded, "base64");
+    const part = (data.candidates?.[0]?.content?.parts ?? []).find((p) => p.inlineData?.data);
+    if (!part) throw new Error(`Gemini image : aucune image dans la réponse (${JSON.stringify(data).slice(0, 200)})`);
+    png = Buffer.from(part.inlineData.data, "base64");
   } else {
     throw new Error("Aucune clé d'images (OPENAI_API_KEY ou GEMINI_API_KEY)");
   }
