@@ -37,7 +37,8 @@ if [ -d "$ROOT/current/node_modules" ] && cmp -s "$ROOT/current/package-lock.jso
   echo "Dépendances inchangées : réutilisation de node_modules."
   cp -al "$ROOT/current/node_modules" node_modules
 else
-  npm ci --no-audit --no-fund
+  # npm ci exige un lockfile parfaitement synchronisé ; sinon npm install le complète (même versions épinglées).
+  npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 fi
 
 NODE_OPTIONS=--max-old-space-size=4096 npm run build
