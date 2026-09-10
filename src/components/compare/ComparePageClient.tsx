@@ -218,10 +218,12 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     if (cool) parts.push(`Refroidissement ${cool.toLocaleString("fr-CA")} BTU`);
     if (heat5F) parts.push(`Chauffage -15°C : ${heat5F.toLocaleString("fr-CA")} BTU`);
     const detail = parts.length > 0 ? parts.join(" · ") : "Non disponible";
-    const btu = heat5F ?? cool ?? 0;
-    if (btu >= 36000) return { rating: "Grande capacité", detail, color: "#15803d" };
-    if (btu >= 18000) return { rating: "Moyenne", detail, color: "#16a34a" };
-    if (btu > 0) return { rating: "Petite", detail, color: "#d97706" };
+    const nominal = p.detail.model.nominalCapacityBtu ?? cool ?? null;
+    if (nominal && heat5F) {
+      const pct = Math.round((heat5F / nominal) * 100);
+      return { rating: `${nominal.toLocaleString("fr-CA")} BTU`, detail: `${heat5F.toLocaleString("fr-CA")} BTU/h certifiés à -15 °C, soit ${pct} % du nominal`, color: pct >= 100 ? "#15803d" : pct >= 75 ? "#65a30d" : "#d97706" };
+    }
+    if (nominal) return { rating: `${nominal.toLocaleString("fr-CA")} BTU`, detail: "Capacité à -15 °C non publiée", color: "#6b7280" };
     return { rating: "—", detail, color: "#9ca3af" };
   }
 
@@ -283,12 +285,14 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
   ];
 
   /* Filter for differences only */
+  const documentedRows = rows.filter((r) => r.values.some((v) => v.rating !== "—"));
   const filteredRows = differencesOnly
-    ? rows.filter((r) => new Set(r.values.map(v => v.rating)).size > 1)
-    : rows;
+    ? documentedRows.filter((r) => new Set(r.values.map(v => v.rating)).size > 1)
+    : documentedRows;
+  const undocumented = rows.filter((r) => r.values.every((v) => v.rating === "—")).map((r) => r.label.toLowerCase());
 
   /* ---- Synthesis data ---- */
-  const synthesis = buildSynthesis(products);
+  const verdict = buildVerdict(products);
 
   return (
     <>
@@ -502,7 +506,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             const types: Record<string, string> = { "wall-single": "Murale simple zone", "central-ducted": "Centrale gainable", "multi-zone": "Multizone", "floor-console": "Console au plancher", cassette: "Cassette", ceiling: "Plafonnier", hybrid: "Système hybride", other: "Autre" };
             return types[p.detail.model.systemType] ?? p.detail.model.systemType;
           }},
-        ].map((spec) => (
+        ].filter((spec) => products.some((p) => spec.getter(p) !== "—")).map((spec) => (
           <React.Fragment key={spec.label}>
             <div style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", fontSize: 13, fontWeight: 500, color: "var(--color-foreground)", display: "flex", alignItems: "center" }}>
               {spec.label}
@@ -547,7 +551,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             if (min && max && min !== max) return `${min} – ${max}`;
             return String(max ?? min ?? "—");
           }},
-        ].map((spec) => (
+        ].filter((spec) => products.some((p) => spec.getter(p) !== "—")).map((spec) => (
           <React.Fragment key={spec.label}>
             <div style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", fontSize: 13, fontWeight: 500, color: "var(--color-foreground)", display: "flex", alignItems: "center" }}>
               {spec.label}
@@ -574,7 +578,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             const r = p.detail.outdoorUnit?.refrigerant;
             return r ?? "—";
           }},
-        ].map((spec) => (
+        ].filter((spec) => products.some((p) => spec.getter(p) !== "—")).map((spec) => (
           <React.Fragment key={spec.label}>
             <div style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", fontSize: 13, fontWeight: 500, color: "var(--color-foreground)", display: "flex", alignItems: "center" }}>
               {spec.label}
@@ -635,52 +639,33 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       </div>
       </div>{/* end scroll wrapper */}
 
-      {/* ---- Trois profils, trois forces ---- */}
-      {synthesis.length > 0 && (
-        <div style={{
-          background: "#0C1821",
-          borderRadius: "0 0 10px 10px",
-          padding: "32px 24px",
-          display: "flex", flexDirection: "column", gap: 24,
-        }}>
-          {/* Label */}
-          <div style={{ paddingRight: 24 }}>
-            <h2 style={{
-              margin: 0, fontSize: 24, fontWeight: 700, color: "#fff",
-              lineHeight: 1.15, fontFamily: "var(--font-display)",
-              fontStyle: "italic",
-            }}>
-              Ce que chaque profil{" "}<br />met en avant.
-            </h2>
+      {/* ---- Conclusion : lequel choisir ? ---- */}
+      {verdict.length > 0 && (
+        <section aria-labelledby="compare-verdict" style={{ marginTop: 32, border: "1px solid var(--color-border)", background: "var(--color-surface)", borderRadius: 10, overflow: "hidden" }}>
+          <div style={{ padding: "26px 28px 6px", borderBottom: "1px solid var(--color-border)" }}>
+            <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>Verdict</p>
+            <h2 id="compare-verdict" style={{ margin: "8px 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-0.01em", color: "#071d2b", lineHeight: 1.2 }}>Lequel choisir ?</h2>
+            <p style={{ margin: "0 0 18px", fontSize: 14, color: "#536873", lineHeight: 1.6, maxWidth: 680 }}>
+              Ce que les données certifiées d&apos;Hydro-Québec et d&apos;ENERGY STAR permettent de dire de ces {products.length} machines. Le calibre exact dépend de votre maison.
+            </p>
           </div>
-
-          {/* Synthesis cards */}
-          {synthesis.map((s) => (
-            <div key={s.label} style={{
-              display: "flex", alignItems: "flex-start", gap: 14, padding: "0",
-            }}>
-              <div style={{
-                width: 36, height: 36, borderRadius: 6,
-                background: s.iconBg,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                flexShrink: 0,
-              }}>
-                <span style={{ color: "#fff", display: "flex" }}>{s.icon}</span>
+          <dl style={{ margin: 0, padding: "6px 28px" }}>
+            {verdict.map((v, i) => (
+              <div key={v.label} className="grid grid-cols-1 sm:grid-cols-[minmax(150px,190px)_1fr] gap-1 sm:gap-4" style={{ padding: "15px 0", borderBottom: i < verdict.length - 1 ? "1px solid #f0ebe4" : "none" }}>
+                <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873", paddingTop: 2 }}>{v.label}</dt>
+                <dd style={{ margin: 0 }}>
+                  <p style={{ margin: 0, fontSize: 16, fontWeight: 700, color: "#071d2b", letterSpacing: "-0.01em" }}>{v.value}</p>
+                  {v.note && <p style={{ margin: "4px 0 0", fontSize: 13.5, color: "#536873", lineHeight: 1.55 }}>{v.note}</p>}
+                </dd>
               </div>
-              <div>
-                <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: "#fff" }}>
-                  {s.label}
-                </p>
-                <p style={{ margin: "4px 0 0", fontSize: 12, color: "rgba(255,255,255,.55)", lineHeight: 1.4 }}>
-                  {s.description}
-                </p>
-                <p style={{ margin: "4px 0 0", fontSize: 11, color: "rgba(255,255,255,.35)" }}>
-                  À valider selon la configuration exacte.
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </dl>
+          {undocumented.length > 0 && (
+            <p style={{ margin: 0, padding: "14px 28px", borderTop: "1px solid var(--color-border)", background: "#faf8f4", fontSize: 13, color: "#536873", lineHeight: 1.55 }}>
+              Non publié dans les listes officielles pour ces modèles : {undocumented.join(", ")}. Ces valeurs figurent sur la fiche technique du fabricant, que l&apos;installateur fournit avec sa soumission.
+            </p>
+          )}
+        </section>
       )}
 
       {/* ---- Subsidy summary ---- */}
@@ -773,52 +758,96 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
 }
 
 /* ==================================================================
-   Synthesis builder
+   Verdict : comparaison chiffrée, une donnée par ligne
    ================================================================== */
 
-interface SynthesisItem {
+interface VerdictItem {
   label: string;
-  description: string;
-  icon: React.ReactNode;
-  iconBg: string;
+  value: string;
+  note?: string;
 }
 
-function buildSynthesis(products: CompareProduct[]): SynthesisItem[] {
-  const items: SynthesisItem[] = [];
+function buildVerdict(products: CompareProduct[]): VerdictItem[] {
+  const items: VerdictItem[] = [];
+  const fr = (n: number) => n.toLocaleString("fr-CA");
+  const name = (p: CompareProduct) => `${p.detail.brand.name} ${p.detail.model.name}`;
+  const best = <T,>(vals: Array<T | null>, better: (a: T, b: T) => boolean): number | null => {
+    let idx: number | null = null;
+    vals.forEach((v, i) => { if (v !== null && (idx === null || better(v, vals[idx] as T))) idx = i; });
+    return idx;
+  };
 
-  // Cold performance — find the best
-  const coldRatings = products.map((p) => ({
-    temp: p.detail.configuration?.minHeatingTempC ?? 0,
-    cold: p.detail.isColdClimate,
-  }));
-  if (coldRatings.some((r) => r.cold)) {
+  // Tenue de la capacité par grand froid
+  const ret = products.map((p) => {
+    const nominal = p.detail.model.nominalCapacityBtu ?? p.detail.model.coolingCapacityMaxBtu ?? null;
+    const h5 = p.detail.model.heatingCapacity5FMaxBtu ?? null;
+    return nominal && h5 ? { pct: Math.round((h5 / nominal) * 100), h5 } : null;
+  });
+  if (ret.filter(Boolean).length >= 2) {
+    const i = best(ret, (a, b) => a.pct > b.pct)!;
+    const others = products.map((p, j) => (j !== i && ret[j] ? `${ret[j]!.pct} % pour ${name(p)}` : null)).filter(Boolean).join(", ");
+    const spread = Math.max(...ret.filter(Boolean).map((r) => r!.pct)) - Math.min(...ret.filter(Boolean).map((r) => r!.pct));
     items.push({
-      label: "Priorité grand froid",
-      description: "Conçu pour affronter les hivers rigoureux.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" /></svg>,
-      iconBg: "#dc2626",
+      label: "Par grand froid",
+      value: spread <= 5 ? "Équivalentes" : name(products[i]),
+      note: `${name(products[i])} garde ${ret[i]!.pct} % de sa capacité nominale à -15 °C (${fr(ret[i]!.h5)} BTU/h)${others ? `, contre ${others}` : ""}.${spread <= 5 ? " L'écart est trop faible pour trancher." : ""}`,
+    });
+  } else if (products.some((p) => p.detail.isColdClimate)) {
+    const cc = products.filter((p) => p.detail.isColdClimate).map(name);
+    items.push({ label: "Par grand froid", value: cc.length === products.length ? "Toutes certifiées climat froid" : cc.join(", "), note: cc.length === products.length ? "Chaque machine porte la certification ENERGY STAR climat froid ; la capacité mesurée à -15 °C n'est pas publiée pour toutes." : "Seules ces machines portent la certification ENERGY STAR climat froid." });
+  }
+
+  // Efficacité en chauffage (HSPF2) : l'écart d'électricité consommée est le rapport des HSPF2
+  const hspf = products.map((p) => p.detail.configuration?.hspf2 ?? p.detail.model.hspf2Max ?? p.detail.model.hspf2Min ?? null);
+  if (hspf.filter((v) => v !== null).length >= 2) {
+    const i = best(hspf, (a, b) => a > b)!;
+    const worst = Math.min(...hspf.filter((v): v is number => v !== null));
+    const saving = Math.round((1 - worst / (hspf[i] as number)) * 100);
+    items.push({
+      label: "Chauffage",
+      value: saving < 3 ? "Équivalentes" : name(products[i]),
+      note: `HSPF2 ${products.map((p, j) => `${hspf[j] !== null ? fr(hspf[j] as number) : "n/d"} (${p.detail.brand.name})`).join(" contre ")}${saving >= 3 ? `. À chauffage égal, environ ${saving} % d'électricité en moins pour la plus efficace.` : ". L'écart est négligeable sur la facture."}`,
     });
   }
 
-  // Noise
-  const hasNoise = products.some((p) => p.detail.configuration?.noiseIndoorMinDbA != null);
-  if (hasNoise) {
+  // Climatisation (SEER2)
+  const seer = products.map((p) => p.detail.configuration?.seer2 ?? p.detail.model.seer2Max ?? p.detail.model.seer2Min ?? null);
+  if (seer.filter((v) => v !== null).length >= 2) {
+    const i = best(seer, (a, b) => a > b)!;
+    const worst = Math.min(...seer.filter((v): v is number => v !== null));
+    const saving = Math.round((1 - worst / (seer[i] as number)) * 100);
     items.push({
-      label: "Priorité silence",
-      description: "Confort acoustique au quotidien.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6v12M8 9v6M4 10v4M16 8v8M20 10v4" /></svg>,
-      iconBg: "#0C1821",
+      label: "Climatisation",
+      value: saving < 3 ? "Équivalentes" : name(products[i]),
+      note: `SEER2 ${products.map((p, j) => `${seer[j] !== null ? fr(seer[j] as number) : "n/d"} (${p.detail.brand.name})`).join(" contre ")}. Au Québec, l'été pèse peu sur la facture : ce critère vient après le chauffage.`,
     });
   }
 
-  // Efficiency
-  const hasEff = products.some((p) => p.detail.configuration?.seer2 != null);
-  if (hasEff) {
+  // Subvention LogisVert
+  const sub = products.map((p) => p.subsidy.dollars);
+  if (sub.some((v) => v > 0)) {
+    const i = best(sub.map((v) => (v > 0 ? v : null)), (a, b) => a > b)!;
+    const diff = Math.max(...sub) - Math.min(...sub);
     items.push({
-      label: "Priorité efficacité",
-      description: "Consommation maîtrisée, économies à long terme.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
-      iconBg: "var(--color-accent)",
+      label: "Subvention LogisVert",
+      value: diff === 0 ? `${fr(sub[i])} $ chacune` : `${name(products[i])} : ${fr(sub[i])} $`,
+      note: diff === 0 ? "Même montant officiel d'Hydro-Québec pour le jumelage de référence." : `${fr(diff)} $ d'écart d'après la liste officielle d'Hydro-Québec, pour les jumelages de référence de ces fiches.`,
+    });
+  }
+
+  // Garantie
+  const war = products.map((p) => {
+    const c = p.detail.warranties.find((w) => w.type === "compressor")?.durationYears ?? null;
+    const pa = p.detail.warranties.find((w) => w.type === "parts")?.durationYears ?? null;
+    return c ?? pa;
+  });
+  if (war.filter((v) => v !== null).length >= 2) {
+    const i = best(war, (a, b) => a > b)!;
+    const same = war.every((v) => v === war[i]);
+    items.push({
+      label: "Garantie",
+      value: same ? `${war[i]} ans chacune` : `${name(products[i])} : ${war[i]} ans`,
+      note: same ? "Même durée sur le compresseur ou les pièces. La main-d'œuvre dépend de l'installateur." : `${products.map((p, j) => `${war[j] ?? "n/d"} ans (${p.detail.brand.name})`).join(" contre ")} sur le compresseur ou les pièces. La main-d'œuvre dépend de l'installateur.`,
     });
   }
 
