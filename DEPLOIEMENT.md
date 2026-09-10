@@ -11,7 +11,7 @@ avec la même mécanique : une application Node sous **PM2** et un bloc **Nginx*
 | Versions déployées | `/var/www/thermopompesavendre.ca/releases/<horodatage>/` (3 conservées) |
 | Version servie | `/var/www/thermopompesavendre.ca/current` (lien vers une release) |
 | Variables secrètes | `/var/www/thermopompesavendre.ca/shared/.env` (modèle : `.env.example`) |
-| Journal des leads | `/var/www/thermopompesavendre.ca/shared/data/leads/AAAA-MM.jsonl` |
+| Journal des leads | `/var/www/thermopompesavendre.ca/shared/data/leads/AAAA-MM.jsonl` (via `LEAD_JOURNAL_DIR` dans `shared/.env`) |
 | Application PM2 | `thermo` (port local 3003, `ecosystem.config.js`, cwd = `current`) |
 | Bloc Nginx | `/etc/nginx/sites-available/thermopompesavendre.ca` |
 | Journaux | `pm2 logs thermo` |

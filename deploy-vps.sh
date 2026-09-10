@@ -23,7 +23,10 @@ mkdir -p "$ROOT/releases" "$ROOT/shared/data/leads"
 
 mv "$SRC" "$REL"
 ln -sfn "$ROOT/shared/.env" "$REL/.env"
-rm -rf "$REL/data" && ln -sfn "$ROOT/shared/data" "$REL/data"
+# Pas de lien vers shared/data dans la release : Turbopack refuse un lien qui sort du projet.
+# Le journal des leads est dirigé vers shared/data par LEAD_JOURNAL_DIR dans shared/.env.
+rm -rf "$REL/data"
+grep -q "^LEAD_JOURNAL_DIR=" "$ROOT/shared/.env" || echo "LEAD_JOURNAL_DIR=$ROOT/shared/data/leads" >> "$ROOT/shared/.env"
 cd "$REL"
 
 export PATH=/root/.nvm/versions/node/v22.17.0/bin:$PATH
