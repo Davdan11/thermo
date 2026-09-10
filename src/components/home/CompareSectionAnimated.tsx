@@ -116,7 +116,7 @@ export function CompareSectionAnimated() {
       {/* MOBILE / TABLETTE : empilé */}
       <div className="block lg:hidden max-w-[1360px] mx-auto px-5 sm:px-8 py-12">
         <h2 style={{ color: "#fff", fontSize: "clamp(22px,5vw,30px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 16px", letterSpacing: "-0.02em" }}>
-          Comparez les modèles<br />qui comptent.
+          Comparez les modèles{" "}<br />qui comptent.
         </h2>
         <div style={{ marginBottom: 24 }}>{underline}</div>
 
@@ -160,7 +160,7 @@ export function CompareSectionAnimated() {
               fontStyle: "italic",
             }}
           >
-            Comparez les modèles<br />qui comptent.
+            Comparez les modèles{" "}<br />qui comptent.
           </h2>
           <div style={{ marginBottom: 28 }}>{underline}</div>
           {cta("sm")}

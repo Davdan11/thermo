@@ -159,7 +159,7 @@ export default function PartenairesPage() {
                   margin: "0 0 24px",
                 }}
               >
-                Des projets qualifiés,<br />pas des appels à froid.
+                Des projets qualifiés,{" "}<br />pas des appels à froid.
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "17px", lineHeight: 1.6, marginBottom: "24px" }}>
                 Notre mission chez Thermopompe A Vendre est d'accompagner le consommateur à travers le processus de sélection complexe d'une thermopompe. Lorsqu'ils arrivent à vous, le travail d'éducation est déjà fait.

@@ -650,7 +650,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
               lineHeight: 1.15, fontFamily: "var(--font-display)",
               fontStyle: "italic",
             }}>
-              Ce que chaque profil<br />met en avant.
+              Ce que chaque profil{" "}<br />met en avant.
             </h2>
           </div>
 

@@ -51,7 +51,7 @@ export default function FAQPage() {
             letterSpacing: "-0.04em",
           }}
         >
-          La référence québécoise<br />de la thermopompe.
+          La référence québécoise{" "}<br />de la thermopompe.
         </h1>
         <p style={{ color: T.muted, fontSize: "18px", lineHeight: 1.6, maxWidth: "600px", marginBottom: "40px" }}>
           Des réponses exhaustives et transparentes, rédigées par des experts de l'industrie du CVAC au Québec, pour vous accompagner dans votre réflexion.

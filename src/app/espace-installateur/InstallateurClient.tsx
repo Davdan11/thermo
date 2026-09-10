@@ -49,7 +49,7 @@ export default function EspaceInstallateurPage() {
         />
         <div style={{ position: "absolute", bottom: "48px", left: "48px", color: "white" }}>
           <h2 style={{ fontSize: "36px", fontWeight: 500, lineHeight: 1.1, marginBottom: "16px", letterSpacing: "-0.02em" }}>
-            L'excellence,<br />de la première estimation<br />à l'installation.
+            L'excellence,{" "}<br />de la première estimation{" "}<br />à l'installation.
           </h2>
           <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
             <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" style={{ height: "24px", width: "auto" }} />

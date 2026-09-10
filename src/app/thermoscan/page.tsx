@@ -41,7 +41,7 @@ export default function ThermoScanPage() {
             className="text-white font-bold tracking-tight mb-5"
             style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: "1.1" }}
           >
-            Identifiez votre<br />thermopompe actuelle.
+            Identifiez votre{" "}<br />thermopompe actuelle.
           </h1>
 
           <p className="text-white/60 text-lg max-w-xl font-medium mb-12">

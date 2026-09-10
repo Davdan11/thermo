@@ -136,7 +136,7 @@ export default async function ThermopompesPage({
                 lineHeight: "1.1",
               }}
             >
-              Explorez les<br />thermopompes.
+              Explorez les{" "}<br />thermopompes.
             </h1>
             <p className="text-white/70 text-lg md:text-xl font-medium mb-10">
               Comparez les marques, les capacités et les performances selon vos besoins.

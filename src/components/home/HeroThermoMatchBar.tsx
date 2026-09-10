@@ -98,7 +98,7 @@ export function HeroThermoMatchBar() {
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
                 <span style={{ color: "rgba(255,255,255,0.65)", fontSize: 12, lineHeight: 1.35 }}>
-                  Recommandations<br/>en environ 2 minutes
+                  Recommandations{" "}<br/>en environ 2 minutes
                 </span>
               </>
             )}

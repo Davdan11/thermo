@@ -97,7 +97,7 @@ export function ModelesADecouvrir() {
               MODÈLES À DÉCOUVRIR
             </p>
             <h2 style={{ color: "#172126", fontSize: "clamp(24px, 2.2vw, 32px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 20px", letterSpacing: "-0.01em", fontStyle: "italic" }}>
-              Une sélection pensée<br />pour le climat<br />québécois.
+              Une sélection pensée{" "}<br />pour le climat{" "}<br />québécois.
             </h2>
             {/* Orange accent bar */}
             <div style={{ width: 36, height: 3, backgroundColor: "#e54b17" }} />

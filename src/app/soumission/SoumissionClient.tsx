@@ -322,7 +322,7 @@ export default function SoumissionPage() {
         {/* ── LEFT: Project summary ── */}
         <div>
           <h1 style={{ fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: NAVY, lineHeight: 1.15, margin: "0 0 16px", letterSpacing: "-0.02em" }}>
-            {hasDraft ? <>Votre projet est prêt<br />à être évalué.</> : <>Dites-nous où et quoi.<br />On s&apos;occupe du reste.</>}
+            {hasDraft ? <>Votre projet est prêt{" "}<br />à être évalué.</> : <>Dites-nous où et quoi.{" "}<br />On s&apos;occupe du reste.</>}
           </h1>
           <p style={{ color: "#536873", fontSize: 15, lineHeight: 1.6, margin: "0 0 40px", maxWidth: 440 }}>
             {hasDraft
@@ -384,7 +384,7 @@ export default function SoumissionPage() {
           style={{ backgroundColor: NAVY, borderRadius: 14, padding: "32px 28px", color: "#fff", position: "relative" }}
         >
           <h2 id="contact-title" style={{ fontSize: 18, fontWeight: 800, color: "#fff", margin: "0 0 24px", lineHeight: 1.3 }}>
-            Comment pouvons-nous<br />vous joindre?
+            Comment pouvons-nous{" "}<br />vous joindre?
           </h2>
 
           {/* Prénom */}

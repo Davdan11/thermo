@@ -63,7 +63,7 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
                 Comparateur
               </p>
               <h1 style={{ margin: "8px 0 0", fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: "#fff", lineHeight: 1.05, letterSpacing: "-0.02em", fontStyle: "italic" }}>
-                Comparez ce qui<br />compte vraiment.
+                Comparez ce qui{" "}<br />compte vraiment.
               </h1>
               <p style={{ margin: "12px 0 0", fontSize: 15, color: "rgba(255,255,255,.5)", maxWidth: 420, lineHeight: 1.5 }}>
                 Performance hivernale, efficacité, silence et garantie.

@@ -46,7 +46,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
           <div className="max-w-[650px]">
             <h1 className="text-[42px] sm:text-[56px] font-bold leading-[1.05] tracking-tight mb-5" style={{ color: "#ffffff" }}>
               Toutes les marques.<br />
-              Un seul endroit pour<br />les comprendre.
+              Un seul endroit pour{" "}<br />les comprendre.
             </h1>
             <p className="text-[#9ca3af] text-[17px] leading-relaxed mb-6 max-w-[500px]">
               Explorez les fabricants, les séries et les configurations documentées pour le marché québécois.
@@ -200,7 +200,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
             <div className="md:w-1/2 flex items-center gap-8">
               <div>
                 <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight mb-4" style={{ color: "#ffffff" }}>
-                  Vous hésitez entre<br />plusieurs marques?
+                  Vous hésitez entre{" "}<br />plusieurs marques?
                 </h2>
                 <div className="w-10 h-[2px] bg-[#e54b17]" />
               </div>

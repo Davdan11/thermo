@@ -54,7 +54,7 @@ export default function GuidesPageClient({ initialGuides }: Props) {
           <div className="guides-hero__text">
             <p className="guides-hero__eyebrow">Guides &amp; Conseils</p>
             <h1 className="guides-hero__heading">
-              Mieux comprendre<br />avant de choisir.
+              Mieux comprendre{" "}<br />avant de choisir.
             </h1>
             <p className="guides-hero__subtext">
               Des explications claires sur les modèles,<br />

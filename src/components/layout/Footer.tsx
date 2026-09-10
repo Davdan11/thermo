@@ -112,7 +112,7 @@ export function Footer() {
               La plateforme de comparaison de thermopompes la plus fiable au Québec.
             </p>
             <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.65, margin: "0 0 24px" }}>
-              Trouvez la bonne thermopompe.<br />Au bon calibre. Pour votre maison.
+              Trouvez la bonne thermopompe.{" "}<br />Au bon calibre. Pour votre maison.
             </p>
 
             {/* Phone */}
