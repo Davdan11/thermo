@@ -3,7 +3,7 @@
  * La clé est le nom du fichier public/<clé>.txt (protocole IndexNow). Google n'utilise pas
  * IndexNow : pour Google, soumettre sitemap-index.xml dans la Search Console.
  * Usage : node scripts/indexnow.mjs [--all]   (par défaut : pages, guides, marques, classements, villes-quebec ;
- *         --all ajoute les 1 750 fiches produit)
+ *         --all ajoute toutes les fiches produit)
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -19,7 +19,10 @@ async function urlsOf(sitemap) {
   const xml = await (await fetch(`${SITE}/sitemap/${sitemap}.xml`)).text();
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 }
-const sets = ["pages", "guides", "marques", "classements", "villes-quebec", ...(all ? ["produits-0"] : [])];
+// Sitemaps produits : lus depuis l'index (produits-0, produits-1, …).
+const indexXml = await (await fetch(`${SITE}/sitemap-index.xml`)).text();
+const productSets = [...indexXml.matchAll(/sitemap\/(produits-\d+)\.xml/g)].map((m) => m[1]);
+const sets = ["pages", "guides", "marques", "classements", "villes-quebec", ...(all ? productSets : [])];
 const urlList = (await Promise.all(sets.map(urlsOf))).flat();
 console.log(`${urlList.length} URL à signaler`);
 for (let i = 0; i < urlList.length; i += 10000) {
