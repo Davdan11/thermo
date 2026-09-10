@@ -430,8 +430,10 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                   width={200} height={150}
                   style={{ objectFit: "contain", width: "100%", height: "100%", padding: 8 }}
                 />
+              ) : brandLogoPath(p.detail.brand.slug) ? (
+                <Image src={brandLogoPath(p.detail.brand.slug)!} alt={`Logo ${p.detail.brand.name}`} width={140} height={48} style={{ objectFit: "contain", width: "auto", height: "auto", maxWidth: 130, maxHeight: 42, opacity: 0.9 }} />
               ) : (
-                <span style={{ fontSize: 10, color: "#9CA3AF" }}>Image a venir</span>
+                <span style={{ fontSize: 12, color: "#9CA3AF" }}>{p.detail.brand.name}</span>
               )}
             </div>
 
@@ -601,6 +603,28 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
           </React.Fragment>
         ))}
 
+        {/* Section: Subvention (montant officiel de la liste Hydro-Québec, jumelage de référence) */}
+        {products.some((p) => p.subsidy.dollars > 0) && (
+          <>
+            <div style={{ padding: "14px 16px", borderTop: "2px solid var(--color-border)", background: "rgba(0,0,0,.02)", fontSize: 12, fontWeight: 700, color: "var(--color-accent)", textTransform: "uppercase", letterSpacing: "0.05em", gridColumn: `span ${products.length + 1}` }}>
+              Subvention LogisVert
+            </div>
+            <div style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", fontSize: 13, fontWeight: 500, color: "var(--color-foreground)", display: "flex", alignItems: "center" }}>
+              Montant officiel Hydro-Québec
+            </div>
+            {products.map((p, i) => (
+              <div key={`lv-${i}`} style={{ padding: "12px 16px", borderTop: "1px solid var(--color-border)", borderLeft: "1px solid var(--color-border)" }}>
+                <span style={{ fontSize: 14.5, fontWeight: 700, color: "#071d2b", fontVariantNumeric: "tabular-nums" }}>
+                  {p.subsidy.dollars > 0 ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $${p.subsidy.isOfficial ? "" : " (estimation)"}` : "Non admissible"}
+                </span>
+                <span style={{ display: "block", fontSize: 12, color: "#536873", marginTop: 2 }}>
+                  {p.subsidy.dollars > 0 ? `Jumelage de référence${p.subsidy.isColdClimate ? " · certifié climat froid" : ""}` : "Aucun jumelage dans la liste"}
+                </span>
+              </div>
+            ))}
+          </>
+        )}
+
         {/* Section: Évaluation qualitative */}
         <div style={{ padding: "14px 16px", borderTop: "2px solid var(--color-border)", background: "rgba(0,0,0,.02)", fontSize: 12, fontWeight: 700, color: "var(--color-accent)", textTransform: "uppercase", letterSpacing: "0.05em", gridColumn: `span ${products.length + 1}` }}>
           Évaluation comparative
@@ -613,12 +637,10 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
             <div key={`${row.id}-label`} style={{
               padding: "14px 16px",
               borderTop: "1px solid var(--color-border)",
-              display: "flex", alignItems: "center", gap: 8,
-              fontSize: 13, fontWeight: 500, color: "var(--color-foreground)",
+              display: "flex", alignItems: "center",
+              fontSize: 13, fontWeight: 600, color: "#536873",
             }}>
-              <span style={{ color: "var(--color-muted)", display: "flex", alignItems: "center" }}>{row.icon}</span>
               {row.label}
-              <InfoIcon />
             </div>
 
             {/* Row values */}
@@ -629,17 +651,10 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                 borderLeft: "1px solid var(--color-border)",
                 display: "flex", flexDirection: "column", gap: 6,
               }}>
-                <span style={{
-                  display: "inline-flex", alignItems: "center", gap: 6,
-                  fontSize: 14, fontWeight: 600, color: val.color,
-                }}>
-                  <span style={{
-                    width: 8, height: 8, borderRadius: "50%",
-                    background: val.color, flexShrink: 0,
-                  }} />
+                <span style={{ fontSize: 14.5, fontWeight: 700, color: "#071d2b", letterSpacing: "-0.01em" }}>
                   {val.rating}
                 </span>
-                <span style={{ fontSize: 12, color: "var(--color-muted)", lineHeight: 1.4 }}>
+                <span style={{ fontSize: 12.5, color: "#536873", lineHeight: 1.45 }}>
                   {val.detail}
                 </span>
               </div>
@@ -678,91 +693,26 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
         </section>
       )}
 
-      {/* ---- Subsidy summary ---- */}
-      {products.some((p) => p.subsidy.dollars > 0) && (
-        <div style={{
-          marginTop: 32,
-          background: "var(--color-surface)",
-          border: "1px solid var(--color-border)",
-          borderRadius: 10,
-          padding: 28,
-        }}>
-          <h2 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: "var(--color-foreground)" }}>
-            {products.every((p) => p.subsidy.isOfficial || p.subsidy.dollars === 0) ? "Subventions LogisVert officielles" : "Subventions LogisVert (dont estimations)"}
-          </h2>
-          <p style={{ margin: "4px 0 20px", fontSize: 12, color: "var(--color-muted)" }}>
-            {products.every((p) => p.subsidy.isOfficial || p.subsidy.dollars === 0)
-              ? "Montant de la liste des appareils admissibles d'Hydro-Québec pour le jumelage de référence de chaque fiche. Le montant final dépend du jumelage exact installé."
-              : "Les montants marqués « estimation » sont calculés par formule faute de jumelage dans la liste officielle d'Hydro-Québec."}
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: `repeat(${products.length}, 1fr)`, gap: 12 }}>
-            {products.map((p) => (
-              <div key={p.detail.model.id} style={{
-                padding: 16,
-                background: p.subsidy.dollars > 0 ? "#f0fdf4" : "#fafafa",
-                border: `1px solid ${p.subsidy.dollars > 0 ? "#bbf7d0" : "var(--color-border)"}`,
-                borderRadius: 8,
-                textAlign: "center",
-              }}>
-                <p style={{ margin: 0, fontSize: 11, fontWeight: 600, color: "var(--color-muted)" }}>
-                  {p.detail.brand.name} {p.detail.model.name}
-                </p>
-                <p style={{
-                  margin: "6px 0 0", fontSize: 28, fontWeight: 700,
-                  color: p.subsidy.dollars > 0 ? "#15803d" : "var(--color-muted)",
-                  fontVariantNumeric: "tabular-nums",
-                }}>
-                  {p.subsidy.dollars > 0
-                    ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $${p.subsidy.isOfficial ? "" : " (estimation)"}`
-                    : "Non admissible"}
-                </p>
-                <div style={{ fontSize: 13, color: "var(--color-muted)", marginTop: 4 }}>
-                  {p.subsidy.isColdClimate ? "Climat froid" : "Standard"}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       {/* ---- CTA ---- */}
-      <div style={{
-        marginTop: 40, marginBottom: 60,
-        background: "#0C1821",
-        borderRadius: 10,
-        padding: "40px 32px",
-        textAlign: "center",
-      }}>
-        <p style={{
-          margin: 0, fontSize: 22, fontWeight: 700, color: "#fff",
-          fontFamily: "var(--font-display)",
-        }}>
-          Prêt à trouver la thermopompe qui vous convient?
-        </p>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, marginTop: 20 }}>
-          <Link href="/soumission" style={{
-            fontSize: 14, fontWeight: 600, padding: "12px 24px",
-            background: "var(--color-accent)", color: "#fff",
-            textDecoration: "none", borderRadius: 6,
-            display: "inline-flex", alignItems: "center", gap: 6,
-          }}>
-            Vérifier lequel convient à ma maison
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+      <section style={{ marginTop: 32, marginBottom: 60, background: "#0C1821", borderRadius: 10, padding: "32px 32px", color: "#fff" }} className="flex flex-col md:flex-row md:items-center gap-6">
+        <div style={{ flex: 1 }}>
+          <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e54b17" }}>Et pour votre maison ?</p>
+          <p style={{ margin: "8px 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-0.01em", lineHeight: 1.2 }}>
+            Le bon calibre dépend de votre superficie, de votre isolation et de votre région.
+          </p>
+          <p style={{ margin: 0, fontSize: 14, color: "rgba(255,255,255,.7)", lineHeight: 1.55, maxWidth: 560 }}>
+            ThermoMatch applique vos réponses aux données certifiées de ces machines et de toutes les autres, puis un installateur licencié RBQ remet le prix écrit. Gratuit, sans engagement.
+          </p>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+          <Link href="/trouver-ma-thermopompe" style={{ fontSize: 14, fontWeight: 700, padding: "13px 22px", background: "#e54b17", color: "#fff", textDecoration: "none", borderRadius: 6, whiteSpace: "nowrap" }}>
+            Vérifier avec ThermoMatch
           </Link>
-          <Link href="/trouver-ma-thermopompe" style={{
-            fontSize: 14, fontWeight: 600, padding: "12px 24px",
-            background: "transparent", color: "#fff",
-            border: "1px solid rgba(255,255,255,.3)",
-            textDecoration: "none", borderRadius: 6,
-          }}>
-            Commencer <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" />
+          <Link href="/soumission" style={{ fontSize: 14, fontWeight: 600, padding: "13px 22px", border: "1px solid rgba(255,255,255,.3)", color: "#fff", textDecoration: "none", borderRadius: 6, whiteSpace: "nowrap" }}>
+            Demander une soumission
           </Link>
         </div>
-        <p style={{ margin: "16px 0 0", fontSize: 12, color: "rgba(255,255,255,.4)", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-          Rapide, gratuit et sans engagement
-        </p>
-      </div>
+      </section>
     </>
   );
 }
