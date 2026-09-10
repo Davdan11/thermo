@@ -1,14 +1,48 @@
 #!/usr/bin/env bash
-# À lancer sur le VPS dans /var/www/thermopompesavendre.ca après une mise à jour des fichiers.
-# npm ci sans le navigateur Puppeteer (scripts hors ligne seulement), build avec plus de mémoire,
-# puis rechargement pm2 : l'ancienne version sert les visiteurs jusqu'à ce que la nouvelle soit prête.
+# Déploiement sans interruption sur le VPS.
+#
+# Arborescence : /var/www/thermopompesavendre.ca/
+#   releases/<horodatage>/   une version complète par déploiement (code + node_modules + .next)
+#   current -> releases/…    la version servie par pm2
+#   shared/.env              secrets (jamais dans une release)
+#   shared/data/             journal des leads et autres données persistantes
+#   incoming/                arbre reçu par tar depuis le poste de travail
+#
+# L'ancienne version continue de servir pendant tout le build ; la bascule se fait
+# en changeant le lien « current » puis en rechargeant pm2. Les 3 dernières versions
+# sont conservées pour revenir en arrière (ln -sfn releases/<x> current ; pm2 reload thermo).
 set -euo pipefail
-cd "$(dirname "$0")"
+ROOT=/var/www/thermopompesavendre.ca
+SRC="${1:-$ROOT/incoming}"
+STAMP=$(date +%Y%m%d-%H%M%S)
+REL=$ROOT/releases/$STAMP
+
+[ -d "$SRC" ] || { echo "Dossier source introuvable : $SRC" >&2; exit 1; }
+mkdir -p "$ROOT/releases" "$ROOT/shared/data/leads"
+[ -f "$ROOT/shared/.env" ] || { echo "Il manque $ROOT/shared/.env" >&2; exit 1; }
+
+mv "$SRC" "$REL"
+ln -sfn "$ROOT/shared/.env" "$REL/.env"
+rm -rf "$REL/data" && ln -sfn "$ROOT/shared/data" "$REL/data"
+cd "$REL"
+
 export PATH=/root/.nvm/versions/node/v22.17.0/bin:$PATH
 export PUPPETEER_SKIP_DOWNLOAD=1
-mkdir -p data/leads
-npm ci --no-audit --no-fund
+
+# Dépendances : réutilisées (liens durs) si le lockfile n'a pas changé, sinon npm ci.
+if [ -d "$ROOT/current/node_modules" ] && cmp -s "$ROOT/current/package-lock.json" package-lock.json; then
+  echo "Dépendances inchangées : réutilisation de node_modules."
+  cp -al "$ROOT/current/node_modules" node_modules
+else
+  npm ci --no-audit --no-fund
+fi
+
 NODE_OPTIONS=--max-old-space-size=4096 npm run build
-pm2 startOrReload ecosystem.config.js --update-env
+
+ln -sfn "$REL" "$ROOT/current"
+pm2 startOrReload "$ROOT/current/ecosystem.config.js" --update-env
 pm2 save >/dev/null
-echo "Déployé."
+
+# Ménage : garder les 3 dernières versions.
+ls -1dt "$ROOT"/releases/* | tail -n +4 | xargs -r rm -rf
+echo "Déployé : $REL"
